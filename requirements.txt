@@ -1,0 +1,26 @@
+# Database
+psycopg2-binary
+
+# Vector Search / pgvector
+pgvector
+
+# Data Processing
+numpy
+pandas
+
+# Plotting
+matplotlib
+seaborn
+
+# LLM / LangGraph
+langgraph
+langchain
+langchain-core
+
+# Evaluation / Utilities
+requests
+tqdm
+nbformat
+notebook
+ipykernel
+scikit-learn

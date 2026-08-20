@@ -1,10 +1,4 @@
-"""Create auditable FinQA Phase 2 candidate shortlists.
-
-The primary signal is the number of dataset-provided gold evidence units in
-``qa.gold_inds``.  This avoids inferring retrieval breadth from lexical cues.
-The script does not make final tier assignments: it produces generous,
-deterministically ranked shortlists for manual review.
-"""
+"""Create auditable FinQA Phase 2 candidate shortlists."""
 
 from __future__ import annotations
 
@@ -17,10 +11,12 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from src import PROCESSED_DATA_DIR, ensure_dir
 
 YEAR_RE = re.compile(r"\b(?:19|20)\d{2}\b")
 QUARTER_RE = re.compile(
-    r"\bq[1-4]\b|\b(?:first|second|third|fourth) quarter\b", re.IGNORECASE
+    r"\bq[1-4]\b|\b(?:first|second|third) quarter\b|\bfourth quarter\b",
+    re.IGNORECASE,
 )
 AGGREGATION_RE = re.compile(
     r"\b(?:average|total|combined|overall|cumulative|sum|across|"
@@ -79,13 +75,10 @@ def rank_key(row: dict[str, Any], seed: int) -> tuple[Any, ...]:
     """Rank candidates within, never across, evidence-unit buckets."""
     tie_breaker = random.Random(f"{seed}:{row['id']}").random()
     if row["candidate_bucket"] == "narrow_candidate":
-        # Prefer clean, local evidence for the narrow shortlist.
         return (row["temporal_span"], row["entity_category_span"], row["op_count"], tie_breaker)
     if row["candidate_bucket"] == "boundary_candidate":
-        # Prefer genuinely two-unit cases with some contextual diversity.
         return (-row["temporal_span"], -row["entity_category_span"], -row["op_count"], tie_breaker)
-    # For broad candidates, hybrid evidence is intentionally surfaced first;
-    # evidence-unit count remains the primary sorting criterion.
+
     modality_priority = {"hybrid": 0, "table": 1, "text": 1, "other": 2}[row["evidence_modality"]]
     return (-row["gold_evidence_units"], modality_priority, -row["temporal_span"], -row["op_count"], tie_breaker)
 
@@ -101,7 +94,6 @@ def build_rows(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
         question = str(qa.get("question", "")).strip()
         program = str(qa.get("program", "")).strip()
         evidence_units = len(gold_inds)
-        modality = evidence_modality(gold_inds)
         rows.append(
             {
                 "id": entry.get("id", ""),
@@ -110,7 +102,7 @@ def build_rows(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "program": program,
                 "gold_evidence_units": evidence_units,
                 "gold_evidence_keys": " | ".join(gold_inds.keys()),
-                "evidence_modality": modality,
+                "evidence_modality": evidence_modality(gold_inds),
                 "temporal_span": temporal_span(question),
                 "entity_category_span": entity_category_span(question),
                 "aggregation_scope": aggregation_scope(question, program),
@@ -127,65 +119,88 @@ def build_rows(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     if not rows:
         raise ValueError(f"No rows to write to {path}")
+    ensure_dir(path.parent)
     with path.open("w", newline="", encoding="utf-8") as output:
         writer = csv.DictWriter(output, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
 
 
+def write_selection_method(path: Path, rows: list[dict[str, Any]], seed: int) -> None:
+    counts = Counter(row["candidate_bucket"] for row in rows)
+    modalities = Counter(row["evidence_modality"] for row in rows)
+    path.write_text(
+        "# FinQA Phase 2 candidate-selection method\n\n"
+        "Primary signal: `qa.gold_inds` count (dataset-provided gold evidence units).\n\n"
+        "Candidate buckets: 1 unit = narrow; 2 units = boundary; 3+ units = broad. "
+        "These are candidate buckets only; final labels require documented manual review.\n\n"
+        "For broad candidates, table-plus-text (`hybrid`) evidence is surfaced before single-modality "
+        "examples after evidence-unit count. Temporal span, entity/category span, aggregation scope, "
+        "and program operation count are recorded supporting/balance signals, not tier determinants.\n\n"
+        f"Seed: `{seed}`.\n\n"
+        f"Candidate counts: {dict(sorted(counts.items()))}.\n\n"
+        f"Modality counts: {dict(sorted(modalities.items()))}.\n",
+        encoding="utf-8",
+    )
+
+
+def create_candidate_shortlists(
+    input_path: Path,
+    output_dir: Path = PROCESSED_DATA_DIR,
+    seed: int = 42,
+    narrow_limit: int = 568,
+    boundary_limit: int = 454,
+    broad_limit: int = 125,
+) -> None:
+    with input_path.open(encoding="utf-8") as source:
+        entries = json.load(source)
+
+    rows = build_rows(entries)
+    if len(rows) != 1147:
+        raise ValueError(f"Expected 1,147 FinQA test rows; received {len(rows)}")
+
+    ensure_dir(output_dir)
+    write_csv(output_dir / "finqa_phase2_feature_pool.csv", rows)
+
+    limits = {
+        "narrow_candidate": narrow_limit,
+        "boundary_candidate": boundary_limit,
+        "broad_candidate": broad_limit,
+    }
+    for bucket, limit in limits.items():
+        ranked = sorted(
+            (row for row in rows if row["candidate_bucket"] == bucket),
+            key=lambda row: rank_key(row, seed),
+        )
+        shortlisted = [{"candidate_rank": rank, **row} for rank, row in enumerate(ranked[:limit], start=1)]
+        write_csv(output_dir / f"{bucket}_shortlist.csv", shortlisted)
+
+    write_selection_method(output_dir / "selection_method.md", rows, seed)
+    counts = Counter(row["candidate_bucket"] for row in rows)
+    modalities = Counter(row["evidence_modality"] for row in rows)
+    print(f"Wrote {len(rows)} feature rows to {output_dir}")
+    print(f"Candidate buckets: {dict(sorted(counts.items()))}")
+    print(f"Evidence modalities: {dict(sorted(modalities.items()))}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, required=True, help="Official FinQA test.json")
-    parser.add_argument("--output-dir", type=Path, default=Path("outputs/phase2_selection_output"))
+    parser.add_argument("--output-dir", type=Path, default=PROCESSED_DATA_DIR)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--narrow-limit", type=int, default=568)
     parser.add_argument("--boundary-limit", type=int, default=454)
     parser.add_argument("--broad-limit", type=int, default=125)
     args = parser.parse_args()
 
-    with args.input.open(encoding="utf-8") as source:
-        entries = json.load(source)
-    rows = build_rows(entries)
-    if len(rows) != 1147:
-        raise ValueError(f"Expected 1,147 FinQA test rows; received {len(rows)}")
-
-    args.output_dir.mkdir(parents=True, exist_ok=True)
-    write_csv(args.output_dir / "finqa_phase2_feature_pool.csv", rows)
-
-    limits = {
-        "narrow_candidate": args.narrow_limit,
-        "boundary_candidate": args.boundary_limit,
-        "broad_candidate": args.broad_limit,
-    }
-    for bucket, limit in limits.items():
-        ranked = sorted(
-            (row for row in rows if row["candidate_bucket"] == bucket),
-            key=lambda row: rank_key(row, args.seed),
-        )
-        shortlisted = []
-        for rank, row in enumerate(ranked[:limit], start=1):
-            shortlisted.append({"candidate_rank": rank, **row})
-        write_csv(args.output_dir / f"{bucket}_shortlist.csv", shortlisted)
-
-    counts = Counter(row["candidate_bucket"] for row in rows)
-    modalities = Counter(row["evidence_modality"] for row in rows)
-    with (args.output_dir / "selection_method.md").open("w", encoding="utf-8") as method:
-        method.write(
-            "# FinQA Phase 2 candidate-selection method\n\n"
-            "Primary signal: `qa.gold_inds` count (dataset-provided gold evidence units).\n\n"
-            "Candidate buckets: 1 unit = narrow; 2 units = boundary; 3+ units = broad. "
-            "These are candidate buckets only; final labels require documented manual review.\n\n"
-            "For broad candidates, table-plus-text (`hybrid`) evidence is surfaced before single-modality "
-            "examples after evidence-unit count. Temporal span, entity/category span, aggregation scope, "
-            "and program operation count are recorded supporting/balance signals, not tier determinants.\n\n"
-            f"Seed: `{args.seed}`.\n\n"
-            f"Candidate counts: {dict(sorted(counts.items()))}.\n\n"
-            f"Modality counts: {dict(sorted(modalities.items()))}.\n"
-        )
-    print(f"Wrote {len(rows)} feature rows to {args.output_dir}")
-    print(f"Candidate buckets: {dict(sorted(counts.items()))}")
-    print(f"Evidence modalities: {dict(sorted(modalities.items()))}")
-
+    create_candidate_shortlists(
+        input_path=args.input,
+        output_dir=args.output_dir,
+        seed=args.seed,
+        narrow_limit=args.narrow_limit,
+        boundary_limit=args.boundary_limit,
+        broad_limit=args.broad_limit,
+    )
 
 if __name__ == "__main__":
     main()
