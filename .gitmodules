@@ -1,0 +1,3 @@
+[submodule "ann-filtering-benchmark-datasets"]
+	path = ann-filtering-benchmark-datasets
+	url = https://github.com/qdrant/ann-filtering-benchmark-datasets.git
