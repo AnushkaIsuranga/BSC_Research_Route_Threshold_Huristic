@@ -3,6 +3,7 @@ services:
     image: pgvector/pgvector:pg16
     container_name: ${POSTGRES_CONTAINER_NAME:-vector_db}
     restart: unless-stopped
+    shm_size: '2gb'
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-vector_db}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
