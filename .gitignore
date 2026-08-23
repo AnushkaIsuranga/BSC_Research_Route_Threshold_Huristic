@@ -22,3 +22,6 @@ __pycache__/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Agent Artifacts
+Coding_TODO_List.md
