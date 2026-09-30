@@ -1,0 +1,51 @@
+{
+  "hm_clothes_100": {
+    "recall_danger_zones": [
+      [
+        0.3290104662226451,
+        0.4705042816365366
+      ]
+    ],
+    "latency_danger_zones": [],
+    "margin": 0.014149381541389151
+  },
+  "hm_clothes_75": {
+    "recall_danger_zones": [
+      [
+        0.3290104662226451,
+        0.3290104662226451
+      ],
+      [
+        0.4705042816365366,
+        0.4705042816365366
+      ]
+    ],
+    "latency_danger_zones": [],
+    "margin": 0.014149381541389151
+  },
+  "hm_clothes_50": {
+    "recall_danger_zones": [
+      [
+        0.3290104662226451,
+        0.3290104662226451
+      ]
+    ],
+    "latency_danger_zones": [],
+    "margin": 0.005
+  },
+  "hm_clothes_25": {
+    "recall_danger_zones": [],
+    "latency_danger_zones": [],
+    "margin": 0.005
+  },
+  "hm_clothes_0": {
+    "recall_danger_zones": [
+      [
+        0.3290104662226451,
+        0.3290104662226451
+      ]
+    ],
+    "latency_danger_zones": [],
+    "margin": 0.005
+  }
+}
