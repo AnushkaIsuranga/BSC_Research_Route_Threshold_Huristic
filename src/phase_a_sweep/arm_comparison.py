@@ -29,6 +29,9 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+import psycopg2
+import psycopg2.errors
+
 from src.database.connection import connect_pgvector
 from src.phase_a_sweep.explain_analyze_wrapper import parse_query_metrics, run_explain_analyze
 from src.phase_a_sweep.recall_calculator import fetch_top_k_ids
@@ -216,7 +219,11 @@ def run(args):
     used = ["src/phase_a_sweep/arm_comparison.py", "src/phase_a_sweep/explain_analyze_wrapper.py",
             "src/phase_a_sweep/recall_calculator.py", "src/database/connection.py", "PHASE_A_ARMS_PROTOCOL.md",
             str(OUT_DIR / "filters.json")]
-    meta = {"git_commit": git("rev-parse", "HEAD"),
+    server = {}
+    for g in ("shared_buffers", "work_mem", "effective_cache_size", "max_parallel_workers_per_gather", "random_page_cost"):
+        cur.execute(f"SHOW {g}")
+        server[g] = cur.fetchone()[0]
+    meta = {"git_commit": git("rev-parse", "HEAD"), "server_settings": server,
             "git_dirty_used_files": bool(git("status", "--porcelain", "--", *used[:5])),
             "pgvector_version": pgvector_version, "pg_version": pg_version, "python": sys.version.split()[0],
             "platform": platform.platform(), "seed": SEED, "k": K, "hnsw_ef_search": EF_SEARCH,
@@ -226,7 +233,31 @@ def run(args):
             "table_order": tables, "schedule_sha256": schedule_sha, "n_schedule_items": len(schedule),
             "file_sha256": {p: sha256_file(p) for p in used}, "arms": ARMS, "started": datetime.now(timezone.utc).isoformat(),
             "mode": "dry-run" if args.dry_run else "full"}
-    (OUT_DIR / ("dryrun_meta.json" if args.dry_run else "run_meta.json")).write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    meta_path = OUT_DIR / ("dryrun_meta.json" if args.dry_run else "run_meta.json")
+    n_present = 0
+    if args.dry_run:
+        meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    elif meta_path.exists():   # resume: run_meta.json is never rewritten
+        old = json.loads(meta_path.read_text(encoding="utf-8"))
+        for key in ("schedule_sha256", "seed", "vectors_sha256"):
+            if old[key] != meta[key]:
+                raise SystemExit(f"resume refused: {key} differs from run_meta.json")
+        changed = [p for p in ("src/phase_a_sweep/arm_comparison.py", str(OUT_DIR / "filters.json"))
+                   if old["file_sha256"][p] != meta["file_sha256"][p]]
+        if changed:
+            raise SystemExit("resume refused: script or filters.json changed since the run started")
+        if results_path.exists():
+            n_present = sum(1 for ln in results_path.read_text(encoding="utf-8").splitlines() if ln.strip())
+        with open(OUT_DIR / "resumes.jsonl", "a", encoding="utf-8") as rf:
+            rf.write(json.dumps({"resumed": datetime.now(timezone.utc).isoformat(), "git_commit": meta["git_commit"],
+                                 "git_dirty_used_files": meta["git_dirty_used_files"], "rows_already_present": n_present}) + "\n")
+        meta = old
+    else:
+        if meta["git_dirty_used_files"]:
+            raise SystemExit("refusing to start the full run: git_dirty_used_files is true (commit first)")
+        if results_path.exists():
+            raise SystemExit("refusing to start: results.jsonl exists but run_meta.json does not")
+        meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
     done = set()
     if results_path.exists() and not args.dry_run:
@@ -288,14 +319,22 @@ def run(args):
                     ex = run_explain_analyze(sweep, sql, full_params, STATEMENT_TIMEOUT_MS)
                     m = parse_query_metrics(ex)
                     m["nodes"] = all_nodes(ex["Plan"])
+                    # EXPLAIN reports buffers cumulatively (a node includes its children), so the root node is the total
+                    m["shared_hit"] = ex["Plan"].get("Shared Hit Blocks")
+                    m["shared_read"] = ex["Plan"].get("Shared Read Blocks")
                     runs.append(m)
                 lat = [r["execution_time_ms"] for r in runs]
                 mid = sorted(runs, key=lambda r: r["execution_time_ms"])[len(runs) // 2]
                 row.update({"scan_node": mid["scan_strategy"], "index_used": mid["index_used"],
                             "plan_nodes": "/".join(n for n in mid["nodes"] if n), "rows_removed_by_filter": mid["rows_removed_by_filter"],
+                            "shared_hit_blocks": mid["shared_hit"], "shared_read_blocks": mid["shared_read"],
                             "latency_ms": statistics.median(lat), "latency_raw_ms": lat,
                             "scan_nodes_seen": sorted({r["scan_strategy"] for r in runs}),
                             "plan_as_intended": plan_as_intended(arm, mid["scan_strategy"], mid["index_used"])})
+            except psycopg2.errors.QueryCanceled as e:      # statement timeout: a real, recorded outcome
+                row["error"] = f"{type(e).__name__}: {e}"
+            except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:   # lost connection: do not record, stop; restart resumes
+                raise SystemExit(f"connection problem, stopping without recording this row: {type(e).__name__}: {e}")
             except Exception as e:
                 row["error"] = f"{type(e).__name__}: {e}"
             row["timestamp"] = datetime.now(timezone.utc).isoformat()
@@ -309,15 +348,44 @@ def run(args):
     sweep.close()
     truth.close()
     print(f"mean seconds per (table, filter, vector) combination: {statistics.mean(combo_times):.1f}")
-    print(f"projected full-run hours at that rate (800 combos): {statistics.mean(combo_times) * 800 / 3600:.2f}")
+    print(f"projected hours for all {len(filters) * len(TABLES) * N_VECTORS} combos at that rate: "
+          f"{statistics.mean(combo_times) * len(filters) * len(TABLES) * N_VECTORS / 3600:.2f}")
+
+
+def status():
+    """Progress only: row counts, errors, elapsed, rough ETA. No recall or latency is shown."""
+    filters = json.loads((OUT_DIR / "filters.json").read_text(encoding="utf-8"))
+    expected = len(TABLES) * len(filters) * N_VECTORS * len(ARMS)
+    path = OUT_DIR / "results.jsonl"
+    rows = errs = bad_plan = 0
+    first = last = None
+    if path.exists():
+        for ln in path.read_text(encoding="utf-8").splitlines():
+            if ln.strip():
+                d = json.loads(ln)
+                rows += 1
+                errs += 1 if d.get("error") else 0
+                bad_plan += 1 if d.get("plan_as_intended") is False else 0
+                first = first or d["timestamp"]
+                last = d["timestamp"]
+    print(f"rows written: {rows} / {expected} ({100 * rows / expected:.1f}%); errors/timeouts: {errs}; plan_as_intended=false: {bad_plan}")
+    if rows > 1:
+        t0 = datetime.fromisoformat(first)
+        t1 = datetime.fromisoformat(last)
+        el = (t1 - t0).total_seconds()
+        print(f"first row {first}, last row {last}; elapsed between them {el / 3600:.2f} h")
+        print(f"rough ETA at the average rate so far: {el / rows * (expected - rows) / 3600:.2f} h more (rate varies with selectivity)")
 
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
+    p.add_argument("--status", action="store_true")
     p.add_argument("--build-filters", action="store_true")
     p.add_argument("--dry-run", action="store_true")
     a = p.parse_args()
-    if a.build_filters:
+    if a.status:
+        status()
+    elif a.build_filters:
         build_filters()
     else:
         run(a)
