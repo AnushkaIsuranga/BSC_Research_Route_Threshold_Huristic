@@ -188,3 +188,52 @@ Scan at idx1-3). Differences will be reported.
 - Row counts and attribute distributions are identical across the five
   tables, so selectivity is the same on every table by construction; only the
   embedding-attribute correlation differs.
+
+---
+
+## Amendment 1 (2026-10-10, before the full run)
+
+**Disclosure.** After the dry run, a one-off check of vectors 2 and 4 on hm_clothes_100 at 0.329 showed forced-hnsw recall 0.4/0.3 and iterative recall 1.0. This amendment adds low-selectivity points and replaces the decision rule; it was written after that check.
+
+(The check was run with the script's own recall path and was not saved to any results file. At the time of this amendment `outputs/phase_a_arms/results.jsonl` does not exist. H1-H4 are unchanged.)
+
+### A1. Low-selectivity points
+
+Five filters were added, reused from the Phase A v2 filter set (`outputs/phase_a_v2/filters_reference.json`, 44 single-attribute equality filters; their v2 `filter_id` is stored as `v2_filter_id` in `filters.json`). For each target the v2 filter with the smallest |ln(selectivity / target)| was taken. All are single-attribute equality filters; selectivities were re-measured on all five tables (identical row counts) by `--build-filters`.
+
+| New id | v2 id | Target | Filter | Selectivity | Rows |
+|---|---|---:|---|---:|---:|
+| lo1 | f_000 | 0.0001 | `product_type_name = 'Cap'` | 0.00012369 | 13 |
+| lo2 | f_006 | 0.001 | `product_type_name = 'Costumes'` | 0.00084681 | 89 |
+| lo3 | f_016 | 0.01 | `product_type_name = 'Blazer'` | 0.01054230 | 1,108 |
+| lo4 | f_028 | 0.05 | `garment_group_name = 'Shoes'` | 0.04777355 | 5,021 |
+| lo5 | f_037 | 0.10 | `product_type_name = 'Trousers'` | 0.10608944 | 11,150 |
+
+The full list is now 13 filters: lo1-lo5, ctl, gap1-gap4, idx1-idx3.
+
+### A2. New hypotheses (H1-H4 unchanged)
+
+- **H5:** forced-exact median latency <= 500 ms in every (table, lo1..lo3) cell.
+- **H6:** iterative-relaxed has mean recall@10 < 0.90 OR median rows_returned < 10 in at least one (table, lo1..lo2) cell (expected cause: the `hnsw.max_scan_tuples = 20000` cap).
+
+Operationalisation (same conventions as above): a cell is a (table, filter) pair; mean recall is over the 20 vectors; "median latency" is the median of the 20 per-vector medians; "median rows_returned" is the median over the 20 vectors.
+
+### A3. Decision rule (replaces the previous rule)
+
+For each (table, filter) cell, the recommended route is the arm with the lowest median latency among arms 2-4 (forced-exact, forced-hnsw, iterative-relaxed) whose mean recall@10 >= 0.90. If none qualifies, or the chosen arm's median latency > 500 ms, the cell is marked "no route meets both SLAs" and the best recall and the best latency are reported separately. planner-default and iterative-strict are reported but are not candidates. The outcome is a route map: table x selectivity.
+
+Clarifications needed to apply the rule mechanically (added with this amendment, not data-driven):
+
+- An arm qualifies in a cell only if all 20 vectors have a valid result (no error or timeout). If fewer than 20 are valid, the arm does not qualify and the number of valid vectors is reported.
+- Ties in median latency are broken in the order forced-exact, forced-hnsw, iterative-relaxed.
+- The 0.9 recall and 500 ms thresholds are the Phase A thresholds, used unchanged.
+
+### A4. Size and run-time estimate (replaces the previous one)
+
+- Combinations: 5 tables x 13 filters x 20 vectors = **1,300** (table, filter, vector).
+- Executions: 1,300 x 36 = **46,800** (1,300 exact reference, 6,500 recall, 6,500 warm-up, 32,500 timed), plus 2 per-table warm-ups. Expected result rows: 1,300 x 5 arms = **6,500**.
+- Run time: the 800 original combinations were estimated at about 5-8 h from the dry run (exact-plan arms dominate at 0.329). The 500 added combinations are at lower selectivity where exact plans are cheaper but the HNSW arms may scan up to `hnsw.max_scan_tuples` (20,000) tuples; I estimate 2-8 s per combination, i.e. about 0.3-1.1 h more. **New estimate: about 6-9 h** (not measured at the low-selectivity points; the first hours of the run will refine it).
+
+### A5. Script changes with this amendment
+
+`src/phase_a_sweep/arm_comparison.py` gained the five `lo*` entries in `FILTER_SPECS` and the `v2_filter_id` field; `outputs/phase_a_arms/filters.json` was regenerated with `--build-filters`. No other logic changed in this commit.

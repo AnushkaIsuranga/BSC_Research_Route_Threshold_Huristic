@@ -1,7 +1,148 @@
 [
   {
+    "filter_id": "lo1",
+    "role": "low",
+    "v2_filter_id": "f_000",
+    "description": "product_type_name = 'Cap'",
+    "conditions": [
+      [
+        "product_type_name",
+        [
+          "Cap"
+        ]
+      ]
+    ],
+    "where": "product_type_name = %s",
+    "params": [
+      "Cap"
+    ],
+    "matched_rows": 13,
+    "total_rows": 105100,
+    "selectivity": 0.00012369172216936252,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 13,
+      "hm_clothes_25": 13,
+      "hm_clothes_50": 13,
+      "hm_clothes_75": 13,
+      "hm_clothes_100": 13
+    }
+  },
+  {
+    "filter_id": "lo2",
+    "role": "low",
+    "v2_filter_id": "f_006",
+    "description": "product_type_name = 'Costumes'",
+    "conditions": [
+      [
+        "product_type_name",
+        [
+          "Costumes"
+        ]
+      ]
+    ],
+    "where": "product_type_name = %s",
+    "params": [
+      "Costumes"
+    ],
+    "matched_rows": 89,
+    "total_rows": 105100,
+    "selectivity": 0.0008468125594671741,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 89,
+      "hm_clothes_25": 89,
+      "hm_clothes_50": 89,
+      "hm_clothes_75": 89,
+      "hm_clothes_100": 89
+    }
+  },
+  {
+    "filter_id": "lo3",
+    "role": "low",
+    "v2_filter_id": "f_016",
+    "description": "product_type_name = 'Blazer'",
+    "conditions": [
+      [
+        "product_type_name",
+        [
+          "Blazer"
+        ]
+      ]
+    ],
+    "where": "product_type_name = %s",
+    "params": [
+      "Blazer"
+    ],
+    "matched_rows": 1108,
+    "total_rows": 105100,
+    "selectivity": 0.010542340627973358,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 1108,
+      "hm_clothes_25": 1108,
+      "hm_clothes_50": 1108,
+      "hm_clothes_75": 1108,
+      "hm_clothes_100": 1108
+    }
+  },
+  {
+    "filter_id": "lo4",
+    "role": "low",
+    "v2_filter_id": "f_028",
+    "description": "garment_group_name = 'Shoes'",
+    "conditions": [
+      [
+        "garment_group_name",
+        [
+          "Shoes"
+        ]
+      ]
+    ],
+    "where": "garment_group_name = %s",
+    "params": [
+      "Shoes"
+    ],
+    "matched_rows": 5021,
+    "total_rows": 105100,
+    "selectivity": 0.047773549000951473,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 5021,
+      "hm_clothes_25": 5021,
+      "hm_clothes_50": 5021,
+      "hm_clothes_75": 5021,
+      "hm_clothes_100": 5021
+    }
+  },
+  {
+    "filter_id": "lo5",
+    "role": "low",
+    "v2_filter_id": "f_037",
+    "description": "product_type_name = 'Trousers'",
+    "conditions": [
+      [
+        "product_type_name",
+        [
+          "Trousers"
+        ]
+      ]
+    ],
+    "where": "product_type_name = %s",
+    "params": [
+      "Trousers"
+    ],
+    "matched_rows": 11150,
+    "total_rows": 105100,
+    "selectivity": 0.10608943862987631,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 11150,
+      "hm_clothes_25": 11150,
+      "hm_clothes_50": 11150,
+      "hm_clothes_75": 11150,
+      "hm_clothes_100": 11150
+    }
+  },
+  {
     "filter_id": "ctl",
     "role": "control",
+    "v2_filter_id": null,
     "description": "garment_group_name = 'Jersey Fancy'",
     "conditions": [
       [
@@ -29,6 +170,7 @@
   {
     "filter_id": "gap1",
     "role": "gap",
+    "v2_filter_id": null,
     "description": "perceived_colour_master_name = 'Black'",
     "conditions": [
       [
@@ -56,6 +198,7 @@
   {
     "filter_id": "gap2",
     "role": "gap",
+    "v2_filter_id": null,
     "description": "perceived_colour_master_name IN ('Blue', 'Red')",
     "conditions": [
       [
@@ -85,6 +228,7 @@
   {
     "filter_id": "gap3",
     "role": "gap",
+    "v2_filter_id": null,
     "description": "perceived_colour_master_name IN ('Blue', 'Grey')",
     "conditions": [
       [
@@ -114,6 +258,7 @@
   {
     "filter_id": "gap4",
     "role": "gap",
+    "v2_filter_id": null,
     "description": "perceived_colour_master_name IN ('Black', 'Grey')",
     "conditions": [
       [
@@ -143,6 +288,7 @@
   {
     "filter_id": "idx1",
     "role": "index-scan",
+    "v2_filter_id": null,
     "description": "index_group_name = 'Baby/Children'",
     "conditions": [
       [
@@ -170,6 +316,7 @@
   {
     "filter_id": "idx2",
     "role": "index-scan",
+    "v2_filter_id": null,
     "description": "index_group_name = 'Ladieswear'",
     "conditions": [
       [
@@ -197,6 +344,7 @@
   {
     "filter_id": "idx3",
     "role": "index-scan",
+    "v2_filter_id": null,
     "description": "graphical_appearance_name = 'Solid'",
     "conditions": [
       [

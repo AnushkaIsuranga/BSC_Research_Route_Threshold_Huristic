@@ -46,6 +46,12 @@ RECALL_DANGER = 0.9
 
 # Frozen filter definitions. Selectivities are measured, never assumed (--build-filters).
 FILTER_SPECS = [
+    # Amendment 1: low-selectivity points, reused from the Phase A v2 filters (v2_filter_id)
+    {"filter_id": "lo1",  "role": "low", "v2_filter_id": "f_000", "conditions": [("product_type_name", ["Cap"])]},
+    {"filter_id": "lo2",  "role": "low", "v2_filter_id": "f_006", "conditions": [("product_type_name", ["Costumes"])]},
+    {"filter_id": "lo3",  "role": "low", "v2_filter_id": "f_016", "conditions": [("product_type_name", ["Blazer"])]},
+    {"filter_id": "lo4",  "role": "low", "v2_filter_id": "f_028", "conditions": [("garment_group_name", ["Shoes"])]},
+    {"filter_id": "lo5",  "role": "low", "v2_filter_id": "f_037", "conditions": [("product_type_name", ["Trousers"])]},
     {"filter_id": "ctl",  "role": "control",    "conditions": [("garment_group_name", ["Jersey Fancy"])]},
     {"filter_id": "gap1", "role": "gap",        "conditions": [("perceived_colour_master_name", ["Black"])]},
     {"filter_id": "gap2", "role": "gap",        "conditions": [("perceived_colour_master_name", ["Blue", "Red"])]},
@@ -129,7 +135,7 @@ def build_filters():
             if len(set(per_table.values())) != 1:
                 raise RuntimeError(f"{spec['filter_id']}: row counts differ between tables: {per_table}")
             n = per_table["hm_clothes_100"]
-            out.append({"filter_id": spec["filter_id"], "role": spec["role"], "description": describe(spec["conditions"]),
+            out.append({"filter_id": spec["filter_id"], "role": spec["role"], "v2_filter_id": spec.get("v2_filter_id"), "description": describe(spec["conditions"]),
                         "conditions": [[c, v] for c, v in spec["conditions"]], "where": where, "params": params,
                         "matched_rows": n, "total_rows": total, "selectivity": n / total, "per_table_matched_rows": per_table})
     conn.close()
