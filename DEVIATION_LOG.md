@@ -69,3 +69,38 @@ Affected rows: the 42 aborted rows, kept unanalysed in
 `outputs/phase_a_arms/results_aborted_frozen_arms.jsonl` (with
 `run_meta_aborted.json`, `run_aborted.log`, `run.err_aborted.log`). They are
 excluded from all results. Rerun result: see the restarted run.
+
+## 2026-10-10 — PostgreSQL backend crash during the three-arm run (~14:51 +05:30)
+
+Failure: the full three-arm run (commit a282da9, PID 41648) stopped at 5,609 of
+6,500 rows when a PostgreSQL backend died and the server did crash recovery.
+The run script detected the lost connection (`OperationalError: server closed
+the connection unexpectedly`), stopped without recording a row, and was resumed
+at 15:05 (PID 39204) with the same command; `outputs/phase_a_arms/resumes.jsonl`
+records the resume (5,609 rows present). All 6,500 rows are unique keys.
+
+Cause: **not logged / unknown.** The Postgres container log (`docker logs
+vector_db`, 2026-10-10 09:21-09:22 UTC) contains only:
+
+    09:21:18.449 UTC [14300] LOG:  could not send data to client: Broken pipe
+    09:21:19.234 UTC [14300] FATAL:  connection to client lost
+    09:21:19.620 UTC [1] LOG:  server process (PID 14299) exited with exit code 2
+    09:21:19.708 UTC [1] LOG:  terminating any other active server processes
+    09:21:24.577 UTC [1] LOG:  issuing SIGKILL to recalcitrant children
+    09:21:24.816 UTC [1] LOG:  all server processes terminated; reinitializing
+    09:22:13.699 UTC [14301] LOG:  database system was not properly shut down; automatic recovery in progress
+    09:22:15.010 UTC [1] LOG:  database system is ready to accept connections
+
+No out-of-memory, "killed" or signal message appears anywhere in the container
+log (0 matches for out of memory / oom / killed / segfault / signal N).
+`docker inspect`: OOMKilled=false, RestartCount=0, container memory limit 0
+(none), shm_size 2 GiB, container started 2026-10-10T04:10:30Z, so the container
+itself did not restart. Why server process 14299 exited with code 2 is not
+determinable from these logs. The memory limit of the Docker Desktop VM was not
+checked.
+
+Impact: no measurement was lost or altered. 891 rows (all hm_clothes_50: lo1,
+lo4, lo5, gap1-gap3, idx1-idx3) were written after the resume, with
+shared_buffers cold after recovery; they are flagged `post_resume` in
+`reports/arms_results_2026-10-10.md`. No verdict or route in that report
+depends on the post-resume latencies.
