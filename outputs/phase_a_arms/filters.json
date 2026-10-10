@@ -1,0 +1,224 @@
+[
+  {
+    "filter_id": "ctl",
+    "role": "control",
+    "description": "garment_group_name = 'Jersey Fancy'",
+    "conditions": [
+      [
+        "garment_group_name",
+        [
+          "Jersey Fancy"
+        ]
+      ]
+    ],
+    "where": "garment_group_name = %s",
+    "params": [
+      "Jersey Fancy"
+    ],
+    "matched_rows": 21415,
+    "total_rows": 105100,
+    "selectivity": 0.20375832540437677,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 21415,
+      "hm_clothes_25": 21415,
+      "hm_clothes_50": 21415,
+      "hm_clothes_75": 21415,
+      "hm_clothes_100": 21415
+    }
+  },
+  {
+    "filter_id": "gap1",
+    "role": "gap",
+    "description": "perceived_colour_master_name = 'Black'",
+    "conditions": [
+      [
+        "perceived_colour_master_name",
+        [
+          "Black"
+        ]
+      ]
+    ],
+    "where": "perceived_colour_master_name = %s",
+    "params": [
+      "Black"
+    ],
+    "matched_rows": 22479,
+    "total_rows": 105100,
+    "selectivity": 0.21388201712654614,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 22479,
+      "hm_clothes_25": 22479,
+      "hm_clothes_50": 22479,
+      "hm_clothes_75": 22479,
+      "hm_clothes_100": 22479
+    }
+  },
+  {
+    "filter_id": "gap2",
+    "role": "gap",
+    "description": "perceived_colour_master_name IN ('Blue', 'Red')",
+    "conditions": [
+      [
+        "perceived_colour_master_name",
+        [
+          "Blue",
+          "Red"
+        ]
+      ]
+    ],
+    "where": "perceived_colour_master_name IN (%s, %s)",
+    "params": [
+      "Blue",
+      "Red"
+    ],
+    "matched_rows": 24272,
+    "total_rows": 105100,
+    "selectivity": 0.230941960038059,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 24272,
+      "hm_clothes_25": 24272,
+      "hm_clothes_50": 24272,
+      "hm_clothes_75": 24272,
+      "hm_clothes_100": 24272
+    }
+  },
+  {
+    "filter_id": "gap3",
+    "role": "gap",
+    "description": "perceived_colour_master_name IN ('Blue', 'Grey')",
+    "conditions": [
+      [
+        "perceived_colour_master_name",
+        [
+          "Blue",
+          "Grey"
+        ]
+      ]
+    ],
+    "where": "perceived_colour_master_name IN (%s, %s)",
+    "params": [
+      "Blue",
+      "Grey"
+    ],
+    "matched_rows": 27317,
+    "total_rows": 105100,
+    "selectivity": 0.25991436726926737,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 27317,
+      "hm_clothes_25": 27317,
+      "hm_clothes_50": 27317,
+      "hm_clothes_75": 27317,
+      "hm_clothes_100": 27317
+    }
+  },
+  {
+    "filter_id": "gap4",
+    "role": "gap",
+    "description": "perceived_colour_master_name IN ('Black', 'Grey')",
+    "conditions": [
+      [
+        "perceived_colour_master_name",
+        [
+          "Black",
+          "Grey"
+        ]
+      ]
+    ],
+    "where": "perceived_colour_master_name IN (%s, %s)",
+    "params": [
+      "Black",
+      "Grey"
+    ],
+    "matched_rows": 31382,
+    "total_rows": 105100,
+    "selectivity": 0.2985918173168411,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 31382,
+      "hm_clothes_25": 31382,
+      "hm_clothes_50": 31382,
+      "hm_clothes_75": 31382,
+      "hm_clothes_100": 31382
+    }
+  },
+  {
+    "filter_id": "idx1",
+    "role": "index-scan",
+    "description": "index_group_name = 'Baby/Children'",
+    "conditions": [
+      [
+        "index_group_name",
+        [
+          "Baby/Children"
+        ]
+      ]
+    ],
+    "where": "index_group_name = %s",
+    "params": [
+      "Baby/Children"
+    ],
+    "matched_rows": 34579,
+    "total_rows": 105100,
+    "selectivity": 0.3290104662226451,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 34579,
+      "hm_clothes_25": 34579,
+      "hm_clothes_50": 34579,
+      "hm_clothes_75": 34579,
+      "hm_clothes_100": 34579
+    }
+  },
+  {
+    "filter_id": "idx2",
+    "role": "index-scan",
+    "description": "index_group_name = 'Ladieswear'",
+    "conditions": [
+      [
+        "index_group_name",
+        [
+          "Ladieswear"
+        ]
+      ]
+    ],
+    "where": "index_group_name = %s",
+    "params": [
+      "Ladieswear"
+    ],
+    "matched_rows": 39552,
+    "total_rows": 105100,
+    "selectivity": 0.37632730732635583,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 39552,
+      "hm_clothes_25": 39552,
+      "hm_clothes_50": 39552,
+      "hm_clothes_75": 39552,
+      "hm_clothes_100": 39552
+    }
+  },
+  {
+    "filter_id": "idx3",
+    "role": "index-scan",
+    "description": "graphical_appearance_name = 'Solid'",
+    "conditions": [
+      [
+        "graphical_appearance_name",
+        [
+          "Solid"
+        ]
+      ]
+    ],
+    "where": "graphical_appearance_name = %s",
+    "params": [
+      "Solid"
+    ],
+    "matched_rows": 49450,
+    "total_rows": 105100,
+    "selectivity": 0.4705042816365366,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 49450,
+      "hm_clothes_25": 49450,
+      "hm_clothes_50": 49450,
+      "hm_clothes_75": 49450,
+      "hm_clothes_100": 49450
+    }
+  }
+]
