@@ -109,6 +109,8 @@ def connect():
     conn = connect_pgvector()
     conn.commit()
     conn.autocommit = True
+    with conn.cursor() as cur:   # load the pgvector library so hnsw.* GUCs are real, not placeholders
+        cur.execute("SELECT '[1,2]'::vector <-> '[1,3]'::vector")
     return conn
 
 
