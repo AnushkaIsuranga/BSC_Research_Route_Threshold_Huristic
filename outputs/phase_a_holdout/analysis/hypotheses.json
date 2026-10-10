@@ -1,0 +1,42 @@
+{
+  "H7": {
+    "holds": false,
+    "n_pass": 24,
+    "failing": [
+      {
+        "policy": "policy_v2",
+        "table": "hm_clothes_25",
+        "filter_id": "ho3",
+        "selectivity": 0.07052331113225499,
+        "arm": "forced-exact",
+        "n_valid": 20,
+        "mean_recall": 1.0,
+        "median_latency_ms": 528.4000000000001,
+        "recall_fail": false,
+        "latency_fail": true,
+        "all_vectors_valid": true,
+        "pass": false
+      }
+    ]
+  },
+  "H8": {
+    "holds": true,
+    "cells": [
+      [
+        "ho1",
+        0.020133206470028545,
+        0.8949999999999999
+      ],
+      [
+        "ho2",
+        0.029619410085632732,
+        0.985
+      ]
+    ]
+  },
+  "H9": {
+    "holds": true,
+    "v2": 24,
+    "p1": 21
+  }
+}

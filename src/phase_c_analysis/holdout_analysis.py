@@ -83,7 +83,7 @@ def build_report(df, filters, meta, resumes, cs, ev, H, rep_date):
     w("")
     w("## 1. Headline: H7\n")
     w(f"**H7 — policy_v2 passes both SLAs in all 25 held-out cells: {'HOLDS' if H['H7']['holds'] else 'FAILS'}** ({H['H7']['n_pass']} of 25 cells pass). [V]\n")
-    if H["H7"]["failing"]:
+    if len(H["H7"]["failing"]):
         rows = [[x.table, x.filter_id, f"{x.selectivity:.5f}", SHORT[x.arm], f"{x.mean_recall:.3f}", fmt_ms(x.median_latency_ms), x.n_valid,
                  ("recall " if x.recall_fail else "") + ("latency" if x.latency_fail else "") + ("" if x.all_vectors_valid else " invalid-vectors")] for x in H["H7"]["failing"].itertuples()]
         w("Failing cells (policy_v2):\n")
