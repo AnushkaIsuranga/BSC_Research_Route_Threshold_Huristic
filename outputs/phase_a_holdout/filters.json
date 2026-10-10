@@ -1,0 +1,139 @@
+[
+  {
+    "filter_id": "ho1",
+    "target": 0.02,
+    "description": "garment_group_name = 'Shirts'",
+    "conditions": [
+      [
+        "garment_group_name",
+        [
+          "Shirts"
+        ]
+      ]
+    ],
+    "where": "garment_group_name = %s",
+    "params": [
+      "Shirts"
+    ],
+    "matched_rows": 2116,
+    "total_rows": 105100,
+    "selectivity": 0.020133206470028545,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 2116,
+      "hm_clothes_25": 2116,
+      "hm_clothes_50": 2116,
+      "hm_clothes_75": 2116,
+      "hm_clothes_100": 2116
+    }
+  },
+  {
+    "filter_id": "ho2",
+    "target": 0.03,
+    "description": "perceived_colour_master_name = 'Yellow'",
+    "conditions": [
+      [
+        "perceived_colour_master_name",
+        [
+          "Yellow"
+        ]
+      ]
+    ],
+    "where": "perceived_colour_master_name = %s",
+    "params": [
+      "Yellow"
+    ],
+    "matched_rows": 3113,
+    "total_rows": 105100,
+    "selectivity": 0.029619410085632732,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 3113,
+      "hm_clothes_25": 3113,
+      "hm_clothes_50": 3113,
+      "hm_clothes_75": 3113,
+      "hm_clothes_100": 3113
+    }
+  },
+  {
+    "filter_id": "ho3",
+    "target": 0.07,
+    "description": "garment_group_name = 'Under-, Nightwear'",
+    "conditions": [
+      [
+        "garment_group_name",
+        [
+          "Under-, Nightwear"
+        ]
+      ]
+    ],
+    "where": "garment_group_name = %s",
+    "params": [
+      "Under-, Nightwear"
+    ],
+    "matched_rows": 7412,
+    "total_rows": 105100,
+    "selectivity": 0.07052331113225499,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 7412,
+      "hm_clothes_25": 7412,
+      "hm_clothes_50": 7412,
+      "hm_clothes_75": 7412,
+      "hm_clothes_100": 7412
+    }
+  },
+  {
+    "filter_id": "ho4",
+    "target": 0.15,
+    "description": "index_group_name = 'Divided'",
+    "conditions": [
+      [
+        "index_group_name",
+        [
+          "Divided"
+        ]
+      ]
+    ],
+    "where": "index_group_name = %s",
+    "params": [
+      "Divided"
+    ],
+    "matched_rows": 15084,
+    "total_rows": 105100,
+    "selectivity": 0.14352045670789723,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 15084,
+      "hm_clothes_25": 15084,
+      "hm_clothes_50": 15084,
+      "hm_clothes_75": 15084,
+      "hm_clothes_100": 15084
+    }
+  },
+  {
+    "filter_id": "ho5",
+    "target": 0.18,
+    "description": "graphical_appearance_name IN ('All over pattern', 'Colour blocking')",
+    "conditions": [
+      [
+        "graphical_appearance_name",
+        [
+          "All over pattern",
+          "Colour blocking"
+        ]
+      ]
+    ],
+    "where": "graphical_appearance_name IN (%s, %s)",
+    "params": [
+      "All over pattern",
+      "Colour blocking"
+    ],
+    "matched_rows": 18948,
+    "total_rows": 105100,
+    "selectivity": 0.18028544243577546,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 18948,
+      "hm_clothes_25": 18948,
+      "hm_clothes_50": 18948,
+      "hm_clothes_75": 18948,
+      "hm_clothes_100": 18948
+    }
+  }
+]

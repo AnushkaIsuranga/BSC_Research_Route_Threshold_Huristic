@@ -1,0 +1,130 @@
+{
+  "checked_at": "2026-10-10T12:25:30.870568+00:00",
+  "git_commit": "c676ffee1181bc11ac990750337ac1fd72240bbc",
+  "n_checks": 15,
+  "n_failed": 0,
+  "all_passed": true,
+  "failures": [],
+  "checks": [
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "idx1",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_0_index_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "idx1",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "idx1",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "idx1",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_25_index_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "idx1",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "idx1",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "idx1",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_50_index_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "idx1",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "idx1",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "idx1",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_75_index_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "idx1",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "idx1",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "idx1",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_100_index_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "idx1",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "idx1",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    }
+  ]
+}

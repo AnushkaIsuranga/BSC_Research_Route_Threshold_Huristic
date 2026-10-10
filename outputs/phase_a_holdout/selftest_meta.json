@@ -1,0 +1,68 @@
+{
+  "git_commit": "c676ffee1181bc11ac990750337ac1fd72240bbc",
+  "git_dirty_used_files": true,
+  "server_settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "effective_cache_size": "4GB",
+    "max_parallel_workers_per_gather": "2",
+    "random_page_cost": "4"
+  },
+  "pgvector_version": "0.8.3",
+  "pg_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26220-SP0",
+  "seed": 20261012,
+  "k": 10,
+  "hnsw_ef_search": 40,
+  "timed_repeats": 5,
+  "warmups_per_point": 1,
+  "arms": {
+    "forced-exact": {
+      "sets": {
+        "enable_indexscan": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "forced-hnsw": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "enable_sort": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "iterative-relaxed": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "enable_sort": "off",
+        "hnsw.iterative_scan": "relaxed_order"
+      }
+    }
+  },
+  "vector_indices": [
+    0,
+    1
+  ],
+  "vectors_sha256": "a9f162c211f5ac75722a0825dc9468aeaa51054bd3f6e2b1c51a27380a774db0",
+  "vectors_source": "0-based line indices 0-1 of ann-filtering-benchmark-datasets\\data\\tests.jsonl",
+  "statement_timeout_ms": 120000,
+  "table_order": [
+    "hm_clothes_100"
+  ],
+  "schedule_sha256": "23a1322ec9d57c88565be2d529badde9a26aeefefa0293904303e992190dec00",
+  "n_schedule_items": 2,
+  "file_sha256": {
+    "src/phase_a_sweep/holdout_run.py": "eff727c4788f1ec5358e2a64bda5cdc0627574c27c3f762ba9edc9aebbf9bffb",
+    "src/phase_a_sweep/arm_comparison.py": "e4e0b32ec3c8f7e78bf4230cc48157fa290e25048bb638a89ba8d5e1768938d4",
+    "src/phase_a_sweep/explain_analyze_wrapper.py": "52a87e8c9a4c76fd02be537c380f6401a52ad452b0e19348ce4ebf44fe7675cd",
+    "src/phase_a_sweep/recall_calculator.py": "ecc83edf584b7f6104ea0939641a054d5c41fcda8a1943404b773ec6c22d4575",
+    "src/database/connection.py": "868ee8363a06d437c7f4b26800935e28b5287611a8acdf160747cf7a7efad736",
+    "PHASE_A_HOLDOUT_PROTOCOL.md": "28d3823889b8cb131b88d692bfe2e944c5bfd10262c92ecbb6b3b17a187e17bd"
+  },
+  "started": "2026-10-10T12:25:31.487408+00:00",
+  "mode": "selftest"
+}
