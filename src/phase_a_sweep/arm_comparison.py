@@ -33,7 +33,7 @@ import psycopg2
 import psycopg2.errors
 
 from src.database.connection import connect_pgvector
-from src.phase_a_sweep.explain_analyze_wrapper import parse_query_metrics, run_explain_analyze
+from src.phase_a_sweep.explain_analyze_wrapper import find_scan_node, parse_query_metrics, run_explain_analyze
 from src.phase_a_sweep.recall_calculator import fetch_top_k_ids
 
 OUT_DIR = Path("outputs/phase_a_arms")
@@ -69,12 +69,13 @@ FILTER_SPECS = [
 ARMS = {
     "planner-default": {"sets": {"hnsw.iterative_scan": "off"}},
     "forced-exact": {"sets": {"enable_indexscan": "off", "hnsw.iterative_scan": "off"}},
+    # Amendment 2: enable_sort = off, otherwise the planner picks an exact B-tree Index Scan + Sort at lo1-lo3
     "forced-hnsw": {"sets": {"enable_indexscan": "on", "enable_seqscan": "off", "enable_bitmapscan": "off",
-                             "hnsw.iterative_scan": "off"}},
+                             "enable_sort": "off", "hnsw.iterative_scan": "off"}},
     "iterative-relaxed": {"sets": {"enable_indexscan": "on", "enable_seqscan": "off", "enable_bitmapscan": "off",
-                                   "hnsw.iterative_scan": "relaxed_order"}},
+                                   "enable_sort": "off", "hnsw.iterative_scan": "relaxed_order"}},
     "iterative-strict": {"sets": {"enable_indexscan": "on", "enable_seqscan": "off", "enable_bitmapscan": "off",
-                                  "hnsw.iterative_scan": "strict_order"}},
+                                  "enable_sort": "off", "hnsw.iterative_scan": "strict_order"}},
 }
 RESET_GUCS = ["enable_indexscan", "enable_seqscan", "enable_bitmapscan", "enable_sort", "hnsw.iterative_scan"]
 RECORDED_GUCS = ["enable_indexscan", "enable_seqscan", "enable_bitmapscan", "enable_sort", "hnsw.ef_search",
@@ -179,6 +180,35 @@ def plan_as_intended(arm, scan_node, index_used):
     return True  # planner-default: whatever the planner chooses is the observation
 
 
+def preflight(cur, filters, vector0, write=True):
+    """Plain EXPLAIN (no ANALYZE) for every table x filter x arm using vector 0.
+    Arms 2-5 must produce their intended scan node, otherwise the whole run is aborted.
+    Arm 1 is recorded for information only (no expectation)."""
+    checks, failures = [], []
+    for table in TABLES:
+        for f in filters:
+            sql = (f"SELECT id FROM {table} WHERE {f['where']} "
+                   f"ORDER BY (embedding::halfvec(2048)) <=> %s::halfvec(2048) LIMIT {K}")
+            for arm in ARMS:
+                apply_arm(cur, arm)
+                cur.execute("EXPLAIN (FORMAT JSON) " + sql, tuple(f["params"]) + (vector0,))
+                plan = cur.fetchone()[0][0]["Plan"]
+                node = find_scan_node(plan)
+                scan, idx = node.get("Node Type"), node.get("Index Name")
+                ok = None if arm == "planner-default" else plan_as_intended(arm, scan, idx)
+                rec = {"table": table, "filter_id": f["filter_id"], "arm": arm, "scan_node": scan, "index_used": idx,
+                       "plan_nodes": "/".join(n for n in all_nodes(plan) if n), "ok": ok}
+                checks.append(rec)
+                if ok is False:
+                    failures.append(rec)
+    result = {"checked_at": datetime.now(timezone.utc).isoformat(), "git_commit": git("rev-parse", "HEAD"),
+              "vector_idx": 0, "n_checks": len(checks), "n_arm2to5_checked": sum(1 for c in checks if c["ok"] is not None),
+              "n_failed": len(failures), "all_passed": not failures, "failures": failures, "checks": checks}
+    if write:
+        (OUT_DIR / "preflight.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+    return result
+
+
 def run(args):
     t_start = time.time()
     filters = json.loads((OUT_DIR / "filters.json").read_text(encoding="utf-8"))
@@ -215,6 +245,15 @@ def run(args):
     pgvector_version = cur.fetchone()[0]
     cur.execute("SHOW server_version")
     pg_version = cur.fetchone()[0]
+
+    if not args.dry_run:   # Amendment 2: no measured query before every arm has shown its intended plan
+        resuming = (OUT_DIR / "run_meta.json").exists()
+        pf = preflight(cur, filters, vectors[0], write=not resuming)
+        print(f"pre-flight: {pf['n_arm2to5_checked']} arm 2-5 checks, {pf['n_failed']} failed")
+        if not pf["all_passed"]:
+            for fl in pf["failures"][:20]:
+                print("  FAILED:", fl["table"], fl["filter_id"], fl["arm"], fl["scan_node"], fl["index_used"])
+            raise SystemExit("pre-flight plan check failed: aborting before any measured query")
 
     used = ["src/phase_a_sweep/arm_comparison.py", "src/phase_a_sweep/explain_analyze_wrapper.py",
             "src/phase_a_sweep/recall_calculator.py", "src/database/connection.py", "PHASE_A_ARMS_PROTOCOL.md",
@@ -380,11 +419,19 @@ def status():
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--status", action="store_true")
+    p.add_argument("--preflight-only", action="store_true")
     p.add_argument("--build-filters", action="store_true")
     p.add_argument("--dry-run", action="store_true")
     a = p.parse_args()
     if a.status:
         status()
+    elif a.preflight_only:
+        _conn = connect()
+        _res = preflight(_conn.cursor(), json.loads((OUT_DIR / "filters.json").read_text(encoding="utf-8")), load_vectors()[0][0])
+        print(f"pre-flight: {_res['n_arm2to5_checked']} arm 2-5 checks, {_res['n_failed']} failed, all_passed={_res['all_passed']}")
+        for _f in _res["failures"][:20]:
+            print("  FAILED:", _f["table"], _f["filter_id"], _f["arm"], _f["scan_node"], _f["index_used"])
+        _conn.close()
     elif a.build_filters:
         build_filters()
     else:

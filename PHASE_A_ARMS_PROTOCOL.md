@@ -237,3 +237,24 @@ Clarifications needed to apply the rule mechanically (added with this amendment,
 ### A5. Script changes with this amendment
 
 `src/phase_a_sweep/arm_comparison.py` gained the five `lo*` entries in `FILTER_SPECS` and the `v2_filter_id` field; `outputs/phase_a_arms/filters.json` was regenerated with `--build-filters`. No other logic changed in this commit.
+
+---
+
+## Amendment 2 (2026-10-10, after an aborted start of the full run, before the restarted run)
+
+**What happened.** The full run was started once under the settings frozen in the protocol and Amendment 1 (commit `495d1b1`, started 2026-10-10 10:47:40 +05:30) and stopped by hand at 10:49:05, after 42 result rows (hm_clothes_75, filter lo1, 9 vector indices, all 5 arms). In 26 of those 42 rows `plan_as_intended` was `false`: all hm_clothes_75 / lo1 rows of the three arms that are supposed to use HNSW (forced-hnsw 9, iterative-relaxed 9, iterative-strict 8). Their plan was `Limit/Sort/Index Scan` on the B-tree `hm_clothes_75_product_type_name_idx`, i.e. an exact B-tree + Sort plan, not an HNSW Index Scan. No recall or latency from these rows was examined. The 42 rows are kept, unanalysed, as evidence (files below) and are not part of any result.
+
+**Why it happened.** With `enable_bitmapscan = off` (and `enable_seqscan = off`) the planner can still use a B-tree Index Scan on the filter column followed by a Sort, which is cheaper than the HNSW path when the filter matches very few rows. A plain `EXPLAIN` check (no ANALYZE) of all 13 filters on hm_clothes_75 and hm_clothes_0 with the frozen forced-hnsw settings gave a B-tree plan for lo1-lo3 (selectivity 0.00012-0.0105) and an HNSW Index Scan for lo4, lo5, ctl, gap1-4 and idx1-3. Adding `enable_sort = off` gave an HNSW Index Scan for all 13 filters on both tables.
+
+**Change.** `enable_sort = off` is added to arms 3, 4 and 5 (forced-hnsw, iterative-relaxed, iterative-strict). This supersedes the settings of those three arms in the Arms table. Arms 1 and 2 are unchanged (`enable_sort` stays at its default `on`, as arm 2's exact plans need a Sort).
+
+**Expected effect.** An HNSW Index Scan plan has no Sort node (the index returns rows in distance order), so the setting is expected not to change those arms where they were already HNSW (lo4, lo5, ctl, gap1-4, idx1-3). It only removes the exact B-tree + Sort alternative. This is a plan-level expectation; whether results at the unchanged points are identical is not claimed.
+
+**Pre-flight plan check (new, runs before any measured query).** Before the first measured query the script runs a plain `EXPLAIN (FORMAT JSON)` (no ANALYZE) for every table x filter x arm 2-5 with query vector 0 (5 x 13 x 4 = 260 checks; arm 1 is recorded for information only). Intended scan node: forced-exact = `Seq Scan` or `Bitmap Heap Scan`; forced-hnsw, iterative-relaxed and iterative-strict = `Index Scan` on `*embedding_idx`. If any check fails, the whole run aborts before `run_meta.json` or `results.jsonl` is created. The table is saved to `outputs/phase_a_arms/preflight.json` (written on a fresh start; a resume repeats the check without overwriting the file). The per-row `plan_as_intended` flag stays as a second, per-measurement check.
+
+**Aborted files (renamed, not deleted, never analysed):**
+`outputs/phase_a_arms/results_aborted_frozen_arms.jsonl` (42 rows), `run_meta_aborted.json`, `run_aborted.log`, `run.err_aborted.log` (both empty).
+
+**Limits (added).** Server memory settings are the Docker/PostgreSQL defaults, the same as in Phase A, and are deliberately unchanged: `shared_buffers = 128MB`, `work_mem = 4MB` (also `effective_cache_size = 4GB`, `max_parallel_workers_per_gather = 2`, recorded in `run_meta.json`). Results therefore describe this configuration; with larger `shared_buffers` / `work_mem` the exact arm in particular may be faster.
+
+H1-H6 and the decision rule are unchanged. Size (1,300 combinations, 46,800 executions, 6,500 rows) and the 6-9 h estimate are unchanged; the pre-flight adds a few minutes.

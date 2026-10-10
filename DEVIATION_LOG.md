@@ -45,3 +45,27 @@ modified after the freeze, so their on-disk content may differ from what
 existed at the freeze; `router.py` is not imported by the local runner.
 `outputs/thresholds.json` (mtime 2026-09-04 09:23:44) predates every
 modification of `threshold_detector.py` after 2026-09-04 08:50.
+
+## 2026-10-10 — three-arm run: aborted start and Amendment 2
+
+Failure: the first start of the H&M three-arm full run (commit 495d1b1,
+2026-10-10 10:47:40 +05:30) was stopped by hand at 10:49:05 after 42 rows.
+In 26 of them (hm_clothes_75, filter lo1; forced-hnsw, iterative-relaxed,
+iterative-strict) `plan_as_intended` was false: the planner used an exact
+B-tree Index Scan + Sort instead of the HNSW index, because the frozen arm
+settings allowed it.
+
+Exact change: `enable_sort = off` added to arms 3-5 in
+`src/phase_a_sweep/arm_comparison.py` and `PHASE_A_ARMS_PROTOCOL.md`
+(Amendment 2); a pre-flight plain-EXPLAIN check of all table x filter x arm 2-5
+combinations (vector 0) that aborts the run before any measured query, saved
+to `outputs/phase_a_arms/preflight.json`.
+
+Why a bug, not tuning: the arm was defined as a forced HNSW scan; the plan
+check showed it was not one for lo1-lo3. The change is made before any result
+was analysed, and no recall or latency from the aborted rows was looked at.
+
+Affected rows: the 42 aborted rows, kept unanalysed in
+`outputs/phase_a_arms/results_aborted_frozen_arms.jsonl` (with
+`run_meta_aborted.json`, `run_aborted.log`, `run.err_aborted.log`). They are
+excluded from all results. Rerun result: see the restarted run.
