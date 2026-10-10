@@ -1,0 +1,74 @@
+{
+  "git_commit": "4af00b51862e757ea569ce1083c7eef88615eee7",
+  "git_dirty_used_files": false,
+  "pgvector_version": "0.8.3",
+  "pg_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26220-SP0",
+  "seed": 20261010,
+  "k": 10,
+  "hnsw_ef_search": 40,
+  "timed_repeats": 5,
+  "warmups_per_point": 1,
+  "n_vectors": 20,
+  "vectors_source": "first 20 lines of ann-filtering-benchmark-datasets\\data\\tests.jsonl (as run_phase_a_v2.py: limit_vectors=20)",
+  "vectors_sha256": "a3ac22dfda7ee627b5b402c175351c9f3ba34cdf72ccb31302147709205bc834",
+  "statement_timeout_ms": 120000,
+  "jit": "off (SET per arm)",
+  "table_order": [
+    "hm_clothes_75",
+    "hm_clothes_0",
+    "hm_clothes_100",
+    "hm_clothes_25",
+    "hm_clothes_50"
+  ],
+  "schedule_sha256": "172b04a81aed531461ff4d7dfbc0a8e7d322211e1fbaf682edea7bdf942d3886",
+  "n_schedule_items": 2,
+  "file_sha256": {
+    "src/phase_a_sweep/arm_comparison.py": "e5fb127a05748270c02cd858a59eb1879805dc5ec5237409d5138e41cae50e9d",
+    "src/phase_a_sweep/explain_analyze_wrapper.py": "52a87e8c9a4c76fd02be537c380f6401a52ad452b0e19348ce4ebf44fe7675cd",
+    "src/phase_a_sweep/recall_calculator.py": "ecc83edf584b7f6104ea0939641a054d5c41fcda8a1943404b773ec6c22d4575",
+    "src/database/connection.py": "868ee8363a06d437c7f4b26800935e28b5287611a8acdf160747cf7a7efad736",
+    "PHASE_A_ARMS_PROTOCOL.md": "22e4083ac846456377360060e1b0e70aae1820dc19ca4af008a956b6aa14391b",
+    "outputs\\phase_a_arms\\filters.json": "1cc893a1e4c41f1527075289d5e308432e10211ebcefbb86b6cc567c44caf50d"
+  },
+  "arms": {
+    "planner-default": {
+      "sets": {
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "forced-exact": {
+      "sets": {
+        "enable_indexscan": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "forced-hnsw": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "iterative-relaxed": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "hnsw.iterative_scan": "relaxed_order"
+      }
+    },
+    "iterative-strict": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "hnsw.iterative_scan": "strict_order"
+      }
+    }
+  },
+  "started": "2026-10-10T04:42:06.155386+00:00",
+  "mode": "dry-run"
+}

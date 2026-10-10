@@ -1,0 +1,4 @@
+connection problem, stopping without recording this row: OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+

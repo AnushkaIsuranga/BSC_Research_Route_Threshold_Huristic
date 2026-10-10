@@ -1,0 +1,81 @@
+{
+  "git_commit": "ecaf4151d8ff24342fff4cf0525727d6d6909679",
+  "server_settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "effective_cache_size": "4GB",
+    "max_parallel_workers_per_gather": "2",
+    "random_page_cost": "4"
+  },
+  "git_dirty_used_files": true,
+  "pgvector_version": "0.8.3",
+  "pg_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26220-SP0",
+  "seed": 20261010,
+  "k": 10,
+  "hnsw_ef_search": 40,
+  "timed_repeats": 5,
+  "warmups_per_point": 1,
+  "n_vectors": 20,
+  "vectors_source": "first 20 lines of ann-filtering-benchmark-datasets\\data\\tests.jsonl (as run_phase_a_v2.py: limit_vectors=20)",
+  "vectors_sha256": "a3ac22dfda7ee627b5b402c175351c9f3ba34cdf72ccb31302147709205bc834",
+  "statement_timeout_ms": 120000,
+  "jit": "off (SET per arm)",
+  "table_order": [
+    "hm_clothes_75",
+    "hm_clothes_0",
+    "hm_clothes_100",
+    "hm_clothes_25",
+    "hm_clothes_50"
+  ],
+  "schedule_sha256": "01a4a32cb14af7bcce9f0ff361731434a95db3577fde1c032d9d47964786d969",
+  "n_schedule_items": 2,
+  "file_sha256": {
+    "src/phase_a_sweep/arm_comparison.py": "8de366b2d1f9ea6ade409212d02d9d71e9e6ce1029d7be7471c7d7d9c8b8cd38",
+    "src/phase_a_sweep/explain_analyze_wrapper.py": "52a87e8c9a4c76fd02be537c380f6401a52ad452b0e19348ce4ebf44fe7675cd",
+    "src/phase_a_sweep/recall_calculator.py": "ecc83edf584b7f6104ea0939641a054d5c41fcda8a1943404b773ec6c22d4575",
+    "src/database/connection.py": "868ee8363a06d437c7f4b26800935e28b5287611a8acdf160747cf7a7efad736",
+    "PHASE_A_ARMS_PROTOCOL.md": "6daa843e55a5861bb1142fe52e9d78aa06b0f48e2191abf7f8f31cf59855d6ee",
+    "outputs\\phase_a_arms\\filters.json": "c923d4b0ffc67fc8bb81a4ec9e8867375fddfe792ace879e2aa8cd70b426badb"
+  },
+  "arms": {
+    "planner-default": {
+      "sets": {
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "forced-exact": {
+      "sets": {
+        "enable_indexscan": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "forced-hnsw": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "iterative-relaxed": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "hnsw.iterative_scan": "relaxed_order"
+      }
+    },
+    "iterative-strict": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "hnsw.iterative_scan": "strict_order"
+      }
+    }
+  },
+  "started": "2026-10-10T05:15:15.779055+00:00",
+  "mode": "dry-run"
+}
