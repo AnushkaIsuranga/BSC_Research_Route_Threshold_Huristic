@@ -35,7 +35,7 @@ Route by estimated selectivity `s` only: **exact** (`forced-exact`, today's `pre
 - **Failure handling** [I]: raise on `None`, NaN, negative or > 1 (today NaN returns `pre-filter` silently, audit Task 1c), and log the estimate and the estimator used with every routed query.
 - **Scale caveat** [I, untested]: T was derived on 105,100-row tables. The failure mechanisms depend on the number of matching rows (iterative scan fails at 13-5,021 matching rows on the cells above; exact latency grows with matching rows, 11,150 rows at 0.106 cost 253-317 ms). A selectivity threshold may not transfer to a corpus of another size; expressing T as a matched-row count is a candidate but nothing here tests it.
 
-## 4. The least-correlated table (hm_clothes_100)
+## 4. The most-correlated table (hm_clothes_100)
 
 [V] iterative-relaxed fails there at lo3 (recall 0.82, min vector 0.0) and lo4 (0.42, min 0.0), while passing on the other four tables at both filters (cells; arms report (c) H2) and passing at lo5 (0.93) and from 0.2038 up (ctl 0.96). forced-exact passes all of lo1-lo5 there (0.33, 2.5, 24.7, 113, 262 ms).
 
