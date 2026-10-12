@@ -5,7 +5,7 @@ import sys
 
 import pytest
 
-from src.phase_d_validation.comparison_runner import error_rule, load_resume_state, projected_cost
+from src.phase_d_validation.comparison_runner import error_kind, error_rule, load_resume_state, projected_cost
 
 
 def _write(p, rows):
@@ -33,12 +33,23 @@ def test_load_resume_state_empty_folder(tmp_path):
     assert s == {"done": set(), "n_results": 0, "errors": [], "prior_spent": 0.0}
 
 
-def test_error_rule_two_percent_of_first_100_questions_x_4_arms():
+def test_error_rule_fixed_allowance_of_8_rows_regardless_of_run_size():
+    for n_questions in (10, 100):                       # a 10-question smoke test uses the same fixed allowance as 100 questions
+        window = [f"q{i}" for i in range(n_questions)]
+        errs = [{"query_id": f"q{i}", "error": "ValueError: boom"} for i in range(8)]
+        assert error_rule(errs, window) == {"errors_counted": 8, "rate_limit_429_not_counted": 0, "allowed": 8, "triggered": False}
+        assert error_rule(errs + [{"query_id": "q9", "error": "KeyError: x"}], window)["triggered"] is True
     window = [f"q{i}" for i in range(100)]
-    errs = [{"query_id": f"q{i}"} for i in range(8)]
-    assert error_rule(errs, window, 4, 0.02) == {"errors_in_window": 8, "allowed": 8.0, "triggered": False}
-    assert error_rule(errs + [{"query_id": "q50"}], window, 4, 0.02)["triggered"] is True
-    assert error_rule(errs + [{"query_id": "q150"}], window, 4, 0.02)["triggered"] is False   # outside the window
+    assert error_rule([{"query_id": "q150", "error": "x"}] * 20, window)["triggered"] is False   # outside the first 100 questions
+
+
+def test_429_is_not_counted_toward_the_abort_rule():
+    window = [f"q{i}" for i in range(10)]
+    e429 = {"query_id": "q1", "error": "LLMCallError: vertex_gemini/x: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {}}"}
+    r = error_rule([e429] * 50, window)
+    assert r["triggered"] is False and r["errors_counted"] == 0 and r["rate_limit_429_not_counted"] == 50
+    assert error_kind(e429["error"]) == "rate_limit_429" and error_kind("RuntimeError: 429 words only") == "other"
+    assert error_rule([e429] * 50 + [{"query_id": "q2", "error": "ValueError: x"}] * 9, window)["triggered"] is True
 
 
 def test_projected_cost():
@@ -111,3 +122,156 @@ def test_scaleup_analysis_primary_strata_and_refusal():
     assert r["post_filter_share"]["naive_llm"] == 0.5
     with pytest.raises(ValueError, match="without a completed row"):
         analyse([x for x in rows if not (x["arm"] == "naive_llm" and x["query_id"] == "q3")], subset)
+
+
+# ---------------- Amendment 4 addendum 1: pacing, single attempt, 429 stops the run but is resumable
+class _FakeClock:
+    def __init__(self):
+        self.t = 0.0
+        self.slept = []
+
+    def now(self):
+        return self.t
+
+    def sleep(self, s):
+        self.slept.append(s)
+        self.t += s
+
+
+def test_pacer_enforces_minimum_spacing_between_call_starts():
+    from src.phase_d_validation.llm_client import Pacer
+    c = _FakeClock()
+    p = Pacer(15, clock=c.now, sleep=c.sleep)                       # 15 calls/min -> 4.0 s spacing
+    assert p.min_interval_s == 4.0
+    starts = []
+    for work in (1.0, 5.0, 0.5, 0.5):                              # call durations
+        p.wait()
+        starts.append(c.t)
+        c.t += work
+    # call 2 starts 4.0 s after call 1 (1.0 s of work + 3.0 s wait); call 3 starts right after the 5 s call 2 (no wait);
+    # call 4 waits until 4.0 s after call 3 started
+    assert starts == [0.0, 4.0, 9.0, 13.0]
+    assert c.slept == [3.0, 3.5]
+    assert all(b - a >= 4.0 - 1e-9 for a, b in zip(starts, starts[1:]))
+    assert p.describe()["max_calls_per_minute"] == 15 and p.n_calls == 4
+
+
+def test_pacer_is_applied_before_every_call_and_shared_by_router_and_answer_clients():
+    from src.phase_d_validation.llm_client import LLMClient, Pacer
+
+    class Fake(LLMClient):
+        backend = "fake"
+
+        def _call(self, system, user, max_out, json_mode):
+            return "x", 1, 1, 0, {}, {}
+    c = _FakeClock()
+    pacer = Pacer(30, clock=c.now, sleep=c.sleep)                   # 2.0 s
+    a, b = Fake("a", {}), Fake("b", {})
+    a.pacer = b.pacer = pacer
+    a.generate("s", "u", max_output_tokens=1)
+    b.generate("s", "u", max_output_tokens=1)
+    a.generate("s", "u", max_output_tokens=1)
+    assert c.slept == [2.0, 2.0] and pacer.n_calls == 3
+    d = Fake("d", {})
+    d.generate("s", "u", max_output_tokens=1)                       # no pacer: no waiting
+    assert c.slept == [2.0, 2.0]
+
+
+def test_gemini_client_is_built_with_a_single_attempt(monkeypatch):
+    import google.genai as genai
+    from src.phase_d_validation.llm_client import VertexGeminiBackend, load_generation_config
+    seen = {}
+
+    class Spy:
+        def __init__(self, **kw):
+            seen.update(kw)
+    monkeypatch.setattr(genai, "Client", Spy)
+    for var in ("GOOGLE_API_KEY", "GEMINI_API_KEY"):
+        monkeypatch.delenv(var, raising=False)
+    cfg = load_generation_config()["models"]["gemini-3.8-flash"]
+    VertexGeminiBackend("gemini-3.8-flash", cfg, guard=object())
+    assert seen["vertexai"] is True and seen["location"] == "global"
+    assert seen["http_options"].retry_options.attempts == 1
+
+
+def test_one_http_attempt_per_call_with_the_real_client_and_a_429():
+    """Real google-genai client (no network: the transport call is replaced); a 429 must reach the caller after ONE attempt."""
+    import time
+    from google import genai
+    from google.genai import errors, types
+    from src.phase_d_validation.llm_client import VertexGeminiBackend
+    try:
+        client = genai.Client(vertexai=True, project="bsc-research-project-511410", location="global", http_options=VertexGeminiBackend.http_options())
+    except Exception as exc:  # no Application Default Credentials on this machine
+        pytest.skip(f"cannot build a Vertex client here: {type(exc).__name__}")
+    calls = {"n": 0}
+
+    def fake_request_once(http_request, stream=False):
+        calls["n"] += 1
+        raise errors.ClientError(429, {"error": {"code": 429, "message": "Resource exhausted", "status": "RESOURCE_EXHAUSTED"}})
+    client._api_client._request_once = fake_request_once
+    t0 = time.time()
+    with pytest.raises(errors.ClientError):
+        client.models.generate_content(model="gemini-3.8-flash", contents="x", config=types.GenerateContentConfig(max_output_tokens=8))
+    assert calls["n"] == 1 and time.time() - t0 < 5
+    # contrast: asking for the library's own retrying behaviour makes several attempts, so the test can tell the difference
+    retrying = genai.Client(vertexai=True, project="bsc-research-project-511410", location="global",
+                            http_options=types.HttpOptions(retry_options=types.HttpRetryOptions(attempts=3, initial_delay=0.01, max_delay=0.02)))
+    calls["n"] = 0
+    retrying._api_client._request_once = fake_request_once
+    with pytest.raises(errors.ClientError):
+        retrying.models.generate_content(model="gemini-3.8-flash", contents="x")
+    assert calls["n"] == 3
+
+
+def test_429_stops_the_run_is_logged_not_counted_and_resumable(tmp_path, monkeypatch):
+    """Integration (real DB, cached query embeddings, fake LLM client): a 429 on the 2nd call stops the run immediately even with
+    --abort-error-rows 0, is written to errors.jsonl with error_kind, and --resume completes the missing rows without a retry."""
+    import psycopg2
+
+    from src import db_settings
+    from src.phase_d_validation import comparison_runner as cr
+    from src.phase_d_validation.llm_client import LLMCallError, LLMClient, LLMResponse
+    try:
+        psycopg2.connect(**db_settings(), connect_timeout=3).close()
+    except psycopg2.OperationalError:
+        pytest.skip("PostgreSQL not available")
+
+    class Fake(LLMClient):
+        backend = "fake"
+
+        def __init__(self, fail_on=None):
+            super().__init__("fake", {}, None)
+            self.calls, self.fail_on = 0, fail_on
+
+        def generate(self, system, user, *, max_output_tokens, json_mode=False):
+            self.calls += 1
+            if self.pacer is not None:
+                self.pacer.wait()
+            if self.calls == self.fail_on:
+                raise LLMCallError("fake/m: ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429}}")
+            return LLMResponse("1", 1, 1, 0, 0.0, 1.0, {}, {}, "STOP")
+    out = tmp_path / "run"
+    base = ["--model", "qwen2.5:7b", "--arms", "v2", "--limit", "3", "--table", "finqa_evidence_qwen3", "--k", "15", "--distinct",
+            "--query-embeddings", "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json", "--output-dir", str(out),
+            "--abort-error-rows", "0", "--max-calls-per-minute", "6000"]
+    import argparse
+    import sys
+
+    def run_main(extra, fake):
+        monkeypatch.setattr(cr, "make_client", lambda *a, **k: fake)
+        monkeypatch.setattr(cr, "ollama_digest", lambda *a, **k: {"digest": "x"})
+        monkeypatch.setattr(sys, "argv", ["prog"] + base + extra)
+        cr.main()
+    with pytest.raises(RuntimeError, match="429 rate limit.*resume manually with --resume"):
+        run_main([], Fake(fail_on=2))
+    errs = [json.loads(l) for l in (out / "errors.jsonl").read_text().splitlines()]
+    done = [json.loads(l) for l in (out / "results.jsonl").read_text().splitlines()]
+    assert len(done) == 1 and len(errs) == 1 and errs[0]["error_kind"] == "rate_limit_429" and errs[0]["error_traceback"]
+    meta = json.loads((out / "run_meta.json").read_text())
+    assert meta["pacing"]["max_calls_per_minute"] == 6000 and meta["abort_rules"]["error_rows_allowed_in_first_100_questions"] == 0
+    f2 = Fake()
+    run_main(["--resume"], f2)
+    done = [json.loads(l) for l in (out / "results.jsonl").read_text().splitlines()]
+    assert len(done) == 3 and len({(r["pass"], r["query_id"], r["arm"]) for r in done}) == 3 and f2.calls == 2   # only the 2 missing rows ran
+    assert (out / "resumes.jsonl").exists()

@@ -114,6 +114,38 @@ class CostGuard:
         self.spent += cost
 
 
+class Pacer:
+    """Fixed pace (Amendment 4, addendum 1): at most `max_calls_per_minute` calls, enforced as a minimum spacing of
+    60 / max_calls_per_minute seconds between the STARTS of consecutive calls (router and answer calls share one pacer).
+    No retries and no backoff: it only waits before a call. `clock` / `sleep` are injectable for tests."""
+
+    def __init__(self, max_calls_per_minute: float, clock=time.monotonic, sleep=time.sleep):
+        if not max_calls_per_minute > 0:
+            raise ValueError("max_calls_per_minute must be > 0")
+        self.max_calls_per_minute = float(max_calls_per_minute)
+        self.min_interval_s = 60.0 / self.max_calls_per_minute
+        self._clock, self._sleep = clock, sleep
+        self._last_start = None
+        self.n_calls, self.total_wait_s = 0, 0.0
+
+    def wait(self) -> float:
+        waited = 0.0
+        now = self._clock()
+        if self._last_start is not None:
+            gap = self._last_start + self.min_interval_s - now
+            if gap > 0:
+                self._sleep(gap)
+                waited = gap
+        self._last_start = self._clock()
+        self.n_calls += 1
+        self.total_wait_s += waited
+        return waited
+
+    def describe(self) -> dict:
+        return {"max_calls_per_minute": self.max_calls_per_minute, "min_interval_seconds": self.min_interval_s,
+                "spacing": "minimum time between the starts of consecutive calls; no retries, no backoff"}
+
+
 class LLMClient:
     backend = ""
     paid = False
@@ -121,6 +153,7 @@ class LLMClient:
 
     def __init__(self, name: str, cfg: dict, guard: CostGuard | None = None):
         self.name, self.cfg, self.guard = name, cfg, guard
+        self.pacer: Pacer | None = None
 
     @property
     def spent_usd(self) -> float:
@@ -129,6 +162,8 @@ class LLMClient:
     def generate(self, system: str, user: str, *, max_output_tokens: int, json_mode: bool = False) -> LLMResponse:
         if self.guard:
             self.guard.check_before(len(system) + len(user), max_output_tokens)
+        if self.pacer is not None:
+            self.pacer.wait()
         t0 = time.perf_counter()
         try:
             text, i, o, th, raw, used = self._call(system, user, max_output_tokens, json_mode)
@@ -191,8 +226,15 @@ class VertexGeminiBackend(LLMClient):
             if not self.project:
                 raise PaidLockError("no Vertex project configured (config/generation.json 'project')")
             from google import genai
-            client = genai.Client(vertexai=True, project=self.project, location=self.location)
+            client = genai.Client(vertexai=True, project=self.project, location=self.location, http_options=self.http_options())
         self.client = client
+
+    @staticmethod
+    def http_options():
+        """Single attempt per call (Amendment 4, addendum 1): client-side retries are disabled explicitly, so an HTTP 429 or
+        5xx is raised at once and handled by the runner (stop, log, manual --resume). No timeout is set here."""
+        from google.genai import types
+        return types.HttpOptions(retry_options=types.HttpRetryOptions(attempts=1))
 
     def _call(self, system, user, max_out, json_mode):
         from google.genai import types

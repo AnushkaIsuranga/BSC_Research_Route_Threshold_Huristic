@@ -39,7 +39,7 @@ from src import db_settings
 from src.phase_b_router.router import (ANSWER_SYSTEM, NAIVE_INFORMED_ROUTER_SYSTEM, NAIVE_ROUTER_SYSTEM, Deps, build_decision_matrix_graph,
                                        build_naive_graph, build_policy_v2_graph)
 from src.phase_d_validation.finqa_loader import get_frozen_filepath, load_finqa_subset
-from src.phase_d_validation.llm_client import BudgetExceeded, load_generation_config, make_client
+from src.phase_d_validation.llm_client import BudgetExceeded, Pacer, load_generation_config, make_client
 from src.phase_d_validation.scoring import UnparseableNumber, score_answer
 from src.utils.finqa_utils import exact_selectivity, extract_ticker_year
 
@@ -195,12 +195,22 @@ def load_resume_state(out: Path) -> dict:
     return {"done": done, "n_results": len(rows), "errors": errs, "prior_spent": spent}
 
 
-def error_rule(errors: list[dict], window_query_ids: list[str], n_arms: int, rate: float) -> dict:
-    """Abort rule: error rate > `rate` over the arm-runs of the first len(window_query_ids) questions."""
+ERROR_ROW_ALLOWANCE = 8   # Amendment 4 addendum 1: fixed allowance over the first 100 questions, whatever the run size
+
+
+def error_kind(err_text: str | None) -> str:
+    """'rate_limit_429' for an HTTP 429 / RESOURCE_EXHAUSTED error, else 'other'."""
+    t = err_text or ""
+    return "rate_limit_429" if ("429" in t and "RESOURCE_EXHAUSTED" in t) else "other"
+
+
+def error_rule(errors: list[dict], window_query_ids: list[str], allowance: int = ERROR_ROW_ALLOWANCE) -> dict:
+    """Abort rule: more than `allowance` error rows among the first len(window_query_ids) questions (at most 100).
+    429 RESOURCE_EXHAUSTED rows are not counted (they stop the run on their own and are resumed manually)."""
     ids = set(window_query_ids)
-    count = sum(1 for e in errors if e.get("query_id") in ids)
-    allowed = rate * len(window_query_ids) * n_arms
-    return {"errors_in_window": count, "allowed": allowed, "triggered": count > allowed}
+    count = sum(1 for e in errors if e.get("query_id") in ids and error_kind(e.get("error")) != "rate_limit_429")
+    rate_limited = sum(1 for e in errors if error_kind(e.get("error")) == "rate_limit_429")
+    return {"errors_counted": count, "rate_limit_429_not_counted": rate_limited, "allowed": allowance, "triggered": count > allowance}
 
 
 def projected_cost(spent: float, done_arm_runs: int, total_arm_runs: int) -> float | None:
@@ -224,6 +234,8 @@ def run(args: argparse.Namespace) -> Path:
     answer_client = make_client(args.model, allow_paid=args.allow_paid, budget_usd=args.budget_usd, config=cfg)
     router_client = answer_client if router_model == args.model else make_client(
         router_model, allow_paid=args.allow_paid, budget_usd=args.budget_usd, config=cfg)
+    pacer = Pacer(args.max_calls_per_minute) if args.max_calls_per_minute else None
+    answer_client.pacer = router_client.pacer = pacer
 
     subset = Path(args.subset) if args.subset else get_frozen_filepath()
     queries = load_finqa_subset(subset)
@@ -305,6 +317,9 @@ def run(args: argparse.Namespace) -> Path:
         "scoring": "primary = Amendment 2 (scale words stripped, no rescaling); strict = Amendment 1; both recorded per row",
         "finqa_rows": rows_total, "finqa_ticker_year_groups": groups, "n_queries": len(queries),
         "correlation_level": args.correlation_level, "warmup": warmup,
+        "pacing": pacer.describe() if pacer else None,
+        "client_retries": "single attempt per call (genai HttpRetryOptions(attempts=1)); no silent retries" if answer_client.backend == "vertex_gemini" else None,
+        "abort_rules": {"error_rows_allowed_in_first_100_questions": args.abort_error_rows, "429_counted": False, "projected_cost_usd": args.abort_projected_usd},
         "arm_order": f"per (pass, query): arms shuffled with random.Random('{ARM_ORDER_SEED}|pass|query_id'); order recorded in every row",
         "file_sha256": {u: sha256_file(u) for u in used},
     }
@@ -320,9 +335,9 @@ def run(args: argparse.Namespace) -> Path:
         if changed:
             raise SystemExit(f"--resume refused: settings or files changed since the run started: {changed}")
         state0 = load_resume_state(out)
-        rule = error_rule(state0["errors"], window_ids, len(arms), args.abort_error_rate)
+        rule = error_rule(state0["errors"], window_ids, args.abort_error_rows)
         if rule["triggered"]:
-            raise AbortRule(f"error-rate abort rule already triggered: {rule}")
+            raise AbortRule(f"error-rows abort rule already triggered: {rule}")
         if answer_client.guard is not None:
             answer_client.guard.spent = state0["prior_spent"]
         with (out / "resumes.jsonl").open("a", encoding="utf-8") as rf:
@@ -352,26 +367,30 @@ def run(args: argparse.Namespace) -> Path:
                         state = {"query_id": qid, "ticker": ticker, "year": year, "question": row["question"],
                                  "gold_evidence_keys": sorted(gold_keys), "estimated_selectivity": sel,
                                  "correlation_level": args.correlation_level or ""}
-                        err, final = None, dict(state)
+                        err, tb, final = None, None, dict(state)
                         t0 = time.perf_counter()
                         try:
                             final.update(graphs[arm].invoke(dict(state)))
                         except Exception as exc:  # logged to the row, then re-raised below: no default substitution
                             err = f"{type(exc).__name__}: {exc}"
+                            tb = traceback.format_exc()
                         total_ms = (time.perf_counter() - t0) * 1000
                         rec = build_record(run_id, pass_no, arm, row, gold_keys, sel, final, total_ms, args.model,
                                            router_model, err, order, gold_md5_by_q[qid])
                         rec["cumulative_cost_usd"] = answer_client.spent_usd + (
                             router_client.spent_usd if router_client is not answer_client else 0.0)
-                        if err:  # error rows go to errors.jsonl (results.jsonl holds completed rows only); the run stops
+                        if err:  # error rows go to errors.jsonl (results.jsonl holds completed rows only); the run ALWAYS stops
+                            kind = error_kind(err)
+                            rec["error_kind"], rec["error_traceback"] = kind, tb
                             with (out / "errors.jsonl").open("a", encoding="utf-8") as ef:
                                 ef.write(json.dumps(rec, ensure_ascii=False) + "\n")
-                            (out / "error.log").write_text(err + "\n" + traceback.format_exc(), encoding="utf-8")
+                            (out / "error.log").write_text(err + "\n" + (tb or ""), encoding="utf-8")
                             state0["errors"].append(rec)
-                            rule = error_rule(state0["errors"], window_ids, len(arms), args.abort_error_rate)
+                            rule = error_rule(state0["errors"], window_ids, args.abort_error_rows)
                             if rule["triggered"]:
-                                raise AbortRule(f"error-rate abort rule triggered at pass {pass_no} {qid} arm {arm}: {rule}; last error: {err}")
-                            raise RuntimeError(f"stopped (resume with --resume): pass {pass_no} {qid} arm {arm}: {err}")
+                                raise AbortRule(f"error-rows abort rule triggered at pass {pass_no} {qid} arm {arm}: {rule}; last error: {err}")
+                            hint = "HTTP 429 rate limit (not counted toward the abort rule); " if kind == "rate_limit_429" else ""
+                            raise RuntimeError(f"stopped, {hint}resume manually with --resume: pass {pass_no} {qid} arm {arm}: {err}")
                         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
                         fh.flush()
                         done_runs += 1
@@ -414,10 +433,11 @@ def main() -> None:
                    help="--distinct: k distinct passages (dedupe by md5(content)); --no-distinct: k rows")
     p.add_argument("--k", type=int, required=True, help="rows / distinct passages per prompt (final runs: 15)")
     p.add_argument("--resume", action="store_true", help="continue a stopped run in --output-dir (skips completed rows; settings must be unchanged)")
-    p.add_argument("--abort-error-rate", type=float, default=0.02, help="abort if errors exceed this share of the arm-runs of the first --error-window questions")
+    p.add_argument("--abort-error-rows", type=int, default=ERROR_ROW_ALLOWANCE, help="abort if more than this many (non-429) error rows occur among the first --error-window questions")
     p.add_argument("--error-window", type=int, default=100)
     p.add_argument("--abort-projected-usd", type=float, default=None, help="abort if projected total cost exceeds this (checked after --projection-min-arm-runs)")
     p.add_argument("--projection-min-arm-runs", type=int, default=40)
+    p.add_argument("--max-calls-per-minute", type=float, default=None, help="fixed pace: minimum spacing 60/N s between call starts (no retries, no backoff); logged in run_meta.json")
     p.add_argument("--allow-paid", action="store_true")
     p.add_argument("--budget-usd", type=float, default=None)
     args = p.parse_args()
