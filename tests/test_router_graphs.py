@@ -33,7 +33,7 @@ def deps(answer="5", router=None):
 @pytest.fixture
 def patched_retrieve():
     with unittest.mock.patch.object(router_mod, "retrieve",
-                                    side_effect=lambda conn, route, t, y, v, k, tbl="finqa_evidence": {"rows": [(1, "A/2020/page_1.pdf-1", "text_1", "c", 0.5)], "rows_fetched": 1, "tie_truncated": False}) as m:
+                                    side_effect=lambda conn, route, t, y, v, k, tbl="finqa_evidence", distinct=False: {"rows": [(1, "A/2020/page_1.pdf-1", "text_1", "c", 0.5)], "rows_fetched": 1, "tie_truncated": False}) as m:
         yield m
 
 

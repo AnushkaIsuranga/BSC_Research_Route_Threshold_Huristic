@@ -53,3 +53,31 @@ def test_exact_route_has_ties_broken_by_id(conn):
 def test_unknown_route_raises(conn):
     with pytest.raises(ValueError):
         retrieve(conn, "bogus", "INTC", "2015", vec(conn, 7601), 6)
+
+
+@pytest.mark.parametrize("route", ["exact", "post-filter", "iterative-relaxed"])
+@pytest.mark.parametrize("ticker,year,row_id", CASES)
+def test_distinct_returns_distinct_passages_in_order(conn, route, ticker, year, row_id):
+    import hashlib
+    v = vec(conn, row_id)
+    a = retrieve(conn, route, ticker, year, v, 6, distinct=True)
+    b = retrieve(conn, route, ticker, year, v, 6, distinct=True)
+    assert [r[0] for r in a["rows"]] == [r[0] for r in b["rows"]]
+    hashes = [hashlib.md5(r[3].encode()).hexdigest() for r in a["rows"]]
+    assert len(set(hashes)) == len(hashes), "passages must be distinct"
+    keys = [(r[4], r[0]) for r in a["rows"]]
+    assert keys == sorted(keys) and len(a["rows"]) <= 6
+
+
+def test_distinct_exact_matches_python_dedupe_of_full_ranking(conn):
+    import hashlib
+    v = vec(conn, 7601)
+    full = retrieve(conn, "exact", "INTC", "2015", v, 400)["rows"]  # whole filtered set, (distance, id) order
+    seen, expect = set(), []
+    for r in full:
+        h = hashlib.md5(r[3].encode()).hexdigest()
+        if h not in seen:
+            seen.add(h)
+            expect.append(r[0])
+    got = [r[0] for r in retrieve(conn, "exact", "INTC", "2015", v, 10, distinct=True)["rows"]]
+    assert got == expect[:10]

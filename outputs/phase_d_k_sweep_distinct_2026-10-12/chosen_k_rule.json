@@ -1,0 +1,14 @@
+{
+  "rule": "chosen k = smallest k whose exact-route all-gold hit is within 2 queries of the k=20 value",
+  "exact_all_gold_hits_by_k": {
+    "6": 21,
+    "10": 27,
+    "15": 33,
+    "20": 35
+  },
+  "k20_value": 35,
+  "chosen_k": 15,
+  "query_cache": "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json",
+  "query_cache_sha256": "930cadc0bdea177b0951a6891c227606cc47a3b4a1ce8c437563635f9be9ff23",
+  "hit_definition": "gold row text among retrieved distinct passage texts"
+}
