@@ -1,0 +1,2 @@
+START 2026-10-12T08:03:33Z | Ollama stopped, no Jupyter/python processes, host CPU 17-21% (Claude desktop app, Docker) | see host_load.json | run commit e0f898a
+END 2026-10-12T08:19:13Z | 1500 rows, 0 resumes | host CPU 3-5%

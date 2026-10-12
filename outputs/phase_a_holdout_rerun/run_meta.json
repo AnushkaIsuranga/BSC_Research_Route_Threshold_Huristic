@@ -1,0 +1,91 @@
+{
+  "git_commit": "e0f898aa33826ea451de94a26d6cc9ed92fcb62c",
+  "git_dirty_used_files": false,
+  "server_settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "effective_cache_size": "4GB",
+    "max_parallel_workers_per_gather": "2",
+    "random_page_cost": "4"
+  },
+  "pgvector_version": "0.8.3",
+  "pg_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26220-SP0",
+  "seed": 20261014,
+  "k": 10,
+  "hnsw_ef_search": 40,
+  "timed_repeats": 5,
+  "warmups_per_point": 1,
+  "arms": {
+    "forced-exact": {
+      "sets": {
+        "enable_indexscan": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "forced-hnsw": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "enable_sort": "off",
+        "hnsw.iterative_scan": "off"
+      }
+    },
+    "iterative-relaxed": {
+      "sets": {
+        "enable_indexscan": "on",
+        "enable_seqscan": "off",
+        "enable_bitmapscan": "off",
+        "enable_sort": "off",
+        "hnsw.iterative_scan": "relaxed_order"
+      }
+    }
+  },
+  "vector_indices": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "vectors_sha256": "8e3e384621b599dbbf532c7772fc2f218a63365cd5706af02480155834c53208",
+  "vectors_source": "0-based line indices 20-39 of ann-filtering-benchmark-datasets\\data\\tests.jsonl",
+  "statement_timeout_ms": 120000,
+  "table_order": [
+    "hm_clothes_75",
+    "hm_clothes_0",
+    "hm_clothes_50",
+    "hm_clothes_25",
+    "hm_clothes_100"
+  ],
+  "schedule_sha256": "8b0b21e37707148328e43fac360cfc45706afa067836a6bb4be6b600ee971523",
+  "n_schedule_items": 500,
+  "file_sha256": {
+    "src/phase_a_sweep/holdout_run.py": "eff727c4788f1ec5358e2a64bda5cdc0627574c27c3f762ba9edc9aebbf9bffb",
+    "src/phase_a_sweep/arm_comparison.py": "e4e0b32ec3c8f7e78bf4230cc48157fa290e25048bb638a89ba8d5e1768938d4",
+    "src/phase_a_sweep/explain_analyze_wrapper.py": "52a87e8c9a4c76fd02be537c380f6401a52ad452b0e19348ce4ebf44fe7675cd",
+    "src/phase_a_sweep/recall_calculator.py": "ecc83edf584b7f6104ea0939641a054d5c41fcda8a1943404b773ec6c22d4575",
+    "src/database/connection.py": "868ee8363a06d437c7f4b26800935e28b5287611a8acdf160747cf7a7efad736",
+    "PHASE_A_HOLDOUT_PROTOCOL.md": "82c9d9735a3f970618e7544122ebcefed73c7e7c7878b5e3d9a8bf4569d72696",
+    "outputs\\phase_a_holdout_rerun\\filters.json": "cbf3df5b3feeb35e893a365848d7b239a2380607ef83785946a4d403cd416d87"
+  },
+  "started": "2026-10-12T08:03:36.561205+00:00",
+  "mode": "full"
+}

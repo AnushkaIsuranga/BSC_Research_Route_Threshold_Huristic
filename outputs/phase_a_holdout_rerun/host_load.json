@@ -1,0 +1,76 @@
+{
+  "run_id": "holdout_rerun_20261014",
+  "seed": 20261014,
+  "samples": [
+    {
+      "event": "run_start",
+      "utc": "2026-10-12T08:03:33.839981+00:00",
+      "cpu_total_pct_3_samples": [
+        17.543162,
+        21.024711,
+        19.795572
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":536},{\"Name\":\"claude\",\"cpu_s\":346},{\"Name\":\"claude\",\"cpu_s\":244},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":126},{\"Name\":\"CrossDeviceService\",\"cpu_s\":116}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T08:03:40.445498+00:00",
+      "cpu_total_pct_3_samples": [
+        12.354797,
+        22.38122,
+        22.114179
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":536},{\"Name\":\"claude\",\"cpu_s\":348},{\"Name\":\"claude\",\"cpu_s\":244},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":126},{\"Name\":\"CrossDeviceService\",\"cpu_s\":116}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T08:06:45.480505+00:00",
+      "cpu_total_pct_3_samples": [
+        15.225805,
+        20.232773,
+        14.721703
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":549},{\"Name\":\"claude\",\"cpu_s\":377},{\"Name\":\"claude\",\"cpu_s\":260},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":127},{\"Name\":\"CrossDeviceService\",\"cpu_s\":117}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T08:09:46.422342+00:00",
+      "cpu_total_pct_3_samples": [
+        10.919689,
+        9.466367,
+        10.05949
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":561},{\"Name\":\"claude\",\"cpu_s\":400},{\"Name\":\"claude\",\"cpu_s\":267},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":129},{\"Name\":\"CrossDeviceService\",\"cpu_s\":119}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T08:12:51.404678+00:00",
+      "cpu_total_pct_3_samples": [
+        13.463435,
+        10.501701,
+        3.449736
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":573},{\"Name\":\"claude\",\"cpu_s\":425},{\"Name\":\"claude\",\"cpu_s\":275},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":130},{\"Name\":\"CrossDeviceService\",\"cpu_s\":120}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T08:15:55.974057+00:00",
+      "cpu_total_pct_3_samples": [
+        5.744342,
+        10.847644,
+        5.016688
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":584},{\"Name\":\"claude\",\"cpu_s\":450},{\"Name\":\"claude\",\"cpu_s\":283},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":131},{\"Name\":\"CrossDeviceService\",\"cpu_s\":121}]"
+    },
+    {
+      "event": "run_end",
+      "utc": "2026-10-12T08:19:13.845698+00:00",
+      "cpu_total_pct_3_samples": [
+        5.02056,
+        3.068528,
+        3.552688
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":596},{\"Name\":\"claude\",\"cpu_s\":476},{\"Name\":\"claude\",\"cpu_s\":291},{\"Name\":\"NVIDIA Overlay\",\"cpu_s\":132},{\"Name\":\"CrossDeviceService\",\"cpu_s\":123}]"
+    }
+  ]
+}
