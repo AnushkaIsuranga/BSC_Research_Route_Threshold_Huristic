@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 93,
+  "n_files": 163,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -374,6 +374,286 @@
     "outputs/phase_d_k_sweep_2026-10-12/query_embeddings_nomic_asis.json": {
       "sha256": "8fc8c6b21511e6f2937511b1c29f0c5cd050d4f531b7a19200fe8c8d1b54479e",
       "bytes": 526564
+    },
+    "outputs/embedding_build_2026-10-12/api_calls.jsonl": {
+      "sha256": "0ade5a719fe6cdc15083ca8838dbeb532248cbf81515a1206f068d74c1c971b9",
+      "bytes": 43903
+    },
+    "outputs/embedding_build_2026-10-12/audit_finqa_evidence_nomic_prefixed.json": {
+      "sha256": "b48ee331721ea0d3451864a5b8bed521ac1fa915625f48b10a9f70947603afb9",
+      "bytes": 1029
+    },
+    "outputs/embedding_build_2026-10-12/audit_finqa_evidence_qwen3.json": {
+      "sha256": "47461ff47deceda04fc0c0ae3e12a67c3104079469b4f1eadfb342bfba9fa509",
+      "bytes": 1091
+    },
+    "outputs/error_audit_2026-10-12/error_audit.md": {
+      "sha256": "cc22fcb2ad5d7086304b367b663689282ad5b90fd388bb9f103851469c75056c",
+      "bytes": 11263
+    },
+    "outputs/mechanism_check_2026-10-12/gemini_pass1.md": {
+      "sha256": "907bc660015a393b3b642223a15623b4c80ba88ea7f24cf74204f5e6e4566e66",
+      "bytes": 1700
+    },
+    "outputs/phase_a_holdout2/analysis/cell_summary.csv": {
+      "sha256": "38c51f29fa5b50efc5ec23e46f65f0fc4debd73e022baf8950d7d8cc7184e403",
+      "bytes": 11965
+    },
+    "outputs/phase_a_holdout2/analysis/hypotheses.json": {
+      "sha256": "5d1bec5c1f2602734e04f7b522030bebd12131bce10599603145c95f6bf3fd70",
+      "bytes": 4757
+    },
+    "outputs/phase_a_holdout2/analysis/policy_cells.csv": {
+      "sha256": "6bc7aabe0e129b39aba995061a2a3f3c521cd31b2805143662a6ff2bf2dc240a",
+      "bytes": 12736
+    },
+    "outputs/phase_a_holdout2/filters.json": {
+      "sha256": "81968b322f11c25f5f6207dfa1c6ed9a410cf1e7b5bb60cca57ce8b25c7f60b4",
+      "bytes": 4344
+    },
+    "outputs/phase_a_holdout2/host_load.json": {
+      "sha256": "fd8a3119cc19ff7228e6a9acf8bd0fd7f624d96449ec340ec1e6f72f84e3b005",
+      "bytes": 3061
+    },
+    "outputs/phase_a_holdout2/preflight.json": {
+      "sha256": "7742207a8274cee273d2850ab8626dacfa71aa6bc2e08600ab56b3f515a673de",
+      "bytes": 16441
+    },
+    "outputs/phase_a_holdout2/results.jsonl": {
+      "sha256": "df7163c0740250d4fe7f26025ff8724aac1427bf097b45dfb79c0f5779c5c0a5",
+      "bytes": 1737700
+    },
+    "outputs/phase_a_holdout2/run_meta.json": {
+      "sha256": "749009d0886ecdf1d4e0754513a2180722955529a06f89dfc3c38d16cdfe8402",
+      "bytes": 2745
+    },
+    "outputs/phase_a_holdout2/selftest.jsonl": {
+      "sha256": "8c8d2a8cdfac9d684142154f6ec392415a0f0f72afd74d83dfdd863df99a5db1",
+      "bytes": 6648
+    },
+    "outputs/phase_a_holdout2/selftest_meta.json": {
+      "sha256": "408e784527ae3a758c707a965e796079c23a1d72aae613c8b65c676ba31715a7",
+      "bytes": 2378
+    },
+    "outputs/phase_a_holdout2/selftest_preflight.json": {
+      "sha256": "73b6336172519ad90b2c0a0d025772279567be4a655fb409a870610dc62f0943",
+      "bytes": 3451
+    },
+    "outputs/phase_a_holdout_rerun/analysis/cell_summary.csv": {
+      "sha256": "2b42dbc8394a42844c25f269d2ed420ee246bf2fa3dfff40f03eba73417a0685",
+      "bytes": 11904
+    },
+    "outputs/phase_a_holdout_rerun/analysis/hypotheses.json": {
+      "sha256": "910bc2db2c9a6e154dd3c2c8bc838b88f935d9b49630bf076516ee471036447d",
+      "bytes": 379
+    },
+    "outputs/phase_a_holdout_rerun/analysis/policy_cells.csv": {
+      "sha256": "a68f13d105d6ab4d6fa522b4e31205fdaef9e53c7b4ae406c4a3e47c99eeeade",
+      "bytes": 12610
+    },
+    "outputs/phase_a_holdout_rerun/filters.json": {
+      "sha256": "cbf3df5b3feeb35e893a365848d7b239a2380607ef83785946a4d403cd416d87",
+      "bytes": 3193
+    },
+    "outputs/phase_a_holdout_rerun/host_load.json": {
+      "sha256": "2a67fe6bcda2e8346c268b2a2da9c4b2f6e5e707c63295f5fd9099dc524dc9bf",
+      "bytes": 3232
+    },
+    "outputs/phase_a_holdout_rerun/machine_notes.txt": {
+      "sha256": "6d806254b1ecefb73110b27a36de93e9b2e8c18de9cabca584b1083a8c1f5cf5",
+      "bytes": 225
+    },
+    "outputs/phase_a_holdout_rerun/preflight.json": {
+      "sha256": "6f3a119e2d55535889672043f1e552ae7d818f572e76d99430aceee6efcbd7d1",
+      "bytes": 16441
+    },
+    "outputs/phase_a_holdout_rerun/results.jsonl": {
+      "sha256": "ff5c72f4759444ed891ee93b73ddade4c95f85ca50948023f60715d82ed58e3f",
+      "bytes": 1670608
+    },
+    "outputs/phase_a_holdout_rerun/run_meta.json": {
+      "sha256": "34ddd173eabfe302747ed43ddb37a8612dcbcac79b4eb3fc1d3b2e6dd162f211",
+      "bytes": 2750
+    },
+    "outputs/phase_d_gemini_full_2026-10-12/results.csv": {
+      "sha256": "49d3fa6e37cd9d2721149913a3854e63cdadab9bb611aef3cbdcf15dc608bcaf",
+      "bytes": 1528088
+    },
+    "outputs/phase_d_gemini_full_2026-10-12/results.jsonl": {
+      "sha256": "d6805aa2cb96b234a46b53133e358cb922411ee39f9bed5cceb5b655375bcb0e",
+      "bytes": 2776625
+    },
+    "outputs/phase_d_gemini_full_2026-10-12/run_meta.json": {
+      "sha256": "bed0188c1d65a74de4cab28b7a2f7b5f2d1880dd521a696554049a1e5d553b84",
+      "bytes": 7545
+    },
+    "outputs/phase_d_gemini_full_2026-10-12/stats_primary.json": {
+      "sha256": "68ecd9010347bca78f42e73d95a2749394ee12b2913b31b7a6deef0dbc8e69cc",
+      "bytes": 20718
+    },
+    "outputs/phase_d_gemini_full_2026-10-12/stats_strict.json": {
+      "sha256": "8539bd93d672ddc96512c09fb0880bdeef9c951ab4db2234520b424cde18483b",
+      "bytes": 20651
+    },
+    "outputs/phase_d_gemini_pilot_2026-10-12/results.csv": {
+      "sha256": "1e31be4a7febdea524b01aafb87b6d7790fe68b167de0335c7dddd1c9f88372c",
+      "bytes": 20319
+    },
+    "outputs/phase_d_gemini_pilot_2026-10-12/results.jsonl": {
+      "sha256": "22b55a42dcc38759dc9695fee9a3d5d43f67d43bcbc073d5cda92b7a654caec4",
+      "bytes": 37419
+    },
+    "outputs/phase_d_gemini_pilot_2026-10-12/run_meta.json": {
+      "sha256": "9c8e677e7b78febeba24c8e4d15e26ea7ca9b8edf7ed87ff56b2336d2561ae77",
+      "bytes": 6882
+    },
+    "outputs/phase_d_k_sweep_2026-10-12/per_query.jsonl": {
+      "sha256": "c9d76b04f05fadd265e04db0484daee783a697bfd5ea1ee0969ab80ff5adba3e",
+      "bytes": 411088
+    },
+    "outputs/phase_d_k_sweep_2026-10-12/summary.csv": {
+      "sha256": "9533513dd1ac677f1d12f2b8368b9ce0781a101b8260f132ac09ef05f63f91f2",
+      "bytes": 2039
+    },
+    "outputs/phase_d_k_sweep_2026-10-12/summary.json": {
+      "sha256": "71910ceafb1035802f9f85f777087f39288f926b786775e8e04c3f01508955a6",
+      "bytes": 9407
+    },
+    "outputs/phase_d_k_sweep_2026-10-12/token_calibration.json": {
+      "sha256": "264a22f4eab7de60d620b1a2fbb4a77c29af8092ffefb787dc5118eb54e5ec0a",
+      "bytes": 510
+    },
+    "outputs/phase_d_k_sweep_distinct_2026-10-12/chosen_k_rule.json": {
+      "sha256": "b0e58dbbb757a67f40084f031bc0b377fd2d0936e485c181b17e85a2daac2100",
+      "bytes": 498
+    },
+    "outputs/phase_d_k_sweep_distinct_2026-10-12/per_query.jsonl": {
+      "sha256": "deb4841faeba165640c4080ed880e42448662bf24ae12eb575c8379a0845b388",
+      "bytes": 123533
+    },
+    "outputs/phase_d_k_sweep_distinct_2026-10-12/summary.json": {
+      "sha256": "d3f406a70440c1ecafb436d6716ba2421359a73f3d4a7957b3e735db688a9898",
+      "bytes": 2662
+    },
+    "outputs/phase_d_local_2026-10-12/results.csv": {
+      "sha256": "0a616e3ae3ae68d935657b64b6bd37e23d9dfe84d290f928a4430b02be11a236",
+      "bytes": 170943
+    },
+    "outputs/phase_d_local_2026-10-12/results.jsonl": {
+      "sha256": "88768d96dfda875973a8155adb19f3b22b91bd93ed909b8c24c195c7017cd8b9",
+      "bytes": 410981
+    },
+    "outputs/phase_d_local_2026-10-12/run_meta.json": {
+      "sha256": "d7b3c15196b70ad8a292eddcea18e4b244c0a1966615c69319c65f8923c1bb77",
+      "bytes": 5834
+    },
+    "outputs/phase_d_local_2026-10-12/stats_pass1.json": {
+      "sha256": "2dec1318489149a436f383a73223479e8847bd371500ad64378d8e94430c970c",
+      "bytes": 7400
+    },
+    "outputs/phase_d_local_2026-10-12_v3/results.csv": {
+      "sha256": "61a6ae05538e6117797ab873d54f5965bfa0200f19c40baf5a9313360ae8542a",
+      "bytes": 398918
+    },
+    "outputs/phase_d_local_2026-10-12_v3/results.jsonl": {
+      "sha256": "d658e3437ae7e1ac36a8b08320c7bbe099ad7898955058b9cdf7971833024320",
+      "bytes": 682143
+    },
+    "outputs/phase_d_local_2026-10-12_v3/run_meta.json": {
+      "sha256": "81fe8f90a1488ca1ee84c2b6de349a3a0fc26f9cc0bd7c80bcc240438e056da6",
+      "bytes": 6243
+    },
+    "outputs/phase_d_local_2026-10-12_v3/stats_pass1.json": {
+      "sha256": "420d43a1918f55437c8128fe5c6986849a39b313187495e9ed55bcb8e349559e",
+      "bytes": 8432
+    },
+    "outputs/phase_d_local_2026-10-12_v4/results.csv": {
+      "sha256": "f26bd77bec557780818161f33aa81bf6c4f33ed3f5622efbf2f6057173676b65",
+      "bytes": 559557
+    },
+    "outputs/phase_d_local_2026-10-12_v4/results.jsonl": {
+      "sha256": "4f37ce8345f91c536a8397429285bca5351e821f026c8d986bbbd3f52dbb80a9",
+      "bytes": 1039058
+    },
+    "outputs/phase_d_local_2026-10-12_v4/run_meta.json": {
+      "sha256": "ba0f87a3ce1ab681303e50e9d34c1a07d2353d29ce44f2160f3fa8271f1a48c8",
+      "bytes": 7955
+    },
+    "outputs/phase_d_local_2026-10-12_v4/stats_pass1_primary.json": {
+      "sha256": "449fc52b9bea97a34a2a52d0231bf42d798cca238611ef6d0f6556638b0eab2c",
+      "bytes": 15464
+    },
+    "outputs/phase_d_local_2026-10-12_v4/stats_pass1_strict.json": {
+      "sha256": "571221d7c5683fce99fb7ef1a9ba68c7f37f4ab6671ca9a1b281da13128cdeb0",
+      "bytes": 15463
+    },
+    "outputs/phase_d_local_2026-10-12_v5/results.csv": {
+      "sha256": "909e92bfd85617323f8dd061d8ada15e4e5d79c07d3f3224a6cbad308618a9b5",
+      "bytes": 1397783
+    },
+    "outputs/phase_d_local_2026-10-12_v5/results.jsonl": {
+      "sha256": "493a5cb830064ac9ddd57c0860e5708aff2c192c4f3b3d9cfd0826a5a1e81365",
+      "bytes": 2597590
+    },
+    "outputs/phase_d_local_2026-10-12_v5/run_meta.json": {
+      "sha256": "fbc2c10728f4441b0d90a8190e054fb390339ecef8aacae03b7694f5dd7a7ad5",
+      "bytes": 7955
+    },
+    "outputs/phase_d_local_2026-10-12_v5/stats_primary.json": {
+      "sha256": "3f6ea3921b0d710d3de8904f3a69c07286cfd486619d1798d92d611fa74ee14a",
+      "bytes": 20376
+    },
+    "outputs/phase_d_local_2026-10-12_v5/stats_strict.json": {
+      "sha256": "497e37b907744b81f78e5dee8b019e146d9d170d5541ca5482d514020b1829c6",
+      "bytes": 20375
+    },
+    "outputs/phase_d_local_smoke_2026-10-12/results.csv": {
+      "sha256": "a20907e4bb5c831793faa7e42df7c9b6e9425b483a5cfa6a9b842d4e56c4ef6f",
+      "bytes": 5420
+    },
+    "outputs/phase_d_local_smoke_2026-10-12/results.jsonl": {
+      "sha256": "509f3f9ab07116f5c3878535a7dcf1ab36175a9380ab682a10c8871c74657f5a",
+      "bytes": 12261
+    },
+    "outputs/phase_d_local_smoke_2026-10-12/run_meta.json": {
+      "sha256": "ca178eb51fefa3799b1680e5269ad78f7cb88bee17690962c14d677b59580241",
+      "bytes": 5913
+    },
+    "outputs/pre_paid_fixes_2026-10-12/hig2004_case_study.txt": {
+      "sha256": "c9d683d220560b8ba44f89a44f01003fd981d6e6a16865dd18073f51da653f98",
+      "bytes": 3273
+    },
+    "outputs/pre_paid_fixes_2026-10-12/scale_agnostic_sensitivity.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "outputs/rescored_2026-10-12/oct12_gemini_pilot.jsonl": {
+      "sha256": "50c5a76a39ed49a9e57d1f0d62828c2e923577294b6ddfbe1c6b9ed0037f19ee",
+      "bytes": 3863
+    },
+    "outputs/rescored_2026-10-12/oct12_local_nomic_k6.jsonl": {
+      "sha256": "9367611d46dc710114a78a4d970544b621a90ec5a5b43e5bb21561aad4f750bc",
+      "bytes": 76494
+    },
+    "outputs/rescored_2026-10-12/oct12_local_v3_amendment1.jsonl": {
+      "sha256": "ba045e44ae26bef0f6816b5ae2ff173064435aba3655534ed68e7b6d99bc5f36",
+      "bytes": 78347
+    },
+    "outputs/rescored_2026-10-12/sept30_corrected_ollama.jsonl": {
+      "sha256": "6557bdae878542c09033debe7d0ee669ce1b4d075855537f8ecd053001bf7e9c",
+      "bytes": 26085
+    },
+    "outputs/rescored_2026-10-12/sept30_first_ollama.jsonl": {
+      "sha256": "026b1ce404eba60b06824c54145d58b8468e0d44feaf49b51d75abdd3427663d",
+      "bytes": 25686
+    },
+    "outputs/rescored_2026-10-12/sept30_pilot_ollama.jsonl": {
+      "sha256": "4b661b1f09940c335177b5a53bca37f1a51cec5660d9c19c7ea9f66adfc348c1",
+      "bytes": 2553
+    },
+    "outputs/rescored_2026-10-12/summary.json": {
+      "sha256": "a5c10a62c93421fea98e14957c26f4d5a830a7d18fce59106b94d07c8c94ebd8",
+      "bytes": 8947
     }
   },
   "additions": [
@@ -386,6 +666,82 @@
         "outputs/embedding_build_2026-10-12/query_embeddings_nomic_prefixed.json",
         "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json",
         "outputs/phase_d_k_sweep_2026-10-12/query_embeddings_nomic_asis.json"
+      ]
+    },
+    {
+      "label": "final results 2026-10-12: all output files written after the initial freeze (incl. local v3-v5, Gemini pilot and full run, held-out rerun and held-out 2)",
+      "added_utc": "2026-10-12T15:44:18.425250+00:00",
+      "paths": [
+        "outputs/embedding_build_2026-10-12/api_calls.jsonl",
+        "outputs/embedding_build_2026-10-12/audit_finqa_evidence_nomic_prefixed.json",
+        "outputs/embedding_build_2026-10-12/audit_finqa_evidence_qwen3.json",
+        "outputs/error_audit_2026-10-12/error_audit.md",
+        "outputs/mechanism_check_2026-10-12/gemini_pass1.md",
+        "outputs/phase_a_holdout2/analysis/cell_summary.csv",
+        "outputs/phase_a_holdout2/analysis/hypotheses.json",
+        "outputs/phase_a_holdout2/analysis/policy_cells.csv",
+        "outputs/phase_a_holdout2/filters.json",
+        "outputs/phase_a_holdout2/host_load.json",
+        "outputs/phase_a_holdout2/preflight.json",
+        "outputs/phase_a_holdout2/results.jsonl",
+        "outputs/phase_a_holdout2/run_meta.json",
+        "outputs/phase_a_holdout2/selftest.jsonl",
+        "outputs/phase_a_holdout2/selftest_meta.json",
+        "outputs/phase_a_holdout2/selftest_preflight.json",
+        "outputs/phase_a_holdout_rerun/analysis/cell_summary.csv",
+        "outputs/phase_a_holdout_rerun/analysis/hypotheses.json",
+        "outputs/phase_a_holdout_rerun/analysis/policy_cells.csv",
+        "outputs/phase_a_holdout_rerun/filters.json",
+        "outputs/phase_a_holdout_rerun/host_load.json",
+        "outputs/phase_a_holdout_rerun/machine_notes.txt",
+        "outputs/phase_a_holdout_rerun/preflight.json",
+        "outputs/phase_a_holdout_rerun/results.jsonl",
+        "outputs/phase_a_holdout_rerun/run_meta.json",
+        "outputs/phase_d_gemini_full_2026-10-12/results.csv",
+        "outputs/phase_d_gemini_full_2026-10-12/results.jsonl",
+        "outputs/phase_d_gemini_full_2026-10-12/run_meta.json",
+        "outputs/phase_d_gemini_full_2026-10-12/stats_primary.json",
+        "outputs/phase_d_gemini_full_2026-10-12/stats_strict.json",
+        "outputs/phase_d_gemini_pilot_2026-10-12/results.csv",
+        "outputs/phase_d_gemini_pilot_2026-10-12/results.jsonl",
+        "outputs/phase_d_gemini_pilot_2026-10-12/run_meta.json",
+        "outputs/phase_d_k_sweep_2026-10-12/per_query.jsonl",
+        "outputs/phase_d_k_sweep_2026-10-12/summary.csv",
+        "outputs/phase_d_k_sweep_2026-10-12/summary.json",
+        "outputs/phase_d_k_sweep_2026-10-12/token_calibration.json",
+        "outputs/phase_d_k_sweep_distinct_2026-10-12/chosen_k_rule.json",
+        "outputs/phase_d_k_sweep_distinct_2026-10-12/per_query.jsonl",
+        "outputs/phase_d_k_sweep_distinct_2026-10-12/summary.json",
+        "outputs/phase_d_local_2026-10-12/results.csv",
+        "outputs/phase_d_local_2026-10-12/results.jsonl",
+        "outputs/phase_d_local_2026-10-12/run_meta.json",
+        "outputs/phase_d_local_2026-10-12/stats_pass1.json",
+        "outputs/phase_d_local_2026-10-12_v3/results.csv",
+        "outputs/phase_d_local_2026-10-12_v3/results.jsonl",
+        "outputs/phase_d_local_2026-10-12_v3/run_meta.json",
+        "outputs/phase_d_local_2026-10-12_v3/stats_pass1.json",
+        "outputs/phase_d_local_2026-10-12_v4/results.csv",
+        "outputs/phase_d_local_2026-10-12_v4/results.jsonl",
+        "outputs/phase_d_local_2026-10-12_v4/run_meta.json",
+        "outputs/phase_d_local_2026-10-12_v4/stats_pass1_primary.json",
+        "outputs/phase_d_local_2026-10-12_v4/stats_pass1_strict.json",
+        "outputs/phase_d_local_2026-10-12_v5/results.csv",
+        "outputs/phase_d_local_2026-10-12_v5/results.jsonl",
+        "outputs/phase_d_local_2026-10-12_v5/run_meta.json",
+        "outputs/phase_d_local_2026-10-12_v5/stats_primary.json",
+        "outputs/phase_d_local_2026-10-12_v5/stats_strict.json",
+        "outputs/phase_d_local_smoke_2026-10-12/results.csv",
+        "outputs/phase_d_local_smoke_2026-10-12/results.jsonl",
+        "outputs/phase_d_local_smoke_2026-10-12/run_meta.json",
+        "outputs/pre_paid_fixes_2026-10-12/hig2004_case_study.txt",
+        "outputs/pre_paid_fixes_2026-10-12/scale_agnostic_sensitivity.json",
+        "outputs/rescored_2026-10-12/oct12_gemini_pilot.jsonl",
+        "outputs/rescored_2026-10-12/oct12_local_nomic_k6.jsonl",
+        "outputs/rescored_2026-10-12/oct12_local_v3_amendment1.jsonl",
+        "outputs/rescored_2026-10-12/sept30_corrected_ollama.jsonl",
+        "outputs/rescored_2026-10-12/sept30_first_ollama.jsonl",
+        "outputs/rescored_2026-10-12/sept30_pilot_ollama.jsonl",
+        "outputs/rescored_2026-10-12/summary.json"
       ]
     }
   ]
