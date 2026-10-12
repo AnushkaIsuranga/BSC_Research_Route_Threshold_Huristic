@@ -108,3 +108,7 @@ depends on the post-resume latencies.
 ## 2026-10-12 — H7 decision (policy_v2 held-out result)
 
 Held-out result accepted as measured: policy_v2 24/25; H7 FAILED on hm_clothes_25 x ho3 (forced-exact 528.4 ms). Probable CPU contention from a Jupyter kernel is noted as an inference, not proven. T was not changed.
+
+## 2026-10-12 — held-out quiet rerun (post-hoc robustness run)
+
+Post-hoc robustness rerun after H7 failure; original result stands as reported. Same held-out design (filters ho1-ho5, vectors 20-39, 5 tables, 3 arms, T = 0.1), run through `src/phase_a_sweep/holdout_rerun.py` (reuses `holdout_run.py` unchanged) with seed 20261014 (original 20261012; chosen before the run so that hm_clothes_25 is not first), run id `holdout_rerun_20261014`, output `outputs/phase_a_holdout_rerun/`. Ollama stopped and no Jupyter kernel running; host CPU load recorded at the start of each table. Reported separately from the original run; neither replaces the other.
