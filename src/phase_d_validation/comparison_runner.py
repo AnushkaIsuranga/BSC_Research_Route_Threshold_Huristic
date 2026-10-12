@@ -169,10 +169,42 @@ def write_csv(jsonl: Path, csv_path: Path) -> None:
             w.writerow({k: (json.dumps(v) if isinstance(v, (list, dict)) else v) for k, v in r.items()})
 
 
+class AbortRule(RuntimeError):
+    """A pre-registered abort rule fired (Amendment 4): the run stops and must not be resumed silently."""
+
+
+def load_resume_state(out: Path) -> dict:
+    """Completed (pass, query_id, arm) keys from results.jsonl, error rows from errors.jsonl, and cost already spent."""
+    rows = [json.loads(l) for l in (out / "results.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()] \
+        if (out / "results.jsonl").exists() else []
+    errs = [json.loads(l) for l in (out / "errors.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()] \
+        if (out / "errors.jsonl").exists() else []
+    done = {(r["pass"], r["query_id"], r["arm"]) for r in rows}
+    if len(done) != len(rows):
+        raise RuntimeError("results.jsonl contains duplicate (pass, query, arm) rows; refusing to resume")
+    spent = sum(r.get("cost_usd") or 0.0 for r in rows) + sum(e.get("cost_usd") or 0.0 for e in errs)
+    return {"done": done, "n_results": len(rows), "errors": errs, "prior_spent": spent}
+
+
+def error_rule(errors: list[dict], window_query_ids: list[str], n_arms: int, rate: float) -> dict:
+    """Abort rule: error rate > `rate` over the arm-runs of the first len(window_query_ids) questions."""
+    ids = set(window_query_ids)
+    count = sum(1 for e in errors if e.get("query_id") in ids)
+    allowed = rate * len(window_query_ids) * n_arms
+    return {"errors_in_window": count, "allowed": allowed, "triggered": count > allowed}
+
+
+def projected_cost(spent: float, done_arm_runs: int, total_arm_runs: int) -> float | None:
+    return None if done_arm_runs <= 0 else spent / done_arm_runs * total_arm_runs
+
+
 def run(args: argparse.Namespace) -> Path:
     out = Path(args.output_dir)
-    if out.exists() and any(out.iterdir()):
-        raise SystemExit(f"{out} exists and is not empty; every run writes to a new folder")
+    resuming = bool(args.resume)
+    if out.exists() and any(out.iterdir()) and not resuming:
+        raise SystemExit(f"{out} exists and is not empty; every run writes to a new folder (use --resume to continue this run)")
+    if resuming and not (out / "run_meta.json").exists():
+        raise SystemExit(f"--resume: {out}/run_meta.json not found")
     out.mkdir(parents=True, exist_ok=True)
     cfg = load_generation_config()
     router_model = args.router_model or args.model
@@ -267,11 +299,36 @@ def run(args: argparse.Namespace) -> Path:
         "arm_order": f"per (pass, query): arms shuffled with random.Random('{ARM_ORDER_SEED}|pass|query_id'); order recorded in every row",
         "file_sha256": {u: sha256_file(u) for u in used},
     }
-    (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    total_arm_runs = args.passes * len(queries) * len(arms)
+    window_ids = [q["id"] for q in queries[: args.error_window]]
+    state0 = {"done": set(), "n_results": 0, "errors": [], "prior_spent": 0.0}
+    if resuming:
+        orig = json.loads((out / "run_meta.json").read_text(encoding="utf-8"))
+        same = ("answer_model", "router_model", "arms", "passes", "evidence_table", "k", "distinct", "n_queries", "file_sha256")
+        changed = [kk for kk in same if orig.get(kk) != meta.get(kk)]
+        if (orig.get("query_embedding_cache") or {}).get("sha256") != (meta.get("query_embedding_cache") or {}).get("sha256"):
+            changed.append("query_embedding_cache")
+        if changed:
+            raise SystemExit(f"--resume refused: settings or files changed since the run started: {changed}")
+        state0 = load_resume_state(out)
+        rule = error_rule(state0["errors"], window_ids, len(arms), args.abort_error_rate)
+        if rule["triggered"]:
+            raise AbortRule(f"error-rate abort rule already triggered: {rule}")
+        if answer_client.guard is not None:
+            answer_client.guard.spent = state0["prior_spent"]
+        with (out / "resumes.jsonl").open("a", encoding="utf-8") as rf:
+            rf.write(json.dumps({"resumed_utc": datetime.now(timezone.utc).isoformat(), "commit": meta["commit"],
+                                 "uncommitted_used_files": meta["uncommitted_used_files"], "rows_present": state0["n_results"],
+                                 "error_rows_present": len(state0["errors"]), "prior_spent_usd": state0["prior_spent"],
+                                 "argv": sys.argv}) + "\n")
+        meta = orig  # the original run_meta.json is not rewritten on resume
+    else:
+        (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
     jsonl = out / "results.jsonl"
+    done_runs = state0["n_results"]
     try:
-        with jsonl.open("w", encoding="utf-8") as fh:
+        with jsonl.open("a" if resuming else "w", encoding="utf-8") as fh:
             for pass_no in range(1, args.passes + 1):
                 for qi, row in enumerate(queries, 1):
                     qid = row["id"]
@@ -281,6 +338,8 @@ def run(args: argparse.Namespace) -> Path:
                     order = arms[:]
                     random.Random(f"{ARM_ORDER_SEED}|{pass_no}|{qid}").shuffle(order)  # seeded, deterministic, recorded per row
                     for arm in order:
+                        if (pass_no, qid, ARM_NAMES[arm]) in state0["done"]:
+                            continue
                         state = {"query_id": qid, "ticker": ticker, "year": year, "question": row["question"],
                                  "gold_evidence_keys": sorted(gold_keys), "estimated_selectivity": sel,
                                  "correlation_level": args.correlation_level or ""}
@@ -295,15 +354,31 @@ def run(args: argparse.Namespace) -> Path:
                                            router_model, err, order, gold_md5_by_q[qid])
                         rec["cumulative_cost_usd"] = answer_client.spent_usd + (
                             router_client.spent_usd if router_client is not answer_client else 0.0)
+                        if err:  # error rows go to errors.jsonl (results.jsonl holds completed rows only); the run stops
+                            with (out / "errors.jsonl").open("a", encoding="utf-8") as ef:
+                                ef.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                            (out / "error.log").write_text(err + "\n" + traceback.format_exc(), encoding="utf-8")
+                            state0["errors"].append(rec)
+                            rule = error_rule(state0["errors"], window_ids, len(arms), args.abort_error_rate)
+                            if rule["triggered"]:
+                                raise AbortRule(f"error-rate abort rule triggered at pass {pass_no} {qid} arm {arm}: {rule}; last error: {err}")
+                            raise RuntimeError(f"stopped (resume with --resume): pass {pass_no} {qid} arm {arm}: {err}")
                         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
                         fh.flush()
-                        if err:
-                            (out / "error.log").write_text(err + "\n" + traceback.format_exc(), encoding="utf-8")
-                            raise RuntimeError(f"stopped: pass {pass_no} {qid} arm {arm}: {err}")
+                        done_runs += 1
+                        proj = projected_cost(rec["cumulative_cost_usd"], done_runs, total_arm_runs)
+                        if (args.abort_projected_usd is not None and done_runs >= args.projection_min_arm_runs
+                                and proj is not None and proj > args.abort_projected_usd):
+                            raise AbortRule(f"projected-cost abort rule: USD {proj:.2f} projected for {total_arm_runs} arm-runs "
+                                            f"(spent {rec['cumulative_cost_usd']:.4f} after {done_runs}) > {args.abort_projected_usd}")
                         print(f"[pass {pass_no} {qi}/{len(queries)}] {arm:5s} {qid} route={rec['route']} correct={rec['correct']}")
     finally:
-        meta["end_utc"] = datetime.now(timezone.utc).isoformat()
-        (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+        if not resuming:
+            meta["end_utc"] = datetime.now(timezone.utc).isoformat()
+            (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+        else:
+            with (out / "resumes.jsonl").open("a", encoding="utf-8") as rf:
+                rf.write(json.dumps({"segment_end_utc": datetime.now(timezone.utc).isoformat()}) + "\n")
         if jsonl.exists():
             write_csv(jsonl, out / "results.csv")
         conn.close()
@@ -329,6 +404,11 @@ def main() -> None:
     p.add_argument("--distinct", action=argparse.BooleanOptionalAction, required=True,
                    help="--distinct: k distinct passages (dedupe by md5(content)); --no-distinct: k rows")
     p.add_argument("--k", type=int, required=True, help="rows / distinct passages per prompt (final runs: 15)")
+    p.add_argument("--resume", action="store_true", help="continue a stopped run in --output-dir (skips completed rows; settings must be unchanged)")
+    p.add_argument("--abort-error-rate", type=float, default=0.02, help="abort if errors exceed this share of the arm-runs of the first --error-window questions")
+    p.add_argument("--error-window", type=int, default=100)
+    p.add_argument("--abort-projected-usd", type=float, default=None, help="abort if projected total cost exceeds this (checked after --projection-min-arm-runs)")
+    p.add_argument("--projection-min-arm-runs", type=int, default=40)
     p.add_argument("--allow-paid", action="store_true")
     p.add_argument("--budget-usd", type=float, default=None)
     args = p.parse_args()
@@ -338,6 +418,8 @@ def main() -> None:
         print(f"Saved results to {run(args)}")
     except BudgetExceeded as exc:
         raise SystemExit(f"ABORTED (budget): {exc}")
+    except AbortRule as exc:
+        raise SystemExit(f"ABORTED (pre-registered abort rule): {exc}")
 
 
 if __name__ == "__main__":
