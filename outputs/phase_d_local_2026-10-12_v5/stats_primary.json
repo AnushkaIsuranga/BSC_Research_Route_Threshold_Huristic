@@ -1,0 +1,702 @@
+{
+  "results_file": "outputs/phase_d_local_2026-10-12_v5/results.jsonl",
+  "pass": 1,
+  "scoring_rule": "primary",
+  "arms": {
+    "policy_v2": {
+      "n": 50,
+      "accuracy": 0.2,
+      "correct": 10,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.66,
+      "rows_returned_by_route": {
+        "exact": 14.82
+      },
+      "cost_per_query_usd": 0.0,
+      "generation_ms_median_by_arm_position": {
+        "1": 474.1382499996689,
+        "2": 132.13324999742326,
+        "3": 97.32715000063763,
+        "4": 138.17820000258507
+      },
+      "total_ms_median_by_arm_position": {
+        "1": 492.57855000541895,
+        "2": 144.80915000240202,
+        "3": 111.04305000117165,
+        "4": 150.41700000074343
+      },
+      "cached_tokens_total": 0,
+      "truncations": 0,
+      "finish_reasons": {
+        "stop": 50
+      },
+      "traffic_types": {},
+      "mean_thinking_tokens_per_call": 0.0,
+      "parse_failures": 3,
+      "route_parse_failures": 0,
+      "routes": {
+        "exact": 50
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0020000006770715117,
+          "q1": 0.0017999991541728377,
+          "q3": 0.0021999949240125716,
+          "iqr": 0.00039999576983973384
+        },
+        "db_ms": {
+          "median": 11.941599997953745,
+          "q1": 11.422550003771903,
+          "q3": 14.241725004467298,
+          "iqr": 2.8191750006953953
+        },
+        "router_ms": {
+          "median": 0.0033999967854470015,
+          "q1": 0.0030999945010989904,
+          "q3": 0.003974993887823075,
+          "iqr": 0.0008749993867240846
+        },
+        "generation_ms": {
+          "median": 136.50485000107437,
+          "q1": 108.62930000075721,
+          "q3": 436.54145000255085,
+          "iqr": 327.91215000179363
+        },
+        "total_ms": {
+          "median": 150.38259999710135,
+          "q1": 121.35624999973516,
+          "q3": 455.542224997771,
+          "iqr": 334.1859749980358
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 930.06,
+        "output_tokens": 5.96,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": null,
+        "router_output_tokens": null
+      },
+      "cost_usd_total": 0
+    },
+    "naive_llm": {
+      "n": 50,
+      "accuracy": 0.26,
+      "correct": 13,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.62,
+      "rows_returned_by_route": {
+        "post-filter": 4.545454545454546,
+        "pre-filter": 14.76923076923077
+      },
+      "cost_per_query_usd": 0.0,
+      "generation_ms_median_by_arm_position": {
+        "1": 493.93584999779705,
+        "2": 129.25640000321437,
+        "3": 173.10355000154232,
+        "4": 149.52089999860618
+      },
+      "total_ms_median_by_arm_position": {
+        "1": 952.1620999985316,
+        "2": 689.4081999998889,
+        "3": 745.5159999990428,
+        "4": 668.5021000012057
+      },
+      "cached_tokens_total": 0,
+      "truncations": 0,
+      "finish_reasons": {
+        "stop": 100
+      },
+      "traffic_types": {},
+      "mean_thinking_tokens_per_call": 0.0,
+      "parse_failures": 2,
+      "route_parse_failures": 0,
+      "routes": {
+        "post-filter": 11,
+        "pre-filter": 39
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0020999978005420417,
+          "q1": 0.0020000006770715117,
+          "q3": 0.0022000021999701858,
+          "iqr": 0.000200001522898674
+        },
+        "db_ms": {
+          "median": 12.170600002718857,
+          "q1": 11.296524999124813,
+          "q3": 20.11537499674887,
+          "iqr": 8.818849997624056
+        },
+        "router_ms": {
+          "median": 546.4875499965274,
+          "q1": 487.63380000309553,
+          "q3": 586.6673500022443,
+          "iqr": 99.03354999914882
+        },
+        "generation_ms": {
+          "median": 152.0081000016944,
+          "q1": 124.61830000211194,
+          "q3": 185.7041249950271,
+          "iqr": 61.08582499291515
+        },
+        "total_ms": {
+          "median": 712.5812999984191,
+          "q1": 655.0218499978655,
+          "q3": 832.9425249994529,
+          "iqr": 177.92067500158737
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 802.4,
+        "output_tokens": 5.1,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": 132.78,
+        "router_output_tokens": 25.62
+      },
+      "cost_usd_total": 0
+    },
+    "decision_matrix": {
+      "n": 50,
+      "accuracy": 0.24,
+      "correct": 12,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.66,
+      "rows_returned_by_route": {
+        "pre-filter": 14.82
+      },
+      "cost_per_query_usd": 0.0,
+      "generation_ms_median_by_arm_position": {
+        "1": 451.13505000335863,
+        "2": 133.16320000012638,
+        "3": 124.94960000185529,
+        "4": 109.72344999754569
+      },
+      "total_ms_median_by_arm_position": {
+        "1": 474.97220000150264,
+        "2": 149.47730000130832,
+        "3": 138.2947999954922,
+        "4": 122.6882500013744
+      },
+      "cached_tokens_total": 0,
+      "truncations": 0,
+      "finish_reasons": {
+        "stop": 50
+      },
+      "traffic_types": {},
+      "mean_thinking_tokens_per_call": 0.0,
+      "parse_failures": 3,
+      "route_parse_failures": 0,
+      "routes": {
+        "pre-filter": 50
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0018499995348975062,
+          "q1": 0.0015999976312741637,
+          "q3": 0.0020750012481585145,
+          "iqr": 0.0004750036168843508
+        },
+        "db_ms": {
+          "median": 12.519099997007288,
+          "q1": 11.732249999113264,
+          "q3": 16.859450000993093,
+          "iqr": 5.127200001879828
+        },
+        "router_ms": {
+          "median": 0.0037999998312443495,
+          "q1": 0.003600000127335079,
+          "q3": 0.0043000036384910345,
+          "iqr": 0.0007000035111559555
+        },
+        "generation_ms": {
+          "median": 140.49250000243774,
+          "q1": 112.43302499860874,
+          "q3": 405.881375001627,
+          "iqr": 293.4483500030183
+        },
+        "total_ms": {
+          "median": 155.44014999977662,
+          "q1": 125.12410000090313,
+          "q3": 426.6549500043766,
+          "iqr": 301.53085000347346
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 930.06,
+        "output_tokens": 5.86,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": null,
+        "router_output_tokens": null
+      },
+      "cost_usd_total": 0
+    },
+    "naive_informed": {
+      "n": 50,
+      "accuracy": 0.22,
+      "correct": 11,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.66,
+      "rows_returned_by_route": {
+        "pre-filter": 14.82
+      },
+      "cost_per_query_usd": 0.0,
+      "generation_ms_median_by_arm_position": {
+        "1": 461.73100000305567,
+        "2": 153.56415000132984,
+        "3": 145.53710000473075,
+        "4": 170.21199999726377
+      },
+      "total_ms_median_by_arm_position": {
+        "1": 918.4219000017038,
+        "2": 614.5728000010422,
+        "3": 604.7233999997843,
+        "4": 614.4367000015336
+      },
+      "cached_tokens_total": 0,
+      "truncations": 0,
+      "finish_reasons": {
+        "stop": 100
+      },
+      "traffic_types": {},
+      "mean_thinking_tokens_per_call": 0.0,
+      "parse_failures": 2,
+      "route_parse_failures": 0,
+      "routes": {
+        "pre-filter": 50
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0022000021999701858,
+          "q1": 0.0020000006770715117,
+          "q3": 0.0024000037228688598,
+          "iqr": 0.000400003045797348
+        },
+        "db_ms": {
+          "median": 12.202300000353716,
+          "q1": 11.44712499990419,
+          "q3": 13.794500002404675,
+          "iqr": 2.3473750025004847
+        },
+        "router_ms": {
+          "median": 426.84564999944996,
+          "q1": 414.5717750016047,
+          "q3": 476.42950000590645,
+          "iqr": 61.857725004301756
+        },
+        "generation_ms": {
+          "median": 174.29680000350345,
+          "q1": 141.30962500348687,
+          "q3": 364.48414999904344,
+          "iqr": 223.17452499555657
+        },
+        "total_ms": {
+          "median": 639.3863499979489,
+          "q1": 591.6286499978014,
+          "q3": 801.8834750018868,
+          "iqr": 210.25482500408543
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 930.06,
+        "output_tokens": 5.12,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": 164.64,
+        "router_output_tokens": 19.84
+      },
+      "cost_usd_total": 0
+    }
+  },
+  "pairs": {
+    "decision_matrix_vs_naive_llm": {
+      "n": 50,
+      "both_correct": 12,
+      "b_X_only_correct": 0,
+      "c_Y_only_correct": 1,
+      "both_wrong": 37,
+      "mcnemar_exact_p_two_sided": 1.0,
+      "accuracy_X": 0.24,
+      "accuracy_Y": 0.26,
+      "accuracy_diff_X_minus_Y": -0.020000000000000018,
+      "accuracy_diff_ci95": [
+        -0.07337746060384787,
+        0.029902681148072874
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -490.81925400023465,
+      "latency_diff_ci95": [
+        -554.1283106003903,
+        -421.8412033511704
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "policy_v2_vs_naive_llm": {
+      "n": 50,
+      "both_correct": 10,
+      "b_X_only_correct": 0,
+      "c_Y_only_correct": 3,
+      "both_wrong": 37,
+      "mcnemar_exact_p_two_sided": 0.25,
+      "accuracy_X": 0.2,
+      "accuracy_Y": 0.26,
+      "accuracy_diff_X_minus_Y": -0.06,
+      "accuracy_diff_ci95": [
+        -0.13755581331565842,
+        0.010557284199712288
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -491.3966699993762,
+      "latency_diff_ci95": [
+        -552.6931071997315,
+        -427.70070119943205
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "decision_matrix_vs_policy_v2": {
+      "n": 50,
+      "both_correct": 10,
+      "b_X_only_correct": 2,
+      "c_Y_only_correct": 0,
+      "both_wrong": 38,
+      "mcnemar_exact_p_two_sided": 0.5,
+      "accuracy_X": 0.24,
+      "accuracy_Y": 0.2,
+      "accuracy_diff_X_minus_Y": 0.03999999999999998,
+      "accuracy_diff_ci95": [
+        -0.02245729453864532,
+        0.10897639144026175
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": 0.5774159991415218,
+      "latency_diff_ci95": [
+        -71.73017545049515,
+        71.45077274910362
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "policy_v2_vs_naive_informed": {
+      "n": 50,
+      "both_correct": 10,
+      "b_X_only_correct": 0,
+      "c_Y_only_correct": 1,
+      "both_wrong": 39,
+      "mcnemar_exact_p_two_sided": 1.0,
+      "accuracy_X": 0.2,
+      "accuracy_Y": 0.22,
+      "accuracy_diff_X_minus_Y": -0.01999999999999999,
+      "accuracy_diff_ci95": [
+        -0.07804382043122893,
+        0.03336926734492973
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -431.9553199999791,
+      "latency_diff_ci95": [
+        -505.0600887994042,
+        -357.79250684946965
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "decision_matrix_vs_naive_informed": {
+      "n": 50,
+      "both_correct": 11,
+      "b_X_only_correct": 1,
+      "c_Y_only_correct": 0,
+      "both_wrong": 38,
+      "mcnemar_exact_p_two_sided": 1.0,
+      "accuracy_X": 0.24,
+      "accuracy_Y": 0.22,
+      "accuracy_diff_X_minus_Y": 0.01999999999999999,
+      "accuracy_diff_ci95": [
+        -0.03161197368469155,
+        0.07566341018205772
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -431.3779040008376,
+      "latency_diff_ci95": [
+        -511.9216982009784,
+        -351.4567116010512
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "naive_informed_vs_naive_llm": {
+      "n": 50,
+      "both_correct": 11,
+      "b_X_only_correct": 0,
+      "c_Y_only_correct": 2,
+      "both_wrong": 37,
+      "mcnemar_exact_p_two_sided": 0.5,
+      "accuracy_X": 0.22,
+      "accuracy_Y": 0.26,
+      "accuracy_diff_X_minus_Y": -0.04000000000000001,
+      "accuracy_diff_ci95": [
+        -0.1068010184147158,
+        0.021315331540741507
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -59.44134999939706,
+      "latency_diff_ci95": [
+        -123.38996379915989,
+        4.525406550314048
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    }
+  },
+  "non_inferiority": {
+    "margin": 0.1,
+    "rule": "lower bound of the 95% CI of accuracy(X) - accuracy(Y) > -margin",
+    "decision_matrix_vs_naive_llm": {
+      "ci_lower": -0.07337746060384787,
+      "non_inferior": true,
+      "latency_superior": true,
+      "primary": false
+    },
+    "policy_v2_vs_naive_llm": {
+      "ci_lower": -0.13755581331565842,
+      "non_inferior": false,
+      "latency_superior": true,
+      "primary": true
+    },
+    "policy_v2_vs_naive_informed": {
+      "ci_lower": -0.07804382043122893,
+      "non_inferior": true,
+      "latency_superior": true,
+      "primary": false
+    },
+    "decision_matrix_vs_naive_informed": {
+      "ci_lower": -0.03161197368469155,
+      "non_inferior": true,
+      "latency_superior": true,
+      "primary": false
+    },
+    "naive_informed_vs_naive_llm": {
+      "ci_lower": -0.1068010184147158,
+      "non_inferior": false,
+      "latency_superior": false,
+      "primary": false
+    }
+  },
+  "noise_reference_pass": {
+    "pair": "decision_matrix_vs_policy_v2 (same route, same prompt)",
+    "n": 50,
+    "both_correct": 10,
+    "b_X_only_correct": 2,
+    "c_Y_only_correct": 0,
+    "both_wrong": 38,
+    "mcnemar_exact_p_two_sided": 0.5,
+    "accuracy_X": 0.24,
+    "accuracy_Y": 0.2,
+    "accuracy_diff_X_minus_Y": 0.03999999999999998,
+    "accuracy_diff_ci95": [
+      -0.02245729453864532,
+      0.10897639144026175
+    ],
+    "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+    "latency_total_ms_mean_diff_X_minus_Y": 0.5774159991415218,
+    "latency_diff_ci95": [
+      -71.73017545049515,
+      71.45077274910362
+    ],
+    "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+  },
+  "pooled": {
+    "margin": 0.1,
+    "passes": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rule": "lower bound of the paired-bootstrap 95% CI of the per-query mean-correctness difference > -margin",
+    "policy_v2_vs_naive_llm": {
+      "n_queries": 50,
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean_accuracy_X": 0.22399999999999998,
+      "mean_accuracy_Y": 0.244,
+      "pooled_diff_X_minus_Y": -0.02,
+      "pooled_diff_ci95": [
+        -0.068,
+        0.016
+      ],
+      "ci_method": "per-query mean correctness over passes [1, 2, 3, 4, 5]; paired bootstrap over queries, percentile, 10000 resamples, seed 20261012",
+      "non_inferior": true
+    },
+    "policy_v2_vs_naive_informed": {
+      "n_queries": 50,
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean_accuracy_X": 0.22399999999999998,
+      "mean_accuracy_Y": 0.23199999999999998,
+      "pooled_diff_X_minus_Y": -0.008,
+      "pooled_diff_ci95": [
+        -0.028000000000000004,
+        0.008000000000000002
+      ],
+      "ci_method": "per-query mean correctness over passes [1, 2, 3, 4, 5]; paired bootstrap over queries, percentile, 10000 resamples, seed 20261012",
+      "non_inferior": true
+    },
+    "decision_matrix_vs_policy_v2": {
+      "n_queries": 50,
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean_accuracy_X": 0.23199999999999998,
+      "mean_accuracy_Y": 0.22399999999999998,
+      "pooled_diff_X_minus_Y": 0.008,
+      "pooled_diff_ci95": [
+        -0.008000000000000002,
+        0.028000000000000004
+      ],
+      "ci_method": "per-query mean correctness over passes [1, 2, 3, 4, 5]; paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "decision_matrix_vs_naive_llm": {
+      "n_queries": 50,
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean_accuracy_X": 0.23199999999999998,
+      "mean_accuracy_Y": 0.244,
+      "pooled_diff_X_minus_Y": -0.012,
+      "pooled_diff_ci95": [
+        -0.04,
+        0.008
+      ],
+      "ci_method": "per-query mean correctness over passes [1, 2, 3, 4, 5]; paired bootstrap over queries, percentile, 10000 resamples, seed 20261012",
+      "non_inferior": true
+    },
+    "noise_reference": "decision_matrix_vs_policy_v2",
+    "primary_pooled": "policy_v2_vs_naive_llm"
+  },
+  "multi_pass_agreement": {
+    "decision_matrix": {
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_queries": 50,
+      "correct_per_pass": {
+        "1": 12,
+        "2": 11,
+        "3": 11,
+        "4": 12,
+        "5": 12
+      },
+      "same_answer_all_passes": 43,
+      "same_route_all_passes": 50,
+      "same_correctness_all_passes": 48
+    },
+    "naive_informed": {
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_queries": 50,
+      "correct_per_pass": {
+        "1": 11,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 11
+      },
+      "same_answer_all_passes": 45,
+      "same_route_all_passes": 50,
+      "same_correctness_all_passes": 48
+    },
+    "naive_llm": {
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_queries": 50,
+      "correct_per_pass": {
+        "1": 13,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12
+      },
+      "same_answer_all_passes": 48,
+      "same_route_all_passes": 50,
+      "same_correctness_all_passes": 49
+    },
+    "policy_v2": {
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_queries": 50,
+      "correct_per_pass": {
+        "1": 10,
+        "2": 11,
+        "3": 12,
+        "4": 12,
+        "5": 11
+      },
+      "same_answer_all_passes": 45,
+      "same_route_all_passes": 50,
+      "same_correctness_all_passes": 48
+    }
+  },
+  "dm_vs_v2_route_identical": 50,
+  "dm_vs_v2_route_n": 50,
+  "pass_agreement": {
+    "policy_v2": {
+      "n": 50,
+      "same_answer": 46,
+      "same_route": 50,
+      "same_correctness": 49
+    },
+    "naive_llm": {
+      "n": 50,
+      "same_answer": 49,
+      "same_route": 50,
+      "same_correctness": 49
+    },
+    "decision_matrix": {
+      "n": 50,
+      "same_answer": 44,
+      "same_route": 50,
+      "same_correctness": 49
+    },
+    "naive_informed": {
+      "n": 50,
+      "same_answer": 47,
+      "same_route": 50,
+      "same_correctness": 49
+    }
+  }
+}
