@@ -88,3 +88,26 @@ def test_paired_stats_strict_drops_strict_unscorable_questions(tmp_path):
     assert r.returncode == 0, r.stderr
     res = json.loads(out.read_text())
     assert res["strict_excluded_queries"] == ["c"] and res["pairs"]["policy_v2_vs_naive_llm"]["n"] == 2
+
+
+def test_scaleup_analysis_primary_strata_and_refusal():
+    from src.phase_d_validation.scaleup_analysis import analyse
+    subset = [{"id": f"q{i}", "breadth": "single" if i < 6 else "multi"} for i in range(10)]
+    rows = []
+    for a in ("decision_matrix", "policy_v2", "naive_llm", "naive_informed"):
+        for i in range(10):
+            ok = int(i < 6) if a != "naive_llm" else int(i < 5)
+            rows.append({"arm": a, "query_id": f"q{i}", "correct": ok, "correct_strict": ok, "parse_failure": 0, "parse_failure_strict": 0,
+                         "strict_gold_unparseable": 0, "route": "post-filter" if (a == "naive_llm" and i % 2) else "exact",
+                         "total_ms": 10.0 if a.startswith("naive") else 5.0, "cost_usd": 0.002 if a.startswith("naive") else 0.001,
+                         "retrieval_hit": 1, "route_parse_failure": 0, "embed_ms": 0, "db_ms": 1, "router_ms": 1, "generation_ms": 1,
+                         "input_tokens": 1, "output_tokens": 1, "thinking_tokens": 0, "router_input_tokens": None,
+                         "router_output_tokens": None, "rows_returned": 15})
+    r = analyse([dict(x) for x in rows], subset)
+    p = r["pairs"]["policy_v2_vs_naive_llm"]
+    assert (p["b_X_only_correct"], p["c_Y_only_correct"]) == (1, 0)
+    assert p["cost_usd_mean_diff_X_minus_Y"] == pytest.approx(-0.001) and p["latency_superior"]
+    assert r["strata"]["single"]["n"] == 6 and r["strata"]["multi"]["n"] == 4
+    assert r["post_filter_share"]["naive_llm"] == 0.5
+    with pytest.raises(ValueError, match="without a completed row"):
+        analyse([x for x in rows if not (x["arm"] == "naive_llm" and x["query_id"] == "q3")], subset)
