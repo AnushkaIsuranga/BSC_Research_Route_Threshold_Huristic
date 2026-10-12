@@ -1,0 +1,155 @@
+{
+  "pool_size": 1147,
+  "pool_unique_ids": 1147,
+  "frozen_50_in_pool": 50,
+  "frozen_size": 50,
+  "confirmation_size": 1097,
+  "files_mentioning_confirmation_ids": {
+    "outputs/finqa_selectivity_census/all_1147_selectivity.csv": 1097,
+    "outputs/finqa_selectivity_census/supplementary_selection.csv": 20,
+    "outputs/phase_d_gemini_full_2026-10-12/results.csv": 46,
+    "outputs/phase_d_gemini_full_2026-10-12/results.jsonl": 46,
+    "outputs/phase_d_gemini_pilot_2026-10-12/results.csv": 5,
+    "outputs/phase_d_gemini_pilot_2026-10-12/results.jsonl": 5,
+    "outputs/phase_d_local_2026-10-12/results.csv": 90,
+    "outputs/phase_d_local_2026-10-12/results.jsonl": 90,
+    "outputs/phase_d_local_2026-10-12_v3/results.csv": 46,
+    "outputs/phase_d_local_2026-10-12_v3/results.jsonl": 46,
+    "outputs/phase_d_local_2026-10-12_v4/results.csv": 46,
+    "outputs/phase_d_local_2026-10-12_v4/results.jsonl": 46,
+    "outputs/phase_d_local_2026-10-12_v5/results.csv": 46,
+    "outputs/phase_d_local_2026-10-12_v5/results.jsonl": 46,
+    "outputs/phase_d_local_smoke_2026-10-12/results.csv": 4,
+    "outputs/phase_d_local_smoke_2026-10-12/results.jsonl": 4,
+    "outputs/phase_d_pilot.jsonl": 10,
+    "outputs/phase_d_results_ollama.jsonl": 91,
+    "outputs/phase_d_results_ollama_corrected.jsonl": 91,
+    "outputs/pre_paid_fixes_2026-10-12/hig2004_case_study.txt": 2
+  },
+  "strata_frozen_50": {
+    "single": 20,
+    "multi": 15,
+    "dual": 15
+  },
+  "strata_confirmation": {
+    "dual": 439,
+    "single": 548,
+    "multi": 110
+  },
+  "confirmation_selectivity_min": 0.00019519268306285203,
+  "confirmation_selectivity_max": 0.02966928782555351,
+  "max_le_0_0297": true,
+  "policy_v2_routes": {
+    "exact": 1097
+  },
+  "unparseable_gold_answers": [
+    [
+      "MAS/2017/page_27.pdf-2",
+      ""
+    ],
+    [
+      "AON/2015/page_96.pdf-1",
+      "[6] : in 2015 , 2014 , and 2013 , shares , respectively , were issued to employees under the plan ."
+    ],
+    [
+      "AES/2002/page_128.pdf-2",
+      ""
+    ],
+    [
+      "AAL/2010/page_72.pdf-1",
+      ""
+    ],
+    [
+      "AWK/2018/page_146.pdf-4",
+      ""
+    ],
+    [
+      "RSG/2015/page_98.pdf-2",
+      ""
+    ],
+    [
+      "PNC/2012/page_100.pdf-3",
+      ""
+    ],
+    [
+      "JPM/2010/page_120.pdf-2",
+      ""
+    ],
+    [
+      "CE/2016/page_19.pdf-4",
+      ""
+    ],
+    [
+      "HIG/2011/page_53.pdf-4",
+      ""
+    ],
+    [
+      "DG/2007/page_67.pdf-2",
+      ""
+    ],
+    [
+      "WRK/2018/page_107.pdf-3",
+      "the total balance in 2018 including interest and penalties would be $ 56.7 million ."
+    ],
+    [
+      "ETR/2016/page_23.pdf-4",
+      ""
+    ],
+    [
+      "RSG/2018/page_135.pdf-2",
+      ""
+    ],
+    [
+      "GPN/2013/page_87.pdf-4",
+      "170 grants"
+    ],
+    [
+      "DRE/2007/page_56.pdf-2",
+      ""
+    ],
+    [
+      "WRK/2018/page_107.pdf-2",
+      "the total balance in 2018 including interest and penalties would be $ 56.7 million ."
+    ],
+    [
+      "AWK/2017/page_148.pdf-4",
+      ""
+    ],
+    [
+      "ANSS/2016/page_47.pdf-2",
+      "1.371:1"
+    ],
+    [
+      "TFX/2017/page_78.pdf-3",
+      "$ 411906848 or $ 411.91 million"
+    ],
+    [
+      "NCLH/2018/page_64.pdf-4",
+      "the interest decreased 25.7% from year 1 to years 3-5"
+    ],
+    [
+      "HOLX/2009/page_127.pdf-4",
+      "$ 27.8 per share"
+    ]
+  ],
+  "gold_keys_missing_in_db": [],
+  "duplicate_question_texts": 8,
+  "empty_questions": 0,
+  "confirmation_subset_sha256": "4454db51bf334f5850418ca22b0228afe2d9fa56ded1f3a3f387fd12b31ff9b6",
+  "gemini_full_run": {
+    "wall_clock_minutes": 66.6183101,
+    "arm_runs": 1000,
+    "calls": 1500,
+    "calls_per_minute": 22.516332187777905,
+    "arm_runs_per_minute": 15.01088812518527,
+    "cost_usd": 1.6580325000000007,
+    "cost_per_arm_run": 0.0016580325000000006
+  },
+  "scaleup_estimate": {
+    "questions": 1097,
+    "arm_runs": 4388,
+    "calls": 6582,
+    "minutes_at_same_call_rate": 292.3211447188,
+    "cost_usd_at_same_cost_per_arm_run": 7.275446610000003
+  }
+}
