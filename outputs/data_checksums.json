@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 88,
+  "n_files": 93,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -354,6 +354,39 @@
     "outputs/thresholds_v2.json": {
       "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "bytes": 2
+    },
+    "outputs/db_dumps_embeddings_2026-10-12/finqa_evidence_nomic_prefixed.dump": {
+      "sha256": "62aaaffef253e76d4232717c2f1f77b7f62f9331c4588e68fb9c4ceaae9a71d9",
+      "bytes": 128303956
+    },
+    "outputs/db_dumps_embeddings_2026-10-12/finqa_evidence_qwen3.dump": {
+      "sha256": "f68e819987280efea81ea924f8be8ae4e5f279ee4139ff685dcbcc5cfeb563c9",
+      "bytes": 140644882
+    },
+    "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json": {
+      "sha256": "930cadc0bdea177b0951a6891c227606cc47a3b4a1ce8c437563635f9be9ff23",
+      "bytes": 1154534
+    },
+    "outputs/embedding_build_2026-10-12/query_embeddings_nomic_prefixed.json": {
+      "sha256": "ed4f6de7f7ff90e4006cb295ffea65607b58dece73fabe25fac882e122f443e0",
+      "bytes": 527343
+    },
+    "outputs/phase_d_k_sweep_2026-10-12/query_embeddings_nomic_asis.json": {
+      "sha256": "8fc8c6b21511e6f2937511b1c29f0c5cd050d4f531b7a19200fe8c8d1b54479e",
+      "bytes": 526564
     }
-  }
+  },
+  "additions": [
+    {
+      "label": "embedding tables and query caches 2026-10-12",
+      "added_utc": "2026-10-12T10:48:56.043189+00:00",
+      "paths": [
+        "outputs/db_dumps_embeddings_2026-10-12/finqa_evidence_nomic_prefixed.dump",
+        "outputs/db_dumps_embeddings_2026-10-12/finqa_evidence_qwen3.dump",
+        "outputs/embedding_build_2026-10-12/query_embeddings_nomic_prefixed.json",
+        "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json",
+        "outputs/phase_d_k_sweep_2026-10-12/query_embeddings_nomic_asis.json"
+      ]
+    }
+  ]
 }
