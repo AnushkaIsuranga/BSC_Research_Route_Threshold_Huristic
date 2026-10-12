@@ -79,12 +79,14 @@ def make_embedder(model: str, base: str = "http://127.0.0.1:11434"):
 
 def make_cached_embedder(cache_path: str, queries: list):
     """Question -> vector from a cached query-embedding file (no API/model call; unknown question raises).
-    The cache is keyed by query_id in the frozen subset order; sha256 of every input text is verified."""
+    The cache is looked up by query_id (every query of the run must be present); sha256 of every input text is verified."""
     d = json.loads(Path(cache_path).read_text(encoding="utf-8"))
-    if [x["query_id"] for x in d["queries"]] != [q["id"] for q in queries]:
-        raise RuntimeError("query-embedding cache does not match the query subset/order")
+    by_id = {x["query_id"]: x for x in d["queries"]}
     table = {}
-    for q, x in zip(queries, d["queries"]):
+    for q in queries:
+        x = by_id.get(q["id"])
+        if x is None:
+            raise RuntimeError(f"query {q['id']} is not in the query-embedding cache")
         if hashlib.sha256(x["input_text"].encode()).hexdigest() != x["input_sha256"]:
             raise RuntimeError(f"cache hash mismatch for {q['id']}")
         table[q["question"]] = x["vector"]
