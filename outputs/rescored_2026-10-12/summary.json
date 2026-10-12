@@ -1,0 +1,284 @@
+{
+  "sept30_first_ollama": {
+    "source": "outputs/phase_d_results_ollama.jsonl",
+    "arms": {
+      "decision_matrix|pass1": {
+        "n": 50,
+        "stored_correct": 10,
+        "strict_correct": 10,
+        "primary_correct": 10,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 3,
+        "parse_failures_primary": 3,
+        "no_answer_rows": 0
+      },
+      "naive_llm|pass1": {
+        "n": 50,
+        "stored_correct": 9,
+        "strict_correct": 9,
+        "primary_correct": 9,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      }
+    }
+  },
+  "sept30_corrected_ollama": {
+    "source": "outputs/phase_d_results_ollama_corrected.jsonl",
+    "arms": {
+      "decision_matrix|pass1": {
+        "n": 50,
+        "stored_correct": 10,
+        "strict_correct": 10,
+        "primary_correct": 10,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      },
+      "naive_llm|pass1": {
+        "n": 50,
+        "stored_correct": 8,
+        "strict_correct": 8,
+        "primary_correct": 8,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      }
+    }
+  },
+  "sept30_pilot_ollama": {
+    "source": "outputs/phase_d_pilot.jsonl",
+    "arms": {
+      "decision_matrix|pass1": {
+        "n": 5,
+        "stored_correct": 2,
+        "strict_correct": 2,
+        "primary_correct": 2,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 1,
+        "parse_failures_primary": 1,
+        "no_answer_rows": 0
+      },
+      "naive_llm|pass1": {
+        "n": 5,
+        "stored_correct": 1,
+        "strict_correct": 1,
+        "primary_correct": 1,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 1,
+        "parse_failures_primary": 1,
+        "no_answer_rows": 0
+      }
+    }
+  },
+  "oct12_local_nomic_k6": {
+    "source": "outputs/phase_d_local_2026-10-12/results.jsonl",
+    "arms": {
+      "decision_matrix|pass1": {
+        "n": 50,
+        "stored_correct": 11,
+        "strict_correct": 11,
+        "primary_correct": 11,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 3,
+        "parse_failures_primary": 3,
+        "no_answer_rows": 0
+      },
+      "policy_v2|pass1": {
+        "n": 50,
+        "stored_correct": 11,
+        "strict_correct": 11,
+        "primary_correct": 11,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 3,
+        "parse_failures_primary": 3,
+        "no_answer_rows": 0
+      },
+      "naive_llm|pass1": {
+        "n": 50,
+        "stored_correct": 11,
+        "strict_correct": 11,
+        "primary_correct": 11,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      },
+      "decision_matrix|pass2": {
+        "n": 50,
+        "stored_correct": 10,
+        "strict_correct": 10,
+        "primary_correct": 10,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 3,
+        "parse_failures_primary": 3,
+        "no_answer_rows": 0
+      },
+      "policy_v2|pass2": {
+        "n": 50,
+        "stored_correct": 10,
+        "strict_correct": 10,
+        "primary_correct": 10,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 3,
+        "parse_failures_primary": 3,
+        "no_answer_rows": 0
+      },
+      "naive_llm|pass2": {
+        "n": 50,
+        "stored_correct": 11,
+        "strict_correct": 11,
+        "primary_correct": 11,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      }
+    }
+  },
+  "oct12_local_v3_amendment1": {
+    "source": "outputs/phase_d_local_2026-10-12_v3/results.jsonl",
+    "arms": {
+      "naive_llm|pass1": {
+        "n": 50,
+        "stored_correct": 12,
+        "strict_correct": 12,
+        "primary_correct": 12,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 1,
+        "parse_failures_primary": 1,
+        "no_answer_rows": 0
+      },
+      "decision_matrix|pass1": {
+        "n": 50,
+        "stored_correct": 12,
+        "strict_correct": 12,
+        "primary_correct": 12,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      },
+      "policy_v2|pass1": {
+        "n": 50,
+        "stored_correct": 13,
+        "strict_correct": 13,
+        "primary_correct": 13,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      },
+      "policy_v2|pass2": {
+        "n": 50,
+        "stored_correct": 12,
+        "strict_correct": 12,
+        "primary_correct": 12,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 2,
+        "no_answer_rows": 0
+      },
+      "naive_llm|pass2": {
+        "n": 50,
+        "stored_correct": 12,
+        "strict_correct": 12,
+        "primary_correct": 12,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 1,
+        "parse_failures_primary": 1,
+        "no_answer_rows": 0
+      },
+      "decision_matrix|pass2": {
+        "n": 50,
+        "stored_correct": 13,
+        "strict_correct": 13,
+        "primary_correct": 13,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 0,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 1,
+        "parse_failures_primary": 1,
+        "no_answer_rows": 0
+      }
+    }
+  },
+  "oct12_gemini_pilot": {
+    "source": "outputs/phase_d_gemini_pilot_2026-10-12/results.jsonl",
+    "arms": {
+      "naive_llm|pass1": {
+        "n": 5,
+        "stored_correct": 1,
+        "strict_correct": 1,
+        "primary_correct": 2,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 1,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 0,
+        "no_answer_rows": 0
+      },
+      "decision_matrix|pass1": {
+        "n": 5,
+        "stored_correct": 1,
+        "strict_correct": 1,
+        "primary_correct": 2,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 1,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 0,
+        "no_answer_rows": 0
+      },
+      "policy_v2|pass1": {
+        "n": 5,
+        "stored_correct": 1,
+        "strict_correct": 1,
+        "primary_correct": 2,
+        "stored_vs_strict_differ": 0,
+        "primary_vs_strict_flips_to_correct": 1,
+        "primary_vs_strict_flips_to_wrong": 0,
+        "parse_failures_strict": 2,
+        "parse_failures_primary": 0,
+        "no_answer_rows": 0
+      }
+    }
+  }
+}
