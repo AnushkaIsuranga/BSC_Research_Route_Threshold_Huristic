@@ -40,7 +40,7 @@ from src.phase_b_router.router import (ANSWER_SYSTEM, NAIVE_INFORMED_ROUTER_SYST
                                        build_naive_graph, build_policy_v2_graph)
 from src.phase_d_validation.finqa_loader import get_frozen_filepath, load_finqa_subset
 from src.phase_d_validation.llm_client import BudgetExceeded, load_generation_config, make_client
-from src.phase_d_validation.scoring import score_answer
+from src.phase_d_validation.scoring import UnparseableNumber, score_answer
 from src.utils.finqa_utils import exact_selectivity, extract_ticker_year
 
 ARM_ORDER_SEED = 20261015
@@ -116,11 +116,19 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
     score_strict = None
     parsed = None
     gold = row["answer"]
+    # Amendment 4: a gold value that only the primary rule can parse (it carries a scale word) has no strict label.
+    # Decided from the gold answer alone, so the flag is identical for every arm of a question.
+    try:
+        score_answer(gold, gold, "strict")
+        strict_gold_unparseable = False
+    except UnparseableNumber:
+        strict_gold_unparseable = True
     route_fail = bool(state.get("route_parse_failure"))
     raw = state.get("raw_output")
     if error is None and not route_fail:
         score = score_answer(raw, gold, "primary")
-        score_strict = score_answer(raw, gold, "strict")
+        if not strict_gold_unparseable:
+            score_strict = score_answer(raw, gold, "strict")
         parsed = score.parsed
     retrieved = state.get("retrieved_evidence_keys")
     hit = None
@@ -142,7 +150,8 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
         "raw_output": raw, "parsed_answer": parsed, "gold_answer": gold,
         # a naive-router schema failure yields no answer: scored wrong, flagged as route_parse_failure
         "correct": None if error else int(bool(score and score.correct)),
-        "correct_strict": None if error else int(bool(score_strict and score_strict.correct)),
+        "correct_strict": None if (error or strict_gold_unparseable) else int(bool(score_strict and score_strict.correct)),
+        "strict_gold_unparseable": int(strict_gold_unparseable),
         "parse_failure_strict": int(bool(score_strict and score_strict.parse_failure)),
         "parse_failure": int(bool(score and score.parse_failure)), "route_parse_failure": int(route_fail),
         "router_raw": state.get("router_raw"), "router_reason": state.get("router_reason"),

@@ -54,3 +54,37 @@ def test_runner_refuses_non_empty_folder_without_resume(tmp_path):
     assert r.returncode != 0 and "--resume" in r.stderr
     r = subprocess.run(cmd + ["--resume"], capture_output=True, text=True)
     assert r.returncode != 0 and "run_meta.json not found" in r.stderr
+
+
+def test_strict_label_absent_when_gold_has_scale_word():
+    from src.phase_d_validation.comparison_runner import build_record
+    base = {"ticker": "A", "year": "2020", "raw_output": "13.4", "route_parse_failure": False, "chosen_route": "exact"}
+    row = {"id": "A/2020/page_1.pdf-1", "answer": "$ 13.4 million"}
+    rec = build_record("r", 1, "v2", row, {"text_1"}, 0.001, dict(base), 1.0, "m", "m", None, ["v2"], [])
+    assert rec["correct"] == 1 and rec["correct_strict"] is None and rec["strict_gold_unparseable"] == 1
+    # route-parse failure of a naive arm on the same question: still flagged (gold-only decision)
+    rec2 = build_record("r", 1, "naive", row, {"text_1"}, 0.001, dict(base, route_parse_failure=True, raw_output=None), 1.0, "m", "m",
+                        None, ["naive"], [])
+    assert rec2["strict_gold_unparseable"] == 1 and rec2["correct_strict"] is None and rec2["correct"] == 0
+    row_ok = {"id": "A/2020/page_1.pdf-1", "answer": "13.4"}
+    rec3 = build_record("r", 1, "v2", row_ok, {"text_1"}, 0.001, dict(base, raw_output="$13.4 million"), 1.0, "m", "m", None, ["v2"], [])
+    assert rec3["correct"] == 1 and rec3["correct_strict"] == 0 and rec3["strict_gold_unparseable"] == 0
+
+
+def test_paired_stats_strict_drops_strict_unscorable_questions(tmp_path):
+    rows = []
+    for arm in ("policy_v2", "naive_llm"):
+        for q in ("a", "b", "c"):
+            rows.append({"pass": 1, "arm": arm, "query_id": q, "correct": 1, "correct_strict": None if q == "c" else 1,
+                         "parse_failure": 0, "parse_failure_strict": 0, "strict_gold_unparseable": int(q == "c"),
+                         "total_ms": 1.0, "retrieval_hit": 1, "route_parse_failure": 0, "route": "x", "embed_ms": 1, "db_ms": 1,
+                         "router_ms": 1, "generation_ms": 1, "input_tokens": 1, "output_tokens": 1, "thinking_tokens": 0,
+                         "router_input_tokens": None, "router_output_tokens": None, "cost_usd": 0.0, "rows_returned": 1})
+    f = tmp_path / "r.jsonl"
+    f.write_text("\n".join(json.dumps(r) for r in rows))
+    out = tmp_path / "o.json"
+    r = subprocess.run([sys.executable, "-m", "src.phase_d_validation.paired_stats", str(f), "--margin", "0.1", "--rule", "strict",
+                        "--out", str(out)], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+    res = json.loads(out.read_text())
+    assert res["strict_excluded_queries"] == ["c"] and res["pairs"]["policy_v2_vs_naive_llm"]["n"] == 2

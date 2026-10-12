@@ -214,11 +214,15 @@ def main() -> None:
     ap.add_argument("--margin", type=float, required=True, help="non-inferiority margin on the accuracy difference (e.g. 0.10); required")
     a = ap.parse_args()
     rows = load(Path(a.results))
+    strict_excluded = []
     if a.rule == "strict":  # Amendment 1 scoring: use the strict labels recorded in every row
+        # questions whose GOLD is unparseable under the strict rule have no strict label (Amendment 4); drop them for all arms
+        strict_excluded = sorted({r["query_id"] for r in rows if r.get("strict_gold_unparseable")})
+        rows = [r for r in rows if r["query_id"] not in set(strict_excluded)]
         for r in rows:
             r["correct"], r["parse_failure"] = r["correct_strict"], r["parse_failure_strict"]
     arms = by_arm(rows, a.pass_no)
-    res = {"results_file": a.results, "pass": a.pass_no, "scoring_rule": a.rule, "arms": {k: arm_summary(v) for k, v in arms.items()}, "pairs": {}}
+    res = {"results_file": a.results, "pass": a.pass_no, "scoring_rule": a.rule, "strict_excluded_queries": strict_excluded, "arms": {k: arm_summary(v) for k, v in arms.items()}, "pairs": {}}
     for x, y in PAIRS:
         if x in arms and y in arms:
             res["pairs"][f"{x}_vs_{y}"] = compare(arms[x], arms[y])

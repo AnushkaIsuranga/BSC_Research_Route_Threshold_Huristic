@@ -1,0 +1,27 @@
+{
+  "input": "outputs/scaleup_checks_2026-10-13/confirmation_subset.csv",
+  "input_rows": 1097,
+  "excluded": 22,
+  "kept": 1075,
+  "kept_strata": {
+    "dual": 433,
+    "single": 538,
+    "multi": 104
+  },
+  "excluded_strata": {
+    "dual": 6,
+    "single": 10,
+    "multi": 6
+  },
+  "excluded_reasons": {
+    "empty gold answer": 14,
+    "gold answer is a sentence": 5,
+    "number with extra words": 2,
+    "ratio written as a:b": 1
+  },
+  "kept_with_gold_parseable_only_under_primary_rule": [
+    "GPN/2013/page_87.pdf-2",
+    "TFX/2015/page_89.pdf-3"
+  ],
+  "confirmation_1075_sha256": "aff43f1fb918e2d44dd1cdd934de2b8fccd4e64e2690fd5bd4e7f3d36d0704a3"
+}
