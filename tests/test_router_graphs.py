@@ -90,3 +90,27 @@ def test_runner_has_no_mock_or_fallback():
     src = inspect.getsource(comparison_runner).lower()
     for bad in ("mockchatmodel", "get_openai_callback", "0.15", "fallback"):
         assert bad not in src.replace("no mock or fallback behaviour", ""), bad
+
+
+def test_naive_informed_prompt_and_graph(patched_retrieve):
+    from src.phase_b_router.router import NAIVE_INFORMED_ROUTER_SYSTEM, NAIVE_ROUTER_SYSTEM, naive_informed_user_message
+    assert NAIVE_INFORMED_ROUTER_SYSTEM.startswith(NAIVE_ROUTER_SYSTEM)       # frozen naive prompt untouched, informed extends it
+    msg = naive_informed_user_message("ADI", "2011", "what is x?")
+    assert msg == "Metadata filter to be applied: ticker = ADI, year = 2011\nQuestion: what is x?"
+    assert "selectivity" not in msg.lower() and "rows" not in msg.lower()
+
+    class Spy(FakeClient):
+        def generate(self, system, user, *, max_output_tokens, json_mode=False):
+            self.seen = (system, user)
+            return super().generate(system, user, max_output_tokens=max_output_tokens, json_mode=json_mode)
+    d = deps(router=Spy('{"route": "pre-filter", "reason": "r"}'))
+    out = build_naive_graph(d, informed=True).invoke(state(0.01))
+    assert d.router_client.seen[0] == NAIVE_INFORMED_ROUTER_SYSTEM and "ticker = A, year = 2020" in d.router_client.seen[1]
+    assert out["chosen_route"] == "pre-filter"
+    d2 = deps(router=Spy('{"route": "pre-filter", "reason": "r"}'))
+    build_naive_graph(d2).invoke(state(0.01))
+    assert d2.router_client.seen[0] == NAIVE_ROUTER_SYSTEM and d2.router_client.seen[1] == "Question: q?"
+    # parse failure is the same: no retry, no default
+    d3 = deps(router=Spy("not json"))
+    out3 = build_naive_graph(d3, informed=True).invoke(state(0.01))
+    assert out3["route_parse_failure"] is True and d3.router_client.calls == 1 and d3.answer_client.calls == 0

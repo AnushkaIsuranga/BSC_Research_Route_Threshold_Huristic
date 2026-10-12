@@ -31,7 +31,8 @@ from scipy.stats import binomtest
 TRUNCATED = {"MAX_TOKENS", "length", "max_tokens"}
 BOOTSTRAP_RESAMPLES = 10000
 BOOTSTRAP_SEED = 20261012
-PAIRS = [("decision_matrix", "naive_llm"), ("policy_v2", "naive_llm"), ("decision_matrix", "policy_v2")]
+PAIRS = [("decision_matrix", "naive_llm"), ("policy_v2", "naive_llm"), ("decision_matrix", "policy_v2"),
+         ("policy_v2", "naive_informed"), ("decision_matrix", "naive_informed"), ("naive_informed", "naive_llm")]
 
 
 def wilson(k: int, n: int, z: float = 1.959964) -> tuple[float, float]:
@@ -158,11 +159,15 @@ def main() -> None:
     ap.add_argument("--pass", dest="pass_no", type=int, default=1)
     ap.add_argument("--out", required=True)
     ap.add_argument("--agreement", action="store_true")
+    ap.add_argument("--rule", choices=["primary", "strict"], default="primary", help="scoring rule: primary (Amendment 2) or strict (Amendment 1)")
     ap.add_argument("--margin", type=float, required=True, help="non-inferiority margin on the accuracy difference (e.g. 0.10); required")
     a = ap.parse_args()
     rows = load(Path(a.results))
+    if a.rule == "strict":  # Amendment 1 scoring: use the strict labels recorded in every row
+        for r in rows:
+            r["correct"], r["parse_failure"] = r["correct_strict"], r["parse_failure_strict"]
     arms = by_arm(rows, a.pass_no)
-    res = {"results_file": a.results, "pass": a.pass_no, "arms": {k: arm_summary(v) for k, v in arms.items()}, "pairs": {}}
+    res = {"results_file": a.results, "pass": a.pass_no, "scoring_rule": a.rule, "arms": {k: arm_summary(v) for k, v in arms.items()}, "pairs": {}}
     for x, y in PAIRS:
         if x in arms and y in arms:
             res["pairs"][f"{x}_vs_{y}"] = compare(arms[x], arms[y])
@@ -170,7 +175,7 @@ def main() -> None:
         raise SystemExit("--margin must be in (0, 1)")
     res["non_inferiority"] = {"margin": a.margin, "rule": "lower bound of the 95% CI of accuracy(X) - accuracy(Y) > -margin"}
     for k, v in res["pairs"].items():
-        if k.endswith("_vs_naive_llm"):
+        if k.endswith("_vs_naive_llm") or k.endswith("_vs_naive_informed"):
             lo = v["accuracy_diff_ci95"][0]
             res["non_inferiority"][k] = {"ci_lower": lo, "non_inferior": bool(lo > -a.margin),
                                          "latency_superior": bool(v["latency_diff_ci95"][1] < 0), "primary": k.startswith("policy_v2")}

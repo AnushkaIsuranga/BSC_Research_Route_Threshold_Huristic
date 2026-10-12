@@ -56,3 +56,42 @@ def test_unparseable_prediction_is_wrong_and_flagged():
 def test_parseable_wrong_is_not_parse_failure():
     s = score_answer("5", "6")
     assert not s.correct and not s.parse_failure
+
+
+# ---- Amendment 2: trailing scale words stripped without rescaling (primary rule); strict rule unchanged
+@pytest.mark.parametrize("text,val", [
+    ("$18.75 million", 18.75), ("-$0.5 million", -0.5), ("$ -61.1", -61.1), ("5 Million", 5), ("2.5 BILLION", 2.5),
+    ("300 thousand", 300), ("12mn", 12), ("7 bn", 7), ("4.5m", 4.5), ("10k", 10), ("$1,234.5 million.", 1234.5),
+    ("(5.2) million", -5.2), ("35.9%", 35.9),
+])
+def test_primary_strips_scale_without_rescaling(text, val):
+    assert parse_financial_number(text, strip_scale=True) == pytest.approx(val)
+
+
+@pytest.mark.parametrize("text", ["million", "m", "k", "abc million", "1.2.3 million", "--5 million", "5 millions", "5 mm", "yes m"])
+def test_primary_still_rejects_garbage(text):
+    with pytest.raises(UnparseableNumber):
+        parse_financial_number(text, strip_scale=True)
+
+
+def test_strict_rule_rejects_scale_words():
+    for t in ("$18.75 million", "5 bn", "10k"):
+        with pytest.raises(UnparseableNumber):
+            parse_financial_number(t)
+        assert score_answer(t, "18.8", rule="strict").parse_failure
+
+
+def test_primary_vs_strict_scoring():
+    assert score_answer("$18.75 million", "18.8").correct                     # primary is the default rule
+    assert not score_answer("$18.75 million", "18.8", rule="strict").correct
+    assert score_answer("$18.75 million", "18.8", rule="strict").parse_failure
+    assert not score_answer("$18.75 million", "18.8").parse_failure
+    assert not score_answer("-$0.5 million", "12.1").correct                  # still wrong, but parseable
+    assert score_answer("-$0.5 million", "-0.5").correct
+    assert not score_answer("$18.75 million", "18750000").correct              # no rescaling to units
+    assert score_answer("yes", "yes", rule="strict").correct                   # booleans unaffected
+
+
+def test_unknown_rule_raises():
+    with pytest.raises(ValueError):
+        score_answer("1", "1", rule="lenient")

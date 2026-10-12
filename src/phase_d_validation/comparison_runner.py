@@ -33,7 +33,7 @@ import requests
 from pgvector.psycopg2 import register_vector
 
 from src import db_settings
-from src.phase_b_router.router import (ANSWER_SYSTEM, NAIVE_ROUTER_SYSTEM, Deps, build_decision_matrix_graph,
+from src.phase_b_router.router import (ANSWER_SYSTEM, NAIVE_INFORMED_ROUTER_SYSTEM, NAIVE_ROUTER_SYSTEM, Deps, build_decision_matrix_graph,
                                        build_naive_graph, build_policy_v2_graph)
 from src.phase_d_validation.finqa_loader import get_frozen_filepath, load_finqa_subset
 from src.phase_d_validation.llm_client import BudgetExceeded, load_generation_config, make_client
@@ -41,12 +41,12 @@ from src.phase_d_validation.scoring import score_answer
 from src.utils.finqa_utils import exact_selectivity, extract_ticker_year
 
 ARM_ORDER_SEED = 20261015
-ARMS = ("dm", "v2", "naive")
-ARM_NAMES = {"dm": "decision_matrix", "v2": "policy_v2", "naive": "naive_llm"}
+ARMS = ("dm", "v2", "naive", "naive_informed")
+ARM_NAMES = {"dm": "decision_matrix", "v2": "policy_v2", "naive": "naive_llm", "naive_informed": "naive_informed"}
 CSV_FIELDS = ["run_id", "pass", "arm", "query_id", "ticker", "year", "selectivity", "route", "router_model", "answer_model",
               "arm_order", "arm_position", "retrieved_evidence_keys", "retrieved_ids", "retrieved_distances", "rows_returned", "rows_fetched",
               "tie_truncated", "distinct_dropped", "gold_evidence_keys", "retrieval_hit", "retrieval_hit_passage", "raw_output", "parsed_answer", "gold_answer",
-              "correct", "parse_failure", "route_parse_failure", "router_raw", "router_reason", "input_tokens",
+              "correct", "correct_strict", "parse_failure", "parse_failure_strict", "route_parse_failure", "router_raw", "router_reason", "input_tokens",
               "output_tokens", "thinking_tokens", "gen_finish_reason", "gen_cached_tokens", "gen_cost_usd", "router_input_tokens",
               "router_output_tokens", "router_thinking_tokens", "router_finish_reason", "router_cached_tokens", "router_cost_usd", "traffic_types", "cost_usd", "embed_ms",
               "db_ms", "router_ms", "generation_ms", "total_ms", "error"]
@@ -110,12 +110,14 @@ def coverage_check(conn, queries, table: str = "finqa_evidence") -> None:
 
 def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, answer_model, router_model, error, arm_order=None, gold_md5=None):
     score = None
+    score_strict = None
     parsed = None
     gold = row["answer"]
     route_fail = bool(state.get("route_parse_failure"))
     raw = state.get("raw_output")
     if error is None and not route_fail:
-        score = score_answer(raw, gold)
+        score = score_answer(raw, gold, "primary")
+        score_strict = score_answer(raw, gold, "strict")
         parsed = score.parsed
     retrieved = state.get("retrieved_evidence_keys")
     hit = None
@@ -127,7 +129,7 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
     rec = {
         "run_id": run_id, "pass": pass_no, "arm": ARM_NAMES[arm], "query_id": row["id"],
         "ticker": state["ticker"], "year": state["year"], "selectivity": sel, "route": state.get("chosen_route") or None,
-        "router_model": router_model if arm == "naive" else None, "answer_model": answer_model,
+        "router_model": router_model if arm in ("naive", "naive_informed") else None, "answer_model": answer_model,
         "arm_order": [ARM_NAMES[a] for a in arm_order] if arm_order else None,
         "arm_position": (arm_order.index(arm) + 1) if arm_order else None,
         "retrieved_evidence_keys": retrieved, "retrieved_ids": state.get("retrieved_ids"),
@@ -137,6 +139,8 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
         "raw_output": raw, "parsed_answer": parsed, "gold_answer": gold,
         # a naive-router schema failure yields no answer: scored wrong, flagged as route_parse_failure
         "correct": None if error else int(bool(score and score.correct)),
+        "correct_strict": None if error else int(bool(score_strict and score_strict.correct)),
+        "parse_failure_strict": int(bool(score_strict and score_strict.parse_failure)),
         "parse_failure": int(bool(score and score.parse_failure)), "route_parse_failure": int(route_fail),
         "router_raw": state.get("router_raw"), "router_reason": state.get("router_reason"),
         "input_tokens": state.get("gen_input_tokens"), "output_tokens": state.get("gen_output_tokens"),
@@ -224,6 +228,8 @@ def run(args: argparse.Namespace) -> Path:
         graphs["v2"] = build_policy_v2_graph(deps)
     if "naive" in arms:
         graphs["naive"] = build_naive_graph(deps)
+    if "naive_informed" in arms:
+        graphs["naive_informed"] = build_naive_graph(deps, informed=True)
 
     # Untimed warm-up (loads the local model / embedder into memory) so the first logged row is not a cold start.
     # Not written to results.jsonl; recorded in run_meta.json. Skipped for paid backends (no cold-load effect worth paying for).
@@ -251,7 +257,8 @@ def run(args: argparse.Namespace) -> Path:
         "backend": answer_client.backend, "ollama": ollama_digest(args.model) if answer_client.backend == "ollama" else None,
         "embedding_model": None if args.query_embeddings else ollama_digest(embed_cfg["model"]),
         "evidence_table": args.table, "k": k, "distinct": distinct, "query_embedding_cache": cache_meta, "generation_config": cfg,
-        "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM,
+        "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM, "naive_informed_router_system_prompt": NAIVE_INFORMED_ROUTER_SYSTEM,
+        "scoring": "primary = Amendment 2 (scale words stripped, no rescaling); strict = Amendment 1; both recorded per row",
         "finqa_rows": rows_total, "finqa_ticker_year_groups": groups, "n_queries": len(queries),
         "correlation_level": args.correlation_level, "warmup": warmup,
         "arm_order": f"per (pass, query): arms shuffled with random.Random('{ARM_ORDER_SEED}|pass|query_id'); order recorded in every row",
@@ -304,7 +311,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--model", required=True, help="answer model (a key of config/generation.json)")
     p.add_argument("--router-model", default=None, help="naive-router model; default = --model")
-    p.add_argument("--arms", default="dm,v2,naive")
+    p.add_argument("--arms", default="dm,v2,naive,naive_informed")
     p.add_argument("--correlation-level", default=None, help="threshold-table tier for the Decision Matrix arm (required with dm)")
     p.add_argument("--thresholds", default="outputs/thresholds.json")
     p.add_argument("--subset", default=None)

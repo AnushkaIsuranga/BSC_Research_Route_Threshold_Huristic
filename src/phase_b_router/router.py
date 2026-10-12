@@ -31,6 +31,15 @@ NAIVE_ROUTER_SYSTEM = (
     "searches only the matching rows; 'post-filter' searches the whole index first and applies the filter "
     "afterwards. Reply with JSON only, exactly: {\"route\": \"pre-filter\" or \"post-filter\", \"reason\": \"<one short sentence>\"}"
 )
+# Amendment 2 arm "naive_informed": identical to the naive router except that the user message also states the metadata filter
+# that will be applied (no selectivity, no row counts). NAIVE_ROUTER_SYSTEM itself is unchanged (frozen, pre-registered arm).
+NAIVE_INFORMED_ROUTER_SYSTEM = NAIVE_ROUTER_SYSTEM + " The metadata filter that will be applied is stated before the question."
+
+
+def naive_informed_user_message(ticker: str, year: str, question: str) -> str:
+    return f"Metadata filter to be applied: ticker = {ticker}, year = {year}\nQuestion: {question}"
+
+
 ANSWER_SYSTEM = (
     "You solve FinQA questions. Use only the supplied evidence. Return only the final numeric or boolean "
     "answer, with no explanation. Preserve percentages when the answer is a percentage."
@@ -248,10 +257,13 @@ def build_policy_v2_graph(deps: Deps):
     return _deterministic_graph(deps, lambda s: get_routing_decision_v2(s["estimated_selectivity"]), routes)
 
 
-def build_naive_graph(deps: Deps):
+def build_naive_graph(deps: Deps, informed: bool = False):
     def route_node(state: RouterState) -> dict:
-        resp = deps.router_client.generate(NAIVE_ROUTER_SYSTEM, f"Question: {state['question']}",
-                                           max_output_tokens=deps.router_max_tokens, json_mode=True)
+        if informed:
+            system, user = NAIVE_INFORMED_ROUTER_SYSTEM, naive_informed_user_message(state["ticker"], state["year"], state["question"])
+        else:
+            system, user = NAIVE_ROUTER_SYSTEM, f"Question: {state['question']}"
+        resp = deps.router_client.generate(system, user, max_output_tokens=deps.router_max_tokens, json_mode=True)
         data, err = validate_naive_route(resp.text)
         out = {"router_raw": resp.text, "router_ms": resp.latency_ms, "router_input_tokens": resp.input_tokens,
                "router_output_tokens": resp.output_tokens, "router_thinking_tokens": resp.thinking_tokens,
