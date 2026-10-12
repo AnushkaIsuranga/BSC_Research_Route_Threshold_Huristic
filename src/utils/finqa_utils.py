@@ -23,6 +23,9 @@ def get_embedding_client() -> OpenAIEmbeddings:
     """
     api_key = os.getenv("OPENROUTER_API_KEY")
     api_base = os.getenv("OPENROUTER_API_BASE")
+    # NOTE: EMBEDDING_MODEL (default qwen/qwen3-embedding-8b) applies only to this OpenRouter path. The table finqa_evidence
+    # was built with Ollama nomic-embed-text (768-d, raw text, no prefix), not with this model; finqa_evidence_qwen3 was
+    # built by build_finqa_embedding_table.py.
     embedding_model_name = os.getenv("EMBEDDING_MODEL", "qwen/qwen3-embedding-8b")
     
     if not api_key:

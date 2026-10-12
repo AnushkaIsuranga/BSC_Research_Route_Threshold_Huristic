@@ -1,14 +1,64 @@
 {
   "_note": "One generation config, used identically by every arm. The run records the settings actually applied per call. 'thinking' entries for paid models are proposals to confirm in the paid pilot.",
-  "embedding": {"model": "nomic-embed-text:latest", "backend": "ollama"},
-  "retrieval": {"k": 6, "ef_search": 40, "distance": "L2 (<->)"},
-  "scoring": {"rel_tol": 0.01, "abs_tol": 1e-9},
-  "roles": {"router_max_output_tokens": 256, "answer_max_output_tokens": 256},
+  "embedding": {
+    "model": "nomic-embed-text:latest",
+    "backend": "ollama",
+    "note": "Original setup (12 Oct baseline, finqa_evidence): nomic-embed-text:latest via Ollama, raw text, no prefix, 768-d. Amendment 1 (PHASE_D_AMENDMENT_1.md): table finqa_evidence_qwen3, Qwen3-Embedding-8B 1024-d, query embeddings read from outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json via --query-embeddings."
+  },
+  "retrieval": {
+    "k": 6,
+    "ef_search": 40,
+    "distance": "L2 (<->)"
+  },
+  "scoring": {
+    "rel_tol": 0.01,
+    "abs_tol": 1e-09
+  },
+  "roles": {
+    "router_max_output_tokens": 256,
+    "answer_max_output_tokens": 256
+  },
   "models": {
-    "qwen2.5:7b":            {"backend": "ollama", "temperature": 0, "seed": 0, "num_ctx": 8192, "thinking": "none (model has no thinking mode)"},
-    "claude-sonnet-5-5":     {"backend": "vertex_claude", "price_key": "claude-sonnet-5-5", "model_id": "claude-sonnet-5-5", "temperature": 0, "thinking": "disabled (no thinking field sent)"},
-    "gemini-3.8-flash":      {"backend": "vertex_gemini", "price_key": "gemini-3.8-flash", "model_id": "gemini-3.8-flash", "temperature": 0, "thinking": {"thinking_level": "LOW"}},
-    "gemini-3.5-flash-lite": {"backend": "vertex_gemini", "price_key": "gemini-3.5-flash-lite", "model_id": "gemini-3.5-flash-lite", "temperature": 0, "thinking": {"thinking_level": "MINIMAL"}},
-    "gpt-oss-120b":          {"backend": "vertex_openmaas", "price_key": "gpt-oss-120b", "model_id": "openai/gpt-oss-120b-maas", "temperature": 0, "thinking": {"reasoning_effort": "low"}}
+    "qwen2.5:7b": {
+      "backend": "ollama",
+      "temperature": 0,
+      "seed": 0,
+      "num_ctx": 8192,
+      "thinking": "none (model has no thinking mode)"
+    },
+    "claude-sonnet-5-5": {
+      "backend": "vertex_claude",
+      "price_key": "claude-sonnet-5-5",
+      "model_id": "claude-sonnet-5-5",
+      "temperature": 0,
+      "thinking": "disabled (no thinking field sent)"
+    },
+    "gemini-3.8-flash": {
+      "backend": "vertex_gemini",
+      "price_key": "gemini-3.8-flash",
+      "model_id": "gemini-3.8-flash",
+      "temperature": 0,
+      "thinking": {
+        "thinking_level": "LOW"
+      }
+    },
+    "gemini-3.5-flash-lite": {
+      "backend": "vertex_gemini",
+      "price_key": "gemini-3.5-flash-lite",
+      "model_id": "gemini-3.5-flash-lite",
+      "temperature": 0,
+      "thinking": {
+        "thinking_level": "MINIMAL"
+      }
+    },
+    "gpt-oss-120b": {
+      "backend": "vertex_openmaas",
+      "price_key": "gpt-oss-120b",
+      "model_id": "openai/gpt-oss-120b-maas",
+      "temperature": 0,
+      "thinking": {
+        "reasoning_effort": "low"
+      }
+    }
   }
 }
