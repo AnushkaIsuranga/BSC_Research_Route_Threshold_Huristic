@@ -9,7 +9,11 @@ Per pair of arms on the same queries (one chosen pass):
     queries, percentile interval, fixed seed, BOOTSTRAP_RESAMPLES resamples
 Also: --agreement compares two passes (same answer / same route per query and arm).
 
-  python -m src.phase_d_validation.paired_stats outputs/<run>/results.jsonl --pass 1 --out outputs/<run>/stats_pass1.json
+  python -m src.phase_d_validation.paired_stats outputs/<run>/results.jsonl --pass 1 --margin <M> --out outputs/<run>/stats_pass1.json
+
+--margin is REQUIRED (the non-inferiority margin of Amendment 1; no default). Non-inferiority of X vs Y holds iff the lower
+bound of the 95% CI of accuracy(X) - accuracy(Y) is above -MARGIN. Primary pair: policy_v2 vs naive_llm; decision_matrix vs
+naive_llm is reported alongside. Superiority on latency: the paired-bootstrap CI of (X - Y) total_ms lies entirely below 0.
 """
 
 from __future__ import annotations
@@ -109,6 +113,10 @@ def arm_summary(arm_rows: dict[str, dict]) -> dict:
     hits = [r["retrieval_hit"] for r in rs if r["retrieval_hit"] is not None]
     return {"n": n, "accuracy": sum(r["correct"] for r in rs) / n, "correct": sum(r["correct"] for r in rs),
             "retrieval_hit_rate": (sum(hits) / len(hits)) if hits else None, "retrieval_hit_n": len(hits),
+            "retrieval_hit_passage_rate": (lambda h: (sum(h) / len(h)) if h else None)([r["retrieval_hit_passage"] for r in rs if r.get("retrieval_hit_passage") is not None]),
+            "rows_returned_by_route": {k: statistics.fmean([r["rows_returned"] for r in rs if str(r["route"]) == k and r.get("rows_returned") is not None])
+                                       for k in sorted({str(r["route"]) for r in rs if r.get("rows_returned") is not None})},
+            "cost_per_query_usd": sum(r["cost_usd"] or 0 for r in rs) / n,
             "parse_failures": sum(r["parse_failure"] for r in rs), "route_parse_failures": sum(r["route_parse_failure"] for r in rs),
             "routes": {k: sum(1 for r in rs if r["route"] == k) for k in sorted({str(r["route"]) for r in rs})},
             "latency_ms": {k: q([r[k] for r in rs]) for k in ("embed_ms", "db_ms", "router_ms", "generation_ms", "total_ms")},
@@ -139,6 +147,7 @@ def main() -> None:
     ap.add_argument("--pass", dest="pass_no", type=int, default=1)
     ap.add_argument("--out", required=True)
     ap.add_argument("--agreement", action="store_true")
+    ap.add_argument("--margin", type=float, required=True, help="non-inferiority margin on the accuracy difference (e.g. 0.10); required")
     a = ap.parse_args()
     rows = load(Path(a.results))
     arms = by_arm(rows, a.pass_no)
@@ -146,6 +155,14 @@ def main() -> None:
     for x, y in PAIRS:
         if x in arms and y in arms:
             res["pairs"][f"{x}_vs_{y}"] = compare(arms[x], arms[y])
+    if not 0 < a.margin < 1:
+        raise SystemExit("--margin must be in (0, 1)")
+    res["non_inferiority"] = {"margin": a.margin, "rule": "lower bound of the 95% CI of accuracy(X) - accuracy(Y) > -margin"}
+    for k, v in res["pairs"].items():
+        if k.endswith("_vs_naive_llm"):
+            lo = v["accuracy_diff_ci95"][0]
+            res["non_inferiority"][k] = {"ci_lower": lo, "non_inferior": bool(lo > -a.margin),
+                                         "latency_superior": bool(v["latency_diff_ci95"][1] < 0), "primary": k.startswith("policy_v2")}
     if "decision_matrix" in arms and "policy_v2" in arms:
         ids = sorted(arms["decision_matrix"])
         dmap = {"pre-filter": "exact", "post-filter": "post-filter", "iterative-scan": "iterative-relaxed"}

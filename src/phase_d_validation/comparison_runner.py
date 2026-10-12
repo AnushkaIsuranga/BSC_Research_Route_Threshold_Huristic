@@ -45,7 +45,7 @@ ARMS = ("dm", "v2", "naive")
 ARM_NAMES = {"dm": "decision_matrix", "v2": "policy_v2", "naive": "naive_llm"}
 CSV_FIELDS = ["run_id", "pass", "arm", "query_id", "ticker", "year", "selectivity", "route", "router_model", "answer_model",
               "arm_order", "arm_position", "retrieved_evidence_keys", "retrieved_ids", "retrieved_distances", "rows_returned", "rows_fetched",
-              "tie_truncated", "gold_evidence_keys", "retrieval_hit", "raw_output", "parsed_answer", "gold_answer",
+              "tie_truncated", "distinct_dropped", "gold_evidence_keys", "retrieval_hit", "retrieval_hit_passage", "raw_output", "parsed_answer", "gold_answer",
               "correct", "parse_failure", "route_parse_failure", "router_raw", "router_reason", "input_tokens",
               "output_tokens", "thinking_tokens", "router_input_tokens", "router_output_tokens", "cost_usd", "embed_ms",
               "db_ms", "router_ms", "generation_ms", "total_ms", "error"]
@@ -77,16 +77,35 @@ def make_embedder(model: str, base: str = "http://127.0.0.1:11434"):
     return embed
 
 
-def coverage_check(conn, queries) -> None:
+def make_cached_embedder(cache_path: str, queries: list):
+    """Question -> vector from a cached query-embedding file (no API/model call; unknown question raises).
+    The cache is keyed by query_id in the frozen subset order; sha256 of every input text is verified."""
+    d = json.loads(Path(cache_path).read_text(encoding="utf-8"))
+    if [x["query_id"] for x in d["queries"]] != [q["id"] for q in queries]:
+        raise RuntimeError("query-embedding cache does not match the query subset/order")
+    table = {}
+    for q, x in zip(queries, d["queries"]):
+        if hashlib.sha256(x["input_text"].encode()).hexdigest() != x["input_sha256"]:
+            raise RuntimeError(f"cache hash mismatch for {q['id']}")
+        table[q["question"]] = x["vector"]
+
+    def embed(text: str) -> list:
+        if text not in table:
+            raise KeyError("question not in the cached query embeddings; refusing to embed it on the fly")
+        return table[text]
+    return embed, d
+
+
+def coverage_check(conn, queries, table: str = "finqa_evidence") -> None:
     with conn.cursor() as cur:
         for row in queries:
             for k in (x.strip() for x in row["gold_evidence_keys"].split("|") if x.strip()):
-                cur.execute("SELECT 1 FROM finqa_evidence WHERE query_id = %s AND evidence_key = %s", (row["id"], k))
+                cur.execute(f"SELECT 1 FROM {table} WHERE query_id = %s AND evidence_key = %s", (row["id"], k))
                 if not cur.fetchone():
                     raise RuntimeError(f"coverage check failed: gold key {k!r} of {row['id']!r} not in DB")
 
 
-def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, answer_model, router_model, error, arm_order=None):
+def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, answer_model, router_model, error, arm_order=None, gold_md5=None):
     score = None
     parsed = None
     gold = row["answer"]
@@ -97,6 +116,9 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
         parsed = score.parsed
     retrieved = state.get("retrieved_evidence_keys")
     hit = None
+    hit_passage = None
+    if gold_md5 is not None and state.get("retrieved_content_md5") is not None:
+        hit_passage = int(set(gold_md5) <= set(state["retrieved_content_md5"]))
     if retrieved is not None:
         hit = int(all(f"{row['id']}::{k}" in retrieved for k in gold_keys))
     rec = {
@@ -107,8 +129,8 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
         "arm_position": (arm_order.index(arm) + 1) if arm_order else None,
         "retrieved_evidence_keys": retrieved, "retrieved_ids": state.get("retrieved_ids"),
         "retrieved_distances": state.get("retrieved_distances"), "rows_returned": state.get("rows_returned"),
-        "rows_fetched": state.get("rows_fetched"), "tie_truncated": state.get("tie_truncated"),
-        "gold_evidence_keys": sorted(gold_keys), "retrieval_hit": hit,
+        "rows_fetched": state.get("rows_fetched"), "tie_truncated": state.get("tie_truncated"), "distinct_dropped": state.get("distinct_dropped"),
+        "gold_evidence_keys": sorted(gold_keys), "retrieval_hit": hit, "retrieval_hit_passage": hit_passage,
         "raw_output": raw, "parsed_answer": parsed, "gold_answer": gold,
         # a naive-router schema failure yields no answer: scored wrong, flagged as route_parse_failure
         "correct": None if error else int(bool(score and score.correct)),
@@ -164,15 +186,29 @@ def run(args: argparse.Namespace) -> Path:
     register_vector(conn)
     with conn.cursor() as cur:
         cur.execute(f"SET hnsw.ef_search = {int(cfg['retrieval']['ef_search'])}")
-        cur.execute("SELECT COUNT(*), COUNT(DISTINCT (metadata->>'ticker')||'/'||(metadata->>'year')) FROM finqa_evidence")
+        cur.execute(f"SELECT COUNT(*), COUNT(DISTINCT (metadata->>'ticker')||'/'||(metadata->>'year')) FROM {args.table}")
         rows_total, groups = cur.fetchone()
     if args.expect_rows is not None and rows_total != args.expect_rows:
-        raise SystemExit(f"finqa_evidence has {rows_total} rows, expected {args.expect_rows}")
-    coverage_check(conn, queries)
+        raise SystemExit(f"{args.table} has {rows_total} rows, expected {args.expect_rows}")
+    coverage_check(conn, queries, args.table)
 
     embed_cfg = cfg["embedding"]
-    deps = Deps(conn, make_embedder(embed_cfg["model"]), router_client, answer_client, cfg["retrieval"]["k"],
-                cfg["roles"]["router_max_output_tokens"], cfg["roles"]["answer_max_output_tokens"])
+    cache_meta = None
+    if args.query_embeddings:
+        embed_fn, cache_meta = make_cached_embedder(args.query_embeddings, queries)
+        cache_meta = {"path": args.query_embeddings, "sha256": sha256_file(args.query_embeddings), "model": cache_meta.get("model"),
+                      "dimension": cache_meta.get("dimension")}
+    else:
+        embed_fn = make_embedder(embed_cfg["model"])
+    k = args.k or cfg["retrieval"]["k"]
+    gold_md5_by_q = {}
+    with conn.cursor() as cur:
+        for qrow in queries:
+            gk = [x.strip() for x in qrow["gold_evidence_keys"].split("|") if x.strip()]
+            cur.execute(f"SELECT md5(content) FROM {args.table} WHERE query_id = %s AND evidence_key = ANY(%s)", (qrow["id"], gk))
+            gold_md5_by_q[qrow["id"]] = [r[0] for r in cur.fetchall()]
+    deps = Deps(conn, embed_fn, router_client, answer_client, k,
+                cfg["roles"]["router_max_output_tokens"], cfg["roles"]["answer_max_output_tokens"], args.table, args.distinct)
     graphs = {}
     if "dm" in arms:
         graphs["dm"] = build_decision_matrix_graph(thresholds, deps)
@@ -186,7 +222,8 @@ def run(args: argparse.Namespace) -> Path:
     warmup = None
     if answer_client.backend == "ollama":
         w0 = time.perf_counter()
-        deps.embed("warm-up")
+        if not args.query_embeddings:
+            deps.embed("warm-up")
         answer_client.generate("Reply with the single word OK.", "warm-up", max_output_tokens=8)
         if router_client is not answer_client:
             router_client.generate("Reply with the single word OK.", "warm-up", max_output_tokens=8)
@@ -204,7 +241,8 @@ def run(args: argparse.Namespace) -> Path:
         "start_utc": datetime.now(timezone.utc).isoformat(), "end_utc": None, "host": platform.platform(),
         "python": sys.version, "answer_model": args.model, "router_model": router_model, "arms": arms, "passes": args.passes,
         "backend": answer_client.backend, "ollama": ollama_digest(args.model) if answer_client.backend == "ollama" else None,
-        "embedding_model": ollama_digest(embed_cfg["model"]), "generation_config": cfg,
+        "embedding_model": None if args.query_embeddings else ollama_digest(embed_cfg["model"]),
+        "evidence_table": args.table, "k": k, "distinct": args.distinct, "query_embedding_cache": cache_meta, "generation_config": cfg,
         "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM,
         "finqa_rows": rows_total, "finqa_ticker_year_groups": groups, "n_queries": len(queries),
         "correlation_level": args.correlation_level, "warmup": warmup,
@@ -236,7 +274,7 @@ def run(args: argparse.Namespace) -> Path:
                             err = f"{type(exc).__name__}: {exc}"
                         total_ms = (time.perf_counter() - t0) * 1000
                         rec = build_record(run_id, pass_no, arm, row, gold_keys, sel, final, total_ms, args.model,
-                                           router_model, err, order)
+                                           router_model, err, order, gold_md5_by_q[qid])
                         rec["cumulative_cost_usd"] = answer_client.spent_usd + (
                             router_client.spent_usd if router_client is not answer_client else 0.0)
                         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
@@ -267,6 +305,10 @@ def main() -> None:
     p.add_argument("--passes", type=int, default=1)
     p.add_argument("--output-dir", required=True)
     p.add_argument("--expect-rows", type=int, default=None)
+    p.add_argument("--table", default="finqa_evidence", help="evidence table (Amendment 1: finqa_evidence_qwen3)")
+    p.add_argument("--query-embeddings", default=None, help="cached query-embedding JSON; if given, no embedding model is called")
+    p.add_argument("--distinct", action="store_true", help="retrieve k distinct passages (dedupe by md5(content))")
+    p.add_argument("--k", type=int, default=None, help="override config retrieval.k")
     p.add_argument("--allow-paid", action="store_true")
     p.add_argument("--budget-usd", type=float, default=None)
     args = p.parse_args()

@@ -37,3 +37,22 @@ def test_compare_counts():
     assert (r["both_correct"], r["b_X_only_correct"], r["c_Y_only_correct"], r["both_wrong"]) == (2, 4, 1, 3)
     assert r["mcnemar_exact_p_two_sided"] == pytest.approx(mcnemar_exact(4, 1))
     assert r["latency_total_ms_mean_diff_X_minus_Y"] == pytest.approx(5.0)
+
+
+def test_margin_is_required(tmp_path):
+    import subprocess, sys, json
+    f = tmp_path / "r.jsonl"
+    rows = []
+    for arm in ("policy_v2", "naive_llm", "decision_matrix"):
+        for i in range(10):
+            rows.append({"pass": 1, "arm": arm, "query_id": str(i), "correct": int(i < 5), "total_ms": 10.0 + i, "retrieval_hit": 1,
+                         "parse_failure": 0, "route_parse_failure": 0, "route": "x", "embed_ms": 1, "db_ms": 1, "router_ms": 1,
+                         "generation_ms": 1, "input_tokens": 1, "output_tokens": 1, "thinking_tokens": 0, "router_input_tokens": None,
+                         "router_output_tokens": None, "cost_usd": 0.0, "rows_returned": 6})
+    f.write_text("\n".join(json.dumps(r) for r in rows))
+    base = [sys.executable, "-m", "src.phase_d_validation.paired_stats", str(f), "--out", str(tmp_path / "o.json")]
+    assert subprocess.run(base, capture_output=True).returncode != 0          # no --margin: refuses
+    ok = subprocess.run(base + ["--margin", "0.1"], capture_output=True, text=True)
+    assert ok.returncode == 0, ok.stderr
+    res = json.loads((tmp_path / "o.json").read_text())
+    assert res["non_inferiority"]["policy_v2_vs_naive_llm"]["non_inferior"] is True

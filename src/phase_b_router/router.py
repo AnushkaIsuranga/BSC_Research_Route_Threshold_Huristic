@@ -13,6 +13,7 @@ Every graph accumulates the same cost/token/latency fields in RouterState (parit
 
 from __future__ import annotations
 
+import hashlib
 import json
 import time
 from dataclasses import dataclass
@@ -58,6 +59,7 @@ class RouterState(TypedDict, total=False):
     db_ms: float
     retrieved_evidence_keys: List[str]
     retrieved_ids: List[int]
+    retrieved_content_md5: List[str]
     retrieved_distances: List[float]
     rows_returned: int
     rows_fetched: int
@@ -197,7 +199,8 @@ def make_execute_node(deps: Deps, route_label: str | None = None) -> Callable[[R
         return {
             "embed_ms": (t1 - t0) * 1000, "db_ms": (t2 - t1) * 1000,
             "retrieved_evidence_keys": [f"{q}::{key}" for _, q, key, _, _ in rows],
-            "retrieved_ids": [r[0] for r in rows], "retrieved_distances": [r[4] for r in rows],
+            "retrieved_ids": [r[0] for r in rows],
+            "retrieved_content_md5": [hashlib.md5(r[3].encode()).hexdigest() for r in rows], "retrieved_distances": [r[4] for r in rows],
             "rows_returned": len(rows), "rows_fetched": res["rows_fetched"], "tie_truncated": res["tie_truncated"],
             "distinct_dropped": res.get("distinct_dropped", 0),
             "raw_output": resp.text, "generation_ms": resp.latency_ms,
