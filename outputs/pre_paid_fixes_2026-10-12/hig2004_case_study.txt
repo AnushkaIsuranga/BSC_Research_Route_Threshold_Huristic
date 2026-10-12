@@ -1,0 +1,36 @@
+question: in the adoption of the prospective method what was the ratio of the other comprehensive income to the net income reclassifying certain separate accounts to general account | gold: 9.8 | gold keys: table_2 | filter ticker/year: HIG 2004
+GOLD rows (id, query_id, key, ticker, year): [(1870, 'HIG/2004/page_140.pdf-1', 'table_2', 'HIG', '2004')]
+
+== EXACT / pre-filter: SET enable_indexscan=off; SET enable_seqscan=on
+SQL: SELECT id, query_id, evidence_key, metadata->>'ticker', metadata->>'year', embedding <-> :query_vector AS d FROM finqa_evidence WHERE metadata->>'ticker' = 'HIG' AND metadata->>'year' = '2004' ORDER BY embedding <-> :query_vector LIMIT 12
+plan: Limit  (cost=1822.26..1822.26 rows=1 width=106) / ->  Sort  (cost=1822.26..1822.26 rows=1 width=106) / Sort Key: ((embedding <-> '[-0.0006371753,0.035356082,-0.16904008,-0.009262082,0
+rows returned: 12
+  id 20928 HIG/2004/page_140.pdf-2 table_0 HIG 2004 0.785795
+  id 1868 HIG/2004/page_140.pdf-1 table_0 HIG 2004 0.785795
+  id 13566 HIG/2004/page_140.pdf-3 table_0 HIG 2004 0.785795
+  id 20926 HIG/2004/page_140.pdf-2 text_46 HIG 2004 0.796552
+  id 13564 HIG/2004/page_140.pdf-3 text_46 HIG 2004 0.796552
+  id 1866 HIG/2004/page_140.pdf-1 text_46 HIG 2004 0.796552
+  id 20930 HIG/2004/page_140.pdf-2 table_2 HIG 2004 0.823608
+  id 1870 HIG/2004/page_140.pdf-1 table_2 HIG 2004 0.823608
+  id 13568 HIG/2004/page_140.pdf-3 table_2 HIG 2004 0.823608
+  id 1837 HIG/2004/page_140.pdf-1 text_17 HIG 2004 0.866491
+  id 13535 HIG/2004/page_140.pdf-3 text_17 HIG 2004 0.866491
+  id 20897 HIG/2004/page_140.pdf-2 text_17 HIG 2004 0.866491
+
+== POST-FILTER: SET enable_indexscan=on; SET enable_seqscan=off; SET hnsw.iterative_scan=off
+SQL: SELECT id, query_id, evidence_key, metadata->>'ticker', metadata->>'year', embedding <-> :query_vector AS d FROM finqa_evidence WHERE metadata->>'ticker' = 'HIG' AND metadata->>'year' = '2004' ORDER BY embedding <-> :query_vector LIMIT 12
+plan: Limit  (cost=509.63..34810.21 rows=1 width=106) / ->  Index Scan using finqa_evidence_embedding_idx on finqa_evidence  (cost=509.6 / Order By: (embedding <-> '[-0.0006371753,0.035356082,-0.16904008,-0.009262082,0.
+rows returned: 9
+  id 20928 HIG/2004/page_140.pdf-2 table_0 HIG 2004 0.785795
+  id 13566 HIG/2004/page_140.pdf-3 table_0 HIG 2004 0.785795
+  id 1868 HIG/2004/page_140.pdf-1 table_0 HIG 2004 0.785795
+  id 20930 HIG/2004/page_140.pdf-2 table_2 HIG 2004 0.823608
+  id 13568 HIG/2004/page_140.pdf-3 table_2 HIG 2004 0.823608
+  id 1870 HIG/2004/page_140.pdf-1 table_2 HIG 2004 0.823608
+  id 20897 HIG/2004/page_140.pdf-2 text_17 HIG 2004 0.866491
+  id 13535 HIG/2004/page_140.pdf-3 text_17 HIG 2004 0.866491
+  id 1837 HIG/2004/page_140.pdf-1 text_17 HIG 2004 0.866491
+
+Unfiltered top-40 via HNSW index, rows of this ticker/year: [('table_0', '2', 0.7858), ('table_0', '3', 0.7858), ('table_0', '1', 0.7858), ('table_2', '2', 0.8236), ('table_2', '3', 0.8236), ('table_2', '1', 0.8236)]
+Unfiltered top-40 exact,        rows of this ticker/year: [('table_0', '1', 0.7858), ('table_0', '3', 0.7858), ('table_0', '2', 0.7858), ('text_46', '1', 0.7966), ('text_46', '3', 0.7966), ('text_46', '2', 0.7966), ('table_2', '1', 0.8236), ('table_2', '3', 0.8236), ('table_2', '2', 0.8236)]

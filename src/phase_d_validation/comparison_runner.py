@@ -1,6 +1,6 @@
 """Phase D FinQA comparison runner: Decision Matrix vs policy_v2 vs naive LLM router.
 
-No mock, fallback or random behaviour. Any failure is logged to the row and then raised (the run
+No mock or fallback behaviour; the only randomness is the seeded, recorded arm-order shuffle. Any failure is logged to the row and then raised (the run
 stops); a failure is never replaced by a default answer, route or cost. The only recorded
 non-exception outcome is a naive-router output that fails its JSON schema (route_parse_failure,
 counted; that query/arm gets no retrieval and is scored wrong).
@@ -20,6 +20,7 @@ import csv
 import hashlib
 import json
 import platform
+import random
 import subprocess
 import sys
 import time
@@ -39,10 +40,12 @@ from src.phase_d_validation.llm_client import BudgetExceeded, load_generation_co
 from src.phase_d_validation.scoring import score_answer
 from src.utils.finqa_utils import exact_selectivity, extract_ticker_year
 
+ARM_ORDER_SEED = 20261015
 ARMS = ("dm", "v2", "naive")
 ARM_NAMES = {"dm": "decision_matrix", "v2": "policy_v2", "naive": "naive_llm"}
 CSV_FIELDS = ["run_id", "pass", "arm", "query_id", "ticker", "year", "selectivity", "route", "router_model", "answer_model",
-              "retrieved_evidence_keys", "gold_evidence_keys", "retrieval_hit", "raw_output", "parsed_answer", "gold_answer",
+              "arm_order", "arm_position", "retrieved_evidence_keys", "retrieved_ids", "retrieved_distances", "rows_returned", "rows_fetched",
+              "tie_truncated", "gold_evidence_keys", "retrieval_hit", "raw_output", "parsed_answer", "gold_answer",
               "correct", "parse_failure", "route_parse_failure", "router_raw", "router_reason", "input_tokens",
               "output_tokens", "thinking_tokens", "router_input_tokens", "router_output_tokens", "cost_usd", "embed_ms",
               "db_ms", "router_ms", "generation_ms", "total_ms", "error"]
@@ -83,7 +86,7 @@ def coverage_check(conn, queries) -> None:
                     raise RuntimeError(f"coverage check failed: gold key {k!r} of {row['id']!r} not in DB")
 
 
-def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, answer_model, router_model, error):
+def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, answer_model, router_model, error, arm_order=None):
     score = None
     parsed = None
     gold = row["answer"]
@@ -100,7 +103,12 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
         "run_id": run_id, "pass": pass_no, "arm": ARM_NAMES[arm], "query_id": row["id"],
         "ticker": state["ticker"], "year": state["year"], "selectivity": sel, "route": state.get("chosen_route") or None,
         "router_model": router_model if arm == "naive" else None, "answer_model": answer_model,
-        "retrieved_evidence_keys": retrieved, "gold_evidence_keys": sorted(gold_keys), "retrieval_hit": hit,
+        "arm_order": [ARM_NAMES[a] for a in arm_order] if arm_order else None,
+        "arm_position": (arm_order.index(arm) + 1) if arm_order else None,
+        "retrieved_evidence_keys": retrieved, "retrieved_ids": state.get("retrieved_ids"),
+        "retrieved_distances": state.get("retrieved_distances"), "rows_returned": state.get("rows_returned"),
+        "rows_fetched": state.get("rows_fetched"), "tie_truncated": state.get("tie_truncated"),
+        "gold_evidence_keys": sorted(gold_keys), "retrieval_hit": hit,
         "raw_output": raw, "parsed_answer": parsed, "gold_answer": gold,
         # a naive-router schema failure yields no answer: scored wrong, flagged as route_parse_failure
         "correct": None if error else int(bool(score and score.correct)),
@@ -200,7 +208,7 @@ def run(args: argparse.Namespace) -> Path:
         "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM,
         "finqa_rows": rows_total, "finqa_ticker_year_groups": groups, "n_queries": len(queries),
         "correlation_level": args.correlation_level, "warmup": warmup,
-        "arm_order": "arms rotated by query index (query i starts at arm i mod n_arms), same rotation in every pass",
+        "arm_order": f"per (pass, query): arms shuffled with random.Random('{ARM_ORDER_SEED}|pass|query_id'); order recorded in every row",
         "file_sha256": {u: sha256_file(u) for u in used},
     }
     (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
@@ -214,8 +222,9 @@ def run(args: argparse.Namespace) -> Path:
                     gold_keys = {k.strip() for k in row["gold_evidence_keys"].split("|") if k.strip()}
                     ticker, year = extract_ticker_year(qid)
                     sel, _, _ = exact_selectivity(conn, ticker, year)
-                    shift = (qi - 1) % len(arms)
-                    for arm in arms[shift:] + arms[:shift]:
+                    order = arms[:]
+                    random.Random(f"{ARM_ORDER_SEED}|{pass_no}|{qid}").shuffle(order)  # seeded, deterministic, recorded per row
+                    for arm in order:
                         state = {"query_id": qid, "ticker": ticker, "year": year, "question": row["question"],
                                  "gold_evidence_keys": sorted(gold_keys), "estimated_selectivity": sel,
                                  "correlation_level": args.correlation_level or ""}
@@ -227,7 +236,7 @@ def run(args: argparse.Namespace) -> Path:
                             err = f"{type(exc).__name__}: {exc}"
                         total_ms = (time.perf_counter() - t0) * 1000
                         rec = build_record(run_id, pass_no, arm, row, gold_keys, sel, final, total_ms, args.model,
-                                           router_model, err)
+                                           router_model, err, order)
                         rec["cumulative_cost_usd"] = answer_client.spent_usd + (
                             router_client.spent_usd if router_client is not answer_client else 0.0)
                         fh.write(json.dumps(rec, ensure_ascii=False) + "\n")

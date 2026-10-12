@@ -33,7 +33,7 @@ def deps(answer="5", router=None):
 @pytest.fixture
 def patched_retrieve():
     with unittest.mock.patch.object(router_mod, "retrieve",
-                                    side_effect=lambda conn, route, t, y, v, k: [("A/2020/page_1.pdf-1", "text_1", "c")]) as m:
+                                    side_effect=lambda conn, route, t, y, v, k, tbl="finqa_evidence": {"rows": [(1, "A/2020/page_1.pdf-1", "text_1", "c", 0.5)], "rows_fetched": 1, "tie_truncated": False}) as m:
         yield m
 
 
@@ -53,6 +53,7 @@ def test_policy_v2_graph_routes(patched_retrieve):
     assert out["chosen_route"] == "iterative-relaxed"
     assert out["raw_output"] == "5"
     assert out["retrieved_evidence_keys"] == ["A/2020/page_1.pdf-1::text_1"]
+    assert out["rows_returned"] == 1 and out["retrieved_ids"] == [1]
 
 
 def test_decision_matrix_graph(patched_retrieve):
@@ -87,5 +88,5 @@ def test_runner_has_no_mock_or_fallback():
     import inspect
     from src.phase_d_validation import comparison_runner
     src = inspect.getsource(comparison_runner).lower()
-    for bad in ("mockchatmodel", "get_openai_callback", "0.15", "random", "fallback"):
-        assert bad not in src.replace("no mock, fallback or random behaviour", ""), bad
+    for bad in ("mockchatmodel", "get_openai_callback", "0.15", "fallback"):
+        assert bad not in src.replace("no mock or fallback behaviour", ""), bad
