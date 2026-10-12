@@ -1,6 +1,6 @@
 # policy_v2 held-out results — 2026-10-12-rerun
 
-**[V]** = computed by `src/phase_c_analysis/holdout_analysis.py` from `outputs/phase_a_holdout/results.jsonl`. **[I]** = interpretation. Protocol: `PHASE_A_HOLDOUT_PROTOCOL.md` (frozen in `fe06e9b`); `T = 0.1` was fixed before any held-out query and is not re-tuned here.
+**[V]** = computed by `src/phase_c_analysis/holdout_analysis.py` from `outputs/phase_a_holdout_rerun/results.jsonl`. **[I]** = interpretation. Protocol: `PHASE_A_HOLDOUT_PROTOCOL.md` (frozen in `fe06e9b`); `T = 0.1` was fixed before any held-out query and is not re-tuned here.
 
 Provenance [V]: run commit `e0f898a`, pgvector 0.8.3, PostgreSQL 16.14, seed 20261014, k=10, ef_search=40, server settings {"shared_buffers": "128MB", "work_mem": "4MB", "effective_cache_size": "4GB", "max_parallel_workers_per_gather": "2", "random_page_cost": "4"}.
 
@@ -14,7 +14,7 @@ Provenance [V]: run commit `e0f898a`, pgvector 0.8.3, PostgreSQL 16.14, seed 202
 - Rows with an error/timeout: **0**; rows without valid recall/latency: 0; `plan_as_intended == false`: **0**. [V]
 - Resumes: 0; rows written after a resume: **0**. [V]
 - Vectors: 0-based line indices 20-39 of tests.jsonl; SHA-256 of the 20 lines `8e3e384621b599dbbf532c7772fc2f218a63365cd5706af02480155834c53208`. [V]
-- Machine notes recorded outside the run (kernel CPU seconds and host load at start/end): `outputs/phase_a_holdout/machine_notes.txt`:
+- Machine notes recorded outside the run (kernel CPU seconds and host load at start/end): `outputs/phase_a_holdout_rerun/machine_notes.txt`:
 
 ```
 START 2026-10-12T08:03:33Z | Ollama stopped, no Jupyter/python processes, host CPU 17-21% (Claude desktop app, Docker) | see host_load.json | run commit e0f898a
@@ -29,7 +29,7 @@ END 2026-10-12T08:19:13Z | 1500 rows, 0 resumes | host CPU 3-5%
 
 ## 3. Per-cell results (arm x table x filter)
 
-Mean/min recall@10 over the 20 vectors; median rows returned; median latency (median of per-vector medians), IQR; scan nodes. CSV: `outputs/phase_a_holdout/analysis/cell_summary.csv`. [V]
+Mean/min recall@10 over the 20 vectors; median rows returned; median latency (median of per-vector medians), IQR; scan nodes. CSV: `outputs/phase_a_holdout_rerun/analysis/cell_summary.csv`. [V]
 
 ### Arm: forced-exact
 
