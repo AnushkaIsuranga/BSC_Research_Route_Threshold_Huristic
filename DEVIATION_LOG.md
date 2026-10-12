@@ -112,3 +112,28 @@ Held-out result accepted as measured: policy_v2 24/25; H7 FAILED on hm_clothes_2
 ## 2026-10-12 — held-out quiet rerun (post-hoc robustness run)
 
 Post-hoc robustness rerun after H7 failure; original result stands as reported. Same held-out design (filters ho1-ho5, vectors 20-39, 5 tables, 3 arms, T = 0.1), run through `src/phase_a_sweep/holdout_rerun.py` (reuses `holdout_run.py` unchanged) with seed 20261014 (original 20261012; chosen before the run so that hm_clothes_25 is not first), run id `holdout_rerun_20261014`, output `outputs/phase_a_holdout_rerun/`. Ollama stopped and no Jupyter kernel running; host CPU load recorded at the start of each table. Reported separately from the original run; neither replaces the other.
+
+## 2026-10-12 — Phase D Amendment 1 (`PHASE_D_AMENDMENT_1.md`)
+
+What changed: research question reframed as non-inferiority (policy_v2 vs naive LLM router, MARGIN 0.10, Newcombe CI, pass 1 primary); one hosted model (Gemini 3.8 Flash) instead of four; embedding changed from nomic-embed-text (unprefixed, table `finqa_evidence`) to Qwen3-Embedding-8B 1024-d (table `finqa_evidence_qwen3`, cached query embeddings, SHA-256 930cadc0…ff23); retrieval of k = 15 distinct passages (rule: smallest k within 2 all-gold hits of k = 20); deterministic (distance, id) tie-break; seeded per-query arm order; exact scoring rule written down; naive JSON failure scored wrong, no retry. Filled later the same day (appended sections): MARGIN 0.10, P-a 10% (range 0-25%), 2048 max output tokens, `thinking_level=LOW`, verified Gemini usage fields and prices, k/distinct in config.
+Why: pre-paid fixes showed the nomic table was built without the model's prefixes, retrieval order had ties, k = 6 rows held about 2 distinct passages; the original four-model plan was reduced to one hosted model.
+Governs: local v3 (`outputs/phase_d_local_2026-10-12_v3`), the Gemini pilot (excluded from analysis) and, with Amendments 2-3, all later runs.
+Tags: `phase-d-amendment-1-2026-10-12`, `phase-d-amendment-1-filled-2026-10-12`, `phase-d-amendment-1-filled-v2-2026-10-12`. The frozen protocol `PHASE_D_LLM_PROTOCOL.md` (tag `phase-d-protocol-frozen-2026-10-12`) was not edited except for an appended, untagged Draft Amendment 0 (scoring text), later adopted by Amendment 1.
+
+## 2026-10-12 — Phase D Amendment 2 (`PHASE_D_AMENDMENT_2.md`)
+
+What changed: primary scoring rule = Amendment 1 rule plus trailing scale words (million, billion, thousand, mn, bn, m, k) stripped without rescaling; the Amendment 1 rule is kept as "strict" and reported alongside; new secondary arm `naive_informed` (router told the ticker/year filter, no selectivity); P-a unchanged (pilot showed post-filter on 4/5).
+Why: the 5-query Gemini pilot (rows excluded) showed answers such as `$18.75 million` scored unparseable, and a naive router that cannot know a filter always exists.
+Governs: local v4 (`outputs/phase_d_local_2026-10-12_v4`), local v5 and the Gemini full run. Earlier outputs re-scored into derived files only (`outputs/rescored_2026-10-12/`).
+Tag: `phase-d-amendment-2-2026-10-12` (placed before any run under it).
+
+## 2026-10-12 — Phase D Amendment 3 (`PHASE_D_AMENDMENT_3.md`)
+
+What changed: passes increased from 2 to 5 (pass 1 primary, pass 2 robustness, passes 1-5 pooled secondary); pooled non-inferiority by paired bootstrap over queries (10,000 resamples, seed 20261012); decision_matrix vs policy_v2 reported as noise reference; Gemini budget cap USD 5. Primary test unchanged.
+Why: in local v4, decision_matrix and policy_v2 (same route, same prompt) disagreed on 2 queries and 4-6 answers per arm changed between passes; the local v4 primary result (non-inferiority not shown, lower bound -0.138) is reported as measured.
+Governs: local v5 (`outputs/phase_d_local_2026-10-12_v5`) and the Gemini full run (`outputs/phase_d_gemini_full_2026-10-12`).
+Tag: `phase-d-amendment-3-2026-10-12` (placed before both runs).
+
+## 2026-10-12 — final cleanup (no result changed)
+
+`comparison_runner.py` now refuses to run without explicit `--table`, `--query-embeddings`, `--k`, `--distinct/--no-distinct`; legacy scripts carry a "LEGACY — not used in final results" header; `pytest.ini` and requirements added. Commit `b67d1f1`.
