@@ -56,3 +56,53 @@ def test_margin_is_required(tmp_path):
     assert ok.returncode == 0, ok.stderr
     res = json.loads((tmp_path / "o.json").read_text())
     assert res["non_inferiority"]["policy_v2_vs_naive_llm"]["non_inferior"] is True
+
+
+# ---- Amendment 3: pooled analysis over passes
+def _rows(spec):
+    """spec: {(arm, query, pass): correct}"""
+    return [{"arm": a, "query_id": q, "pass": p, "correct": c, "parsed_answer": c, "raw_output": str(c), "route": "x"}
+            for (a, q, p), c in spec.items()]
+
+
+def test_pooled_compare_means_and_ci():
+    from src.phase_d_validation.paired_stats import pooled_compare
+    spec = {}
+    for q in range(20):
+        for p in range(1, 6):
+            spec[("policy_v2", str(q), p)] = int(q < 10)              # mean 0.5
+            spec[("naive_llm", str(q), p)] = int(q < 10 or (q < 12 and p <= 2))   # q10,q11 correct in 2/5 passes
+    r = pooled_compare(_rows(spec), "policy_v2", "naive_llm", [1, 2, 3, 4, 5], margin=0.10)
+    assert r["n_queries"] == 20
+    assert r["mean_accuracy_X"] == pytest.approx(0.5)
+    assert r["mean_accuracy_Y"] == pytest.approx(0.5 + 2 * 0.4 / 20)
+    assert r["pooled_diff_X_minus_Y"] == pytest.approx(-0.04)
+    lo, hi = r["pooled_diff_ci95"]
+    assert lo <= -0.04 <= hi and hi <= 0 and r["non_inferior"] == (lo > -0.10)
+    assert pooled_compare(_rows(spec), "policy_v2", "naive_llm", [1, 2, 3, 4, 5]) == {k: v for k, v in r.items() if k != "non_inferior"}
+
+
+def test_pooled_identical_arms_zero_width():
+    from src.phase_d_validation.paired_stats import pooled_compare
+    spec = {(a, str(q), p): int((q + p) % 3 == 0) for a in ("decision_matrix", "policy_v2") for q in range(10) for p in range(1, 6)}
+    r = pooled_compare(_rows(spec), "decision_matrix", "policy_v2", [1, 2, 3, 4, 5])
+    assert r["pooled_diff_X_minus_Y"] == 0 and r["pooled_diff_ci95"] == [0.0, 0.0]
+
+
+def test_pooled_refuses_missing_pass_or_duplicates():
+    from src.phase_d_validation.paired_stats import pooled_compare
+    spec = {(a, "q", p): 1 for a in ("policy_v2", "naive_llm") for p in range(1, 6)}
+    rows = _rows(spec)
+    with pytest.raises(ValueError, match="missing"):
+        pooled_compare([r for r in rows if not (r["arm"] == "naive_llm" and r["pass"] == 3)], "policy_v2", "naive_llm", [1, 2, 3, 4, 5])
+    with pytest.raises(ValueError, match="duplicate"):
+        pooled_compare(rows + rows[:1], "policy_v2", "naive_llm", [1, 2, 3, 4, 5])
+
+
+def test_multi_pass_agreement_counts():
+    from src.phase_d_validation.paired_stats import multi_pass_agreement
+    spec = {("policy_v2", "a", p): 1 for p in range(1, 6)}
+    spec.update({("policy_v2", "b", p): int(p == 1) for p in range(1, 6)})
+    r = multi_pass_agreement(_rows(spec))["policy_v2"]
+    assert r["n_queries"] == 2 and r["same_answer_all_passes"] == 1 and r["same_correctness_all_passes"] == 1
+    assert r["correct_per_pass"] == {"1": 2, "2": 1, "3": 1, "4": 1, "5": 1}

@@ -137,6 +137,56 @@ def arm_summary(arm_rows: dict[str, dict]) -> dict:
             "cost_usd_total": sum(r["cost_usd"] or 0 for r in rs)}
 
 
+POOLED_PAIRS = [("policy_v2", "naive_llm"), ("policy_v2", "naive_informed"), ("decision_matrix", "policy_v2"),
+                ("decision_matrix", "naive_llm")]
+
+
+def pooled_compare(rows: list[dict], x: str, y: str, passes: list[int], margin: float | None = None,
+                   resamples: int = BOOTSTRAP_RESAMPLES, seed: int = BOOTSTRAP_SEED) -> dict:
+    """Amendment 3 secondary analysis: per query, mean correctness over `passes` for each arm; difference X - Y per query;
+    95% CI of the mean difference by paired bootstrap over queries (percentile). Every query must have every pass for both
+    arms (otherwise ValueError: no silent dropping)."""
+    cell: dict[tuple, dict] = {}
+    for r in rows:
+        if r["arm"] in (x, y) and r["pass"] in passes:
+            key = (r["arm"], r["query_id"], r["pass"])
+            if key in cell:
+                raise ValueError(f"duplicate row {key}")
+            cell[key] = r
+    qids = sorted({q for (a, q, p) in cell})
+    for a in (x, y):
+        for q in qids:
+            for p in passes:
+                if (a, q, p) not in cell:
+                    raise ValueError(f"missing row arm={a} query={q} pass={p}")
+    mx = [statistics.fmean([cell[(x, q, p)]["correct"] for p in passes]) for q in qids]
+    my = [statistics.fmean([cell[(y, q, p)]["correct"] for p in passes]) for q in qids]
+    d, lo, hi = bootstrap_mean_diff(mx, my, resamples, seed)
+    out = {"n_queries": len(qids), "passes": passes, "mean_accuracy_X": statistics.fmean(mx), "mean_accuracy_Y": statistics.fmean(my),
+           "pooled_diff_X_minus_Y": d, "pooled_diff_ci95": [lo, hi],
+           "ci_method": f"per-query mean correctness over passes {passes}; paired bootstrap over queries, percentile, {resamples} resamples, seed {seed}"}
+    if margin is not None:
+        out["non_inferior"] = bool(lo > -margin)
+    return out
+
+
+def multi_pass_agreement(rows: list[dict]) -> dict:
+    passes = sorted({r["pass"] for r in rows})
+    out = {}
+    for arm in sorted({r["arm"] for r in rows}):
+        byq: dict[str, dict[int, dict]] = {}
+        for r in rows:
+            if r["arm"] == arm:
+                byq.setdefault(r["query_id"], {})[r["pass"]] = r
+        full = {q: v for q, v in byq.items() if set(v) == set(passes)}
+        out[arm] = {"passes": passes, "n_queries": len(full),
+                    "correct_per_pass": {str(p): sum(v[p]["correct"] for v in full.values()) for p in passes},
+                    "same_answer_all_passes": sum(1 for v in full.values() if len({norm_answer(v[p]) for p in passes}) == 1),
+                    "same_route_all_passes": sum(1 for v in full.values() if len({str(v[p]["route"]) for p in passes}) == 1),
+                    "same_correctness_all_passes": sum(1 for v in full.values() if len({v[p]["correct"] for p in passes}) == 1)}
+    return out
+
+
 def norm_answer(r: dict) -> str:
     return str(r["parsed_answer"]) if r["parsed_answer"] is not None else f"RAW:{(r['raw_output'] or '').strip()}"
 
@@ -159,6 +209,7 @@ def main() -> None:
     ap.add_argument("--pass", dest="pass_no", type=int, default=1)
     ap.add_argument("--out", required=True)
     ap.add_argument("--agreement", action="store_true")
+    ap.add_argument("--pooled", action="store_true", help="Amendment 3: pooled non-inferiority over all passes + multi-pass agreement")
     ap.add_argument("--rule", choices=["primary", "strict"], default="primary", help="scoring rule: primary (Amendment 2) or strict (Amendment 1)")
     ap.add_argument("--margin", type=float, required=True, help="non-inferiority margin on the accuracy difference (e.g. 0.10); required")
     a = ap.parse_args()
@@ -178,7 +229,20 @@ def main() -> None:
         if k.endswith("_vs_naive_llm") or k.endswith("_vs_naive_informed"):
             lo = v["accuracy_diff_ci95"][0]
             res["non_inferiority"][k] = {"ci_lower": lo, "non_inferior": bool(lo > -a.margin),
-                                         "latency_superior": bool(v["latency_diff_ci95"][1] < 0), "primary": k.startswith("policy_v2")}
+                                         "latency_superior": bool(v["latency_diff_ci95"][1] < 0), "primary": k == "policy_v2_vs_naive_llm"}
+    if "decision_matrix_vs_policy_v2" in res["pairs"]:
+        res["noise_reference_pass"] = {"pair": "decision_matrix_vs_policy_v2 (same route, same prompt)", **res["pairs"]["decision_matrix_vs_policy_v2"]}
+    if a.pooled:
+        passes = sorted({r["pass"] for r in rows})
+        res["pooled"] = {"margin": a.margin, "passes": passes,
+                         "rule": "lower bound of the paired-bootstrap 95% CI of the per-query mean-correctness difference > -margin"}
+        present = {r["arm"] for r in rows}
+        for x, y in POOLED_PAIRS:
+            if x in present and y in present:
+                res["pooled"][f"{x}_vs_{y}"] = pooled_compare(rows, x, y, passes, a.margin if y.startswith("naive") else None)
+        res["pooled"]["noise_reference"] = "decision_matrix_vs_policy_v2"
+        res["pooled"]["primary_pooled"] = "policy_v2_vs_naive_llm"
+        res["multi_pass_agreement"] = multi_pass_agreement(rows)
     if "decision_matrix" in arms and "policy_v2" in arms:
         ids = sorted(arms["decision_matrix"])
         dmap = {"pre-filter": "exact", "post-filter": "post-filter", "iterative-scan": "iterative-relaxed"}
