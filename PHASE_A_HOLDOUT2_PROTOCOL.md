@@ -1,6 +1,6 @@
 # policy_v2 second held-out protocol (selectivity 0.20-0.47)
 
-**Status: DRAFT for user review. Not frozen, not tagged, not run.** No query has been run on the filters or vectors below. The only things done with them: row counts per filter (selectivity), a SHA-256 of the 20 vector lines, and evaluating the original v1 policy's route for each table x filter from the selectivity alone (a function of selectivity, no outcome data). After the user approves, this file is committed and tagged (suggested tag `phase-a-holdout2-protocol-frozen-<date>`) before the harness is written, self-tested and run.
+**Status: FROZEN 2026-10-12 by the tag `phase-a-holdout2-frozen-2026-10-12`, before any query on these filters or vectors.** The only things done with them: row counts per filter (selectivity), a SHA-256 of the 20 vector lines, and evaluating the original v1 policy's route for each table x filter from the selectivity alone (`policy.py` + `outputs/phase_a_v1/thresholds.json`, no queries; the routes are in the table below). The harness (`src/phase_a_sweep/holdout2_run.py`, a wrapper that reuses `holdout_run.py` unchanged) and the analysis (`src/phase_c_analysis/holdout2_analysis.py`) are committed with the tag.
 
 ## Purpose
 
@@ -18,15 +18,15 @@ Same definitions as the first held-out protocol:
 
 None of these (column, value) pairs appears in `outputs/phase_a_arms/filters.json` (13 filters) or `outputs/phase_a_holdout/filters.json` (ho1-ho5). Every single value in the range 0.20-0.47 was already used (Jersey Fancy 0.204, Black 0.214, Baby/Children 0.329, Ladieswear 0.376, Solid 0.4705; no other single (column, value) lies in 0.19-0.48), so each new filter is an `IN` list of values none of which was used before. Selectivities are exact counts; identical in all five tables (checked: the same row count in hm_clothes_0, _25, _50, _75, _100); denominator 105,100.
 
-| id | filter | matched rows (each table) | selectivity | v1 route per table (0 / 25 / 50 / 75 / 100) |
-|---|---|---:|---:|---|
-| h2a | `graphical_appearance_name IN ('Melange','Stripe','Denim','Front print','Placement print','Check')` | 24,213 | 0.23038 | pre / pre / pre / pre / pre |
-| h2b | `garment_group_name IN ('Accessories','Jersey Basic','Knitwear')` | 26,932 | 0.25625 | pre / pre / pre / pre / pre |
-| h2c | `perceived_colour_master_name IN ('White','Pink','Beige','Green','Khaki green')` | 34,284 | 0.32620 | post / pre / post / post / post |
-| h2d | `product_type_name IN ('Dress','Sweater','T-shirt','Top','Blouse','Jacket')` | 39,590 | 0.37669 | pre / pre / pre / pre / post |
-| h2e | `product_type_name IN ('Dress','Sweater','T-shirt','Top','Blouse','Jacket','Shorts','Shirt')` | 46,919 | 0.44642 | pre / pre / pre / pre / post |
+| id | filter | matched rows (each table) | selectivity | P1 (v1 matrix) route per table (0 / 25 / 50 / 75 / 100), computed | status |
+|---|---|---:|---:|---|---|
+| h2a | `graphical_appearance_name IN ('Melange','Stripe','Denim','Front print','Placement print','Check')` | 24,213 | 0.23038 | pre / pre / pre / pre / pre | exploratory / borderline |
+| h2b | `garment_group_name IN ('Accessories','Jersey Basic','Knitwear')` | 26,932 | 0.25625 | pre / pre / pre / pre / pre | exploratory / borderline |
+| h2c | `perceived_colour_master_name IN ('White','Pink','Beige','Green','Khaki green')` | 34,284 | 0.32620 | post / pre / post / post / post | confirmatory |
+| h2d | `product_type_name IN ('Dress','Sweater','T-shirt','Top','Blouse','Jacket')` | 39,590 | 0.37669 | pre / pre / pre / pre / post | confirmatory |
+| h2e | `product_type_name IN ('Dress','Sweater','T-shirt','Top','Blouse','Jacket','Shorts','Shirt')` | 46,919 | 0.44642 | pre / pre / pre / pre / post | confirmatory |
 
-(`pre` = P1 chooses forced-exact, `post` = forced-hnsw.) Disclosures about the choice, made before any run:
+(`pre` = P1 chooses forced-exact, `post` = forced-hnsw. "Status": h2a and h2b lie where the latency prediction for forced-exact is borderline, see H11/H12; their cells are reported and labelled exploratory; they are still part of H10.) Disclosures about the choice, made before any run:
 
 - Filters were chosen by selectivity and unused status only. I have not looked at any recall or latency for them.
 - All five are `IN` lists; none is a plain equality filter, because no unused single value exists in the range.
@@ -43,9 +43,9 @@ None of these (column, value) pairs appears in `outputs/phase_a_arms/filters.jso
 - Tables hm_clothes_0, _25, _50, _75, _100; 5 tables x 5 filters = **25 cells**, 20 vectors each.
 - Arms forced-exact, forced-hnsw, iterative-relaxed with the Amendment-2 settings of `arm_comparison.py` (`ARMS`, `apply_arm`), k = 10, `hnsw.ef_search` = 40, default `hnsw.max_scan_tuples` (20000), `jit = off`, `statement_timeout` = 120000 ms.
 - Per (table, filter, vector, arm): exact top-10 reference cached per (table, filter, vector); recall@10 from one normal execution; one untimed warm-up; 5 timed `EXPLAIN ANALYZE`, median; rows returned, scan node, index and buffers recorded; per-table warm-up before timing.
-- Order shuffled with a **new seed** recorded in `run_meta.json` (to be fixed at approval, not equal to 20261012 or 20261014); pre-flight plain-EXPLAIN plan check of all 75 table x filter x arm combinations (forced-exact must be Seq/Bitmap Heap Scan, the other two an Index Scan on `*embedding_idx`); resumable writer; refuses to start with uncommitted used files.
+- Order shuffled with the **new seed 20261017** (not 20261012 or 20261014), recorded in `run_meta.json`; pre-flight plain-EXPLAIN plan check of all 75 table x filter x arm combinations (forced-exact must be Seq/Bitmap Heap Scan, the other two an Index Scan on `*embedding_idx`); resumable writer; refuses to start with uncommitted used files.
 - Outputs `outputs/phase_a_holdout2/` (new folder); expected rows 25 x 20 x 3 = **1,500**.
-- Implementation: a thin wrapper around `holdout_run.py` (as `holdout_rerun.py` did) that sets seed, output folder, filters and vector range, and records host CPU load at the start of each table. A self-test (`--selftest`-style replay of a main-run filter) is run and compared to the main run before the freeze run, as before.
+- Implementation: `src/phase_a_sweep/holdout2_run.py`, a thin wrapper around `holdout_run.py` (as `holdout_rerun.py` did) that sets seed 20261017, output folder `outputs/phase_a_holdout2/`, the five filters above (`--build-filters` writes `filters.json`; stored selectivities must equal the table) and vectors 40-59, and records host CPU load at the start of each table. The existing `--selftest` (replay of a main-run filter, vectors 0-1, no held-out data) is run first and compared to the main run.
 - Quiet-machine conditions: Ollama and Jupyter stopped, top-5 CPU processes and total CPU load recorded at start, at each table start and at end; if the machine is not quiet the run is not started.
 
 ## Pass criterion and cell definition (unchanged SLAs)
@@ -54,17 +54,17 @@ A cell (table, filter) passes under a policy if the arm that policy selects ther
 
 ## Pre-registered hypotheses
 
-- **H10:** policy_v2 (T = 0.1) passes both SLAs in all 25 cells (i.e. iterative-relaxed passes in every cell).
-- **H11:** for each of the five filters, P1 (the v1 matrix) fails at least one of the five table cells.
-- **H12:** P4 (always forced-exact) fails the latency SLA (median > 500 ms) in every cell with s >= 0.2, i.e. in all 25 cells.
+Latency prediction used below [I, extrapolation, not a measurement on these filters]: in the quiet rerun of the first held-out test the forced-exact median latency was about 1.95 ms per 0.001 of selectivity (37, 53, 123, 282, 352 ms at 0.020, 0.030, 0.071, 0.144, 0.180; `outputs/phase_a_holdout_rerun/analysis/cell_summary.csv`, means over tables). Linear extrapolation gives forced-exact medians of about 450 ms (h2a, 0.230), 500 (h2b, 0.256), 635 (h2c, 0.326), 735 (h2d, 0.377), 870 (h2e, 0.446). The SLA is 500 ms, so h2a and h2b are borderline by prediction and h2c-h2e are predicted to fail by margins of 130-370 ms. The in-sample run, under heavy CPU load, had forced-exact at 489-6,567 ms for s >= 0.2.
 
-**Reporting commitments.** Hypotheses are reported as held or failed exactly as defined; failing cells are listed with recall, latency and the arm used. No T or hypothesis is changed after seeing data. A repeat run, if wanted, is reported separately.
+- **H10 (primary):** policy_v2 (T = 0.1) passes both SLAs in all 25 cells (iterative-relaxed has mean recall@10 >= 0.90 over the valid vectors and median latency <= 500 ms in every table x filter).
+- **H11 (per filter; secondary):** P1 (the v1 matrix) fails at least one of the five cells of that filter. Computed P1 routes and the expected failure mode:
+  - h2a, h2b: P1 routes all five tables to forced-exact; the only possible failure is latency (predicted about 450 / 500 ms, borderline). **Exploratory:** no confident prediction.
+  - h2c (0.3262): forced-hnsw on hm_clothes_0, _50, _75 and _100 (inside or within the 0.0141 margin of v1's recall danger zone [0.3290, 0.4705]) -> expected failure mode **recall < 0.90**; forced-exact on hm_clothes_25 -> expected failure mode **latency about 635 ms**.
+  - h2d (0.3767), h2e (0.4464): forced-exact on hm_clothes_0, _25, _50, _75 -> expected failure mode **latency about 735 / 870 ms**; forced-hnsw on hm_clothes_100 (inside the danger zone) -> expected failure mode **recall < 0.90**.
+  H11 is reported separately for each of the five filters (held / failed), with the failing cells and their failure mode. Whether a P1 failure is by recall or by latency is reported, not assumed.
+- **H12:** P4 (always forced-exact) fails the latency SLA (median > 500 ms) in every cell with s >= 0.30, i.e. in all 15 cells of h2c, h2d, h2e. The 10 cells of h2a (0.230) and h2b (0.256) are labelled exploratory/borderline: their P4 latency is reported with no pass/fail claim attached to H12.
 
-## Known risks to the hypotheses (stated before any run, from existing data; the user may amend the hypotheses before the freeze)
-
-- **H12 at the low end.** In the quiet rerun of the first held-out test, forced-exact median latency scaled roughly linearly with selectivity (about 37, 53, 123, 282 and 352 ms at 0.020, 0.030, 0.071, 0.144 and 0.180; `outputs/phase_a_holdout_rerun/analysis/cell_summary.csv`, means over tables). Extrapolated linearly (about 1.9-2.0 ms per 0.001 of selectivity), forced-exact reaches 500 ms near s = 0.25-0.27, so h2a (0.230) and possibly h2b (0.256) may **pass** the latency SLA for P4 on a quiet machine, which would make H12 fail. The in-sample main run, under heavy CPU load, had forced-exact at 489-6,567 ms for s >= 0.2. H12 is therefore sensitive to machine load as well as to selectivity. Option for the user: keep H12 as written (a conservative test) or restate it for s >= 0.3.
-- **H11 for h2a and h2b.** P1 routes every table of h2a and h2b to forced-exact, so P1 can fail a cell there only by latency > 500 ms, which is the same borderline as above. H11 may fail on h2a/h2b on a quiet machine. For h2c-h2e, P1 uses forced-hnsw in some tables (inside its recall danger zone), where failure is expected from the v1 findings, not assumed.
-- **H10.** iterative-relaxed passed all 13 in-sample filters (65/65 cells) and 25/25 held-out cells, but with `max_scan_tuples` = 20000 and very high selectivity its recall at 0.38-0.45 on the most correlated table (hm_clothes_100) is the least tested region.
+**Reporting commitments.** Hypotheses are reported as held or failed exactly as defined, failing cells listed with recall, latency and the arm used, and the per-policy pass counts (P1, P4, P5, P6, policy_v2) over the 25 cells (and over the 15 confirmatory cells) are reported. No T, filter, vector or hypothesis is changed after seeing data. Ollama and Jupyter are stopped for the run and the top-5 CPU processes are recorded first; a repeat run, if wanted, is reported separately.
 
 ## Size and run time
 

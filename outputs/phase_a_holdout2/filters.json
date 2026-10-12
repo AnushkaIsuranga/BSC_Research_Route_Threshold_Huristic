@@ -1,0 +1,183 @@
+[
+  {
+    "filter_id": "h2a",
+    "target": 0.23,
+    "description": "graphical_appearance_name IN ('Melange', 'Stripe', 'Denim', 'Front print', 'Placement print', 'Check')",
+    "conditions": [
+      [
+        "graphical_appearance_name",
+        [
+          "Melange",
+          "Stripe",
+          "Denim",
+          "Front print",
+          "Placement print",
+          "Check"
+        ]
+      ]
+    ],
+    "where": "graphical_appearance_name IN (%s, %s, %s, %s, %s, %s)",
+    "params": [
+      "Melange",
+      "Stripe",
+      "Denim",
+      "Front print",
+      "Placement print",
+      "Check"
+    ],
+    "matched_rows": 24213,
+    "total_rows": 105100,
+    "selectivity": 0.23038058991436727,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 24213,
+      "hm_clothes_25": 24213,
+      "hm_clothes_50": 24213,
+      "hm_clothes_75": 24213,
+      "hm_clothes_100": 24213
+    }
+  },
+  {
+    "filter_id": "h2b",
+    "target": 0.26,
+    "description": "garment_group_name IN ('Accessories', 'Jersey Basic', 'Knitwear')",
+    "conditions": [
+      [
+        "garment_group_name",
+        [
+          "Accessories",
+          "Jersey Basic",
+          "Knitwear"
+        ]
+      ]
+    ],
+    "where": "garment_group_name IN (%s, %s, %s)",
+    "params": [
+      "Accessories",
+      "Jersey Basic",
+      "Knitwear"
+    ],
+    "matched_rows": 26932,
+    "total_rows": 105100,
+    "selectivity": 0.2562511893434824,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 26932,
+      "hm_clothes_25": 26932,
+      "hm_clothes_50": 26932,
+      "hm_clothes_75": 26932,
+      "hm_clothes_100": 26932
+    }
+  },
+  {
+    "filter_id": "h2c",
+    "target": 0.33,
+    "description": "perceived_colour_master_name IN ('White', 'Pink', 'Beige', 'Green', 'Khaki green')",
+    "conditions": [
+      [
+        "perceived_colour_master_name",
+        [
+          "White",
+          "Pink",
+          "Beige",
+          "Green",
+          "Khaki green"
+        ]
+      ]
+    ],
+    "where": "perceived_colour_master_name IN (%s, %s, %s, %s, %s)",
+    "params": [
+      "White",
+      "Pink",
+      "Beige",
+      "Green",
+      "Khaki green"
+    ],
+    "matched_rows": 34284,
+    "total_rows": 105100,
+    "selectivity": 0.3262036156041865,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 34284,
+      "hm_clothes_25": 34284,
+      "hm_clothes_50": 34284,
+      "hm_clothes_75": 34284,
+      "hm_clothes_100": 34284
+    }
+  },
+  {
+    "filter_id": "h2d",
+    "target": 0.38,
+    "description": "product_type_name IN ('Dress', 'Sweater', 'T-shirt', 'Top', 'Blouse', 'Jacket')",
+    "conditions": [
+      [
+        "product_type_name",
+        [
+          "Dress",
+          "Sweater",
+          "T-shirt",
+          "Top",
+          "Blouse",
+          "Jacket"
+        ]
+      ]
+    ],
+    "where": "product_type_name IN (%s, %s, %s, %s, %s, %s)",
+    "params": [
+      "Dress",
+      "Sweater",
+      "T-shirt",
+      "Top",
+      "Blouse",
+      "Jacket"
+    ],
+    "matched_rows": 39590,
+    "total_rows": 105100,
+    "selectivity": 0.37668886774500476,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 39590,
+      "hm_clothes_25": 39590,
+      "hm_clothes_50": 39590,
+      "hm_clothes_75": 39590,
+      "hm_clothes_100": 39590
+    }
+  },
+  {
+    "filter_id": "h2e",
+    "target": 0.45,
+    "description": "product_type_name IN ('Dress', 'Sweater', 'T-shirt', 'Top', 'Blouse', 'Jacket', 'Shorts', 'Shirt')",
+    "conditions": [
+      [
+        "product_type_name",
+        [
+          "Dress",
+          "Sweater",
+          "T-shirt",
+          "Top",
+          "Blouse",
+          "Jacket",
+          "Shorts",
+          "Shirt"
+        ]
+      ]
+    ],
+    "where": "product_type_name IN (%s, %s, %s, %s, %s, %s, %s, %s)",
+    "params": [
+      "Dress",
+      "Sweater",
+      "T-shirt",
+      "Top",
+      "Blouse",
+      "Jacket",
+      "Shorts",
+      "Shirt"
+    ],
+    "matched_rows": 46919,
+    "total_rows": 105100,
+    "selectivity": 0.4464224548049477,
+    "per_table_matched_rows": {
+      "hm_clothes_0": 46919,
+      "hm_clothes_25": 46919,
+      "hm_clothes_50": 46919,
+      "hm_clothes_75": 46919,
+      "hm_clothes_100": 46919
+    }
+  }
+]
