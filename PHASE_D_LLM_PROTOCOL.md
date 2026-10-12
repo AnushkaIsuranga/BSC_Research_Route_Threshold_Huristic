@@ -66,3 +66,16 @@ Anything that changes, after the protocol tag, the arms, models, prompts, k, ef_
 ## Limits
 
 One corpus (FinQA, 35,862 rows), 50 queries, all with selectivity < 0.02, so the selectivity range where the rules differ (s ≥ 0.1) is not exercised: the test measures LLM-routing error against a rule that, here, always chooses exact. Local model results do not transfer to the paid models. A qwen2.5:7b answer-accuracy near 20% (30 Sept) leaves little power: with 50 pairs, small differences give few discordant pairs.
+
+---
+
+## DRAFT AMENDMENT 0 — scoring rule stated exactly (2026-10-12; NOT TAGGED, not part of `phase-d-protocol-frozen-2026-10-12`)
+
+This restates, without changing, the rule implemented in `src/phase_d_validation/scoring.py` and used for the 12 Oct local run. It is a draft for review; it takes effect only if the user tags it.
+
+1. **Parsing** (`parse_financial_number`): remove spaces, thousands commas and `$`; a leading `(` ... `)` or `-` or Unicode minus `−` makes the value negative (`(123)` = -123, `($1,234.50)` = -1234.5, `-$5` = `$-5` = -5); one leading `+` is ignored; a trailing `%` is removed and the value is **not** divided by 100 (`35.9%` parses to 35.9); `a/b` is the ratio a divided by b (`3/4` = 0.75; zero denominator is unparseable); a trailing `.` after a digit is ignored. Anything else (words, `N/A`, `5 million`, `1.2.3`, `--5`, empty text) is **unparseable**.
+2. **Numeric match** (gold parseable): correct iff `|p − g| ≤ max(0.01 · max(|p|, |g|), 1e-9)` (Python `math.isclose(p, g, rel_tol=0.01, abs_tol=1e-9)`). Tolerance is 1% relative to the larger magnitude; there is no rounding allowance beyond that. Gold `0` therefore requires an exactly parsed `0` (or |p| ≤ 1e-9).
+3. **Percent-scale rule:** the percent sign is ignored and the number is compared as written, on the percent scale. Prediction `35.9%` or `35.9` matches gold `35.9%`; prediction `0.359` (a fraction) does **not** match gold `35.9%`, and prediction `35.9` does not match gold `0.359`. Gold and prediction are never rescaled by 100.
+4. **Boolean gold** (`yes`/`no`/`true`/`false`, case-insensitive): the prediction must be one of those words (a trailing `.` is ignored); `true`≡`yes`, `false`≡`no`. A prediction that is not a boolean word is a parse failure.
+5. **Unparseable prediction:** counted wrong and flagged `parse_failure`. A parseable but wrong number is wrong and not a parse failure. Naive-router JSON failures are separate (`route_parse_failure`).
+6. **Sensitivity (information only, not a scoring rule):** re-labelling the 300 answers of the 12 Oct local run (`outputs/phase_d_local_2026-10-12/results.jsonl`) with a scale-agnostic rule that also accepts `p·100` or `p/100` changes **0** labels (`outputs/pre_paid_fixes_2026-10-12/scale_agnostic_sensitivity.json`). For this model and these 50 queries the percent-scale rule does not affect any result; for other models it may.
