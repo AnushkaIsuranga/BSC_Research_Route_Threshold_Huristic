@@ -1,0 +1,49 @@
+{
+  "table": "finqa_evidence_nomic_prefixed",
+  "model": "nomic-embed-text:latest",
+  "dimension": 768,
+  "source_rows": 35862,
+  "expected_rows": 35862,
+  "db_rows": 35862,
+  "expected_unique": 10843,
+  "db_unique": 10843,
+  "zero_vectors": 0,
+  "bad_dims": 0,
+  "unresolved_gold_pairs": 0,
+  "self_retrieval": "5/5",
+  "self_retrieval_detail": [
+    {
+      "row_id": 1,
+      "top1_id": 1,
+      "top1_same_content": true,
+      "distance": 0.0
+    },
+    {
+      "row_id": 8966,
+      "top1_id": 27,
+      "top1_same_content": true,
+      "distance": 0.0
+    },
+    {
+      "row_id": 17931,
+      "top1_id": 17931,
+      "top1_same_content": true,
+      "distance": 0.0
+    },
+    {
+      "row_id": 26896,
+      "top1_id": 12701,
+      "top1_same_content": true,
+      "distance": 0.0
+    },
+    {
+      "row_id": 35862,
+      "top1_id": 2725,
+      "top1_same_content": true,
+      "distance": 0.0
+    }
+  ],
+  "api_cost_usd": 0.0,
+  "api_prompt_tokens": 0,
+  "passed": true
+}

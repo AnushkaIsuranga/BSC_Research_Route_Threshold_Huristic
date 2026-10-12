@@ -1,0 +1,10 @@
+{
+  "fit": "qwen_input_tokens = slope * cl100k_tokens + intercept",
+  "n": 50,
+  "slope": 1.1822142374874045,
+  "intercept": 4.140337791769916,
+  "r2": 0.966988884499326,
+  "mean_abs_residual_tokens": 18.02718077557946,
+  "calibration_source": "outputs/phase_d_local_2026-10-12/results.jsonl (arm decision_matrix, pass 1, input_tokens)",
+  "note": "The 12 Oct evidence sets are identical to the sets retrieved here for nomic_asis/exact/k=6 only up to tie order; token counts do not depend on order."
+}
