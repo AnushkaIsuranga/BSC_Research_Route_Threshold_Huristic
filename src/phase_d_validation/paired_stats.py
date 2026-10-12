@@ -19,6 +19,7 @@ naive_llm is reported alongside. Superiority on latency: the paired-bootstrap CI
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import math
 import statistics
@@ -27,6 +28,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import binomtest
 
+TRUNCATED = {"MAX_TOKENS", "length", "max_tokens"}
 BOOTSTRAP_RESAMPLES = 10000
 BOOTSTRAP_SEED = 20261012
 PAIRS = [("decision_matrix", "naive_llm"), ("policy_v2", "naive_llm"), ("decision_matrix", "policy_v2")]
@@ -117,6 +119,10 @@ def arm_summary(arm_rows: dict[str, dict]) -> dict:
             "rows_returned_by_route": {k: statistics.fmean([r["rows_returned"] for r in rs if str(r["route"]) == k and r.get("rows_returned") is not None])
                                        for k in sorted({str(r["route"]) for r in rs if r.get("rows_returned") is not None})},
             "cost_per_query_usd": sum(r["cost_usd"] or 0 for r in rs) / n,
+            "truncations": sum(1 for r in rs for f in (r.get("gen_finish_reason"), r.get("router_finish_reason")) if f in TRUNCATED),
+            "finish_reasons": dict(collections.Counter(str(f) for r in rs for f in (r.get("gen_finish_reason"), r.get("router_finish_reason")) if f)),
+            "traffic_types": dict(collections.Counter(str(x) for r in rs for x in (r.get("traffic_types") or []))),
+            "mean_thinking_tokens_per_call": (lambda v: statistics.fmean(v) if v else None)([x for r in rs for x in (r.get("thinking_tokens"), r.get("router_thinking_tokens")) if x is not None]),
             "parse_failures": sum(r["parse_failure"] for r in rs), "route_parse_failures": sum(r["route_parse_failure"] for r in rs),
             "routes": {k: sum(1 for r in rs if r["route"] == k) for k in sorted({str(r["route"]) for r in rs})},
             "latency_ms": {k: q([r[k] for r in rs]) for k in ("embed_ms", "db_ms", "router_ms", "generation_ms", "total_ms")},

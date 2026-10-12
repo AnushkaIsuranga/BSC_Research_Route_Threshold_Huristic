@@ -64,3 +64,35 @@ qwen2.5:7b, 50 queries × 3 arms × 2 passes, table `finqa_evidence_qwen3`, cach
 - One hosted model only; one 50-query set; all queries have selectivity < 0.02, where the deterministic rules and an LLM router both route to a small filtered set, so the experiment tests LLM routing error against a rule that always chooses exact retrieval here.
 - Non-inferiority with 50 pairs can only be shown for margins larger than the interval half-width (see section 1).
 - Gemini 3.8 Flash behaviour at temperature 0, thinking LOW and 256 max output tokens is unverified until the pilot.
+
+
+---
+
+## Pre-registration filled (2026-10-12)
+
+Appended after the tag `phase-d-amendment-1-2026-10-12`; earlier sections are unchanged. Where this section differs from sections 2 and 3 above, this section governs.
+
+### Non-inferiority margin and P-a
+
+- **MARGIN = 0.10.** Rationale (the user's): losing more than 5 of 50 answers would outweigh the speed and cost benefit of the deterministic router; margins below about 0.07 cannot be demonstrated with 50 pairs.
+- **P-a = 10%** (5 of 50 queries routed to `post-filter` by the Gemini naive router), plausible range 0-25%. Basis: qwen2.5:7b chose `post-filter` on 11/50 queries with the frozen prompt; a stronger model is expected to favour pre-filter, the standard choice. The share depends strongly on the prompt (about 90% with the old prompt).
+- Both values were fixed **before any Gemini result on FinQA was seen.** The only prior Gemini call was a one-word connection test ("Reply with the single word OK.").
+
+### Generation settings (config/generation.json)
+
+- **Max output tokens: 2048 for both the router call and the answer call** (was 256). On Gemini, maxOutputTokens includes thinking tokens; the connection test used 44 thinking tokens for a one-word answer, so 256 risks truncation. The setting is global in the config, so local qwen2.5:7b runs use it as `num_predict`.
+- **Thinking: `thinking_level = LOW`, same for every arm and both calls.** What exists: the installed `google-genai` 2.29.0 `ThinkingConfig` has the fields `include_thoughts`, `thinking_budget` ("0 is DISABLED, -1 is AUTOMATIC; default values and allowed ranges are model dependent") and `thinking_level`, whose enum values are `THINKING_LEVEL_UNSPECIFIED`, `MINIMAL`, `LOW`, `MEDIUM`, `HIGH`. The library does not say which levels each model accepts. Vertex AI docs for Gemini 3.8 Flash (https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-8-flash): "The supported values for 3.8 Flash are LOW, MEDIUM (default), and HIGH"; `MINIMAL` is not available and returns an API validation error; the docs do not say whether thinking can be switched off or whether `thinking_budget` may be combined with `thinking_level`. LOW is therefore supported; only `thinking_level` is sent, never `thinking_budget`; the code refuses any other level than LOW/MEDIUM/HIGH. This was established from the library and the docs only; no call was made to confirm it.
+- **Temperature 0** (accepted by the API in the connection test).
+- **`finish_reason` is logged for every call** (router and answer, separately). Truncations (finish reason `MAX_TOKENS`) are counted and reported; a truncated answer is scored as given, with no retry.
+
+### Gemini usage fields and cost formula: VERIFIED
+
+Verified from a real Vertex call made on 2026-10-12 (model `gemini-3.8-flash`, location `global`, `traffic_type = ON_DEMAND`; the user's connection test): `prompt_token_count`, `candidates_token_count`, `thoughts_token_count`, `cached_content_token_count`, `total_token_count`. In that call total = prompt + candidates + thoughts (7 + 1 + 44 = 52). **Cost = (prompt − cached) × input price + (candidates + thoughts) × output price;** thinking tokens are billed at the output rate. Unit tests (`tests/test_llm_client.py`) check the formula on that example and with cached tokens. `traffic_type` is logged per call; any value other than `ON_DEMAND` is flagged.
+
+### Prices (config/prices.json, entry gemini-3.8-flash)
+
+Input USD 0.75 and output USD 3.75 per 1M tokens, thinking billed as output, introductory price valid through 2026-12-31 (it doubles to 1.50 / 7.50 from 2027-01-01; the code refuses to run after `valid_through`), source "Google Cloud Agent Platform pricing, checked by the user 2026-10-12", `verified: true`. The entries of the other models remain unverified and locked.
+
+### Vertex settings
+
+Project `bsc-research-project-511410`, location `global`, authentication by Application Default Credentials (no API key; the backend refuses to start if `GOOGLE_API_KEY` or `GEMINI_API_KEY` is set). The Gemini backend now uses the `google-genai` library in Vertex mode, as the user's connection test did, replacing the hand-written REST request described in the code earlier.

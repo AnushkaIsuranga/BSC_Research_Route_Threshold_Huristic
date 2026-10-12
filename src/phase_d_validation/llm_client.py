@@ -1,33 +1,32 @@
 """One LLM interface, several backends.
 
   ollama           working, local, free.
-  vertex_gemini    LOCKED paid backend.
-  vertex_claude    LOCKED paid backend (global endpoint).
-  vertex_openmaas  LOCKED paid backend (gpt-oss via the OpenAI-compatible MaaS endpoint).
+  vertex_gemini    LOCKED paid backend (google-genai library, Vertex mode).
+  vertex_claude    LOCKED paid backend (global endpoint), not used in the current plan.
+  vertex_openmaas  LOCKED paid backend (gpt-oss), not used in the current plan.
 
-Paid backends refuse to be constructed unless ALL hold: allow_paid=True (the --allow-paid flag),
-config/prices.json has verified=true with numeric prices for the model, and a positive budget_usd
-cap is set. Cost = tokens from the raw API response usage fields x prices.json (no LangChain
-callbacks). Before every call the worst case (estimated input tokens + max output tokens) is added
-to the cumulative cost; if that could exceed the cap the run aborts with BudgetExceeded.
+Paid backends refuse to be constructed unless ALL hold: allow_paid=True (the --allow-paid flag), config/prices.json has
+verified=true with numeric prices for the model (and today is not after its `valid_through` date), and a positive
+budget_usd cap is set. Cost = tokens from the raw API response usage fields x prices.json (no LangChain callbacks).
+Before every call the worst case (estimated input tokens + max output tokens) is added to the cumulative cost; if that
+could exceed the cap the run aborts with BudgetExceeded. Every response records finish_reason; a truncated answer
+(finish_reason MAX_TOKENS / length) is scored as given, never retried.
 
-Vertex request formats (docs read 2026-10-12; model IDs per the docs model lists):
-  Claude   https://docs.cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude/use-claude
-           POST https://LOCATION-aiplatform.googleapis.com/v1/projects/P/locations/LOCATION/publishers/anthropic/models/MODEL:rawPredict
-           body {anthropic_version: "vertex-2023-10-16", messages, max_tokens, system}; usage.input_tokens/output_tokens.
-           GLOBAL endpoint: host aiplatform.googleapis.com with LOCATION=global. The docs section "Specify the
-           global endpoint" could not be retrieved; the URL below follows the regional pattern and the documented
-           global MaaS pattern. UNVERIFIED until the paid pilot. The page does not document `temperature`; if the
-           API rejects it the call raises (no silent drop) and the setting must be recorded as not allowed.
-  Gemini   https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-8-flash  (id gemini-3.8-flash)
-           https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-5-flash-lite (id gemini-3.5-flash-lite)
-           thinking_level LOW/MEDIUM/HIGH (3.8 Flash; MINIMAL not available) and MINIMAL/MEDIUM/HIGH (3.5 Flash-Lite).
-           POST https://aiplatform.googleapis.com/v1/projects/P/locations/global/publishers/google/models/ID:generateContent
-           usageMetadata.promptTokenCount / candidatesTokenCount / thoughtsTokenCount (field names from the
-           generateContent API; not shown on the model pages). UNVERIFIED until the paid pilot.
-  gpt-oss  https://docs.cloud.google.com/vertex-ai/generative-ai/docs/maas/call-open-model-apis  (id openai/gpt-oss-120b-maas, region global)
-           POST https://aiplatform.googleapis.com/v1/projects/P/locations/global/endpoints/openapi/chat/completions
-           usage.prompt_tokens / completion_tokens. `reasoning_effort` is NOT shown in the fetched doc text: unverified.
+Gemini  google-genai library (Vertex mode: genai.Client(vertexai=True, project=..., location="global"), Application Default
+        Credentials, no API key; GOOGLE_API_KEY / GEMINI_API_KEY set in the environment makes construction refuse).
+        Model gemini-3.8-flash, https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-8-flash :
+        "The supported values for 3.8 Flash are LOW, MEDIUM (default), and HIGH"; MINIMAL is not available (API
+        validation error). google-genai 2.29.0 ThinkingConfig fields: include_thoughts, thinking_budget, thinking_level
+        (enum THINKING_LEVEL_UNSPECIFIED, MINIMAL, LOW, MEDIUM, HIGH); only thinking_level is sent.
+        Usage fields VERIFIED by a real Vertex call on 2026-10-12 (gemini-3.8-flash, global, traffic_type ON_DEMAND):
+        prompt_token_count, candidates_token_count, thoughts_token_count, cached_content_token_count, total_token_count
+        (total = prompt + candidates + thoughts: 7 + 1 + 44 = 52).
+        Cost = (prompt - cached) x input price + (candidates + thoughts) x output price; thinking tokens are billed at the
+        output rate.
+Claude  https://docs.cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude/use-claude (global endpoint URL
+        unverified; temperature not documented there).
+gpt-oss https://docs.cloud.google.com/vertex-ai/generative-ai/docs/maas/call-open-model-apis (model openai/gpt-oss-120b-maas,
+        global; `reasoning_effort` unverified).
 """
 
 from __future__ import annotations
@@ -37,6 +36,7 @@ import math
 import os
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -45,6 +45,7 @@ import requests
 ROOT = Path(__file__).resolve().parents[2]
 PRICES_PATH = ROOT / "config" / "prices.json"
 GENERATION_PATH = ROOT / "config" / "generation.json"
+TRUNCATED_REASONS = {"MAX_TOKENS", "length", "max_tokens"}
 
 
 class PaidLockError(RuntimeError):
@@ -69,6 +70,9 @@ class LLMResponse:
     latency_ms: float
     settings_used: dict[str, Any]
     raw: dict[str, Any] = field(repr=False, default_factory=dict)
+    finish_reason: str | None = None
+    cached_tokens: int = 0
+    traffic_type: str | None = None
 
 
 def load_generation_config(path: Path = GENERATION_PATH) -> dict:
@@ -91,11 +95,15 @@ class CostGuard:
             v = entry.get(k)
             if isinstance(v, bool) or not isinstance(v, (int, float)) or v < 0:
                 raise PaidLockError(f"paid backend refused: {k} for {price_key!r} is not a non-negative number")
+        valid_through = entry.get("valid_through")
+        if valid_through and datetime.now(timezone.utc).date().isoformat() > valid_through:
+            raise PaidLockError(f"paid backend refused: prices for {price_key!r} are valid through {valid_through} only")
         self.in_price, self.out_price = float(entry["input_usd_per_1m"]), float(entry["output_usd_per_1m"])
         self.budget, self.spent = float(budget_usd), 0.0
 
-    def cost(self, input_tokens: int, output_tokens: int) -> float:
-        return input_tokens / 1e6 * self.in_price + output_tokens / 1e6 * self.out_price
+    def cost(self, input_tokens: int, output_tokens: int, cached_tokens: int = 0) -> float:
+        """(prompt - cached) x input price + output (candidates + thinking) x output price; prices per 1M tokens."""
+        return (input_tokens - cached_tokens) / 1e6 * self.in_price + output_tokens / 1e6 * self.out_price
 
     def check_before(self, prompt_chars: int, max_output_tokens: int) -> None:
         worst = self.cost(math.ceil(prompt_chars / 2.5), max_output_tokens)  # conservative: 2.5 chars/token
@@ -109,7 +117,7 @@ class CostGuard:
 class LLMClient:
     backend = ""
     paid = False
-    thinking_billed_separately = False  # Gemini reports thoughtsTokenCount outside candidatesTokenCount
+    thinking_billed_separately = False  # Gemini reports thoughts_token_count outside candidates_token_count
 
     def __init__(self, name: str, cfg: dict, guard: CostGuard | None = None):
         self.name, self.cfg, self.guard = name, cfg, guard
@@ -127,14 +135,16 @@ class LLMClient:
         except Exception as exc:
             raise LLMCallError(f"{self.backend}/{self.name}: {type(exc).__name__}: {exc}") from exc
         ms = (time.perf_counter() - t0) * 1000
+        extra = used.pop("_extra", {})
         cost = 0.0
         if self.guard:
             if i is None or o is None:
                 raise LLMCallError(f"{self.backend}/{self.name}: response has no usage fields; cannot compute cost")
             billed_out = o + ((th or 0) if self.thinking_billed_separately else 0)
-            cost = self.guard.cost(i, billed_out)
+            cost = self.guard.cost(i, billed_out, extra.get("cached_tokens", 0))
             self.guard.add(cost)
-        return LLMResponse(text, i, o, th, cost, ms, used, raw)
+        return LLMResponse(text, i, o, th, cost, ms, used, raw, extra.get("finish_reason"), extra.get("cached_tokens", 0),
+                           extra.get("traffic_type"))
 
     def _call(self, system, user, max_out, json_mode):
         raise NotImplementedError
@@ -159,11 +169,61 @@ class OllamaBackend(LLMClient):
         r.raise_for_status()
         d = r.json()
         used = {"temperature": options["temperature"], "temperature_applied": True, "seed": options["seed"],
-                "num_ctx": options["num_ctx"], "max_output_tokens": max_out, "thinking": self.cfg["thinking"]}
+                "num_ctx": options["num_ctx"], "max_output_tokens": max_out, "thinking": self.cfg["thinking"],
+                "_extra": {"finish_reason": d.get("done_reason")}}
         return d["message"]["content"], d.get("prompt_eval_count"), d.get("eval_count"), 0, d, used
 
 
-class _VertexBase(LLMClient):
+class VertexGeminiBackend(LLMClient):
+    """Gemini on Vertex AI through the google-genai library (ADC, global endpoint). Paid: needs a CostGuard."""
+    backend = "vertex_gemini"
+    paid = True
+    thinking_billed_separately = True
+
+    def __init__(self, name, cfg, guard, project: str | None = None, client=None):
+        super().__init__(name, cfg, guard)
+        self.project = project or cfg.get("project")
+        self.location = cfg.get("location", "global")
+        if client is None:
+            for var in ("GOOGLE_API_KEY", "GEMINI_API_KEY"):
+                if os.environ.get(var):
+                    raise PaidLockError(f"{var} is set: this backend must use Application Default Credentials, not an API key")
+            if not self.project:
+                raise PaidLockError("no Vertex project configured (config/generation.json 'project')")
+            from google import genai
+            client = genai.Client(vertexai=True, project=self.project, location=self.location)
+        self.client = client
+
+    def _call(self, system, user, max_out, json_mode):
+        from google.genai import types
+        level = self.cfg["thinking"]["thinking_level"]
+        if level not in self.cfg.get("allowed_thinking_levels", ["LOW", "MEDIUM", "HIGH"]):
+            raise ValueError(f"thinking_level {level!r} is not allowed for {self.name}")
+        conf = types.GenerateContentConfig(
+            system_instruction=system, temperature=self.cfg["temperature"], max_output_tokens=max_out,
+            thinking_config=types.ThinkingConfig(thinking_level=level),
+            response_mime_type="application/json" if json_mode else None)
+        r = self.client.models.generate_content(model=self.cfg["model_id"], contents=user, config=conf)
+        u = r.usage_metadata
+        cand = r.candidates[0] if r.candidates else None
+        fr = None
+        if cand is not None and cand.finish_reason is not None:
+            fr = getattr(cand.finish_reason, "name", str(cand.finish_reason))
+        tt = None
+        if u is not None and u.traffic_type is not None:
+            tt = getattr(u.traffic_type, "name", str(u.traffic_type))
+        used = {"temperature": self.cfg["temperature"], "temperature_applied": True, "max_output_tokens": max_out,
+                "thinking": self.cfg["thinking"], "location": self.location, "project": self.project,
+                "_extra": {"finish_reason": fr, "cached_tokens": (u.cached_content_token_count or 0) if u else 0, "traffic_type": tt}}
+        if u is None:
+            return r.text or "", None, None, None, {}, used
+        raw = {"usage": {k: getattr(u, k) for k in ("prompt_token_count", "candidates_token_count", "thoughts_token_count",
+                                                    "cached_content_token_count", "total_token_count")},
+               "traffic_type": tt, "finish_reason": fr}
+        return r.text or "", u.prompt_token_count, u.candidates_token_count or 0, u.thoughts_token_count or 0, raw, used
+
+
+class _VertexRestBase(LLMClient):
     paid = True
 
     def __init__(self, name, cfg, guard, project: str | None = None, session=None):
@@ -186,12 +246,12 @@ class _VertexBase(LLMClient):
             raise RuntimeError(f"HTTP {r.status_code}: {r.text[:500]}")
         return r.json()
 
-    def _used(self, max_out):
+    def _used(self, max_out, extra):
         return {"temperature": self.cfg["temperature"], "temperature_applied": True, "max_output_tokens": max_out,
-                "thinking": self.cfg["thinking"], "endpoint": "global"}
+                "thinking": self.cfg["thinking"], "endpoint": "global", "_extra": extra}
 
 
-class VertexClaudeBackend(_VertexBase):
+class VertexClaudeBackend(_VertexRestBase):
     backend = "vertex_claude"
 
     def _call(self, system, user, max_out, json_mode):
@@ -202,30 +262,11 @@ class VertexClaudeBackend(_VertexBase):
         d = self._post(url, body)
         u = d.get("usage", {})
         text = "".join(b.get("text", "") for b in d.get("content", []) if b.get("type") == "text")
-        return text, u.get("input_tokens"), u.get("output_tokens"), 0, d, self._used(max_out)
+        extra = {"finish_reason": d.get("stop_reason"), "cached_tokens": u.get("cache_read_input_tokens", 0) or 0}
+        return text, u.get("input_tokens"), u.get("output_tokens"), 0, d, self._used(max_out, extra)
 
 
-class VertexGeminiBackend(_VertexBase):
-    backend = "vertex_gemini"
-    thinking_billed_separately = True
-
-    def _call(self, system, user, max_out, json_mode):
-        url = (f"https://aiplatform.googleapis.com/v1/projects/{self.project}/locations/global/"
-               f"publishers/google/models/{self.cfg['model_id']}:generateContent")
-        gen = {"temperature": self.cfg["temperature"], "maxOutputTokens": max_out,
-               "thinkingConfig": {"thinkingLevel": self.cfg["thinking"]["thinking_level"]}}
-        if json_mode:
-            gen["responseMimeType"] = "application/json"
-        body = {"systemInstruction": {"parts": [{"text": system}]},
-                "contents": [{"role": "user", "parts": [{"text": user}]}], "generationConfig": gen}
-        d = self._post(url, body)
-        u = d.get("usageMetadata", {})
-        parts = d["candidates"][0].get("content", {}).get("parts", [])
-        text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
-        return text, u.get("promptTokenCount"), u.get("candidatesTokenCount"), u.get("thoughtsTokenCount", 0), d, self._used(max_out)
-
-
-class VertexOpenMaaSBackend(_VertexBase):
+class VertexOpenMaaSBackend(_VertexRestBase):
     backend = "vertex_openmaas"
 
     def _call(self, system, user, max_out, json_mode):
@@ -237,21 +278,23 @@ class VertexOpenMaaSBackend(_VertexBase):
             body["response_format"] = {"type": "json_object"}
         d = self._post(url, body)
         u = d.get("usage", {})
-        return d["choices"][0]["message"]["content"] or "", u.get("prompt_tokens"), u.get("completion_tokens"), 0, d, self._used(max_out)
+        extra = {"finish_reason": d["choices"][0].get("finish_reason")}
+        return d["choices"][0]["message"]["content"] or "", u.get("prompt_tokens"), u.get("completion_tokens"), 0, d, self._used(max_out, extra)
 
 
 def make_client(model: str, *, allow_paid: bool = False, budget_usd: float | None = None, config: dict | None = None,
                 prices_path: Path = PRICES_PATH, base_url: str | None = None, project: str | None = None,
-                session=None) -> LLMClient:
+                session=None, genai_client=None) -> LLMClient:
     cfg = (config or load_generation_config())["models"].get(model)
     if cfg is None:
         raise KeyError(f"model {model!r} not in config/generation.json")
     backend = cfg["backend"]
     if backend == "ollama":
         return OllamaBackend(model, cfg, base_url)
-    cls = {"vertex_gemini": VertexGeminiBackend, "vertex_claude": VertexClaudeBackend,
-           "vertex_openmaas": VertexOpenMaaSBackend}.get(backend)
+    guard = CostGuard(cfg["price_key"], allow_paid, budget_usd, prices_path)
+    if backend == "vertex_gemini":
+        return VertexGeminiBackend(model, cfg, guard, project, genai_client)
+    cls = {"vertex_claude": VertexClaudeBackend, "vertex_openmaas": VertexOpenMaaSBackend}.get(backend)
     if cls is None:
         raise ValueError(f"unknown backend {backend!r}")
-    guard = CostGuard(cfg["price_key"], allow_paid, budget_usd, prices_path)
     return cls(model, cfg, guard, project, session)

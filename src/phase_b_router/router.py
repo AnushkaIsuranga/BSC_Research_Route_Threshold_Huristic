@@ -54,6 +54,13 @@ class RouterState(TypedDict, total=False):
     router_input_tokens: int
     router_output_tokens: int
     router_thinking_tokens: int
+    router_cost_usd: float
+    router_finish_reason: str
+    router_cached_tokens: int
+    gen_cost_usd: float
+    gen_finish_reason: str
+    gen_cached_tokens: int
+    traffic_types: list
     # retrieval
     embed_ms: float
     db_ms: float
@@ -206,6 +213,8 @@ def make_execute_node(deps: Deps, route_label: str | None = None) -> Callable[[R
             "raw_output": resp.text, "generation_ms": resp.latency_ms,
             "gen_input_tokens": resp.input_tokens, "gen_output_tokens": resp.output_tokens,
             "gen_thinking_tokens": resp.thinking_tokens, "cost_usd": state.get("cost_usd", 0.0) + resp.cost_usd,
+            "gen_cost_usd": resp.cost_usd, "gen_finish_reason": resp.finish_reason, "gen_cached_tokens": resp.cached_tokens,
+            "traffic_types": [x for x in state.get("traffic_types", []) + [resp.traffic_type] if x],
             "settings_used": {**state.get("settings_used", {}), "answer": resp.settings_used},
         }
     return execute
@@ -246,7 +255,9 @@ def build_naive_graph(deps: Deps):
         data, err = validate_naive_route(resp.text)
         out = {"router_raw": resp.text, "router_ms": resp.latency_ms, "router_input_tokens": resp.input_tokens,
                "router_output_tokens": resp.output_tokens, "router_thinking_tokens": resp.thinking_tokens,
-               "cost_usd": resp.cost_usd, "settings_used": {"router": resp.settings_used}}
+               "cost_usd": resp.cost_usd, "settings_used": {"router": resp.settings_used},
+               "router_cost_usd": resp.cost_usd, "router_finish_reason": resp.finish_reason,
+               "router_cached_tokens": resp.cached_tokens, "traffic_types": [resp.traffic_type] if resp.traffic_type else []}
         if data is None:
             return {**out, "chosen_route": "", "route_parse_failure": True, "router_reason": f"PARSE FAILURE: {err}"}
         return {**out, "chosen_route": data["route"], "route_parse_failure": False, "router_reason": data["reason"]}

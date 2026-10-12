@@ -15,8 +15,8 @@
     "abs_tol": 1e-09
   },
   "roles": {
-    "router_max_output_tokens": 256,
-    "answer_max_output_tokens": 256
+    "router_max_output_tokens": 2048,
+    "answer_max_output_tokens": 2048
   },
   "models": {
     "qwen2.5:7b": {
@@ -40,7 +40,16 @@
       "temperature": 0,
       "thinking": {
         "thinking_level": "LOW"
-      }
+      },
+      "project": "bsc-research-project-511410",
+      "location": "global",
+      "allowed_thinking_levels": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "thinking_note": "Allowed values for gemini-3.8-flash per Vertex docs: LOW, MEDIUM (default), HIGH; MINIMAL is rejected. google-genai 2.29.0 ThinkingConfig has include_thoughts, thinking_budget, thinking_level; only thinking_level is sent. Same setting for every arm.",
+      "auth": "Application Default Credentials (no API key)"
     },
     "gemini-3.5-flash-lite": {
       "backend": "vertex_gemini",
@@ -60,5 +69,6 @@
         "reasoning_effort": "low"
       }
     }
-  }
+  },
+  "_note_roles": "2048 for both router and answer calls (was 256): on Gemini maxOutputTokens includes thinking tokens (a connection test used 44 thinking tokens for a one-word answer). Applies to every model/arm; local qwen2.5:7b runs use it as num_predict."
 }

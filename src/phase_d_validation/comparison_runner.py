@@ -47,7 +47,8 @@ CSV_FIELDS = ["run_id", "pass", "arm", "query_id", "ticker", "year", "selectivit
               "arm_order", "arm_position", "retrieved_evidence_keys", "retrieved_ids", "retrieved_distances", "rows_returned", "rows_fetched",
               "tie_truncated", "distinct_dropped", "gold_evidence_keys", "retrieval_hit", "retrieval_hit_passage", "raw_output", "parsed_answer", "gold_answer",
               "correct", "parse_failure", "route_parse_failure", "router_raw", "router_reason", "input_tokens",
-              "output_tokens", "thinking_tokens", "router_input_tokens", "router_output_tokens", "cost_usd", "embed_ms",
+              "output_tokens", "thinking_tokens", "gen_finish_reason", "gen_cached_tokens", "gen_cost_usd", "router_input_tokens",
+              "router_output_tokens", "router_thinking_tokens", "router_finish_reason", "router_cached_tokens", "router_cost_usd", "traffic_types", "cost_usd", "embed_ms",
               "db_ms", "router_ms", "generation_ms", "total_ms", "error"]
 
 
@@ -141,6 +142,10 @@ def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, ans
         "input_tokens": state.get("gen_input_tokens"), "output_tokens": state.get("gen_output_tokens"),
         "thinking_tokens": state.get("gen_thinking_tokens"), "router_input_tokens": state.get("router_input_tokens"),
         "router_output_tokens": state.get("router_output_tokens"), "cost_usd": state.get("cost_usd"),
+        "gen_finish_reason": state.get("gen_finish_reason"), "gen_cached_tokens": state.get("gen_cached_tokens"),
+        "gen_cost_usd": state.get("gen_cost_usd"), "router_thinking_tokens": state.get("router_thinking_tokens"),
+        "router_finish_reason": state.get("router_finish_reason"), "router_cached_tokens": state.get("router_cached_tokens"),
+        "router_cost_usd": state.get("router_cost_usd"), "traffic_types": state.get("traffic_types"),
         "embed_ms": state.get("embed_ms"), "db_ms": state.get("db_ms"), "router_ms": state.get("router_ms"),
         "generation_ms": state.get("generation_ms"), "total_ms": total_ms, "error": error,
         "settings_used": state.get("settings_used"),

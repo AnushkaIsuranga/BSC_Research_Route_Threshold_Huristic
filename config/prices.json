@@ -1,7 +1,28 @@
 {
   "_note": "USD per 1M tokens. All null and verified=false until filled from the Vertex console (https://cloud.google.com/vertex-ai/generative-ai/pricing). A paid backend refuses to run unless verified=true for its model. Thinking tokens are billed at the output rate.",
-  "claude-sonnet-5-5":     {"input_usd_per_1m": null, "output_usd_per_1m": null, "verified": false},
-  "gemini-3.8-flash":      {"input_usd_per_1m": null, "output_usd_per_1m": null, "verified": false},
-  "gemini-3.5-flash-lite": {"input_usd_per_1m": null, "output_usd_per_1m": null, "verified": false},
-  "gpt-oss-120b":          {"input_usd_per_1m": null, "output_usd_per_1m": null, "verified": false}
+  "claude-sonnet-5-5": {
+    "input_usd_per_1m": null,
+    "output_usd_per_1m": null,
+    "verified": false
+  },
+  "gemini-3.8-flash": {
+    "input_usd_per_1m": 0.75,
+    "output_usd_per_1m": 3.75,
+    "thinking_billed_as_output": true,
+    "valid_through": "2026-12-31",
+    "price_note": "Introductory price valid through 2026-12-31; doubles to 1.50 input / 7.50 output USD per 1M tokens from 2027-01-01.",
+    "source": "Google Cloud Agent Platform pricing, checked by the user 2026-10-12",
+    "verified": true,
+    "cost_formula": "(prompt - cached) x input + (candidates + thoughts) x output"
+  },
+  "gemini-3.5-flash-lite": {
+    "input_usd_per_1m": null,
+    "output_usd_per_1m": null,
+    "verified": false
+  },
+  "gpt-oss-120b": {
+    "input_usd_per_1m": null,
+    "output_usd_per_1m": null,
+    "verified": false
+  }
 }
