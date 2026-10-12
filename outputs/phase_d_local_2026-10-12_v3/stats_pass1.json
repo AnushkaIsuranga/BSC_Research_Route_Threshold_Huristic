@@ -1,0 +1,285 @@
+{
+  "results_file": "outputs/phase_d_local_2026-10-12_v3/results.jsonl",
+  "pass": 1,
+  "arms": {
+    "naive_llm": {
+      "n": 50,
+      "accuracy": 0.24,
+      "correct": 12,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.62,
+      "rows_returned_by_route": {
+        "post-filter": 4.7,
+        "pre-filter": 14.775
+      },
+      "cost_per_query_usd": 0.0,
+      "parse_failures": 1,
+      "route_parse_failures": 0,
+      "routes": {
+        "post-filter": 10,
+        "pre-filter": 40
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0022000021999701858,
+          "q1": 0.0020000006770715117,
+          "q3": 0.0024000037228688598,
+          "iqr": 0.000400003045797348
+        },
+        "db_ms": {
+          "median": 14.022650000697467,
+          "q1": 12.286074999792618,
+          "q3": 58.399774999998044,
+          "iqr": 46.11370000020543
+        },
+        "router_ms": {
+          "median": 526.4028999954462,
+          "q1": 494.0853749994858,
+          "q3": 595.1334250039508,
+          "iqr": 101.04805000446504
+        },
+        "generation_ms": {
+          "median": 164.46389999691746,
+          "q1": 133.97194999924977,
+          "q3": 378.8449249987025,
+          "iqr": 244.8729749994527
+        },
+        "total_ms": {
+          "median": 762.6092000027711,
+          "q1": 661.5407749977749,
+          "q3": 1011.2342250031361,
+          "iqr": 349.6934500053612
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 817.62,
+        "output_tokens": 5.12,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": 132.78,
+        "router_output_tokens": 25.64
+      },
+      "cost_usd_total": 0
+    },
+    "decision_matrix": {
+      "n": 50,
+      "accuracy": 0.24,
+      "correct": 12,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.66,
+      "rows_returned_by_route": {
+        "pre-filter": 14.82
+      },
+      "cost_per_query_usd": 0.0,
+      "parse_failures": 2,
+      "route_parse_failures": 0,
+      "routes": {
+        "pre-filter": 50
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0017999991541728377,
+          "q1": 0.0016250032786047086,
+          "q3": 0.0020750012481585145,
+          "iqr": 0.0004499979695538059
+        },
+        "db_ms": {
+          "median": 13.600949998362921,
+          "q1": 12.588449995746487,
+          "q3": 23.08417499807547,
+          "iqr": 10.495725002328982
+        },
+        "router_ms": {
+          "median": 0.003999997716164216,
+          "q1": 0.0036999990697950125,
+          "q3": 0.004875000740867108,
+          "iqr": 0.0011750016710720956
+        },
+        "generation_ms": {
+          "median": 291.0399500033236,
+          "q1": 118.188824999379,
+          "q3": 462.84920000471175,
+          "iqr": 344.66037500533275
+        },
+        "total_ms": {
+          "median": 310.00425000092946,
+          "q1": 133.69812500059197,
+          "q3": 499.6337249976932,
+          "iqr": 365.93559999710124
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 930.06,
+        "output_tokens": 5.94,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": null,
+        "router_output_tokens": null
+      },
+      "cost_usd_total": 0
+    },
+    "policy_v2": {
+      "n": 50,
+      "accuracy": 0.26,
+      "correct": 13,
+      "retrieval_hit_rate": 0.22,
+      "retrieval_hit_n": 50,
+      "retrieval_hit_passage_rate": 0.66,
+      "rows_returned_by_route": {
+        "exact": 14.82
+      },
+      "cost_per_query_usd": 0.0,
+      "parse_failures": 2,
+      "route_parse_failures": 0,
+      "routes": {
+        "exact": 50
+      },
+      "latency_ms": {
+        "embed_ms": {
+          "median": 0.0019999970390927047,
+          "q1": 0.0018999999156221747,
+          "q3": 0.0021999949240125716,
+          "iqr": 0.00029999500839039683
+        },
+        "db_ms": {
+          "median": 13.322299997525988,
+          "q1": 12.256074998731492,
+          "q3": 15.30445000207692,
+          "iqr": 3.048375003345427
+        },
+        "router_ms": {
+          "median": 0.003549997927621007,
+          "q1": 0.0032000025385059416,
+          "q3": 0.004174997229711153,
+          "iqr": 0.000974994691205211
+        },
+        "generation_ms": {
+          "median": 135.41499999701045,
+          "q1": 103.63192500153673,
+          "q3": 266.42337500379654,
+          "iqr": 162.7914500022598
+        },
+        "total_ms": {
+          "median": 150.3907500009518,
+          "q1": 121.70227499882458,
+          "q3": 282.67645000232733,
+          "iqr": 160.97417500350275
+        }
+      },
+      "tokens_mean": {
+        "input_tokens": 930.06,
+        "output_tokens": 5.96,
+        "thinking_tokens": 0.0,
+        "router_input_tokens": null,
+        "router_output_tokens": null
+      },
+      "cost_usd_total": 0
+    }
+  },
+  "pairs": {
+    "decision_matrix_vs_naive_llm": {
+      "n": 50,
+      "both_correct": 12,
+      "b_X_only_correct": 0,
+      "c_Y_only_correct": 0,
+      "both_wrong": 38,
+      "mcnemar_exact_p_two_sided": 1.0,
+      "accuracy_X": 0.24,
+      "accuracy_Y": 0.24,
+      "accuracy_diff_X_minus_Y": 0.0,
+      "accuracy_diff_ci95": [
+        -0.03710075209287939,
+        0.03710075209287939
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -506.5299640002195,
+      "latency_diff_ci95": [
+        -604.0537333512148,
+        -407.1515619500388
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "policy_v2_vs_naive_llm": {
+      "n": 50,
+      "both_correct": 12,
+      "b_X_only_correct": 1,
+      "c_Y_only_correct": 0,
+      "both_wrong": 37,
+      "mcnemar_exact_p_two_sided": 1.0,
+      "accuracy_X": 0.26,
+      "accuracy_Y": 0.24,
+      "accuracy_diff_X_minus_Y": 0.020000000000000018,
+      "accuracy_diff_ci95": [
+        -0.02990268114807291,
+        0.0733774606038479
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": -599.7028520004824,
+      "latency_diff_ci95": [
+        -677.0590994508748,
+        -517.6024811511597
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "decision_matrix_vs_policy_v2": {
+      "n": 50,
+      "both_correct": 12,
+      "b_X_only_correct": 0,
+      "c_Y_only_correct": 1,
+      "both_wrong": 37,
+      "mcnemar_exact_p_two_sided": 1.0,
+      "accuracy_X": 0.24,
+      "accuracy_Y": 0.26,
+      "accuracy_diff_X_minus_Y": -0.020000000000000018,
+      "accuracy_diff_ci95": [
+        -0.07337746060384787,
+        0.029902681148072874
+      ],
+      "accuracy_diff_ci_method": "Newcombe hybrid-score (method 10) for paired proportions, Wilson-based",
+      "latency_total_ms_mean_diff_X_minus_Y": 93.1728880002629,
+      "latency_diff_ci95": [
+        18.31150555030763,
+        166.9152616000938
+      ],
+      "latency_ci_method": "paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    }
+  },
+  "non_inferiority": {
+    "margin": 0.1,
+    "rule": "lower bound of the 95% CI of accuracy(X) - accuracy(Y) > -margin",
+    "decision_matrix_vs_naive_llm": {
+      "ci_lower": -0.03710075209287939,
+      "non_inferior": true,
+      "latency_superior": true,
+      "primary": false
+    },
+    "policy_v2_vs_naive_llm": {
+      "ci_lower": -0.02990268114807291,
+      "non_inferior": true,
+      "latency_superior": true,
+      "primary": true
+    }
+  },
+  "dm_vs_v2_route_identical": 50,
+  "dm_vs_v2_route_n": 50,
+  "pass_agreement": {
+    "naive_llm": {
+      "n": 50,
+      "same_answer": 49,
+      "same_route": 50,
+      "same_correctness": 50
+    },
+    "decision_matrix": {
+      "n": 50,
+      "same_answer": 46,
+      "same_route": 50,
+      "same_correctness": 49
+    },
+    "policy_v2": {
+      "n": 50,
+      "same_answer": 48,
+      "same_route": 50,
+      "same_correctness": 49
+    }
+  }
+}

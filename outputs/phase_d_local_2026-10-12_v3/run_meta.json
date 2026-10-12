@@ -1,0 +1,152 @@
+{
+  "run_id": "phase_d_local_2026-10-12_v3",
+  "argv": [
+    "C:\\Users\\ASUS\\Documents\\GitHub\\BSC_Research_Route_Threshold_Huristic\\src\\phase_d_validation\\comparison_runner.py",
+    "--model",
+    "qwen2.5:7b",
+    "--correlation-level",
+    "hm_clothes_0",
+    "--passes",
+    "2",
+    "--table",
+    "finqa_evidence_qwen3",
+    "--query-embeddings",
+    "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json",
+    "--distinct",
+    "--k",
+    "15",
+    "--expect-rows",
+    "35862",
+    "--output-dir",
+    "outputs/phase_d_local_2026-10-12_v3"
+  ],
+  "commit": "74e299a1ccb73a1819fbd6b49ec83c334ce7f1bc",
+  "uncommitted_used_files": null,
+  "start_utc": "2026-10-12T11:43:06.940817+00:00",
+  "end_utc": "2026-10-12T11:45:10.683921+00:00",
+  "host": "Windows-10-10.0.26220-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "answer_model": "qwen2.5:7b",
+  "router_model": "qwen2.5:7b",
+  "arms": [
+    "dm",
+    "v2",
+    "naive"
+  ],
+  "passes": 2,
+  "backend": "ollama",
+  "ollama": {
+    "name": "qwen2.5:7b",
+    "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "ollama_version": "0.40.2",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "7.6B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 32768,
+      "embedding_length": 3584,
+      "runner": "ggml"
+    }
+  },
+  "embedding_model": null,
+  "evidence_table": "finqa_evidence_qwen3",
+  "k": 15,
+  "distinct": true,
+  "query_embedding_cache": {
+    "path": "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json",
+    "sha256": "930cadc0bdea177b0951a6891c227606cc47a3b4a1ce8c437563635f9be9ff23",
+    "model": "qwen/qwen3-embedding-8b",
+    "dimension": 1024
+  },
+  "generation_config": {
+    "_note": "One generation config, used identically by every arm. The run records the settings actually applied per call. 'thinking' entries for paid models are proposals to confirm in the paid pilot.",
+    "embedding": {
+      "model": "nomic-embed-text:latest",
+      "backend": "ollama",
+      "note": "Original setup (12 Oct baseline, finqa_evidence): nomic-embed-text:latest via Ollama, raw text, no prefix, 768-d. Amendment 1 (PHASE_D_AMENDMENT_1.md): table finqa_evidence_qwen3, Qwen3-Embedding-8B 1024-d, query embeddings read from outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json via --query-embeddings."
+    },
+    "retrieval": {
+      "k": 6,
+      "ef_search": 40,
+      "distance": "L2 (<->)"
+    },
+    "scoring": {
+      "rel_tol": 0.01,
+      "abs_tol": 1e-09
+    },
+    "roles": {
+      "router_max_output_tokens": 256,
+      "answer_max_output_tokens": 256
+    },
+    "models": {
+      "qwen2.5:7b": {
+        "backend": "ollama",
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "thinking": "none (model has no thinking mode)"
+      },
+      "claude-sonnet-5-5": {
+        "backend": "vertex_claude",
+        "price_key": "claude-sonnet-5-5",
+        "model_id": "claude-sonnet-5-5",
+        "temperature": 0,
+        "thinking": "disabled (no thinking field sent)"
+      },
+      "gemini-3.8-flash": {
+        "backend": "vertex_gemini",
+        "price_key": "gemini-3.8-flash",
+        "model_id": "gemini-3.8-flash",
+        "temperature": 0,
+        "thinking": {
+          "thinking_level": "LOW"
+        }
+      },
+      "gemini-3.5-flash-lite": {
+        "backend": "vertex_gemini",
+        "price_key": "gemini-3.5-flash-lite",
+        "model_id": "gemini-3.5-flash-lite",
+        "temperature": 0,
+        "thinking": {
+          "thinking_level": "MINIMAL"
+        }
+      },
+      "gpt-oss-120b": {
+        "backend": "vertex_openmaas",
+        "price_key": "gpt-oss-120b",
+        "model_id": "openai/gpt-oss-120b-maas",
+        "temperature": 0,
+        "thinking": {
+          "reasoning_effort": "low"
+        }
+      }
+    }
+  },
+  "answer_system_prompt": "You solve FinQA questions. Use only the supplied evidence. Return only the final numeric or boolean answer, with no explanation. Preserve percentages when the answer is a percentage.",
+  "naive_router_system_prompt": "You are the router of a vector database. Decide how to apply a metadata filter (company ticker and fiscal year) to the vector search for the user's question. 'pre-filter' applies the filter first and searches only the matching rows; 'post-filter' searches the whole index first and applies the filter afterwards. Reply with JSON only, exactly: {\"route\": \"pre-filter\" or \"post-filter\", \"reason\": \"<one short sentence>\"}",
+  "finqa_rows": 35862,
+  "finqa_ticker_year_groups": 278,
+  "n_queries": 50,
+  "correlation_level": "hm_clothes_0",
+  "warmup": {
+    "seconds": 0.4731699000039953
+  },
+  "arm_order": "per (pass, query): arms shuffled with random.Random('20261015|pass|query_id'); order recorded in every row",
+  "file_sha256": {
+    "src/phase_b_router/policy.py": "2363709e7b55aca5712044de92d4f50ce7941836721be03d896934a1e7843f68",
+    "src/phase_b_router/policy_v2.py": "03e1881c7ae1ec704ac80e47e4c5d9f2828a9d636e91008ed87e4a595761d1f0",
+    "src/phase_b_router/router.py": "008ad26540922730e9c96ee4850b09b90340823297ba636f6d92fb78ab80b8df",
+    "src/phase_d_validation/comparison_runner.py": "9dac5ec3b3446b526ae6f898b88c35f91cedd3796d57c36431bf4c91d52637e1",
+    "src/phase_d_validation/llm_client.py": "c53994c8786f211ec00b9637164e5089d541c84b19b639fbbee711d6d453b8ef",
+    "src/phase_d_validation/scoring.py": "789613476a3ecf393463512b1bd37d4888ddd74dd42c54ba4697fbc7ba026c2d",
+    "config/generation.json": "f15ea08704779a972723f0ced6d4d6c0c601b2d8b592f449e683b43f5a3000f9",
+    "config/policy_v2.json": "a9e4ffc58e2b6120feaea50f1f011e9b6508d39482811c25fb5076e49d0c9d8f",
+    "outputs\\phase2_selection_output\\finqa_phase2_selected_50_20260819_140501.csv": "b12b410c416de1e2ac70ef55089854951984ed174f0de5ce4815a3bf8ea8e338",
+    "outputs/thresholds.json": "6edd0126287276863b7766d9072af988b50e2fb4cf1146628767caac6303bb20"
+  }
+}
