@@ -6,9 +6,11 @@
     "note": "Original setup (12 Oct baseline, finqa_evidence): nomic-embed-text:latest via Ollama, raw text, no prefix, 768-d. Amendment 1 (PHASE_D_AMENDMENT_1.md): table finqa_evidence_qwen3, Qwen3-Embedding-8B 1024-d, query embeddings read from outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json via --query-embeddings."
   },
   "retrieval": {
-    "k": 6,
+    "k": 15,
+    "distinct": true,
     "ef_search": 40,
-    "distance": "L2 (<->)"
+    "distance": "L2 (<->)",
+    "note": "Amendment 1: k = 15 distinct passages (rule: smallest k whose exact-route all-gold hit is within 2 queries of k = 20). Local qwen2.5:7b v3 run used k = 15 / distinct via flags; the 12 Oct baseline used k = 6, non-distinct."
   },
   "scoring": {
     "rel_tol": 0.01,

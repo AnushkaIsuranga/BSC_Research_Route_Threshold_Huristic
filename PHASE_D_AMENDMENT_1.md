@@ -96,3 +96,9 @@ Input USD 0.75 and output USD 3.75 per 1M tokens, thinking billed as output, int
 ### Vertex settings
 
 Project `bsc-research-project-511410`, location `global`, authentication by Application Default Credentials (no API key; the backend refuses to start if `GOOGLE_API_KEY` or `GEMINI_API_KEY` is set). The Gemini backend now uses the `google-genai` library in Vertex mode, as the user's connection test did, replacing the hand-written REST request described in the code earlier.
+
+### Additions before the paid pilot (2026-10-12)
+
+- **Timing of the MARGIN choice:** MARGIN was chosen after the local qwen2.5:7b v3 result was available (policy_v2 − naive lower bound −0.030); it was not chosen to fit that result (0.05, 0.10 and 0.15 would all have been met locally).
+- **Latency by arm position and cached tokens:** Latency is also reported by arm position, and Gemini cached-token counts are reported, because the local v3 run showed a first-position slowdown of about 3.5x (likely prompt reuse).
+- **Retrieval settings in the config:** `config/generation.json` now holds `retrieval.k = 15` and `retrieval.distinct = true` (as in section 4); the runner reads them, and `run_meta.json` records k, distinct, the evidence table and the SHA-256 of the query-embedding cache.

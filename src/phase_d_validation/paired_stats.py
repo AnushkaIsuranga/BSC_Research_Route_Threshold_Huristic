@@ -119,6 +119,11 @@ def arm_summary(arm_rows: dict[str, dict]) -> dict:
             "rows_returned_by_route": {k: statistics.fmean([r["rows_returned"] for r in rs if str(r["route"]) == k and r.get("rows_returned") is not None])
                                        for k in sorted({str(r["route"]) for r in rs if r.get("rows_returned") is not None})},
             "cost_per_query_usd": sum(r["cost_usd"] or 0 for r in rs) / n,
+            "generation_ms_median_by_arm_position": {str(p): statistics.median([r["generation_ms"] for r in rs if r.get("arm_position") == p])
+                                                      for p in sorted({r.get("arm_position") for r in rs if r.get("arm_position")})},
+            "total_ms_median_by_arm_position": {str(p): statistics.median([r["total_ms"] for r in rs if r.get("arm_position") == p])
+                                                 for p in sorted({r.get("arm_position") for r in rs if r.get("arm_position")})},
+            "cached_tokens_total": sum((r.get("gen_cached_tokens") or 0) + (r.get("router_cached_tokens") or 0) for r in rs),
             "truncations": sum(1 for r in rs for f in (r.get("gen_finish_reason"), r.get("router_finish_reason")) if f in TRUNCATED),
             "finish_reasons": dict(collections.Counter(str(f) for r in rs for f in (r.get("gen_finish_reason"), r.get("router_finish_reason")) if f)),
             "traffic_types": dict(collections.Counter(str(x) for r in rs for x in (r.get("traffic_types") or []))),

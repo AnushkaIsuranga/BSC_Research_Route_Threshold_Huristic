@@ -208,6 +208,7 @@ def run(args: argparse.Namespace) -> Path:
     else:
         embed_fn = make_embedder(embed_cfg["model"])
     k = args.k or cfg["retrieval"]["k"]
+    distinct = bool(args.distinct or cfg["retrieval"].get("distinct", False))
     gold_md5_by_q = {}
     with conn.cursor() as cur:
         for qrow in queries:
@@ -215,7 +216,7 @@ def run(args: argparse.Namespace) -> Path:
             cur.execute(f"SELECT md5(content) FROM {args.table} WHERE query_id = %s AND evidence_key = ANY(%s)", (qrow["id"], gk))
             gold_md5_by_q[qrow["id"]] = [r[0] for r in cur.fetchall()]
     deps = Deps(conn, embed_fn, router_client, answer_client, k,
-                cfg["roles"]["router_max_output_tokens"], cfg["roles"]["answer_max_output_tokens"], args.table, args.distinct)
+                cfg["roles"]["router_max_output_tokens"], cfg["roles"]["answer_max_output_tokens"], args.table, distinct)
     graphs = {}
     if "dm" in arms:
         graphs["dm"] = build_decision_matrix_graph(thresholds, deps)
@@ -249,7 +250,7 @@ def run(args: argparse.Namespace) -> Path:
         "python": sys.version, "answer_model": args.model, "router_model": router_model, "arms": arms, "passes": args.passes,
         "backend": answer_client.backend, "ollama": ollama_digest(args.model) if answer_client.backend == "ollama" else None,
         "embedding_model": None if args.query_embeddings else ollama_digest(embed_cfg["model"]),
-        "evidence_table": args.table, "k": k, "distinct": args.distinct, "query_embedding_cache": cache_meta, "generation_config": cfg,
+        "evidence_table": args.table, "k": k, "distinct": distinct, "query_embedding_cache": cache_meta, "generation_config": cfg,
         "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM,
         "finqa_rows": rows_total, "finqa_ticker_year_groups": groups, "n_queries": len(queries),
         "correlation_level": args.correlation_level, "warmup": warmup,
