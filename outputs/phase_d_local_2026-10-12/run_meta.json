@@ -1,0 +1,152 @@
+{
+  "run_id": "phase_d_local_2026-10-12",
+  "argv": [
+    "C:\\Users\\ASUS\\Documents\\GitHub\\BSC_Research_Route_Threshold_Huristic\\src\\phase_d_validation\\comparison_runner.py",
+    "--model",
+    "qwen2.5:7b",
+    "--correlation-level",
+    "hm_clothes_0",
+    "--passes",
+    "2",
+    "--output-dir",
+    "outputs/phase_d_local_2026-10-12",
+    "--expect-rows",
+    "35862"
+  ],
+  "commit": "606f29b50ffbe6732bb54bb3e89e482cdb2542ea",
+  "uncommitted_used_files": null,
+  "start_utc": "2026-10-12T08:21:26.102360+00:00",
+  "end_utc": "2026-10-12T08:23:33.852934+00:00",
+  "host": "Windows-10-10.0.26220-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "answer_model": "qwen2.5:7b",
+  "router_model": "qwen2.5:7b",
+  "arms": [
+    "dm",
+    "v2",
+    "naive"
+  ],
+  "passes": 2,
+  "backend": "ollama",
+  "ollama": {
+    "name": "qwen2.5:7b",
+    "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "ollama_version": "0.40.2",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "7.6B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 32768,
+      "embedding_length": 3584,
+      "runner": "ggml"
+    }
+  },
+  "embedding_model": {
+    "name": "nomic-embed-text:latest",
+    "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "ollama_version": "0.40.2",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "nomic-bert",
+      "families": [
+        "nomic-bert"
+      ],
+      "parameter_size": "137M",
+      "quantization_level": "F16",
+      "context_length": 2048,
+      "embedding_length": 768,
+      "runner": "ggml"
+    }
+  },
+  "generation_config": {
+    "_note": "One generation config, used identically by every arm. The run records the settings actually applied per call. 'thinking' entries for paid models are proposals to confirm in the paid pilot.",
+    "embedding": {
+      "model": "nomic-embed-text:latest",
+      "backend": "ollama"
+    },
+    "retrieval": {
+      "k": 6,
+      "ef_search": 40,
+      "distance": "L2 (<->)"
+    },
+    "scoring": {
+      "rel_tol": 0.01,
+      "abs_tol": 1e-09
+    },
+    "roles": {
+      "router_max_output_tokens": 256,
+      "answer_max_output_tokens": 256
+    },
+    "models": {
+      "qwen2.5:7b": {
+        "backend": "ollama",
+        "temperature": 0,
+        "seed": 0,
+        "num_ctx": 8192,
+        "thinking": "none (model has no thinking mode)"
+      },
+      "claude-sonnet-5-5": {
+        "backend": "vertex_claude",
+        "price_key": "claude-sonnet-5-5",
+        "model_id": "claude-sonnet-5-5",
+        "temperature": 0,
+        "thinking": "disabled (no thinking field sent)"
+      },
+      "gemini-3.8-flash": {
+        "backend": "vertex_gemini",
+        "price_key": "gemini-3.8-flash",
+        "model_id": "gemini-3.8-flash",
+        "temperature": 0,
+        "thinking": {
+          "thinking_level": "LOW"
+        }
+      },
+      "gemini-3.5-flash-lite": {
+        "backend": "vertex_gemini",
+        "price_key": "gemini-3.5-flash-lite",
+        "model_id": "gemini-3.5-flash-lite",
+        "temperature": 0,
+        "thinking": {
+          "thinking_level": "MINIMAL"
+        }
+      },
+      "gpt-oss-120b": {
+        "backend": "vertex_openmaas",
+        "price_key": "gpt-oss-120b",
+        "model_id": "openai/gpt-oss-120b-maas",
+        "temperature": 0,
+        "thinking": {
+          "reasoning_effort": "low"
+        }
+      }
+    }
+  },
+  "answer_system_prompt": "You solve FinQA questions. Use only the supplied evidence. Return only the final numeric or boolean answer, with no explanation. Preserve percentages when the answer is a percentage.",
+  "naive_router_system_prompt": "You are the router of a vector database. Decide how to apply a metadata filter (company ticker and fiscal year) to the vector search for the user's question. 'pre-filter' applies the filter first and searches only the matching rows; 'post-filter' searches the whole index first and applies the filter afterwards. Reply with JSON only, exactly: {\"route\": \"pre-filter\" or \"post-filter\", \"reason\": \"<one short sentence>\"}",
+  "finqa_rows": 35862,
+  "finqa_ticker_year_groups": 278,
+  "n_queries": 50,
+  "correlation_level": "hm_clothes_0",
+  "warmup": {
+    "seconds": 0.426315099997737
+  },
+  "arm_order": "arms rotated by query index (query i starts at arm i mod n_arms), same rotation in every pass",
+  "file_sha256": {
+    "src/phase_b_router/policy.py": "2363709e7b55aca5712044de92d4f50ce7941836721be03d896934a1e7843f68",
+    "src/phase_b_router/policy_v2.py": "03e1881c7ae1ec704ac80e47e4c5d9f2828a9d636e91008ed87e4a595761d1f0",
+    "src/phase_b_router/router.py": "245c2e5557d041028ec0465fe00ec1e47f7166bf68579bec30080c413ce0b075",
+    "src/phase_d_validation/comparison_runner.py": "f2d6b13739c7625deec7d313c36f4ad8602f8fb443f2e1385b4a860014da9740",
+    "src/phase_d_validation/llm_client.py": "c53994c8786f211ec00b9637164e5089d541c84b19b639fbbee711d6d453b8ef",
+    "src/phase_d_validation/scoring.py": "789613476a3ecf393463512b1bd37d4888ddd74dd42c54ba4697fbc7ba026c2d",
+    "config/generation.json": "b04826e69f5572b220e6cc5bc1d2f0aaf6ae55313144cefa33abefb20e60f5cb",
+    "config/policy_v2.json": "a9e4ffc58e2b6120feaea50f1f011e9b6508d39482811c25fb5076e49d0c9d8f",
+    "outputs\\phase2_selection_output\\finqa_phase2_selected_50_20260819_140501.csv": "b12b410c416de1e2ac70ef55089854951984ed174f0de5ce4815a3bf8ea8e338",
+    "outputs/thresholds.json": "6edd0126287276863b7766d9072af988b50e2fb4cf1146628767caac6303bb20"
+  }
+}
