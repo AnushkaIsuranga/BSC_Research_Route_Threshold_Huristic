@@ -73,7 +73,7 @@ Same settings, 50 questions x 4 arms x 5 passes, 1,000 rows, 1,500 calls, 0 erro
 | **P-a** (naive_llm post-filter share 10%, range 0-25%) | 21/50 = 42% in pass 1 (43.2% over all passes) | **prediction wrong** |
 | naive_informed post-filter share | 2/50 in pass 1 | - |
 | Truncations / route JSON failures / non-ON_DEMAND calls / cached tokens | 0 in pass 1 (2 of 1,500 calls over all passes) / 0 / 0 / 0 | - |
-| Mechanism check (pass 1) | all 4 discordant questions are naive_llm post-filter routes (2-7 rows, once 0 rows, vs 15); naive_llm accuracy 12/21 on post-filter vs 20/29 on pre-filter; on the 29 pre-filter questions both arms 20/29 | descriptive |
+| Mechanism check (pass 1; descriptive, not pre-registered; 4 questions) | All four discordant questions occurred where the LLM router chose post-filter, which returned 0-7 rows instead of 15; in one (MRO/2004), the model produced a number with no evidence at all. Only MRO is a clear "missing evidence -> invented number" case. In ALXN/2016 and ECL/2017 the gold passage was missed by both arms; policy_v2 was still right with 15 rows of context against 3 and 7, so more context helped, but not through the gold passage. In CDW/2015 both arms had the gold passage and the LLM arm was still wrong, so it is not a missing-evidence case. naive_llm accuracy 12/21 on post-filter vs 20/29 on pre-filter routes; on the 29 pre-filter questions both arms 20/29 | descriptive only |
 
 ## Limitations
 
@@ -88,6 +88,9 @@ Same settings, 50 questions x 4 arms x 5 passes, 1,000 rows, 1,500 calls, 0 erro
 9. **Latency measurement.** Local generation latency depends on arm position (first call about 3.5x slower, consistent with prompt reuse, not tested); H&M latencies depend on host load (the first held-out cell failed at 528.4 ms under load and passed at 122.8 ms when quiet). Single machine, one PostgreSQL configuration (shared_buffers 128 MB).
 10. **Phase A scope.** H&M only, k = 10, ef_search 40, default max_scan_tuples, categorical filters, 105,100-row tables; held-out 2 filters are all `IN` lists and two share a column; policy_v2 equals always-iterative on held-out 2, so that test shows iterative-relaxed passes at s = 0.23-0.45 rather than that T = 0.1 is optimal.
 11. **Cost.** Gemini prices are introductory (valid through 2026-12-31; double from 2027-01-01); the computed USD 1.658 should be checked against the billing report.
+12. **The five H&M tables are not independent datasets.** hm_clothes_0, _25, _50, _75 and _100 are versions of one dataset (the same 105,100 rows and vectors with different degrees of attribute-vector correlation), so results across the five tables are not five independent replications.
+13. **The tables cannot be rebuilt identically.** The scrambling that created the correlation tiers (`src/database/ingestion.py`, `np.random.choice` / `np.random.permutation`) was not seeded, so re-running it gives different tables. The tables used in all experiments survive only through the `pg_dump` files listed in `outputs/data_checksums.json`.
+14. **Held-out filter ranges were chosen after seeing in-sample behaviour.** The selectivity ranges of both held-out tests (0.020-0.180 and 0.23-0.45) were chosen knowing the in-sample results of the three-arm run, although the held-out filters' own recall and latency were not inspected before the frozen runs.
 
 ## Data freeze
 
