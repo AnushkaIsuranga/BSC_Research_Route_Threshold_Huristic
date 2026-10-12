@@ -29,3 +29,7 @@ scikit-learn
 scipy
 pytest
 google-auth
+
+# Gemini backend (Vertex, Amendment 1) and k-sweep token estimate
+google-genai==2.29.0
+tiktoken==0.14.0

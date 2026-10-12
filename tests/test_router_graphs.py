@@ -114,3 +114,15 @@ def test_naive_informed_prompt_and_graph(patched_retrieve):
     d3 = deps(router=Spy("not json"))
     out3 = build_naive_graph(d3, informed=True).invoke(state(0.01))
     assert out3["route_parse_failure"] is True and d3.router_client.calls == 1 and d3.answer_client.calls == 0
+
+
+def test_runner_refuses_without_explicit_retrieval_flags():
+    import subprocess
+    import sys
+    base = [sys.executable, "-m", "src.phase_d_validation.comparison_runner", "--model", "qwen2.5:7b", "--arms", "v2", "--output-dir", "x"]
+    flags = {"--table": ["--table", "t"], "--query-embeddings": ["--query-embeddings", "live"], "--k": ["--k", "15"],
+             "--distinct": ["--distinct"]}
+    for missing in flags:
+        args = [a for f, v in flags.items() if f != missing for a in v]
+        r = subprocess.run(base + args, capture_output=True, text=True)
+        assert r.returncode == 2 and "required" in r.stderr, (missing, r.stderr[-300:])

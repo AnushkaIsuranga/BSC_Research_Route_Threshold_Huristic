@@ -5,10 +5,13 @@ stops); a failure is never replaced by a default answer, route or cost. The only
 non-exception outcome is a naive-router output that fails its JSON schema (route_parse_failure,
 counted; that query/arm gets no retrieval and is scored wrong).
 
-Example (local):
-  python -m src.phase_d_validation.comparison_runner --model qwen2.5:7b \
-      --correlation-level hm_clothes_0 --thresholds outputs/thresholds.json \
-      --output-dir outputs/phase_d_local_2026-10-12 --passes 2
+Retrieval settings must be given explicitly (no defaults): --table, --query-embeddings (a cached query-embedding file,
+or "live" to embed questions with the config's local embedding model, i.e. the pre-Amendment-1 nomic setup), --k and
+--distinct / --no-distinct. The final (Amendment 1-3) runs used:
+
+  python -m src.phase_d_validation.comparison_runner --model qwen2.5:7b --correlation-level hm_clothes_0 --passes 5 \
+      --table finqa_evidence_qwen3 --query-embeddings outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json \
+      --k 15 --distinct --expect-rows 35862 --output-dir outputs/phase_d_local_<date>_vN
 
 Paid backends additionally need --allow-paid, --budget-usd and a verified config/prices.json entry.
 """
@@ -205,14 +208,14 @@ def run(args: argparse.Namespace) -> Path:
 
     embed_cfg = cfg["embedding"]
     cache_meta = None
-    if args.query_embeddings:
+    use_cache = args.query_embeddings != "live"
+    if use_cache:
         embed_fn, cache_meta = make_cached_embedder(args.query_embeddings, queries)
         cache_meta = {"path": args.query_embeddings, "sha256": sha256_file(args.query_embeddings), "model": cache_meta.get("model"),
                       "dimension": cache_meta.get("dimension")}
     else:
         embed_fn = make_embedder(embed_cfg["model"])
-    k = args.k or cfg["retrieval"]["k"]
-    distinct = bool(args.distinct or cfg["retrieval"].get("distinct", False))
+    k, distinct = args.k, args.distinct
     gold_md5_by_q = {}
     with conn.cursor() as cur:
         for qrow in queries:
@@ -236,7 +239,7 @@ def run(args: argparse.Namespace) -> Path:
     warmup = None
     if answer_client.backend == "ollama":
         w0 = time.perf_counter()
-        if not args.query_embeddings:
+        if not use_cache:
             deps.embed("warm-up")
         answer_client.generate("Reply with the single word OK.", "warm-up", max_output_tokens=8)
         if router_client is not answer_client:
@@ -255,7 +258,7 @@ def run(args: argparse.Namespace) -> Path:
         "start_utc": datetime.now(timezone.utc).isoformat(), "end_utc": None, "host": platform.platform(),
         "python": sys.version, "answer_model": args.model, "router_model": router_model, "arms": arms, "passes": args.passes,
         "backend": answer_client.backend, "ollama": ollama_digest(args.model) if answer_client.backend == "ollama" else None,
-        "embedding_model": None if args.query_embeddings else ollama_digest(embed_cfg["model"]),
+        "embedding_model": None if use_cache else ollama_digest(embed_cfg["model"]),
         "evidence_table": args.table, "k": k, "distinct": distinct, "query_embedding_cache": cache_meta, "generation_config": cfg,
         "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM, "naive_informed_router_system_prompt": NAIVE_INFORMED_ROUTER_SYSTEM,
         "scoring": "primary = Amendment 2 (scale words stripped, no rescaling); strict = Amendment 1; both recorded per row",
@@ -320,10 +323,12 @@ def main() -> None:
     p.add_argument("--passes", type=int, default=1)
     p.add_argument("--output-dir", required=True)
     p.add_argument("--expect-rows", type=int, default=None)
-    p.add_argument("--table", default="finqa_evidence", help="evidence table (Amendment 1: finqa_evidence_qwen3)")
-    p.add_argument("--query-embeddings", default=None, help="cached query-embedding JSON; if given, no embedding model is called")
-    p.add_argument("--distinct", action="store_true", help="retrieve k distinct passages (dedupe by md5(content))")
-    p.add_argument("--k", type=int, default=None, help="override config retrieval.k")
+    p.add_argument("--table", required=True, help="evidence table (final runs: finqa_evidence_qwen3)")
+    p.add_argument("--query-embeddings", required=True,
+                   help='cached query-embedding JSON (no embedding call), or "live" to embed with the config embedding model')
+    p.add_argument("--distinct", action=argparse.BooleanOptionalAction, required=True,
+                   help="--distinct: k distinct passages (dedupe by md5(content)); --no-distinct: k rows")
+    p.add_argument("--k", type=int, required=True, help="rows / distinct passages per prompt (final runs: 15)")
     p.add_argument("--allow-paid", action="store_true")
     p.add_argument("--budget-usd", type=float, default=None)
     args = p.parse_args()

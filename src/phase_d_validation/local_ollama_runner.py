@@ -1,3 +1,4 @@
+# LEGACY — not used in final results. Phase D runner of 30 Sept / 12 Oct morning (own scorer, k = 6, nomic, no tie-break); superseded by comparison_runner.py.
 """Run the Phase-D FinQA comparison with local Ollama models.
 
 Examples:

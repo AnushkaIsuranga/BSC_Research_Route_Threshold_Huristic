@@ -1,3 +1,4 @@
+# LEGACY — not used in final results. HTTP client of the legacy local runner and of finqa_db_setup.py; the final runs use llm_client.OllamaBackend.
 """Small Ollama HTTP client used by the local FinQA validation harness.
 
 This deliberately uses Ollama's HTTP API instead of a LangChain integration so
