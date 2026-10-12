@@ -68,21 +68,59 @@ def _query_vector(client: OllamaClient, question: str, mode: str, embedding_mode
     return embeddings.embed_query(question)
 
 
-def _retrieve(conn, state: dict[str, Any], vector: list[float], route: str, k: int) -> list[dict[str, str]]:
-    # pre-filter = exact vector ranking over the metadata subset;
-    # post-filter = HNSW candidate search with metadata applied by PostgreSQL.
+def estimate_selectivity(conn, ticker: str, year: str, corpus_size: int) -> float:
+    """Use the single occurrence-based selectivity definition for all runs."""
     with conn.cursor() as cur:
-        if route == "post-filter":
+        cur.execute(
+            "SELECT COUNT(*) FROM finqa_evidence WHERE metadata->>'ticker'=%s AND metadata->>'year'=%s",
+            (ticker, year),
+        )
+        return cur.fetchone()[0] / corpus_size if corpus_size else 0.0
+
+
+def _retrieve(conn, state: dict[str, Any], vector: list[float], route: str, k: int) -> list[dict[str, str]]:
+    with conn.cursor() as cur:
+        if route == "iterative-scan":
             cur.execute("SET enable_indexscan = on; SET enable_seqscan = off;")
+            cur.execute("SET hnsw.iterative_scan = 'relaxed_order';")
+            cur.execute(
+                """SELECT query_id, content, evidence_key FROM finqa_evidence
+                   WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
+                   ORDER BY embedding <-> %s::vector LIMIT %s""",
+                (state["ticker"], state["year"], vector, k),
+            )
+            return [{"query_id": qid, "content": content, "evidence_key": key} for qid, content, key in cur.fetchall()]
+        elif route == "post-filter-app-top40":
+            cur.execute("SET enable_indexscan = on; SET enable_seqscan = off;")
+            cur.execute("SET hnsw.iterative_scan = off;")
+            cur.execute(
+                """SELECT query_id, content, evidence_key, metadata->>'ticker', metadata->>'year'
+                   FROM finqa_evidence
+                   ORDER BY embedding <-> %s::vector LIMIT 40""",
+                (vector,),
+            )
+            raw = cur.fetchall()
+            filtered = [r for r in raw if r[3] == state["ticker"] and r[4] == state["year"]][:k]
+            return [{"query_id": r[0], "content": r[1], "evidence_key": r[2]} for r in filtered]
+        elif route in {"post-filter", "post-filter-indexscan"}:
+            cur.execute("SET enable_indexscan = on; SET enable_seqscan = off;")
+            cur.execute("SET hnsw.iterative_scan = off;")
+            cur.execute(
+                """SELECT query_id, content, evidence_key FROM finqa_evidence
+                   WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
+                   ORDER BY embedding <-> %s::vector LIMIT %s""",
+                (state["ticker"], state["year"], vector, k),
+            )
+            return [{"query_id": qid, "content": content, "evidence_key": key} for qid, content, key in cur.fetchall()]
         else:
             cur.execute("SET enable_indexscan = off; SET enable_seqscan = on;")
-        cur.execute(
-            """SELECT query_id, content, evidence_key FROM finqa_evidence
-               WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
-               ORDER BY embedding <-> %s::vector LIMIT %s""",
-            (state["ticker"], state["year"], vector, k),
-        )
-        return [{"query_id": qid, "content": content, "evidence_key": key} for qid, content, key in cur.fetchall()]
+            cur.execute(
+                """SELECT query_id, content, evidence_key FROM finqa_evidence
+                   WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
+                   ORDER BY embedding <-> %s::vector LIMIT %s""",
+                (state["ticker"], state["year"], vector, k),
+            )
+            return [{"query_id": qid, "content": content, "evidence_key": key} for qid, content, key in cur.fetchall()]
 
 
 def _answer(client: OllamaClient, model: str, question: str, rows: list[dict[str, str]], num_ctx: int, seed: int) -> dict[str, Any]:
@@ -156,7 +194,7 @@ def run(args: argparse.Namespace) -> Path:
         for i, row in enumerate(queries, 1):
             qid = row["id"]; gold_keys = {k.strip() for k in row["gold_evidence_keys"].split("|") if k.strip()}
             ticker, year = extract_ticker_year(qid); state = {"ticker": ticker, "year": year}
-            cur = conn.cursor(); cur.execute("SELECT COUNT(*) FROM finqa_evidence WHERE metadata->>'ticker'=%s AND metadata->>'year'=%s", (ticker, year)); selectivity = cur.fetchone()[0] / corpus_size; cur.close()
+            selectivity = estimate_selectivity(conn, ticker, year, corpus_size)
             result: dict[str, Any] = {"id": qid, "gold_answer": row["answer"], "gold_evidence_keys": sorted(gold_keys), "selectivity": selectivity, "selectivity_denominator": "occurrence-based finqa_evidence rows", **run_meta, "error": None}
             try:
                 dm_start = time.perf_counter()
@@ -195,11 +233,11 @@ def main() -> None:
     parser.add_argument("--embedding-mode", choices=["openrouter", "ollama"], default="ollama")
     parser.add_argument("--embedding-model", default=os.getenv("OLLAMA_EMBEDDING_MODEL"))
     parser.add_argument("--subset", default=None)
-    parser.add_argument("--thresholds", default="outputs/thresholds.json")
+    parser.add_argument("--thresholds", required=True, help="Path to thresholds.json (e.g., outputs/thresholds.json)")
     parser.add_argument("--correlation-level", default="hm_clothes_0")
     parser.add_argument("--k", type=int, default=6)
     parser.add_argument("--limit", type=int, default=None)
-    parser.add_argument("--output", default="outputs/phase_d_results_ollama.csv")
+    parser.add_argument("--output", required=True, help="Output CSV path (e.g., outputs/phase_d_results_ollama_v2.csv)")
     parser.add_argument("--num-ctx", type=int, default=8192)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--ef-search", type=int, default=40)

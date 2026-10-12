@@ -1,236 +1,189 @@
-import os
-import random
+"""LangGraph routing graphs for the FinQA validation (Phase D).
+
+Three arms share the same retrieval and answer nodes; only the routing node differs:
+  * Decision Matrix  -- original policy.py (route names pre-filter / post-filter / iterative-scan)
+  * policy_v2        -- policy_v2.py       (route names exact / iterative-relaxed)
+  * Naive LLM router -- structured JSON {"route": "pre-filter"|"post-filter", "reason": str}
+
+Nothing here substitutes a default for a failure: database/LLM/embedding errors propagate. The one
+non-exception outcome is a naive-router output that fails schema validation: it is recorded in the
+state (route_parse_failure, router_raw) and the graph ends without retrieval or answer.
+Every graph accumulates the same cost/token/latency fields in RouterState (parity).
+"""
+
+from __future__ import annotations
+
+import json
 import time
-from typing import TypedDict, List, Literal
-from pydantic import BaseModel, Field
-from langgraph.graph import StateGraph, END
-from langchain_core.prompts import ChatPromptTemplate
+from dataclasses import dataclass
+from typing import Any, Callable, List, TypedDict
 
-# Mock LLM for validation testing without real API calls
-class MockChatModel:
-    def __init__(self, mock_response=None):
-        self.mock_response = mock_response
+from langgraph.graph import END, StateGraph
 
-    def with_structured_output(self, schema):
-        def bound_mock(messages):
-            return self.mock_response
-        return bound_mock
+from src.phase_b_router.policy import get_routing_decision
+from src.phase_b_router.policy_v2 import get_routing_decision_v2
 
-class RouterState(TypedDict):
+NAIVE_ROUTES = ("pre-filter", "post-filter")
+NAIVE_ROUTER_SYSTEM = (
+    "You are the router of a vector database. Decide how to apply a metadata filter (company ticker and "
+    "fiscal year) to the vector search for the user's question. 'pre-filter' applies the filter first and "
+    "searches only the matching rows; 'post-filter' searches the whole index first and applies the filter "
+    "afterwards. Reply with JSON only, exactly: {\"route\": \"pre-filter\" or \"post-filter\", \"reason\": \"<one short sentence>\"}"
+)
+ANSWER_SYSTEM = (
+    "You solve FinQA questions. Use only the supplied evidence. Return only the final numeric or boolean "
+    "answer, with no explanation. Preserve percentages when the answer is a percentage."
+)
+
+
+class RouterState(TypedDict, total=False):
     query_id: str
     ticker: str
     year: str
-    gold_evidence_keys: List[str]
     question: str
+    gold_evidence_keys: List[str]
     estimated_selectivity: float
     correlation_level: str
+    # routing
     chosen_route: str
-    final_answer: str
-    sub_queries: List[str]  # Item 10: track sub-queries
+    router_raw: str
+    router_reason: str
+    route_parse_failure: bool
+    router_ms: float
+    router_input_tokens: int
+    router_output_tokens: int
+    router_thinking_tokens: int
+    # retrieval
+    embed_ms: float
+    db_ms: float
+    retrieved_evidence_keys: List[str]
+    # generation
+    raw_output: str
+    generation_ms: float
+    gen_input_tokens: int
+    gen_output_tokens: int
+    gen_thinking_tokens: int
+    # cost parity
+    cost_usd: float
+    settings_used: dict
 
-import json
-import os
-from src.phase_b_router.policy import get_routing_decision
 
-# Item 7 & 8: Decision Matrix with Hysteresis
-# Node: Decision Matrix Router (Item 6 & 7)
-def create_decision_matrix_router_node(thresholds_dict: dict):
-    def route_node_decision_matrix(state: RouterState):
-        route = get_routing_decision(state['correlation_level'], state['estimated_selectivity'], thresholds_dict)
-        return {"chosen_route": route}
-    return route_node_decision_matrix
+@dataclass
+class Deps:
+    conn: Any                              # psycopg2 connection, autocommit, pgvector registered
+    embed: Callable[[str], list]           # question -> vector
+    router_client: Any                     # LLMClient used by the naive router
+    answer_client: Any                     # LLMClient used to answer
+    k: int
+    router_max_tokens: int
+    answer_max_tokens: int
 
-import psycopg2
-from langchain_openai import ChatOpenAI
-from langchain_core.messages import SystemMessage, HumanMessage
-from src import db_settings
-from src.utils.finqa_utils import get_embedding_client
 
-def execute_vector_search(state: RouterState, route: str) -> str:
-    conn = psycopg2.connect(**db_settings())
-    conn.autocommit = True
-    
-    # Generate query embedding using the shared client
-    embeddings = get_embedding_client()
-    if embeddings is None:
-        raise RuntimeError("No embedding client configured. Set AI_API_KEY and AI_MODEL.")
-    query_vector = embeddings.embed_query(state["question"])
-    
-    if len(query_vector) != 768:
-        raise ValueError(f"Embedding dimension mismatch: expected 768, got {len(query_vector)}. Are you using the correct embedding model?")
-    print(f"[LOG] Used embedding model matching 768 dimensions.")
+def validate_naive_route(text: str) -> tuple[dict | None, str | None]:
+    """Schema: object with exactly keys route (pre-filter|post-filter) and reason (str)."""
+    try:
+        data = json.loads(text)
+    except (json.JSONDecodeError, TypeError) as exc:
+        return None, f"not valid JSON: {exc}"
+    if not isinstance(data, dict):
+        return None, "JSON is not an object"
+    if set(data) != {"route", "reason"}:
+        return None, f"keys {sorted(data)} != ['reason', 'route']"
+    if data["route"] not in NAIVE_ROUTES:
+        return None, f"route {data['route']!r} not in {NAIVE_ROUTES}"
+    if not isinstance(data["reason"], str):
+        return None, "reason is not a string"
+    return data, None
 
+
+def retrieve(conn, route: str, ticker: str, year: str, vector: list, k: int) -> list[tuple[str, str, str]]:
+    """Return (query_id, evidence_key, content) rows. Unknown route raises."""
+    sql = ("SELECT query_id, evidence_key, content FROM finqa_evidence "
+           "WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s ORDER BY embedding <-> %s::vector LIMIT %s")
     with conn.cursor() as cur:
-        if route == "iterative-scan":
-            # iterative-scan: rely on pgvector's HNSW iterative scan with metadata filter
-            cur.execute("SET enable_indexscan = on;")
-            cur.execute("SET enable_seqscan = off;")
+        if route in ("pre-filter", "exact"):
+            cur.execute("SET enable_indexscan = off; SET enable_seqscan = on;")
+            cur.execute("SET hnsw.iterative_scan = off;")
+        elif route == "post-filter":
+            cur.execute("SET enable_indexscan = on; SET enable_seqscan = off;")
+            cur.execute("SET hnsw.iterative_scan = off;")
+        elif route in ("iterative-scan", "iterative-relaxed"):
+            cur.execute("SET enable_indexscan = on; SET enable_seqscan = off;")
             cur.execute("SET hnsw.iterative_scan = 'relaxed_order';")
-            cur.execute("""
-                SELECT content, evidence_key 
-                FROM finqa_evidence 
-                WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
-                ORDER BY embedding <-> %s::vector
-                LIMIT 6;
-            """, (state["ticker"], state["year"], query_vector))
-            results = cur.fetchall()
-            
-        elif route in {"post-filter", "post-filter-indexscan"}:
-            cur.execute("SET enable_indexscan = on;")
-            cur.execute("SET enable_seqscan = off;")
-            cur.execute("SET hnsw.iterative_scan = off;")
-            cur.execute("""
-                SELECT content, evidence_key
-                FROM finqa_evidence 
-                WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
-                ORDER BY embedding <-> %s::vector
-                LIMIT 6;
-            """, (state["ticker"], state["year"], query_vector))
-            results = cur.fetchall()
-
-        elif route == "post-filter-app-top40":
-            cur.execute("SET enable_indexscan = on;")
-            cur.execute("SET enable_seqscan = off;")
-            cur.execute("SET hnsw.iterative_scan = off;")
-            cur.execute("""
-                SELECT content, evidence_key, metadata->>'ticker', metadata->>'year'
-                FROM finqa_evidence 
-                ORDER BY embedding <-> %s::vector
-                LIMIT 40;
-            """, (query_vector,))
-            
-            raw_results = cur.fetchall()
-            results = [(r[0], r[1]) for r in raw_results if r[2] == state["ticker"] and r[3] == state["year"]][:6]
-
         else:
-            # pre-filter: exact search / fallback to seqscan
-            cur.execute("SET enable_indexscan = off;")
-            cur.execute("SET enable_seqscan = on;")
-            cur.execute("""
-                SELECT content, evidence_key 
-                FROM finqa_evidence 
-                WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s
-                ORDER BY embedding <-> %s::vector
-                LIMIT 6;
-            """, (state["ticker"], state["year"], query_vector))
-            results = cur.fetchall()
-            
-    conn.close()
-    
-    # Format evidence
-    evidence_text = "\n".join([f"[{r[1]}] {r[0]}" for r in results])
-    
-    # Call LLM to solve the FinQA question
-    ai_model = os.environ.get("AI_MODEL", "").strip()
-    ai_api_key = os.environ.get("AI_API_KEY", "").strip()
-    ai_api_base = os.environ.get("AI_API_BASE", "").strip()
-    
-    if not ai_model or not ai_api_key:
-        raise RuntimeError("AI_MODEL and AI_API_KEY environment variables must be configured to generate an answer.")
-        
-    llm = ChatOpenAI(
-        model=ai_model, 
-        api_key=ai_api_key,
-        base_url=ai_api_base if ai_api_base else None,
-        temperature=0.0
-    )
-    
-    messages = [
-        SystemMessage(content="You are a financial analyst. Read the retrieved financial report excerpts and answer the user's question. Your final output must be ONLY the numeric answer (e.g. '1.5', '20%', '3/4') or boolean (e.g. 'yes', 'no'), with no surrounding text or explanations."),
-        HumanMessage(content=f"Context:\n{evidence_text}\n\nQuestion: {state['question']}")
-    ]
-    
-    response = llm.invoke(messages)
-    return response.content.strip()
+            raise ValueError(f"unknown route {route!r}")
+        cur.execute(sql, (ticker, year, vector, k))
+        return cur.fetchall()
 
-# Nodes: Execution Branches
-def pre_filter_node(state: RouterState):
-    # pre-filter exact search
-    ans = execute_vector_search(state, route="pre-filter")
-    return {"final_answer": ans}
 
-def post_filter_node(state: RouterState):
-    # post-filter app-level search
-    ans = execute_vector_search(state, route="post-filter")
-    return {"final_answer": ans}
-
-def iterative_scan_node(state: RouterState):
-    # iterative scan via pgvector
-    ans = execute_vector_search(state, route="iterative-scan")
-    return {"final_answer": ans}
-
-# Item 6: LangGraph Skeleton (Decision Matrix)
-def build_decision_matrix_graph(thresholds_dict: dict):
-    workflow = StateGraph(RouterState)
-    workflow.add_node("router", create_decision_matrix_router_node(thresholds_dict))
-    workflow.add_node("pre-filter", pre_filter_node)
-    workflow.add_node("post-filter", post_filter_node)
-    workflow.add_node("iterative-scan", iterative_scan_node)
-    
-    workflow.set_entry_point("router")
-    workflow.add_conditional_edges(
-        "router",
-        lambda state: state["chosen_route"],
-        {
-            "pre-filter": "pre-filter",
-            "post-filter": "post-filter",
-            "iterative-scan": "iterative-scan"
-        }
-    )
-    workflow.add_edge("pre-filter", END)
-    workflow.add_edge("post-filter", END)
-    workflow.add_edge("iterative-scan", END)
-    return workflow.compile()
-
-# Item 9 & 10: Naive Router baseline with Multi-query logging
-class NaiveRouteDecision(BaseModel):
-    route: Literal["pre-filter", "post-filter"] = Field(description="The chosen route strategy")
-    sub_queries: List[str] = Field(
-        description="If the question is multi-evidence, split it into sub-queries. Otherwise empty.",
-        default_factory=list
-    )
-
-def create_naive_router_node(llm):
-    """
-    Creates a naive routing node using the provided LLM.
-    The LLM decides the route and identifies sub-queries.
-    """
-    prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are an intelligent router for a vector database. Choose 'pre-filter' or 'post-filter' based on the question. If the question requires multiple distinct pieces of evidence, output them as sub_queries."),
-        ("user", "Question: {question}")
-    ])
-    
-    router_chain = prompt | llm.with_structured_output(NaiveRouteDecision)
-    
-    def route_node_naive(state: RouterState):
-        decision = router_chain.invoke({"question": state["question"]})
-        
-        # Log if multi-query orchestration occurred (Item 10)
-        if len(decision.sub_queries) > 0:
-            print(f"[LOG] Naive Router split question into {len(decision.sub_queries)} sub-queries.")
-            
+def make_execute_node(deps: Deps, route_label: str | None = None) -> Callable[[RouterState], dict]:
+    def execute(state: RouterState) -> dict:
+        route = route_label or state["chosen_route"]
+        t0 = time.perf_counter()
+        vector = deps.embed(state["question"])
+        t1 = time.perf_counter()
+        rows = retrieve(deps.conn, route, state["ticker"], state["year"], vector, deps.k)
+        t2 = time.perf_counter()
+        context = "\n".join(f"[{q}::{key}] {content}" for q, key, content in rows)
+        resp = deps.answer_client.generate(ANSWER_SYSTEM, f"Evidence:\n{context}\n\nQuestion: {state['question']}",
+                                           max_output_tokens=deps.answer_max_tokens)
         return {
-            "chosen_route": decision.route,
-            "sub_queries": decision.sub_queries
+            "embed_ms": (t1 - t0) * 1000, "db_ms": (t2 - t1) * 1000,
+            "retrieved_evidence_keys": [f"{q}::{key}" for q, key, _ in rows],
+            "raw_output": resp.text, "generation_ms": resp.latency_ms,
+            "gen_input_tokens": resp.input_tokens, "gen_output_tokens": resp.output_tokens,
+            "gen_thinking_tokens": resp.thinking_tokens, "cost_usd": state.get("cost_usd", 0.0) + resp.cost_usd,
+            "settings_used": {**state.get("settings_used", {}), "answer": resp.settings_used},
         }
-    
-    return route_node_naive
+    return execute
 
-def build_naive_graph(llm):
-    workflow = StateGraph(RouterState)
-    workflow.add_node("router", create_naive_router_node(llm))
-    workflow.add_node("pre-filter", pre_filter_node)
-    workflow.add_node("post-filter", post_filter_node)
-    
-    workflow.set_entry_point("router")
-    workflow.add_conditional_edges(
-        "router",
-        lambda state: state["chosen_route"],
-        {
-            "pre-filter": "pre-filter",
-            "post-filter": "post-filter"
-        }
-    )
-    workflow.add_edge("pre-filter", END)
-    workflow.add_edge("post-filter", END)
-    return workflow.compile()
+
+def _deterministic_graph(deps: Deps, decide: Callable[[RouterState], str], routes: dict[str, str]):
+    def route_node(state: RouterState) -> dict:
+        t0 = time.perf_counter()
+        route = decide(state)
+        return {"chosen_route": route, "router_ms": (time.perf_counter() - t0) * 1000, "route_parse_failure": False,
+                "cost_usd": 0.0}
+
+    g = StateGraph(RouterState)
+    g.add_node("router", route_node)
+    for node in set(routes.values()):
+        g.add_node(node, make_execute_node(deps))
+        g.add_edge(node, END)
+    g.set_entry_point("router")
+    g.add_conditional_edges("router", lambda s: s["chosen_route"], {r: r for r in routes})
+    return g.compile()
+
+
+def build_decision_matrix_graph(thresholds_dict: dict, deps: Deps):
+    routes = {"pre-filter": "pre-filter", "post-filter": "post-filter", "iterative-scan": "iterative-scan"}
+    return _deterministic_graph(
+        deps, lambda s: get_routing_decision(s["correlation_level"], s["estimated_selectivity"], thresholds_dict), routes)
+
+
+def build_policy_v2_graph(deps: Deps):
+    routes = {"exact": "exact", "iterative-relaxed": "iterative-relaxed"}
+    return _deterministic_graph(deps, lambda s: get_routing_decision_v2(s["estimated_selectivity"]), routes)
+
+
+def build_naive_graph(deps: Deps):
+    def route_node(state: RouterState) -> dict:
+        resp = deps.router_client.generate(NAIVE_ROUTER_SYSTEM, f"Question: {state['question']}",
+                                           max_output_tokens=deps.router_max_tokens, json_mode=True)
+        data, err = validate_naive_route(resp.text)
+        out = {"router_raw": resp.text, "router_ms": resp.latency_ms, "router_input_tokens": resp.input_tokens,
+               "router_output_tokens": resp.output_tokens, "router_thinking_tokens": resp.thinking_tokens,
+               "cost_usd": resp.cost_usd, "settings_used": {"router": resp.settings_used}}
+        if data is None:
+            return {**out, "chosen_route": "", "route_parse_failure": True, "router_reason": f"PARSE FAILURE: {err}"}
+        return {**out, "chosen_route": data["route"], "route_parse_failure": False, "router_reason": data["reason"]}
+
+    g = StateGraph(RouterState)
+    g.add_node("router", route_node)
+    for node in NAIVE_ROUTES:
+        g.add_node(node, make_execute_node(deps))
+        g.add_edge(node, END)
+    g.set_entry_point("router")
+    g.add_conditional_edges("router", lambda s: s["chosen_route"] if not s["route_parse_failure"] else "__end__",
+                            {**{r: r for r in NAIVE_ROUTES}, "__end__": END})
+    return g.compile()

@@ -1,0 +1,4 @@
+{
+  "T": 0.1,
+  "frozen": "policy_v2 (T=0.1) frozen in commit fe06e9b; not re-tuned on held-out data (PHASE_A_HOLDOUT_PROTOCOL.md)"
+}

@@ -1,12 +1,6 @@
 import unittest
 import unittest.mock
-from .router import (
-    get_routing_decision,
-    build_decision_matrix_graph,
-    build_naive_graph,
-    MockChatModel,
-    NaiveRouteDecision
-)
+from src.phase_b_router.policy import get_routing_decision
 
 class TestAgenticRouter(unittest.TestCase):
     
@@ -70,87 +64,6 @@ class TestAgenticRouter(unittest.TestCase):
         thresholds_dict = {}
         with self.assertRaises(ValueError):
             get_routing_decision("hm_clothes_missing", 0.10, thresholds_dict)
-
-    @unittest.mock.patch("src.phase_b_router.router.execute_vector_search")
-    def test_langgraph_decision_matrix(self, mock_exec):
-        mock_exec.side_effect = lambda state, route: f"{route} executed"
-        thresholds_dict = {
-            "hm_clothes_100": {
-                "recall_danger_zones": [(0.4705, 1.0)],
-                "latency_danger_zones": [(0.2037, 0.2037)]
-            }
-        }
-        graph = build_decision_matrix_graph(thresholds_dict)
-        
-        # Should route to pre-filter (safe)
-        state1 = {
-            "question": "test1",
-            "estimated_selectivity": 0.10,
-            "correlation_level": "hm_clothes_100",
-            "chosen_route": "",
-            "final_answer": "",
-            "sub_queries": []
-        }
-        res1 = graph.invoke(state1)
-        self.assertEqual(res1["chosen_route"], "pre-filter")
-        self.assertEqual(res1["final_answer"], "pre-filter executed")
-        
-        # Should route to post-filter (due to latency danger zone)
-        state2 = {
-            "question": "test2",
-            "estimated_selectivity": 0.2037,
-            "correlation_level": "hm_clothes_100",
-            "chosen_route": "",
-            "final_answer": "",
-            "sub_queries": []
-        }
-        res2 = graph.invoke(state2)
-        self.assertEqual(res2["chosen_route"], "post-filter")
-        self.assertEqual(res2["final_answer"], "post-filter executed")
-
-    @unittest.mock.patch("src.phase_b_router.router.execute_vector_search")
-    def test_naive_router_multi_query(self, mock_exec):
-        mock_exec.side_effect = lambda state, route: f"{route} executed"
-        # Mock LLM returning pre-filter and 2 sub-queries (Item 10)
-        mock_llm = MockChatModel(
-            NaiveRouteDecision(
-                route="pre-filter", 
-                sub_queries=["What is the color?", "What is the size?"]
-            )
-        )
-        
-        graph = build_naive_graph(mock_llm)
-        state = {
-            "question": "What is the color and size of this shirt?",
-            "estimated_selectivity": 0.0,
-            "correlation_level": "",
-            "chosen_route": "",
-            "final_answer": "",
-            "sub_queries": []
-        }
-        
-        res = graph.invoke(state)
-        self.assertEqual(res["chosen_route"], "pre-filter")
-        self.assertEqual(res["final_answer"], "pre-filter executed")
-        self.assertEqual(len(res["sub_queries"]), 2)
-        self.assertEqual(res["sub_queries"][0], "What is the color?")
-
-    @unittest.mock.patch.dict("os.environ", {}, clear=True)
-    @unittest.mock.patch("src.phase_b_router.router.psycopg2")
-    @unittest.mock.patch("src.phase_b_router.router.get_embedding_client")
-    def test_missing_ai_env_vars(self, mock_get_emb, mock_psycopg):
-        from .router import execute_vector_search
-        
-        mock_emb = unittest.mock.Mock()
-        mock_emb.embed_query.return_value = [0.0] * 768
-        mock_get_emb.return_value = mock_emb
-        
-        mock_cursor = mock_psycopg.connect.return_value.cursor.return_value.__enter__.return_value
-        mock_cursor.fetchall.return_value = []
-        
-        with self.assertRaises(RuntimeError) as ctx:
-            execute_vector_search({"question": "test", "chosen_route": "pre-filter", "final_answer": "", "sub_queries": [], "ticker": "A", "year": "2020"}, "pre-filter")
-        self.assertIn("must be configured", str(ctx.exception))
 
 if __name__ == "__main__":
     unittest.main()

@@ -104,3 +104,7 @@ lo4, lo5, gap1-gap3, idx1-idx3) were written after the resume, with
 shared_buffers cold after recovery; they are flagged `post_resume` in
 `reports/arms_results_2026-10-10.md`. No verdict or route in that report
 depends on the post-resume latencies.
+
+## 2026-10-12 — H7 decision (policy_v2 held-out result)
+
+Held-out result accepted as measured: policy_v2 24/25; H7 FAILED on hm_clothes_25 x ho3 (forced-exact 528.4 ms). Probable CPU contention from a Jupyter kernel is noted as an inference, not proven. T was not changed.

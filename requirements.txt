@@ -16,6 +16,8 @@ seaborn
 langgraph
 langchain
 langchain-core
+langchain-openai
+langchain-community
 
 # Evaluation / Utilities
 requests
@@ -24,3 +26,6 @@ nbformat
 notebook
 ipykernel
 scikit-learn
+scipy
+pytest
+google-auth

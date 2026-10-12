@@ -1,242 +1,273 @@
-import json
+"""Phase D FinQA comparison runner: Decision Matrix vs policy_v2 vs naive LLM router.
+
+No mock, fallback or random behaviour. Any failure is logged to the row and then raised (the run
+stops); a failure is never replaced by a default answer, route or cost. The only recorded
+non-exception outcome is a naive-router output that fails its JSON schema (route_parse_failure,
+counted; that query/arm gets no retrieval and is scored wrong).
+
+Example (local):
+  python -m src.phase_d_validation.comparison_runner --model qwen2.5:7b \
+      --correlation-level hm_clothes_0 --thresholds outputs/thresholds.json \
+      --output-dir outputs/phase_d_local_2026-10-12 --passes 2
+
+Paid backends additionally need --allow-paid, --budget-usd and a verified config/prices.json entry.
+"""
+
+from __future__ import annotations
+
+import argparse
 import csv
+import hashlib
+import json
+import platform
+import subprocess
+import sys
 import time
-import os
+import traceback
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, Any
 
-try:
-    from langchain_community.callbacks import get_openai_callback
-except ImportError:
-    get_openai_callback = None
-
-from src.phase_d_validation.finqa_loader import get_frozen_filepath, load_finqa_subset
-from src.phase_b_router.router import (
-    build_decision_matrix_graph,
-    build_naive_graph,
-    MockChatModel
-)
-
-import re
-import math
 import psycopg2
+import requests
+from pgvector.psycopg2 import register_vector
+
 from src import db_settings
+from src.phase_b_router.router import (ANSWER_SYSTEM, NAIVE_ROUTER_SYSTEM, Deps, build_decision_matrix_graph,
+                                       build_naive_graph, build_policy_v2_graph)
+from src.phase_d_validation.finqa_loader import get_frozen_filepath, load_finqa_subset
+from src.phase_d_validation.llm_client import BudgetExceeded, load_generation_config, make_client
+from src.phase_d_validation.scoring import score_answer
+from src.utils.finqa_utils import exact_selectivity, extract_ticker_year
 
-def parse_financial_number(s: str) -> float:
-    s = s.replace(",", "").replace("$", "").strip()
-    if not s:
-        return float('nan')
-        
-    # Handle accounting negatives (5.2) -> -5.2
-    if s.startswith("(") and s.endswith(")"):
-        s = "-" + s[1:-1].strip()
-        
-    if s.endswith("%"):
-        try:
-            return float(s[:-1]) / 100.0
-        except:
-            return float('nan')
-    if "/" in s:
-        parts = s.split("/")
-        if len(parts) == 2:
-            try:
-                return float(parts[0]) / float(parts[1])
-            except:
-                return float('nan')
-    try:
-        return float(s)
-    except:
-        return float('nan')
+ARMS = ("dm", "v2", "naive")
+ARM_NAMES = {"dm": "decision_matrix", "v2": "policy_v2", "naive": "naive_llm"}
+CSV_FIELDS = ["run_id", "pass", "arm", "query_id", "ticker", "year", "selectivity", "route", "router_model", "answer_model",
+              "retrieved_evidence_keys", "gold_evidence_keys", "retrieval_hit", "raw_output", "parsed_answer", "gold_answer",
+              "correct", "parse_failure", "route_parse_failure", "router_raw", "router_reason", "input_tokens",
+              "output_tokens", "thinking_tokens", "router_input_tokens", "router_output_tokens", "cost_usd", "embed_ms",
+              "db_ms", "router_ms", "generation_ms", "total_ms", "error"]
 
-def is_match(pred: str, gold: str, rel_tol: float = 0.01) -> bool:
-    p_val = parse_financial_number(pred)
-    g_val = parse_financial_number(gold)
-    
-    if math.isnan(p_val) or math.isnan(g_val):
-        # Boolean fallback
-        p_clean = pred.lower().strip()
-        g_clean = gold.lower().strip()
-        if g_clean in ("yes", "no", "true", "false"):
-            return p_clean == g_clean
-        return False
-        
-    return math.isclose(p_val, g_val, rel_tol=rel_tol)
 
-def get_corpus_size(conn) -> int:
-    with conn.cursor() as cur:
-        cur.execute("SELECT COUNT(*) FROM finqa_evidence;")
-        return cur.fetchone()[0]
+def git(*a: str) -> str:
+    return subprocess.run(["git", *a], capture_output=True, text=True, check=True).stdout.strip()
 
-def get_matching_rows(conn, ticker: str, year: str) -> int:
-    with conn.cursor() as cur:
-        cur.execute("SELECT COUNT(*) FROM finqa_evidence WHERE metadata->>'ticker' = %s AND metadata->>'year' = %s;", (ticker, year))
-        return cur.fetchone()[0]
 
-from src.utils.finqa_utils import extract_ticker_year
+def sha256_file(p: str | Path) -> str:
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
-def run_comparison(target_models: list = None, correlation_level: str | None = None):
-    # Default models for multi-model answer generation testing
-    if not target_models:
-        target_models = [
-            "openai/gpt-5.6-sol",
-            "meta-llama/llama-3.1-8b-instruct",
-            "google/gemini-3-flash"
-        ]
-        
-    # 1. Load Data
-    fp = get_frozen_filepath()
-    queries = load_finqa_subset(fp)
-    
-    # 2. Load Thresholds
-    thresholds_path = Path("outputs/thresholds.json")
-    if not thresholds_path.exists():
-        raise FileNotFoundError("thresholds.json not found. Run threshold_detector.py first.")
-    with open(thresholds_path) as f:
-        thresholds_dict = json.load(f)
 
-    # 3. Setup LLM for Naive Router (ROUTING fixed to one model)
-    ai_api_key = os.getenv("AI_API_KEY")
-    ai_api_base = os.getenv("AI_API_BASE")
-    if not ai_api_key:
-        raise RuntimeError("AI_API_KEY is required for the API comparison runner; mock answers are disabled.")
-    if not correlation_level:
-        correlation_level = os.getenv("CORRELATION_LEVEL", "").strip()
-    if not correlation_level:
-        raise RuntimeError("correlation_level must be provided explicitly; refusing to default silently.")
-    if ai_api_key:
-        from langchain_openai import ChatOpenAI
-        routing_llm = ChatOpenAI(
-            model="openai/gpt-5.6-sol", 
-            api_key=ai_api_key, 
-            base_url=ai_api_base if ai_api_base else None,
-            temperature=0
-        )
+def ollama_digest(model: str, base: str = "http://127.0.0.1:11434") -> dict:
+    tags = requests.get(f"{base}/api/tags", timeout=10)
+    tags.raise_for_status()
+    for m in tags.json()["models"]:
+        if m["name"] == model:
+            ver = requests.get(f"{base}/api/version", timeout=10).json().get("version")
+            return {"name": m["name"], "digest": m["digest"], "ollama_version": ver, "details": m.get("details")}
+    raise RuntimeError(f"model {model!r} not installed in Ollama")
 
-    # 4. Build Graphs
-    naive_graph = build_naive_graph(routing_llm)
-    dm_graph = build_decision_matrix_graph(thresholds_dict)
 
-    # DB Connection for Selectivity
-    conn = psycopg2.connect(**db_settings())
-    total_corpus_rows = get_corpus_size(conn)
-    if total_corpus_rows == 0:
-        raise RuntimeError("finqa_evidence table is empty. Please run finqa_db_setup.py first.")
+def make_embedder(model: str, base: str = "http://127.0.0.1:11434"):
+    def embed(text: str) -> list:
+        r = requests.post(f"{base}/api/embed", json={"model": model, "input": text}, timeout=120)
+        r.raise_for_status()
+        return r.json()["embeddings"][0]
+    return embed
 
-    # 4.5 Coverage Check
-    print("Running pre-flight Coverage Check...")
+
+def coverage_check(conn, queries) -> None:
     with conn.cursor() as cur:
         for row in queries:
-            q_id = row['id']
-            keys = [k.strip() for k in row['gold_evidence_keys'].split("|") if k.strip()]
-            for k in keys:
-                cur.execute("SELECT 1 FROM finqa_evidence WHERE query_id = %s AND evidence_key = %s;", (q_id, k))
+            for k in (x.strip() for x in row["gold_evidence_keys"].split("|") if x.strip()):
+                cur.execute("SELECT 1 FROM finqa_evidence WHERE query_id = %s AND evidence_key = %s", (row["id"], k))
                 if not cur.fetchone():
-                    raise RuntimeError(f"Coverage Check Failed: evidence_key '{k}' for query_id '{q_id}' not found in DB!")
-    print("Coverage Check passed! All gold evidence is present.")
+                    raise RuntimeError(f"coverage check failed: gold key {k!r} of {row['id']!r} not in DB")
 
-    # 5. Execute & Compare over models
-    for model_name in target_models:
-        print(f"\n==========================================")
-        print(f"Running validation pass with Answer Model: {model_name}")
-        print(f"==========================================")
-        
-        # Override the AI_MODEL so router.py picks it up for the generation step
-        os.environ["AI_MODEL"] = model_name
-        
-        results = []
-        
-        for row in queries:
-            q_id = row['id']
-            question = row['question']
-            gold_answer = row['answer']
-            
-            ticker, year = extract_ticker_year(q_id)
-            
-            matching_rows = get_matching_rows(conn, ticker, year)
-            estimated_sel = matching_rows / total_corpus_rows if total_corpus_rows > 0 else 0.0
-            corr_level = correlation_level
-            
-            state_input = {
-                "query_id": q_id,
-                "ticker": ticker,
-                "year": year,
-                "gold_evidence_keys": [k.strip() for k in row['gold_evidence_keys'].split("|") if k.strip()],
-                "question": question,
-                "estimated_selectivity": estimated_sel,
-                "correlation_level": corr_level,
-                "sub_queries": []
-            }
 
-            def run_graph(graph_obj, state):
-                latency = 0
-                cost = 0
-                route = ""
-                is_correct = 0
-                try:
-                    start = time.time()
-                    if ai_api_key and get_openai_callback:
-                        with get_openai_callback() as cb:
-                            res = graph_obj.invoke(dict(state)) # Defensive copy
-                            if cb.total_tokens > 0 and cb.total_cost == 0.0:
-                                cost = (cb.prompt_tokens / 1e6 * 0.15) + (cb.completion_tokens / 1e6 * 0.60)
-                            else:
-                                cost = cb.total_cost
-                    else:
-                        res = graph_obj.invoke(dict(state)) # Defensive copy
-                        
-                    latency = (time.time() - start) * 1000
-                    route = res.get("chosen_route", "error")
-                    final_answer = res.get("final_answer", "")
-                    is_correct = 1 if is_match(final_answer, gold_answer, 0.01) else 0
-                except Exception as e:
-                    print(f"Error for query {q_id}: {e}")
-                    route = "error"
-                return route, latency, cost, is_correct
+def build_record(run_id, pass_no, arm, row, gold_keys, sel, state, total_ms, answer_model, router_model, error):
+    score = None
+    parsed = None
+    gold = row["answer"]
+    route_fail = bool(state.get("route_parse_failure"))
+    raw = state.get("raw_output")
+    if error is None and not route_fail:
+        score = score_answer(raw, gold)
+        parsed = score.parsed
+    retrieved = state.get("retrieved_evidence_keys")
+    hit = None
+    if retrieved is not None:
+        hit = int(all(f"{row['id']}::{k}" in retrieved for k in gold_keys))
+    rec = {
+        "run_id": run_id, "pass": pass_no, "arm": ARM_NAMES[arm], "query_id": row["id"],
+        "ticker": state["ticker"], "year": state["year"], "selectivity": sel, "route": state.get("chosen_route") or None,
+        "router_model": router_model if arm == "naive" else None, "answer_model": answer_model,
+        "retrieved_evidence_keys": retrieved, "gold_evidence_keys": sorted(gold_keys), "retrieval_hit": hit,
+        "raw_output": raw, "parsed_answer": parsed, "gold_answer": gold,
+        # a naive-router schema failure yields no answer: scored wrong, flagged as route_parse_failure
+        "correct": None if error else int(bool(score and score.correct)),
+        "parse_failure": int(bool(score and score.parse_failure)), "route_parse_failure": int(route_fail),
+        "router_raw": state.get("router_raw"), "router_reason": state.get("router_reason"),
+        "input_tokens": state.get("gen_input_tokens"), "output_tokens": state.get("gen_output_tokens"),
+        "thinking_tokens": state.get("gen_thinking_tokens"), "router_input_tokens": state.get("router_input_tokens"),
+        "router_output_tokens": state.get("router_output_tokens"), "cost_usd": state.get("cost_usd"),
+        "embed_ms": state.get("embed_ms"), "db_ms": state.get("db_ms"), "router_ms": state.get("router_ms"),
+        "generation_ms": state.get("generation_ms"), "total_ms": total_ms, "error": error,
+        "settings_used": state.get("settings_used"),
+    }
+    return rec
 
-            # --- Run Naive ---
-            naive_route, naive_latency, naive_cost, naive_correct = run_graph(naive_graph, state_input)
 
-            # --- Run Decision Matrix ---
-            dm_route, dm_latency, dm_cost, dm_correct = run_graph(dm_graph, state_input)
+def write_csv(jsonl: Path, csv_path: Path) -> None:
+    rows = [json.loads(l) for l in jsonl.read_text(encoding="utf-8").splitlines() if l.strip()]
+    with csv_path.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CSV_FIELDS, extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: (json.dumps(v) if isinstance(v, (list, dict)) else v) for k, v in r.items()})
 
-            results.append({
-                "id": q_id,
-                "naive_route": naive_route,
-                "naive_latency_ms": naive_latency,
-                "naive_cost_usd": naive_cost,
-                "naive_error": 1 - naive_correct,
-                "dm_route": dm_route,
-                "dm_latency_ms": dm_latency,
-                "dm_cost_usd": dm_cost,
-                "dm_error": 1 - dm_correct
-            })
 
-        # Save Results per model
-        model_safe_name = model_name.replace("/", "_")
-        out_file = Path(f"outputs/phase_d_results_{model_safe_name}.csv")
-        with out_file.open("w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=list(results[0].keys()))
-            writer.writeheader()
-            writer.writerows(results)
-            
-        # Update manifest
-        manifest_path = Path("outputs/phase_d_manifest.json")
-        manifest_data = {}
-        if manifest_path.exists():
-            with open(manifest_path, "r", encoding="utf-8") as mf:
-                manifest_data = json.load(mf)
-        manifest_data[model_safe_name] = model_name
-        with open(manifest_path, "w", encoding="utf-8") as mf:
-            json.dump(manifest_data, mf, indent=2)
-        
-        print(f"Executed 50 queries for {model_name}. Results saved to {out_file}.")
+def run(args: argparse.Namespace) -> Path:
+    out = Path(args.output_dir)
+    if out.exists() and any(out.iterdir()):
+        raise SystemExit(f"{out} exists and is not empty; every run writes to a new folder")
+    out.mkdir(parents=True, exist_ok=True)
+    cfg = load_generation_config()
+    router_model = args.router_model or args.model
+    arms = [a for a in args.arms.split(",")]
+    if any(a not in ARMS for a in arms):
+        raise SystemExit(f"--arms must be a subset of {ARMS}")
 
-    conn.close()
+    answer_client = make_client(args.model, allow_paid=args.allow_paid, budget_usd=args.budget_usd, config=cfg)
+    router_client = answer_client if router_model == args.model else make_client(
+        router_model, allow_paid=args.allow_paid, budget_usd=args.budget_usd, config=cfg)
+
+    subset = Path(args.subset) if args.subset else get_frozen_filepath()
+    queries = load_finqa_subset(subset)
+    if args.query_ids:
+        wanted = args.query_ids.split(",")
+        queries = [q for q in queries if q["id"] in wanted]
+        if len(queries) != len(wanted):
+            raise SystemExit("some --query-ids not in the frozen subset")
+    elif args.limit:
+        queries = queries[: args.limit]
+    thresholds = json.loads(Path(args.thresholds).read_text(encoding="utf-8")) if "dm" in arms else None
+
+    conn = psycopg2.connect(**db_settings())
+    conn.autocommit = True
+    register_vector(conn)
+    with conn.cursor() as cur:
+        cur.execute(f"SET hnsw.ef_search = {int(cfg['retrieval']['ef_search'])}")
+        cur.execute("SELECT COUNT(*), COUNT(DISTINCT (metadata->>'ticker')||'/'||(metadata->>'year')) FROM finqa_evidence")
+        rows_total, groups = cur.fetchone()
+    if args.expect_rows is not None and rows_total != args.expect_rows:
+        raise SystemExit(f"finqa_evidence has {rows_total} rows, expected {args.expect_rows}")
+    coverage_check(conn, queries)
+
+    embed_cfg = cfg["embedding"]
+    deps = Deps(conn, make_embedder(embed_cfg["model"]), router_client, answer_client, cfg["retrieval"]["k"],
+                cfg["roles"]["router_max_output_tokens"], cfg["roles"]["answer_max_output_tokens"])
+    graphs = {}
+    if "dm" in arms:
+        graphs["dm"] = build_decision_matrix_graph(thresholds, deps)
+    if "v2" in arms:
+        graphs["v2"] = build_policy_v2_graph(deps)
+    if "naive" in arms:
+        graphs["naive"] = build_naive_graph(deps)
+
+    # Untimed warm-up (loads the local model / embedder into memory) so the first logged row is not a cold start.
+    # Not written to results.jsonl; recorded in run_meta.json. Skipped for paid backends (no cold-load effect worth paying for).
+    warmup = None
+    if answer_client.backend == "ollama":
+        w0 = time.perf_counter()
+        deps.embed("warm-up")
+        answer_client.generate("Reply with the single word OK.", "warm-up", max_output_tokens=8)
+        if router_client is not answer_client:
+            router_client.generate("Reply with the single word OK.", "warm-up", max_output_tokens=8)
+        warmup = {"seconds": time.perf_counter() - w0}
+
+    run_id = out.name
+    used = ["src/phase_b_router/policy.py", "src/phase_b_router/policy_v2.py", "src/phase_b_router/router.py",
+            "src/phase_d_validation/comparison_runner.py", "src/phase_d_validation/llm_client.py",
+            "src/phase_d_validation/scoring.py", "config/generation.json", "config/policy_v2.json", str(subset)]
+    if thresholds is not None:
+        used.append(args.thresholds)
+    dirty = git("status", "--porcelain", "--", *[u for u in used if not u.startswith("outputs")])
+    meta = {
+        "run_id": run_id, "argv": sys.argv, "commit": git("rev-parse", "HEAD"), "uncommitted_used_files": dirty or None,
+        "start_utc": datetime.now(timezone.utc).isoformat(), "end_utc": None, "host": platform.platform(),
+        "python": sys.version, "answer_model": args.model, "router_model": router_model, "arms": arms, "passes": args.passes,
+        "backend": answer_client.backend, "ollama": ollama_digest(args.model) if answer_client.backend == "ollama" else None,
+        "embedding_model": ollama_digest(embed_cfg["model"]), "generation_config": cfg,
+        "answer_system_prompt": ANSWER_SYSTEM, "naive_router_system_prompt": NAIVE_ROUTER_SYSTEM,
+        "finqa_rows": rows_total, "finqa_ticker_year_groups": groups, "n_queries": len(queries),
+        "correlation_level": args.correlation_level, "warmup": warmup,
+        "arm_order": "arms rotated by query index (query i starts at arm i mod n_arms), same rotation in every pass",
+        "file_sha256": {u: sha256_file(u) for u in used},
+    }
+    (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+
+    jsonl = out / "results.jsonl"
+    try:
+        with jsonl.open("w", encoding="utf-8") as fh:
+            for pass_no in range(1, args.passes + 1):
+                for qi, row in enumerate(queries, 1):
+                    qid = row["id"]
+                    gold_keys = {k.strip() for k in row["gold_evidence_keys"].split("|") if k.strip()}
+                    ticker, year = extract_ticker_year(qid)
+                    sel, _, _ = exact_selectivity(conn, ticker, year)
+                    shift = (qi - 1) % len(arms)
+                    for arm in arms[shift:] + arms[:shift]:
+                        state = {"query_id": qid, "ticker": ticker, "year": year, "question": row["question"],
+                                 "gold_evidence_keys": sorted(gold_keys), "estimated_selectivity": sel,
+                                 "correlation_level": args.correlation_level or ""}
+                        err, final = None, dict(state)
+                        t0 = time.perf_counter()
+                        try:
+                            final.update(graphs[arm].invoke(dict(state)))
+                        except Exception as exc:  # logged to the row, then re-raised below: no default substitution
+                            err = f"{type(exc).__name__}: {exc}"
+                        total_ms = (time.perf_counter() - t0) * 1000
+                        rec = build_record(run_id, pass_no, arm, row, gold_keys, sel, final, total_ms, args.model,
+                                           router_model, err)
+                        rec["cumulative_cost_usd"] = answer_client.spent_usd + (
+                            router_client.spent_usd if router_client is not answer_client else 0.0)
+                        fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                        fh.flush()
+                        if err:
+                            (out / "error.log").write_text(err + "\n" + traceback.format_exc(), encoding="utf-8")
+                            raise RuntimeError(f"stopped: pass {pass_no} {qid} arm {arm}: {err}")
+                        print(f"[pass {pass_no} {qi}/{len(queries)}] {arm:5s} {qid} route={rec['route']} correct={rec['correct']}")
+    finally:
+        meta["end_utc"] = datetime.now(timezone.utc).isoformat()
+        (out / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+        if jsonl.exists():
+            write_csv(jsonl, out / "results.csv")
+        conn.close()
+    return jsonl
+
+
+def main() -> None:
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--model", required=True, help="answer model (a key of config/generation.json)")
+    p.add_argument("--router-model", default=None, help="naive-router model; default = --model")
+    p.add_argument("--arms", default="dm,v2,naive")
+    p.add_argument("--correlation-level", default=None, help="threshold-table tier for the Decision Matrix arm (required with dm)")
+    p.add_argument("--thresholds", default="outputs/thresholds.json")
+    p.add_argument("--subset", default=None)
+    p.add_argument("--limit", type=int, default=None)
+    p.add_argument("--query-ids", default=None, help="comma-separated ids (smoke tests)")
+    p.add_argument("--passes", type=int, default=1)
+    p.add_argument("--output-dir", required=True)
+    p.add_argument("--expect-rows", type=int, default=None)
+    p.add_argument("--allow-paid", action="store_true")
+    p.add_argument("--budget-usd", type=float, default=None)
+    args = p.parse_args()
+    if "dm" in args.arms.split(",") and not args.correlation_level:
+        p.error("--correlation-level is required when the dm arm is run (no silent default)")
+    try:
+        print(f"Saved results to {run(args)}")
+    except BudgetExceeded as exc:
+        raise SystemExit(f"ABORTED (budget): {exc}")
+
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--models", nargs="+", help="List of model names to test")
-    parser.add_argument("--correlation-level", required=False, help="Explicit threshold-table correlation tier")
-    args = parser.parse_args()
-    run_comparison(target_models=args.models, correlation_level=args.correlation_level)
+    main()
