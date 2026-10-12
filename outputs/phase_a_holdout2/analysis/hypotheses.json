@@ -1,0 +1,235 @@
+{
+  "policy_pass_counts_25": {
+    "P1": 10,
+    "P4": 9,
+    "P5": 7,
+    "P6": 25,
+    "policy_v2": 25
+  },
+  "policy_pass_counts_confirmatory_15": {
+    "P1": 1,
+    "P4": 0,
+    "P5": 7,
+    "P6": 15,
+    "policy_v2": 15
+  },
+  "H10": {
+    "holds": true,
+    "n_pass": 25,
+    "failing": []
+  },
+  "H11": {
+    "h2a": {
+      "holds": false,
+      "n_fail": 0,
+      "exploratory": true,
+      "routes": {
+        "hm_clothes_0": "forced-exact",
+        "hm_clothes_25": "forced-exact",
+        "hm_clothes_50": "forced-exact",
+        "hm_clothes_75": "forced-exact",
+        "hm_clothes_100": "forced-exact"
+      },
+      "failing": []
+    },
+    "h2b": {
+      "holds": true,
+      "n_fail": 1,
+      "exploratory": true,
+      "routes": {
+        "hm_clothes_0": "forced-exact",
+        "hm_clothes_25": "forced-exact",
+        "hm_clothes_50": "forced-exact",
+        "hm_clothes_75": "forced-exact",
+        "hm_clothes_100": "forced-exact"
+      },
+      "failing": [
+        [
+          "hm_clothes_75",
+          "forced-exact",
+          "latency 523 ms"
+        ]
+      ]
+    },
+    "h2c": {
+      "holds": true,
+      "n_fail": 4,
+      "exploratory": false,
+      "routes": {
+        "hm_clothes_0": "forced-hnsw",
+        "hm_clothes_25": "forced-exact",
+        "hm_clothes_50": "forced-hnsw",
+        "hm_clothes_75": "forced-hnsw",
+        "hm_clothes_100": "forced-hnsw"
+      },
+      "failing": [
+        [
+          "hm_clothes_25",
+          "forced-exact",
+          "latency 615 ms"
+        ],
+        [
+          "hm_clothes_50",
+          "forced-hnsw",
+          "recall 0.885"
+        ],
+        [
+          "hm_clothes_75",
+          "forced-hnsw",
+          "recall 0.775"
+        ],
+        [
+          "hm_clothes_100",
+          "forced-hnsw",
+          "recall 0.660"
+        ]
+      ]
+    },
+    "h2d": {
+      "holds": true,
+      "n_fail": 5,
+      "exploratory": false,
+      "routes": {
+        "hm_clothes_0": "forced-exact",
+        "hm_clothes_25": "forced-exact",
+        "hm_clothes_50": "forced-exact",
+        "hm_clothes_75": "forced-exact",
+        "hm_clothes_100": "forced-hnsw"
+      },
+      "failing": [
+        [
+          "hm_clothes_0",
+          "forced-exact",
+          "latency 698 ms"
+        ],
+        [
+          "hm_clothes_25",
+          "forced-exact",
+          "latency 686 ms"
+        ],
+        [
+          "hm_clothes_50",
+          "forced-exact",
+          "latency 698 ms"
+        ],
+        [
+          "hm_clothes_75",
+          "forced-exact",
+          "latency 785 ms"
+        ],
+        [
+          "hm_clothes_100",
+          "forced-hnsw",
+          "recall 0.630"
+        ]
+      ]
+    },
+    "h2e": {
+      "holds": true,
+      "n_fail": 5,
+      "exploratory": false,
+      "routes": {
+        "hm_clothes_0": "forced-exact",
+        "hm_clothes_25": "forced-exact",
+        "hm_clothes_50": "forced-exact",
+        "hm_clothes_75": "forced-exact",
+        "hm_clothes_100": "forced-hnsw"
+      },
+      "failing": [
+        [
+          "hm_clothes_0",
+          "forced-exact",
+          "latency 814 ms"
+        ],
+        [
+          "hm_clothes_25",
+          "forced-exact",
+          "latency 828 ms"
+        ],
+        [
+          "hm_clothes_50",
+          "forced-exact",
+          "latency 811 ms"
+        ],
+        [
+          "hm_clothes_75",
+          "forced-exact",
+          "latency 846 ms"
+        ],
+        [
+          "hm_clothes_100",
+          "forced-hnsw",
+          "recall 0.730"
+        ]
+      ]
+    }
+  },
+  "H12": {
+    "holds": true,
+    "n_cells": 15,
+    "n_latency_fail": 15,
+    "not_failing": [],
+    "exploratory_cells": [
+      [
+        "hm_clothes_0",
+        "h2a",
+        454.7,
+        false
+      ],
+      [
+        "hm_clothes_0",
+        "h2b",
+        490.7,
+        false
+      ],
+      [
+        "hm_clothes_25",
+        "h2a",
+        437.4,
+        false
+      ],
+      [
+        "hm_clothes_25",
+        "h2b",
+        478.4,
+        false
+      ],
+      [
+        "hm_clothes_50",
+        "h2a",
+        435.7,
+        false
+      ],
+      [
+        "hm_clothes_50",
+        "h2b",
+        485.8,
+        false
+      ],
+      [
+        "hm_clothes_75",
+        "h2a",
+        447.2,
+        false
+      ],
+      [
+        "hm_clothes_75",
+        "h2b",
+        523.4,
+        true
+      ],
+      [
+        "hm_clothes_100",
+        "h2a",
+        466.0,
+        false
+      ],
+      [
+        "hm_clothes_100",
+        "h2b",
+        483.9,
+        false
+      ]
+    ]
+  }
+}

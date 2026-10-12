@@ -1,0 +1,75 @@
+{
+  "seed": 20261017,
+  "samples": [
+    {
+      "event": "run_start",
+      "utc": "2026-10-12T10:51:42.990372+00:00",
+      "cpu_total_pct_3_samples": [
+        29.840396,
+        15.293208,
+        12.220831
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1094},{\"Name\":\"claude\",\"cpu_s\":854},{\"Name\":\"claude\",\"cpu_s\":602},{\"Name\":\"chrome\",\"cpu_s\":293},{\"Name\":\"chrome\",\"cpu_s\":227}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T10:51:50.104061+00:00",
+      "cpu_total_pct_3_samples": [
+        38.529279,
+        17.703713,
+        21.168521
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1095},{\"Name\":\"claude\",\"cpu_s\":854},{\"Name\":\"claude\",\"cpu_s\":604},{\"Name\":\"chrome\",\"cpu_s\":293},{\"Name\":\"chrome\",\"cpu_s\":227}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T11:01:50.007349+00:00",
+      "cpu_total_pct_3_samples": [
+        18.309869,
+        27.755755,
+        17.34479
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1137},{\"Name\":\"claude\",\"cpu_s\":854},{\"Name\":\"claude\",\"cpu_s\":604},{\"Name\":\"chrome\",\"cpu_s\":347},{\"Name\":\"chrome\",\"cpu_s\":254}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T11:12:12.125154+00:00",
+      "cpu_total_pct_3_samples": [
+        64.910365,
+        30.96097,
+        26.623322
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1188},{\"Name\":\"claude\",\"cpu_s\":854},{\"Name\":\"claude\",\"cpu_s\":604},{\"Name\":\"chrome\",\"cpu_s\":393},{\"Name\":\"chrome\",\"cpu_s\":284}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T11:21:48.409799+00:00",
+      "cpu_total_pct_3_samples": [
+        3.426186,
+        4.634377,
+        7.651818
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1229},{\"Name\":\"claude\",\"cpu_s\":857},{\"Name\":\"claude\",\"cpu_s\":613},{\"Name\":\"chrome\",\"cpu_s\":431},{\"Name\":\"chrome\",\"cpu_s\":313}]"
+    },
+    {
+      "event": "table_start_warmup",
+      "utc": "2026-10-12T11:31:41.741065+00:00",
+      "cpu_total_pct_3_samples": [
+        12.094923,
+        11.159152,
+        8.305031
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1279},{\"Name\":\"claude\",\"cpu_s\":859},{\"Name\":\"claude\",\"cpu_s\":619},{\"Name\":\"chrome\",\"cpu_s\":460},{\"Name\":\"chrome\",\"cpu_s\":337}]"
+    },
+    {
+      "event": "run_end",
+      "utc": "2026-10-12T11:41:17.235011+00:00",
+      "cpu_total_pct_3_samples": [
+        5.029615,
+        5.568626,
+        2.197846
+      ],
+      "top5_cumulative_cpu": "[{\"Name\":\"com.docker.backend\",\"cpu_s\":1330},{\"Name\":\"claude\",\"cpu_s\":865},{\"Name\":\"claude\",\"cpu_s\":630},{\"Name\":\"chrome\",\"cpu_s\":501},{\"Name\":\"chrome\",\"cpu_s\":380}]"
+    }
+  ]
+}

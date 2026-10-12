@@ -1,0 +1,610 @@
+{
+  "checked_at": "2026-10-12T10:51:45.817456+00:00",
+  "git_commit": "c01f2dacd93a6c60b87269bc6fd9253c3871484b",
+  "n_checks": 75,
+  "n_failed": 0,
+  "all_passed": true,
+  "failures": [],
+  "checks": [
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2a",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_0_graphical_appearance_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2a",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2a",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2b",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_0_garment_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2b",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2b",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2c",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_0_perceived_colour_master_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2c",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2c",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2d",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_0_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2d",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2d",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2e",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_0_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2e",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "h2e",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_0_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2a",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_25_graphical_appearance_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2a",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2a",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2b",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_25_garment_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2b",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2b",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2c",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_25_perceived_colour_master_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2c",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2c",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2d",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_25_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2d",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2d",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2e",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_25_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2e",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_25",
+      "filter_id": "h2e",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_25_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2a",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_50_graphical_appearance_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2a",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2a",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2b",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_50_garment_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2b",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2b",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2c",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_50_perceived_colour_master_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2c",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2c",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2d",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_50_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2d",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2d",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2e",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_50_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2e",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_50",
+      "filter_id": "h2e",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_50_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2a",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_75_graphical_appearance_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2a",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2a",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2b",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_75_garment_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2b",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2b",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2c",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_75_perceived_colour_master_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2c",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2c",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2d",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_75_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2d",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2d",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2e",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_75_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2e",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "h2e",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_75_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2a",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_100_graphical_appearance_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2a",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2a",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2b",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_100_garment_group_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2b",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2b",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2c",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_100_perceived_colour_master_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2c",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2c",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2d",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_100_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2d",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2d",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2e",
+      "arm": "forced-exact",
+      "scan_node": "Bitmap Heap Scan",
+      "index_used": "hm_clothes_100_product_type_name_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2e",
+      "arm": "forced-hnsw",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "h2e",
+      "arm": "iterative-relaxed",
+      "scan_node": "Index Scan",
+      "index_used": "hm_clothes_100_embedding_idx",
+      "ok": true
+    }
+  ]
+}
