@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 210,
+  "n_files": 217,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -842,6 +842,34 @@
     "src/phase_c_analysis/amendment6_partb.py": {
       "sha256": "020a8b9bad234e97c9f03601383cfd83203af5db182f81760eaecbdcb1cbbe34",
       "bytes": 8486
+    },
+    "outputs/phase_d_amendment7_step1_2026-10-23/summary.json": {
+      "sha256": "d16f55a4754ff387b82e2a40f203439209f44fd71dc474f281ebfcc0cc5a725e",
+      "bytes": 4313
+    },
+    "outputs/phase_d_amendment7_step1_2026-10-23/frozen50_routes.csv": {
+      "sha256": "9db5774905854627af2a376c56ba4ea75165a074a17dcda6efa19b50fe675f72",
+      "bytes": 8056
+    },
+    "outputs/phase_d_amendment7_step1_2026-10-23/training_runs.jsonl": {
+      "sha256": "446baf447824b28bfa889b9d95991d4e3887926cba4759339ef1ab7fbcfb4022",
+      "bytes": 567846
+    },
+    "outputs/phase_d_amendment7_step1_2026-10-23/preflight.json": {
+      "sha256": "43321f670697481dfc6c26b1a1e1f7f3c16241c31503f9121ea0b1aaa0794ecf",
+      "bytes": 762
+    },
+    "outputs/phase_d_amendment7_step1_2026-10-23/host_load.json": {
+      "sha256": "662fff6790a5c733f9c8e4306884d4fd8dfaf969a92be3c7a851271093dc57ce",
+      "bytes": 1728
+    },
+    "reports/amendment7_step1_2026-10-23.md": {
+      "sha256": "0771f7d152b8ac73f99428bd15ee5385d7f1664ea942f0bf4cc7ddb84be6c7f7",
+      "bytes": 5029
+    },
+    "src/phase_d_validation/amendment7_step1.py": {
+      "sha256": "528a3658c7b5a7223cef1059bec9367f22801fe171d6e7114891bdc2691d627f",
+      "bytes": 18222
     }
   },
   "additions": [
@@ -1013,6 +1041,19 @@
         "outputs/phase_a_amendment6_2026-10-23/partb_summary.json",
         "reports/amendment6_partb_2026-10-23.md",
         "src/phase_c_analysis/amendment6_partb.py"
+      ]
+    },
+    {
+      "label": "amendment7_step1",
+      "added_utc": "2026-10-23T17:56:59.967201+00:00",
+      "paths": [
+        "outputs/phase_d_amendment7_step1_2026-10-23/frozen50_routes.csv",
+        "outputs/phase_d_amendment7_step1_2026-10-23/host_load.json",
+        "outputs/phase_d_amendment7_step1_2026-10-23/preflight.json",
+        "outputs/phase_d_amendment7_step1_2026-10-23/summary.json",
+        "outputs/phase_d_amendment7_step1_2026-10-23/training_runs.jsonl",
+        "reports/amendment7_step1_2026-10-23.md",
+        "src/phase_d_validation/amendment7_step1.py"
       ]
     }
   ]

@@ -1,0 +1,95 @@
+[
+  {
+    "event": "run_start",
+    "utc": "2026-10-23T17:48:09.445083+00:00",
+    "cpu_total_pct_3_samples": [
+      9.3,
+      5.7,
+      9.9
+    ],
+    "top5_cumulative_cpu_s": [
+      {
+        "name": "System Idle Process",
+        "cpu_s": 12172.9
+      },
+      {
+        "name": "avp.exe",
+        "cpu_s": 266.3
+      },
+      {
+        "name": "System",
+        "cpu_s": 217.9
+      },
+      {
+        "name": "svchost.exe",
+        "cpu_s": 185.3
+      },
+      {
+        "name": "vmmemWSL",
+        "cpu_s": 174.8
+      }
+    ]
+  },
+  {
+    "event": "every_5_min",
+    "utc": "2026-10-23T17:53:13.440411+00:00",
+    "cpu_total_pct_3_samples": [
+      52.1,
+      21.9,
+      16.5
+    ],
+    "top5_cumulative_cpu_s": [
+      {
+        "name": "System Idle Process",
+        "cpu_s": 14956.9
+      },
+      {
+        "name": "vmmemWSL",
+        "cpu_s": 495.3
+      },
+      {
+        "name": "avp.exe",
+        "cpu_s": 295.0
+      },
+      {
+        "name": "System",
+        "cpu_s": 261.0
+      },
+      {
+        "name": "svchost.exe",
+        "cpu_s": 225.9
+      }
+    ]
+  },
+  {
+    "event": "run_end",
+    "utc": "2026-10-23T17:55:57.947716+00:00",
+    "cpu_total_pct_3_samples": [
+      6.6,
+      5.2,
+      4.2
+    ],
+    "top5_cumulative_cpu_s": [
+      {
+        "name": "System Idle Process",
+        "cpu_s": 16526.7
+      },
+      {
+        "name": "vmmemWSL",
+        "cpu_s": 668.6
+      },
+      {
+        "name": "avp.exe",
+        "cpu_s": 304.1
+      },
+      {
+        "name": "System",
+        "cpu_s": 283.0
+      },
+      {
+        "name": "svchost.exe",
+        "cpu_s": 247.2
+      }
+    ]
+  }
+]

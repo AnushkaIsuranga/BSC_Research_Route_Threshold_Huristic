@@ -1,0 +1,48 @@
+{
+  "exact": [
+    {
+      "type": "Limit",
+      "index": null
+    },
+    {
+      "type": "Sort",
+      "index": null
+    },
+    {
+      "type": "Subquery Scan",
+      "index": null
+    },
+    {
+      "type": "Unique",
+      "index": null
+    },
+    {
+      "type": "Sort",
+      "index": null
+    },
+    {
+      "type": "Seq Scan",
+      "index": null
+    }
+  ],
+  "iterative-relaxed": [
+    {
+      "type": "Limit",
+      "index": null
+    },
+    {
+      "type": "Index Scan",
+      "index": "finqa_evidence_qwen3_embedding_idx"
+    }
+  ],
+  "forced-hnsw": [
+    {
+      "type": "Limit",
+      "index": null
+    },
+    {
+      "type": "Index Scan",
+      "index": "finqa_evidence_qwen3_embedding_idx"
+    }
+  ]
+}

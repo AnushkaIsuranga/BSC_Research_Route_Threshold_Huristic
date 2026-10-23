@@ -1,0 +1,179 @@
+{
+  "settings": {
+    "hnsw.ef_search": "40",
+    "hnsw.max_scan_tuples": "20000",
+    "jit": "on",
+    "work_mem": "4MB",
+    "shared_buffers": "128MB",
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "table": "finqa_evidence_qwen3",
+    "k_distinct": 15,
+    "seed": 20261023,
+    "index_route_limit": 150
+  },
+  "caches": {
+    "outputs/embedding_build_2026-10-12/query_embeddings_qwen3.json": "930cadc0bdea177b0951a6891c227606cc47a3b4a1ce8c437563635f9be9ff23",
+    "outputs/embedding_build_2026-10-13/query_embeddings_qwen3_confirmation_1075.json": "c5215bea79bbd486b084d276a0bc2a5e1fb632a8e66a6ae3385f16d4bc7f36ea"
+  },
+  "confirmation_file": [
+    "outputs/scaleup_confirmation_2026-10-13/confirmation_1075.csv",
+    "aff43f1fb918e2d44dd1cdd934de2b8fccd4e64e2690fd5bd4e7f3d36d0704a3"
+  ],
+  "selectivity_check": "all 1,125 counts on finqa_evidence_qwen3 equal the recorded selectivities",
+  "policy_v2_routes": {
+    "exact": 50
+  },
+  "routes_per_rule": {
+    "B1": {
+      "exact": 50
+    },
+    "B2": {
+      "exact": 50
+    },
+    "B3": {
+      "exact": 50
+    },
+    "A6": {
+      "exact": 50
+    },
+    "A8": {
+      "exact": 49,
+      "forced-hnsw": 1
+    },
+    "B4": {
+      "exact": 50
+    },
+    "B4b": {
+      "exact": 50
+    }
+  },
+  "differences_from_policy_v2": {
+    "B1": 0,
+    "B2": 0,
+    "B3": 0,
+    "A6": 0,
+    "A8": 1,
+    "B4": 0,
+    "B4b": 0
+  },
+  "A8_fallbacks": 49,
+  "A6_plans": {
+    "Limit/Sort/Seq Scan": 50
+  },
+  "models": {
+    "B4": {
+      "train_label_counts": {
+        "forced-exact": 1038,
+        "iterative-relaxed": 37
+      },
+      "n_train": 1075,
+      "fitted": true,
+      "n_iter": 12,
+      "boundary": [],
+      "train_accuracy": 0.9655813953488372
+    },
+    "B4b": {
+      "train_label_counts": {
+        "forced-exact": 1038,
+        "iterative-relaxed": 37
+      },
+      "n_train": 1075,
+      "fitted": true,
+      "n_iter": 12,
+      "boundary": [],
+      "train_accuracy": 0.9655813953488372
+    }
+  },
+  "training_summary": {
+    "exact": {
+      "recall15": {
+        "n": 1075,
+        "min": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "max": 1.0
+      },
+      "latency_ms": {
+        "n": 1075,
+        "min": 4.214,
+        "median": 5.452,
+        "mean": 5.686429767441861,
+        "max": 13.887
+      },
+      "rows_lt_15": 64
+    },
+    "iterative-relaxed": {
+      "recall15": {
+        "n": 1075,
+        "min": 0.7333333333333333,
+        "median": 1.0,
+        "mean": 0.9951627906976743,
+        "max": 1.0
+      },
+      "latency_ms": {
+        "n": 1075,
+        "min": 1.623,
+        "median": 43.804,
+        "mean": 38.16875441860465,
+        "max": 98.326
+      },
+      "rows_lt_15": 66
+    }
+  },
+  "frozen_s": {
+    "n": 50,
+    "min": 0.0005576933801795772,
+    "median": 0.003959622999274999,
+    "mean": 0.005417991188444593,
+    "max": 0.019435614299258268
+  },
+  "frozen_matched_rows_max": 697,
+  "year_only": {
+    "n": 50,
+    "min": 0.008783670737828342,
+    "median": 0.06092800178461882,
+    "mean": 0.06430929674864759,
+    "max": 0.09982711505214432,
+    "n_above_0.1": 0,
+    "distinct_years": {
+      "2001": 1,
+      "2003": 1,
+      "2004": 4,
+      "2005": 1,
+      "2006": 4,
+      "2007": 2,
+      "2008": 2,
+      "2009": 1,
+      "2010": 2,
+      "2011": 3,
+      "2012": 2,
+      "2013": 3,
+      "2014": 3,
+      "2015": 3,
+      "2016": 9,
+      "2017": 7,
+      "2018": 2
+    },
+    "s_by_year": {
+      "2001": 0.008783670737828342,
+      "2003": 0.022670235904299816,
+      "2004": 0.020718309073671295,
+      "2005": 0.019435614299258268,
+      "2006": 0.0767664937817188,
+      "2007": 0.060983771122636775,
+      "2008": 0.08209246556243377,
+      "2009": 0.05535106798282304,
+      "2010": 0.06087223244660086,
+      "2011": 0.040377000725001395,
+      "2012": 0.08819920807540015,
+      "2013": 0.0666164742624505,
+      "2014": 0.05956165300317885,
+      "2015": 0.08644247392783448,
+      "2016": 0.05905972896101723,
+      "2017": 0.09982711505214432,
+      "2018": 0.07283475545145279
+    }
+  },
+  "elapsed_s": 469.9,
+  "git_commit": "21a94adafa8adb8835d02f82eef6cdf14983877a"
+}
