@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 196,
+  "n_files": 197,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -786,6 +786,10 @@
     "outputs/headline_audit_2026-10-23/audit.json": {
       "sha256": "c81cb14c4e577cf5929418aad0544d337c8b5f9bb8fc3bff7c84f7fedf735e2f",
       "bytes": 26078
+    },
+    "outputs/hallucination_classification_2026-10-23/labelling_sheet_v2.csv": {
+      "sha256": "a6c02cbb2281b6870b12e4e931a86caaef19c5777f04d2d0ad909ba14a595f92",
+      "bytes": 99878
     }
   },
   "additions": [
@@ -919,6 +923,13 @@
       "added_utc": "2026-10-23T04:51:16.570354+00:00",
       "paths": [
         "outputs/headline_audit_2026-10-23/audit.json"
+      ]
+    },
+    {
+      "label": "Amendment 5 addendum 1: labelling_sheet_v2.csv (gold_derivable column added)",
+      "added_utc": "2026-10-23T05:31:53.485421+00:00",
+      "paths": [
+        "outputs/hallucination_classification_2026-10-23/labelling_sheet_v2.csv"
       ]
     }
   ]
