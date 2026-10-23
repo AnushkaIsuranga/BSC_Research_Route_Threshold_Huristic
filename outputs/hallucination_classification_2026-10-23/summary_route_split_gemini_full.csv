@@ -1,0 +1,9 @@
+arm,scope,route,n,correct,abstain_or_parse_fail,wrong_ungrounded,wrong_grounded,mean_rows_returned
+naive_llm,pass1,post-filter,21,12,0,5,4,4.809523809523809
+naive_llm,pass1,pre-filter,29,20,0,6,3,14.689655172413794
+naive_llm,all,post-filter,108,63,0,25,20,4.935185185185185
+naive_llm,all,pre-filter,142,95,5,27,15,14.683098591549296
+naive_informed,pass1,post-filter,2,1,0,1,0,6.5
+naive_informed,pass1,pre-filter,48,33,0,7,8,14.8125
+naive_informed,all,post-filter,11,3,0,4,4,5.454545454545454
+naive_informed,all,pre-filter,239,173,2,34,30,14.811715481171548

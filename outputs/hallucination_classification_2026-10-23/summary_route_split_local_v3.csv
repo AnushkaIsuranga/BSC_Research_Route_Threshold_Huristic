@@ -1,0 +1,5 @@
+arm,scope,route,n,correct,abstain_or_parse_fail,wrong_ungrounded,wrong_grounded,mean_rows_returned
+naive_llm,pass1,post-filter,10,3,0,3,4,4.7
+naive_llm,pass1,pre-filter,40,9,1,12,18,14.775
+naive_llm,all,post-filter,20,6,0,6,8,4.7
+naive_llm,all,pre-filter,80,18,2,24,36,14.775

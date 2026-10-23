@@ -124,11 +124,15 @@ def route_split(cl: list[dict], arm: str) -> list[dict]:
 
 
 def rows_returned_ungrounded(cl: list[dict]) -> list[dict]:
+    """Per arm: all wrong_ungrounded rows, how many have rows_returned logged (older runs do not log it), and for those the
+    0-row cases and the distribution of rows returned."""
     out = []
     for arm in sorted({r["arm"] for r in cl}):
-        rs = [r for r in cl if r["arm"] == arm and r["class"] == "wrong_ungrounded" and r["rows_returned"] is not None]
+        allu = [r for r in cl if r["arm"] == arm and r["class"] == "wrong_ungrounded"]
+        rs = [r for r in allu if r["rows_returned"] is not None]
         vals = [r["rows_returned"] for r in rs]
-        row = {"arm": arm, "n_wrong_ungrounded": len(rs), "zero_row_cases": sum(1 for v in vals if v == 0),
+        row = {"arm": arm, "n_wrong_ungrounded": len(allu), "n_with_rows_returned_logged": len(rs),
+               "zero_row_cases": sum(1 for v in vals if v == 0),
                "mean_rows": statistics.fmean(vals) if vals else None, "median_rows": statistics.median(vals) if vals else None}
         for name, lo, hi in ROW_BUCKETS:
             row[f"rows_{name}"] = sum(1 for v in vals if lo <= v <= hi)

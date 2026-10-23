@@ -183,3 +183,9 @@ def test_cli_requires_explicit_hit_field_and_stops_on_null(tmp_path):
     f.write_text("\n".join(json.dumps(r) for r in bad))
     r = subprocess.run(base[:-1] + [str(tmp_path / "o2"), "--hit-field", "retrieval_hit_passage"], capture_output=True, text=True)
     assert r.returncode != 0 and "retrieval_hit_passage" in r.stderr and "stopping" in r.stderr
+
+
+def test_rows_returned_not_logged_is_reported_as_such():
+    rows = [row(rows=None, passage=0, q="a"), row(rows=None, passage=0, q="b")]
+    r = rows_returned_ungrounded(classify_run(rows, "retrieval_hit_passage"))[0]
+    assert r["n_wrong_ungrounded"] == 2 and r["n_with_rows_returned_logged"] == 0 and r["mean_rows"] is None

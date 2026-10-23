@@ -1,0 +1,5 @@
+arm,n_wrong_ungrounded,n_with_rows_returned_logged,zero_row_cases,mean_rows,median_rows,rows_0,rows_1-3,rows_4-7,rows_8-14,rows_15+
+decision_matrix,34,34,0,15.0,15.0,0,0,0,0,34
+naive_informed,38,38,0,14.578947368421053,15.0,0,0,0,4,34
+naive_llm,52,52,10,9.711538461538462,15.0,10,5,5,5,27
+policy_v2,35,35,0,15.0,15,0,0,0,0,35

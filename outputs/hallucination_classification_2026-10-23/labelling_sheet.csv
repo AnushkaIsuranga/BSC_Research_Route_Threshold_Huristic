@@ -1,0 +1,1119 @@
+sample_id,question,gold_answer,model_answer,retrieved_passages
+S001,what were total distillates sales in millions for the three year period ? 365 346 345,1056,1.056,"[1] distillates | 365 | 346 | 345
+
+[2] the following table sets forth the volume of map 2019s consolidated refined product sales by product group for each of the last three years : refined product sales ( thousands of barrels per day ) 2003 2002 2001 .
+
+[3] approximately 50 percent of map 2019s gasoline volumes and 91 percent of its distillate volumes were sold on a wholesale or spot market basis to independent unbranded customers or other wholesalers in 2003 .
+
+[4] marketing in 2003 , map 2019s refined product sales volumes ( excluding matching buy/sell transactions ) totaled 19.8 billion gallons ( 1293000 bpd ) .
+
+[5] excluding sales related to matching buy/sell transactions , the wholesale distribution of petroleum products to private brand marketers and to large commercial and industrial consumers , primarily located in the midwest , the upper great plains and the southeast , and sales in the spot market , accounted for approximately 70 percent of map 2019s refined product sales volumes in 2003 .
+
+[6] as of december 31 , 2003 , map supplied petroleum products to approximately 3900 marathon and ashland branded retail outlets located primarily in michigan , ohio , indiana , kentucky and illinois .
+
+[7] total | 1357 | 1318 | 1304
+
+[8] heavy fuel oil | 24 | 20 | 41
+
+[9] gasoline | 776 | 773 | 748
+
+[10] map also sells low-vapor-pressure gasoline in nine states .
+
+[11] ( thousands of barrels per day ) | 2003 | 2002 | 2001
+
+[12] derivatives are used to lock in margins associated with future fixed price sales of refined products to non-retail customers .
+
+[13] approximately half of map 2019s propane is sold into the home heating markets and industrial consumers purchase the balance .
+
+[14] derivative gains ( losses ) included in rm&t segment income for each of the last two years are summarized in the following table : strategy ( in millions ) 2003 2002 .
+
+[15] at its catlettsburg , kentucky refinery , map has completed the approximately $ 440 million multi-year integrated investment program to upgrade product yield realizations and reduce fixed and variable manufacturing expenses ."
+S002,what portion of the total contractual obligations is due in the next 12 months?,9.2%,9.03%,"[1] therefore , these amounts have been excluded from the schedule of contractual obligations. .
+
+[2] a schedule of our obligations as of december 31 , 2016 under various notes payable , long-term debt agreements , operating leases with noncancelable terms in excess of one year and interest obligations are summarized in the following table: .
+
+[3] ( millions ) | total | payments due by period less than 1 year | payments due by period 2-3 years | payments due by period 4-5 years | payments due by period more than 5 years
+
+[4] capital lease obligations | 5 | 1 | 1 | 1 | 2
+
+[5] long-term debt | 6652 | 510 | 967 | 1567 | 3608
+
+[6] notes payable | $ 30 | $ 30 | $ - | $ - | $ -
+
+[7] as of december 31 , 2016 , our gross liability for uncertain tax positions was $ 76 million .
+
+[8] as of december 31 , 2016 we had a $ 2.0 billion multi-year credit facility , which expires in december 2019 .
+
+[9] as of december 31 , 2016 , we had $ 327 million of cash and cash equivalents on hand , of which $ 184 million was held outside of the u.s .
+
+[10] liquidity and capital resources we currently expect to fund all of our cash requirements which are reasonably foreseeable for 2017 , including scheduled debt repayments , new investments in the business , share repurchases , dividend payments , possible business acquisitions and pension contributions , with cash from operating activities , and as needed , additional short-term and/or long-term borrowings .
+
+[11] we are in compliance with our debt covenants and other requirements of our credit agreements and indentures .
+
+[12] as of december 31 , 2016 , we had no amount outstanding under either our u.s .
+
+[13] operating leases | 431 | 102 | 153 | 105 | 71
+
+[14] as of december 31 , 2016 , standard & poor 2019s and moody 2019s rated our long-term credit at a- ( stable outlook ) and baa1 ( stable outlook ) , respectively .
+
+[15] there were no borrowings under our credit facility as of december 31 , 2016 or 2015 ."
+S003,what is the total increase in net asbestos reserves from unfavorable development assumed reinsurance accounts driven largely by the same factors experienced by the direct policyholders?,307,$39,"[1] the net effect of these changes in 2010 and 2009 resulted in $ 169 and $ 138 increases in net asbestos reserves , respectively .
+
+[2] the company also experienced unfavorable development on its assumed reinsurance accounts driven largely by the same factors experienced by the direct policyholders .
+
+[3] based on this evaluation , the company strengthened its net asbestos reserves by $ 290 in second quarter 2011 .
+
+[4] 2022 the unallocated category includes an estimate of the reserves necessary for asbestos claims related to direct insureds that have not previously tendered asbestos claims to the company and exposures related to liability claims that may not be subject to an aggregate limit under the applicable policies .
+
+[5] during the second quarters of 2011 , 2010 and 2009 , the company completed its annual ground-up asbestos reserve evaluations .
+
+[6] as part of these evaluations , the company reviewed all of its open direct domestic insurance accounts exposed to asbestos liability , as well as assumed reinsurance accounts and its london market exposures for both direct insurance and assumed reinsurance .
+
+[7] the company divides its gross asbestos exposures into direct , assumed reinsurance and london market .
+
+[8] during 2011 , for certain direct policyholders , the company experienced increases in claim frequency , severity and expense which were driven by mesothelioma claims , particularly against certain smaller , more peripheral insureds .
+
+[9] 2022 accounts with future expected exposures greater or less than $ 2.5 include accounts that are not major asbestos defendants .
+
+[10] assumed reinsurance | 39
+
+[11] the company currently expects to continue to perform an evaluation of its asbestos liabilities annually .
+
+[12] the company further divides its direct asbestos exposures into the following categories : major asbestos defendants ( the 201ctop 70 201d accounts in tillinghast 2019s published tiers 1 and 2 and wellington accounts ) , which are subdivided further as : structured settlements , wellington , other major asbestos defendants , accounts with future expected exposures greater than $ 2.5 , accounts with future expected exposures less than $ 2.5 , and unallocated .
+
+[13] during 2010 and 2009 , for certain direct policyholders , the company experienced increases in claim severity and expense .
+
+[14] 2022 the other major asbestos defendants subcategory represents insureds included in tiers 1 and 2 , as defined by tillinghast that are not wellington signatories and have not entered into structured settlements with the hartford .
+
+[15] the tier 1 and 2 classifications are meant to capture the insureds for which there is expected to be significant exposure to asbestos claims ."
+S004,"as of december 31 , 2010 , what was the ratio of collateral pledged to the bank by its derivatives counterparties to overnight and other short-term borrowings",4.6,38.6,"[1] as of december 31 , 2011 and 2010 , other borrowings also included $ 2.3 million and $ 19.3 million , respectively , of collateral pledged to the bank by its derivatives counterparties to reduce credit exposure to changes in market value .
+
+[2] at december 31 , 2011 and 2010 , the company pledged loans with a lendable value of $ 5.0 billion and $ 5.6 billion , respectively , of the one- to four-family and home equity loans as collateral in support of both its advances and unused borrowing lines .
+
+[3] the company pledged $ 0.8 million of securities to secure these borrowings from the federal reserve bank as of december 31 , 2010. .
+
+[4] as of december 31 , 2010 , other borrowings also included $ 0.5 million of overnight and other short-term borrowings in connection with the federal reserve bank 2019s treasury , tax and loan programs .
+
+[5] the company must also maintain qualified collateral as a percent of its advances , which varies based on the collateral type , and is further adjusted by the outcome of the most recent annual collateral audit and by fhlb 2019s internal ranking of the bank 2019s creditworthiness .
+
+[6] additionally , the bank must maintain an activity based stock investment which is currently equal to 4.5% ( 4.5 % ) of the bank 2019s outstanding advances at the time of borrowing .
+
+[7] the company had an investment in fhlb stock of $ 140.2 million and $ 164.4 million at december 31 , 2011 and 2010 , respectively .
+
+[8] required to maintain a fhlb stock investment currently equal to the lesser of : a percentage of 0.2% ( 0.2 % ) of total bank assets ; or a dollar cap amount of $ 25 million .
+
+[9] during the year ended december 31 , 2009 , the company paid down in advance of maturity $ 1.6 billion of its fhlb advances .
+
+[10] trusts | face value | maturity date | annual interest rate
+
+[11] etbh capital trust ii | $ 5000 | 2031 | 10.25% ( 10.25 % )
+
+[12] etbh capital trust xxv 2014xxx | 110000 | 2037 | 1.90%-2.00% ( 1.90%-2.00 % ) above 3-month libor
+
+[13] etbh capital trust i | 20000 | 2031 | 3.75% ( 3.75 % ) above 6-month libor
+
+[14] etbh capital trust xix xxi xxii | 60000 | 2035 | 2.20%-2.40% ( 2.20%-2.40 % ) above 3-month libor
+
+[15] on a quarterly basis the fhlb atlanta evaluates excess activity based stock holdings for its members and makes a determination regarding quarterly redemption of any excess activity based stock positions ."
+S005,what was total in millions of accumulated other comprehensive loss?,-84,$ -61.1,"[1] accumulated other comprehensive loss | $ -61.1 ( 61.1 ) | $ -16.6 ( 16.6 ) | $ -6.3 ( 6.3 )
+
+[2] accumulated other comprehensive loss foreign currency translation adjustments are included in stockholders 2019 equity under accumulated other comprehensive the components of accumulated other comprehensive loss are as follows: .
+
+[3] foreign currency translation | $ -61.1 ( 61.1 ) | $ -16.6 ( 16.6 ) | $ -6.3 ( 6.3 )
+
+[4] for the years ended december 31 , 2015 , 2014 and 2013 , the amounts expensed for these plans were $ 19.8 million , $ 21.9 million and $ 17.3 million , respectively .
+
+[5] as of december 31 , 2013 , the company accrued $ 20.9 million related to this arrangement within other current liabilities , as the company realized the tax benefit of the compensation deductions during the 2013 tax year .
+
+[6] the company 2019s interest rate cap agreements are not designated as cash flow hedges of interest rate risk .
+
+[7] changes in fair value of the derivatives are recorded directly to interest expense , net in the consolidated statements of operations .
+
+[8] these derivatives are recorded at fair value in the consolidated balance sheets .
+
+[9] a reconciliation of basic weighted-average shares outstanding to diluted weighted-average shares outstanding is as follows: .
+
+[10] the company classifies deferred financing costs as a direct deduction from the carrying value of the long-term debt liability on the consolidated balance sheets , except for deferred financing costs associated with line-of-credit arrangements which are presented as an asset , included within 201cother assets 201d on the consolidated balance sheets .
+
+[11] restricted debt unit plan on march 10 , 2010 , the company established the restricted debt unit plan ( the 201crdu plan 201d ) , an unfunded nonqualified deferred compensation plan. .
+
+[12] ( in millions ) | years ended december 31 , 2015 | years ended december 31 , 2014 | years ended december 31 , 2013
+
+[13] participate in other savings plans .
+
+[14] diluted weighted-average shares outstanding ( 3 ) | 171.8 | 172.8 | 158.7
+
+[15] basic weighted-average shares outstanding | 170.3 | 170.6 | 156.6"
+S006,"as of december 31 , 2010 what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011",3.2,$329.5 million,"[1] fixed rate notes due february 2014 interest equal to 5.75% ( 5.75 % ) | 750.0
+
+[2] the following table summarizes our debt outstanding as of december 31 , 2010: .
+
+[3] fixed rate notes due march 2018 , interest equal to 4.40% ( 4.40 % ) ( 2 ) .
+
+[4] in february 2010 , we entered into a forward-starting interest rate swap agreement that modified the interest obligation associated with these notes so that the interest payable on the notes effectively became fixed at a rate of 4.46% ( 4.46 % ) beginning with the interest accrued after march 18 , 2010 .
+
+[5] term loan due 2011 interest equal to 3-month libor plus 1.00% ( 1.00 % ) ( 1 ) | $ 420.5
+
+[6] fixed rate notes due march 2018 interest equal to 4.40% ( 4.40 % ) ( 2 ) | 612.5
+
+[7] ( 2 ) in march 2010 , we completed an unregistered offering of fixed rate notes due 2018 .
+
+[8] we maintained a $ 1.4 billion senior credit facility with various financial institutions , including the $ 420.5 million term loan and a $ 945.5 million revolving credit facility .
+
+[9] fixed rate notes due august 2013 interest equal to 5.40% ( 5.40 % ) | 750.0
+
+[10] the senior credit facility was terminated on january 11 , 2011 .
+
+[11] the interest rate swap agreement was terminated on january 11 , 2011 when the loan was repaid .
+
+[12] ( in millions ) | par value
+
+[13] effective january 11 , 2011 , we entered into a new $ 1.0 billion multi-currency revolving senior credit facility with various financial institutions .
+
+[14] 612.5 ( 1 ) in september 2008 , the company entered into an interest rate swap agreement that modified the variable interest obligation associated with this loan so that the interest payable effectively became fixed at a rate of 4.72% ( 4.72 % ) beginning with the interest accrued after october 22 , 2008 .
+
+[15] under our senior credit facility , we were required to maintain a consolidated net worth of at least $ 12.1 billion ."
+S007,"what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 due in 2008 is attributable to total debt repayments?",18%,18.22%,"[1] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[5] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[6] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[7] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[10] ( a ) total debt includes scheduled principal payments only .
+
+[11] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[12] total debt ( a ) | $ 692 | $ 129 | $ 1143 | $ 1198 | $ 381 | $ 3680
+
+[13] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[14] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 .
+
+[15] the following table presents capital spending from continuing operations by each of our business segments for the years ended december 31 , 2006 , 2005 and 2004 ."
+S008,what is the total increase in net asbestos reserves from unfavorable development assumed reinsurance accounts driven largely by the same factors experienced by the direct policyholders?,307,$39 million,"[1] the net effect of these changes in 2010 and 2009 resulted in $ 169 and $ 138 increases in net asbestos reserves , respectively .
+
+[2] the company also experienced unfavorable development on its assumed reinsurance accounts driven largely by the same factors experienced by the direct policyholders .
+
+[3] based on this evaluation , the company strengthened its net asbestos reserves by $ 290 in second quarter 2011 .
+
+[4] 2022 the unallocated category includes an estimate of the reserves necessary for asbestos claims related to direct insureds that have not previously tendered asbestos claims to the company and exposures related to liability claims that may not be subject to an aggregate limit under the applicable policies .
+
+[5] during the second quarters of 2011 , 2010 and 2009 , the company completed its annual ground-up asbestos reserve evaluations .
+
+[6] as part of these evaluations , the company reviewed all of its open direct domestic insurance accounts exposed to asbestos liability , as well as assumed reinsurance accounts and its london market exposures for both direct insurance and assumed reinsurance .
+
+[7] the company divides its gross asbestos exposures into direct , assumed reinsurance and london market .
+
+[8] during 2011 , for certain direct policyholders , the company experienced increases in claim frequency , severity and expense which were driven by mesothelioma claims , particularly against certain smaller , more peripheral insureds .
+
+[9] 2022 accounts with future expected exposures greater or less than $ 2.5 include accounts that are not major asbestos defendants .
+
+[10] assumed reinsurance | 39
+
+[11] the company currently expects to continue to perform an evaluation of its asbestos liabilities annually .
+
+[12] the company further divides its direct asbestos exposures into the following categories : major asbestos defendants ( the 201ctop 70 201d accounts in tillinghast 2019s published tiers 1 and 2 and wellington accounts ) , which are subdivided further as : structured settlements , wellington , other major asbestos defendants , accounts with future expected exposures greater than $ 2.5 , accounts with future expected exposures less than $ 2.5 , and unallocated .
+
+[13] during 2010 and 2009 , for certain direct policyholders , the company experienced increases in claim severity and expense .
+
+[14] 2022 the other major asbestos defendants subcategory represents insureds included in tiers 1 and 2 , as defined by tillinghast that are not wellington signatories and have not entered into structured settlements with the hartford .
+
+[15] the tier 1 and 2 classifications are meant to capture the insureds for which there is expected to be significant exposure to asbestos claims ."
+S009,for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?,94%,1692,"[1] brazil 2014vivo acquisition 2014on march 30 , 2012 , the company entered into a definitive agreement to purchase up to 1500 towers from vivo s.a .
+
+[2] in addition , the company and vivo amended the asset purchase agreement to allow for the acquisition of up to an additional 300 communications sites by the company , subject to regulatory approval .
+
+[3] on august 31 , 2012 , the company purchased an additional 192 communications sites from vivo for an aggregate purchase price of $ 32.7 million , subject to post-closing adjustments. .
+
+[4] pursuant to the agreement , on march 30 , 2012 , the company purchased 800 communications sites for an aggregate purchase price of $ 151.7 million .
+
+[5] on june 30 , 2012 , the company purchased the remaining 700 communications sites for an aggregate purchase price of $ 126.3 million , subject to post-closing adjustments .
+
+[6] american tower corporation and subsidiaries notes to consolidated financial statements brazil acquisition 2014on march 1 , 2011 , the company acquired 100% ( 100 % ) of the outstanding shares of a company that owned 627 communications sites in brazil for $ 553.2 million , which was subsequently increased to $ 585.4 million as a result of acquiring 39 additional communications sites during the year ended december 31 , 2011 .
+
+[7] ( 201cvivo 201d ) .
+
+[8] the following table summarizes the allocation of the aggregate purchase consideration paid and the amounts of assets acquired and liabilities assumed based upon their estimated fair value at the date of acquisition ( in thousands ) : final purchase price allocation ( 1 ) preliminary purchase price allocation ( 2 ) .
+
+[9]  | final purchase price allocation ( 1 ) | preliminary purchase price allocation ( 2 )
+
+[10] the allocation of the purchase price was finalized during the year ended december 31 , 2012 .
+
+[11] during the year ended december 31 , 2012 , the purchase price was reduced to $ 585.3 million after certain post- closing purchase price adjustments .
+
+[12] as a result , as of january 21 , 2013 , we had repurchased a total of approximately 4.3 million shares of our common stock under the 2011 buyback for an aggregate of $ 245.2 million , including commissions and fees .
+
+[13] property and equipment | 83539 | 86062
+
+[14] american tower corporation and subsidiaries notes to consolidated financial statements as of december 31 , 2012 , 2011 and 2010 , accumulated other comprehensive ( loss ) income included the following items related to derivative financial instruments ( in thousands ) : .
+
+[15] the customer-related intangibles and network location intangibles are being amortized on a straight-line basis over periods of up to 20 years ."
+S010,what were total distillates sales in millions for the three year period ? 365 346 345,1056,1.056,"[1] distillates | 365 | 346 | 345
+
+[2] the following table sets forth the volume of map 2019s consolidated refined product sales by product group for each of the last three years : refined product sales ( thousands of barrels per day ) 2003 2002 2001 .
+
+[3] approximately 50 percent of map 2019s gasoline volumes and 91 percent of its distillate volumes were sold on a wholesale or spot market basis to independent unbranded customers or other wholesalers in 2003 .
+
+[4] marketing in 2003 , map 2019s refined product sales volumes ( excluding matching buy/sell transactions ) totaled 19.8 billion gallons ( 1293000 bpd ) .
+
+[5] excluding sales related to matching buy/sell transactions , the wholesale distribution of petroleum products to private brand marketers and to large commercial and industrial consumers , primarily located in the midwest , the upper great plains and the southeast , and sales in the spot market , accounted for approximately 70 percent of map 2019s refined product sales volumes in 2003 .
+
+[6] as of december 31 , 2003 , map supplied petroleum products to approximately 3900 marathon and ashland branded retail outlets located primarily in michigan , ohio , indiana , kentucky and illinois .
+
+[7] total | 1357 | 1318 | 1304
+
+[8] heavy fuel oil | 24 | 20 | 41
+
+[9] gasoline | 776 | 773 | 748
+
+[10] map also sells low-vapor-pressure gasoline in nine states .
+
+[11] ( thousands of barrels per day ) | 2003 | 2002 | 2001
+
+[12] derivatives are used to lock in margins associated with future fixed price sales of refined products to non-retail customers .
+
+[13] approximately half of map 2019s propane is sold into the home heating markets and industrial consumers purchase the balance .
+
+[14] derivative gains ( losses ) included in rm&t segment income for each of the last two years are summarized in the following table : strategy ( in millions ) 2003 2002 .
+
+[15] at its catlettsburg , kentucky refinery , map has completed the approximately $ 440 million multi-year integrated investment program to upgrade product yield realizations and reduce fixed and variable manufacturing expenses ."
+S011,"what is the difference between the growth of the balance throughout the fiscal year , during 2007 and 2008?",10.2%,$31.7 million,"[1] balance at december 27 2008 | $ 214.4 | $ 126.6
+
+[2] balance at beginning of year | $ 126.6 | $ 70.5
+
+[3] at december 27 , 2008 and december 29 , 2007 , cumulative unrealized gains/ ( losses ) of ( $ 22345 ) and $ 46445 , respectively , were reported accumulated in other comprehensive gain/ ( loss ) , net of related taxes .
+
+[4] a reconciliation of the beginning and ending amount of unrecognized tax benefits for years ending december 27 , 2008 and december 29 , 2007 is as follows ( in $ millions ) : december 27 , december 29 , 2008 2007 .
+
+[5] december 27 , 2008 , december 29 , 2007 , and december 30 , 2006 , respectively .
+
+[6] the december 27 , 2008 balance of $ 214.4 million of unrecognized tax benefits , if recognized , would reduce the effective tax rate .
+
+[7] accordingly , unrecognized tax benefits of $ 214.4 million as of december 27 , 2008 , have been excluded from the contractual obligations table above .
+
+[8] the total amount of unrecognized tax benefits as of december 27 , 2008 was $ 214.4 million including interest of $ 11.1 million .
+
+[9] 48 , accounting for uncertainty in income taxes ( fin 48 ) , on december 31 , 2006 , the beginning of fiscal year 2007 .
+
+[10]  | december 27 2008 | december 29 2007
+
+[11] all of the company 2019s marketable securities are considered available-for-sale at december 27 , 2008 .
+
+[12] item 7a .
+
+[13] purchase obligations are the aggregate of those purchase orders that were outstanding on december 27 , 2008 ; these obligations are created and then paid off within 3 months during the normal course of our manufacturing business .
+
+[14] contractual obligations | payments due by period total | payments due by period less than 1 year | payments due by period 1-3 years | payments due by period 3-5 years | payments due by period more than 5 years
+
+[15] as a result of the implementation of fin 48 , the company has not recognized a material increase or decrease in the liability for unrecognized tax benefits ."
+S012,what was the ratio of the net increase in the in securities sold under agreements to repurchase to the net transfers in,0.81,0.83871,"[1] the increase in securities sold under agreements to repurchase of $ 5 2022 billion is driven by a $ 6.2 billion increase from net transfers in as the continued credit crisis impacted the availability of observable inputs for the underlying securities related to this liability .
+
+[2] the increase in 2022 long-term debt of $ 2.2 billion is driven by : the net transfers in of $ 38.8 billion , substantially all of which related 2013 to the transfer of consolidated siv debt in the first quarter of 2008 , as the availability of observable inputs continued to decline due to the current crisis ; offset by $ 2.2 billion in gains recognized as credit spreads widened during the 2013 year ; and $ 34.3 billion decrease from net settlements/payments .
+
+[3] the decrease in short-term borrowings of $ 3.7 billion is due to net transfers 2022 out of $ 1.8 billion as valuation methodology inputs considered to be unobservable were determined not to be significant to the overall valuation .
+
+[4] excluded from the following table are obligations that are generally short-term in nature , including deposit liabilities and securities sold under agreements to repurchase .
+
+[5] north america regional consumer banking | 174% ( 174 % ) | $ 2453
+
+[6] net interest revenue | $ 3173 | $ 3332 | $ 2723 | ( 5 ) % (  % ) | 22% ( 22 % )
+
+[7] securities and banking | 203 | 8784
+
+[8] eop assets ( in billions of dollars ) | $ 154 | $ 241 | $ 351 | ( 36 ) % (  % ) | ( 31 ) % (  % )
+
+[9] transaction services | 2079 | 1573
+
+[10] brokerage and asset management | 161 | 759
+
+[11] net credit losses | $ 5420 | $ 909 | $ 436 | nm | nm
+
+[12] purchase obligations | 1032 | 446 | 331 | 267 | 258 | 783
+
+[13] net ( loss ) | $ -5286 ( 5286 ) | $ -26789 ( 26789 ) | $ -12260 ( 12260 ) | 80% ( 80 % ) | nm
+
+[14] in addition , net payments of $ 1.8 billion were made during the year .
+
+[15] local consumer lending 2014cards | 112 | 4683"
+S013,"as of december 31 , 2010 , what was the ratio of collateral pledged to the bank by its derivatives counterparties to overnight and other short-term borrowings",4.6,38.6,"[1] as of december 31 , 2011 and 2010 , other borrowings also included $ 2.3 million and $ 19.3 million , respectively , of collateral pledged to the bank by its derivatives counterparties to reduce credit exposure to changes in market value .
+
+[2] at december 31 , 2011 and 2010 , the company pledged loans with a lendable value of $ 5.0 billion and $ 5.6 billion , respectively , of the one- to four-family and home equity loans as collateral in support of both its advances and unused borrowing lines .
+
+[3] the company pledged $ 0.8 million of securities to secure these borrowings from the federal reserve bank as of december 31 , 2010. .
+
+[4] as of december 31 , 2010 , other borrowings also included $ 0.5 million of overnight and other short-term borrowings in connection with the federal reserve bank 2019s treasury , tax and loan programs .
+
+[5] the company must also maintain qualified collateral as a percent of its advances , which varies based on the collateral type , and is further adjusted by the outcome of the most recent annual collateral audit and by fhlb 2019s internal ranking of the bank 2019s creditworthiness .
+
+[6] additionally , the bank must maintain an activity based stock investment which is currently equal to 4.5% ( 4.5 % ) of the bank 2019s outstanding advances at the time of borrowing .
+
+[7] the company had an investment in fhlb stock of $ 140.2 million and $ 164.4 million at december 31 , 2011 and 2010 , respectively .
+
+[8] required to maintain a fhlb stock investment currently equal to the lesser of : a percentage of 0.2% ( 0.2 % ) of total bank assets ; or a dollar cap amount of $ 25 million .
+
+[9] during the year ended december 31 , 2009 , the company paid down in advance of maturity $ 1.6 billion of its fhlb advances .
+
+[10] trusts | face value | maturity date | annual interest rate
+
+[11] etbh capital trust ii | $ 5000 | 2031 | 10.25% ( 10.25 % )
+
+[12] etbh capital trust xxv 2014xxx | 110000 | 2037 | 1.90%-2.00% ( 1.90%-2.00 % ) above 3-month libor
+
+[13] etbh capital trust i | 20000 | 2031 | 3.75% ( 3.75 % ) above 6-month libor
+
+[14] etbh capital trust xix xxi xxii | 60000 | 2035 | 2.20%-2.40% ( 2.20%-2.40 % ) above 3-month libor
+
+[15] on a quarterly basis the fhlb atlanta evaluates excess activity based stock holdings for its members and makes a determination regarding quarterly redemption of any excess activity based stock positions ."
+S014,"as of december 31 , 2010 , what was the ratio of collateral pledged to the bank by its derivatives counterparties to overnight and other short-term borrowings",4.6,38.6,"[1] as of december 31 , 2011 and 2010 , other borrowings also included $ 2.3 million and $ 19.3 million , respectively , of collateral pledged to the bank by its derivatives counterparties to reduce credit exposure to changes in market value .
+
+[2] at december 31 , 2011 and 2010 , the company pledged loans with a lendable value of $ 5.0 billion and $ 5.6 billion , respectively , of the one- to four-family and home equity loans as collateral in support of both its advances and unused borrowing lines .
+
+[3] the company pledged $ 0.8 million of securities to secure these borrowings from the federal reserve bank as of december 31 , 2010. .
+
+[4] as of december 31 , 2010 , other borrowings also included $ 0.5 million of overnight and other short-term borrowings in connection with the federal reserve bank 2019s treasury , tax and loan programs .
+
+[5] the company must also maintain qualified collateral as a percent of its advances , which varies based on the collateral type , and is further adjusted by the outcome of the most recent annual collateral audit and by fhlb 2019s internal ranking of the bank 2019s creditworthiness .
+
+[6] additionally , the bank must maintain an activity based stock investment which is currently equal to 4.5% ( 4.5 % ) of the bank 2019s outstanding advances at the time of borrowing .
+
+[7] the company had an investment in fhlb stock of $ 140.2 million and $ 164.4 million at december 31 , 2011 and 2010 , respectively .
+
+[8] required to maintain a fhlb stock investment currently equal to the lesser of : a percentage of 0.2% ( 0.2 % ) of total bank assets ; or a dollar cap amount of $ 25 million .
+
+[9] during the year ended december 31 , 2009 , the company paid down in advance of maturity $ 1.6 billion of its fhlb advances .
+
+[10] trusts | face value | maturity date | annual interest rate
+
+[11] etbh capital trust ii | $ 5000 | 2031 | 10.25% ( 10.25 % )
+
+[12] etbh capital trust xxv 2014xxx | 110000 | 2037 | 1.90%-2.00% ( 1.90%-2.00 % ) above 3-month libor
+
+[13] etbh capital trust i | 20000 | 2031 | 3.75% ( 3.75 % ) above 6-month libor
+
+[14] etbh capital trust xix xxi xxii | 60000 | 2035 | 2.20%-2.40% ( 2.20%-2.40 % ) above 3-month libor
+
+[15] on a quarterly basis the fhlb atlanta evaluates excess activity based stock holdings for its members and makes a determination regarding quarterly redemption of any excess activity based stock positions ."
+S015,what percent of the gross total property and equipment values in 2006 are related to computers?,32%,9.24%,"[1] furniture and equipment $ 97638 $ 98387 leasehold improvements 74875 66318 computers 19733 18971 software 21274 18683 total property and equipment , gross 213520 202359 less accumulated depreciation and amortization 151985 147826 total property and equipment , net $ 61535 $ 54533 .
+
+[2] property and equipment property and equipment consist of the following at december 31 ( in thousands ) : depreciation and amortization expense for the years ended december 31 , 2006 , 2005 and 2004 was $ 25.4 million , $ 26.3 million and $ 28.4 million , respectively .
+
+[3] total property and equipment net | $ 61535 | $ 54533
+
+[4] total property and equipment gross | 213520 | 202359
+
+[5] the net loss on disposal of those assets was $ 10000 for 2006 , $ 344000 for 2005 and $ 43000 for 2004 .
+
+[6] furniture and equipment | $ 97638 | $ 98387
+
+[7] in 2006 and 2005 , the company wrote off certain assets that were fully depreciated and no longer utilized .
+
+[8] gross realized gains and losses for 2006 were $ 4000 and $ 88000 respectively .
+
+[9] computers | 19733 | 18971
+
+[10] less accumulated depreciation and amortization | 151985 | 147826
+
+[11] restricted cash at december 31 , 2006 and 2005 , the company held $ 30.3 million and $ 41.5 million respectively , in restricted cash .
+
+[12]  | 2006 | 2005
+
+[13] there was no effect on the company 2019s net property and equipment .
+
+[14] gross realized gains and losses for 2005 were $ 15000 and $ 75000 , respectively .
+
+[15] gross realized gains and losses for 2004 were $ 628000 and $ 205000 , respectively ."
+S016,what is the total increase in net asbestos reserves from unfavorable development assumed reinsurance accounts driven largely by the same factors experienced by the direct policyholders?,307,$39,"[1] the net effect of these changes in 2010 and 2009 resulted in $ 169 and $ 138 increases in net asbestos reserves , respectively .
+
+[2] the company also experienced unfavorable development on its assumed reinsurance accounts driven largely by the same factors experienced by the direct policyholders .
+
+[3] based on this evaluation , the company strengthened its net asbestos reserves by $ 290 in second quarter 2011 .
+
+[4] 2022 the unallocated category includes an estimate of the reserves necessary for asbestos claims related to direct insureds that have not previously tendered asbestos claims to the company and exposures related to liability claims that may not be subject to an aggregate limit under the applicable policies .
+
+[5] during the second quarters of 2011 , 2010 and 2009 , the company completed its annual ground-up asbestos reserve evaluations .
+
+[6] as part of these evaluations , the company reviewed all of its open direct domestic insurance accounts exposed to asbestos liability , as well as assumed reinsurance accounts and its london market exposures for both direct insurance and assumed reinsurance .
+
+[7] the company divides its gross asbestos exposures into direct , assumed reinsurance and london market .
+
+[8] during 2011 , for certain direct policyholders , the company experienced increases in claim frequency , severity and expense which were driven by mesothelioma claims , particularly against certain smaller , more peripheral insureds .
+
+[9] 2022 accounts with future expected exposures greater or less than $ 2.5 include accounts that are not major asbestos defendants .
+
+[10] assumed reinsurance | 39
+
+[11] the company currently expects to continue to perform an evaluation of its asbestos liabilities annually .
+
+[12] the company further divides its direct asbestos exposures into the following categories : major asbestos defendants ( the 201ctop 70 201d accounts in tillinghast 2019s published tiers 1 and 2 and wellington accounts ) , which are subdivided further as : structured settlements , wellington , other major asbestos defendants , accounts with future expected exposures greater than $ 2.5 , accounts with future expected exposures less than $ 2.5 , and unallocated .
+
+[13] during 2010 and 2009 , for certain direct policyholders , the company experienced increases in claim severity and expense .
+
+[14] 2022 the other major asbestos defendants subcategory represents insureds included in tiers 1 and 2 , as defined by tillinghast that are not wellington signatories and have not entered into structured settlements with the hartford .
+
+[15] the tier 1 and 2 classifications are meant to capture the insureds for which there is expected to be significant exposure to asbestos claims ."
+S017,at the average grant date fair value per share what is the value in thousands of the shares outstanding but not yet earned under incentive shares at the end of the year ? \\n,251599.67,$200900.81,"[1] changes in shares outstanding but not yet earned under incentive shares plans during the year ended september 30 , 2017 follow ( shares in thousands ) : average grant date shares fair value per share .
+
+[2]  | shares | average grant datefair value per share
+
+[3] as of september 30 , 2017 , 12.9 million shares remained available for award under incentive shares plans .
+
+[4] as of september 30 , 2016 , 4944575 performance shares awarded primarily in 2013 were outstanding , contingent on the company achieving its performance objectives through 2016 and the provision of additional service by employees .
+
+[5] the total fair value of shares vested under incentive shares plans was $ 245 , $ 11 and $ 9 , respectively , in 2017 , 2016 and 2015 , of which $ 101 , $ 4 and $ 5 was paid in cash , primarily for tax withholding .
+
+[6] additionally , the rights to receive a maximum of 2388125 and 2178388 common shares awarded in 2017 and 2016 , under the new performance shares program , are outstanding and contingent upon the company achieving its performance objectives through 2019 and 2018 , respectively .
+
+[7] perfo rmance shares , restricted stock and restricted stock units the company 2019s incentive shares plans include performance shares awards which distribute the value of common stock to key management employees subject to certain operating performance conditions and other restrictions .
+
+[8] performance shares awards are accounted for as liabilities in accordance with asc 718 , compensation 2013 stock compensation , with compensation expense adjusted at the end of each reporting period to reflect the change in fair value of the awards .
+
+[9] as of september 30 , 2017 , there were 1194500 shares of unvested restricted stock outstanding .
+
+[10] incentive shares plans also include restricted stock awards which involve distribution of common stock to key management employees subject to cliff vesting at the end of service periods ranging from three to ten years .
+
+[11] an additional 1691986 shares were distributed at the end of 2017 to employees who provided one additional year of service as follows : 1070264 issued as shares , 616734 withheld for income taxes , and the value of 4988 paid in cash .
+
+[12] as of september 30 , 2017 , total unrecognized compensation expense related to unvested shares awarded under these plans was $ 149 , which is expected to be recognized over a weighted-average period of 1.5 years .
+
+[13] compensation expense for performance shares is recognized over the service period based on the number of shares ultimately expected to be earned .
+
+[14] total compensation expense for stock options and incentive shares was $ 115 , $ 159 and $ 30 for 2017 , 2016 and 2015 , respectively , of which $ 5 , $ 14 and $ 6 was included in discontinued operations .
+
+[15] of these , 2549083 shares were distributed in early 2017 as follows : 1393715 issued as shares , 944002 withheld for income taxes , and the value of 211366 paid in cash ."
+S018,at the average grant date fair value per share what is the value in thousands of the shares outstanding but not yet earned under incentive shares at the end of the year ? \\n,251599.67,"$202,081.20","[1] changes in shares outstanding but not yet earned under incentive shares plans during the year ended september 30 , 2017 follow ( shares in thousands ) : average grant date shares fair value per share .
+
+[2]  | shares | average grant datefair value per share
+
+[3] as of september 30 , 2017 , 12.9 million shares remained available for award under incentive shares plans .
+
+[4] as of september 30 , 2016 , 4944575 performance shares awarded primarily in 2013 were outstanding , contingent on the company achieving its performance objectives through 2016 and the provision of additional service by employees .
+
+[5] the total fair value of shares vested under incentive shares plans was $ 245 , $ 11 and $ 9 , respectively , in 2017 , 2016 and 2015 , of which $ 101 , $ 4 and $ 5 was paid in cash , primarily for tax withholding .
+
+[6] additionally , the rights to receive a maximum of 2388125 and 2178388 common shares awarded in 2017 and 2016 , under the new performance shares program , are outstanding and contingent upon the company achieving its performance objectives through 2019 and 2018 , respectively .
+
+[7] perfo rmance shares , restricted stock and restricted stock units the company 2019s incentive shares plans include performance shares awards which distribute the value of common stock to key management employees subject to certain operating performance conditions and other restrictions .
+
+[8] performance shares awards are accounted for as liabilities in accordance with asc 718 , compensation 2013 stock compensation , with compensation expense adjusted at the end of each reporting period to reflect the change in fair value of the awards .
+
+[9] as of september 30 , 2017 , there were 1194500 shares of unvested restricted stock outstanding .
+
+[10] incentive shares plans also include restricted stock awards which involve distribution of common stock to key management employees subject to cliff vesting at the end of service periods ranging from three to ten years .
+
+[11] an additional 1691986 shares were distributed at the end of 2017 to employees who provided one additional year of service as follows : 1070264 issued as shares , 616734 withheld for income taxes , and the value of 4988 paid in cash .
+
+[12] as of september 30 , 2017 , total unrecognized compensation expense related to unvested shares awarded under these plans was $ 149 , which is expected to be recognized over a weighted-average period of 1.5 years .
+
+[13] compensation expense for performance shares is recognized over the service period based on the number of shares ultimately expected to be earned .
+
+[14] total compensation expense for stock options and incentive shares was $ 115 , $ 159 and $ 30 for 2017 , 2016 and 2015 , respectively , of which $ 5 , $ 14 and $ 6 was included in discontinued operations .
+
+[15] of these , 2549083 shares were distributed in early 2017 as follows : 1393715 issued as shares , 944002 withheld for income taxes , and the value of 211366 paid in cash ."
+S019,"at december 31 , 2006 , what percentage of total future minimum commitments under existing non-cancelable leases and purchase obligations from lease obligations is due in 2007?",6%,24.04%,"[1] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[5] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[6] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[7] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[10] lease obligations ( b ) | 144 | 117 | 94 | 74 | 60 | 110
+
+[11] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[12] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[13] accordingly , the company has no future obligations under this agreement .
+
+[14] we expect capital expenditures in 2007 to be about $ 1.2 billion , or about equal to estimated depreciation and amortization .
+
+[15] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 ."
+S020,"as of december 31 , 2010 what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011",3.2,$329.5 million,"[1] fixed rate notes due february 2014 interest equal to 5.75% ( 5.75 % ) | 750.0
+
+[2] the following table summarizes our debt outstanding as of december 31 , 2010: .
+
+[3] fixed rate notes due march 2018 , interest equal to 4.40% ( 4.40 % ) ( 2 ) .
+
+[4] in february 2010 , we entered into a forward-starting interest rate swap agreement that modified the interest obligation associated with these notes so that the interest payable on the notes effectively became fixed at a rate of 4.46% ( 4.46 % ) beginning with the interest accrued after march 18 , 2010 .
+
+[5] term loan due 2011 interest equal to 3-month libor plus 1.00% ( 1.00 % ) ( 1 ) | $ 420.5
+
+[6] fixed rate notes due march 2018 interest equal to 4.40% ( 4.40 % ) ( 2 ) | 612.5
+
+[7] ( 2 ) in march 2010 , we completed an unregistered offering of fixed rate notes due 2018 .
+
+[8] we maintained a $ 1.4 billion senior credit facility with various financial institutions , including the $ 420.5 million term loan and a $ 945.5 million revolving credit facility .
+
+[9] fixed rate notes due august 2013 interest equal to 5.40% ( 5.40 % ) | 750.0
+
+[10] the senior credit facility was terminated on january 11 , 2011 .
+
+[11] the interest rate swap agreement was terminated on january 11 , 2011 when the loan was repaid .
+
+[12] ( in millions ) | par value
+
+[13] effective january 11 , 2011 , we entered into a new $ 1.0 billion multi-currency revolving senior credit facility with various financial institutions .
+
+[14] 612.5 ( 1 ) in september 2008 , the company entered into an interest rate swap agreement that modified the variable interest obligation associated with this loan so that the interest payable effectively became fixed at a rate of 4.72% ( 4.72 % ) beginning with the interest accrued after october 22 , 2008 .
+
+[15] under our senior credit facility , we were required to maintain a consolidated net worth of at least $ 12.1 billion ."
+S021,"at december 31 , 2006 , what percentage of total future minimum commitments under existing non-cancelable leases and purchase obligations from lease obligations is due in 2007?",6%,24.04%,"[1] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[5] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[6] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[7] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[10] lease obligations ( b ) | 144 | 117 | 94 | 74 | 60 | 110
+
+[11] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[12] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[13] accordingly , the company has no future obligations under this agreement .
+
+[14] we expect capital expenditures in 2007 to be about $ 1.2 billion , or about equal to estimated depreciation and amortization .
+
+[15] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 ."
+S022,what is the cost difference over lifo in the last two years?,12.1,-$0.5 million,"[1] the excess of current cost over lifo cost was approximately $ 5.8 million at february 3 , 2006 and $ 6.3 million at january 28 , 2005 .
+
+[2] lifo reserves decreased $ 0.5 million and $ 0.2 million in 2005 and 2004 , respectively , and increased $ 0.7 million in 2003 .
+
+[3] current cost is deter- mined using the retail first-in , first-out method .
+
+[4] merchandise inventories inventories are stated at the lower of cost or market with cost determined using the retail last-in , first-out ( 201clifo 201d ) method .
+
+[5] the cost of securities sold is based upon the specific identification method .
+
+[6] costs directly associated with warehousing and distribu- tion are capitalized into inventory .
+
+[7] the impact of this change in estimate on the company 2019s consolidated 2005 results of operations was an estimated reduction of gross profit and a corre- sponding decrease to inventory , at cost , of $ 5.2 million .
+
+[8] any difference between the calculated expense and the amounts actually paid are reflected as a liability in accrued expenses and other in the consolidated balance sheets and totaled approximately $ 25.0 million .
+
+[9] in 2005 , the company expanded the number of inven- tory departments it utilizes for its gross profit calculation from 10 to 23 .
+
+[10] store pre-opening costs pre-opening costs related to new store openings and the construction periods are expensed as incurred .
+
+[11] assets to be disposed of are adjusted to the fair value less the cost to sell if less than the book value .
+
+[12] the company provides for depreciation and amortization on a straight-line basis over the following estimated useful lives: .
+
+[13] the rebates are recorded as a reduction to inventory purchases , at cost , which has the effect of reducing cost of goods sold , as prescribed by emerging issues task force ( 201ceitf 201d ) issue no .
+
+[14] the company recorded impairment charges of approximately $ 0.5 million and $ 0.6 million in 2004 and 2003 , respectively , and $ 4.7 million prior to 2003 to reduce the carrying value of its homerville , georgia dc ( which was sold in 2004 ) .
+
+[15] furniture fixtures and equipment | 3-10"
+S023,"what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 due in 2008 is attributable to total debt repayments?",18%,18.2%,"[1] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[5] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[6] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[7] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[10] ( a ) total debt includes scheduled principal payments only .
+
+[11] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[12] total debt ( a ) | $ 692 | $ 129 | $ 1143 | $ 1198 | $ 381 | $ 3680
+
+[13] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[14] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 .
+
+[15] the following table presents capital spending from continuing operations by each of our business segments for the years ended december 31 , 2006 , 2005 and 2004 ."
+S024,what portion of the total contractual obligations is due in the next 12 months?,9.2%,9.03%,"[1] therefore , these amounts have been excluded from the schedule of contractual obligations. .
+
+[2] a schedule of our obligations as of december 31 , 2016 under various notes payable , long-term debt agreements , operating leases with noncancelable terms in excess of one year and interest obligations are summarized in the following table: .
+
+[3] ( millions ) | total | payments due by period less than 1 year | payments due by period 2-3 years | payments due by period 4-5 years | payments due by period more than 5 years
+
+[4] capital lease obligations | 5 | 1 | 1 | 1 | 2
+
+[5] long-term debt | 6652 | 510 | 967 | 1567 | 3608
+
+[6] notes payable | $ 30 | $ 30 | $ - | $ - | $ -
+
+[7] as of december 31 , 2016 , our gross liability for uncertain tax positions was $ 76 million .
+
+[8] as of december 31 , 2016 we had a $ 2.0 billion multi-year credit facility , which expires in december 2019 .
+
+[9] as of december 31 , 2016 , we had $ 327 million of cash and cash equivalents on hand , of which $ 184 million was held outside of the u.s .
+
+[10] liquidity and capital resources we currently expect to fund all of our cash requirements which are reasonably foreseeable for 2017 , including scheduled debt repayments , new investments in the business , share repurchases , dividend payments , possible business acquisitions and pension contributions , with cash from operating activities , and as needed , additional short-term and/or long-term borrowings .
+
+[11] we are in compliance with our debt covenants and other requirements of our credit agreements and indentures .
+
+[12] as of december 31 , 2016 , we had no amount outstanding under either our u.s .
+
+[13] operating leases | 431 | 102 | 153 | 105 | 71
+
+[14] as of december 31 , 2016 , standard & poor 2019s and moody 2019s rated our long-term credit at a- ( stable outlook ) and baa1 ( stable outlook ) , respectively .
+
+[15] there were no borrowings under our credit facility as of december 31 , 2016 or 2015 ."
+S025,for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?,94%,1692,"[1] brazil 2014vivo acquisition 2014on march 30 , 2012 , the company entered into a definitive agreement to purchase up to 1500 towers from vivo s.a .
+
+[2] in addition , the company and vivo amended the asset purchase agreement to allow for the acquisition of up to an additional 300 communications sites by the company , subject to regulatory approval .
+
+[3] on august 31 , 2012 , the company purchased an additional 192 communications sites from vivo for an aggregate purchase price of $ 32.7 million , subject to post-closing adjustments. .
+
+[4] pursuant to the agreement , on march 30 , 2012 , the company purchased 800 communications sites for an aggregate purchase price of $ 151.7 million .
+
+[5] on june 30 , 2012 , the company purchased the remaining 700 communications sites for an aggregate purchase price of $ 126.3 million , subject to post-closing adjustments .
+
+[6] american tower corporation and subsidiaries notes to consolidated financial statements brazil acquisition 2014on march 1 , 2011 , the company acquired 100% ( 100 % ) of the outstanding shares of a company that owned 627 communications sites in brazil for $ 553.2 million , which was subsequently increased to $ 585.4 million as a result of acquiring 39 additional communications sites during the year ended december 31 , 2011 .
+
+[7] ( 201cvivo 201d ) .
+
+[8] the following table summarizes the allocation of the aggregate purchase consideration paid and the amounts of assets acquired and liabilities assumed based upon their estimated fair value at the date of acquisition ( in thousands ) : final purchase price allocation ( 1 ) preliminary purchase price allocation ( 2 ) .
+
+[9]  | final purchase price allocation ( 1 ) | preliminary purchase price allocation ( 2 )
+
+[10] the allocation of the purchase price was finalized during the year ended december 31 , 2012 .
+
+[11] during the year ended december 31 , 2012 , the purchase price was reduced to $ 585.3 million after certain post- closing purchase price adjustments .
+
+[12] as a result , as of january 21 , 2013 , we had repurchased a total of approximately 4.3 million shares of our common stock under the 2011 buyback for an aggregate of $ 245.2 million , including commissions and fees .
+
+[13] property and equipment | 83539 | 86062
+
+[14] american tower corporation and subsidiaries notes to consolidated financial statements as of december 31 , 2012 , 2011 and 2010 , accumulated other comprehensive ( loss ) income included the following items related to derivative financial instruments ( in thousands ) : .
+
+[15] the customer-related intangibles and network location intangibles are being amortized on a straight-line basis over periods of up to 20 years ."
+S026,what is the cost difference over lifo in the last two years?,12.1,-$0.5 million,"[1] the excess of current cost over lifo cost was approximately $ 5.8 million at february 3 , 2006 and $ 6.3 million at january 28 , 2005 .
+
+[2] lifo reserves decreased $ 0.5 million and $ 0.2 million in 2005 and 2004 , respectively , and increased $ 0.7 million in 2003 .
+
+[3] current cost is deter- mined using the retail first-in , first-out method .
+
+[4] merchandise inventories inventories are stated at the lower of cost or market with cost determined using the retail last-in , first-out ( 201clifo 201d ) method .
+
+[5] the cost of securities sold is based upon the specific identification method .
+
+[6] costs directly associated with warehousing and distribu- tion are capitalized into inventory .
+
+[7] the impact of this change in estimate on the company 2019s consolidated 2005 results of operations was an estimated reduction of gross profit and a corre- sponding decrease to inventory , at cost , of $ 5.2 million .
+
+[8] any difference between the calculated expense and the amounts actually paid are reflected as a liability in accrued expenses and other in the consolidated balance sheets and totaled approximately $ 25.0 million .
+
+[9] in 2005 , the company expanded the number of inven- tory departments it utilizes for its gross profit calculation from 10 to 23 .
+
+[10] store pre-opening costs pre-opening costs related to new store openings and the construction periods are expensed as incurred .
+
+[11] assets to be disposed of are adjusted to the fair value less the cost to sell if less than the book value .
+
+[12] the company provides for depreciation and amortization on a straight-line basis over the following estimated useful lives: .
+
+[13] the rebates are recorded as a reduction to inventory purchases , at cost , which has the effect of reducing cost of goods sold , as prescribed by emerging issues task force ( 201ceitf 201d ) issue no .
+
+[14] the company recorded impairment charges of approximately $ 0.5 million and $ 0.6 million in 2004 and 2003 , respectively , and $ 4.7 million prior to 2003 to reduce the carrying value of its homerville , georgia dc ( which was sold in 2004 ) .
+
+[15] furniture fixtures and equipment | 3-10"
+S027,for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?,94%,1692,"[1] brazil 2014vivo acquisition 2014on march 30 , 2012 , the company entered into a definitive agreement to purchase up to 1500 towers from vivo s.a .
+
+[2] in addition , the company and vivo amended the asset purchase agreement to allow for the acquisition of up to an additional 300 communications sites by the company , subject to regulatory approval .
+
+[3] on august 31 , 2012 , the company purchased an additional 192 communications sites from vivo for an aggregate purchase price of $ 32.7 million , subject to post-closing adjustments. .
+
+[4] pursuant to the agreement , on march 30 , 2012 , the company purchased 800 communications sites for an aggregate purchase price of $ 151.7 million .
+
+[5] on june 30 , 2012 , the company purchased the remaining 700 communications sites for an aggregate purchase price of $ 126.3 million , subject to post-closing adjustments .
+
+[6] american tower corporation and subsidiaries notes to consolidated financial statements brazil acquisition 2014on march 1 , 2011 , the company acquired 100% ( 100 % ) of the outstanding shares of a company that owned 627 communications sites in brazil for $ 553.2 million , which was subsequently increased to $ 585.4 million as a result of acquiring 39 additional communications sites during the year ended december 31 , 2011 .
+
+[7] ( 201cvivo 201d ) .
+
+[8] the following table summarizes the allocation of the aggregate purchase consideration paid and the amounts of assets acquired and liabilities assumed based upon their estimated fair value at the date of acquisition ( in thousands ) : final purchase price allocation ( 1 ) preliminary purchase price allocation ( 2 ) .
+
+[9]  | final purchase price allocation ( 1 ) | preliminary purchase price allocation ( 2 )
+
+[10] the allocation of the purchase price was finalized during the year ended december 31 , 2012 .
+
+[11] during the year ended december 31 , 2012 , the purchase price was reduced to $ 585.3 million after certain post- closing purchase price adjustments .
+
+[12] as a result , as of january 21 , 2013 , we had repurchased a total of approximately 4.3 million shares of our common stock under the 2011 buyback for an aggregate of $ 245.2 million , including commissions and fees .
+
+[13] property and equipment | 83539 | 86062
+
+[14] american tower corporation and subsidiaries notes to consolidated financial statements as of december 31 , 2012 , 2011 and 2010 , accumulated other comprehensive ( loss ) income included the following items related to derivative financial instruments ( in thousands ) : .
+
+[15] the customer-related intangibles and network location intangibles are being amortized on a straight-line basis over periods of up to 20 years ."
+S028,what is the return on investment if $ 100 are invested in snap-on at the end of 2008 and sold at the end of 2010?,53.24%,47.45%,"[1] five-year stock performance graph the graph below illustrates the cumulative total shareholder return on snap-on common stock since december 31 , 2008 , assuming that dividends were reinvested .
+
+[2] 24 snap-on incorporated 2009 2010 2011 2012 2013 snap-on incorporated peer group s&p 500 .
+
+[3] snap-on incorporated total shareholder return ( 1 ) fiscal year ended ( 2 ) snap-on incorporated peer group ( 3 ) s&p 500 .
+
+[4] the graph compares snap-on 2019s performance to that of the standard & poor 2019s 500 stock index ( 201cs&p 500 201d ) and a peer group .
+
+[5] fiscal year ended ( 2 ) | snap-onincorporated | peer group ( 3 ) | s&p 500
+
+[6] inventories : snap-on values its inventory at the lower of cost or market and adjusts for the value of inventory that is estimated to be excess , obsolete or otherwise unmarketable .
+
+[7] snap-on 2019s u.s .
+
+[8] the components of snap-on 2019s trade and other accounts receivable as of 2013 and 2012 year end are as follows : ( amounts in millions ) 2013 2012 .
+
+[9] snap-on evaluates the existence of goodwill and indefinite-lived intangible asset impairment on the basis of whether the assets are fully recoverable from projected , discounted cash flows of the related business unit or asset .
+
+[10] 74 snap-on incorporated .
+
+[11] ( 1 ) assumes $ 100 was invested on december 31 , 2008 , and that dividends were reinvested quarterly ."
+S029,"what is the difference between the growth of the balance throughout the fiscal year , during 2007 and 2008?",10.2%,$31.7 million,"[1] balance at december 27 2008 | $ 214.4 | $ 126.6
+
+[2] balance at beginning of year | $ 126.6 | $ 70.5
+
+[3] at december 27 , 2008 and december 29 , 2007 , cumulative unrealized gains/ ( losses ) of ( $ 22345 ) and $ 46445 , respectively , were reported accumulated in other comprehensive gain/ ( loss ) , net of related taxes .
+
+[4] a reconciliation of the beginning and ending amount of unrecognized tax benefits for years ending december 27 , 2008 and december 29 , 2007 is as follows ( in $ millions ) : december 27 , december 29 , 2008 2007 .
+
+[5] december 27 , 2008 , december 29 , 2007 , and december 30 , 2006 , respectively .
+
+[6] the december 27 , 2008 balance of $ 214.4 million of unrecognized tax benefits , if recognized , would reduce the effective tax rate .
+
+[7] accordingly , unrecognized tax benefits of $ 214.4 million as of december 27 , 2008 , have been excluded from the contractual obligations table above .
+
+[8] the total amount of unrecognized tax benefits as of december 27 , 2008 was $ 214.4 million including interest of $ 11.1 million .
+
+[9] 48 , accounting for uncertainty in income taxes ( fin 48 ) , on december 31 , 2006 , the beginning of fiscal year 2007 .
+
+[10]  | december 27 2008 | december 29 2007
+
+[11] all of the company 2019s marketable securities are considered available-for-sale at december 27 , 2008 .
+
+[12] item 7a .
+
+[13] purchase obligations are the aggregate of those purchase orders that were outstanding on december 27 , 2008 ; these obligations are created and then paid off within 3 months during the normal course of our manufacturing business .
+
+[14] contractual obligations | payments due by period total | payments due by period less than 1 year | payments due by period 1-3 years | payments due by period 3-5 years | payments due by period more than 5 years
+
+[15] as a result of the implementation of fin 48 , the company has not recognized a material increase or decrease in the liability for unrecognized tax benefits ."
+S030,"what is the difference between the growth of the balance throughout the fiscal year , during 2007 and 2008?",10.2%,$31.7 million,"[1] balance at december 27 2008 | $ 214.4 | $ 126.6
+
+[2] balance at beginning of year | $ 126.6 | $ 70.5
+
+[3] at december 27 , 2008 and december 29 , 2007 , cumulative unrealized gains/ ( losses ) of ( $ 22345 ) and $ 46445 , respectively , were reported accumulated in other comprehensive gain/ ( loss ) , net of related taxes .
+
+[4] a reconciliation of the beginning and ending amount of unrecognized tax benefits for years ending december 27 , 2008 and december 29 , 2007 is as follows ( in $ millions ) : december 27 , december 29 , 2008 2007 .
+
+[5] december 27 , 2008 , december 29 , 2007 , and december 30 , 2006 , respectively .
+
+[6] the december 27 , 2008 balance of $ 214.4 million of unrecognized tax benefits , if recognized , would reduce the effective tax rate .
+
+[7] accordingly , unrecognized tax benefits of $ 214.4 million as of december 27 , 2008 , have been excluded from the contractual obligations table above .
+
+[8] the total amount of unrecognized tax benefits as of december 27 , 2008 was $ 214.4 million including interest of $ 11.1 million .
+
+[9] 48 , accounting for uncertainty in income taxes ( fin 48 ) , on december 31 , 2006 , the beginning of fiscal year 2007 .
+
+[10]  | december 27 2008 | december 29 2007
+
+[11] all of the company 2019s marketable securities are considered available-for-sale at december 27 , 2008 .
+
+[12] item 7a .
+
+[13] purchase obligations are the aggregate of those purchase orders that were outstanding on december 27 , 2008 ; these obligations are created and then paid off within 3 months during the normal course of our manufacturing business .
+
+[14] contractual obligations | payments due by period total | payments due by period less than 1 year | payments due by period 1-3 years | payments due by period 3-5 years | payments due by period more than 5 years
+
+[15] as a result of the implementation of fin 48 , the company has not recognized a material increase or decrease in the liability for unrecognized tax benefits ."
+S031,"what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 due in 2008 is attributable to total debt repayments?",18%,18.2%,"[1] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[5] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[6] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[7] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[10] ( a ) total debt includes scheduled principal payments only .
+
+[11] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[12] total debt ( a ) | $ 692 | $ 129 | $ 1143 | $ 1198 | $ 381 | $ 3680
+
+[13] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[14] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 .
+
+[15] the following table presents capital spending from continuing operations by each of our business segments for the years ended december 31 , 2006 , 2005 and 2004 ."
+S032,"at december 31 , 2006 , what percentage of total future minimum commitments under existing non-cancelable leases and purchase obligations from lease obligations is due in 2008?",20%,19.53%,"[1] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[5] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[6] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[7] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[10] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[11] accordingly , the company has no future obligations under this agreement .
+
+[12] lease obligations ( b ) | 144 | 117 | 94 | 74 | 60 | 110
+
+[13] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[14] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 .
+
+[15] coated papers business in august 2006 ."
+S033,what were total distillates sales in millions for the three year period ? 365 346 345,1056,1.056,"[1] distillates | 365 | 346 | 345
+
+[2] the following table sets forth the volume of map 2019s consolidated refined product sales by product group for each of the last three years : refined product sales ( thousands of barrels per day ) 2003 2002 2001 .
+
+[3] approximately 50 percent of map 2019s gasoline volumes and 91 percent of its distillate volumes were sold on a wholesale or spot market basis to independent unbranded customers or other wholesalers in 2003 .
+
+[4] marketing in 2003 , map 2019s refined product sales volumes ( excluding matching buy/sell transactions ) totaled 19.8 billion gallons ( 1293000 bpd ) .
+
+[5] excluding sales related to matching buy/sell transactions , the wholesale distribution of petroleum products to private brand marketers and to large commercial and industrial consumers , primarily located in the midwest , the upper great plains and the southeast , and sales in the spot market , accounted for approximately 70 percent of map 2019s refined product sales volumes in 2003 .
+
+[6] as of december 31 , 2003 , map supplied petroleum products to approximately 3900 marathon and ashland branded retail outlets located primarily in michigan , ohio , indiana , kentucky and illinois .
+
+[7] total | 1357 | 1318 | 1304
+
+[8] heavy fuel oil | 24 | 20 | 41
+
+[9] gasoline | 776 | 773 | 748
+
+[10] map also sells low-vapor-pressure gasoline in nine states .
+
+[11] ( thousands of barrels per day ) | 2003 | 2002 | 2001
+
+[12] derivatives are used to lock in margins associated with future fixed price sales of refined products to non-retail customers .
+
+[13] approximately half of map 2019s propane is sold into the home heating markets and industrial consumers purchase the balance .
+
+[14] derivative gains ( losses ) included in rm&t segment income for each of the last two years are summarized in the following table : strategy ( in millions ) 2003 2002 .
+
+[15] at its catlettsburg , kentucky refinery , map has completed the approximately $ 440 million multi-year integrated investment program to upgrade product yield realizations and reduce fixed and variable manufacturing expenses ."
+S034,"what is the difference between the growth of the balance throughout the fiscal year , during 2007 and 2008?",10.2%,$31.7 million,"[1] balance at december 27 2008 | $ 214.4 | $ 126.6
+
+[2] balance at beginning of year | $ 126.6 | $ 70.5
+
+[3] at december 27 , 2008 and december 29 , 2007 , cumulative unrealized gains/ ( losses ) of ( $ 22345 ) and $ 46445 , respectively , were reported accumulated in other comprehensive gain/ ( loss ) , net of related taxes .
+
+[4] a reconciliation of the beginning and ending amount of unrecognized tax benefits for years ending december 27 , 2008 and december 29 , 2007 is as follows ( in $ millions ) : december 27 , december 29 , 2008 2007 .
+
+[5] december 27 , 2008 , december 29 , 2007 , and december 30 , 2006 , respectively .
+
+[6] the december 27 , 2008 balance of $ 214.4 million of unrecognized tax benefits , if recognized , would reduce the effective tax rate .
+
+[7] accordingly , unrecognized tax benefits of $ 214.4 million as of december 27 , 2008 , have been excluded from the contractual obligations table above .
+
+[8] the total amount of unrecognized tax benefits as of december 27 , 2008 was $ 214.4 million including interest of $ 11.1 million .
+
+[9] 48 , accounting for uncertainty in income taxes ( fin 48 ) , on december 31 , 2006 , the beginning of fiscal year 2007 .
+
+[10]  | december 27 2008 | december 29 2007
+
+[11] all of the company 2019s marketable securities are considered available-for-sale at december 27 , 2008 .
+
+[12] item 7a .
+
+[13] purchase obligations are the aggregate of those purchase orders that were outstanding on december 27 , 2008 ; these obligations are created and then paid off within 3 months during the normal course of our manufacturing business .
+
+[14] contractual obligations | payments due by period total | payments due by period less than 1 year | payments due by period 1-3 years | payments due by period 3-5 years | payments due by period more than 5 years
+
+[15] as a result of the implementation of fin 48 , the company has not recognized a material increase or decrease in the liability for unrecognized tax benefits ."
+S035,"what is the borrowing under the term loan facility as a percentage of the total contractual maturities of long-term debt obligations due subsequent to december 31 , 2016?",114%,100%,"[1] the contractual maturities of our long-term debt obligations due subsequent to december 31 , 2016 are as follows: .
+
+[2] at december 31 , 2016 , we had $ 3081 outstanding on the term loan and zero outstanding on the revolving facility .
+
+[3] as of december 31 , 2016 and 2015 , our total facility lease obligation was $ 136 and $ 133 , respectively , recorded within other current liabilities and facility lease obligation on our consolidated balance sheets. ."
+S036,what is the return on investment if $ 100 are invested in snap-on at the end of 2008 and sold at the end of 2010?,53.24%,46.4%,"[1] five-year stock performance graph the graph below illustrates the cumulative total shareholder return on snap-on common stock since december 31 , 2008 , assuming that dividends were reinvested .
+
+[2] 24 snap-on incorporated 2009 2010 2011 2012 2013 snap-on incorporated peer group s&p 500 .
+
+[3] snap-on incorporated total shareholder return ( 1 ) fiscal year ended ( 2 ) snap-on incorporated peer group ( 3 ) s&p 500 .
+
+[4] the graph compares snap-on 2019s performance to that of the standard & poor 2019s 500 stock index ( 201cs&p 500 201d ) and a peer group .
+
+[5] fiscal year ended ( 2 ) | snap-onincorporated | peer group ( 3 ) | s&p 500
+
+[6] inventories : snap-on values its inventory at the lower of cost or market and adjusts for the value of inventory that is estimated to be excess , obsolete or otherwise unmarketable .
+
+[7] snap-on 2019s u.s .
+
+[8] the components of snap-on 2019s trade and other accounts receivable as of 2013 and 2012 year end are as follows : ( amounts in millions ) 2013 2012 .
+
+[9] snap-on evaluates the existence of goodwill and indefinite-lived intangible asset impairment on the basis of whether the assets are fully recoverable from projected , discounted cash flows of the related business unit or asset .
+
+[10] 74 snap-on incorporated .
+
+[11] ( 1 ) assumes $ 100 was invested on december 31 , 2008 , and that dividends were reinvested quarterly .
+
+[12] snap-on records allowances for excess and obsolete inventory based on historical and estimated future demand and market conditions .
+
+[13] snap-on adopted the 201clast-in , first-out 201d ( 201clifo 201d ) inventory valuation method in 1973 for its u.s .
+
+[14] snap-on does not believe that its trade accounts , finance or contract receivables represent significant concentrations of credit risk because of the diversified portfolio of individual customers and geographical areas .
+
+[15] note 3 : receivables trade and other accounts receivable snap-on 2019s trade and other accounts receivable primarily arise from the sale of tools and diagnostic and equipment products to a broad range of industrial and commercial customers and to snap-on 2019s independent franchise van channel on a non-extended-term basis with payment terms generally ranging from 30 to 120 days ."
+S037,"what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 due in 2008 is attributable to total debt repayments?",18%,18.2%,"[1] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[5] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[6] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[7] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[10] ( a ) total debt includes scheduled principal payments only .
+
+[11] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[12] total debt ( a ) | $ 692 | $ 129 | $ 1143 | $ 1198 | $ 381 | $ 3680
+
+[13] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[14] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 .
+
+[15] the following table presents capital spending from continuing operations by each of our business segments for the years ended december 31 , 2006 , 2005 and 2004 ."
+S038,at the average grant date fair value per share what is the value in thousands of the shares outstanding but not yet earned under incentive shares at the end of the year ? \\n,251599.67,64099.8,"[1] changes in shares outstanding but not yet earned under incentive shares plans during the year ended september 30 , 2017 follow ( shares in thousands ) : average grant date shares fair value per share .
+
+[2]  | shares | average grant datefair value per share
+
+[3] as of september 30 , 2017 , 12.9 million shares remained available for award under incentive shares plans .
+
+[4] as of september 30 , 2016 , 4944575 performance shares awarded primarily in 2013 were outstanding , contingent on the company achieving its performance objectives through 2016 and the provision of additional service by employees .
+
+[5] the total fair value of shares vested under incentive shares plans was $ 245 , $ 11 and $ 9 , respectively , in 2017 , 2016 and 2015 , of which $ 101 , $ 4 and $ 5 was paid in cash , primarily for tax withholding .
+
+[6] additionally , the rights to receive a maximum of 2388125 and 2178388 common shares awarded in 2017 and 2016 , under the new performance shares program , are outstanding and contingent upon the company achieving its performance objectives through 2019 and 2018 , respectively .
+
+[7] perfo rmance shares , restricted stock and restricted stock units the company 2019s incentive shares plans include performance shares awards which distribute the value of common stock to key management employees subject to certain operating performance conditions and other restrictions .
+
+[8] performance shares awards are accounted for as liabilities in accordance with asc 718 , compensation 2013 stock compensation , with compensation expense adjusted at the end of each reporting period to reflect the change in fair value of the awards .
+
+[9] as of september 30 , 2017 , there were 1194500 shares of unvested restricted stock outstanding .
+
+[10] incentive shares plans also include restricted stock awards which involve distribution of common stock to key management employees subject to cliff vesting at the end of service periods ranging from three to ten years ."
+S039,what was total in millions of accumulated other comprehensive loss?,-84,$ -61.1,"[1] accumulated other comprehensive loss | $ -61.1 ( 61.1 ) | $ -16.6 ( 16.6 ) | $ -6.3 ( 6.3 )
+
+[2] accumulated other comprehensive loss foreign currency translation adjustments are included in stockholders 2019 equity under accumulated other comprehensive the components of accumulated other comprehensive loss are as follows: .
+
+[3] foreign currency translation | $ -61.1 ( 61.1 ) | $ -16.6 ( 16.6 ) | $ -6.3 ( 6.3 )
+
+[4] for the years ended december 31 , 2015 , 2014 and 2013 , the amounts expensed for these plans were $ 19.8 million , $ 21.9 million and $ 17.3 million , respectively .
+
+[5] as of december 31 , 2013 , the company accrued $ 20.9 million related to this arrangement within other current liabilities , as the company realized the tax benefit of the compensation deductions during the 2013 tax year .
+
+[6] the company 2019s interest rate cap agreements are not designated as cash flow hedges of interest rate risk .
+
+[7] changes in fair value of the derivatives are recorded directly to interest expense , net in the consolidated statements of operations .
+
+[8] these derivatives are recorded at fair value in the consolidated balance sheets .
+
+[9] a reconciliation of basic weighted-average shares outstanding to diluted weighted-average shares outstanding is as follows: .
+
+[10] the company classifies deferred financing costs as a direct deduction from the carrying value of the long-term debt liability on the consolidated balance sheets , except for deferred financing costs associated with line-of-credit arrangements which are presented as an asset , included within 201cother assets 201d on the consolidated balance sheets .
+
+[11] restricted debt unit plan on march 10 , 2010 , the company established the restricted debt unit plan ( the 201crdu plan 201d ) , an unfunded nonqualified deferred compensation plan. .
+
+[12] ( in millions ) | years ended december 31 , 2015 | years ended december 31 , 2014 | years ended december 31 , 2013
+
+[13] participate in other savings plans .
+
+[14] diluted weighted-average shares outstanding ( 3 ) | 171.8 | 172.8 | 158.7
+
+[15] basic weighted-average shares outstanding | 170.3 | 170.6 | 156.6"
+S040,"at december 31 , 2006 , what percentage of total future minimum commitments under existing non-cancelable leases and purchase obligations from lease obligations is due in 2008?",20%,19.5%,"[1] at december 31 , 2006 , total future minimum commitments under existing non-cancelable leases and purchase obligations were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[2] contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2006 , were as follows : in millions 2007 2008 2009 2010 2011 thereafter .
+
+[3] ( b ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 23 million ; 2008 - $ 19 million ; 2009 - $ 15 million ; 2010 - $ 7 million ; 2011 - $ 5 million ; and thereafter - $ 7 million .
+
+[4] ( a ) included in these amounts are $ 76 million of lease obligations related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 23 million ; 2008 2013 $ 19 million ; 2009 2013 $ 15 million ; 2010 2013 $ 7 million ; 2011 2013 $ 5 million ; and thereafter 2013 $ 7 million .
+
+[5] ( c ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 - $ 335 million ; 2008 - $ 199 million ; 2009 - $ 157 million ; 2010 - $ 143 million ; 2011 - $ 141 million ; and thereafter - $ 331 million .
+
+[6] ( b ) included in these amounts are $ 1.3 billion of purchase obliga- tions related to discontinued operations and businesses held for sale that are due as follows : 2007 2013 $ 335 million ; 2008 2013 $ 199 million ; 2009 2013 $ 157 million ; 2010 2013 $ 143 million ; 2011 2013 $ 141 million ; and thereafter 2013 $ 331 million .
+
+[7] the company was in compliance with all its debt covenants at december 31 , 2006 .
+
+[8] purchase obligations ( bc ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[9] lease obligations ( a ) | $ 144 | $ 117 | $ 94 | $ 74 | $ 60 | $ 110
+
+[10] purchase obligations ( cd ) | 2329 | 462 | 362 | 352 | 323 | 1794
+
+[11] accordingly , the company has no future obligations under this agreement .
+
+[12] lease obligations ( b ) | 144 | 117 | 94 | 74 | 60 | 110
+
+[13] unconditional purchase obligations have been entered into in the ordinary course of business , prin- cipally for capital projects and the purchase of cer- tain pulpwood , logs , wood chips , raw materials , energy and services , including fiber supply agree- ments to purchase pulpwood that were entered into concurrently with the 2006 transformation plan for- estland sales ( see note 7 ) .
+
+[14] capital spending from continuing operations was $ 1.0 billion in 2006 , or 87% ( 87 % ) of depreciation and amortization , comparable to $ 992 million , or 78% ( 78 % ) of depreciation and amortization in 2005 , and $ 925 mil- lion , or 73% ( 73 % ) of depreciation and amortization in 2004 .
+
+[15] coated papers business in august 2006 ."

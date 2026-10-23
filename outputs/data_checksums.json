@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 163,
+  "n_files": 195,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -654,6 +654,134 @@
     "outputs/rescored_2026-10-12/summary.json": {
       "sha256": "a5c10a62c93421fea98e14957c26f4d5a830a7d18fce59106b94d07c8c94ebd8",
       "bytes": 8947
+    },
+    "outputs/hallucination_classification_2026-10-23/classified_rows_gemini_full.csv": {
+      "sha256": "19e70f45cdc660cf2485def51a2ed9d6e005b677562a4067772b47b08dd29ef6",
+      "bytes": 163723
+    },
+    "outputs/hallucination_classification_2026-10-23/classified_rows_local_oct12_baseline.csv": {
+      "sha256": "95e0b4d875dd93bdfaa33f3ff01931ee1c5299baa64233280573041ecdd44881",
+      "bytes": 42704
+    },
+    "outputs/hallucination_classification_2026-10-23/classified_rows_local_v3.csv": {
+      "sha256": "f455ef0e364d332b825ae200bee9ef6f55b73979b90f51e815f8642a6881a297",
+      "bytes": 42380
+    },
+    "outputs/hallucination_classification_2026-10-23/classified_rows_local_v4.csv": {
+      "sha256": "27c918f6749c231a5265f10e686ab26cbd2da8f26237d4bf6c42a3af5d23d089",
+      "bytes": 57054
+    },
+    "outputs/hallucination_classification_2026-10-23/classified_rows_local_v5.csv": {
+      "sha256": "469595ddbb4837782e6ec645367c1dbf4b551e9f83b5052c78fb762c4b0be9a9",
+      "bytes": 142249
+    },
+    "outputs/hallucination_classification_2026-10-23/labelling_key.csv": {
+      "sha256": "e5a701a30e4a5e2413b7d93539a37e1615fe8c198713fbf624b5f7345bfc21af",
+      "bytes": 2453
+    },
+    "outputs/hallucination_classification_2026-10-23/labelling_sheet.csv": {
+      "sha256": "84b841fc5e5dd11388a3fc8ada7cc10efe915731b645806097d94001b70694ed",
+      "bytes": 99823
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_counts_gemini_full.csv": {
+      "sha256": "6b0f6cc28df280220b092cce45951952a5bd616382121264ded7e8e100e70f0e",
+      "bytes": 10290
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_counts_local_oct12_baseline.csv": {
+      "sha256": "0e110cd77a8bf0e72cb0fa835c5204bbd91fe55cbdb8d3b948c6f93f79839232",
+      "bytes": 3910
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_counts_local_v3.csv": {
+      "sha256": "e267e4a5da8ca0c68c1d7250290f410c1690d2576f29629b4235caab3d655a82",
+      "bytes": 3922
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_counts_local_v4.csv": {
+      "sha256": "0625050ddede47783b67d42436ac3e5fb232240f6f877e3a73744a759eb114f4",
+      "bytes": 5259
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_counts_local_v5.csv": {
+      "sha256": "9b04f427a3343f527538e0392134e675ed0e6ac86bc4de89e811926fb7c83ca6",
+      "bytes": 10450
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_gemini_full.json": {
+      "sha256": "d1e1143dab5076a0776a144622986f5471b802f1e858af4d4daf42d7315db42d",
+      "bytes": 65754
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_local_oct12_baseline.json": {
+      "sha256": "b6fa9200d5196f42642767443c99d09cb1f824c5cfc64cad71f551325b2b8eb5",
+      "bytes": 25966
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_local_v3.json": {
+      "sha256": "981ae04eb45614c1e1ef4c979134fec95661627186508251c682aa71e5fdf588",
+      "bytes": 25989
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_local_v4.json": {
+      "sha256": "b044fa700a01abbea3bfb62a823a1fbcfe3032ff4ba22c94410eac734319166e",
+      "bytes": 36121
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_local_v5.json": {
+      "sha256": "873337496351ef69870be17af7738a00153f1b21ef862a493f66c8fd230b5386",
+      "bytes": 65208
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_route_split_gemini_full.csv": {
+      "sha256": "98c36af6b0fc5beadc49c7a72edb9c3f4d1eb3007930bda27642bf944de351ed",
+      "bytes": 566
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_route_split_local_oct12_baseline.csv": {
+      "sha256": "7792be901f8f4610c91bbe86da3ee0da511e028c7fb70568fc029bb1d89f9da7",
+      "bytes": 262
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_route_split_local_v3.csv": {
+      "sha256": "4ebaa0cd5d14cd094553fccc9d0ab0642f78ba02b6966dfb9416b6f9b01cafbd",
+      "bytes": 281
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_route_split_local_v4.csv": {
+      "sha256": "9d30f98503f489874418f7cc633544ac27084cf000f0fdf3744714aac190cdd4",
+      "bytes": 436
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_route_split_local_v5.csv": {
+      "sha256": "08c2cd266b3feea66bd6676d95dc434a13665a874e9bb07cead0c4fc555a4ee1",
+      "bytes": 443
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_gemini_full.csv": {
+      "sha256": "91f5c936d69275739b5c9a39a2dd1e962b456078053e58502dc95a1a385ab086",
+      "bytes": 331
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_oct12_baseline.csv": {
+      "sha256": "a71b37e8cf5516988a8b8148956d8305dd0c5b22f34c59231e15f38b0bfe6894",
+      "bytes": 229
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_v3.csv": {
+      "sha256": "001f0319155ba95cde6db2419ea3e0c504ae70be009da0b6886a00909c1a1b48",
+      "bytes": 273
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_v4.csv": {
+      "sha256": "1c1bd07d0caf065cd337ee221566caeeb7a9592e50667adcc9f83886c84a399b",
+      "bytes": 316
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_v5.csv": {
+      "sha256": "e10c3c83fed94e9eef9f3602a6f083a5b3317725ab79f6ec2458abd533490e09",
+      "bytes": 316
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_gemini_full.csv": {
+      "sha256": "a6a27d83e7c7afb6cf02b914c2f22b120f7f3c186d57a7a9bbb2a608a0227207",
+      "bytes": 10337
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_oct12_baseline.csv": {
+      "sha256": "0e110cd77a8bf0e72cb0fa835c5204bbd91fe55cbdb8d3b948c6f93f79839232",
+      "bytes": 3910
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v3.csv": {
+      "sha256": "1742e69629c3c4df6a05638843a2eb748cf3747b016cb8f8fc9f655d0a07a5e9",
+      "bytes": 3902
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v4.csv": {
+      "sha256": "86221da75f84f41d81cb386f8037bd834c9c240e1cf0f22d5869d91d6900e3ac",
+      "bytes": 5232
+    },
+    "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v5.csv": {
+      "sha256": "240253a4c3d0a5305739389ff6f805652da61e14d10427e24df16800e570c388",
+      "bytes": 10363
     }
   },
   "additions": [
@@ -742,6 +870,44 @@
         "outputs/rescored_2026-10-12/sept30_first_ollama.jsonl",
         "outputs/rescored_2026-10-12/sept30_pilot_ollama.jsonl",
         "outputs/rescored_2026-10-12/summary.json"
+      ]
+    },
+    {
+      "label": "Amendment 5 hallucination classification outputs 2026-10-23",
+      "added_utc": "2026-10-23T04:37:45.797929+00:00",
+      "paths": [
+        "outputs/hallucination_classification_2026-10-23/classified_rows_gemini_full.csv",
+        "outputs/hallucination_classification_2026-10-23/classified_rows_local_oct12_baseline.csv",
+        "outputs/hallucination_classification_2026-10-23/classified_rows_local_v3.csv",
+        "outputs/hallucination_classification_2026-10-23/classified_rows_local_v4.csv",
+        "outputs/hallucination_classification_2026-10-23/classified_rows_local_v5.csv",
+        "outputs/hallucination_classification_2026-10-23/labelling_key.csv",
+        "outputs/hallucination_classification_2026-10-23/labelling_sheet.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_counts_gemini_full.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_counts_local_oct12_baseline.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_counts_local_v3.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_counts_local_v4.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_counts_local_v5.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_gemini_full.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_oct12_baseline.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_v3.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_v4.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_v5.json",
+        "outputs/hallucination_classification_2026-10-23/summary_route_split_gemini_full.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_route_split_local_oct12_baseline.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_route_split_local_v3.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_route_split_local_v4.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_route_split_local_v5.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_gemini_full.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_oct12_baseline.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_v3.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_v4.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_rows_returned_wrong_ungrounded_local_v5.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_gemini_full.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_oct12_baseline.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v3.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v4.csv",
+        "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v5.csv"
       ]
     }
   ]
