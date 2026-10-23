@@ -1,0 +1,589 @@
+{
+  "labelled_file": "outputs/hallucination_labels_addendum2_2026-10-23/labelling_sheet_check_with_notes.csv",
+  "labelled_file_sha256": "6abe9b266c03dd9ef740de0c0065d24e8da9b2d2918317cc20c1b74b6bc85d1a",
+  "label_check": {
+    "rows": 40,
+    "identical": 40,
+    "against": "3c167ba:outputs/hallucination_classification_2026-10-23/label_analysis/labelled_rows_joined.csv"
+  },
+  "notes": {
+    "rows": 40,
+    "distinct_questions": 17,
+    "rows_with_any_note": 36,
+    "questions_with_any_note": 15,
+    "by_topic": {
+      "rounding": {
+        "rows": 6,
+        "distinct_questions": 2,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 6,
+          "wrong_grounded": 0
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 2,
+          "wrong_grounded": 0
+        },
+        "rows_by_scn": {
+          "C": 6
+        },
+        "sample_ids": [
+          "S007",
+          "S023",
+          "S031",
+          "S032",
+          "S037",
+          "S040"
+        ]
+      },
+      "scale": {
+        "rows": 3,
+        "distinct_questions": 1,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 0,
+          "wrong_grounded": 3
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 0,
+          "wrong_grounded": 1
+        },
+        "rows_by_scn": {
+          "C": 3
+        },
+        "sample_ids": [
+          "S001",
+          "S010",
+          "S033"
+        ]
+      },
+      "suspected gold error": {
+        "rows": 4,
+        "distinct_questions": 2,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 4,
+          "wrong_grounded": 0
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 2,
+          "wrong_grounded": 0
+        },
+        "rows_by_scn": {
+          "C": 4
+        },
+        "sample_ids": [
+          "S004",
+          "S013",
+          "S014",
+          "S015"
+        ]
+      },
+      "count vs percentage": {
+        "rows": 3,
+        "distinct_questions": 1,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 0,
+          "wrong_grounded": 3
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 0,
+          "wrong_grounded": 1
+        },
+        "rows_by_scn": {
+          "C": 3
+        },
+        "sample_ids": [
+          "S009",
+          "S025",
+          "S027"
+        ]
+      },
+      "any of the four": {
+        "rows": 16,
+        "distinct_questions": 6,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 10,
+          "wrong_grounded": 6
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 4,
+          "wrong_grounded": 2
+        },
+        "rows_by_scn": {
+          "C": 16
+        },
+        "sample_ids": [
+          "S001",
+          "S004",
+          "S007",
+          "S009",
+          "S010",
+          "S013",
+          "S014",
+          "S015",
+          "S023",
+          "S025",
+          "S027",
+          "S031",
+          "S032",
+          "S033",
+          "S037",
+          "S040"
+        ]
+      },
+      "other note only": {
+        "rows": 20,
+        "distinct_questions": 9,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 8,
+          "wrong_grounded": 12
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 4,
+          "wrong_grounded": 5
+        },
+        "rows_by_scn": {
+          "C": 9,
+          "N": 6,
+          "S": 5
+        },
+        "sample_ids": [
+          "S003",
+          "S005",
+          "S006",
+          "S008",
+          "S011",
+          "S012",
+          "S016",
+          "S017",
+          "S018",
+          "S019",
+          "S020",
+          "S021",
+          "S028",
+          "S029",
+          "S030",
+          "S034",
+          "S035",
+          "S036",
+          "S038",
+          "S039"
+        ]
+      },
+      "no note": {
+        "rows": 4,
+        "distinct_questions": 2,
+        "rows_by_proxy_class": {
+          "wrong_ungrounded": 2,
+          "wrong_grounded": 2
+        },
+        "questions_by_proxy_class": {
+          "wrong_ungrounded": 1,
+          "wrong_grounded": 1
+        },
+        "rows_by_scn": {
+          "C": 2,
+          "S": 2
+        },
+        "sample_ids": [
+          "S002",
+          "S022",
+          "S024",
+          "S026"
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "sample_id": "S001",
+      "query_id": "MRO/2003/page_45.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "scale; model arguably answered in the unit the question asks (millions); possible scoring artefact",
+      "topics": [
+        "scale"
+      ]
+    },
+    {
+      "sample_id": "S002",
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "N",
+      "note": "",
+      "topics": []
+    },
+    {
+      "sample_id": "S003",
+      "query_id": "HIG/2011/page_53.pdf-3",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "question wording ambiguous",
+      "topics": []
+    },
+    {
+      "sample_id": "S004",
+      "query_id": "ETFC/2011/page_144.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "possible gold error: question asks for 2010, gold uses the 2011 figure; model answer matches the question",
+      "topics": [
+        "suspected gold error"
+      ]
+    },
+    {
+      "sample_id": "S005",
+      "query_id": "CDW/2015/page_70.pdf-1",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "question ambiguous",
+      "topics": []
+    },
+    {
+      "sample_id": "S006",
+      "query_id": "CME/2010/page_69.pdf-4",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "N",
+      "note": "uncertain: gold not reproducible",
+      "topics": []
+    },
+    {
+      "sample_id": "S007",
+      "query_id": "IP/2006/page_38.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "rounding: model is correct to 0.2 points; scored wrong because 18.2 is outside 1% relative tolerance of 18",
+      "topics": [
+        "rounding"
+      ]
+    },
+    {
+      "sample_id": "S008",
+      "query_id": "HIG/2011/page_53.pdf-3",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "question wording ambiguous",
+      "topics": []
+    },
+    {
+      "sample_id": "S009",
+      "query_id": "AMT/2012/page_118.pdf-4",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "question asks \"how many\"; 1692 is a valid count, gold expects a percentage",
+      "topics": [
+        "count vs percentage"
+      ]
+    },
+    {
+      "sample_id": "S010",
+      "query_id": "MRO/2003/page_45.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "scale; model arguably answered in the unit the question asks (millions); possible scoring artefact",
+      "topics": [
+        "scale"
+      ]
+    },
+    {
+      "sample_id": "S011",
+      "query_id": "GRMN/2008/page_85.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "interpretation difference",
+      "topics": []
+    },
+    {
+      "sample_id": "S012",
+      "query_id": "C/2009/page_243.pdf-1",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "garbled source text",
+      "topics": []
+    },
+    {
+      "sample_id": "S013",
+      "query_id": "ETFC/2011/page_144.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "possible gold error: question asks for 2010, gold uses the 2011 figure; model answer matches the question",
+      "topics": [
+        "suspected gold error"
+      ]
+    },
+    {
+      "sample_id": "S014",
+      "query_id": "ETFC/2011/page_144.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "possible gold error: question asks for 2010, gold uses the 2011 figure; model answer matches the question",
+      "topics": [
+        "suspected gold error"
+      ]
+    },
+    {
+      "sample_id": "S015",
+      "query_id": "VRTX/2006/page_111.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "possible gold error: question asks for gross total; model answer matches the question",
+      "topics": [
+        "suspected gold error"
+      ]
+    },
+    {
+      "sample_id": "S016",
+      "query_id": "HIG/2011/page_53.pdf-3",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "question wording ambiguous",
+      "topics": []
+    },
+    {
+      "sample_id": "S017",
+      "query_id": "EMR/2017/page_78.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "N",
+      "gd": "N",
+      "note": "unsupported number",
+      "topics": []
+    },
+    {
+      "sample_id": "S018",
+      "query_id": "EMR/2017/page_78.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "N",
+      "gd": "N",
+      "note": "unsupported number",
+      "topics": []
+    },
+    {
+      "sample_id": "S019",
+      "query_id": "IP/2006/page_75.pdf-1",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "interpretation difference",
+      "topics": []
+    },
+    {
+      "sample_id": "S020",
+      "query_id": "CME/2010/page_69.pdf-4",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "N",
+      "note": "uncertain: gold not reproducible",
+      "topics": []
+    },
+    {
+      "sample_id": "S021",
+      "query_id": "IP/2006/page_75.pdf-1",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "interpretation difference",
+      "topics": []
+    },
+    {
+      "sample_id": "S022",
+      "query_id": "DG/2005/page_44.pdf-3",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "",
+      "topics": []
+    },
+    {
+      "sample_id": "S023",
+      "query_id": "IP/2006/page_38.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "rounding: model is correct to 0.2 points; scored wrong because 18.2 is outside 1% relative tolerance of 18",
+      "topics": [
+        "rounding"
+      ]
+    },
+    {
+      "sample_id": "S024",
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "N",
+      "note": "",
+      "topics": []
+    },
+    {
+      "sample_id": "S025",
+      "query_id": "AMT/2012/page_118.pdf-4",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "question asks \"how many\"; 1692 is a valid count, gold expects a percentage",
+      "topics": [
+        "count vs percentage"
+      ]
+    },
+    {
+      "sample_id": "S026",
+      "query_id": "DG/2005/page_44.pdf-3",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "",
+      "topics": []
+    },
+    {
+      "sample_id": "S027",
+      "query_id": "AMT/2012/page_118.pdf-4",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "question asks \"how many\"; 1692 is a valid count, gold expects a percentage",
+      "topics": [
+        "count vs percentage"
+      ]
+    },
+    {
+      "sample_id": "S028",
+      "query_id": "SNA/2013/page_34.pdf-3",
+      "proxy": "wrong_ungrounded",
+      "scn": "N",
+      "gd": "N",
+      "note": "unsupported number",
+      "topics": []
+    },
+    {
+      "sample_id": "S029",
+      "query_id": "GRMN/2008/page_85.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "interpretation difference",
+      "topics": []
+    },
+    {
+      "sample_id": "S030",
+      "query_id": "GRMN/2008/page_85.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "interpretation difference",
+      "topics": []
+    },
+    {
+      "sample_id": "S031",
+      "query_id": "IP/2006/page_38.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "rounding: model is correct to 0.2 points; scored wrong because 18.2 is outside 1% relative tolerance of 18",
+      "topics": [
+        "rounding"
+      ]
+    },
+    {
+      "sample_id": "S032",
+      "query_id": "IP/2006/page_75.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "rounding: model is correct to 0.5 points; scored wrong because outside 1% relative tolerance",
+      "topics": [
+        "rounding"
+      ]
+    },
+    {
+      "sample_id": "S033",
+      "query_id": "MRO/2003/page_45.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "scale; model arguably answered in the unit the question asks (millions); possible scoring artefact",
+      "topics": [
+        "scale"
+      ]
+    },
+    {
+      "sample_id": "S034",
+      "query_id": "GRMN/2008/page_85.pdf-2",
+      "proxy": "wrong_grounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "interpretation difference",
+      "topics": []
+    },
+    {
+      "sample_id": "S035",
+      "query_id": "ALXN/2016/page_153.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "N",
+      "gd": "N",
+      "note": "unsupported number",
+      "topics": []
+    },
+    {
+      "sample_id": "S036",
+      "query_id": "SNA/2013/page_34.pdf-3",
+      "proxy": "wrong_ungrounded",
+      "scn": "N",
+      "gd": "N",
+      "note": "unsupported number",
+      "topics": []
+    },
+    {
+      "sample_id": "S037",
+      "query_id": "IP/2006/page_38.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "rounding: model is correct to 0.2 points; scored wrong because 18.2 is outside 1% relative tolerance of 18",
+      "topics": [
+        "rounding"
+      ]
+    },
+    {
+      "sample_id": "S038",
+      "query_id": "EMR/2017/page_78.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "N",
+      "gd": "N",
+      "note": "unsupported number",
+      "topics": []
+    },
+    {
+      "sample_id": "S039",
+      "query_id": "CDW/2015/page_70.pdf-1",
+      "proxy": "wrong_grounded",
+      "scn": "S",
+      "gd": "Y",
+      "note": "question ambiguous",
+      "topics": []
+    },
+    {
+      "sample_id": "S040",
+      "query_id": "IP/2006/page_75.pdf-2",
+      "proxy": "wrong_ungrounded",
+      "scn": "C",
+      "gd": "Y",
+      "note": "rounding: model is correct to 0.5 points; scored wrong because outside 1% relative tolerance",
+      "topics": [
+        "rounding"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 202,
+  "n_files": 206,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -810,6 +810,22 @@
     "src/phase_d_validation/label_confusion.py": {
       "sha256": "f27ad55122da259ce957752aae58a2b249e0361014524cf4db1c35d81a9f8d22",
       "bytes": 16527
+    },
+    "outputs/hallucination_labels_addendum2_2026-10-23/labelling_sheet_check_with_notes.csv": {
+      "sha256": "6abe9b266c03dd9ef740de0c0065d24e8da9b2d2918317cc20c1b74b6bc85d1a",
+      "bytes": 102066
+    },
+    "outputs/hallucination_labels_addendum2_2026-10-23/note_counts.json": {
+      "sha256": "5e7b61e870e34204e59767fdd5da6e8ad73502d745dbe54e7b237af4db61991a",
+      "bytes": 15016
+    },
+    "reports/hallucination_labels_addendum2_2026-10-23.md": {
+      "sha256": "6ffaf06f12c0ebe43fa3919a49f6297b37fec83613ce353f0003a6f66d7efb9f",
+      "bytes": 4880
+    },
+    "src/phase_d_validation/label_notes_addendum2.py": {
+      "sha256": "2619480df5b8abda327cd29fa6597cc8c9d3acf0aaa05392030a63a84a04ef14",
+      "bytes": 8961
     }
   },
   "additions": [
@@ -961,6 +977,16 @@
         "outputs/hallucination_classification_2026-10-23/labelling_sheet_check.csv",
         "reports/hallucination_labels_2026-10-23.md",
         "src/phase_d_validation/label_confusion.py"
+      ]
+    },
+    {
+      "label": "amendment5_addendum2_note_counts",
+      "added_utc": "2026-10-23T09:40:13.015552+00:00",
+      "paths": [
+        "outputs/hallucination_labels_addendum2_2026-10-23/labelling_sheet_check_with_notes.csv",
+        "outputs/hallucination_labels_addendum2_2026-10-23/note_counts.json",
+        "reports/hallucination_labels_addendum2_2026-10-23.md",
+        "src/phase_d_validation/label_notes_addendum2.py"
       ]
     }
   ]
