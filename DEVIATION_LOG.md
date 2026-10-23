@@ -156,3 +156,7 @@ Statements that this entry corrects (they present the load as established):
 - Corrected sentence: "policy_v2 was about 2.6 s faster per question and about 19% cheaper over 5 passes (pass 1: 2.8 s and 34%); about three quarters of the cost saving is the router call it does not make."
 
 **3. Other audit notes (no change of any result):** "490 ms to 6.6 s from 0.204 upward" in `reports/arms_results_2026-10-10.md` rounds the minimum 488.9 ms up; no report states "751-6,567 ms" (751.5 ms is the smallest of the 15 idx1-3 cells, whose largest is 3,419 ms; 6,567 ms is hm_clothes_50 x gap4, s = 0.2986).
+
+## 2026-10-23 — Amendment 4 scale-up not run (no result changed)
+
+The Amendment 4 scale-up (`PHASE_D_AMENDMENT_4.md`, tag `phase-d-amendment-4-2026-10-13`; 1,075 confirmation questions) was **not run**, by the author's decision on 23 Oct 2026, because of the time left before the 7 Nov deadline. The only output is the smoke test that stopped under the error-rate abort rule (`outputs/phase_d_gemini_scaleup_smoke_2026-10-13/`, commit `96fadc0`: 7 rows, 1 error row, USD 0.009). It is **excluded from all analysis**. Amendment 4 Addendum 1 (run control) therefore governs no run. The FinQA comparison remains the 50-question frozen set.
