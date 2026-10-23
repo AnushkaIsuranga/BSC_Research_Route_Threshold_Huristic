@@ -1,0 +1,752 @@
+{
+  "checks": [
+    {
+      "id": "1.correct.policy_v2",
+      "what": "pass-1 correct count, policy_v2",
+      "reported": 36,
+      "recomputed": 36,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.correct.naive_llm",
+      "what": "pass-1 correct count, naive_llm",
+      "reported": 32,
+      "recomputed": 32,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.correct.decision_matrix",
+      "what": "pass-1 correct count, decision_matrix",
+      "reported": 34,
+      "recomputed": 34,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.correct.naive_informed",
+      "what": "pass-1 correct count, naive_informed",
+      "reported": 34,
+      "recomputed": 34,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.b",
+      "what": "policy_v2 vs naive_llm b (policy_v2 only correct)",
+      "reported": 4,
+      "recomputed": 4,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.c",
+      "what": "policy_v2 vs naive_llm c (naive_llm only correct)",
+      "reported": 0,
+      "recomputed": 0,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.diff",
+      "what": "accuracy difference policy_v2 - naive_llm",
+      "reported": 0.08,
+      "recomputed": 0.08,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.ci_lo",
+      "what": "Newcombe 95% CI lower bound",
+      "reported": 0.004,
+      "recomputed": 0.004,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.ci_hi",
+      "what": "Newcombe 95% CI upper bound",
+      "reported": 0.158,
+      "recomputed": 0.158,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "1.p",
+      "what": "exact McNemar two-sided p",
+      "reported": 0.125,
+      "recomputed": 0.125,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, correct",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.median.policy_v2",
+      "what": "pass-1 median total_ms, policy_v2",
+      "reported": 2186,
+      "recomputed": 2186,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.median.naive_llm",
+      "what": "pass-1 median total_ms, naive_llm",
+      "reported": 4329,
+      "recomputed": 4329,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.median.decision_matrix",
+      "what": "pass-1 median total_ms, decision_matrix",
+      "reported": 2121,
+      "recomputed": 2121,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.median.naive_informed",
+      "what": "pass-1 median total_ms, naive_informed",
+      "reported": 3906,
+      "recomputed": 3906,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.diff",
+      "what": "pass-1 mean paired total_ms difference policy_v2 - naive_llm",
+      "reported": -2827,
+      "recomputed": -2827,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.ci_lo",
+      "what": "paired bootstrap CI lower (10,000, seed 20261012)",
+      "reported": -3753,
+      "recomputed": -3753,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "2.ci_hi",
+      "what": "paired bootstrap CI upper",
+      "reported": -1993,
+      "recomputed": -1993,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: arm, pass, query_id, total_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.cost_per_q.policy_v2",
+      "what": "pass-1 mean cost per question, policy_v2",
+      "reported": 0.00135,
+      "recomputed": 0.00135,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.cost_per_q.naive_llm",
+      "what": "pass-1 mean cost per question, naive_llm",
+      "reported": 0.00203,
+      "recomputed": 0.00203,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.total_5pass.policy_v2",
+      "what": "cost over 5 passes, policy_v2",
+      "reported": 0.3786,
+      "recomputed": 0.3786,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.total_5pass.naive_llm",
+      "what": "cost over 5 passes, naive_llm",
+      "reported": 0.4697,
+      "recomputed": 0.4697,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.total_5pass.naive_informed",
+      "what": "cost over 5 passes, naive_informed",
+      "reported": 0.4385,
+      "recomputed": 0.4385,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.total_5pass.decision_matrix",
+      "what": "cost over 5 passes, decision_matrix",
+      "reported": 0.3711,
+      "recomputed": 0.3711,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.identity",
+      "what": "cost_usd == router_cost_usd + gen_cost_usd for every row (max abs diff < 1e-12)",
+      "reported": true,
+      "recomputed": true,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.token_recompute",
+      "what": "per-row cost recomputed from logged tokens x prices (0.75/3.75, thinking as output, cached subtracted): max abs diff < 1e-9",
+      "reported": true,
+      "recomputed": true,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "3.claim_one_third",
+      "what": "'about one third cheaper per query' = 1 - 0.00135/0.00203 (pass 1, from the reported per-question values)",
+      "reported": "about 33% (1/3)",
+      "recomputed": "33.5% from rounded values; 33.8% exact, pass 1",
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH (pass 1 only)",
+      "note": "holds for pass 1 only; over all 5 passes the same ratio is 19.4% cheaper (mean cost per arm-run)"
+    },
+    {
+      "id": "4.total",
+      "what": "sum of cost_usd over all 1,000 rows vs reported USD 1.6580 (final summary: 'USD 1.66')",
+      "reported": 1.658,
+      "recomputed": 1.658,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "4.total_rounded",
+      "what": "rounded to cents (reported 'USD 1.66')",
+      "reported": 1.66,
+      "recomputed": 1.66,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "4.rows",
+      "what": "number of rows",
+      "reported": 1000,
+      "recomputed": 1000,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "4.cumulative_counter",
+      "what": "runner's last cumulative_cost_usd equals the sum of rows",
+      "reported": true,
+      "recomputed": true,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "4.recomputed_from_tokens",
+      "what": "total recomputed from tokens x prices equals logged total",
+      "reported": true,
+      "recomputed": true,
+      "source": "outputs\\phase_d_gemini_full_2026-10-12\\results.jsonl: cost_usd, router_cost_usd, gen_cost_usd, input_tokens, output_tokens, thinking_tokens, gen_cached_tokens, rows_returned",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "5.ctl_min",
+      "what": "'547-1,080 ms at 0.204' (PHASE_A_HOLDOUT_PROTOCOL.md): minimum of the 5 ctl cells",
+      "reported": 547,
+      "recomputed": 547,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "5.ctl_max",
+      "what": "'547-1,080 ms at 0.204': maximum of the 5 ctl cells",
+      "reported": 1080,
+      "recomputed": 1080,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "5.idx_min",
+      "what": "'smallest 751.5 ms' among the 15 idx1-3 cells (arms_results report / CODE_MANUAL)",
+      "reported": 751.5,
+      "recomputed": 751.5,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "5.all_max",
+      "what": "'6.6 s' maximum from 0.204 upward (arms_results report)",
+      "reported": 6567,
+      "recomputed": 6567,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "5.all_min",
+      "what": "'490 ms' minimum from 0.204 upward (arms_results report: '490 ms to 6.6 s')",
+      "reported": 490,
+      "recomputed": 489,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": "actual minimum 488.9 ms (hm_clothes_100 x gap1); '490' is a rounding up of 488.9"
+    },
+    {
+      "id": "5.idx_all_over_500",
+      "what": "'all 15 idx1-3 cells exceed 500 ms'",
+      "reported": 15,
+      "recomputed": 15,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "5.fails_38_of_40",
+      "what": "'forced-exact fails 38 of those 40 on latency' (POLICY_V2_PROPOSAL.md)",
+      "reported": 38,
+      "recomputed": 38,
+      "source": "outputs/phase_a_arms/analysis/cell_summary.csv: arm = forced-exact, median_latency_ms",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.median",
+      "what": "failing cell median latency 528.4 ms",
+      "reported": 528.4,
+      "recomputed": 528.4,
+      "source": "outputs/phase_a_holdout/results.jsonl: table, filter_id, arm, latency_ms, shared_read_blocks",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.over500",
+      "what": "'18 of 20 per-vector medians are above 500 ms'",
+      "reported": 18,
+      "recomputed": 18,
+      "source": "outputs/phase_a_holdout/results.jsonl: table, filter_id, arm, latency_ms, shared_read_blocks",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.range",
+      "what": "'508-539 ms' range of those 18",
+      "reported": "508-539",
+      "recomputed": "508-539",
+      "source": "outputs/phase_a_holdout/results.jsonl: table, filter_id, arm, latency_ms, shared_read_blocks",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.iqr",
+      "what": "'IQR 16 ms'",
+      "reported": 16,
+      "recomputed": 16,
+      "source": "outputs/phase_a_holdout/results.jsonl: table, filter_id, arm, latency_ms, shared_read_blocks",
+      "status": "MATCH",
+      "note": "computed IQR 15.8 ms (numpy linear percentiles)"
+    },
+    {
+      "id": "6.other_tables",
+      "what": "'the same filter on the other tables costs 132-175 ms'",
+      "reported": "132-175",
+      "recomputed": "132-175",
+      "source": "outputs/phase_a_holdout/results.jsonl: table, filter_id, arm, latency_ms, shared_read_blocks",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.shared_read",
+      "what": "'median shared_read_blocks = 0 in the cell'",
+      "reported": 0,
+      "recomputed": 0.0,
+      "source": "outputs/phase_a_holdout/results.jsonl: table, filter_id, arm, latency_ms, shared_read_blocks",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.kernel_cpu",
+      "what": "'Jupyter kernel used 3,410 CPU-seconds between the start and end notes (31.7 min, about 1.8 cores)'",
+      "reported": "3410 s / 31.7 min / 1.8 cores",
+      "recomputed": "3410 s / 31.7 min / 1.8 cores",
+      "source": "outputs/phase_a_holdout/machine_notes.txt",
+      "status": "MATCH",
+      "note": ""
+    },
+    {
+      "id": "6.rerun_median",
+      "what": "rerun median for the same cell 122.8 ms",
+      "reported": 122.8,
+      "recomputed": 122.8,
+      "source": "outputs/phase_a_holdout_rerun/results.jsonl",
+      "status": "MATCH",
+      "note": ""
+    }
+  ],
+  "recomputed": {
+    "acc": {
+      "b": 4,
+      "c": 0,
+      "diff": 0.07999999999999996,
+      "ci": [
+        0.003918839788186218,
+        0.1576379847698371
+      ],
+      "p": 0.125
+    },
+    "lat": {
+      "policy_v2": {
+        "p1_median": 2186.478650000936,
+        "p1_mean": 2547.7308879999327,
+        "all_median": 2296.0027500012075,
+        "all_mean": 2852.854777600063
+      },
+      "naive_llm": {
+        "p1_median": 4329.271349997725,
+        "p1_mean": 5374.462546000141,
+        "all_median": 4273.722200003249,
+        "all_mean": 5443.17361920033
+      },
+      "decision_matrix": {
+        "p1_median": 2120.6804500034195,
+        "p1_mean": 2816.136958000425,
+        "all_median": 2271.8591000011656,
+        "all_mean": 2912.288989600085
+      },
+      "naive_informed": {
+        "p1_median": 3905.529749998095,
+        "p1_mean": 4672.805264000199,
+        "all_median": 4100.234249995992,
+        "all_mean": 4763.94154039977
+      }
+    },
+    "lat_diff": {
+      "mean": -2826.731658000208,
+      "ci": [
+        -3753.4503446510826,
+        -1993.4378066501129
+      ],
+      "median_diff": -2142.7926999967895
+    },
+    "lat_diff_all": [
+      -2590.3188416002668,
+      -3215.1263443402495,
+      -2032.9638965602865
+    ],
+    "lat_claim_s": 2.83,
+    "cost": {
+      "pass1|policy_v2": {
+        "n": 50,
+        "total": 0.067323,
+        "mean": 0.0013464599999999998,
+        "router_total": 0,
+        "router_mean": 0.0,
+        "answer_total": 0.067323,
+        "answer_mean": 0.0013464599999999998,
+        "in_tok": 960.18,
+        "out_tok": 6.14,
+        "think_tok": 160.88,
+        "rows": 14.82,
+        "router_in_tok": 0.0,
+        "router_think_tok": 0.0
+      },
+      "pass1|naive_llm": {
+        "n": 50,
+        "total": 0.10170825,
+        "mean": 0.002034165,
+        "router_total": 0.016238249999999996,
+        "router_mean": 0.0003247649999999999,
+        "answer_total": 0.08547000000000002,
+        "answer_mean": 0.0017094000000000005,
+        "in_tok": 710.4,
+        "out_tok": 4.96,
+        "think_tok": 308.8,
+        "rows": 10.54,
+        "router_in_tok": 124.62,
+        "router_think_tok": 23.88
+      },
+      "pass1|decision_matrix": {
+        "n": 50,
+        "total": 0.07281675000000001,
+        "mean": 0.0014563350000000002,
+        "router_total": 0,
+        "router_mean": 0.0,
+        "answer_total": 0.07281675000000001,
+        "answer_mean": 0.0014563350000000002,
+        "in_tok": 960.18,
+        "out_tok": 5.76,
+        "think_tok": 190.56,
+        "rows": 14.82,
+        "router_in_tok": 0.0,
+        "router_think_tok": 0.0
+      },
+      "pass1|naive_informed": {
+        "n": 50,
+        "total": 0.0899235,
+        "mean": 0.0017984700000000001,
+        "router_total": 0.017193749999999997,
+        "router_mean": 0.00034387499999999994,
+        "answer_total": 0.07272975,
+        "answer_mean": 0.001454595,
+        "in_tok": 940.86,
+        "out_tok": 5.26,
+        "think_tok": 194.46,
+        "rows": 14.48,
+        "router_in_tok": 156.2,
+        "router_think_tok": 16.04
+      },
+      "all|policy_v2": {
+        "n": 250,
+        "total": 0.37864124999999976,
+        "mean": 0.001514564999999999,
+        "router_total": 0,
+        "router_mean": 0.0,
+        "answer_total": 0.37864124999999976,
+        "answer_mean": 0.001514564999999999,
+        "in_tok": 960.18,
+        "out_tok": 27.308,
+        "think_tok": 184.54,
+        "rows": 14.82,
+        "router_in_tok": 0.0,
+        "router_think_tok": 0.0
+      },
+      "all|naive_llm": {
+        "n": 250,
+        "total": 0.46974450000000023,
+        "mean": 0.001878978000000001,
+        "router_total": 0.06849750000000003,
+        "router_mean": 0.0002739900000000001,
+        "answer_total": 0.40124699999999985,
+        "answer_mean": 0.0016049879999999995,
+        "in_tok": 706.864,
+        "out_tok": 7.312,
+        "think_tok": 279.312,
+        "rows": 10.472,
+        "router_in_tok": 124.62,
+        "router_think_tok": 10.236
+      },
+      "all|decision_matrix": {
+        "n": 250,
+        "total": 0.3711487500000001,
+        "mean": 0.0014845950000000002,
+        "router_total": 0,
+        "router_mean": 0.0,
+        "answer_total": 0.3711487500000001,
+        "answer_mean": 0.0014845950000000002,
+        "in_tok": 960.18,
+        "out_tok": 18.236,
+        "think_tok": 185.62,
+        "rows": 14.82,
+        "router_in_tok": 0.0,
+        "router_think_tok": 0.0
+      },
+      "all|naive_informed": {
+        "n": 250,
+        "total": 0.43849800000000005,
+        "mean": 0.0017539920000000002,
+        "router_total": 0.08292749999999999,
+        "router_mean": 0.0003317099999999999,
+        "answer_total": 0.3555704999999998,
+        "answer_mean": 0.001422281999999999,
+        "in_tok": 935.036,
+        "out_tok": 5.228,
+        "think_tok": 187.04,
+        "rows": 14.4,
+        "router_in_tok": 156.2,
+        "router_think_tok": 13.24
+      }
+    },
+    "ident": {
+      "max_abs_cost_minus_router_plus_answer": 0.0,
+      "recomputed_total_from_tokens": 1.6580325000000007,
+      "max_abs_row_diff_vs_logged": 1.734723475976807e-18
+    },
+    "pct": {
+      "pass1_exact": 33.80772946147438,
+      "pass1_from_rounded_report_values": 33.49753694581281,
+      "all_passes": 19.394213237196066,
+      "answer_only_pass1": 21.23201123201126,
+      "answer_only_all": 5.633873898122632
+    },
+    "route_cost": {
+      "pre-filter": {
+        "n": 142,
+        "policy_v2": 0.0015038714788732396,
+        "naive_llm": 0.001724720070422535,
+        "diff": -0.0002208485915492955,
+        "pct_cheaper": 12.804894854339476,
+        "naive_router": 0.00029756514084507043,
+        "naive_answer": 0.0014271549295774648,
+        "policy_v2_answer": 0.0015038714788732396,
+        "naive_rows": 14.683098591549296,
+        "policy_v2_answer_in_tok": 963.0845070422536,
+        "naive_answer_in_tok": 963.0845070422536,
+        "policy_v2_answer_out_plus_think_tok": 208.41549295774647,
+        "naive_answer_out_plus_think_tok": 187.95774647887325
+      },
+      "post-filter": {
+        "n": 108,
+        "policy_v2": 0.001528625,
+        "naive_llm": 0.002081798611111111,
+        "diff": -0.000553173611111111,
+        "pct_cheaper": 26.571907972206187,
+        "naive_router": 0.00024299305555555554,
+        "naive_answer": 0.0018388055555555555,
+        "policy_v2_answer": 0.001528625,
+        "naive_rows": 4.935185185185185,
+        "policy_v2_answer_in_tok": 956.3611111111111,
+        "naive_answer_in_tok": 369.98148148148147,
+        "policy_v2_answer_out_plus_think_tok": 216.36111111111111,
+        "naive_answer_out_plus_think_tok": 416.35185185185185
+      }
+    },
+    "route_cost_pass1": {
+      "pre-filter": {
+        "n": 29,
+        "policy_v2": 0.0013428362068965516,
+        "naive_llm": 0.0018742758620689656,
+        "pct_cheaper": 28.35439894028039
+      },
+      "post-filter": {
+        "n": 21,
+        "policy_v2": 0.0013514642857142857,
+        "naive_llm": 0.002254964285714286,
+        "pct_cheaper": 40.06715342339917
+      }
+    },
+    "cost_diff_boot_all": [
+      -0.000364413,
+      -0.00065420835,
+      -0.00011830927500000001
+    ],
+    "cost_diff_boot_p1": [
+      -0.0006877049999999998,
+      -0.001145749875,
+      -0.00028834387500000007
+    ],
+    "trunc": {
+      "rows": [
+        {
+          "arm": "decision_matrix",
+          "query": "EMR/2017/page_78.pdf-2",
+          "pass": 2,
+          "cost": 0.008528250000000001,
+          "output_tokens": 2043,
+          "thinking_tokens": 0
+        },
+        {
+          "arm": "policy_v2",
+          "query": "SNA/2013/page_34.pdf-3",
+          "pass": 2,
+          "cost": 0.008416499999999999,
+          "output_tokens": 2044,
+          "thinking_tokens": 0
+        }
+      ],
+      "pooled_pct_cheaper_excluding_those_question_pass_cells": 20.54832768383722,
+      "n_arm_runs_kept_per_arm": 248
+    },
+    "cost_by_pass": {
+      "policy_v2": [
+        0.067323,
+        0.07811549999999999,
+        0.07858425000000001,
+        0.08059050000000002,
+        0.07402800000000001
+      ],
+      "naive_llm": [
+        0.10170825,
+        0.09095925,
+        0.09307275,
+        0.09117225,
+        0.09283200000000001
+      ]
+    },
+    "total": {
+      "sum": 1.6580325000000007,
+      "rows": 1000,
+      "last_cumulative": 1.6580325000000007,
+      "by_arm": {
+        "policy_v2": 0.37864124999999976,
+        "naive_llm": 0.46974450000000023,
+        "decision_matrix": 0.3711487500000001,
+        "naive_informed": 0.43849800000000005
+      }
+    },
+    "hm": {
+      "ctl (s = 0.20376; 5 cells)": {
+        "n": 5,
+        "min": 547.134,
+        "min_cell": "hm_clothes_75 x ctl",
+        "max": 1080.149,
+        "max_cell": "hm_clothes_50 x ctl",
+        "n_over_500": 5
+      },
+      "gap1-gap4 (s = 0.214-0.299; 20 cells)": {
+        "n": 20,
+        "min": 488.8725,
+        "min_cell": "hm_clothes_100 x gap1",
+        "max": 6567.331,
+        "max_cell": "hm_clothes_50 x gap4",
+        "n_over_500": 18
+      },
+      "idx1-idx3 (s = 0.329-0.4705; 15 cells)": {
+        "n": 15,
+        "min": 751.4739999999999,
+        "min_cell": "hm_clothes_25 x idx1",
+        "max": 3419.1645,
+        "max_cell": "hm_clothes_50 x idx3",
+        "n_over_500": 15
+      },
+      "all cells with s >= 0.204 (40 cells)": {
+        "n": 40,
+        "min": 488.8725,
+        "min_cell": "hm_clothes_100 x gap1",
+        "max": 6567.331,
+        "max_cell": "hm_clothes_50 x gap4",
+        "n_over_500": 38
+      }
+    },
+    "h1": {
+      "others": [
+        175.2375,
+        133.2935,
+        131.962,
+        132.1235
+      ],
+      "rerun_median": null
+    }
+  }
+}

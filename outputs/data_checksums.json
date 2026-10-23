@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 195,
+  "n_files": 196,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -782,6 +782,10 @@
     "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v5.csv": {
       "sha256": "240253a4c3d0a5305739389ff6f805652da61e14d10427e24df16800e570c388",
       "bytes": 10363
+    },
+    "outputs/headline_audit_2026-10-23/audit.json": {
+      "sha256": "c81cb14c4e577cf5929418aad0544d337c8b5f9bb8fc3bff7c84f7fedf735e2f",
+      "bytes": 26078
     }
   },
   "additions": [
@@ -908,6 +912,13 @@
         "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v3.csv",
         "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v4.csv",
         "outputs/hallucination_classification_2026-10-23/summary_sensitivity_strict_local_v5.csv"
+      ]
+    },
+    {
+      "label": "headline audit 2026-10-23",
+      "added_utc": "2026-10-23T04:51:16.570354+00:00",
+      "paths": [
+        "outputs/headline_audit_2026-10-23/audit.json"
       ]
     }
   ]
