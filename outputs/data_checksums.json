@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 217,
+  "n_files": 222,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -870,6 +870,26 @@
     "src/phase_d_validation/amendment7_step1.py": {
       "sha256": "528a3658c7b5a7223cef1059bec9367f22801fe171d6e7114891bdc2691d627f",
       "bytes": 18222
+    },
+    "outputs/ragas_judge_2026-10-23/judge_inputs.jsonl": {
+      "sha256": "f7f17f73ba213df55f59e64899cee26b09152bd4a076d362295f69ae2d056bd0",
+      "bytes": 2741974
+    },
+    "src/phase_d_validation/judge_inputs.py": {
+      "sha256": "8120cf2c92dffb02011f7df74776a9941f1c22e12596ad5fc8b4b47da1c06e94",
+      "bytes": 4157
+    },
+    "src/phase_d_validation/ragas_judge.py": {
+      "sha256": "8e44700908a75b37779579459741f20d91b67c25026e3c01c050ecd0a60a72c7",
+      "bytes": 10553
+    },
+    "src/phase_d_validation/ragas_analysis.py": {
+      "sha256": "b407fd0375fcb322dc567442206aad51281d3153bfb464409d90f197ceda903a",
+      "bytes": 9638
+    },
+    "requirements-ragas.txt": {
+      "sha256": "2a04d7f7354eba2e828d4e5def63afc0af5d5af7b2ac8d154adc52e0b54ae8bd",
+      "bytes": 1846
     }
   },
   "additions": [
@@ -1054,6 +1074,17 @@
         "outputs/phase_d_amendment7_step1_2026-10-23/training_runs.jsonl",
         "reports/amendment7_step1_2026-10-23.md",
         "src/phase_d_validation/amendment7_step1.py"
+      ]
+    },
+    {
+      "label": "amendment8_inputs_and_code",
+      "added_utc": "2026-10-23T18:06:03.065624+00:00",
+      "paths": [
+        "outputs/ragas_judge_2026-10-23/judge_inputs.jsonl",
+        "requirements-ragas.txt",
+        "src/phase_d_validation/judge_inputs.py",
+        "src/phase_d_validation/ragas_analysis.py",
+        "src/phase_d_validation/ragas_judge.py"
       ]
     }
   ]

@@ -28,3 +28,4 @@ Coding_TODO_List.md
 
 # Large DB dumps (hashes are in outputs/data_checksums.json)
 outputs/db_dumps_*/*.dump
+.venv-ragas/
