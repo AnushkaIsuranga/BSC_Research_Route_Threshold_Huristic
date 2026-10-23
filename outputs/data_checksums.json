@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 197,
+  "n_files": 202,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -790,6 +790,26 @@
     "outputs/hallucination_classification_2026-10-23/labelling_sheet_v2.csv": {
       "sha256": "a6c02cbb2281b6870b12e4e931a86caaef19c5777f04d2d0ad909ba14a595f92",
       "bytes": 99878
+    },
+    "outputs/hallucination_classification_2026-10-23/labelling_sheet_check.csv": {
+      "sha256": "ffc001b798207fc21d083eb9bbeaef40ffa4de59efa37da07ff5cd31235d0959",
+      "bytes": 100024
+    },
+    "outputs/hallucination_classification_2026-10-23/label_analysis/label_confusion.json": {
+      "sha256": "9e96c8c07e27e7563d61b51fc2c4548534f50d827254e0d93fd6ceb512fb325b",
+      "bytes": 11224
+    },
+    "outputs/hallucination_classification_2026-10-23/label_analysis/labelled_rows_joined.csv": {
+      "sha256": "129ed54ad484c98b722b4b661f5a200aa21b04242031df75049dc54542111f8e",
+      "bytes": 2574
+    },
+    "reports/hallucination_labels_2026-10-23.md": {
+      "sha256": "c2769530c9e5919fdb33911b2e2394938912b62f1cb9d59b49f8646198e9bc10",
+      "bytes": 5377
+    },
+    "src/phase_d_validation/label_confusion.py": {
+      "sha256": "f27ad55122da259ce957752aae58a2b249e0361014524cf4db1c35d81a9f8d22",
+      "bytes": 16527
     }
   },
   "additions": [
@@ -930,6 +950,17 @@
       "added_utc": "2026-10-23T05:31:53.485421+00:00",
       "paths": [
         "outputs/hallucination_classification_2026-10-23/labelling_sheet_v2.csv"
+      ]
+    },
+    {
+      "label": "amendment5_addendum1_labels",
+      "added_utc": "2026-10-23T05:57:48.155761+00:00",
+      "paths": [
+        "outputs/hallucination_classification_2026-10-23/label_analysis/label_confusion.json",
+        "outputs/hallucination_classification_2026-10-23/label_analysis/labelled_rows_joined.csv",
+        "outputs/hallucination_classification_2026-10-23/labelling_sheet_check.csv",
+        "reports/hallucination_labels_2026-10-23.md",
+        "src/phase_d_validation/label_confusion.py"
       ]
     }
   ]

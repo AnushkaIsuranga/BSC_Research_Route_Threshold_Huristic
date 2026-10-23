@@ -1,0 +1,457 @@
+{
+  "labelled_file": "outputs/hallucination_classification_2026-10-23/labelling_sheet_check.csv",
+  "labelled_file_sha256": "ffc001b798207fc21d083eb9bbeaef40ffa4de59efa37da07ff5cd31235d0959",
+  "verification": {
+    "rows": 40,
+    "identical_columns": {
+      "sample_id": 40,
+      "question": 40,
+      "gold_answer": 34,
+      "model_answer": 29,
+      "retrieved_passages": 40
+    },
+    "formatting_only_cells": [
+      {
+        "sample_id": "S002",
+        "column": "gold_answer",
+        "committed": "9.2%",
+        "labelled_copy": "9.20%"
+      },
+      {
+        "sample_id": "S011",
+        "column": "gold_answer",
+        "committed": "10.2%",
+        "labelled_copy": "10.20%"
+      },
+      {
+        "sample_id": "S024",
+        "column": "gold_answer",
+        "committed": "9.2%",
+        "labelled_copy": "9.20%"
+      },
+      {
+        "sample_id": "S029",
+        "column": "gold_answer",
+        "committed": "10.2%",
+        "labelled_copy": "10.20%"
+      },
+      {
+        "sample_id": "S030",
+        "column": "gold_answer",
+        "committed": "10.2%",
+        "labelled_copy": "10.20%"
+      },
+      {
+        "sample_id": "S034",
+        "column": "gold_answer",
+        "committed": "10.2%",
+        "labelled_copy": "10.20%"
+      },
+      {
+        "sample_id": "S003",
+        "column": "model_answer",
+        "committed": "$39",
+        "labelled_copy": "$39 "
+      },
+      {
+        "sample_id": "S005",
+        "column": "model_answer",
+        "committed": "$ -61.1",
+        "labelled_copy": "($61.10)"
+      },
+      {
+        "sample_id": "S016",
+        "column": "model_answer",
+        "committed": "$39",
+        "labelled_copy": "$39 "
+      },
+      {
+        "sample_id": "S017",
+        "column": "model_answer",
+        "committed": "$200900.81",
+        "labelled_copy": "$200,900.81 "
+      },
+      {
+        "sample_id": "S018",
+        "column": "model_answer",
+        "committed": "$202,081.20",
+        "labelled_copy": "$202,081.20 "
+      },
+      {
+        "sample_id": "S023",
+        "column": "model_answer",
+        "committed": "18.2%",
+        "labelled_copy": "18.20%"
+      },
+      {
+        "sample_id": "S031",
+        "column": "model_answer",
+        "committed": "18.2%",
+        "labelled_copy": "18.20%"
+      },
+      {
+        "sample_id": "S036",
+        "column": "model_answer",
+        "committed": "46.4%",
+        "labelled_copy": "46.40%"
+      },
+      {
+        "sample_id": "S037",
+        "column": "model_answer",
+        "committed": "18.2%",
+        "labelled_copy": "18.20%"
+      },
+      {
+        "sample_id": "S039",
+        "column": "model_answer",
+        "committed": "$ -61.1",
+        "labelled_copy": "($61.10)"
+      },
+      {
+        "sample_id": "S040",
+        "column": "model_answer",
+        "committed": "19.5%",
+        "labelled_copy": "19.50%"
+      }
+    ]
+  },
+  "n_rows": 40,
+  "n_distinct_questions": 17,
+  "proxy_class_counts_rows": {
+    "wrong_grounded": 20,
+    "wrong_ungrounded": 20
+  },
+  "tables": {
+    "per_row": {
+      "proxy_x_scn": {
+        "wrong_ungrounded": {
+          "rows": 20,
+          "cells": {
+            "S": {
+              "n": 0,
+              "of": 20,
+              "share": 0.0,
+              "ci95": [
+                0.0,
+                0.16112516018512965
+              ]
+            },
+            "C": {
+              "n": 14,
+              "of": 20,
+              "share": 0.7,
+              "ci95": [
+                0.4810271799475211,
+                0.8545227559784271
+              ]
+            },
+            "N": {
+              "n": 6,
+              "of": 20,
+              "share": 0.3,
+              "ci95": [
+                0.14547724402157294,
+                0.518972820052479
+              ]
+            }
+          }
+        },
+        "wrong_grounded": {
+          "rows": 20,
+          "cells": {
+            "S": {
+              "n": 7,
+              "of": 20,
+              "share": 0.35,
+              "ci95": [
+                0.18119182312398308,
+                0.5671457249315559
+              ]
+            },
+            "C": {
+              "n": 13,
+              "of": 20,
+              "share": 0.65,
+              "ci95": [
+                0.4328542750684442,
+                0.818808176876017
+              ]
+            },
+            "N": {
+              "n": 0,
+              "of": 20,
+              "share": 0.0,
+              "ci95": [
+                0.0,
+                0.16112516018512965
+              ]
+            }
+          }
+        }
+      },
+      "proxy_x_gold_derivable": {
+        "wrong_ungrounded": {
+          "rows": 20,
+          "cells": {
+            "Y": {
+              "n": 12,
+              "of": 20,
+              "share": 0.6,
+              "ci95": [
+                0.3865814992347542,
+                0.7811934687282198
+              ]
+            },
+            "N": {
+              "n": 8,
+              "of": 20,
+              "share": 0.4,
+              "ci95": [
+                0.21880653127178018,
+                0.6134185007652458
+              ]
+            }
+          }
+        },
+        "wrong_grounded": {
+          "rows": 20,
+          "cells": {
+            "Y": {
+              "n": 18,
+              "of": 20,
+              "share": 0.9,
+              "ci95": [
+                0.6989663528135878,
+                0.9721335190383086
+              ]
+            },
+            "N": {
+              "n": 2,
+              "of": 20,
+              "share": 0.1,
+              "ci95": [
+                0.02786648096169142,
+                0.3010336471864123
+              ]
+            }
+          }
+        }
+      }
+    },
+    "per_question": {
+      "proxy_x_scn": {
+        "wrong_ungrounded": {
+          "distinct_questions": 9,
+          "cells": {
+            "S": {
+              "n": 0,
+              "of": 9,
+              "share": 0.0,
+              "ci95": [
+                0.0,
+                0.299145051727044
+              ]
+            },
+            "C": {
+              "n": 6,
+              "of": 9,
+              "share": 0.6666666666666666,
+              "ci95": [
+                0.35420213352505864,
+                0.8794161825659264
+              ]
+            },
+            "N": {
+              "n": 3,
+              "of": 9,
+              "share": 0.3333333333333333,
+              "ci95": [
+                0.12058381743407343,
+                0.6457978664749412
+              ]
+            }
+          }
+        },
+        "wrong_grounded": {
+          "distinct_questions": 8,
+          "cells": {
+            "S": {
+              "n": 3,
+              "of": 8,
+              "share": 0.375,
+              "ci95": [
+                0.13684428473912286,
+                0.694257607346229
+              ]
+            },
+            "C": {
+              "n": 5,
+              "of": 8,
+              "share": 0.625,
+              "ci95": [
+                0.30574239265377096,
+                0.8631557152608771
+              ]
+            },
+            "N": {
+              "n": 0,
+              "of": 8,
+              "share": 0.0,
+              "ci95": [
+                0.0,
+                0.3244075683414076
+              ]
+            }
+          }
+        }
+      },
+      "proxy_x_gold_derivable": {
+        "wrong_ungrounded": {
+          "distinct_questions": 9,
+          "cells": {
+            "Y": {
+              "n": 5,
+              "of": 9,
+              "share": 0.5555555555555556,
+              "ci95": [
+                0.26665129180087416,
+                0.8112214802294544
+              ]
+            },
+            "N": {
+              "n": 4,
+              "of": 9,
+              "share": 0.4444444444444444,
+              "ci95": [
+                0.18877851977054566,
+                0.7333487081991259
+              ]
+            }
+          }
+        },
+        "wrong_grounded": {
+          "distinct_questions": 8,
+          "cells": {
+            "Y": {
+              "n": 7,
+              "of": 8,
+              "share": 0.875,
+              "ci95": [
+                0.5291118149439162,
+                0.9775825088000281
+              ]
+            },
+            "N": {
+              "n": 1,
+              "of": 8,
+              "share": 0.125,
+              "ci95": [
+                0.022417491199971912,
+                0.47088818505608376
+              ]
+            }
+          }
+        }
+      }
+    },
+    "supported_vs_unsupported": {
+      "per_row": {
+        "wrong_ungrounded": {
+          "unsupported_N": {
+            "n": 6,
+            "of": 20,
+            "share": 0.3,
+            "ci95": [
+              0.14547724402157294,
+              0.518972820052479
+            ]
+          },
+          "supported_S_or_C": {
+            "n": 14,
+            "of": 20,
+            "share": 0.7,
+            "ci95": [
+              0.4810271799475211,
+              0.8545227559784271
+            ]
+          },
+          "rows": 20
+        },
+        "wrong_grounded": {
+          "unsupported_N": {
+            "n": 0,
+            "of": 20,
+            "share": 0.0,
+            "ci95": [
+              0.0,
+              0.16112516018512965
+            ]
+          },
+          "supported_S_or_C": {
+            "n": 20,
+            "of": 20,
+            "share": 1.0,
+            "ci95": [
+              0.8388748398148705,
+              1.0
+            ]
+          },
+          "rows": 20
+        }
+      },
+      "per_question": {
+        "wrong_ungrounded": {
+          "unsupported_N": {
+            "n": 3,
+            "of": 9,
+            "share": 0.3333333333333333,
+            "ci95": [
+              0.12058381743407343,
+              0.6457978664749412
+            ]
+          },
+          "supported_S_or_C": {
+            "n": 6,
+            "of": 9,
+            "share": 0.6666666666666666,
+            "ci95": [
+              0.35420213352505864,
+              0.8794161825659264
+            ]
+          },
+          "distinct_questions": 9
+        },
+        "wrong_grounded": {
+          "unsupported_N": {
+            "n": 0,
+            "of": 8,
+            "share": 0.0,
+            "ci95": [
+              0.0,
+              0.3244075683414076
+            ]
+          },
+          "supported_S_or_C": {
+            "n": 8,
+            "of": 8,
+            "share": 1.0,
+            "ci95": [
+              0.6755924316585924,
+              1.0
+            ]
+          },
+          "distinct_questions": 8
+        }
+      }
+    },
+    "questions_with_mixed_labels_within_class": {
+      "scn": 0,
+      "gold_derivable": 0,
+      "question_class_pairs": 17
+    }
+  },
+  "notes": {
+    "available": false,
+    "reason": "the labelled file has no note column (its check column holds one letter per row)"
+  }
+}
