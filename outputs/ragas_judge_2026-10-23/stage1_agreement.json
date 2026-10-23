@@ -1,0 +1,145 @@
+{
+  "primary": {
+    "per_row": {
+      "n": 37,
+      "excluded": {
+        "judge_error": 3
+      },
+      "accuracy": 0.6216216216216216,
+      "accuracy_ci95": [
+        0.46100430315639773,
+        0.7593600091508126
+      ],
+      "kappa": 0.2578796561604584,
+      "kappa_ci95": [
+        0.075,
+        0.4825174825174826
+      ],
+      "kappa_undefined_resamples": 0,
+      "confusion": {
+        "label_supported__judge_supported": 18,
+        "label_supported__judge_unsupported": 14,
+        "label_unsupported__judge_supported": 0,
+        "label_unsupported__judge_unsupported": 5
+      },
+      "class_balance": {
+        "N": 5,
+        "S_or_C": 32
+      },
+      "by_scn": {
+        "S": {
+          "rows": 7,
+          "judge_unsupported": 5,
+          "judge_supported": 2
+        },
+        "C": {
+          "rows": 25,
+          "judge_unsupported": 9,
+          "judge_supported": 16
+        },
+        "N": {
+          "rows": 5,
+          "judge_unsupported": 5,
+          "judge_supported": 0
+        }
+      }
+    },
+    "per_question": {
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "accuracy_ci95": [
+        0.4130036331490377,
+        0.8269027970331224
+      ],
+      "kappa": 0.32,
+      "kappa_ci95": [
+        0.0,
+        0.6577181208053691
+      ],
+      "kappa_undefined_resamples": 0,
+      "class_balance": {
+        "unsupported": 3,
+        "supported": 14
+      },
+      "confusion": {
+        "label_supported__judge_supported": 8,
+        "label_supported__judge_unsupported": 6,
+        "label_unsupported__judge_supported": 0,
+        "label_unsupported__judge_unsupported": 3
+      }
+    }
+  },
+  "sensitivity_errors_as_unsupported": {
+    "per_row": {
+      "n": 40,
+      "excluded": {},
+      "accuracy": 0.6,
+      "accuracy_ci95": [
+        0.44595893542800863,
+        0.7365167440802984
+      ],
+      "kappa": 0.2523364485981308,
+      "kappa_ci95": [
+        0.08256880733944952,
+        0.4634146341463415
+      ],
+      "kappa_undefined_resamples": 0,
+      "confusion": {
+        "label_supported__judge_supported": 18,
+        "label_supported__judge_unsupported": 16,
+        "label_unsupported__judge_supported": 0,
+        "label_unsupported__judge_unsupported": 6
+      },
+      "class_balance": {
+        "N": 6,
+        "S_or_C": 34
+      },
+      "by_scn": {
+        "S": {
+          "rows": 7,
+          "judge_unsupported": 5,
+          "judge_supported": 2
+        },
+        "C": {
+          "rows": 27,
+          "judge_unsupported": 11,
+          "judge_supported": 16
+        },
+        "N": {
+          "rows": 6,
+          "judge_unsupported": 6,
+          "judge_supported": 0
+        }
+      }
+    },
+    "per_question": {
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "accuracy_ci95": [
+        0.4130036331490377,
+        0.8269027970331224
+      ],
+      "kappa": 0.32,
+      "kappa_ci95": [
+        0.0,
+        0.6577181208053691
+      ],
+      "kappa_undefined_resamples": 0,
+      "class_balance": {
+        "unsupported": 3,
+        "supported": 14
+      },
+      "confusion": {
+        "label_supported__judge_supported": 8,
+        "label_supported__judge_unsupported": 6,
+        "label_unsupported__judge_supported": 0,
+        "label_unsupported__judge_unsupported": 3
+      }
+    }
+  },
+  "gate": {
+    "rule": "per-row kappa point estimate >= 0.4",
+    "kappa": 0.2578796561604584,
+    "stage2_runs": false
+  }
+}

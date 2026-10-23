@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 222,
+  "n_files": 227,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -890,6 +890,26 @@
     "requirements-ragas.txt": {
       "sha256": "2a04d7f7354eba2e828d4e5def63afc0af5d5af7b2ac8d154adc52e0b54ae8bd",
       "bytes": 1846
+    },
+    "outputs/ragas_judge_2026-10-23/judged_stage1.jsonl": {
+      "sha256": "03a78f6cf75a44685171afb15700338ea773cf123c18e9db8216159a67975ee3",
+      "bytes": 12345
+    },
+    "outputs/ragas_judge_2026-10-23/judge_calls_stage1.jsonl": {
+      "sha256": "870407cd68f87675c83e83270118637cfc9ef8f47c117d386281377852fb01bf",
+      "bytes": 80343
+    },
+    "outputs/ragas_judge_2026-10-23/judge_run_stage1.json": {
+      "sha256": "b41ca677e97e1b65e25ce129ab9d0bc2c96613145feb5993ebefde642333f7a7",
+      "bytes": 914
+    },
+    "outputs/ragas_judge_2026-10-23/stage1_agreement.json": {
+      "sha256": "40155d805f498d08b924cf492e462b3a4cb8515c138af3ffe1f40247b77edda6",
+      "bytes": 3578
+    },
+    "reports/ragas_judge_stage1_2026-10-23.md": {
+      "sha256": "16fd4ca03a7292a64d90bb3b6ca2adf7cc0c1616e81e8928b01eb09002576eca",
+      "bytes": 4487
     }
   },
   "additions": [
@@ -1085,6 +1105,17 @@
         "src/phase_d_validation/judge_inputs.py",
         "src/phase_d_validation/ragas_analysis.py",
         "src/phase_d_validation/ragas_judge.py"
+      ]
+    },
+    {
+      "label": "amendment8_stage1",
+      "added_utc": "2026-10-23T18:14:27.485434+00:00",
+      "paths": [
+        "outputs/ragas_judge_2026-10-23/judge_calls_stage1.jsonl",
+        "outputs/ragas_judge_2026-10-23/judge_run_stage1.json",
+        "outputs/ragas_judge_2026-10-23/judged_stage1.jsonl",
+        "outputs/ragas_judge_2026-10-23/stage1_agreement.json",
+        "reports/ragas_judge_stage1_2026-10-23.md"
       ]
     }
   ]
