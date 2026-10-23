@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 206,
+  "n_files": 210,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -826,6 +826,22 @@
     "src/phase_d_validation/label_notes_addendum2.py": {
       "sha256": "2619480df5b8abda327cd29fa6597cc8c9d3acf0aaa05392030a63a84a04ef14",
       "bytes": 8961
+    },
+    "outputs/phase_a_amendment6_2026-10-23/partb_cells.csv": {
+      "sha256": "cda55c4bca65c278e9e4dfbfdfed31fc05811151f8ef98bd2c5bf8de99a6351f",
+      "bytes": 117075
+    },
+    "outputs/phase_a_amendment6_2026-10-23/partb_summary.json": {
+      "sha256": "765fdfc52e823adde21e2cd9ab8718a27b49cf43bd821aacb860e045c9bdfa2a",
+      "bytes": 3707
+    },
+    "reports/amendment6_partb_2026-10-23.md": {
+      "sha256": "a3e7f6107f534a2b2e6dafe2c4d86ad4361867c46e592f5d9d975dab16461fc0",
+      "bytes": 6512
+    },
+    "src/phase_c_analysis/amendment6_partb.py": {
+      "sha256": "020a8b9bad234e97c9f03601383cfd83203af5db182f81760eaecbdcb1cbbe34",
+      "bytes": 8486
     }
   },
   "additions": [
@@ -987,6 +1003,16 @@
         "outputs/hallucination_labels_addendum2_2026-10-23/note_counts.json",
         "reports/hallucination_labels_addendum2_2026-10-23.md",
         "src/phase_d_validation/label_notes_addendum2.py"
+      ]
+    },
+    {
+      "label": "amendment6_partb",
+      "added_utc": "2026-10-23T17:43:58.674777+00:00",
+      "paths": [
+        "outputs/phase_a_amendment6_2026-10-23/partb_cells.csv",
+        "outputs/phase_a_amendment6_2026-10-23/partb_summary.json",
+        "reports/amendment6_partb_2026-10-23.md",
+        "src/phase_c_analysis/amendment6_partb.py"
       ]
     }
   ]

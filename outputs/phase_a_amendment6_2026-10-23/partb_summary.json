@@ -1,0 +1,168 @@
+{
+  "pass_counts": {
+    "policy_v2": {
+      "in-sample": {
+        "pass": 65,
+        "cells": 65
+      },
+      "held-out 1": {
+        "pass": 24,
+        "fail": 1,
+        "cells": 25
+      },
+      "held-out 2": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 1 quiet rerun (sensitivity)": {
+        "pass": 25,
+        "cells": 25
+      }
+    },
+    "B1 VBASE (s < 0.18)": {
+      "in-sample": {
+        "pass": 65,
+        "cells": 65
+      },
+      "held-out 1": {
+        "pass": 23,
+        "fail": 2,
+        "cells": 25
+      },
+      "held-out 2": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 1 quiet rerun (sensitivity)": {
+        "pass": 25,
+        "cells": 25
+      }
+    },
+    "B2 Milvus via NaviX (s <= 0.05)": {
+      "in-sample": {
+        "pass": 65,
+        "cells": 65
+      },
+      "held-out 1": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 2": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 1 quiet rerun (sensitivity)": {
+        "pass": 25,
+        "cells": 25
+      }
+    },
+    "B3 Qdrant (rows < 1,250)": {
+      "in-sample": {
+        "pass": 64,
+        "fail": 1,
+        "cells": 65
+      },
+      "held-out 1": {
+        "pass": 24,
+        "fail": 1,
+        "cells": 25
+      },
+      "held-out 2": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 1 quiet rerun (sensitivity)": {
+        "pass": 24,
+        "fail": 1,
+        "cells": 25
+      }
+    },
+    "B4 Gan & Wang (recall/latency labels)": {
+      "in-sample": {
+        "pass": 63,
+        "fail": 2,
+        "cells": 65
+      },
+      "held-out 1": {
+        "pass": 24,
+        "fail": 1,
+        "cells": 25
+      },
+      "held-out 2": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 1 quiet rerun (sensitivity)": {
+        "pass": 24,
+        "fail": 1,
+        "cells": 25
+      }
+    },
+    "B4b Gan & Wang (SLA labels)": {
+      "in-sample": {
+        "pass": 64,
+        "fail": 1,
+        "cells": 65
+      },
+      "held-out 1": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 2": {
+        "pass": 25,
+        "cells": 25
+      },
+      "held-out 1 quiet rerun (sensitivity)": {
+        "pass": 25,
+        "cells": 25
+      }
+    }
+  },
+  "models": {
+    "B4 Gan & Wang (recall/latency labels)": {
+      "train_label_counts": {
+        "forced-exact": 240,
+        "iterative-relaxed": 1060
+      },
+      "n_train": 1300,
+      "boundary": [
+        {
+          "between": [
+            0.004377740356320125,
+            0.004390358656409447
+          ],
+          "from": "forced-exact",
+          "to": "iterative-relaxed"
+        }
+      ],
+      "n_iter": 23,
+      "train_accuracy": 0.9692307692307692
+    },
+    "B4b Gan & Wang (SLA labels)": {
+      "train_label_counts": {
+        "forced-exact": 248,
+        "iterative-relaxed": 1052
+      },
+      "n_train": 1300,
+      "boundary": [
+        {
+          "between": [
+            0.03235936569296284,
+            0.03245263759896437
+          ],
+          "from": "forced-exact",
+          "to": "iterative-relaxed"
+        }
+      ],
+      "n_iter": 17,
+      "train_accuracy": 0.9261538461538461
+    }
+  },
+  "b3_row_threshold": 1250.0,
+  "inputs": {
+    "in-sample": "outputs/phase_a_arms/results.jsonl",
+    "held-out 1": "outputs/phase_a_holdout/results.jsonl",
+    "held-out 2": "outputs/phase_a_holdout2/results.jsonl",
+    "held-out 1 quiet rerun (sensitivity)": "outputs/phase_a_holdout_rerun/results.jsonl"
+  }
+}
