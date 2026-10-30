@@ -77,30 +77,43 @@ def env_meta(conn) -> dict:
             "platform": platform.platform(), "started_utc": datetime.now(timezone.utc).isoformat()}
 
 
+CPU_COUNTER = r"'\Processor(_Total)\% Processor Time'"   # Amendment 9 Addendum 2
+
+
 def host_load() -> dict:
-    """Host CPU % (Win32_Processor LoadPercentage) and top-5 processes by CPU seconds."""
-    ps = ("$l=(Get-CimInstance Win32_Processor | Measure-Object -Property LoadPercentage -Average).Average;"
+    """Host CPU % (processor counter, 1 s sample; Win32_Processor LoadPercentage for disclosure) and top-5 processes by
+    CPU seconds."""
+    ps = ("$c=(Get-Counter " + CPU_COUNTER + " -SampleInterval 1 -MaxSamples 1).CounterSamples[0].CookedValue;"
+          "$l=(Get-CimInstance Win32_Processor | Measure-Object -Property LoadPercentage -Average).Average;"
           "$t=Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 Name,Id,CPU;"
-          "@{load=$l; top=$t} | ConvertTo-Json -Compress")
+          "@{counter=$c; load=$l; top=$t} | ConvertTo-Json -Compress")
     r = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True)
     d = json.loads(r.stdout)
-    return {"utc": datetime.now(timezone.utc).isoformat(), "cpu_load_pct": d["load"], "top5": d["top"]}
+    return {"utc": datetime.now(timezone.utc).isoformat(), "cpu_total_pct": d["counter"], "cpu_load_pct_win32": d["load"],
+            "top5": d["top"]}
 
 
 BLOCKING_PROCESSES = ("utweb", "utorrent", "qbittorrent", "ollama", "jupyter")
 
 
 def quiet_check(samples=6, interval_s=5, max_load=25.0) -> dict:
-    """Amendment 9 quiet-machine rule: no torrent client, Ollama or Jupyter; mean host CPU <= 25 % over 30 s."""
+    """Amendment 9 quiet-machine rule as fixed by Addendum 2: no torrent client, Ollama or Jupyter; mean of 6 samples of
+    the processor counter (CPU_COUNTER) at 5 s (about 30 s) <= 25 %. Win32 LoadPercentage is recorded, not used."""
     import time
     ps = "Get-Process | Select-Object -ExpandProperty Name"
     names = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True).stdout.lower().split()
     blocking = sorted({n for n in names if n.startswith(BLOCKING_PROCESSES)})
-    loads = []
+    ps = (f"(Get-Counter {CPU_COUNTER} -SampleInterval {interval_s} -MaxSamples {samples})"
+          ".CounterSamples.CookedValue | ConvertTo-Json -Compress")
+    r = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True)
+    loads = [round(v, 2) for v in json.loads(r.stdout)]
+    if len(loads) != samples:
+        raise RuntimeError(f"expected {samples} counter samples, got {loads!r} ({r.stderr.strip()})")
+    win32 = []
     for i in range(samples):
-        loads.append(host_load()["cpu_load_pct"])
+        win32.append(host_load()["cpu_load_pct_win32"])
         if i < samples - 1:
-            time.sleep(interval_s)
+            time.sleep(1)
     mean = sum(loads) / len(loads)
-    return {"blocking_processes": blocking, "cpu_samples": loads, "cpu_mean": mean,
-            "quiet": not blocking and mean <= max_load}
+    return {"rule": "Amendment 9 Addendum 2", "blocking_processes": blocking, "cpu_samples": loads, "cpu_mean": mean,
+            "win32_load_samples_disclosure": win32, "quiet": not blocking and mean <= max_load}
