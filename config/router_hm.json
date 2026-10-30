@@ -1,0 +1,23 @@
+{
+  "_note": "Phase E router config (Amendment 9). Everything table-specific lives here so src/phase_e_router can be reused on another table by swapping this file.",
+  "tables": ["hm_clothes_0", "hm_clothes_25", "hm_clothes_50", "hm_clothes_75", "hm_clothes_100"],
+  "id_column": "id",
+  "vector_expr": "(embedding::halfvec(2048))",
+  "query_cast": "halfvec(2048)",
+  "distance_operator": "<=>",
+  "metric": "cosine",
+  "hnsw_index_suffix": "embedding_idx",
+  "filter_columns": ["index_group_name", "product_type_name", "garment_group_name", "perceived_colour_master_name",
+                     "graphical_appearance_name"],
+  "k": 10,
+  "ef_search": 40,
+  "jit": "off",
+  "statement_timeout_ms": 120000,
+  "iterative_default": {"max_scan_tuples": 20000, "scan_mem_multiplier": 1},
+  "iterative_tuned": {"max_scan_tuples": 100000, "scan_mem_multiplier": 4},
+  "probe": {"m": 100, "ef_search": 100},
+  "fixed_T": 0.1,
+  "latency_limit_ms": 500,
+  "recall_target": 0.9,
+  "policy_file": "config/policy_v3_hm.json"
+}
