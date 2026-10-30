@@ -1,0 +1,393 @@
+{
+  "label": "SUPPLEMENTARY (not pre-registered): the pre-registered selection (lowest stored forced-hnsw mean recall) picked 3 cells with recall 0.0 everywhere, which cannot detect a difference; these are the 3 in-sample cells with stored forced-hnsw mean recall closest to 0.5",
+  "git_commit": "9c8480cba48b353a2bc35fca6430d32b96b28a8e",
+  "cells": [
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "ctl",
+      "stored_mean": 0.52,
+      "new_mean": 0.52,
+      "vectors_identical": 20,
+      "per_vector": [
+        {
+          "vector_idx": 0,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 1,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 2,
+          "stored_recall": 0.9,
+          "new_recall": 0.9,
+          "rows": 10
+        },
+        {
+          "vector_idx": 3,
+          "stored_recall": 0.8,
+          "new_recall": 0.8,
+          "rows": 8
+        },
+        {
+          "vector_idx": 4,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 5,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 6,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 7,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 8,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 9,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 10,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 11,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 12,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 13,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 14,
+          "stored_recall": 0.9,
+          "new_recall": 0.9,
+          "rows": 10
+        },
+        {
+          "vector_idx": 15,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 16,
+          "stored_recall": 0.6,
+          "new_recall": 0.6,
+          "rows": 6
+        },
+        {
+          "vector_idx": 17,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 18,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 19,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        }
+      ]
+    },
+    {
+      "table": "hm_clothes_75",
+      "filter_id": "gap2",
+      "stored_mean": 0.53,
+      "new_mean": 0.53,
+      "vectors_identical": 20,
+      "per_vector": [
+        {
+          "vector_idx": 0,
+          "stored_recall": 0.5,
+          "new_recall": 0.5,
+          "rows": 5
+        },
+        {
+          "vector_idx": 1,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 2,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 3,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 4,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 5,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 6,
+          "stored_recall": 0.6,
+          "new_recall": 0.6,
+          "rows": 6
+        },
+        {
+          "vector_idx": 7,
+          "stored_recall": 0.5,
+          "new_recall": 0.5,
+          "rows": 5
+        },
+        {
+          "vector_idx": 8,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 9,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 10,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        },
+        {
+          "vector_idx": 11,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 12,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 13,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 14,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 15,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 16,
+          "stored_recall": 0.5,
+          "new_recall": 0.5,
+          "rows": 5
+        },
+        {
+          "vector_idx": 17,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 18,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 19,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "gap2",
+      "stored_mean": 0.45499999999999996,
+      "new_mean": 0.45499999999999996,
+      "vectors_identical": 20,
+      "per_vector": [
+        {
+          "vector_idx": 0,
+          "stored_recall": 0.5,
+          "new_recall": 0.5,
+          "rows": 5
+        },
+        {
+          "vector_idx": 1,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 2,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 3,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 4,
+          "stored_recall": 0.1,
+          "new_recall": 0.1,
+          "rows": 1
+        },
+        {
+          "vector_idx": 5,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 6,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 7,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        },
+        {
+          "vector_idx": 8,
+          "stored_recall": 0.5,
+          "new_recall": 0.5,
+          "rows": 5
+        },
+        {
+          "vector_idx": 9,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 10,
+          "stored_recall": 0.3,
+          "new_recall": 0.3,
+          "rows": 3
+        },
+        {
+          "vector_idx": 11,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        },
+        {
+          "vector_idx": 12,
+          "stored_recall": 0.7,
+          "new_recall": 0.7,
+          "rows": 7
+        },
+        {
+          "vector_idx": 13,
+          "stored_recall": 0.4,
+          "new_recall": 0.4,
+          "rows": 4
+        },
+        {
+          "vector_idx": 14,
+          "stored_recall": 0.5,
+          "new_recall": 0.5,
+          "rows": 5
+        },
+        {
+          "vector_idx": 15,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 16,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        },
+        {
+          "vector_idx": 17,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        },
+        {
+          "vector_idx": 18,
+          "stored_recall": 1.0,
+          "new_recall": 1.0,
+          "rows": 10
+        },
+        {
+          "vector_idx": 19,
+          "stored_recall": 0.2,
+          "new_recall": 0.2,
+          "rows": 2
+        }
+      ]
+    }
+  ]
+}

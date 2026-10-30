@@ -1,0 +1,38 @@
+{
+  "git_commit": "2cc68917e4ca7311f1522bac68c8e781118241ab",
+  "git_dirty_phase_e": false,
+  "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+  "pgvector_version": "0.8.3",
+  "server_settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "effective_cache_size": "4GB",
+    "max_parallel_workers_per_gather": "2",
+    "jit": "off",
+    "statement_timeout": "2min",
+    "hnsw.max_scan_tuples": "20000",
+    "hnsw.scan_mem_multiplier": "1",
+    "hnsw.ef_search": "40"
+  },
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26220-SP0",
+  "started_utc": "2026-10-30T05:50:24.191413+00:00",
+  "rule": "enable_indexscan = off, hnsw.iterative_scan = off, ORDER BY distance, id LIMIT 11 (11th row only for the tie flag)",
+  "k": 10,
+  "vectors_sha256_lines_0_59": "5a429ee294438009725401a3148c123faf1c5b06002bc50f8667b8cb8e18f63f",
+  "sets": {
+    "in_sample": [
+      "outputs/phase_a_arms/filters.json",
+      0
+    ],
+    "ho1": [
+      "outputs/phase_a_holdout/filters.json",
+      20
+    ],
+    "ho2": [
+      "outputs/phase_a_holdout2/filters.json",
+      40
+    ]
+  },
+  "n_rows": 2300
+}

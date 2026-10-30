@@ -1,0 +1,393 @@
+{
+  "selection": "3 in-sample cells with lowest stored forced-hnsw mean recall",
+  "git_commit": "9c8480cba48b353a2bc35fca6430d32b96b28a8e",
+  "cells": [
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "lo1",
+      "stored_mean": 0.0,
+      "new_mean": 0.0,
+      "vectors_identical": 20,
+      "per_vector": [
+        {
+          "vector_idx": 0,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 1,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 2,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 3,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 4,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 5,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 6,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 7,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 8,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 9,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 10,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 11,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 12,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 13,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 14,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 15,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 16,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 17,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 18,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 19,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "table": "hm_clothes_0",
+      "filter_id": "lo2",
+      "stored_mean": 0.0,
+      "new_mean": 0.0,
+      "vectors_identical": 20,
+      "per_vector": [
+        {
+          "vector_idx": 0,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 1,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 2,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 3,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 4,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 5,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 6,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 7,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 8,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 9,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 10,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 11,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 12,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 13,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 14,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 15,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 16,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 17,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 18,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 19,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        }
+      ]
+    },
+    {
+      "table": "hm_clothes_100",
+      "filter_id": "lo1",
+      "stored_mean": 0.0,
+      "new_mean": 0.0,
+      "vectors_identical": 20,
+      "per_vector": [
+        {
+          "vector_idx": 0,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 1,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 2,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 3,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 4,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 5,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 6,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 7,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 8,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 9,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 10,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 11,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 12,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 13,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 14,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 15,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 16,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 17,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 18,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        },
+        {
+          "vector_idx": 19,
+          "stored_recall": 0.0,
+          "new_recall": 0.0,
+          "rows": 0
+        }
+      ]
+    }
+  ]
+}
