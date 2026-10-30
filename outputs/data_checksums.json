@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 239,
+  "n_files": 246,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -958,6 +958,34 @@
     "outputs/ground_truth_hm/repro_check_supplementary.json": {
       "sha256": "bec18c56079e76ba7652fb43d67e706a0b82afb72f2841bdca0f5ac3fa8cb7ed",
       "bytes": 9113
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/cells.json": {
+      "sha256": "adb8ced4bd70a43978e8e0e7e051ca737843154178212ea92d041af55c2766a1",
+      "bytes": 109278
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/host_load.json": {
+      "sha256": "f12845d5af92e1aeb3160029fc389332d55c91254950c92318684db74a73610f",
+      "bytes": 20093
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/preflight.json": {
+      "sha256": "c5cfd07d37fbdb60c07b2ceb6f92eeda5ab2d31c24c5b86b1d47e849d98474b0",
+      "bytes": 63814
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/run_meta.json": {
+      "sha256": "afc202c6d1d5a98b54bf241f3343057654039326b05f7fd8122d5e186ee0ca44",
+      "bytes": 3387
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/results.jsonl": {
+      "sha256": "cae8b98eac6d5758b86951c289a831b90ed3bbb2fe6fdac49b59546e60283db5",
+      "bytes": 3000334
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/cell_summary.csv": {
+      "sha256": "5fc9316dd917e3d60c1ee0326e9b041876998bedf73700e78d9604f7ad6002a0",
+      "bytes": 10169
+    },
+    "outputs/phase_e_calibration_hm_2026-10-30/run.log": {
+      "sha256": "efa253ee16e89c3c5da0d4748703b626c9d4c75aa07ad7d2d724f2836254d359",
+      "bytes": 1287
     }
   },
   "additions": [
@@ -1188,6 +1216,19 @@
         "outputs/ground_truth_hm/meta.json",
         "outputs/ground_truth_hm/repro_check.json",
         "outputs/ground_truth_hm/repro_check_supplementary.json"
+      ]
+    },
+    {
+      "label": "phase_e_calibration_hm_2026-10-30",
+      "added_utc": "2026-10-30T13:08:59.433331+00:00",
+      "paths": [
+        "outputs/phase_e_calibration_hm_2026-10-30/cell_summary.csv",
+        "outputs/phase_e_calibration_hm_2026-10-30/cells.json",
+        "outputs/phase_e_calibration_hm_2026-10-30/host_load.json",
+        "outputs/phase_e_calibration_hm_2026-10-30/preflight.json",
+        "outputs/phase_e_calibration_hm_2026-10-30/results.jsonl",
+        "outputs/phase_e_calibration_hm_2026-10-30/run.log",
+        "outputs/phase_e_calibration_hm_2026-10-30/run_meta.json"
       ]
     }
   ]

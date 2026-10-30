@@ -1,0 +1,132 @@
+{
+ "git_commit": "f02462e07e13b511c02bd73d6c9a1c716f7dc289",
+ "git_dirty_phase_e": false,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "server_settings": {
+  "shared_buffers": "128MB",
+  "work_mem": "4MB",
+  "effective_cache_size": "4GB",
+  "max_parallel_workers_per_gather": "2",
+  "jit": "off",
+  "statement_timeout": "2min",
+  "hnsw.max_scan_tuples": "20000",
+  "hnsw.scan_mem_multiplier": "1",
+  "hnsw.ef_search": "40"
+ },
+ "python": "3.11.9",
+ "platform": "Windows-10-10.0.26220-SP0",
+ "started_utc": "2026-10-30T10:33:27.159956+00:00",
+ "seed": 20261030,
+ "k": 10,
+ "timed_repeats": 5,
+ "routes": [
+  "exact",
+  "iterative_default",
+  "iterative_tuned",
+  "probe"
+ ],
+ "route_settings": {
+  "exact": {
+   "enable_indexscan": "off",
+   "hnsw.iterative_scan": "off",
+   "hnsw.ef_search": 40
+  },
+  "iterative_default": {
+   "enable_indexscan": "on",
+   "enable_seqscan": "off",
+   "enable_bitmapscan": "off",
+   "enable_sort": "off",
+   "hnsw.iterative_scan": "relaxed_order",
+   "hnsw.ef_search": 40,
+   "hnsw.max_scan_tuples": 20000,
+   "hnsw.scan_mem_multiplier": 1
+  },
+  "iterative_tuned": {
+   "enable_indexscan": "on",
+   "enable_seqscan": "off",
+   "enable_bitmapscan": "off",
+   "enable_sort": "off",
+   "hnsw.iterative_scan": "relaxed_order",
+   "hnsw.ef_search": 40,
+   "hnsw.max_scan_tuples": 100000,
+   "hnsw.scan_mem_multiplier": 4
+  },
+  "probe": {
+   "enable_indexscan": "on",
+   "enable_seqscan": "off",
+   "enable_bitmapscan": "off",
+   "enable_sort": "off",
+   "hnsw.iterative_scan": "off",
+   "hnsw.ef_search": 100
+  }
+ },
+ "vectors_sha256_lines_0_19": "a3ac22dfda7ee627b5b402c175351c9f3ba34cdf72ccb31302147709205bc834",
+ "schedule_sha256": "dfbf472a0ac5b7a53f32bf7b89b7047fb5ba2a87dd87b5d04e0277b1686e5ddc",
+ "n_items": 5200,
+ "quiet_check": {
+  "rule": "Amendment 9 Addendum 2",
+  "blocking_processes": [],
+  "cpu_samples": [
+   17.01,
+   18.79,
+   18.97,
+   20.37,
+   22.94,
+   24.69
+  ],
+  "cpu_mean": 20.461666666666666,
+  "win32_load_samples_disclosure": [
+   37,
+   32,
+   39,
+   54,
+   35,
+   32
+  ],
+  "quiet": true
+ },
+ "config": {
+  "_note": "Phase E router config (Amendment 9). Everything table-specific lives here so src/phase_e_router can be reused on another table by swapping this file.",
+  "tables": [
+   "hm_clothes_0",
+   "hm_clothes_25",
+   "hm_clothes_50",
+   "hm_clothes_75",
+   "hm_clothes_100"
+  ],
+  "id_column": "id",
+  "vector_expr": "(embedding::halfvec(2048))",
+  "query_cast": "halfvec(2048)",
+  "distance_operator": "<=>",
+  "metric": "cosine",
+  "hnsw_index_suffix": "embedding_idx",
+  "filter_columns": [
+   "index_group_name",
+   "product_type_name",
+   "garment_group_name",
+   "perceived_colour_master_name",
+   "graphical_appearance_name"
+  ],
+  "k": 10,
+  "ef_search": 40,
+  "jit": "off",
+  "statement_timeout_ms": 120000,
+  "iterative_default": {
+   "max_scan_tuples": 20000,
+   "scan_mem_multiplier": 1
+  },
+  "iterative_tuned": {
+   "max_scan_tuples": 100000,
+   "scan_mem_multiplier": 4
+  },
+  "probe": {
+   "m": 100,
+   "ef_search": 100
+  },
+  "fixed_T": 0.1,
+  "latency_limit_ms": 500,
+  "recall_target": 0.9,
+  "policy_file": "config/policy_v3_hm.json"
+ }
+}

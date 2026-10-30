@@ -1,0 +1,6047 @@
+[
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "lo1",
+  "s": 0.00012369172216936252,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 0.562,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.21000000000000002,
+   "median_latency_ms": 170.68349999999998,
+   "underfill": 20,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 171.2455,
+   "underfill": 0,
+   "guard_fired": 20,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1447.976,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 5
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1447.976,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 5
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.7705
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 0.4305,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.21000000000000002,
+    "median_latency_ms": 216.631,
+    "underfill": 20
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "lo2",
+  "s": 0.0008468125594671741,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.274,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8550000000000001,
+   "median_latency_ms": 151.20850000000002,
+   "underfill": 1,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.875,
+   "median_latency_ms": 151.96050000000002,
+   "underfill": 0,
+   "guard_fired": 1,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 330.37199999999996,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 330.37199999999996,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.7915
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 2.0025,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.8550000000000001,
+    "median_latency_ms": 111.048,
+    "underfill": 1
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "lo3",
+  "s": 0.010542340627973358,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 39.5255,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 10.9065,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 10.9065,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 11.148,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 11.148,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    3,
+    1,
+    0,
+    0,
+    1,
+    2,
+    1,
+    0,
+    0,
+    2,
+    0,
+    1,
+    0,
+    0,
+    0,
+    3,
+    0,
+    3,
+    4,
+    4
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.726
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 26.6385,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 10.6455,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "lo4",
+  "s": 0.047773549000951473,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 176.777,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.6185,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.6185,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.4965,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.4965,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    9,
+    3,
+    5,
+    7,
+    8,
+    4,
+    3,
+    2,
+    4,
+    1,
+    7,
+    5,
+    5,
+    5,
+    2,
+    8,
+    4,
+    6,
+    6,
+    5
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.6715
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 284.805,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 3.6319999999999997,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "lo5",
+  "s": 0.10608943862987631,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 465.573,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.0525,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.0525,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.82,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.82,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    7,
+    14,
+    9,
+    6,
+    9,
+    9,
+    8,
+    17,
+    10,
+    16,
+    9,
+    5,
+    16,
+    13,
+    7,
+    14,
+    10,
+    6,
+    9,
+    13
+   ],
+   "n_p_below_k": 11,
+   "median_latency_ms": 5.875
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 283.414,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 2.181,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "ctl",
+  "s": 0.20375832540437677,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 832.2545,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.008,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.008,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.936,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.936,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    22,
+    18,
+    28,
+    26,
+    21,
+    23,
+    30,
+    19,
+    18,
+    16,
+    25,
+    24,
+    20,
+    23,
+    21,
+    27,
+    14,
+    20,
+    24,
+    20
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.6155
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 865.2674999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.5615,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "gap1",
+  "s": 0.21388201712654614,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 887.8209999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.012,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.012,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.9735,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.9735,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    26,
+    16,
+    22,
+    28,
+    20,
+    19,
+    23,
+    29,
+    18,
+    18,
+    33,
+    17,
+    25,
+    21,
+    20,
+    28,
+    22,
+    21,
+    24,
+    20
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.7675
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1271.3725,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.627,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "gap2",
+  "s": 0.230941960038059,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 943.3935,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.9525,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.9525,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.042,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.042,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    22,
+    25,
+    18,
+    26,
+    24,
+    27,
+    23,
+    20,
+    30,
+    26,
+    19,
+    19,
+    20,
+    22,
+    18,
+    23,
+    31,
+    26,
+    19,
+    23
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.527
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1447.5590000000002,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 1.6469999999999998,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "gap3",
+  "s": 0.25991436726926737,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1167.404,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.9264999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.9264999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.923,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.923,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    23,
+    29,
+    24,
+    29,
+    27,
+    23,
+    25,
+    19,
+    25,
+    31,
+    17,
+    20,
+    24,
+    21,
+    24,
+    26,
+    30,
+    26,
+    19,
+    29
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 6.3965
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1942.8220000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 1.4540000000000002,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "gap4",
+  "s": 0.2985918173168411,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1325.4969999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.985,
+   "median_latency_ms": 1.8195000000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.985,
+   "median_latency_ms": 1.8195000000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.985,
+   "median_latency_ms": 1.7235,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.985,
+   "median_latency_ms": 1.7235,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    30,
+    23,
+    31,
+    37,
+    24,
+    24,
+    31,
+    35,
+    21,
+    28,
+    36,
+    24,
+    34,
+    29,
+    33,
+    37,
+    29,
+    29,
+    33,
+    35
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.7855
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 781.6385,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.985,
+    "median_latency_ms": 1.4184999999999999,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "idx1",
+  "s": 0.3290104662226451,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1318.4099999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.64,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.64,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6324999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6324999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    37,
+    34,
+    31,
+    29,
+    35,
+    40,
+    39,
+    30,
+    33,
+    41,
+    27,
+    35,
+    29,
+    24,
+    37,
+    38,
+    29,
+    34,
+    33,
+    31
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.7165
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 885.896,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.282,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "idx2",
+  "s": 0.37632730732635583,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1508.23625,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 14
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.6280000000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.6280000000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.6564999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.6564999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    34,
+    42,
+    36,
+    41,
+    37,
+    33,
+    38,
+    32,
+    33,
+    33,
+    41,
+    40,
+    44,
+    51,
+    34,
+    40,
+    44,
+    41,
+    39,
+    37
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.925
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 889.4485,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.1715,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_0",
+  "filter_id": "idx3",
+  "s": 0.4705042816365366,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1854.461,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 20
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.5495,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.5495,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.5394999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.5394999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    47,
+    47,
+    51,
+    52,
+    48,
+    39,
+    50,
+    54,
+    44,
+    43,
+    41,
+    44,
+    51,
+    50,
+    47,
+    45,
+    49,
+    48,
+    46,
+    49
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.3785
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 3273.4175,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.294,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "lo1",
+  "s": 0.00012369172216936252,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 0.547,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.215,
+   "median_latency_ms": 161.631,
+   "underfill": 20,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 162.109,
+   "underfill": 0,
+   "guard_fired": 20,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1454.279,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 7
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1454.279,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 7
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.6835
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 0.439,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.215,
+    "median_latency_ms": 166.15,
+    "underfill": 20
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "lo2",
+  "s": 0.0008468125594671741,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.5055,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.925,
+   "median_latency_ms": 147.029,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.925,
+   "median_latency_ms": 147.029,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 269.2425,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 269.2425,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.7684999999999995
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.8965,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.925,
+    "median_latency_ms": 103.7755,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "lo3",
+  "s": 0.010542340627973358,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 39.320499999999996,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 14.175999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 14.175999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 14.381,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 14.381,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    0,
+    1,
+    2,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.868499999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 64.39750000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 21.116500000000002,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "lo4",
+  "s": 0.047773549000951473,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 173.674,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 4.7995,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 4.7995,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 4.9015,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 4.9015,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    4,
+    7,
+    5,
+    4,
+    4,
+    31,
+    4,
+    1,
+    5,
+    3,
+    4,
+    3,
+    4,
+    1,
+    6,
+    1,
+    5,
+    2,
+    5,
+    4
+   ],
+   "n_p_below_k": 19,
+   "median_latency_ms": 5.75
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 97.93700000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 3.7220000000000004,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "lo5",
+  "s": 0.10608943862987631,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 449.116,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.295,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.295,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.754,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.754,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    3,
+    11,
+    10,
+    23,
+    37,
+    5,
+    27,
+    6,
+    6,
+    11,
+    12,
+    7,
+    10,
+    6,
+    4,
+    8,
+    26,
+    12,
+    5,
+    5
+   ],
+   "n_p_below_k": 10,
+   "median_latency_ms": 5.688000000000001
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 252.61599999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 2.077,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "ctl",
+  "s": 0.20375832540437677,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 840.0475,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.08,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.08,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.0595,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.0595,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    11,
+    23,
+    23,
+    26,
+    21,
+    7,
+    24,
+    36,
+    18,
+    18,
+    11,
+    17,
+    26,
+    22,
+    38,
+    28,
+    21,
+    15,
+    9,
+    19
+   ],
+   "n_p_below_k": 2,
+   "median_latency_ms": 5.779
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 992.6030000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.722,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "gap1",
+  "s": 0.21388201712654614,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 884.174,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.085,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.085,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.1704999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.1704999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    14,
+    11,
+    35,
+    18,
+    41,
+    30,
+    26,
+    23,
+    18,
+    10,
+    20,
+    30,
+    12,
+    23,
+    15,
+    15,
+    21,
+    15,
+    17,
+    17
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.5760000000000005
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 491.154,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.5305,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "gap2",
+  "s": 0.230941960038059,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 950.158,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.861,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.861,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.879,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.879,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    22,
+    24,
+    27,
+    25,
+    15,
+    20,
+    21,
+    18,
+    20,
+    25,
+    25,
+    15,
+    28,
+    23,
+    20,
+    31,
+    21,
+    18,
+    30,
+    18
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.666
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 694.25,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.5055,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "gap3",
+  "s": 0.25991436726926737,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1063.7849999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.767,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.767,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.836,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.836,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    23,
+    32,
+    31,
+    31,
+    21,
+    28,
+    27,
+    19,
+    30,
+    29,
+    27,
+    19,
+    29,
+    22,
+    33,
+    35,
+    25,
+    19,
+    34,
+    23
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.65
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 639.9645,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.3014999999999999,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "gap4",
+  "s": 0.2985918173168411,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1208.1705000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6515,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6515,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.8385,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.8385,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    20,
+    24,
+    44,
+    26,
+    50,
+    41,
+    37,
+    29,
+    29,
+    19,
+    29,
+    39,
+    18,
+    28,
+    33,
+    28,
+    31,
+    19,
+    24,
+    26
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.684
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 757.731,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.2865,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "idx1",
+  "s": 0.3290104662226451,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1324.8055,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.7334999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.7334999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.61,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.61,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    27,
+    44,
+    25,
+    46,
+    24,
+    40,
+    34,
+    35,
+    28,
+    37,
+    19,
+    24,
+    50,
+    33,
+    53,
+    39,
+    28,
+    23,
+    27,
+    30
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.664
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 751.4739999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.27,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "idx2",
+  "s": 0.37632730732635583,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1504.9245,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 11
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.517,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.517,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6035,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6035,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    54,
+    31,
+    37,
+    31,
+    46,
+    38,
+    36,
+    36,
+    44,
+    39,
+    51,
+    53,
+    21,
+    49,
+    21,
+    37,
+    39,
+    50,
+    35,
+    39
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.922499999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1088.6745,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.42,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_25",
+  "filter_id": "idx3",
+  "s": 0.4705042816365366,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1854.91325,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 20
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.586,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.586,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.5219999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.5219999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    60,
+    51,
+    49,
+    37,
+    53,
+    58,
+    43,
+    34,
+    56,
+    50,
+    56,
+    25,
+    34,
+    52,
+    39,
+    31,
+    40,
+    66,
+    53,
+    49
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.8985
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 2464.5485,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.291,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "lo1",
+  "s": 0.00012369172216936252,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 0.5825,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.205,
+   "median_latency_ms": 161.47699999999998,
+   "underfill": 20,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 162.05399999999997,
+   "underfill": 0,
+   "guard_fired": 20,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9349999999999999,
+   "median_latency_ms": 1479.2215,
+   "underfill": 1,
+   "guard_fired": 0,
+   "early_stop_vectors": 8
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.95,
+   "median_latency_ms": 1479.2215,
+   "underfill": 0,
+   "guard_fired": 1,
+   "early_stop_vectors": 8
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.814
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 0.453,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.205,
+    "median_latency_ms": 231.031,
+    "underfill": 20
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "lo2",
+  "s": 0.0008468125594671741,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.3555,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.865,
+   "median_latency_ms": 151.1955,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.865,
+   "median_latency_ms": 151.1955,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.985,
+   "median_latency_ms": 288.79650000000004,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.985,
+   "median_latency_ms": 288.79650000000004,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.4895
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.984,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.865,
+    "median_latency_ms": 125.7355,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "lo3",
+  "s": 0.010542340627973358,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 39.8535,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 19.9745,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 19.9745,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 20.29,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 20.29,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    1,
+    0,
+    2,
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.814500000000001
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 24.1935,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 17.629,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "lo4",
+  "s": 0.047773549000951473,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 175.711,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 6.166499999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 6.166499999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 6.7295,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 6.7295,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    10,
+    4,
+    1,
+    2,
+    63,
+    3,
+    1,
+    4,
+    3,
+    1,
+    2,
+    4,
+    2,
+    0,
+    5,
+    6,
+    0,
+    3,
+    3
+   ],
+   "n_p_below_k": 18,
+   "median_latency_ms": 5.355
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 154.84199999999998,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 7.1795,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "lo5",
+  "s": 0.10608943862987631,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 452.28499999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.4989999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.4989999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.7285,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 3.7285,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    5,
+    4,
+    6,
+    35,
+    48,
+    0,
+    46,
+    9,
+    7,
+    3,
+    5,
+    4,
+    5,
+    2,
+    9,
+    5,
+    41,
+    5,
+    6,
+    9
+   ],
+   "n_p_below_k": 16,
+   "median_latency_ms": 5.7655
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 316.52599999999995,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 3.332,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "ctl",
+  "s": 0.20375832540437677,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 846.847,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2625,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2625,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2785,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2785,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    7,
+    14,
+    37,
+    25,
+    20,
+    5,
+    16,
+    64,
+    7,
+    16,
+    8,
+    16,
+    33,
+    17,
+    55,
+    32,
+    14,
+    21,
+    13,
+    20
+   ],
+   "n_p_below_k": 4,
+   "median_latency_ms": 5.906499999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1080.149,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.5645,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "gap1",
+  "s": 0.21388201712654614,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 886.6485,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.0675,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.0675,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.3994999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.3994999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    15,
+    19,
+    42,
+    24,
+    48,
+    33,
+    33,
+    10,
+    17,
+    10,
+    33,
+    21,
+    8,
+    8,
+    13,
+    11,
+    20,
+    10,
+    12,
+    17
+   ],
+   "n_p_below_k": 2,
+   "median_latency_ms": 5.666
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 623.8499999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.8585,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "gap2",
+  "s": 0.230941960038059,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 950.9055000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.011,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.011,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.9965000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.9965000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    14,
+    24,
+    20,
+    26,
+    17,
+    24,
+    19,
+    17,
+    15,
+    15,
+    16,
+    17,
+    16,
+    17,
+    18,
+    33,
+    15,
+    9,
+    40,
+    13
+   ],
+   "n_p_below_k": 1,
+   "median_latency_ms": 5.5685
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 760.3945,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.9585,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "gap3",
+  "s": 0.25991436726926737,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1066.2465,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.016,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.016,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.9295,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.9295,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    11,
+    18,
+    23,
+    37,
+    23,
+    21,
+    32,
+    18,
+    27,
+    15,
+    20,
+    15,
+    23,
+    22,
+    36,
+    44,
+    28,
+    12,
+    43,
+    20
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.5905000000000005
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 781.2655,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 1.6595,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "gap4",
+  "s": 0.2985918173168411,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1212.7855,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.7385,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.7385,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6735000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6735000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    18,
+    24,
+    49,
+    39,
+    56,
+    36,
+    49,
+    15,
+    32,
+    13,
+    43,
+    27,
+    17,
+    16,
+    32,
+    25,
+    34,
+    14,
+    19,
+    29
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.8585
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 6567.331,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.2705,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "idx1",
+  "s": 0.3290104662226451,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1320.9634999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.585,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.585,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.5925,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.5925,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    25,
+    44,
+    26,
+    48,
+    18,
+    64,
+    28,
+    38,
+    27,
+    24,
+    15,
+    21,
+    64,
+    27,
+    56,
+    60,
+    27,
+    31,
+    29,
+    23
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.7195
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 2261.2039999999997,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.4715,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "idx2",
+  "s": 0.37632730732635583,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1518.4434999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 13
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.665,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.665,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.658,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.658,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    51,
+    31,
+    26,
+    32,
+    48,
+    22,
+    28,
+    22,
+    33,
+    43,
+    64,
+    65,
+    18,
+    51,
+    23,
+    28,
+    40,
+    50,
+    37,
+    40
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.749499999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1205.5774999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.6325,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_50",
+  "filter_id": "idx3",
+  "s": 0.4705042816365366,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1862.1252499999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 20
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.653,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.653,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.617,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.617,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    56,
+    56,
+    42,
+    36,
+    65,
+    68,
+    53,
+    23,
+    61,
+    66,
+    70,
+    33,
+    25,
+    48,
+    25,
+    21,
+    36,
+    58,
+    50,
+    49
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.6925
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 3419.1645,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.573,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "lo1",
+  "s": 0.00012369172216936252,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 0.574,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.26,
+   "median_latency_ms": 158.4795,
+   "underfill": 20,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 159.16899999999998,
+   "underfill": 0,
+   "guard_fired": 20,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.985,
+   "median_latency_ms": 1454.616,
+   "underfill": 1,
+   "guard_fired": 0,
+   "early_stop_vectors": 2
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1454.616,
+   "underfill": 0,
+   "guard_fired": 1,
+   "early_stop_vectors": 2
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.6805
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 0.459,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.26,
+    "median_latency_ms": 375.14300000000003,
+    "underfill": 20
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "lo2",
+  "s": 0.0008468125594671741,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.6345,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.75,
+   "median_latency_ms": 158.0815,
+   "underfill": 1,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.775,
+   "median_latency_ms": 158.0815,
+   "underfill": 0,
+   "guard_fired": 1,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 446.959,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 446.959,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.5600000000000005
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.9849999999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.75,
+    "median_latency_ms": 124.50999999999999,
+    "underfill": 1
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "lo3",
+  "s": 0.010542340627973358,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 39.7635,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9650000000000001,
+   "median_latency_ms": 30.0265,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9650000000000001,
+   "median_latency_ms": 30.0265,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9650000000000001,
+   "median_latency_ms": 30.797,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9650000000000001,
+   "median_latency_ms": 30.797,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.465
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 67.63499999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9650000000000001,
+    "median_latency_ms": 61.713,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "lo4",
+  "s": 0.047773549000951473,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 175.972,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 8.6955,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 8.6955,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 8.845500000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 8.845500000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    2,
+    15,
+    1,
+    0,
+    2,
+    71,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
+    4,
+    4,
+    0,
+    1,
+    0,
+    1,
+    2,
+    2
+   ],
+   "n_p_below_k": 18,
+   "median_latency_ms": 5.4795
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 125.511,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 10.380500000000001,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "lo5",
+  "s": 0.10608943862987631,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 455.0695,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 5.798,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 5.798,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 5.3325,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 5.3325,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    2,
+    3,
+    1,
+    50,
+    69,
+    5,
+    61,
+    3,
+    3,
+    3,
+    3,
+    2,
+    4,
+    4,
+    3,
+    2,
+    56,
+    5,
+    1,
+    2
+   ],
+   "n_p_below_k": 16,
+   "median_latency_ms": 5.788
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 266.8835,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 5.2875,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "ctl",
+  "s": 0.20375832540437677,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 846.3345,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2859999999999996,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2859999999999996,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.4924999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.4924999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    3,
+    8,
+    49,
+    24,
+    16,
+    6,
+    16,
+    71,
+    6,
+    17,
+    9,
+    19,
+    28,
+    17,
+    71,
+    36,
+    16,
+    20,
+    5,
+    26
+   ],
+   "n_p_below_k": 6,
+   "median_latency_ms": 5.779999999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 547.134,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.9169999999999998,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "gap1",
+  "s": 0.21388201712654614,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 881.4485,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.6639999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.6639999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.4675000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.4675000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    10,
+    9,
+    54,
+    23,
+    57,
+    36,
+    39,
+    2,
+    10,
+    3,
+    31,
+    26,
+    7,
+    6,
+    7,
+    16,
+    27,
+    9,
+    6,
+    4
+   ],
+   "n_p_below_k": 9,
+   "median_latency_ms": 5.734999999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 620.5550000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 2.153,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "gap2",
+  "s": 0.230941960038059,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 954.0260000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.3985000000000003,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.3985000000000003,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.318,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.318,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    13,
+    15,
+    19,
+    34,
+    15,
+    27,
+    17,
+    11,
+    7,
+    8,
+    11,
+    13,
+    20,
+    15,
+    15,
+    38,
+    13,
+    10,
+    43,
+    14
+   ],
+   "n_p_below_k": 2,
+   "median_latency_ms": 5.888999999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1407.672,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.8,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "gap3",
+  "s": 0.25991436726926737,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1062.7985,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.2545,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.2545,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.952,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.952,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    17,
+    18,
+    17,
+    46,
+    17,
+    32,
+    33,
+    17,
+    20,
+    10,
+    14,
+    15,
+    23,
+    20,
+    27,
+    42,
+    19,
+    12,
+    47,
+    22
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.8215
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1867.1284999999998,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 1.7405,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "gap4",
+  "s": 0.2985918173168411,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1208.1574999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.7745,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.7745,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.9125,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.9125,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    17,
+    19,
+    57,
+    38,
+    61,
+    44,
+    56,
+    10,
+    25,
+    7,
+    39,
+    32,
+    11,
+    11,
+    21,
+    24,
+    39,
+    12,
+    12,
+    16
+   ],
+   "n_p_below_k": 1,
+   "median_latency_ms": 5.3665
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1383.0165,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.891,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "idx1",
+  "s": 0.3290104662226451,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1325.6770000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.821,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.821,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.8185,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.8185,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    27,
+    54,
+    13,
+    64,
+    15,
+    76,
+    35,
+    48,
+    38,
+    11,
+    15,
+    14,
+    78,
+    21,
+    67,
+    54,
+    28,
+    29,
+    15,
+    27
+   ],
+   "n_p_below_k": 0,
+   "median_latency_ms": 5.7425
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1927.784,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.5725,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "idx2",
+  "s": 0.37632730732635583,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1512.534,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 13
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6030000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6030000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6284999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.6284999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    59,
+    27,
+    25,
+    21,
+    48,
+    13,
+    25,
+    17,
+    31,
+    52,
+    61,
+    78,
+    9,
+    59,
+    11,
+    32,
+    45,
+    54,
+    36,
+    34
+   ],
+   "n_p_below_k": 1,
+   "median_latency_ms": 5.564500000000001
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 965.2370000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.3115,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_75",
+  "filter_id": "idx3",
+  "s": 0.4705042816365366,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1856.2447499999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 20
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.8130000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.8130000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.9915,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.9915,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    54,
+    63,
+    41,
+    10,
+    77,
+    72,
+    51,
+    15,
+    65,
+    81,
+    72,
+    12,
+    15,
+    59,
+    15,
+    7,
+    22,
+    65,
+    60,
+    38
+   ],
+   "n_p_below_k": 1,
+   "median_latency_ms": 5.6985
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1131.0520000000001,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.5145,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "lo1",
+  "s": 0.00012369172216936252,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 0.572,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.18,
+   "median_latency_ms": 160.1975,
+   "underfill": 18,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 160.69799999999998,
+   "underfill": 0,
+   "guard_fired": 18,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.925,
+   "median_latency_ms": 1484.338,
+   "underfill": 1,
+   "guard_fired": 0,
+   "early_stop_vectors": 8
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.95,
+   "median_latency_ms": 1484.338,
+   "underfill": 0,
+   "guard_fired": 1,
+   "early_stop_vectors": 8
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.6965
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 0.327,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.18,
+    "median_latency_ms": 110.965,
+    "underfill": 18
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "lo2",
+  "s": 0.0008468125594671741,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 3.3945,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.675,
+   "median_latency_ms": 161.16,
+   "underfill": 4,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.82,
+   "median_latency_ms": 161.74450000000002,
+   "underfill": 0,
+   "guard_fired": 4,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9800000000000001,
+   "median_latency_ms": 468.0185,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9800000000000001,
+   "median_latency_ms": 468.0185,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 6.047499999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 2.4915000000000003,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.675,
+    "median_latency_ms": 181.208,
+    "underfill": 4
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "lo3",
+  "s": 0.010542340627973358,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 40.467,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.82,
+   "median_latency_ms": 127.462,
+   "underfill": 1,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.85,
+   "median_latency_ms": 127.462,
+   "underfill": 0,
+   "guard_fired": 1,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.925,
+   "median_latency_ms": 126.7935,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.925,
+   "median_latency_ms": 126.7935,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 20,
+   "median_latency_ms": 5.452
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 24.6525,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.82,
+    "median_latency_ms": 95.0,
+    "underfill": 1
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "lo4",
+  "s": 0.047773549000951473,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 173.155,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.42000000000000004,
+   "median_latency_ms": 158.086,
+   "underfill": 8,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.795,
+   "median_latency_ms": 187.3805,
+   "underfill": 0,
+   "guard_fired": 8,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9400000000000001,
+   "median_latency_ms": 960.771,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9400000000000001,
+   "median_latency_ms": 960.771,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    17,
+    0,
+    0,
+    0,
+    100,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 18,
+   "median_latency_ms": 5.864
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 112.963,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.42000000000000004,
+    "median_latency_ms": 123.7715,
+    "underfill": 8
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "lo5",
+  "s": 0.10608943862987631,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 449.90999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.93,
+   "median_latency_ms": 79.643,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.93,
+   "median_latency_ms": 79.643,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.975,
+   "median_latency_ms": 69.3175,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.975,
+   "median_latency_ms": 69.3175,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    0,
+    0,
+    64,
+    90,
+    0,
+    85,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    81,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 16,
+   "median_latency_ms": 5.521000000000001
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 262.249,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.93,
+    "median_latency_ms": 59.5175,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "ctl",
+  "s": 0.20375832540437677,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 839.0295000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.96,
+   "median_latency_ms": 2.4665,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.96,
+   "median_latency_ms": 2.4665,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.96,
+   "median_latency_ms": 2.427,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.96,
+   "median_latency_ms": 2.427,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    0,
+    3,
+    54,
+    28,
+    15,
+    0,
+    15,
+    94,
+    0,
+    17,
+    0,
+    12,
+    41,
+    16,
+    89,
+    36,
+    15,
+    19,
+    2,
+    19
+   ],
+   "n_p_below_k": 6,
+   "median_latency_ms": 5.829000000000001
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 611.24,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.96,
+    "median_latency_ms": 1.962,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "gap1",
+  "s": 0.21388201712654614,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 843.4145,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.862,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.862,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.862,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.862,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    5,
+    2,
+    64,
+    20,
+    74,
+    39,
+    52,
+    1,
+    5,
+    0,
+    35,
+    28,
+    0,
+    1,
+    2,
+    13,
+    22,
+    0,
+    0,
+    0
+   ],
+   "n_p_below_k": 11,
+   "median_latency_ms": 5.51
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 488.8725,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 2.242,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "gap2",
+  "s": 0.230941960038059,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 907.0174999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.3635,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.3635,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.3885,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 2.3885,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    10,
+    12,
+    22,
+    38,
+    13,
+    24,
+    10,
+    7,
+    10,
+    4,
+    10,
+    11,
+    15,
+    14,
+    11,
+    38,
+    8,
+    5,
+    54,
+    9
+   ],
+   "n_p_below_k": 5,
+   "median_latency_ms": 5.446
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 520.812,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 1.822,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "gap3",
+  "s": 0.25991436726926737,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1060.3135,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.3529999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.3529999999999998,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2024999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 2.2024999999999997,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    9,
+    18,
+    19,
+    51,
+    15,
+    31,
+    30,
+    13,
+    33,
+    4,
+    7,
+    11,
+    21,
+    18,
+    26,
+    48,
+    20,
+    5,
+    55,
+    19
+   ],
+   "n_p_below_k": 4,
+   "median_latency_ms": 5.835
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 601.3245,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.5150000000000001,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "gap4",
+  "s": 0.2985918173168411,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1205.9425,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.343,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.343,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.207,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 2.207,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    11,
+    13,
+    65,
+    36,
+    77,
+    47,
+    73,
+    7,
+    31,
+    0,
+    40,
+    34,
+    8,
+    5,
+    20,
+    26,
+    36,
+    0,
+    4,
+    13
+   ],
+   "n_p_below_k": 6,
+   "median_latency_ms": 5.855
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 644.2055,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1.391,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "idx1",
+  "s": 0.3290104662226451,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1324.408,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.748,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.748,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.8735,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.8735,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    20,
+    59,
+    9,
+    76,
+    6,
+    89,
+    32,
+    49,
+    27,
+    8,
+    0,
+    2,
+    94,
+    14,
+    75,
+    61,
+    23,
+    26,
+    11,
+    18
+   ],
+   "n_p_below_k": 5,
+   "median_latency_ms": 5.686
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 851.5385,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.294,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "idx2",
+  "s": 0.37632730732635583,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1440.4105,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 1
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.6055000000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.6055000000000001,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.6175000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.99,
+   "median_latency_ms": 1.6175000000000002,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    64,
+    27,
+    16,
+    15,
+    55,
+    7,
+    19,
+    10,
+    34,
+    57,
+    82,
+    88,
+    1,
+    70,
+    8,
+    28,
+    45,
+    61,
+    35,
+    35
+   ],
+   "n_p_below_k": 3,
+   "median_latency_ms": 5.2385
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1693.9904999999999,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.99,
+    "median_latency_ms": 1.4395,
+    "underfill": 0
+   }
+  }
+ },
+ {
+  "table": "hm_clothes_100",
+  "filter_id": "idx3",
+  "s": 0.4705042816365366,
+  "exact": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 1.0,
+   "median_latency_ms": 1777.3,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 20
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.644,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.644,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.527,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9949999999999999,
+   "median_latency_ms": 1.527,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "p": [
+    55,
+    69,
+    41,
+    3,
+    89,
+    82,
+    51,
+    0,
+    62,
+    90,
+    86,
+    8,
+    2,
+    68,
+    2,
+    1,
+    9,
+    69,
+    62,
+    46
+   ],
+   "n_p_below_k": 7,
+   "median_latency_ms": 5.390499999999999
+  },
+  "stored": {
+   "exact": {
+    "mean_recall": 1.0,
+    "median_latency_ms": 1161.847,
+    "underfill": 0
+   },
+   "iter": {
+    "mean_recall": 0.9949999999999999,
+    "median_latency_ms": 1.3255,
+    "underfill": 0
+   }
+  }
+ }
+]

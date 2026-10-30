@@ -1,0 +1,210 @@
+{
+ "T_default": 0.07119177617441379,
+ "T_tuned": 0.07119177617441379,
+ "R": 0.9,
+ "L_ms": 500,
+ "k": 10,
+ "ef_search": 40,
+ "grid": [
+  0.00012369172216936252,
+  0.0008468125594671741,
+  0.010542340627973358,
+  0.047773549000951473,
+  0.10608943862987631,
+  0.20375832540437677,
+  0.21388201712654614,
+  0.230941960038059,
+  0.25991436726926737,
+  0.2985918173168411,
+  0.3290104662226451,
+  0.37632730732635583,
+  0.4705042816365366
+ ],
+ "calibration_default": {
+  "grid": [
+   0.00012369172216936252,
+   0.0008468125594671741,
+   0.010542340627973358,
+   0.047773549000951473,
+   0.10608943862987631,
+   0.20375832540437677,
+   0.21388201712654614,
+   0.230941960038059,
+   0.25991436726926737,
+   0.2985918173168411,
+   0.3290104662226451,
+   0.37632730732635583,
+   0.4705042816365366
+  ],
+  "per_table": {
+   "hm_clothes_0": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.010542340627973358,
+    "lower": 0.0008468125594671741,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.009478284077753803,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_100": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.10608943862987631,
+    "lower": 0.047773549000951473,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.07119177617441379,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_25": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.00012369172216936252,
+    "lower": 0.00012369172216936252,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": true,
+    "empty": false,
+    "T": 0.003622483315090671,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_50": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.010542340627973358,
+    "lower": 0.0008468125594671741,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.009478284077753803,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_75": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.010542340627973358,
+    "lower": 0.0008468125594671741,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.009478284077753803,
+    "T_rule": "geometric mean of interval endpoints"
+   }
+  },
+  "pooled": {
+   "s_exact_max": 0.10608943862987631,
+   "s_iter_min": 0.10608943862987631,
+   "lower": 0.047773549000951473,
+   "upper": 0.10608943862987631,
+   "lower_is_smallest_grid_point": false,
+   "empty": false,
+   "T": 0.07119177617441379,
+   "T_rule": "geometric mean of interval endpoints"
+  },
+  "T": 0.07119177617441379
+ },
+ "calibration_tuned": {
+  "grid": [
+   0.00012369172216936252,
+   0.0008468125594671741,
+   0.010542340627973358,
+   0.047773549000951473,
+   0.10608943862987631,
+   0.20375832540437677,
+   0.21388201712654614,
+   0.230941960038059,
+   0.25991436726926737,
+   0.2985918173168411,
+   0.3290104662226451,
+   0.37632730732635583,
+   0.4705042816365366
+  ],
+  "per_table": {
+   "hm_clothes_0": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.0008468125594671741,
+    "lower": 0.00012369172216936252,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.003622483315090671,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_100": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.10608943862987631,
+    "lower": 0.047773549000951473,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.07119177617441379,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_25": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.0008468125594671741,
+    "lower": 0.00012369172216936252,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.003622483315090671,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_50": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.0008468125594671741,
+    "lower": 0.00012369172216936252,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.003622483315090671,
+    "T_rule": "geometric mean of interval endpoints"
+   },
+   "hm_clothes_75": {
+    "s_exact_max": 0.10608943862987631,
+    "s_iter_min": 0.0008468125594671741,
+    "lower": 0.00012369172216936252,
+    "upper": 0.10608943862987631,
+    "lower_is_smallest_grid_point": false,
+    "empty": false,
+    "T": 0.003622483315090671,
+    "T_rule": "geometric mean of interval endpoints"
+   }
+  },
+  "pooled": {
+   "s_exact_max": 0.10608943862987631,
+   "s_iter_min": 0.10608943862987631,
+   "lower": 0.047773549000951473,
+   "upper": 0.10608943862987631,
+   "lower_is_smallest_grid_point": false,
+   "empty": false,
+   "T": 0.07119177617441379,
+   "T_rule": "geometric mean of interval endpoints"
+  },
+  "T": 0.07119177617441379
+ },
+ "reference_H&M_interval": [
+  0.0478,
+  0.2038
+ ],
+ "inputs": {
+  "session": "outputs/phase_e_calibration_hm_2026-10-30/results.jsonl",
+  "session_git_commit": "f02462e07e13b511c02bd73d6c9a1c716f7dc289",
+  "session_started_utc": "2026-10-30T10:33:27.159956+00:00",
+  "machine": {
+   "platform": "Windows-10-10.0.26220-SP0",
+   "server_settings": {
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "effective_cache_size": "4GB",
+    "max_parallel_workers_per_gather": "2",
+    "jit": "off",
+    "statement_timeout": "2min",
+    "hnsw.max_scan_tuples": "20000",
+    "hnsw.scan_mem_multiplier": "1",
+    "hnsw.ef_search": "40"
+   },
+   "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+   "pgvector_version": "0.8.3"
+  }
+ },
+ "calibrated_utc": "2026-10-30T13:05:49.313383+00:00",
+ "amendment": "docs/preregistration/PHASE_E_AMENDMENT_9.md"
+}
