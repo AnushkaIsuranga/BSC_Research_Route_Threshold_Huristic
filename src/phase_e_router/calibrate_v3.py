@@ -33,6 +33,7 @@ OUT = PROJECT_ROOT / "outputs" / "phase_e_calibration_hm_2026-10-30"
 SEED = 20261030
 K = 10
 TIMED = 5
+EARLY_STOP_MS = 1500.0      # Addendum 1: 3 x L; median of the first 2 timed repetitions
 ROUTES = [R.R_EXACT, R.R_ITER, R.R_ITER_TUNED, R.R_PROBE]
 STORED = {"in_sample": "outputs/phase_a_arms/results.jsonl"}
 
@@ -151,12 +152,16 @@ def run(args):
                     row.update({"rows_returned": len(ids), "recall": recall(ids, gt[(table, fid, vi)]), "ids": ids})
                 row["normal_wall_ms"] = round(wall, 3)
                 R.explain_route(conn, route, table, cond, K, qv, cfg, analyze=True)                  # warm-up
-                times, plan = [], None
-                for _ in range(TIMED):
+                times, plan, early = [], None, False
+                for rep in range(TIMED):
                     plan = R.explain_route(conn, route, table, cond, K, qv, cfg, analyze=True)
                     times.append(plan["Execution Time"])
+                    if rep == 1 and statistics.median(times) > EARLY_STOP_MS:     # Addendum 1
+                        early = True
+                        break
                 chk = R.check_plan(route, plan, cfg)
-                row.update({"latency_ms": statistics.median(times), "latency_raw_ms": times, "plan_nodes": chk["plan_nodes"],
+                row.update({"latency_ms": statistics.median(times), "latency_raw_ms": times, "early_stop": early,
+                            "plan_nodes": chk["plan_nodes"],
                             "scan_node": chk["scan_node"], "index_used": chk["index_used"], "plan_as_intended": chk["ok"]})
             except Exception as e:
                 conn.rollback()
@@ -201,6 +206,16 @@ def per_vector(rows_by_key, table, fid, vi, variant):
     return ex["recall"], it["latency_ms"] + ex["latency_ms"], ex["rows_returned"], True
 
 
+def _early(rows_by_key, table, fid, vi, variant) -> bool:
+    """Addendum 1 flag for the per-vector result of a variant (guard variants count the exact part only if it was used)."""
+    ex = rows_by_key[(table, fid, vi, R.R_EXACT)]
+    if variant == "exact":
+        return bool(ex.get("early_stop"))
+    it = rows_by_key[(table, fid, vi, R.R_ITER if variant.startswith("iter") else R.R_ITER_TUNED)]
+    fired = variant.endswith("guard") and it["rows_returned"] < K
+    return bool(it.get("early_stop")) or (fired and bool(ex.get("early_stop")))
+
+
 def analyze(args):
     cfg = R.RouterConfig.load()
     rows = [json.loads(ln) for ln in (OUT / "results.jsonl").read_text(encoding="utf-8").splitlines()]
@@ -221,7 +236,8 @@ def analyze(args):
                 pv = [per_vector(by, t, fid, vi, v) for vi in vector_indices("in_sample")]
                 res = P.cell_passes([p[0] for p in pv], [p[1] for p in pv], recall_target=cfg["recall_target"],
                                     latency_limit_ms=cfg["latency_limit_ms"])
-                rec[v] = {**res, "underfill": sum(1 for p in pv if p[2] < K), "guard_fired": sum(1 for p in pv if p[3])}
+                rec[v] = {**res, "underfill": sum(1 for p in pv if p[2] < K), "guard_fired": sum(1 for p in pv if p[3]),
+                          "early_stop_vectors": sum(1 for vi in vector_indices("in_sample") if _early(by, t, fid, vi, v))}
             probes = [by[(t, fid, vi, R.R_PROBE)] for vi in vector_indices("in_sample")]
             rec["probe"] = {"p": [p["probe_p"] for p in probes], "n_p_below_k": sum(1 for p in probes if p["probe_p"] < K),
                             "median_latency_ms": statistics.median(p["latency_ms"] for p in probes)}
@@ -231,6 +247,7 @@ def analyze(args):
                              **{f"{v}_recall": round(rec[v]["mean_recall"], 4) for v in variants},
                              **{f"{v}_ms": round(rec[v]["median_latency_ms"], 2) for v in variants},
                              **{f"{v}_pass": rec[v]["passed"] for v in variants},
+                             **{f"{v}_early_stop": rec[v]["early_stop_vectors"] for v in variants},
                              "iter_underfill": rec["iter"]["underfill"], "tuned_underfill": rec["tuned"]["underfill"],
                              "stored_exact_ms": round(rec["stored"]["exact"]["median_latency_ms"], 2),
                              "stored_iter_ms": round(rec["stored"]["iter"]["median_latency_ms"], 2),

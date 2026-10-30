@@ -33,6 +33,7 @@ OUT = PROJECT_ROOT / "outputs" / "phase_e_comparison_hm_2026-10-31"
 SEED = 20261031
 K = 10
 TIMED = 5
+EARLY_STOP_MS = 1500.0      # Addendum 1: 3 x L; median of the first 2 timed repetitions
 SET_ORDER = ["ho1", "ho2", "in_sample"]
 MODES = [m for m in R.MODES if m != "llm_router"]
 ORACLE_CANDIDATES = ["always_exact", "always_iterative", "iterative_tuned", "default_hnsw", "retry_exact", "planner_iterative"]
@@ -190,13 +191,17 @@ def run(args):
                 ids = [r[0] for r in rows]
                 row.update({"rows_returned": len(ids), "recall": recall(ids, gt[(table, fid, vi)]), "ids": ids, "trace": tr})
                 R.retrieve(qv, cond, K, mode, cfg, conn=conn, table=table)                 # warm-up
-                walls, traces = [], []
-                for _ in range(TIMED):
+                walls, traces, early = [], [], False
+                for rep in range(TIMED):
                     t0 = time.perf_counter()
                     _, ttr = R.retrieve(qv, cond, K, mode, cfg, conn=conn, table=table)
                     walls.append((time.perf_counter() - t0) * 1000)
                     traces.append(_trace_small(ttr))
-                row.update({"latency_ms": statistics.median(walls), "latency_raw_ms": walls, "timed_traces": traces})
+                    if rep == 1 and statistics.median(walls) > EARLY_STOP_MS:      # Addendum 1
+                        early = True
+                        break
+                row.update({"latency_ms": statistics.median(walls), "latency_raw_ms": walls, "early_stop": early,
+                            "timed_traces": traces})
             except Exception as e:
                 conn.rollback()
                 row["error"] = repr(e)
@@ -258,7 +263,7 @@ def analyze(args):
         guard = [r["trace"].get("guard_triggered") for r in ok]
         cell_rows.append({
             "set": s, "table": t, "filter_id": fid, "selectivity": rs[0]["selectivity"], "mode": mode, "n": len(rs),
-            "errors": len(rs) - len(ok), "passed": res["passed"], "reason": res["reason"], "mean_recall": res["mean_recall"],
+            "errors": len(rs) - len(ok), "early_stop_vectors": sum(1 for r in ok if r.get("early_stop")), "passed": res["passed"], "reason": res["reason"], "mean_recall": res["mean_recall"],
             "full_k_rate": sum(1 for r in ok if r["rows_returned"] >= K) / len(rs),
             "median_ms": res["median_latency_ms"], "p95_ms": _p95([x for r in ok for x in r["latency_raw_ms"]]),
             "estimate_ms": _med([tt.get("estimate_ms") for tt in timed]), "count_ms": _med([tt.get("count_ms") for tt in timed]),
