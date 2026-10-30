@@ -1,0 +1,15 @@
+annotated-doc==0.0.5
+colorama==0.4.6
+markdown-it-py==4.2.0
+mdurl==0.1.2
+numpy==2.4.6
+pglast==8.7
+psycopg==3.3.6
+psycopg-binary==3.3.6
+Pygments==2.21.0
+rich==15.0.0
+shellingham==1.5.4
+typer==0.27.3
+typing_extensions==4.16.0
+tzdata==2026.6
+vecadvisor==0.1.0a6

@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 227,
+  "n_files": 234,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -910,6 +910,34 @@
     "reports/ragas_judge_stage1_2026-10-23.md": {
       "sha256": "16fd4ca03a7292a64d90bb3b6ca2adf7cc0c1616e81e8928b01eb09002576eca",
       "bytes": 4487
+    },
+    "outputs/vecadvisor_check_2026-10-30/analyze_hm_clothes_100.json": {
+      "sha256": "e972746a779841ee15dc5c198b72d90532776520dc0a30c3ee51da35dc701f7a",
+      "bytes": 4359
+    },
+    "outputs/vecadvisor_check_2026-10-30/pip_freeze.txt": {
+      "sha256": "5a661dfcf8deafbfbb4ba8f2df75982611b2efe3ecca3f1c5c9a4c72e5c093ae",
+      "bytes": 273
+    },
+    "outputs/vecadvisor_check_2026-10-30/query_vectors_0_19.jsonl": {
+      "sha256": "58e16568bb10b35f0a50c729ad82434c447044ed9588a9fed228bc2c7a9ce4a4",
+      "bytes": 880321
+    },
+    "outputs/vecadvisor_check_2026-10-30/recommend_expression_vector_crash.txt": {
+      "sha256": "1117b59b8cdeb342f129f6cc8c968e83f423050ea6d042f19d788dbfb130e1d2",
+      "bytes": 6290
+    },
+    "outputs/vecadvisor_check_2026-10-30/recommend_hm_clothes_100_idx3.json": {
+      "sha256": "c75e7261965ecd51c54a74af9fa80d1620ecc4a2d60f85791db2fc09a1d252c9",
+      "bytes": 5574
+    },
+    "outputs/vecadvisor_check_2026-10-30/recommend_hm_clothes_100_lo3.json": {
+      "sha256": "0b69c573a6d39ad0b9f9cd38c56b86e3d3c28590d0838b1d36189f76e951c93d",
+      "bytes": 7349
+    },
+    "outputs/vecadvisor_check_2026-10-30/version.txt": {
+      "sha256": "a414e798bd639f7f5b88d031d7e19639bb0742fba835ac4bad8191ab0bd60758",
+      "bytes": 20
     }
   },
   "additions": [
@@ -1116,6 +1144,19 @@
         "outputs/ragas_judge_2026-10-23/judged_stage1.jsonl",
         "outputs/ragas_judge_2026-10-23/stage1_agreement.json",
         "reports/ragas_judge_stage1_2026-10-23.md"
+      ]
+    },
+    {
+      "label": "vecadvisor_check_2026-10-30 (Amendment 9 D4)",
+      "added_utc": "2026-10-30T05:42:19.805758+00:00",
+      "paths": [
+        "outputs/vecadvisor_check_2026-10-30/analyze_hm_clothes_100.json",
+        "outputs/vecadvisor_check_2026-10-30/pip_freeze.txt",
+        "outputs/vecadvisor_check_2026-10-30/query_vectors_0_19.jsonl",
+        "outputs/vecadvisor_check_2026-10-30/recommend_expression_vector_crash.txt",
+        "outputs/vecadvisor_check_2026-10-30/recommend_hm_clothes_100_idx3.json",
+        "outputs/vecadvisor_check_2026-10-30/recommend_hm_clothes_100_lo3.json",
+        "outputs/vecadvisor_check_2026-10-30/version.txt"
       ]
     }
   ]

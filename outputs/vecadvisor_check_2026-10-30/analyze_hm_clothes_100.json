@@ -1,0 +1,185 @@
+{
+  "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+  "table": "public.hm_clothes_100",
+  "rows": 105100,
+  "pages": 1351,
+  "vector_dim": 2048,
+  "catalog_snapshot": {
+    "stats_fingerprint": "3eb34bdf8a8efedada269faa",
+    "index_fingerprint": "7e6015961f0e196d9db697dc",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "integer",
+      "has_stats": true,
+      "n_distinct": -1.0
+    },
+    {
+      "name": "vector_id",
+      "type": "integer",
+      "has_stats": true,
+      "n_distinct": -1.0
+    },
+    {
+      "name": "index_group_name",
+      "type": "character varying",
+      "has_stats": true,
+      "n_distinct": 5.0
+    },
+    {
+      "name": "product_type_name",
+      "type": "character varying",
+      "has_stats": true,
+      "n_distinct": 115.0
+    },
+    {
+      "name": "garment_group_name",
+      "type": "character varying",
+      "has_stats": true,
+      "n_distinct": 21.0
+    },
+    {
+      "name": "perceived_colour_master_name",
+      "type": "character varying",
+      "has_stats": true,
+      "n_distinct": 19.0
+    },
+    {
+      "name": "graphical_appearance_name",
+      "type": "character varying",
+      "has_stats": true,
+      "n_distinct": 30.0
+    },
+    {
+      "name": "embedding",
+      "type": "vector",
+      "has_stats": true,
+      "n_distinct": -1.0
+    }
+  ],
+  "indexes": [
+    {
+      "name": "hm_clothes_100_embedding_idx",
+      "method": "hnsw",
+      "columns": [
+        "(embedding::halfvec(2048))"
+      ],
+      "opclass": "halfvec_cosine_ops",
+      "partial": false,
+      "predicate": null,
+      "m": 16,
+      "ef_construction": 64,
+      "lists": null
+    },
+    {
+      "name": "hm_clothes_100_garment_group_name_idx",
+      "method": "btree",
+      "columns": [
+        "garment_group_name"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "hm_clothes_100_graphical_appearance_name_idx",
+      "method": "btree",
+      "columns": [
+        "graphical_appearance_name"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "hm_clothes_100_index_group_name_idx",
+      "method": "btree",
+      "columns": [
+        "index_group_name"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "hm_clothes_100_perceived_colour_master_name_idx",
+      "method": "btree",
+      "columns": [
+        "perceived_colour_master_name"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "hm_clothes_100_pkey",
+      "method": "btree",
+      "columns": [
+        "id"
+      ],
+      "opclass": "int4_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "hm_clothes_100_product_type_name_idx",
+      "method": "btree",
+      "columns": [
+        "product_type_name"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    }
+  ],
+  "extended_stats": [],
+  "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"hm_clothes_100\";",
+    "notes": [
+      "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+      "run ANALYZE before trusting advisor cost estimates"
+    ]
+  },
+  "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+      "pgvector iterative scan GUCs are available"
+    ]
+  }
+}

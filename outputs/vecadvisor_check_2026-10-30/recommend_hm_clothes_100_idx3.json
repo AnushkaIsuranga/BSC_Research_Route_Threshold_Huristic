@@ -1,0 +1,184 @@
+{
+  "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+  "table": "public.hm_clothes_100",
+  "vector": "embedding",
+  "vector_dim": 2048,
+  "catalog_snapshot": {
+    "stats_fingerprint": "3eb34bdf8a8efedada269faa",
+    "index_fingerprint": "7e6015961f0e196d9db697dc",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+  },
+  "filter": "graphical_appearance_name = 'Solid'",
+  "predicates": [
+    {
+      "column": "graphical_appearance_name",
+      "kind": "eq",
+      "values": [
+        "Solid"
+      ],
+      "is_literal": true
+    }
+  ],
+  "selectivity": {
+    "relation_name": "public.hm_clothes_100",
+    "advisor_selectivity": 0.47193334,
+    "postgres_selectivity": 0.4719314938154139,
+    "advisor_rows": 49600.194034,
+    "postgres_plan_rows": 49600.0,
+    "absolute_delta": 1.8461845860962e-06,
+    "ratio": 0.999996088039497,
+    "plan_node_type": "Bitmap Heap Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+      "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+  },
+  "statistics_suggestions": [],
+  "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"hm_clothes_100\";",
+    "notes": [
+      "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+      "run ANALYZE before trusting advisor cost estimates"
+    ]
+  },
+  "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+      "pgvector iterative scan GUCs are available"
+    ]
+  },
+  "local_selectivity": null,
+  "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+  },
+  "plan": {
+    "root_node_type": "Bitmap Heap Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"hm_clothes_100\" WHERE graphical_appearance_name = 'Solid'",
+    "observed_vector_query": {
+      "strategy": "exact",
+      "reason": "PostgreSQL did not choose a vector index; it will filter then sort by distance.",
+      "root_node_type": "Limit",
+      "scan_node_type": "Bitmap Heap Scan",
+      "index_name": null,
+      "full_query_sql": "SELECT * FROM \"public\".\"hm_clothes_100\" WHERE graphical_appearance_name = 'Solid' ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+  },
+  "query_vectors": {
+    "source": "file:outputs\\vecadvisor_check_2026-10-30\\query_vectors_0_19.jsonl",
+    "count": 20,
+    "max_query_vectors": 64
+  },
+  "limit": 10,
+  "probe_rows": 200,
+  "ef_search": 40,
+  "recall_target": 0.9,
+  "calibration": {
+    "source": "default",
+    "profile": {
+      "version": 1,
+      "dataset_id": "mvp1-default",
+      "hardware_id": "uncalibrated",
+      "index_method": "hnsw",
+      "c_d": 0.01,
+      "c_scan": 0.004,
+      "c_h": 2.0,
+      "delta_strict": 0.2,
+      "recall_curve": [
+        [
+          40,
+          0.9
+        ],
+        [
+          80,
+          0.95
+        ],
+        [
+          160,
+          0.98
+        ]
+      ]
+    }
+  },
+  "recommendation": {
+    "verdict": "Use exact filtered scan; no HNSW or IVFFlat index exists on the vector column.",
+    "s_global": 0.47193334,
+    "s_local": 0.47193334,
+    "rho": 0.0,
+    "planner_would_pick": "exact",
+    "decision": {
+      "recommended_strategy": "exact",
+      "planner_strategy": "exact",
+      "planner_mismatch": false,
+      "selectivity_source": "global_selectivity_fallback",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "viable_candidates": 1,
+      "rejected_candidates": 0,
+      "confidence": 0.65,
+      "confidence_level": "medium",
+      "estimated_latency_ms": 1.3534758287696362,
+      "estimated_recall": 1.0,
+      "uses_index": null,
+      "requires_new_object": null,
+      "runner_up": null,
+      "why": [
+        "exact is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+        "Local selectivity was not measured; global selectivity was used as fallback",
+        "no runner-up candidate is available"
+      ]
+    },
+    "ranked": [
+      {
+        "strategy": "exact",
+        "plan": {
+          "ef_search": null,
+          "uses_index": null,
+          "requires_new_object": null,
+          "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 10."
+        },
+        "estimate": {
+          "est_latency_us": 1353.4758287696363,
+          "est_recall": 1.0,
+          "est_returns_k": true,
+          "confidence": 0.65,
+          "notes": [
+            "exact over ~49600 filtered rows",
+            "exact is the recall-safe fallback",
+            "uses default calibration constants"
+          ]
+        }
+      }
+    ]
+  },
+  "notes": [
+    "representative query vector source: file:outputs\\vecadvisor_check_2026-10-30\\query_vectors_0_19.jsonl",
+    "local selectivity probe skipped: local probe requires an hnsw or ivfflat index on 'embedding'",
+    "recommendation uses global selectivity as a low-confidence fallback",
+    "verify that PostgreSQL can use an hnsw or ivfflat index for the probe"
+  ]
+}

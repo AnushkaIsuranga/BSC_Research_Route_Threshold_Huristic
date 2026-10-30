@@ -1,0 +1,33 @@
++--------------------------------------------------------------------------------- Traceback (most recent call last) ---------------------------------------------------------------------------------+
+| C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\.venv-vecadvisor\Lib\site-packages\vecadvisor\cli.py:541 in recommend_command                                                  |
+|                                                                                                                                                                                                     |
+|    538         load_calibration_profile(calibration) if calibration is not None else DEFAULT_CALIBRATION                                                                                            |
+|    539     )                                                                                                                                                                                        |
+|    540     with connect(dsn) as conn:                                                                                                                                                               |
+| >  541         stats = introspect_table(conn, table, vector_column=vector)                                                                                                                          |
+|    542         capabilities = load_pg_capabilities(conn)                                                                                                                                            |
+|    543         stats_health = assess_stats_health(stats)                                                                                                                                            |
+|    544         query_spec = query_spec_from_filter(                                                                                                                                                 |
+|                                                                                                                                                                                                     |
+| C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\.venv-vecadvisor\Lib\site-packages\vecadvisor\introspect.py:36 in introspect_table                                             |
+|                                                                                                                                                                                                     |
+|    33     indexes = _load_indexes(conn, rel["oid"])                                                                                                                                                 |
+|    34     extended_stats = _load_extended_stats(conn, rel["oid"])                                                                                                                                   |
+|    35     partitioned_by = _load_partition_keys(conn, rel["oid"])                                                                                                                                   |
+| >  36     vector_dim = _select_vector_dim(columns, vector_column)                                                                                                                                   |
+|    37     stats_fingerprint = _stable_hash(                                                                                                                                                         |
+|    38         _stats_fingerprint_payload(                                                                                                                                                           |
+|    39             rel=rel,                                                                                                                                                                          |
+|                                                                                                                                                                                                     |
+| C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\.venv-vecadvisor\Lib\site-packages\vecadvisor\introspect.py:249 in _select_vector_dim                                          |
+|                                                                                                                                                                                                     |
+|   246         for column in vector_columns:                                                                                                                                                         |
+|   247             if column.name == vector_column:                                                                                                                                                  |
+|   248                 return max(0, column.atttypmod)                                                                                                                                               |
+| > 249         raise IntrospectionError(f"could not resolve vector column: {vector_column}")                                                                                                         |
+|   250     if not vector_columns:                                                                                                                                                                    |
+|   251         return 0                                                                                                                                                                              |
+|   252     return max(0, vector_columns[0].atttypmod)                                                                                                                                                |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+IntrospectionError: could not resolve vector column: embedding::halfvec(2048)
+exit_code=1
