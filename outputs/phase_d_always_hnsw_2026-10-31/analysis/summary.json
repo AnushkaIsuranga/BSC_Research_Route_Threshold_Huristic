@@ -1,0 +1,356 @@
+{
+  "drift": {
+    "same_correct": 48,
+    "same_raw_answer": 35,
+    "same_parsed_answer": 42,
+    "same_retrieved_ids": 50,
+    "correct_new": 34,
+    "correct_stored_pass1": 36,
+    "n": 50,
+    "disagree_correct": 2,
+    "switch_rule": "> 5 of 50 correctness labels differ",
+    "switched_to_drift_reference": false,
+    "reference_for_policy_v2": "stored_policy_v2"
+  },
+  "arms": {
+    "always_hnsw": {
+      "n_rows": 250,
+      "accuracy": 0.52,
+      "accuracy_strict": 0.464,
+      "rows_returned": {
+        "mean": 5.32,
+        "median": 5.0,
+        "min": 0,
+        "max": 15,
+        "lt15": 245,
+        "eq0": 10,
+        "hist": {
+          "0": 10,
+          "1": 30,
+          "2": 25,
+          "3": 25,
+          "4": 20,
+          "5": 25,
+          "6": 25,
+          "7": 25,
+          "8": 20,
+          "9": 20,
+          "10": 5,
+          "11": 5,
+          "12": 5,
+          "13": 5,
+          "15": 5
+        }
+      },
+      "gold_passage_hit_rate": 0.42,
+      "classes": {
+        "correct": 130,
+        "abstain_or_parse_fail": 2,
+        "wrong_ungrounded": 82,
+        "wrong_grounded": 36
+      },
+      "correct_ungrounded": 61,
+      "total_ms_median": 3857.8032499935944,
+      "db_ms_median": 19.789899997704197,
+      "generation_ms_median": 3837.1726000041235,
+      "cost_usd": 0.48712499999999975,
+      "pass1_accuracy": 0.48
+    },
+    "policy_v2_drift_reference": {
+      "n_rows": 50,
+      "accuracy": 0.68,
+      "accuracy_strict": 0.56,
+      "rows_returned": {
+        "mean": 14.82,
+        "median": 15.0,
+        "min": 10,
+        "max": 15,
+        "lt15": 2,
+        "eq0": 0,
+        "hist": {
+          "10": 1,
+          "11": 1,
+          "15": 48
+        }
+      },
+      "gold_passage_hit_rate": 0.66,
+      "classes": {
+        "correct": 34,
+        "abstain_or_parse_fail": 1,
+        "wrong_ungrounded": 8,
+        "wrong_grounded": 7
+      },
+      "correct_ungrounded": 9,
+      "total_ms_median": 2817.3906999945757,
+      "db_ms_median": 41.66914999950677,
+      "generation_ms_median": 2746.2662999969325,
+      "cost_usd": 0.08206050000000001,
+      "pass1_accuracy": 0.68
+    },
+    "policy_v2_stored": {
+      "n_rows": 250,
+      "accuracy": 0.704,
+      "accuracy_strict": 0.612,
+      "rows_returned": {
+        "mean": 14.82,
+        "median": 15.0,
+        "min": 10,
+        "max": 15,
+        "lt15": 10,
+        "eq0": 0,
+        "hist": {
+          "10": 5,
+          "11": 5,
+          "15": 240
+        }
+      },
+      "gold_passage_hit_rate": 0.66,
+      "classes": {
+        "correct": 176,
+        "abstain_or_parse_fail": 6,
+        "wrong_ungrounded": 35,
+        "wrong_grounded": 33
+      },
+      "correct_ungrounded": 45,
+      "total_ms_median": 2296.0027500012075,
+      "db_ms_median": 11.893650000274647,
+      "generation_ms_median": 2282.758350000222,
+      "cost_usd": 0.37864124999999976,
+      "pass1_accuracy": 0.72
+    },
+    "naive_llm_stored": {
+      "n_rows": 250,
+      "accuracy": 0.632,
+      "accuracy_strict": 0.548,
+      "rows_returned": {
+        "mean": 10.472,
+        "median": 15.0,
+        "min": 0,
+        "max": 15,
+        "lt15": 118,
+        "eq0": 10,
+        "hist": {
+          "0": 10,
+          "1": 10,
+          "2": 5,
+          "3": 20,
+          "4": 5,
+          "5": 15,
+          "6": 9,
+          "7": 11,
+          "8": 5,
+          "9": 8,
+          "10": 10,
+          "11": 5,
+          "13": 5,
+          "15": 132
+        }
+      },
+      "gold_passage_hit_rate": 0.592,
+      "classes": {
+        "correct": 158,
+        "abstain_or_parse_fail": 5,
+        "wrong_ungrounded": 52,
+        "wrong_grounded": 35
+      },
+      "correct_ungrounded": 47,
+      "total_ms_median": 4273.722200003249,
+      "db_ms_median": 11.78779999827384,
+      "generation_ms_median": 2341.79315000074,
+      "cost_usd": 0.46974450000000023,
+      "pass1_accuracy": 0.64,
+      "routes": {
+        "post-filter": 108,
+        "pre-filter": 142
+      }
+    }
+  },
+  "comparisons": {
+    "always_hnsw_vs_stored_policy_v2_pass1": {
+      "n": 50,
+      "acc_X": 0.48,
+      "acc_Y": 0.72,
+      "b_X_only": 0,
+      "c_Y_only": 12,
+      "mcnemar_exact_p": 0.00048828125,
+      "diff": -0.24,
+      "ci95": [
+        -0.3488949620172874,
+        -0.11842634996673078
+      ]
+    },
+    "always_hnsw_vs_stored_policy_v2_pass1_strict": {
+      "n": 50,
+      "acc_X": 0.44,
+      "acc_Y": 0.62,
+      "b_X_only": 3,
+      "c_Y_only": 12,
+      "mcnemar_exact_p": 0.03515625,
+      "diff": -0.18,
+      "ci95": [
+        -0.3117076156833981,
+        -0.0348896458022194
+      ]
+    },
+    "always_hnsw_vs_stored_naive_llm_pass1": {
+      "n": 50,
+      "acc_X": 0.48,
+      "acc_Y": 0.64,
+      "b_X_only": 0,
+      "c_Y_only": 8,
+      "mcnemar_exact_p": 0.0078125,
+      "diff": -0.16000000000000003,
+      "ci95": [
+        -0.2545075120796392,
+        -0.057723612364443816
+      ]
+    },
+    "always_hnsw_vs_stored_naive_llm_pass1_strict": {
+      "n": 50,
+      "acc_X": 0.44,
+      "acc_Y": 0.56,
+      "b_X_only": 2,
+      "c_Y_only": 8,
+      "mcnemar_exact_p": 0.109375,
+      "diff": -0.12000000000000005,
+      "ci95": [
+        -0.23141900338522614,
+        -0.001150304788073056
+      ]
+    },
+    "always_hnsw_vs_stored_naive_llm_pooled": {
+      "n_queries": 50,
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean_accuracy_X": 0.52,
+      "mean_accuracy_Y": 0.632,
+      "pooled_diff_X_minus_Y": -0.11199999999999999,
+      "pooled_diff_ci95": [
+        -0.19999999999999996,
+        -0.04
+      ],
+      "ci_method": "per-query mean correctness over passes [1, 2, 3, 4, 5]; paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    },
+    "always_hnsw_vs_stored_policy_v2_pooled": {
+      "n_queries": 50,
+      "passes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mean_accuracy_X": 0.52,
+      "mean_accuracy_Y": 0.7040000000000001,
+      "pooled_diff_X_minus_Y": -0.184,
+      "pooled_diff_ci95": [
+        -0.28800000000000003,
+        -0.08800000000000001
+      ],
+      "ci_method": "per-query mean correctness over passes [1, 2, 3, 4, 5]; paired bootstrap over queries, percentile, 10000 resamples, seed 20261012"
+    }
+  },
+  "zero_row_questions": [
+    "ECL/2016/page_52.pdf-3",
+    "MRO/2004/page_125.pdf-1"
+  ],
+  "zero_row_answers": [
+    {
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "pass": 1,
+      "gold": "9.2%",
+      "answer": "17.1%",
+      "correct": 0
+    },
+    {
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "pass": 2,
+      "gold": "9.2%",
+      "answer": "14.1%",
+      "correct": 0
+    },
+    {
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "pass": 3,
+      "gold": "9.2%",
+      "answer": "29.7%",
+      "correct": 0
+    },
+    {
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "pass": 4,
+      "gold": "9.2%",
+      "answer": "20%",
+      "correct": 0
+    },
+    {
+      "query_id": "ECL/2016/page_52.pdf-3",
+      "pass": 5,
+      "gold": "9.2%",
+      "answer": "14%",
+      "correct": 0
+    },
+    {
+      "query_id": "MRO/2004/page_125.pdf-1",
+      "pass": 1,
+      "gold": "5970",
+      "answer": "$7742.5",
+      "correct": 0
+    },
+    {
+      "query_id": "MRO/2004/page_125.pdf-1",
+      "pass": 2,
+      "gold": "5970",
+      "answer": "0",
+      "correct": 0
+    },
+    {
+      "query_id": "MRO/2004/page_125.pdf-1",
+      "pass": 3,
+      "gold": "5970",
+      "answer": "13",
+      "correct": 0
+    },
+    {
+      "query_id": "MRO/2004/page_125.pdf-1",
+      "pass": 4,
+      "gold": "5970",
+      "answer": "$12.5",
+      "correct": 0
+    },
+    {
+      "query_id": "MRO/2004/page_125.pdf-1",
+      "pass": 5,
+      "gold": "5970",
+      "answer": "0",
+      "correct": 0
+    }
+  ],
+  "questions_with_median_rows_lt15": 49,
+  "always_hnsw_runs_consistency": {
+    "passes": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_queries": 50,
+    "correct_per_pass": {
+      "1": 24,
+      "2": 27,
+      "3": 26,
+      "4": 26,
+      "5": 27
+    },
+    "same_answer_all_passes": 35,
+    "same_route_all_passes": 50,
+    "same_correctness_all_passes": 46
+  },
+  "cost_usd_total_run": 0.5691854999999999
+}

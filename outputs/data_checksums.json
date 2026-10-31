@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 268,
+  "n_files": 270,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1074,6 +1074,14 @@
     "outputs/phase_d_always_hnsw_2026-10-31/run_meta.json": {
       "sha256": "6bf7253f865a544c30949a67e5c0a49a073d340574441116bf3e2cda14b7bef3",
       "bytes": 30923
+    },
+    "outputs/phase_d_always_hnsw_2026-10-31/analysis/summary.json": {
+      "sha256": "bf655a4a62ac0d9f54bd66a44c086572889209d597e185239e2eb6cb260a5fb2",
+      "bytes": 8565
+    },
+    "outputs/phase_d_always_hnsw_2026-10-31/analysis/classes.csv": {
+      "sha256": "871ac541c3eebf40f50d88a1a5b1db19cc6c61613690377426a4108c84ac19e7",
+      "bytes": 125952
     }
   },
   "additions": [
@@ -1375,6 +1383,14 @@
         "outputs/phase_d_always_hnsw_2026-10-31/results.csv",
         "outputs/phase_d_always_hnsw_2026-10-31/results.jsonl",
         "outputs/phase_d_always_hnsw_2026-10-31/run_meta.json"
+      ]
+    },
+    {
+      "label": "phase_d_always_hnsw_analysis_2026-10-31",
+      "added_utc": "2026-10-31T09:17:02.381409+00:00",
+      "paths": [
+        "outputs/phase_d_always_hnsw_2026-10-31/analysis/classes.csv",
+        "outputs/phase_d_always_hnsw_2026-10-31/analysis/summary.json"
       ]
     }
   ]
