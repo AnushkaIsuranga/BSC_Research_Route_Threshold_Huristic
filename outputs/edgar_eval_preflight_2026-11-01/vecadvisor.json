@@ -1,0 +1,36 @@
+{
+ "import_ok": true,
+ "version": "0.1.0a6",
+ "import_stderr": "",
+ "analyze_rows": 158278,
+ "vector_dim": 1024,
+ "sees_embedding_idx": true,
+ "embedding_idx": [
+  {
+   "name": "edgar_chunks_embedding_idx",
+   "method": "hnsw",
+   "columns": [
+    "embedding"
+   ],
+   "opclass": "vector_l2_ops",
+   "partial": false,
+   "predicate": null,
+   "m": 16,
+   "ef_construction": 64,
+   "lists": null
+  }
+ ],
+ "stats_health": {
+  "status": "fresh",
+  "stale": false,
+  "last_analyze_at": "2026-10-31T21:41:51.672410+00:00",
+  "last_autoanalyze_at": null,
+  "n_live_tup": 158278,
+  "n_mod_since_analyze": 0,
+  "modification_ratio": 0.0,
+  "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+  "notes": [
+   "planner statistics look fresh enough for advisor estimates"
+  ]
+ }
+}

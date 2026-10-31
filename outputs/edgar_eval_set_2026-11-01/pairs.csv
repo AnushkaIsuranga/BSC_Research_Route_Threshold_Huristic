@@ -1,0 +1,161 @@
+pair_id,qid,breadth,filter,n_match,selectivity,gold_ids,drafted_breadth,type
+edgar_q001|cik+year+section,edgar_q001,cik+year+section,"[[""cik"", [""867665""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",41,0.00025898880663011343,[38521],cik+year+section,lookup
+edgar_q001|cik+year,edgar_q001,cik+year,"[[""cik"", [""867665""]], [""fiscal_year"", [2018]]]",116,0.0007327488187583698,[38521],cik+year+section,lookup
+edgar_q001|year+section,edgar_q001,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[38521],cik+year+section,lookup
+edgar_q001|section,edgar_q001,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[38521],cik+year+section,lookup
+edgar_q003|cik+year+section,edgar_q003,cik+year+section,"[[""cik"", [""906345""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",38,0.00024003840614498319,[46765],cik+year+section,lookup
+edgar_q003|cik+year,edgar_q003,cik+year,"[[""cik"", [""906345""]], [""fiscal_year"", [2018]]]",63,0.0003979584101877353,[46765],cik+year+section,lookup
+edgar_q003|year+section,edgar_q003,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[46765],cik+year+section,lookup
+edgar_q003|section,edgar_q003,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[46765],cik+year+section,lookup
+edgar_q004|cik+year+section,edgar_q004,cik+year+section,"[[""cik"", [""1414043""]], [""fiscal_year"", [2020]], [""section"", [""1""]]]",8,5.053440129368067e-05,[98420],cik+year+section,lookup
+edgar_q004|cik+year,edgar_q004,cik+year,"[[""cik"", [""1414043""]], [""fiscal_year"", [2020]]]",122,0.0007706496197286303,[98420],cik+year+section,lookup
+edgar_q004|year+section,edgar_q004,year+section,"[[""fiscal_year"", [2020]], [""section"", [""1""]]]",9139,0.05772923667786846,[98420],cik+year+section,lookup
+edgar_q004|section,edgar_q004,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[98420],cik+year+section,lookup
+edgar_q006|cik+year+section,edgar_q006,cik+year+section,"[[""cik"", [""1347858""]], [""fiscal_year"", [2019]], [""section"", [""7""]]]",27,0.00017055360436617228,[89930],cik+year+section,lookup
+edgar_q006|cik+year,edgar_q006,cik+year,"[[""cik"", [""1347858""]], [""fiscal_year"", [2019]]]",98,0.0006190464158475883,[89930],cik+year+section,lookup
+edgar_q006|year+section,edgar_q006,year+section,"[[""fiscal_year"", [2019]], [""section"", [""7""]]]",12183,0.07695757637011395,[89930],cik+year+section,lookup
+edgar_q006|section,edgar_q006,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[89930],cik+year+section,lookup
+edgar_q007|cik+year+section,edgar_q007,cik+year+section,"[[""cik"", [""54476""]], [""fiscal_year"", [2020]], [""section"", [""8""]]]",100,0.0006316800161710085,[9253],cik+year+section,lookup
+edgar_q007|cik+year,edgar_q007,cik+year,"[[""cik"", [""54476""]], [""fiscal_year"", [2020]]]",199,0.0012570432321803067,[9253],cik+year+section,lookup
+edgar_q007|year+section,edgar_q007,year+section,"[[""fiscal_year"", [2020]], [""section"", [""8""]]]",17058,0.10775197715845061,[9253],cik+year+section,lookup
+edgar_q007|section,edgar_q007,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[9253],cik+year+section,lookup
+edgar_q008|cik+year+section,edgar_q008,cik+year+section,"[[""cik"", [""1158463""]], [""fiscal_year"", [2020]], [""section"", [""1""]]]",36,0.00022740480582156302,[73379],cik+year+section,lookup
+edgar_q008|cik+year,edgar_q008,cik+year,"[[""cik"", [""1158463""]], [""fiscal_year"", [2020]]]",197,0.0012444096318568866,[73379],cik+year+section,lookup
+edgar_q008|year+section,edgar_q008,year+section,"[[""fiscal_year"", [2020]], [""section"", [""1""]]]",9139,0.05772923667786846,[73379],cik+year+section,lookup
+edgar_q008|section,edgar_q008,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[73379],cik+year+section,lookup
+edgar_q009|cik+year+section,edgar_q009,cik+year+section,"[[""cik"", [""1401564""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",58,0.0003663744093791849,[95123],cik+year+section,lookup
+edgar_q009|cik+year,edgar_q009,cik+year,"[[""cik"", [""1401564""]], [""fiscal_year"", [2018]]]",200,0.001263360032342017,[95123],cik+year+section,lookup
+edgar_q009|year+section,edgar_q009,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[95123],cik+year+section,lookup
+edgar_q009|section,edgar_q009,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[95123],cik+year+section,lookup
+edgar_q010|cik+year+section,edgar_q010,cik+year+section,"[[""cik"", [""40730""]], [""fiscal_year"", [2018]], [""section"", [""1""]]]",66,0.00041690881067286555,[8238],cik+year+section,lookup
+edgar_q010|cik+year,edgar_q010,cik+year,"[[""cik"", [""40730""]], [""fiscal_year"", [2018]]]",173,0.0010928064279758446,[8238],cik+year+section,lookup
+edgar_q010|year+section,edgar_q010,year+section,"[[""fiscal_year"", [2018]], [""section"", [""1""]]]",9194,0.05807666068676251,[8238],cik+year+section,lookup
+edgar_q010|section,edgar_q010,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[8238],cik+year+section,lookup
+edgar_q011|cik+year+section,edgar_q011,cik+year+section,"[[""cik"", [""896622""]], [""fiscal_year"", [2019]], [""section"", [""1""]]]",19,0.00012001920307249159,[44897],cik+year+section,calculation
+edgar_q011|cik+year,edgar_q011,cik+year,"[[""cik"", [""896622""]], [""fiscal_year"", [2019]]]",131,0.0008275008211840211,[44897],cik+year+section,calculation
+edgar_q011|year+section,edgar_q011,year+section,"[[""fiscal_year"", [2019]], [""section"", [""1""]]]",9344,0.059024180711019024,[44897],cik+year+section,calculation
+edgar_q011|section,edgar_q011,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[44897],cik+year+section,calculation
+edgar_q012|cik+year+section,edgar_q012,cik+year+section,"[[""cik"", [""914208""]], [""fiscal_year"", [2020]], [""section"", [""7""]]]",74,0.0004674432119665462,[49232],cik+year+section,lookup
+edgar_q012|cik+year,edgar_q012,cik+year,"[[""cik"", [""914208""]], [""fiscal_year"", [2020]]]",212,0.001339161634282538,[49232],cik+year+section,lookup
+edgar_q012|year+section,edgar_q012,year+section,"[[""fiscal_year"", [2020]], [""section"", [""7""]]]",12899,0.08148040528589838,[49232],cik+year+section,lookup
+edgar_q012|section,edgar_q012,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[49232],cik+year+section,lookup
+edgar_q013|cik+year+section,edgar_q013,cik+year+section,"[[""cik"", [""1065696""]], [""fiscal_year"", [2019]], [""section"", [""7""]]]",61,0.00038532480986431514,[63160],cik+year+section,lookup
+edgar_q013|cik+year,edgar_q013,cik+year,"[[""cik"", [""1065696""]], [""fiscal_year"", [2019]]]",222,0.0014023296358996386,[63160],cik+year+section,lookup
+edgar_q013|year+section,edgar_q013,year+section,"[[""fiscal_year"", [2019]], [""section"", [""7""]]]",12183,0.07695757637011395,[63160],cik+year+section,lookup
+edgar_q013|section,edgar_q013,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[63160],cik+year+section,lookup
+edgar_q014|cik+year+section,edgar_q014,cik+year+section,"[[""cik"", [""1422768""]], [""fiscal_year"", [2019]], [""section"", [""8""]]]",26,0.0001642368042044622,[99268],cik+year+section,lookup
+edgar_q014|cik+year,edgar_q014,cik+year,"[[""cik"", [""1422768""]], [""fiscal_year"", [2019]]]",57,0.0003600576092174748,[99268],cik+year+section,lookup
+edgar_q014|year+section,edgar_q014,year+section,"[[""fiscal_year"", [2019]], [""section"", [""8""]]]",15533,0.09811885691184273,[99268],cik+year+section,lookup
+edgar_q014|section,edgar_q014,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[99268],cik+year+section,lookup
+edgar_q015|cik+year+section,edgar_q015,cik+year+section,"[[""cik"", [""1220754""]], [""fiscal_year"", [2019]], [""section"", [""8""]]]",75,0.0004737600121282563,[78619],cik+year+section,lookup
+edgar_q015|cik+year,edgar_q015,cik+year,"[[""cik"", [""1220754""]], [""fiscal_year"", [2019]]]",178,0.001124390428784395,[78619],cik+year+section,lookup
+edgar_q015|year+section,edgar_q015,year+section,"[[""fiscal_year"", [2019]], [""section"", [""8""]]]",15533,0.09811885691184273,[78619],cik+year+section,lookup
+edgar_q015|section,edgar_q015,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[78619],cik+year+section,lookup
+edgar_q018|cik+year+section,edgar_q018,cik+year+section,"[[""cik"", [""1326190""]], [""fiscal_year"", [2019]], [""section"", [""8""]]]",55,0.00034742400889405464,[86516],cik+year,lookup
+edgar_q018|cik+year,edgar_q018,cik+year,"[[""cik"", [""1326190""]], [""fiscal_year"", [2019]]]",265,0.0016739520428531722,[86516],cik+year,lookup
+edgar_q018|year+section,edgar_q018,year+section,"[[""fiscal_year"", [2019]], [""section"", [""8""]]]",15533,0.09811885691184273,[86516],cik+year,lookup
+edgar_q018|section,edgar_q018,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[86516],cik+year,lookup
+edgar_q019|cik+year+section,edgar_q019,cik+year+section,"[[""cik"", [""91928""]], [""fiscal_year"", [2019]], [""section"", [""8""]]]",152,0.0009601536245799327,[13456],cik+year,lookup
+edgar_q019|cik+year,edgar_q019,cik+year,"[[""cik"", [""91928""]], [""fiscal_year"", [2019]]]",258,0.0016297344417212018,[13456],cik+year,lookup
+edgar_q019|year+section,edgar_q019,year+section,"[[""fiscal_year"", [2019]], [""section"", [""8""]]]",15533,0.09811885691184273,[13456],cik+year,lookup
+edgar_q019|section,edgar_q019,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[13456],cik+year,lookup
+edgar_q022|cik+year+section,edgar_q022,cik+year+section,"[[""cik"", [""1610950""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",41,0.00025898880663011343,[138199],cik+year,lookup
+edgar_q022|cik+year,edgar_q022,cik+year,"[[""cik"", [""1610950""]], [""fiscal_year"", [2018]]]",251,0.0015855168405892312,[138199],cik+year,lookup
+edgar_q022|year+section,edgar_q022,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[138199],cik+year,lookup
+edgar_q022|section,edgar_q022,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[138199],cik+year,lookup
+edgar_q023|cik+year+section,edgar_q023,cik+year+section,"[[""cik"", [""31235""]], [""fiscal_year"", [2018]], [""section"", [""8""]]]",91,0.0005748288147156177,[7318],cik+year,lookup
+edgar_q023|cik+year,edgar_q023,cik+year,"[[""cik"", [""31235""]], [""fiscal_year"", [2018]]]",187,0.0011812416302397857,[7318],cik+year,lookup
+edgar_q023|year+section,edgar_q023,year+section,"[[""fiscal_year"", [2018]], [""section"", [""8""]]]",14649,0.09253480556889103,[7318],cik+year,lookup
+edgar_q023|section,edgar_q023,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[7318],cik+year,lookup
+edgar_q026|cik+year+section,edgar_q026,cik+year+section,"[[""cik"", [""1477009""]], [""fiscal_year"", [2018]], [""section"", [""8""]]]",35,0.00022108800565985294,[111741],cik+year,lookup
+edgar_q026|cik+year,edgar_q026,cik+year,"[[""cik"", [""1477009""]], [""fiscal_year"", [2018]]]",90,0.0005685120145539075,[111741],cik+year,lookup
+edgar_q026|year+section,edgar_q026,year+section,"[[""fiscal_year"", [2018]], [""section"", [""8""]]]",14649,0.09253480556889103,[111741],cik+year,lookup
+edgar_q026|section,edgar_q026,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[111741],cik+year,lookup
+edgar_q027|cik+year+section,edgar_q027,cik+year+section,"[[""cik"", [""887596""]], [""fiscal_year"", [2019]], [""section"", [""1""]]]",4,2.5267200646840336e-05,[43880],cik+year,lookup
+edgar_q027|cik+year,edgar_q027,cik+year,"[[""cik"", [""887596""]], [""fiscal_year"", [2019]]]",51,0.0003221568082472143,[43880],cik+year,lookup
+edgar_q027|year+section,edgar_q027,year+section,"[[""fiscal_year"", [2019]], [""section"", [""1""]]]",9344,0.059024180711019024,[43880],cik+year,lookup
+edgar_q027|section,edgar_q027,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[43880],cik+year,lookup
+edgar_q028|cik+year+section,edgar_q028,cik+year+section,"[[""cik"", [""1320461""]], [""fiscal_year"", [2018]], [""section"", [""8""]]]",67,0.00042322561083457563,[85205],cik+year,lookup
+edgar_q028|cik+year,edgar_q028,cik+year,"[[""cik"", [""1320461""]], [""fiscal_year"", [2018]]]",143,0.0009033024231245421,[85205],cik+year,lookup
+edgar_q028|year+section,edgar_q028,year+section,"[[""fiscal_year"", [2018]], [""section"", [""8""]]]",14649,0.09253480556889103,[85205],cik+year,lookup
+edgar_q028|section,edgar_q028,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[85205],cik+year,lookup
+edgar_q029|cik+year+section,edgar_q029,cik+year+section,"[[""cik"", [""1679688""]], [""fiscal_year"", [2018]], [""section"", [""7A""]]]",5,3.158400080855042e-05,[152093],cik+year,lookup
+edgar_q029|cik+year,edgar_q029,cik+year,"[[""cik"", [""1679688""]], [""fiscal_year"", [2018]]]",199,0.0012570432321803067,[152093],cik+year,lookup
+edgar_q029|year+section,edgar_q029,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7A""]]]",871,0.005501932940849484,[152093],cik+year,lookup
+edgar_q029|section,edgar_q029,section,"[[""section"", [""7A""]]]",2770,0.01749753644793693,[152093],cik+year,lookup
+edgar_q031|cik+year+section,edgar_q031,cik+year+section,"[[""cik"", [""1378946""]], [""fiscal_year"", [2019]], [""section"", [""7""]]]",94,0.0005937792152007479,[93415],year+section,lookup
+edgar_q031|cik+year,edgar_q031,cik+year,"[[""cik"", [""1378946""]], [""fiscal_year"", [2019]]]",142,0.0008969856229628319,[93415],year+section,lookup
+edgar_q031|year+section,edgar_q031,year+section,"[[""fiscal_year"", [2019]], [""section"", [""7""]]]",12183,0.07695757637011395,[93415],year+section,lookup
+edgar_q031|section,edgar_q031,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[93415],year+section,lookup
+edgar_q032|cik+year+section,edgar_q032,cik+year+section,"[[""cik"", [""101295""]], [""fiscal_year"", [2018]], [""section"", [""1""]]]",26,0.0001642368042044622,[15229],year+section,lookup
+edgar_q032|cik+year,edgar_q032,cik+year,"[[""cik"", [""101295""]], [""fiscal_year"", [2018]]]",42,0.0002653056067918235,[15229],year+section,lookup
+edgar_q032|year+section,edgar_q032,year+section,"[[""fiscal_year"", [2018]], [""section"", [""1""]]]",9194,0.05807666068676251,[15229],year+section,lookup
+edgar_q032|section,edgar_q032,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[15229],year+section,lookup
+edgar_q034|cik+year+section,edgar_q034,cik+year+section,"[[""cik"", [""842162""]], [""fiscal_year"", [2019]], [""section"", [""7""]]]",48,0.00030320640776208406,[37100],year+section,lookup
+edgar_q034|cik+year,edgar_q034,cik+year,"[[""cik"", [""842162""]], [""fiscal_year"", [2019]]]",176,0.0011117568284609747,[37100],year+section,lookup
+edgar_q034|year+section,edgar_q034,year+section,"[[""fiscal_year"", [2019]], [""section"", [""7""]]]",12183,0.07695757637011395,[37100],year+section,lookup
+edgar_q034|section,edgar_q034,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[37100],year+section,lookup
+edgar_q036|cik+year+section,edgar_q036,cik+year+section,"[[""cik"", [""831641""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",45,0.00028425600727695376,[34803],year+section,lookup
+edgar_q036|cik+year,edgar_q036,cik+year,"[[""cik"", [""831641""]], [""fiscal_year"", [2018]]]",183,0.0011559744295929454,[34803],year+section,lookup
+edgar_q036|year+section,edgar_q036,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[34803],year+section,lookup
+edgar_q036|section,edgar_q036,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[34803],year+section,lookup
+edgar_q037|cik+year+section,edgar_q037,cik+year+section,"[[""cik"", [""1674910""]], [""fiscal_year"", [2018]], [""section"", [""8""]]]",72,0.00045480961164312604,[150744],year+section,lookup
+edgar_q037|cik+year,edgar_q037,cik+year,"[[""cik"", [""1674910""]], [""fiscal_year"", [2018]]]",183,0.0011559744295929454,[150744],year+section,lookup
+edgar_q037|year+section,edgar_q037,year+section,"[[""fiscal_year"", [2018]], [""section"", [""8""]]]",14649,0.09253480556889103,[150744],year+section,lookup
+edgar_q037|section,edgar_q037,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[150744],year+section,lookup
+edgar_q038|cik+year+section,edgar_q038,cik+year+section,"[[""cik"", [""1063761""]], [""fiscal_year"", [2020]], [""section"", [""8""]]]",96,0.0006064128155241681,[62794],year+section,lookup
+edgar_q038|cik+year,edgar_q038,cik+year,"[[""cik"", [""1063761""]], [""fiscal_year"", [2020]]]",204,0.0012886272329888572,[62794],year+section,lookup
+edgar_q038|year+section,edgar_q038,year+section,"[[""fiscal_year"", [2020]], [""section"", [""8""]]]",17058,0.10775197715845061,[62794],year+section,lookup
+edgar_q038|section,edgar_q038,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[62794],year+section,lookup
+edgar_q039|cik+year+section,edgar_q039,cik+year+section,"[[""cik"", [""1425450""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",25,0.00015792000404275211,[99481],year+section,lookup
+edgar_q039|cik+year,edgar_q039,cik+year,"[[""cik"", [""1425450""]], [""fiscal_year"", [2018]]]",205,0.0012949440331505673,[99481],year+section,lookup
+edgar_q039|year+section,edgar_q039,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[99481],year+section,lookup
+edgar_q039|section,edgar_q039,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[99481],year+section,lookup
+edgar_q040|cik+year+section,edgar_q040,cik+year+section,"[[""cik"", [""759944""]], [""fiscal_year"", [2019]], [""section"", [""8""]]]",84,0.000530611213583647,[29503],year+section,lookup
+edgar_q040|cik+year,edgar_q040,cik+year,"[[""cik"", [""759944""]], [""fiscal_year"", [2019]]]",201,0.001269676832503727,[29503],year+section,lookup
+edgar_q040|year+section,edgar_q040,year+section,"[[""fiscal_year"", [2019]], [""section"", [""8""]]]",15533,0.09811885691184273,[29503],year+section,lookup
+edgar_q040|section,edgar_q040,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[29503],year+section,lookup
+edgar_q041|cik+year+section,edgar_q041,cik+year+section,"[[""cik"", [""1075736""]], [""fiscal_year"", [2018]], [""section"", [""8""]]]",41,0.00025898880663011343,[65820],year+section,lookup
+edgar_q041|cik+year,edgar_q041,cik+year,"[[""cik"", [""1075736""]], [""fiscal_year"", [2018]]]",106,0.000669580817141269,[65820],year+section,lookup
+edgar_q041|year+section,edgar_q041,year+section,"[[""fiscal_year"", [2018]], [""section"", [""8""]]]",14649,0.09253480556889103,[65820],year+section,lookup
+edgar_q041|section,edgar_q041,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[65820],year+section,lookup
+edgar_q044|cik+year+section,edgar_q044,cik+year+section,"[[""cik"", [""6207""]], [""fiscal_year"", [2018]], [""section"", [""1""]]]",8,5.053440129368067e-05,[626],year+section,calculation
+edgar_q044|cik+year,edgar_q044,cik+year,"[[""cik"", [""6207""]], [""fiscal_year"", [2018]]]",85,0.0005369280137453572,[626],year+section,calculation
+edgar_q044|year+section,edgar_q044,year+section,"[[""fiscal_year"", [2018]], [""section"", [""1""]]]",9194,0.05807666068676251,[626],year+section,calculation
+edgar_q044|section,edgar_q044,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[626],year+section,calculation
+edgar_q046|cik+year+section,edgar_q046,cik+year+section,"[[""cik"", [""1045610""]], [""fiscal_year"", [2019]], [""section"", [""7""]]]",33,0.00020845440533643277,[59080],section,lookup
+edgar_q046|cik+year,edgar_q046,cik+year,"[[""cik"", [""1045610""]], [""fiscal_year"", [2019]]]",75,0.0004737600121282563,[59080],section,lookup
+edgar_q046|year+section,edgar_q046,year+section,"[[""fiscal_year"", [2019]], [""section"", [""7""]]]",12183,0.07695757637011395,[59080],section,lookup
+edgar_q046|section,edgar_q046,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[59080],section,lookup
+edgar_q051|cik+year+section,edgar_q051,cik+year+section,"[[""cik"", [""924901""]], [""fiscal_year"", [2018]], [""section"", [""1""]]]",22,0.00013896960355762184,[50084],section,lookup
+edgar_q051|cik+year,edgar_q051,cik+year,"[[""cik"", [""924901""]], [""fiscal_year"", [2018]]]",121,0.0007643328195669201,[50084],section,lookup
+edgar_q051|year+section,edgar_q051,year+section,"[[""fiscal_year"", [2018]], [""section"", [""1""]]]",9194,0.05807666068676251,[50084],section,lookup
+edgar_q051|section,edgar_q051,section,"[[""section"", [""1""]]]",27677,0.17483007807565,[50084],section,lookup
+edgar_q052|cik+year+section,edgar_q052,cik+year+section,"[[""cik"", [""1535955""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",46,0.00029057280743866385,[124614],section,lookup
+edgar_q052|cik+year,edgar_q052,cik+year,"[[""cik"", [""1535955""]], [""fiscal_year"", [2018]]]",224,0.001414963236223059,[124614],section,lookup
+edgar_q052|year+section,edgar_q052,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[124614],section,lookup
+edgar_q052|section,edgar_q052,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[124614],section,lookup
+edgar_q053|cik+year+section,edgar_q053,cik+year+section,"[[""cik"", [""1099132""]], [""fiscal_year"", [2018]], [""section"", [""8""]]]",30,0.00018950400485130253,[69013],section,calculation
+edgar_q053|cik+year,edgar_q053,cik+year,"[[""cik"", [""1099132""]], [""fiscal_year"", [2018]]]",55,0.00034742400889405464,[69013],section,calculation
+edgar_q053|year+section,edgar_q053,year+section,"[[""fiscal_year"", [2018]], [""section"", [""8""]]]",14649,0.09253480556889103,[69013],section,calculation
+edgar_q053|section,edgar_q053,section,"[[""section"", [""8""]]]",47240,0.2984056396391844,[69013],section,calculation
+edgar_q054|cik+year+section,edgar_q054,cik+year+section,"[[""cik"", [""15847""]], [""fiscal_year"", [2018]], [""section"", [""7""]]]",12,7.580160194052102e-05,[3919],section,lookup
+edgar_q054|cik+year,edgar_q054,cik+year,"[[""cik"", [""15847""]], [""fiscal_year"", [2018]]]",40,0.00025267200646840335,[3919],section,lookup
+edgar_q054|year+section,edgar_q054,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7""]]]",13211,0.08345124693635192,[3919],section,lookup
+edgar_q054|section,edgar_q054,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[3919],section,lookup
+edgar_q056|cik+year+section,edgar_q056,cik+year+section,"[[""cik"", [""84112""]], [""fiscal_year"", [2020]], [""section"", [""7""]]]",13,8.21184021022311e-05,[12539],section,lookup
+edgar_q056|cik+year,edgar_q056,cik+year,"[[""cik"", [""84112""]], [""fiscal_year"", [2020]]]",36,0.00022740480582156302,[12539],section,lookup
+edgar_q056|year+section,edgar_q056,year+section,"[[""fiscal_year"", [2020]], [""section"", [""7""]]]",12899,0.08148040528589838,[12539],section,lookup
+edgar_q056|section,edgar_q056,section,"[[""section"", [""7""]]]",38293,0.24188922859236425,[12539],section,lookup
+edgar_q058|cik+year+section,edgar_q058,cik+year+section,"[[""cik"", [""1539894""]], [""fiscal_year"", [2018]], [""section"", [""7A""]]]",5,3.158400080855042e-05,[127615],section,lookup
+edgar_q058|cik+year,edgar_q058,cik+year,"[[""cik"", [""1539894""]], [""fiscal_year"", [2018]]]",195,0.0012317760315334663,[127615],section,lookup
+edgar_q058|year+section,edgar_q058,year+section,"[[""fiscal_year"", [2018]], [""section"", [""7A""]]]",871,0.005501932940849484,[127615],section,lookup
+edgar_q058|section,edgar_q058,section,"[[""section"", [""7A""]]]",2770,0.01749753644793693,[127615],section,lookup
+edgar_q059|cik+year+section,edgar_q059,cik+year+section,"[[""cik"", [""1487712""]], [""fiscal_year"", [2018]], [""section"", [""1A""]]]",54,0.00034110720873234456,[114414],section,lookup
+edgar_q059|cik+year,edgar_q059,cik+year,"[[""cik"", [""1487712""]], [""fiscal_year"", [2018]]]",157,0.0009917376253884833,[114414],section,lookup
+edgar_q059|year+section,edgar_q059,year+section,"[[""fiscal_year"", [2018]], [""section"", [""1A""]]]",13423,0.08479040857063445,[114414],section,lookup
+edgar_q059|section,edgar_q059,section,"[[""section"", [""1A""]]]",42328,0.2673775172448644,[114414],section,lookup
+edgar_q060|cik+year+section,edgar_q060,cik+year+section,"[[""cik"", [""1530249""]], [""fiscal_year"", [2019]], [""section"", [""1A""]]]",39,0.00024635520630669327,[122953],section,lookup
+edgar_q060|cik+year,edgar_q060,cik+year,"[[""cik"", [""1530249""]], [""fiscal_year"", [2019]]]",224,0.001414963236223059,[122953],section,lookup
+edgar_q060|year+section,edgar_q060,year+section,"[[""fiscal_year"", [2019]], [""section"", [""1A""]]]",13859,0.08754453344114006,[122953],section,lookup
+edgar_q060|section,edgar_q060,section,"[[""section"", [""1A""]]]",42328,0.2673775172448644,[122953],section,lookup

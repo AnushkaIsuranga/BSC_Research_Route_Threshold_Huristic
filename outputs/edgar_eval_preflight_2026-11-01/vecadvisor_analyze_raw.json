@@ -1,0 +1,205 @@
+{
+  "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+  "table": "public.edgar_chunks",
+  "rows": 158278,
+  "pages": 38436,
+  "vector_dim": 1024,
+  "catalog_snapshot": {
+    "stats_fingerprint": "6609f9392433e82d47e94bbd",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": "2026-10-31T21:41:51.672410+00:00",
+    "last_autoanalyze_at": null,
+    "n_live_tup": 158278,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+  },
+  "columns": [
+    {
+      "name": "id",
+      "type": "bigint",
+      "has_stats": true,
+      "n_distinct": -1.0
+    },
+    {
+      "name": "cik",
+      "type": "text",
+      "has_stats": true,
+      "n_distinct": 432.0
+    },
+    {
+      "name": "company_name",
+      "type": "text",
+      "has_stats": true,
+      "n_distinct": 165.0
+    },
+    {
+      "name": "fiscal_year",
+      "type": "integer",
+      "has_stats": true,
+      "n_distinct": 3.0
+    },
+    {
+      "name": "section",
+      "type": "text",
+      "has_stats": true,
+      "n_distinct": 5.0
+    },
+    {
+      "name": "chunk_index",
+      "type": "integer",
+      "has_stats": true,
+      "n_distinct": 270.0
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "has_stats": true,
+      "n_distinct": -0.97954863
+    },
+    {
+      "name": "text_hash",
+      "type": "text",
+      "has_stats": true,
+      "n_distinct": -0.94319487
+    },
+    {
+      "name": "embedding",
+      "type": "vector",
+      "has_stats": true,
+      "n_distinct": -1.0
+    }
+  ],
+  "indexes": [
+    {
+      "name": "edgar_chunks_cik_fiscal_year_section_chunk_index_key",
+      "method": "btree",
+      "columns": [
+        "cik",
+        "fiscal_year",
+        "section",
+        "chunk_index"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "edgar_chunks_cik_idx",
+      "method": "btree",
+      "columns": [
+        "cik"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "edgar_chunks_embedding_idx",
+      "method": "hnsw",
+      "columns": [
+        "embedding"
+      ],
+      "opclass": "vector_l2_ops",
+      "partial": false,
+      "predicate": null,
+      "m": 16,
+      "ef_construction": 64,
+      "lists": null
+    },
+    {
+      "name": "edgar_chunks_fiscal_year_idx",
+      "method": "btree",
+      "columns": [
+        "fiscal_year"
+      ],
+      "opclass": "int4_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "edgar_chunks_pkey",
+      "method": "btree",
+      "columns": [
+        "id"
+      ],
+      "opclass": "int8_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    },
+    {
+      "name": "edgar_chunks_section_idx",
+      "method": "btree",
+      "columns": [
+        "section"
+      ],
+      "opclass": "text_ops",
+      "partial": false,
+      "predicate": null,
+      "m": null,
+      "ef_construction": null,
+      "lists": null
+    }
+  ],
+  "extended_stats": [
+    {
+      "name": "edgar_chunks_cik_year_stats",
+      "schema": "public",
+      "columns": [
+        "cik",
+        "fiscal_year"
+      ],
+      "kinds": [
+        "dependencies",
+        "mcv"
+      ]
+    },
+    {
+      "name": "edgar_chunks_year_section_stats",
+      "schema": "public",
+      "columns": [
+        "fiscal_year",
+        "section"
+      ],
+      "kinds": [
+        "dependencies",
+        "mcv"
+      ]
+    }
+  ],
+  "stats_health": {
+    "status": "fresh",
+    "stale": false,
+    "last_analyze_at": "2026-10-31T21:41:51.672410+00:00",
+    "last_autoanalyze_at": null,
+    "n_live_tup": 158278,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+      "planner statistics look fresh enough for advisor estimates"
+    ]
+  },
+  "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+      "pgvector iterative scan GUCs are available"
+    ]
+  }
+}

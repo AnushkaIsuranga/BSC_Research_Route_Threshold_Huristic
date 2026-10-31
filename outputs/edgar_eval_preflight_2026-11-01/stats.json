@@ -1,0 +1,100 @@
+{
+ "table": "edgar_chunks",
+ "command": "VACUUM ANALYZE edgar_chunks;",
+ "before": {
+  "utc": "2026-10-31T21:41:37.582192+00:00",
+  "count_star": 158308,
+  "reltuples": 158555.0,
+  "n_live_tup": 0,
+  "n_dead_tup": 0,
+  "last_analyze": null,
+  "last_autoanalyze": null,
+  "last_vacuum": null,
+  "last_autovacuum": null,
+  "pg_stats": {
+   "cik": {
+    "present": true,
+    "n_distinct": 430.0,
+    "null_frac": 0.0,
+    "n_mcv": 100
+   },
+   "fiscal_year": {
+    "present": true,
+    "n_distinct": 3.0,
+    "null_frac": 0.0,
+    "n_mcv": 3
+   },
+   "section": {
+    "present": true,
+    "n_distinct": 5.0,
+    "null_frac": 0.0,
+    "n_mcv": 5
+   }
+  },
+  "pg_stats_rows_for_all": true,
+  "extended_statistics": [
+   {
+    "name": "edgar_chunks_cik_year_stats",
+    "kinds": "{f,m}",
+    "ndistinct": false,
+    "dependencies": true,
+    "mcv": true
+   },
+   {
+    "name": "edgar_chunks_year_section_stats",
+    "kinds": "{f,m}",
+    "ndistinct": false,
+    "dependencies": false,
+    "mcv": true
+   }
+  ]
+ },
+ "after": {
+  "utc": "2026-10-31T21:41:52.036322+00:00",
+  "count_star": 158308,
+  "reltuples": 158278.0,
+  "n_live_tup": 158278,
+  "n_dead_tup": 0,
+  "last_analyze": "2026-10-31T21:41:51.672410+00:00",
+  "last_autoanalyze": null,
+  "last_vacuum": "2026-10-31T21:41:49.380067+00:00",
+  "last_autovacuum": null,
+  "pg_stats": {
+   "cik": {
+    "present": true,
+    "n_distinct": 432.0,
+    "null_frac": 0.0,
+    "n_mcv": 100
+   },
+   "fiscal_year": {
+    "present": true,
+    "n_distinct": 3.0,
+    "null_frac": 0.0,
+    "n_mcv": 3
+   },
+   "section": {
+    "present": true,
+    "n_distinct": 5.0,
+    "null_frac": 0.0,
+    "n_mcv": 5
+   }
+  },
+  "pg_stats_rows_for_all": true,
+  "extended_statistics": [
+   {
+    "name": "edgar_chunks_cik_year_stats",
+    "kinds": "{f,m}",
+    "ndistinct": false,
+    "dependencies": true,
+    "mcv": true
+   },
+   {
+    "name": "edgar_chunks_year_section_stats",
+    "kinds": "{f,m}",
+    "ndistinct": false,
+    "dependencies": false,
+    "mcv": true
+   }
+  ]
+ }
+}

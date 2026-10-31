@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 325,
+  "n_files": 333,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1342,6 +1342,46 @@
       "sha256": "78367aacfcab06b707010dcd286c71637068ea902d7c0369a63556c2c1d91034",
       "bytes": 83256,
       "line_endings": "LF"
+    },
+    "outputs/edgar_questions_review_2026-11-01/review_sheet_author.csv": {
+      "sha256": "befca45e0c611c437f08fd84c8f85b1221633486d76a537c4782583ce03ceb9b",
+      "bytes": 87264,
+      "line_endings": "mixed"
+    },
+    "outputs/edgar_eval_preflight_2026-11-01/stats.json": {
+      "sha256": "669d5563e0c1025793c9731925f81f8732e7eda70f5277c74df75c413687bccd",
+      "bytes": 2008,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_preflight_2026-11-01/vecadvisor.json": {
+      "sha256": "beca0d8f33b8f4c888da5ec8f1a52a51786cc10982a2b2b253662d4e609ada94",
+      "bytes": 772,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_preflight_2026-11-01/vecadvisor_analyze_raw.json": {
+      "sha256": "2716d3a01e0c8bd479e127e39f65b34e227a472277e7fe501f5b72cfb1d73db8",
+      "bytes": 4418,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_set_2026-11-01/selected.csv": {
+      "sha256": "9f28d0a47a0c379a4b4089dbd844725ddefeb284c6b004beeb20abdaf4f1e796",
+      "bytes": 84474,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_set_2026-11-01/pairs.csv": {
+      "sha256": "35bf16bca8e1e978915af056d3d3da6882ec0728043dbc0c1897643473a6d624",
+      "bytes": 24521,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_set_2026-11-01/calibration_queries.csv": {
+      "sha256": "e0edcacd86ae326c6bd4a0eb6a8ad592f39fea41a45be19f1af256c00522e6fb",
+      "bytes": 3860,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_set_2026-11-01/selection_log.json": {
+      "sha256": "7b2169c75f092a3507221a20b81d2005156246a98c5c3869e7b86d1d2048b3d1",
+      "bytes": 2655,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1754,6 +1794,20 @@
       "added_utc": "2026-10-31T20:01:47.726868+00:00",
       "paths": [
         "outputs/edgar_questions_verify_2026-11-01/review_sheet.csv"
+      ]
+    },
+    {
+      "label": "edgar_eval_task0_task1_2026-11-01",
+      "added_utc": "2026-10-31T21:44:35.283543+00:00",
+      "paths": [
+        "outputs/edgar_eval_preflight_2026-11-01/stats.json",
+        "outputs/edgar_eval_preflight_2026-11-01/vecadvisor.json",
+        "outputs/edgar_eval_preflight_2026-11-01/vecadvisor_analyze_raw.json",
+        "outputs/edgar_eval_set_2026-11-01/calibration_queries.csv",
+        "outputs/edgar_eval_set_2026-11-01/pairs.csv",
+        "outputs/edgar_eval_set_2026-11-01/selected.csv",
+        "outputs/edgar_eval_set_2026-11-01/selection_log.json",
+        "outputs/edgar_questions_review_2026-11-01/review_sheet_author.csv"
       ]
     }
   ]

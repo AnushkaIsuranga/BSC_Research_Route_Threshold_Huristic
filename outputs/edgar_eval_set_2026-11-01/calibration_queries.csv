@@ -1,0 +1,21 @@
+qid,question,status,review_decision,reason_not_selected
+edgar_q002,"At the close of fiscal year 2019, what was the total dollar amount of Level One Bancorp, Inc.'s nonaccretable difference?",auto_pass,keep,eligible lookup not drawn
+edgar_q005,"What was the annualized common share dividend rate paid by Unitil Corporation for the fiscal year ended December 31, 2018?",needs_review,drop,author drop
+edgar_q016,"How much interest expense did Torchlight Energy Resources, Inc. record from the amortization of note debt discounts during fiscal year 2020?",needs_review,drop,author drop
+edgar_q017,"At the end of fiscal year 2020, what was A.M. Castle & Co.'s noncurrent liability for withdrawing from the Ohio multi-employer pension plan?",auto_pass,,eligible lookup not drawn
+edgar_q020,How many total residential mortgage loans were in U.S. Ocwen Financial Corporation's servicing portfolio at the end of fiscal year 2019?,auto_pass,,eligible lookup not drawn
+edgar_q021,"Under Medley Capital Corporation's incentive fee structure in fiscal year 2019, what percentage of pre-incentive fee net investment income does the investment adviser receive if that income exceeds 2.5% in a given calendar quarter?",needs_review,drop,author drop
+edgar_q024,"In ITC Holdings' 2019 annual report, what was the base return on equity recommended by the administrative law judge in the June 30, 2016 initial decision concerning the Second Complaint?",needs_review,drop,author drop
+edgar_q025,"As of December 31, 2020, what was the total dollar volume of Paycheck Protection Program loans originated by ACNB Corporation?",needs_review,drop,author drop
+edgar_q030,"What was the total amount of interest paid on all borrowings by Littelfuse, Inc. during fiscal year 2018?",needs_review,drop,author drop
+edgar_q033,"According to Diebold Nixdorf's 2018 annual report, what rate was the 10 percent U.S. tariff on specific Chinese imports scheduled to increase to on January 1, 2019?",needs_review,drop,author drop
+edgar_q035,"What was the total value of loans held for investment, net of allowances, for Old Point Financial Corporation at the end of fiscal year 2020?",auto_pass,,eligible lookup not drawn
+edgar_q042,"What was the income tax benefit reported by WillScot Corporation for the fiscal year ended December 31, 2018?",needs_review,drop,author drop
+edgar_q043,"At the end of fiscal year 2019, what was the total par value of FHLB advances categorized under secured borrowings for CIT Group Inc.?",needs_review,keep,eligible lookup not drawn
+edgar_q045,"What was the total value of subsidiary equity interests securing Starwood Property Trust, Inc.'s credit facilities as of December 31, 2020?",needs_review,keep,eligible lookup not drawn
+edgar_q047,"What was the depreciation and amortization expense reported by J2 Global, Inc. for the fiscal year ended December 31, 2019?",needs_review,drop,author drop
+edgar_q048,What was the amount of valuation allowance recorded by CERC Corp. for fiscal year 2019 due to the unlikelihood of realizing benefits from specific state net operating loss carryforwards?,needs_review,drop,author drop
+edgar_q049,"Under the regulatory standards noted in Community Bank System, Inc.'s 2019 annual report, what minimum proportion of Tier 1 capital relative to total adjusted quarterly average assets (leverage ratio) was established?",needs_review,drop,author drop
+edgar_q050,"What was the total cumulative loss incurred by Standard Metals Processing, Inc. from its inception up to December 31, 2018?",auto_pass,,eligible lookup not drawn
+edgar_q055,"At the end of fiscal year 2019, what was the prime interest rate according to First Northern Community Bancorp's 2020 annual report?",needs_review,drop,author drop
+edgar_q057,What was the total interest expense reported by River Bank & Trust for fiscal year 2019?,needs_review,drop,author drop
