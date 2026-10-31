@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 292,
+  "n_files": 313,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1177,6 +1177,111 @@
       "sha256": "b9ef0e635b9652257842e553dde3c97853e85c9f0cc915541fab1dae699899c3",
       "bytes": 3682,
       "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/api_calls.jsonl": {
+      "sha256": "dd93f2b3b8c962c9f494183a8a5fc1a39925eff83ad3f30888008dcf566755e7",
+      "bytes": 27222,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_embed_2026-10-31/api_calls_shard0of4.jsonl": {
+      "sha256": "253603eb456765836be380502a2412392415e47d7b8373b0a4f8afe4fec74888",
+      "bytes": 155619,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_embed_2026-10-31/api_calls_shard1of4.jsonl": {
+      "sha256": "bb791b5754c815134bc4228a42c19ba43cb6339bbcadd6b005d5d63e4935b5e9",
+      "bytes": 158224,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_embed_2026-10-31/api_calls_shard2of4.jsonl": {
+      "sha256": "46fb26c6618bec160e267efcba9d8872848a6541ac91ff0d1cc8b3d85c15e50a",
+      "bytes": 162528,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_embed_2026-10-31/api_calls_shard3of4.jsonl": {
+      "sha256": "7824304cab37e70c4a1d440e2843df4e9ef718b8983120e7f1d0be5a74547849",
+      "bytes": 160803,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_embed_2026-10-31/batches.jsonl": {
+      "sha256": "48faa90b2a4533b43016054d55ee5116b7d2ec4385403a39e3717a6997c7c064",
+      "bytes": 18442,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/batches_shard0of4.jsonl": {
+      "sha256": "eb6c7c6a4115e5a52cc06a348f8d4b8b58e0c005a95e4997d22ea4f2ee97eb6b",
+      "bytes": 102238,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/batches_shard1of4.jsonl": {
+      "sha256": "503549cbcc85745abc3486f56cb0c57accaa1a177f7ead4759dfc01b3be6d5a1",
+      "bytes": 103889,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/batches_shard2of4.jsonl": {
+      "sha256": "4912adeee76f728e3d5fe696352cc64e94845ef4525b1cbbe5924d5e928a6511",
+      "bytes": 106488,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/batches_shard3of4.jsonl": {
+      "sha256": "feeace20989ae0bca0c471c0f80828be79e9a316483a5c4e329330160b6049c3",
+      "bytes": 105204,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/checkpoint.json": {
+      "sha256": "0c72cec252061edac4f60af3ae09afcc021736518c0393f979b42c115c4d0f01",
+      "bytes": 303,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/checkpoint_shard0of4.json": {
+      "sha256": "acd92850f39791a86ca8e5b6a9b8003e9ac2a8c2c668a466453265fae4a80ce0",
+      "bytes": 295,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/checkpoint_shard1of4.json": {
+      "sha256": "07477c80094246980bbefde014626b7240a0f9f867c4ac11a88d1d13b06bd888",
+      "bytes": 302,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/checkpoint_shard2of4.json": {
+      "sha256": "94ce9c46c5290911f90289e071b25614a7da8871d4b9d6692c46f0cf2e9922e1",
+      "bytes": 302,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_embed_2026-10-31/checkpoint_shard3of4.json": {
+      "sha256": "5cba0ea02716e41514726dceae16b889ca2da41826a37a33a2db8ca38f980614",
+      "bytes": 298,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_index_2026-10-31/api_calls_self_retrieval.jsonl": {
+      "sha256": "173d32f083b296d998b1b51c4033536e443deb1e57d14b6c058cc7acca71f6e3",
+      "bytes": 1952,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_index_2026-10-31/checks.json": {
+      "sha256": "043b7017fd26a0475a7c1e88dc8d6abe0ead541e88af670838295f1e1c7f98fc",
+      "bytes": 2856,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_index_2026-10-31/spot_check_chunks.md": {
+      "sha256": "b439614d1b9f66056e5bf93bc1cf4307053d4bb87155c60786cebea8e308ae9d",
+      "bytes": 21877,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_vecadvisor_2026-10-31/analyze_edgar_chunks.json": {
+      "sha256": "cfb33fcb133aa442ad1db9724e23fb1ba45a8927e45509bca860afca64596006",
+      "bytes": 4476,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_vecadvisor_2026-10-31/version.txt": {
+      "sha256": "386028951c7196739cc13d6763bb7b23f8fb6a5501b5dab84849871479ad9873",
+      "bytes": 19,
+      "line_endings": "LF"
+    },
+    "outputs/db_dumps_edgar_2026-10-31/edgar_chunks.dump": {
+      "sha256": "2113f5f03380b4da508cbb2ce46cd3ee67fe64df77db27b33904fc9a7eb21ba1",
+      "bytes": 791540986,
+      "line_endings": "mixed"
     }
   },
   "additions": [
@@ -1532,6 +1637,33 @@
         "outputs/edgar_chunks_2026-10-31/companies.csv",
         "outputs/edgar_chunks_2026-10-31/selectivity_by_filter_type.json",
         "outputs/edgar_chunks_2026-10-31/summary.json"
+      ]
+    },
+    {
+      "label": "Phase F Task 3: edgar_chunks embedding logs, index/statistics checks, VecAdvisor analyze, table dump (2026-10-31); dump git-ignored",
+      "added_utc": "2026-10-31T15:54:06.143859+00:00",
+      "paths": [
+        "outputs/db_dumps_edgar_2026-10-31/edgar_chunks.dump",
+        "outputs/edgar_embed_2026-10-31/api_calls.jsonl",
+        "outputs/edgar_embed_2026-10-31/api_calls_shard0of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/api_calls_shard1of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/api_calls_shard2of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/api_calls_shard3of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/batches.jsonl",
+        "outputs/edgar_embed_2026-10-31/batches_shard0of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/batches_shard1of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/batches_shard2of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/batches_shard3of4.jsonl",
+        "outputs/edgar_embed_2026-10-31/checkpoint.json",
+        "outputs/edgar_embed_2026-10-31/checkpoint_shard0of4.json",
+        "outputs/edgar_embed_2026-10-31/checkpoint_shard1of4.json",
+        "outputs/edgar_embed_2026-10-31/checkpoint_shard2of4.json",
+        "outputs/edgar_embed_2026-10-31/checkpoint_shard3of4.json",
+        "outputs/edgar_index_2026-10-31/api_calls_self_retrieval.jsonl",
+        "outputs/edgar_index_2026-10-31/checks.json",
+        "outputs/edgar_index_2026-10-31/spot_check_chunks.md",
+        "outputs/edgar_vecadvisor_2026-10-31/analyze_edgar_chunks.json",
+        "outputs/edgar_vecadvisor_2026-10-31/version.txt"
       ]
     }
   ]

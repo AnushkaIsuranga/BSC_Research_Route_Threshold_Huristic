@@ -1,0 +1,126 @@
+{
+ "table": "edgar_chunks",
+ "normalisation": {
+  "rows": 158308,
+  "rows_without_embedding": 0,
+  "norm_min": 0.9999998763648088,
+  "norm_max": 1.0000001309525672,
+  "rows_with_abs_norm_minus_1_gt_0.001": 0,
+  "unit_normalised": true
+ },
+ "build": {
+  "maintenance_work_mem": "512MB",
+  "seconds": {
+   "hnsw": 230.3,
+   "btree_cik": 1.0,
+   "btree_fiscal_year": 1.1,
+   "btree_section": 0.2,
+   "stats_year_section": 0.0,
+   "stats_cik_year": 0.0,
+   "analyze": 0.8
+  },
+  "indexes": [
+   "CREATE UNIQUE INDEX edgar_chunks_cik_fiscal_year_section_chunk_index_key ON public.edgar_chunks USING btree (cik, fiscal_year, section, chunk_index)",
+   "CREATE INDEX edgar_chunks_cik_idx ON public.edgar_chunks USING btree (cik)",
+   "CREATE INDEX edgar_chunks_embedding_idx ON public.edgar_chunks USING hnsw (embedding vector_l2_ops) WITH (m='16', ef_construction='64')",
+   "CREATE INDEX edgar_chunks_fiscal_year_idx ON public.edgar_chunks USING btree (fiscal_year)",
+   "CREATE UNIQUE INDEX edgar_chunks_pkey ON public.edgar_chunks USING btree (id)",
+   "CREATE INDEX edgar_chunks_section_idx ON public.edgar_chunks USING btree (section)"
+  ]
+ },
+ "pg_stats": [
+  {
+   "attname": "cik",
+   "null_frac": 0.0,
+   "n_distinct": 430.0,
+   "n_most_common_vals": 100
+  },
+  {
+   "attname": "fiscal_year",
+   "null_frac": 0.0,
+   "n_distinct": 3.0,
+   "n_most_common_vals": 3
+  },
+  {
+   "attname": "section",
+   "null_frac": 0.0,
+   "n_distinct": 5.0,
+   "n_most_common_vals": 5
+  }
+ ],
+ "pg_stats_ok": true,
+ "extended_statistics": [
+  {
+   "name": "edgar_chunks_cik_year_stats",
+   "kinds": "{f,m}",
+   "has_dependencies": true,
+   "has_mcv": true
+  },
+  {
+   "name": "edgar_chunks_year_section_stats",
+   "kinds": "{f,m}",
+   "has_dependencies": false,
+   "has_mcv": true
+  }
+ ],
+ "reltuples": 158555.0,
+ "checks": {
+  "rows": 158308,
+  "rows_expected_from_chunks_jsonl": 158308,
+  "zero_vectors": 0,
+  "dimension_mismatches": 0,
+  "duplicate_keys": 0,
+  "text_hash_mismatches": 0
+ },
+ "self_retrieval": {
+  "passed": 5,
+  "of": 5,
+  "detail": [
+   {
+    "row_id": 19083,
+    "top1_id": 19083,
+    "top1_same_text_hash": true,
+    "distance": 0.01442501025498582
+   },
+   {
+    "row_id": 63424,
+    "top1_id": 63424,
+    "top1_same_text_hash": true,
+    "distance": 0.07694046138995325
+   },
+   {
+    "row_id": 80154,
+    "top1_id": 80154,
+    "top1_same_text_hash": true,
+    "distance": 0.06746151032616014
+   },
+   {
+    "row_id": 98475,
+    "top1_id": 98475,
+    "top1_same_text_hash": true,
+    "distance": 0.013717035549203806
+   },
+   {
+    "row_id": 134354,
+    "top1_id": 134354,
+    "top1_same_text_hash": true,
+    "distance": 0.013545459832549041
+   }
+  ],
+  "cost_usd": 2.0049999999999996e-05,
+  "tokens": 2005
+ },
+ "spot_check_ids": [
+  21550,
+  34630,
+  42237,
+  63967,
+  72695,
+  79107,
+  110974,
+  119977,
+  135889,
+  152024
+ ],
+ "passed": true
+}

@@ -1,0 +1,14 @@
+{
+ "event": "batch",
+ "batch_start": 36700,
+ "texts": 94,
+ "rows_updated": 105,
+ "tokens": 33941,
+ "cost_usd": 0.0003394100000000122,
+ "seconds": 26.41,
+ "run_texts_done": 36794,
+ "cumulative_cost_usd": 0.17314113,
+ "pending_at_run_start": 36794,
+ "limit": null,
+ "cumulative_tokens": 17314113
+}
