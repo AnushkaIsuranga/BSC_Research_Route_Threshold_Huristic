@@ -202,3 +202,8 @@ None of the affected cells is within 20 % of the 500 ms limit (cell latencies ar
 ## 2026-10-31 — Phase E Task 5 (concurrency test) not run (no result changed)
 
 Task 5 of the Amendment 9 testing prompt (concurrency test, optional) was **not run**, by the author's decision on 31 Oct 2026, because of time; it is first in the tagged cut order of `PHASE_E_AMENDMENT_9.md`. No output exists for it; no Phase E result depends on it.
+
+## 2026-10-31 — Checksum housekeeping (no result changed)
+
+- **12 missing entries added** to `outputs/data_checksums.json` for committed 13 Oct outputs that had none (`outputs/embedding_build_2026-10-13/` 2 files, `outputs/phase_d_gemini_scaleup_smoke_2026-10-13/` 5, `outputs/scaleup_checks_2026-10-13/` 2, `outputs/scaleup_confirmation_2026-10-13/` 3), hashed as committed; the two cache/selection hashes equal those recorded in Amendment 7 Step 1. Total entries 285.
+- **Two registered hashes no longer match the files on disk:** `outputs/hallucination_classification_2026-10-23/labelling_sheet.csv` and `labelling_sheet_check.csv`. Cause: line endings only. The files were registered as written by Python's csv module (CRLF row endings, LF inside quoted passages); git stored them with LF and checks them out with CRLF everywhere. Rewriting the committed content with CSV row endings reproduces both registered hashes exactly (99,823 and 100,024 bytes). The content is unchanged; the existing entries were not edited.

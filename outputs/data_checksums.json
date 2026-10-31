@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 273,
+  "n_files": 285,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1094,6 +1094,54 @@
     "outputs/phase_e_final_2026-10-31/per_mode_cell_summary.csv": {
       "sha256": "69ee503ba3b4d3c6fc57d7d9bd840fc75bf6ae2600d2d6a3726f78d16cd980a4",
       "bytes": 273000
+    },
+    "outputs/embedding_build_2026-10-13/api_calls_qwen3_confirmation_1075.jsonl": {
+      "sha256": "36ffe55dd478cb9ecd870e7f23f00b54fb89e25527edf85fd6404281692772ee",
+      "bytes": 4492
+    },
+    "outputs/embedding_build_2026-10-13/query_embeddings_qwen3_confirmation_1075.json": {
+      "sha256": "c5215bea79bbd486b084d276a0bc2a5e1fb632a8e66a6ae3385f16d4bc7f36ea",
+      "bytes": 24793299
+    },
+    "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/error.log": {
+      "sha256": "398e8d647740c0abb359c8e957e799b4b12749b32f748608bd8cda266ded0e6d",
+      "bytes": 318
+    },
+    "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/errors.jsonl": {
+      "sha256": "9b4c75392f67a06d397043d9b9760d197c7a98be134ad8775b23133314bfcf85",
+      "bytes": 1756
+    },
+    "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/results.csv": {
+      "sha256": "0608836b7c18ca6ea28254cdd9a4c9f86b33363ccf0cde6e86c4fc46c5c36688",
+      "bytes": 10794
+    },
+    "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/results.jsonl": {
+      "sha256": "3e6809c1ac408f333e5a81cc5c96d098f32171a59650f3dd4c19f279a4e69684",
+      "bytes": 18979
+    },
+    "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/run_meta.json": {
+      "sha256": "86679f9f0da33ca6a254f7cf58f973dea1a416335ad9bfc2e98ffb5995a0f1ec",
+      "bytes": 7740
+    },
+    "outputs/scaleup_checks_2026-10-13/checks.json": {
+      "sha256": "163077f1ce8b11661cef7c224a66a84b289a5826d8d81fd8ea7390000e43bf10",
+      "bytes": 4168
+    },
+    "outputs/scaleup_checks_2026-10-13/confirmation_subset.csv": {
+      "sha256": "4454db51bf334f5850418ca22b0228afe2d9fa56ded1f3a3f387fd12b31ff9b6",
+      "bytes": 182871
+    },
+    "outputs/scaleup_confirmation_2026-10-13/confirmation_1075.csv": {
+      "sha256": "aff43f1fb918e2d44dd1cdd934de2b8fccd4e64e2690fd5bd4e7f3d36d0704a3",
+      "bytes": 178856
+    },
+    "outputs/scaleup_confirmation_2026-10-13/excluded_unparseable_gold.csv": {
+      "sha256": "c8a069550aaeff184d6f47a1b59d59b75b85cfe579d7c0cba61af9c0e0f4d9f0",
+      "bytes": 1737
+    },
+    "outputs/scaleup_confirmation_2026-10-13/summary.json": {
+      "sha256": "0ba5f3e865cad5c5f2dbf270bc29e826f006cee9500f1732603e5b3179b1ce57",
+      "bytes": 685
     }
   },
   "additions": [
@@ -1412,6 +1460,24 @@
         "outputs/phase_e_final_2026-10-31/heldout_and_ablation.json",
         "outputs/phase_e_final_2026-10-31/load_spike_check.json",
         "outputs/phase_e_final_2026-10-31/per_mode_cell_summary.csv"
+      ]
+    },
+    {
+      "label": "missing entries for committed 13 Oct outputs (added 2026-10-31)",
+      "added_utc": "2026-10-31T09:18:22.546917+00:00",
+      "paths": [
+        "outputs/embedding_build_2026-10-13/api_calls_qwen3_confirmation_1075.jsonl",
+        "outputs/embedding_build_2026-10-13/query_embeddings_qwen3_confirmation_1075.json",
+        "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/error.log",
+        "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/errors.jsonl",
+        "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/results.csv",
+        "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/results.jsonl",
+        "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/run_meta.json",
+        "outputs/scaleup_checks_2026-10-13/checks.json",
+        "outputs/scaleup_checks_2026-10-13/confirmation_subset.csv",
+        "outputs/scaleup_confirmation_2026-10-13/confirmation_1075.csv",
+        "outputs/scaleup_confirmation_2026-10-13/excluded_unparseable_gold.csv",
+        "outputs/scaleup_confirmation_2026-10-13/summary.json"
       ]
     }
   ]
