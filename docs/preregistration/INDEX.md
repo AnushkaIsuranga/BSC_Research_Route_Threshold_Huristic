@@ -33,5 +33,6 @@ Created 2026-10-23. **No earlier file was moved or edited**; all paths are relat
 
 - `METHODOLOGY_AUDIT.md`: written before 2026-10-12 by the author (untracked in git); date unknown; contains an audit of the Phase D method.
 - `Coding_TODO_List.md`: historical plan dated 17 Aug 2026; untracked since 2026-08-23 (`5f799b4`); not a pre-registration.
+- `docs/RUNBOOK_EDGAR.md` (2026-10-31): runbook for the Phase F EDGAR 10-K corpus (table `edgar_chunks`): download, chunking, loading, resumable embedding, indexes and statistics, checks, VecAdvisor analyze, question drafting, checksums, reset. Not a pre-registration.
 - Result reports are in `reports/`; `reports/final_summary_2026-10-12.md` summarises verdicts of the 12 Oct experiments.
 - Tags that are not documents' tags: `phase2-test-retest-complete` (2026-09-03), `phase-a-v1` (2026-09-30), `phase-d-local-freeze` (2026-09-30), `experiments-frozen-2026-10-12`, `final-results-2026-10-12`.
