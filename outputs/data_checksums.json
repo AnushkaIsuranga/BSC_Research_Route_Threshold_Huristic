@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 324,
+  "n_files": 325,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1337,6 +1337,11 @@
       "sha256": "7d13b4a7c015187fc603f8fc24952868dbb84e4eec8b538f8805055a2098fc57",
       "bytes": 998,
       "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/review_sheet.csv": {
+      "sha256": "78367aacfcab06b707010dcd286c71637068ea902d7c0369a63556c2c1d91034",
+      "bytes": 83256,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1742,6 +1747,13 @@
         "outputs/edgar_questions_verify_2026-11-01/prompt_independent.json",
         "outputs/edgar_questions_verify_2026-11-01/question_embeddings.json",
         "outputs/edgar_questions_verify_2026-11-01/run_meta.json"
+      ]
+    },
+    {
+      "label": "edgar_questions_verify_2026-11-01_task2",
+      "added_utc": "2026-10-31T20:01:47.726868+00:00",
+      "paths": [
+        "outputs/edgar_questions_verify_2026-11-01/review_sheet.csv"
       ]
     }
   ]
