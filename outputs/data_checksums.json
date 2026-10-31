@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 288,
+  "n_files": 292,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1157,6 +1157,26 @@
       "sha256": "428895c9d570fb1e329368b211b93bc3eb205aab4a29d9ac4ae0614eb30dab56",
       "bytes": 9155,
       "line_endings": "CRLF"
+    },
+    "outputs/edgar_chunks_2026-10-31/chunks.jsonl": {
+      "sha256": "db73e096f4b00440621399c7b721c3fcc95717f403174a3f67f45e38aa32ce66",
+      "bytes": 354176048,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_chunks_2026-10-31/companies.csv": {
+      "sha256": "8de5fc2ecb99ed51e030ec5e2ab9cc24faed8e0b6785c0f24ba27dfa03bf5b88",
+      "bytes": 32667,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_chunks_2026-10-31/selectivity_by_filter_type.json": {
+      "sha256": "ceec392157f39f4b43b6c7673d20d206852cc3b89fe4c63be11830ec80268e58",
+      "bytes": 2098,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_chunks_2026-10-31/summary.json": {
+      "sha256": "b9ef0e635b9652257842e553dde3c97853e85c9f0cc915541fab1dae699899c3",
+      "bytes": 3682,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1502,6 +1522,16 @@
         "outputs/edgar_source_check_2026-10-31/download_manifest.json",
         "outputs/edgar_source_check_2026-10-31/report_index.csv",
         "outputs/edgar_source_check_2026-10-31/summary.json"
+      ]
+    },
+    {
+      "label": "Phase F Task 2: EDGAR company sample and chunks (2026-10-31); chunks.jsonl is git-ignored",
+      "added_utc": "2026-10-31T14:30:58.816894+00:00",
+      "paths": [
+        "outputs/edgar_chunks_2026-10-31/chunks.jsonl",
+        "outputs/edgar_chunks_2026-10-31/companies.csv",
+        "outputs/edgar_chunks_2026-10-31/selectivity_by_filter_type.json",
+        "outputs/edgar_chunks_2026-10-31/summary.json"
       ]
     }
   ]

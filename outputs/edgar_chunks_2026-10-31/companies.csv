@@ -1,0 +1,434 @@
+cik,company_name,name_status,names_found_by_year
+4904,,none_found,{}
+6207,AMREP Corporation,agree,"{""2019"": ""AMREP Corporation"", ""2020"": ""AMREP Corporation""}"
+7332,Southwestern Energy Company,agree,"{""2018"": ""Southwestern Energy Company"", ""2019"": ""Southwestern Energy Company"", ""2020"": ""Southwestern Energy Company""}"
+7623,,none_found,{}
+8177,,none_found,{}
+9466,,none_found,{}
+10795,,none_found,{}
+12208,,none_found,{}
+13239,Hexion Inc.,agree,"{""2018"": ""Hexion Inc."", ""2019"": ""Hexion Inc.""}"
+15847,Butler National Corporation,agree,"{""2018"": ""Butler National Corporation"", ""2019"": ""Butler National Corporation"", ""2020"": ""Butler National Corporation""}"
+18172,A.M. Castle & Co.,agree,"{""2018"": ""A.M. Castle & Co."", ""2019"": ""A.M. Castle & Co."", ""2020"": ""A.M. Castle & Co.""}"
+20286,,none_found,{}
+21175,,none_found,{}
+21510,,none_found,{}
+23194,,none_found,{}
+25743,,none_found,{}
+28823,"Diebold Nixdorf, Incorporated",agree,"{""2018"": ""Diebold Nixdorf, Incorporated"", ""2019"": ""Diebold Nixdorf, Incorporated"", ""2020"": ""Diebold Nixdorf, Incorporated""}"
+31235,Eastman Kodak Company,agree,"{""2018"": ""Eastman Kodak Company"", ""2019"": ""Eastman Kodak Company""}"
+35214,Ferro Corporation,agree,"{""2018"": ""Ferro Corporation"", ""2019"": ""Ferro Corporation"", ""2020"": ""Ferro Corporation""}"
+40730,GUC Trust,agree,"{""2018"": ""GUC Trust"", ""2019"": ""GUC Trust"", ""2020"": ""GUC Trust""}"
+54476,"Evergy, Inc.",agree,"{""2018"": ""Evergy, Inc."", ""2019"": ""Evergy, Inc."", ""2020"": ""Evergy, Inc.""}"
+55529,,none_found,{}
+57131,,none_found,{}
+59255,,none_found,{}
+65770,"MicroVision, Inc.",agree,"{""2018"": ""MicroVision, Inc."", ""2019"": ""MicroVision, Inc.""}"
+67625,Monmouth Real Estate Investment Corporation,agree,"{""2018"": ""Monmouth Real Estate Investment Corporation"", ""2019"": ""Monmouth Real Estate Investment Corporation"", ""2020"": ""Monmouth Real Estate Investment Corporation""}"
+67716,,none_found,{}
+76063,,none_found,{}
+79732,,none_found,{}
+82473,,none_found,{}
+84112,"George Risk Industries, Inc.",agree,"{""2018"": ""George Risk Industries, Inc."", ""2020"": ""George Risk Industries, Inc.""}"
+84748,,none_found,{}
+87047,SB Partners,agree,"{""2018"": ""SB Partners"", ""2019"": ""SB Partners"", ""2020"": ""SB Partners""}"
+91928,"South Jersey Industries, Inc.",agree,"{""2018"": ""South Jersey Industries, Inc."", ""2019"": ""South Jersey Industries, Inc."", ""2020"": ""South Jersey Industries, Inc.""}"
+92521,,none_found,{}
+93314,,none_found,{}
+96536,,none_found,{}
+96699,Technical Communications Corporation,agree,"{""2018"": ""Technical Communications Corporation"", ""2019"": ""Technical Communications Corporation"", ""2020"": ""Technical Communications Corporation""}"
+96943,,none_found,{}
+100122,,none_found,{}
+101295,"United-Guardian, Inc.",agree,"{""2018"": ""United-Guardian, Inc."", ""2019"": ""United-Guardian, Inc."", ""2020"": ""United-Guardian, Inc.""}"
+101829,United Technologies Corporation,agree,"{""2018"": ""United Technologies Corporation"", ""2019"": ""United Technologies Corporation"", ""2020"": ""Raytheon Technologies Corporation""}"
+104169,,none_found,{}
+105634,"EMCOR Group, Inc.",agree,"{""2018"": ""EMCOR Group, Inc."", ""2019"": ""EMCOR Group, Inc."", ""2020"": ""EMCOR Group, Inc.""}"
+107263,,none_found,{}
+108385,,none_found,{}
+108985,York Water Company,agree,"{""2018"": ""York Water Company"", ""2019"": ""York Water Company"", ""2020"": ""York Water Company""}"
+276720,,single_year,"{""2020"": ""Pure Cycle Corporation""}"
+310158,,none_found,{}
+313143,,none_found,{}
+315189,Deere & Company,agree,"{""2018"": ""Deere & Company"", ""2019"": ""Deere & Company"", ""2020"": ""Deere & Company""}"
+315293,Aon plc,agree,"{""2018"": ""Aon plc"", ""2019"": ""Aon plc"", ""2020"": ""Aon plc""}"
+316709,,none_found,{}
+351998,Data I/O Corporation,agree,"{""2018"": ""Data I/O Corporation"", ""2019"": ""Data I/O Corporation"", ""2020"": ""Data I/O Corporation""}"
+352955,,none_found,{}
+701719,,none_found,{}
+714256,,conflict,"{""2018"": ""Wound Management Technologies, Inc."", ""2019"": ""Sanara MedTech Inc.""}"
+715579,ACNB Corporation,agree,"{""2018"": ""ACNB Corporation"", ""2019"": ""ACNB Corporation"", ""2020"": ""ACNB Corporation""}"
+716006,YRC Worldwide Inc.,agree,"{""2018"": ""YRC Worldwide Inc."", ""2019"": ""YRC Worldwide Inc."", ""2020"": ""Yellow Corporation""}"
+718877,"Activision Blizzard, Inc.",agree,"{""2018"": ""Activision Blizzard, Inc."", ""2019"": ""Activision Blizzard, Inc."", ""2020"": ""Activision Blizzard, Inc.""}"
+719739,SVB Financial Group,agree,"{""2018"": ""SVB Financial Group"", ""2019"": ""SVB Financial Group"", ""2020"": ""SVB Financial Group""}"
+720672,Stifel Financial Corp.,agree,"{""2018"": ""Stifel Financial Corp."", ""2019"": ""Stifel Financial Corp."", ""2020"": ""Stifel Financial Corp.""}"
+723188,"Community Bank System, Inc.",agree,"{""2018"": ""Community Bank System, Inc."", ""2019"": ""Community Bank System, Inc."", ""2020"": ""Community Bank System, Inc.""}"
+723254,,none_found,{}
+723531,,single_year,"{""2020"": ""Paychex, Inc.""}"
+727892,RiverSource Life Insurance Company,agree,"{""2018"": ""RiverSource Life Insurance Company"", ""2019"": ""RiverSource Life Insurance Company"", ""2020"": ""RiverSource Life Insurance Company""}"
+728535,,none_found,{}
+730255,CalAmp Corp.,agree,"{""2018"": ""CalAmp Corp."", ""2019"": ""CalAmp Corp.""}"
+730263,"Thor Industries, Inc.",agree,"{""2018"": ""Thor Industries, Inc."", ""2019"": ""Thor Industries, Inc."", ""2020"": ""Thor Industries, Inc.""}"
+740971,Old Point Financial Corporation,agree,"{""2018"": ""Old Point Financial Corporation"", ""2019"": ""Old Point Financial Corporation"", ""2020"": ""Old Point Financial Corporation""}"
+742278,,none_found,{}
+746210,"Oblong, Inc.",agree,"{""2018"": ""Glowpoint, Inc."", ""2019"": ""Oblong, Inc."", ""2020"": ""Oblong, Inc.""}"
+746514,,none_found,{}
+746598,Brady Corporation,agree,"{""2018"": ""Brady Corporation"", ""2019"": ""Brady Corporation"", ""2020"": ""Brady Corporation""}"
+755001,Unitil Corporation,agree,"{""2018"": ""Unitil Corporation"", ""2019"": ""Unitil Corporation"", ""2020"": ""Unitil Corporation""}"
+759944,"Citizens Financial Group, Inc.",agree,"{""2018"": ""Citizens Financial Group, Inc."", ""2019"": ""Citizens Financial Group, Inc."", ""2020"": ""Citizens Financial Group, Inc.""}"
+767405,,none_found,{}
+773141,"M.D.C. Holdings, Inc.",agree,"{""2018"": ""M.D.C. Holdings, Inc."", ""2019"": ""M.D.C. Holdings, Inc."", ""2020"": ""M.D.C. Holdings, Inc.""}"
+773717,"Standard Metals Processing, Inc.",agree,"{""2018"": ""Standard Metals Processing, Inc."", ""2019"": ""Standard Metals Processing, Inc."", ""2020"": ""Standard Metals Processing, Inc.""}"
+778946,,none_found,{}
+791963,,none_found,{}
+794172,,none_found,{}
+794323,,none_found,{}
+794367,,none_found,{}
+794619,American Woodmark Corporation,agree,"{""2018"": ""American Woodmark Corporation"", ""2019"": ""American Woodmark Corporation"", ""2020"": ""American Woodmark Corporation""}"
+797542,,single_year,"{""2018"": ""Emerald Medical Technologies, Inc.""}"
+799165,,single_year,"{""2020"": ""Dawson Geophysical Company""}"
+805676,,none_found,{}
+814926,"Capstone Companies, Inc.",agree,"{""2018"": ""Capstone Companies, Inc."", ""2019"": ""Capstone Companies, Inc."", ""2020"": ""Capstone Companies, Inc.""}"
+820771,,none_found,{}
+830656,,none_found,{}
+831641,"Tetra Tech, Inc.",agree,"{""2018"": ""Tetra Tech, Inc."", ""2019"": ""Tetra Tech, Inc.""}"
+833444,,single_year,"{""2018"": ""JCI Inc.""}"
+835011,"MGP Ingredients, Inc.",agree,"{""2018"": ""MGP Ingredients, Inc."", ""2019"": ""MGP Ingredients, Inc."", ""2020"": ""MGP Ingredients, Inc.""}"
+836564,Patriot Scientific Corporation,agree,"{""2018"": ""Patriot Scientific Corporation"", ""2019"": ""Patriot Scientific Corporation""}"
+836690,"Innovative Solutions and Support, Inc.",agree,"{""2018"": ""Innovative Solutions and Support, Inc."", ""2019"": ""Innovative Solutions and Support, Inc."", ""2020"": ""Innovative Solutions and Support, Inc.""}"
+839087,Vaso Corporation,agree,"{""2018"": ""Vaso Corporation"", ""2019"": ""Vaso Corporation"", ""2020"": ""Vaso Corporation""}"
+842162,Lear Corporation,agree,"{""2018"": ""Lear Corporation"", ""2019"": ""Lear Corporation"", ""2020"": ""Lear Corporation""}"
+847942,"Strategic Acquisitions, Inc.",agree,"{""2018"": ""Strategic Acquisitions, Inc."", ""2019"": ""Strategic Acquisitions, Inc."", ""2020"": ""Strategic Acquisitions, Inc.""}"
+854775,Product Offerings Digi International Inc.,agree,"{""2018"": ""Product Offerings Digi International Inc."", ""2019"": ""Product Offerings Digi International Inc."", ""2020"": ""Product Offerings Digi International Inc.""}"
+862692,"Cryo-Cell International, Inc.",agree,"{""2018"": ""Cryo-Cell International, Inc."", ""2019"": ""Cryo-Cell International, Inc."", ""2020"": ""Cryo-Cell International, Inc.""}"
+864270,,none_found,{}
+867665,Abraxas Petroleum Corporation,agree,"{""2018"": ""Abraxas Petroleum Corporation"", ""2019"": ""Abraxas Petroleum Corporation"", ""2020"": ""Abraxas Petroleum Corporation""}"
+868857,,none_found,{}
+872589,,none_found,{}
+873860,U.S. Ocwen Financial Corporation,agree,"{""2019"": ""U.S. Ocwen Financial Corporation"", ""2020"": ""U.S. Ocwen Financial Corporation""}"
+874761,,none_found,{}
+875729,,none_found,{}
+879682,,single_year,"{""2019"": ""Viveve, Inc.""}"
+883107,Nanophase Technologies Corporation,agree,"{""2018"": ""Nanophase Technologies Corporation"", ""2019"": ""Nanophase Technologies Corporation"", ""2020"": ""Nanophase Technologies Corporation""}"
+883948,,none_found,{}
+884269,,none_found,{}
+886206,,none_found,{}
+887359,Vericel Corporation,agree,"{""2018"": ""Vericel Corporation"", ""2019"": ""Vericel Corporation"", ""2020"": ""Vericel Corporation""}"
+887596,Cheesecake Factory Incorporated,agree,"{""2018"": ""Cheesecake Factory Incorporated"", ""2019"": ""Cheesecake Factory Incorporated"", ""2020"": ""Cheesecake Factory Incorporated""}"
+889331,"Littelfuse, Inc.",agree,"{""2018"": ""Littelfuse, Inc."", ""2019"": ""Littelfuse, Inc."", ""2020"": ""Littelfuse, Inc.""}"
+892553,"Chart Industries, Inc.",agree,"{""2018"": ""Chart Industries, Inc."", ""2019"": ""Chart Industries, Inc."", ""2020"": ""Chart Industries, Inc.""}"
+894560,,none_found,{}
+896622,"AptarGroup, Inc.",agree,"{""2018"": ""AptarGroup, Inc."", ""2019"": ""AptarGroup, Inc."", ""2020"": ""AptarGroup, Inc.""}"
+896878,,none_found,{}
+897448,,none_found,{}
+901491,,none_found,{}
+906345,Camden Property Trust,agree,"{""2018"": ""Camden Property Trust"", ""2019"": ""Camden Property Trust"", ""2020"": ""Camden Property Trust""}"
+910612,"CBL Holdings I, Inc.",agree,"{""2018"": ""CBL Holdings I, Inc."", ""2019"": ""CBL Holdings I, Inc.""}"
+911147,,single_year,"{""2020"": ""Century Casinos, Inc.""}"
+912728,,none_found,{}
+913778,,none_found,{}
+914139,,none_found,{}
+914208,Invesco Ltd.,agree,"{""2018"": ""Invesco Ltd."", ""2019"": ""Invesco Ltd."", ""2020"": ""Invesco Ltd.""}"
+920112,,none_found,{}
+921825,,none_found,{}
+924901,Mack-Cali Realty Corporation,agree,"{""2018"": ""Mack-Cali Realty Corporation"", ""2019"": ""Mack-Cali Realty Corporation"", ""2020"": ""Mack-Cali Realty Corporation""}"
+927761,,none_found,{}
+928022,,none_found,{}
+932696,"Insight Enterprises, Inc.",agree,"{""2018"": ""Insight Enterprises, Inc."", ""2019"": ""Insight Enterprises, Inc."", ""2020"": ""Insight Enterprises, Inc.""}"
+936340,,none_found,{}
+943819,,single_year,"{""2018"": ""ResMed Inc.""}"
+945617,,none_found,{}
+949870,,none_found,{}
+1002135,,none_found,{}
+1002590,"Star Group, L.P.",agree,"{""2018"": ""Star Group, L.P."", ""2019"": ""Star Group, L.P."", ""2020"": ""Star Group, L.P.""}"
+1005286,Landec Corporation,agree,"{""2019"": ""Landec Corporation"", ""2020"": ""Landec Corporation""}"
+1005731,,none_found,{}
+1008653,10-K of Ecomat Inc.,agree,"{""2018"": ""10-K of Ecomat Inc."", ""2019"": ""10-K of Ecomat Inc."", ""2020"": ""10-K of Ecomat Inc.""}"
+1010470,,none_found,{}
+1010612,,none_found,{}
+1012477,,none_found,{}
+1013272,Norwood Financial Corp,agree,"{""2018"": ""Norwood Financial Corp."", ""2019"": ""Norwood Financial Corp."", ""2020"": ""Norwood Financial Corp""}"
+1022408,,single_year,"{""2018"": ""Software LLC""}"
+1023458,,none_found,{}
+1025771,,none_found,{}
+1029199,"Euronet Worldwide, Inc.",agree,"{""2018"": ""Euronet Worldwide, Inc."", ""2019"": ""Euronet Worldwide, Inc."", ""2020"": ""Euronet Worldwide, Inc.""}"
+1029800,,none_found,{}
+1029831,"Hillman Companies, Inc.",agree,"{""2018"": ""Hillman Companies, Inc."", ""2019"": ""Hillman Companies, Inc."", ""2020"": ""Hillman Companies, Inc.""}"
+1031623,,none_found,{}
+1037038,,none_found,{}
+1042773,CERC Corp.,agree,"{""2019"": ""CERC Corp."", ""2020"": ""CERC Corp.""}"
+1045610,"Prologis, Inc.",agree,"{""2018"": ""Prologis, Inc."", ""2019"": ""Prologis, Inc."", ""2020"": ""Prologis, Inc.""}"
+1049502,"MKS Instruments, Inc.",agree,"{""2018"": ""MKS Instruments, Inc."", ""2019"": ""MKS Instruments, Inc."", ""2020"": ""MKS Instruments, Inc.""}"
+1051627,"AXT, Inc.",agree,"{""2018"": ""AXT, Inc."", ""2019"": ""AXT, Inc."", ""2020"": ""AXT, Inc.""}"
+1053352,,none_found,{}
+1053584,Macatawa Bank Corporation,agree,"{""2018"": ""Macatawa Bank Corporation"", ""2019"": ""Macatawa Bank Corporation"", ""2020"": ""Macatawa Bank Corporation""}"
+1056903,,none_found,{}
+1059556,,none_found,{}
+1063761,"Simon Property Group, Inc.",agree,"{""2018"": ""Simon Property Group, Inc."", ""2019"": ""Simon Property Group, Inc."", ""2020"": ""Simon Property Group, Inc.""}"
+1065696,LKQ Corporation,agree,"{""2018"": ""LKQ Corporation"", ""2019"": ""LKQ Corporation"", ""2020"": ""LKQ Corporation""}"
+1067701,,none_found,{}
+1067837,,none_found,{}
+1067873,,none_found,{}
+1070494,,none_found,{}
+1070750,Host Inc.,agree,"{""2018"": ""Host Inc."", ""2019"": ""Host Inc."", ""2020"": ""Host Inc.""}"
+1075706,,none_found,{}
+1075736,"Crexendo, Inc.",agree,"{""2018"": ""Crexendo, Inc."", ""2019"": ""Crexendo, Inc."", ""2020"": ""Crexendo, Inc.""}"
+1080448,,none_found,{}
+1083490,,none_found,{}
+1083643,"Fauquier Bankshares, Inc.",agree,"{""2018"": ""Fauquier Bankshares, Inc."", ""2019"": ""Fauquier Bankshares, Inc."", ""2020"": ""Fauquier Bankshares, Inc.""}"
+1084048,"J2 Global, Inc.",agree,"{""2018"": ""Global, Inc."", ""2019"": ""J2 Global, Inc."", ""2020"": ""J2 Global, Inc.""}"
+1084267,,none_found,{}
+1089511,,none_found,{}
+1091667,,none_found,{}
+1094038,,none_found,{}
+1099132,"Manhattan Scientifics, Inc.",agree,"{""2018"": ""Manhattan Scientifics, Inc."", ""2019"": ""Manhattan Scientifics, Inc."", ""2020"": ""Manhattan Scientifics, Inc.""}"
+1099369,Destiny Media Technologies Inc.,agree,"{""2018"": ""Destiny Media Technologies, Inc."", ""2019"": ""Destiny Media Technologies Inc."", ""2020"": ""Destiny Media Technologies Inc.""}"
+1103833,"Micro Bio-Medical Waste Systems, Inc.",agree,"{""2018"": ""Micro Bio-Medical Waste Systems, Inc."", ""2019"": ""Micro Bio-Medical Waste Systems, Inc."", ""2020"": ""Micro Bio-Medical Waste Systems, Inc.""}"
+1107280,Oculus VisionTech Inc.,agree,"{""2018"": ""Oculus VisionTech Inc."", ""2019"": ""Oculus VisionTech Inc.""}"
+1109357,,none_found,{}
+1113232,"Axcelis Technologies, Inc.",agree,"{""2018"": ""Axcelis Technologies, Inc."", ""2019"": ""Axcelis Technologies, Inc."", ""2020"": ""Axcelis Technologies, Inc.""}"
+1114927,First Northern Community Bancorp,agree,"{""2018"": ""First Northern Community Bancorp"", ""2019"": ""First Northern Community Bancorp"", ""2020"": ""First Northern Community Bancorp""}"
+1114995,,none_found,{}
+1121702,"Yield10 Bioscience, Inc.",agree,"{""2018"": ""Yield10 Bioscience, Inc."", ""2019"": ""Yield10 Bioscience, Inc."", ""2020"": ""Yield10 Bioscience, Inc.""}"
+1122976,PolyOne Corporation,agree,"{""2018"": ""PolyOne Corporation"", ""2019"": ""PolyOne Corporation"", ""2020"": ""Avient Corporation""}"
+1128250,,none_found,{}
+1131554,,none_found,{}
+1134982,,none_found,{}
+1144546,"Ficaar, Inc.",agree,"{""2018"": ""Ficaar, Inc."", ""2019"": ""Ficaar, Inc."", ""2020"": ""Ficaar, Inc.""}"
+1158463,JetBlue Airways Corporation,agree,"{""2018"": ""JetBlue Airways Corporation"", ""2019"": ""JetBlue Airways Corporation"", ""2020"": ""JetBlue Airways Corporation""}"
+1160308,,none_found,{}
+1161728,,none_found,{}
+1162461,"Cutera, Inc.",agree,"{""2018"": ""Cutera, Inc."", ""2019"": ""Cutera, Inc."", ""2020"": ""Cutera, Inc.""}"
+1166708,,none_found,{}
+1168455,Plumas Bancorp,agree,"{""2018"": ""Plumas Bancorp"", ""2019"": ""Plumas Bancorp"", ""2020"": ""Plumas Bancorp""}"
+1171825,CIT Group Inc.,agree,"{""2018"": ""CIT Group Inc."", ""2019"": ""CIT Group Inc."", ""2020"": ""CIT Group Inc.""}"
+1174891,,none_found,{}
+1178670,,none_found,{}
+1178970,,none_found,{}
+1182534,,none_found,{}
+1220754,Providence Service Corporation,agree,"{""2018"": ""Providence Service Corporation"", ""2019"": ""Providence Service Corporation"", ""2020"": ""ModivCare Inc.""}"
+1225307,IBM Credit LLC,agree,"{""2018"": ""IBM Credit LLC"", ""2019"": ""IBM Credit LLC"", ""2020"": ""IBM Credit LLC""}"
+1226616,,none_found,{}
+1253176,,none_found,{}
+1267565,,none_found,{}
+1269026,,none_found,{}
+1279695,,none_found,{}
+1280452,,none_found,{}
+1280784,,none_found,{}
+1282977,,none_found,{}
+1284143,,none_found,{}
+1286613,,none_found,{}
+1289340,"Stereotaxis, Inc.",agree,"{""2018"": ""Stereotaxis, Inc."", ""2019"": ""Stereotaxis, Inc."", ""2020"": ""Stereotaxis, Inc.""}"
+1296435,,single_year,"{""2018"": ""Neenah, Inc.""}"
+1308208,,none_found,{}
+1315399,,none_found,{}
+1317630,ITC Holdings,agree,"{""2018"": ""ITC Holdings"", ""2019"": ""ITC Holdings"", ""2020"": ""ITC Holdings""}"
+1317945,,none_found,{}
+1320461,Cooper-Standard Holdings Inc.,agree,"{""2018"": ""Cooper-Standard Holdings Inc."", ""2019"": ""Cooper-Standard Holdings Inc."", ""2020"": ""Cooper-Standard Holdings Inc.""}"
+1321828,"Table of Contents Data Call Technologies, Inc.",agree,"{""2018"": ""Table of Contents Data Call Technologies, Inc."", ""2019"": ""Table of Contents Data Call Technologies, Inc."", ""2020"": ""Table of Contents Data Call Technologies, Inc.""}"
+1325676,,none_found,{}
+1326190,"Altimmune, Inc.",agree,"{""2018"": ""Altimmune, Inc."", ""2019"": ""Altimmune, Inc."", ""2020"": ""Altimmune, Inc.""}"
+1326380,GameStop Corp.,agree,"{""2018"": ""GameStop Corp."", ""2019"": ""GameStop Corp."", ""2020"": ""GameStop Corp.""}"
+1329842,,none_found,{}
+1336917,,none_found,{}
+1338065,"DCP Midstream, LP",agree,"{""2018"": ""DCP Midstream, LP"", ""2019"": ""DCP Midstream, LP"", ""2020"": ""DCP Midstream, LP""}"
+1339605,,none_found,{}
+1343009,Cannabics Pharmaceuticals Inc.,agree,"{""2018"": ""Cannabics Pharmaceuticals Inc."", ""2019"": ""Cannabics Pharmaceuticals Inc."", ""2020"": ""Cannabics Pharmaceuticals Inc.""}"
+1347858,"22nd Century Group, Inc.",agree,"{""2018"": ""22nd Century Group, Inc."", ""2019"": ""22nd Century Group, Inc."", ""2020"": ""22nd Century Group, Inc.""}"
+1349929,,none_found,{}
+1354866,,none_found,{}
+1359931,,conflict,"{""2018"": ""Proteon Therapeutics, Inc."", ""2019"": ""On January 9, 2020, ArTara Therapeutics, Inc.""}"
+1367644,Emergent BioSolutions Inc.,agree,"{""2018"": ""Emergent BioSolutions Inc."", ""2019"": ""Emergent BioSolutions Inc.""}"
+1368265,,single_year,"{""2020"": ""Clean Energy Fuels Corp.""}"
+1368365,,none_found,{}
+1375793,,none_found,{}
+1377936,,none_found,{}
+1378946,"People’s United Financial, Inc.",agree,"{""2018"": ""People\u2019s United Financial, Inc."", ""2019"": ""People\u2019s United Financial, Inc."", ""2020"": ""People\u2019s United Financial, Inc.""}"
+1383084,,none_found,{}
+1385662,,none_found,{}
+1394638,,none_found,{}
+1396440,,none_found,{}
+1396730,,none_found,{}
+1401564,"First Financial Northwest, Inc.",agree,"{""2018"": ""First Financial Northwest, Inc."", ""2019"": ""First Financial Northwest, Inc."", ""2020"": ""First Financial Northwest, Inc.""}"
+1403708,,none_found,{}
+1403752,,none_found,{}
+1404281,,conflict,"{""2019"": ""Novus Therapeutics, Inc."", ""2020"": ""Eledon Pharmaceuticals, Inc.""}"
+1411207,"Allison Transmission Holdings, Inc.",agree,"{""2018"": ""Allison Transmission Holdings, Inc."", ""2019"": ""Allison Transmission Holdings, Inc."", ""2020"": ""Allison Transmission Holdings, Inc.""}"
+1412126,,none_found,{}
+1412707,"Level One Bancorp, Inc.",agree,"{""2018"": ""Level One Bancorp, Inc."", ""2019"": ""Level One Bancorp, Inc."", ""2020"": ""Level One Bancorp, Inc.""}"
+1414043,"Friendable, Inc.",agree,"{""2018"": ""December 31, 2013, Titan Iron Ore Corp."", ""2019"": ""Friendable, Inc."", ""2020"": ""Friendable, Inc.""}"
+1420720,,none_found,{}
+1421636,"C-Bond Systems, Inc.",agree,"{""2018"": ""C-Bond Systems, Inc."", ""2019"": ""C-Bond Systems, Inc."", ""2020"": ""C-Bond Systems, Inc.""}"
+1422296,"Shentang International, Inc.",agree,"{""2018"": ""Shentang International, Inc."", ""2019"": ""Shentang International, Inc."", ""2020"": ""Shentang International, Inc.""}"
+1422768,Almost Never Films Inc.,agree,"{""2018"": ""Almost Never Films Inc."", ""2019"": ""Almost Never Films Inc."", ""2020"": ""Almost Never Films Inc.""}"
+1425450,OrthoPediatrics Corp.,agree,"{""2018"": ""OrthoPediatrics Corp."", ""2019"": ""OrthoPediatrics Corp."", ""2020"": ""OrthoPediatrics Corp.""}"
+1427925,,none_found,{}
+1430523,,none_found,{}
+1431766,,none_found,{}
+1431959,"Torchlight Energy Resources, Inc.",agree,"{""2018"": ""Torchlight Energy Resources, Inc."", ""2019"": ""Torchlight Energy Resources, Inc.""}"
+1433642,,none_found,{}
+1434418,,none_found,{}
+1435064,"Cemtrex, Inc.",agree,"{""2018"": ""Cemtrex, Inc."", ""2019"": ""Cemtrex, Inc."", ""2020"": ""Cemtrex, Inc.""}"
+1438731,,none_found,{}
+1441683,,single_year,"{""2020"": ""Appian Corporation""}"
+1441816,,none_found,{}
+1442999,,none_found,{}
+1443611,,single_year,"{""2019"": ""2014, Singlepoint Inc.""}"
+1448038,"Redwood Mortgage Investors IX, LLC",agree,"{""2018"": ""Redwood Mortgage Investors IX, LLC"", ""2019"": ""Redwood Mortgage Investors IX, LLC"", ""2020"": ""Redwood Mortgage Investors IX, LLC""}"
+1448431,,none_found,{}
+1448705,"On May 30, 2006, Basanite, Inc.",agree,"{""2018"": ""Basanite, Inc."", ""2019"": ""On May 30, 2006, Basanite, Inc."", ""2020"": ""On May 30, 2006, Basanite, Inc.""}"
+1453593,"Xtant Medical Holdings, Inc.",agree,"{""2018"": ""Xtant Medical Holdings, Inc."", ""2019"": ""Xtant Medical Holdings, Inc."", ""2020"": ""Xtant Medical Holdings, Inc.""}"
+1453687,,none_found,{}
+1462120,,single_year,"{""2020"": ""Live Oak Bancshares, Inc.""}"
+1463389,"ATEL 14, LLC",agree,"{""2018"": ""ATEL 14, LLC"", ""2019"": ""ATEL 14, LLC"", ""2020"": ""ATEL 14, LLC""}"
+1463972,,none_found,{}
+1464343,,none_found,{}
+1464790,,none_found,{}
+1465128,"Starwood Property Trust, Inc.",agree,"{""2018"": ""Starwood Property Trust, Inc."", ""2019"": ""Starwood Property Trust, Inc."", ""2020"": ""Starwood Property Trust, Inc.""}"
+1465264,,none_found,{}
+1468666,,none_found,{}
+1469317,,none_found,{}
+1471728,,none_found,{}
+1472091,,none_found,{}
+1474464,New York REIT Liquidating LLC,agree,"{""2018"": ""New York REIT Liquidating LLC"", ""2019"": ""New York REIT Liquidating LLC"", ""2020"": ""New York REIT Liquidating LLC""}"
+1475348,Luther Burbank Corporation,agree,"{""2018"": ""Luther Burbank Corporation"", ""2019"": ""Luther Burbank Corporation"", ""2020"": ""Luther Burbank Corporation""}"
+1477009,Cannabis Corp,agree,"{""2018"": ""Cannabis Corp"", ""2019"": ""Cannabis Corp""}"
+1477294,,none_found,{}
+1478242,,none_found,{}
+1479915,,none_found,{}
+1483646,,none_found,{}
+1487371,,single_year,"{""2020"": ""GenMark Diagnostics, Inc.""}"
+1487428,,none_found,{}
+1487712,Air Lease Corporation,agree,"{""2018"": ""Air Lease Corporation"", ""2019"": ""Air Lease Corporation"", ""2020"": ""Air Lease Corporation""}"
+1489588,,single_year,"{""2020"": ""Home Bistro, Inc.""}"
+1490349,Medley Capital Corporation,agree,"{""2018"": ""Medley Capital Corporation"", ""2019"": ""Medley Capital Corporation"", ""2020"": ""Medley Capital Corporation""}"
+1490873,,none_found,{}
+1494650,,none_found,{}
+1498291,,none_found,{}
+1498710,,none_found,{}
+1501862,"Empire Global Gaming, Inc.",agree,"{""2018"": ""Empire Global Gaming, Inc."", ""2019"": ""Empire Global Gaming, Inc."", ""2020"": ""Empire Global Gaming, Inc.""}"
+1502557,,none_found,{}
+1505155,,none_found,{}
+1505497,"BioRestorative Therapies, Inc.",agree,"{""2018"": ""BioRestorative Therapies, Inc."", ""2019"": ""BioRestorative Therapies, Inc."", ""2020"": ""BioRestorative Therapies, Inc.""}"
+1511737,,none_found,{}
+1514056,,single_year,"{""2018"": ""On July 19, 2017, TraqIQ, Inc.""}"
+1517022,,none_found,{}
+1518715,,none_found,{}
+1525306,Current Status/Contemplated Acquisition First America Resources Corporation,agree,"{""2018"": ""Current Status/Contemplated Acquisition First America Resources Corporation"", ""2019"": ""Current Status/Contemplated Acquisition First America Resources Corporation"", ""2020"": ""Current Status/Contemplated Acquisition First America Resources Corporation""}"
+1525759,,none_found,{}
+1527541,"Wheeler Real Estate Investment Trust, Inc.",agree,"{""2018"": ""Wheeler Real Estate Investment Trust, Inc."", ""2019"": ""Wheeler Real Estate Investment Trust, Inc."", ""2020"": ""Wheeler Real Estate Investment Trust, Inc.""}"
+1527599,,none_found,{}
+1530249,"FS Bancorp, Inc.",agree,"{""2018"": ""FS Bancorp, Inc."", ""2019"": ""FS Bancorp, Inc."", ""2020"": ""FS Bancorp, Inc.""}"
+1530746,,single_year,"{""2018"": ""Kaya Holdings, Inc.""}"
+1532286,,none_found,{}
+1534504,,none_found,{}
+1535955,Lipocine Inc.,agree,"{""2019"": ""Lipocine Inc."", ""2020"": ""Lipocine Inc.""}"
+1536089,Virtual Interactive Technologies Corp.,agree,"{""2018"": ""Mascota Resources Corp."", ""2019"": ""Virtual Interactive Technologies Corp."", ""2020"": ""Virtual Interactive Technologies Corp.""}"
+1536577,,none_found,{}
+1537028,"Independence Contract Drilling, Inc.",agree,"{""2018"": ""Independence Contract Drilling, Inc."", ""2019"": ""Independence Contract Drilling, Inc."", ""2020"": ""Independence Contract Drilling, Inc.""}"
+1537058,,none_found,{}
+1537435,Tecogen Inc.,agree,"{""2019"": ""Tecogen Inc."", ""2020"": ""Tecogen Inc.""}"
+1538990,,none_found,{}
+1539894,"Atlas Financial Holdings, Inc.",agree,"{""2018"": ""Atlas Financial Holdings, Inc."", ""2019"": ""Atlas Financial Holdings, Inc."", ""2020"": ""Atlas Financial Holdings, Inc.""}"
+1542574,,none_found,{}
+1545654,"Strategy Alexander & Baldwin, Inc.",agree,"{""2018"": ""Strategy Alexander & Baldwin, Inc."", ""2019"": ""Strategy Alexander & Baldwin, Inc."", ""2020"": ""Strategy Alexander & Baldwin, Inc.""}"
+1547546,"Hunt Companies Finance Trust, Inc.",agree,"{""2018"": ""Hunt Companies Finance Trust, Inc."", ""2019"": ""Hunt Companies Finance Trust, Inc."", ""2020"": ""Lument Finance Trust, Inc.""}"
+1548187,,single_year,"{""2018"": ""Soliton, Inc.""}"
+1548266,,none_found,{}
+1550221,,none_found,{}
+1551271,,none_found,{}
+1552743,,single_year,"{""2020"": ""Universal Global Hub Inc.""}"
+1559998,"Gaucho Group Holdings, Inc.",agree,"{""2018"": ""Gaucho Group Holdings, Inc."", ""2019"": ""Gaucho Group Holdings, Inc."", ""2020"": ""Gaucho Group Holdings, Inc.""}"
+1561032,,none_found,{}
+1566373,,none_found,{}
+1570562,,none_found,{}
+1572384,"Resort Savers, Inc.",agree,"{""2018"": ""Resort Savers, Inc."", ""2019"": ""Resort Savers, Inc.""}"
+1572987,,none_found,{}
+1573946,,none_found,{}
+1575965,,none_found,{}
+1577545,,none_found,{}
+1580149,,single_year,"{""2018"": ""BioVie Inc.""}"
+1580262,,none_found,{}
+1580905,,none_found,{}
+1581776,,none_found,{}
+1584480,,none_found,{}
+1587497,,none_found,{}
+1587650,,none_found,{}
+1592058,,none_found,{}
+1594012,,none_found,{}
+1594204,Zhen Ding Resources Inc.,agree,"{""2018"": ""Zhen Ding Resources Inc."", ""2019"": ""Zhen Ding Resources Inc."", ""2020"": ""Zhen Ding Resources Inc.""}"
+1596532,,none_found,{}
+1596946,,none_found,{}
+1596961,"RumbleOn, Inc.",agree,"{""2018"": ""RumbleOn, Inc."", ""2019"": ""RumbleOn, Inc."", ""2020"": ""RumbleOn, Inc.""}"
+1596993,Dorian LPG Ltd.,agree,"{""2018"": ""Dorian LPG Ltd."", ""2019"": ""Dorian LPG Ltd."", ""2020"": ""Dorian LPG Ltd.""}"
+1601548,"Vectrus, Inc.",agree,"{""2018"": ""Vectrus, Inc."", ""2019"": ""Vectrus, Inc."", ""2020"": ""Vectrus, Inc.""}"
+1601705,,none_found,{}
+1602409,,single_year,"{""2019"": ""FingerMotion Inc.""}"
+1604930,"Life Clips, Inc.",agree,"{""2018"": ""Life Clips, Inc."", ""2019"": ""Life Clips, Inc."", ""2020"": ""Life Clips, Inc.""}"
+1606698,Alpine 4 Technologies Ltd,agree,"{""2018"": ""Alpine 4 Technologies Ltd."", ""2019"": ""Alpine 4 Technologies Ltd""}"
+1609253,,none_found,{}
+1610950,"Research Holdings, Inc.",agree,"{""2018"": ""Research Holdings, Inc."", ""2019"": ""Research Holdings, Inc."", ""2020"": ""Research Holdings, Inc.""}"
+1612188,Teo Foods Inc.,agree,"{""2019"": ""Teo Foods Inc."", ""2020"": ""Teo Foods Inc.""}"
+1612720,,none_found,{}
+1616318,,none_found,{}
+1616707,,single_year,"{""2020"": ""Wayfair Inc.""}"
+1618921,,none_found,{}
+1619511,,none_found,{}
+1619954,"Inovalon, Inc.",agree,"{""2018"": ""Inovalon, Inc."", ""2019"": ""Inovalon, Inc."", ""2020"": ""Inovalon Holdings, Inc.""}"
+1621227,,none_found,{}
+1621466,,none_found,{}
+1622879,"Medicine Man Technologies, Inc.",agree,"{""2018"": ""Medicine Man Technologies, Inc."", ""2019"": ""Medicine Man Technologies, Inc."", ""2020"": ""Medicine Man Technologies, Inc.""}"
+1623518,,none_found,{}
+1626199,,none_found,{}
+1626745,,single_year,"{""2018"": ""Fortune Valley Treasures, Inc.""}"
+1628063,,none_found,{}
+1629665,,none_found,{}
+1630176,,none_found,{}
+1630805,,none_found,{}
+1631256,"KBS Growth & Income REIT, Inc.",agree,"{""2018"": ""KBS Growth & Income REIT, Inc."", ""2019"": ""KBS Growth & Income REIT, Inc."", ""2020"": ""KBS Growth & Income REIT, Inc.""}"
+1641601,River Bank & Trust,agree,"{""2018"": ""River Bank & Trust"", ""2019"": ""River Bank & Trust"", ""2020"": ""River Bank & Trust""}"
+1641991,,single_year,"{""2020"": ""SPX FLOW, Inc.""}"
+1643301,CURE Pharmaceutical Holding Corp.,agree,"{""2018"": ""CURE Pharmaceutical Holding Corp."", ""2019"": ""CURE Pharmaceutical Holding Corp.""}"
+1647088,WillScot Corporation,agree,"{""2018"": ""WillScot Corporation"", ""2019"": ""WillScot Corporation"", ""2020"": ""WillScot Mobile Mini Holdings Corp.""}"
+1648858,,none_found,{}
+1651944,,none_found,{}
+1652982,,none_found,{}
+1653653,"Red Rock Resorts, Inc.",agree,"{""2018"": ""Red Rock Resorts, Inc."", ""2019"": ""Red Rock Resorts, Inc."", ""2020"": ""Red Rock Resorts, Inc.""}"
+1655591,,none_found,{}
+1655887,,none_found,{}
+1657788,,none_found,{}
+1661181,,none_found,{}
+1667161,"Randolph Bancorp, Inc.",agree,"{""2018"": ""Randolph Bancorp, Inc."", ""2019"": ""Randolph Bancorp, Inc."", ""2020"": ""Randolph Bancorp, Inc.""}"
+1668673,,none_found,{}
+1672909,Canterbury Park Holding Corporation,agree,"{""2018"": ""Canterbury Park Holding Corporation"", ""2019"": ""On March 16, 2020, Canterbury Park Holding Corporation"", ""2020"": ""Canterbury Park Holding Corporation""}"
+1674910,Valvoline Inc.,agree,"{""2018"": ""Valvoline Inc."", ""2019"": ""Valvoline Inc."", ""2020"": ""Valvoline Inc.""}"
+1679082,,none_found,{}
+1679327,,none_found,{}
+1679688,"Colony Capital, Inc.",agree,"{""2018"": ""Colony Capital, Inc."", ""2019"": ""Colony Capital, Inc."", ""2020"": ""Colony Capital, Inc.""}"
+1680689,,none_found,{}
+1681903,"ICC Holdings, Inc.",agree,"{""2018"": ""ICC Holdings, Inc."", ""2019"": ""ICC Holdings, Inc."", ""2020"": ""ICC Holdings, Inc.""}"
+1687229,,single_year,"{""2020"": ""Invitation Homes Inc.""}"
+1690255,,none_found,{}
+1690585,,none_found,{}
+1692144,"2014, Life Partners, Inc.",agree,"{""2018"": ""2014, Life Partners, Inc."", ""2019"": ""2014, Life Partners, Inc."", ""2020"": ""2014, Life Partners, Inc.""}"
+1692981,,none_found,{}
+1698685,,none_found,{}
+1699099,,none_found,{}
+1699462,,none_found,{}
+1702494,,none_found,{}
+1704715,"Contura Energy, Inc.",agree,"{""2018"": ""Contura Energy, Inc."", ""2019"": ""Contura Energy, Inc."", ""2020"": ""Alpha Metallurgical Resources, Inc.""}"
+1707817,,none_found,{}
+1712923,"GreenSky, Inc.",agree,"{""2018"": ""GreenSky, Inc."", ""2019"": ""GreenSky, Inc."", ""2020"": ""GreenSky, Inc.""}"
+1715824,,none_found,{}
+1715933,,none_found,{}
+1716263,,none_found,{}
+1716602,,none_found,{}
+1718227,"Construction Partners, Inc.",agree,"{""2018"": ""Construction Partners, Inc."", ""2019"": ""Construction Partners, Inc."", ""2020"": ""Construction Partners, Inc.""}"
+1718362,,none_found,{}
+1726079,"TipMeFast, Inc.",agree,"{""2018"": ""TipMeFast, Inc."", ""2019"": ""TipMeFast, Inc."", ""2020"": ""TipMeFast, Inc.""}"
+1727263,,none_found,{}
+1735464,,none_found,{}
+1736712,,none_found,{}
+1739942,,none_found,{}
+1749973,,none_found,{}
+1750588,,none_found,{}
+1752578,,none_found,{}

@@ -33,3 +33,5 @@ outputs/db_dumps_*/*.dump
 
 # EDGAR-CORPUS downloads (untrusted data; hashes in outputs/edgar_source_check_*/download_manifest.json)
 data/raw/edgar_corpus/
+# Phase F chunk file (354 MB; sha256 in outputs/data_checksums.json; rebuild with src.phase_f_edgar.build_chunks)
+outputs/edgar_chunks_*/chunks.jsonl
