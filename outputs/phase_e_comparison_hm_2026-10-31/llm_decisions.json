@@ -1,0 +1,270 @@
+{
+ "model": "gemini-3.8-flash",
+ "system_prompt": "You are the router of a vector database. Decide how to apply a metadata filter (company ticker and fiscal year) to the vector search for the user's question. 'pre-filter' applies the filter first and searches only the matching rows; 'post-filter' searches the whole index first and applies the filter afterwards. Reply with JSON only, exactly: {\"route\": \"pre-filter\" or \"post-filter\", \"reason\": \"<one short sentence>\"} The metadata filter that will be applied is stated before the question.",
+ "system_prompt_sha256": "9a45dab76e84a4e6983d1e1e4ec1b41a16753d816397a55dbfc0292777becf0d",
+ "budget_usd": 5.0,
+ "total_cost_usd": 0.00262875,
+ "created_utc": "2026-10-30T20:28:30.310811+00:00",
+ "decisions": [
+  {
+   "set": "ho1",
+   "filter_id": "ho1",
+   "filter_key": "[[\"garment_group_name\", [\"Shirts\"]]]",
+   "user_message": "Metadata filter to be applied: garment_group_name = 'Shirts'\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering restricts the search to only shirts, ensuring the top 10 results satisfy the category constraint without being displaced by irrelevant garment types.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering restricts the search to only shirts, ensuring the top 10 results satisfy the category constraint without being displaced by irrelevant garment types.",
+   "parse_error": null,
+   "latency_ms": 16992.150899997796,
+   "input_tokens": 141,
+   "output_tokens": 42,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00026325,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho1",
+   "filter_id": "ho2",
+   "filter_key": "[[\"perceived_colour_master_name\", [\"Yellow\"]]]",
+   "user_message": "Metadata filter to be applied: perceived_colour_master_name = 'Yellow'\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering ensures that only items matching the specific yellow color are retrieved and ranked, avoiding irrelevant color matches filling the top 10 results.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering ensures that only items matching the specific yellow color are retrieved and ranked, avoiding irrelevant color matches filling the top 10 results.",
+   "parse_error": null,
+   "latency_ms": 3846.593100002792,
+   "input_tokens": 143,
+   "output_tokens": 42,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00026475,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho1",
+   "filter_id": "ho3",
+   "filter_key": "[[\"garment_group_name\", [\"Under-, Nightwear\"]]]",
+   "user_message": "Metadata filter to be applied: garment_group_name = 'Under-, Nightwear'\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering restricts the search space to the relevant category, ensuring all returned top-10 items strictly match the required garment group.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering restricts the search space to the relevant category, ensuring all returned top-10 items strictly match the required garment group.",
+   "parse_error": null,
+   "latency_ms": 2962.3867999980575,
+   "input_tokens": 144,
+   "output_tokens": 40,
+   "thinking_tokens": 0,
+   "cost_usd": 0.000258,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho1",
+   "filter_id": "ho4",
+   "filter_key": "[[\"index_group_name\", [\"Divided\"]]]",
+   "user_message": "Metadata filter to be applied: index_group_name = 'Divided'\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering ensures that all top 10 returned results strictly belong to the specified index group without risking insufficient matches from post-filtering.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering ensures that all top 10 returned results strictly belong to the specified index group without risking insufficient matches from post-filtering.",
+   "parse_error": null,
+   "latency_ms": 1879.0028000003076,
+   "input_tokens": 142,
+   "output_tokens": 41,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00026025,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho1",
+   "filter_id": "ho5",
+   "filter_key": "[[\"graphical_appearance_name\", [\"All over pattern\", \"Colour blocking\"]]]",
+   "user_message": "Metadata filter to be applied: graphical_appearance_name IN ('All over pattern', 'Colour blocking')\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering ensures that the vector search only considers items with the specified graphical patterns to return the required top 10 results.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering ensures that the vector search only considers items with the specified graphical patterns to return the required top 10 results.",
+   "parse_error": null,
+   "latency_ms": 1886.1295999959111,
+   "input_tokens": 147,
+   "output_tokens": 39,
+   "thinking_tokens": 0,
+   "cost_usd": 0.0002565,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho2",
+   "filter_id": "h2a",
+   "filter_key": "[[\"graphical_appearance_name\", [\"Melange\", \"Stripe\", \"Denim\", \"Front print\", \"Placement print\", \"Check\"]]]",
+   "user_message": "Metadata filter to be applied: graphical_appearance_name IN ('Melange', 'Stripe', 'Denim', 'Front print', 'Placement print', 'Check')\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering ensures that the top 10 most similar items are selected strictly from the specified graphical appearance categories without wasting the search budget.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering ensures that the top 10 most similar items are selected strictly from the specified graphical appearance categories without wasting the search budget.",
+   "parse_error": null,
+   "latency_ms": 1840.5281000013929,
+   "input_tokens": 161,
+   "output_tokens": 41,
+   "thinking_tokens": 0,
+   "cost_usd": 0.0002745,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho2",
+   "filter_id": "h2b",
+   "filter_key": "[[\"garment_group_name\", [\"Accessories\", \"Jersey Basic\", \"Knitwear\"]]]",
+   "user_message": "Metadata filter to be applied: garment_group_name IN ('Accessories', 'Jersey Basic', 'Knitwear')\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering restricts the search space to the specified garment groups before similarity calculation, ensuring all top 10 results strictly match the required categories.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering restricts the search space to the specified garment groups before similarity calculation, ensuring all top 10 results strictly match the required categories.",
+   "parse_error": null,
+   "latency_ms": 9902.380600004108,
+   "input_tokens": 150,
+   "output_tokens": 42,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00026999999999999995,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho2",
+   "filter_id": "h2c",
+   "filter_key": "[[\"perceived_colour_master_name\", [\"White\", \"Pink\", \"Beige\", \"Green\", \"Khaki green\"]]]",
+   "user_message": "Metadata filter to be applied: perceived_colour_master_name IN ('White', 'Pink', 'Beige', 'Green', 'Khaki green')\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering ensures that the top 10 most similar items are selected strictly from the specified subset of colors without risking insufficient matches from a post-filter.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering ensures that the top 10 most similar items are selected strictly from the specified subset of colors without risking insufficient matches from a post-filter.",
+   "parse_error": null,
+   "latency_ms": 74331.26820000325,
+   "input_tokens": 158,
+   "output_tokens": 45,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00028725,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho2",
+   "filter_id": "h2d",
+   "filter_key": "[[\"product_type_name\", [\"Dress\", \"Sweater\", \"T-shirt\", \"Top\", \"Blouse\", \"Jacket\"]]]",
+   "user_message": "Metadata filter to be applied: product_type_name IN ('Dress', 'Sweater', 'T-shirt', 'Top', 'Blouse', 'Jacket')\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"pre-filter\", \"reason\": \"Pre-filtering ensures that all 10 returned results strictly adhere to the specified product type categories.\"}",
+   "route": "pre-filter",
+   "reason": "Pre-filtering ensures that all 10 returned results strictly adhere to the specified product type categories.",
+   "parse_error": null,
+   "latency_ms": 1859.9694000004092,
+   "input_tokens": 161,
+   "output_tokens": 33,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00024450000000000003,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  },
+  {
+   "set": "ho2",
+   "filter_id": "h2e",
+   "filter_key": "[[\"product_type_name\", [\"Dress\", \"Sweater\", \"T-shirt\", \"Top\", \"Blouse\", \"Jacket\", \"Shorts\", \"Shirt\"]]]",
+   "user_message": "Metadata filter to be applied: product_type_name IN ('Dress', 'Sweater', 'T-shirt', 'Top', 'Blouse', 'Jacket', 'Shorts', 'Shirt')\nQuestion: find the 10 catalogue items most similar to the query item.",
+   "raw": "{\"route\": \"post-filter\", \"reason\": \"The filter covers a broad set of product types with low selectivity, making post-filtering more efficient.\"}",
+   "route": "post-filter",
+   "reason": "The filter covers a broad set of product types with low selectivity, making post-filtering more efficient.",
+   "parse_error": null,
+   "latency_ms": 5309.15559999994,
+   "input_tokens": 168,
+   "output_tokens": 33,
+   "thinking_tokens": 0,
+   "cost_usd": 0.00024974999999999997,
+   "finish_reason": "STOP",
+   "settings_used": {
+    "temperature": 0,
+    "temperature_applied": true,
+    "max_output_tokens": 2048,
+    "thinking": {
+     "thinking_level": "LOW"
+    },
+    "location": "global",
+    "project": "bsc-research-project-511410"
+   }
+  }
+ ]
+}

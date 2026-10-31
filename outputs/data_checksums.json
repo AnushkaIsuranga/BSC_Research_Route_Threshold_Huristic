@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 246,
+  "n_files": 254,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -986,6 +986,38 @@
     "outputs/phase_e_calibration_hm_2026-10-30/run.log": {
       "sha256": "efa253ee16e89c3c5da0d4748703b626c9d4c75aa07ad7d2d724f2836254d359",
       "bytes": 1287
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/host_load_1793392187.json": {
+      "sha256": "49afe5605a60946ba65f5cff4dc31d85212cf1a4a5eb46f9a4c8e7a4b4d01fc4",
+      "bytes": 80149
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/llm_decisions.json": {
+      "sha256": "cb2d77614119ca873e3b41c1322d8dd233ab6cc097a279f7783f35ec47853eeb",
+      "bytes": 12679
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/preflight.json": {
+      "sha256": "2e87692807990f69c4c6bdfad459bba1c77be05e039ca6ff6a1ae5ab7ae55fa4",
+      "bytes": 184710
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/run_meta.json": {
+      "sha256": "541fbca9f6fd5bcd28f629fb558582e1fb7662bf1bd2ad7b60292d279ac4b51b",
+      "bytes": 2818
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/summary.json": {
+      "sha256": "daa3223bcc2df4b8cd6d72ea8ac8fac5555346988f6f57b58621bb5ea94b6922",
+      "bytes": 203149
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/results.jsonl": {
+      "sha256": "a20b49c6983e08b91740bcfd1d27dc7f9bfef0d03beb91fae30cfbb0801e9bd7",
+      "bytes": 64639139
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/cell_summary.csv": {
+      "sha256": "ffe21a000f59e09c5ac2037bb395d4b28fd08ad35c3c7b81bad003fd08f21533",
+      "bytes": 275478
+    },
+    "outputs/phase_e_comparison_hm_2026-10-31/run.log": {
+      "sha256": "e8ffbf79b094793699d6a90c70d1303e906ca3a798a4c3ec67ad18041869415a",
+      "bytes": 2848
     }
   },
   "additions": [
@@ -1229,6 +1261,20 @@
         "outputs/phase_e_calibration_hm_2026-10-30/results.jsonl",
         "outputs/phase_e_calibration_hm_2026-10-30/run.log",
         "outputs/phase_e_calibration_hm_2026-10-30/run_meta.json"
+      ]
+    },
+    {
+      "label": "phase_e_comparison_hm_2026-10-31",
+      "added_utc": "2026-10-31T07:12:38.931234+00:00",
+      "paths": [
+        "outputs/phase_e_comparison_hm_2026-10-31/cell_summary.csv",
+        "outputs/phase_e_comparison_hm_2026-10-31/host_load_1793392187.json",
+        "outputs/phase_e_comparison_hm_2026-10-31/llm_decisions.json",
+        "outputs/phase_e_comparison_hm_2026-10-31/preflight.json",
+        "outputs/phase_e_comparison_hm_2026-10-31/results.jsonl",
+        "outputs/phase_e_comparison_hm_2026-10-31/run.log",
+        "outputs/phase_e_comparison_hm_2026-10-31/run_meta.json",
+        "outputs/phase_e_comparison_hm_2026-10-31/summary.json"
       ]
     }
   ]

@@ -1,0 +1,114 @@
+{
+ "git_commit": "9d19194958aa9aa1cec9da40c41c4699e4f0156c",
+ "git_dirty_phase_e": false,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "server_settings": {
+  "shared_buffers": "128MB",
+  "work_mem": "4MB",
+  "effective_cache_size": "4GB",
+  "max_parallel_workers_per_gather": "2",
+  "jit": "off",
+  "statement_timeout": "2min",
+  "hnsw.max_scan_tuples": "20000",
+  "hnsw.scan_mem_multiplier": "1",
+  "hnsw.ef_search": "40"
+ },
+ "python": "3.11.9",
+ "platform": "Windows-10-10.0.26220-SP0",
+ "started_utc": "2026-10-30T20:29:47.948682+00:00",
+ "seed": 20261031,
+ "k": 10,
+ "timed_repeats": 5,
+ "sets": [
+  "ho1",
+  "ho2",
+  "in_sample"
+ ],
+ "modes": [
+  "router",
+  "router_tuned",
+  "router_no_guard",
+  "router_always_count",
+  "fixed_t_0_1",
+  "local_probe",
+  "router_plus_probe",
+  "iterative_tuned",
+  "default_hnsw",
+  "planner_iterative",
+  "retry_exact",
+  "always_exact",
+  "always_iterative"
+ ],
+ "llm_router": true,
+ "T_default": 0.07119177617441379,
+ "T_tuned": 0.07119177617441379,
+ "vectors_sha256_lines_0_59": "5a429ee294438009725401a3148c123faf1c5b06002bc50f8667b8cb8e18f63f",
+ "schedule_sha256": "33185eee902f86fdc7c5511452e6027f2ffa672237c24279e546f4c7efc66924",
+ "n_items": 30900,
+ "quiet_check": {
+  "rule": "Amendment 9 Addendum 2",
+  "blocking_processes": [],
+  "cpu_samples": [
+   13.86,
+   13.41,
+   12.06,
+   12.33,
+   13.18,
+   16.04
+  ],
+  "cpu_mean": 13.479999999999999,
+  "win32_load_samples_disclosure": [
+   23,
+   20,
+   24,
+   18,
+   26,
+   34
+  ],
+  "quiet": true
+ },
+ "config": {
+  "_note": "Phase E router config (Amendment 9). Everything table-specific lives here so src/phase_e_router can be reused on another table by swapping this file.",
+  "tables": [
+   "hm_clothes_0",
+   "hm_clothes_25",
+   "hm_clothes_50",
+   "hm_clothes_75",
+   "hm_clothes_100"
+  ],
+  "id_column": "id",
+  "vector_expr": "(embedding::halfvec(2048))",
+  "query_cast": "halfvec(2048)",
+  "distance_operator": "<=>",
+  "metric": "cosine",
+  "hnsw_index_suffix": "embedding_idx",
+  "filter_columns": [
+   "index_group_name",
+   "product_type_name",
+   "garment_group_name",
+   "perceived_colour_master_name",
+   "graphical_appearance_name"
+  ],
+  "k": 10,
+  "ef_search": 40,
+  "jit": "off",
+  "statement_timeout_ms": 120000,
+  "iterative_default": {
+   "max_scan_tuples": 20000,
+   "scan_mem_multiplier": 1
+  },
+  "iterative_tuned": {
+   "max_scan_tuples": 100000,
+   "scan_mem_multiplier": 4
+  },
+  "probe": {
+   "m": 100,
+   "ef_search": 100
+  },
+  "fixed_T": 0.1,
+  "latency_limit_ms": 500,
+  "recall_target": 0.9,
+  "policy_file": "config/policy_v3_hm.json"
+ }
+}
