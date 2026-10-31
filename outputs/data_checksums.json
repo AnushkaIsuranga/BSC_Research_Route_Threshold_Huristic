@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 265,
+  "n_files": 268,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1062,6 +1062,18 @@
     "outputs/phase_d_always_hnsw_pilot_2026-10-31/run_meta.json": {
       "sha256": "1dd921a41bbbed84aa6c9d6843ba44611628a3c9f691aff80c42a5d11d7b519b",
       "bytes": 7656
+    },
+    "outputs/phase_d_always_hnsw_2026-10-31/results.jsonl": {
+      "sha256": "457b241a1471857700904481a90dd1b90634c0a3c9dfcdd1cb7b394c7be525bf",
+      "bytes": 628930
+    },
+    "outputs/phase_d_always_hnsw_2026-10-31/results.csv": {
+      "sha256": "be541fb3c8accdc36c5ecf7a74159d0c693182b19dc5ac68b803cb8e530c880c",
+      "bytes": 251998
+    },
+    "outputs/phase_d_always_hnsw_2026-10-31/run_meta.json": {
+      "sha256": "6bf7253f865a544c30949a67e5c0a49a073d340574441116bf3e2cda14b7bef3",
+      "bytes": 30923
     }
   },
   "additions": [
@@ -1354,6 +1366,15 @@
         "outputs/phase_d_always_hnsw_pilot_2026-10-31/results.csv",
         "outputs/phase_d_always_hnsw_pilot_2026-10-31/results.jsonl",
         "outputs/phase_d_always_hnsw_pilot_2026-10-31/run_meta.json"
+      ]
+    },
+    {
+      "label": "phase_d_always_hnsw_2026-10-31",
+      "added_utc": "2026-10-31T09:16:17.479283+00:00",
+      "paths": [
+        "outputs/phase_d_always_hnsw_2026-10-31/results.csv",
+        "outputs/phase_d_always_hnsw_2026-10-31/results.jsonl",
+        "outputs/phase_d_always_hnsw_2026-10-31/run_meta.json"
       ]
     }
   ]
