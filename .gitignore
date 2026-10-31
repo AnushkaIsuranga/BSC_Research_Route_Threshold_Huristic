@@ -30,3 +30,6 @@ Coding_TODO_List.md
 outputs/db_dumps_*/*.dump
 .venv-ragas/
 .venv-vecadvisor/
+
+# EDGAR-CORPUS downloads (untrusted data; hashes in outputs/edgar_source_check_*/download_manifest.json)
+data/raw/edgar_corpus/

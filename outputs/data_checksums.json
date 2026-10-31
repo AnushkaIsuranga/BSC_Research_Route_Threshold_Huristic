@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 285,
+  "n_files": 288,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1142,6 +1142,21 @@
     "outputs/scaleup_confirmation_2026-10-13/summary.json": {
       "sha256": "0ba5f3e865cad5c5f2dbf270bc29e826f006cee9500f1732603e5b3179b1ce57",
       "bytes": 685
+    },
+    "outputs/edgar_source_check_2026-10-31/download_manifest.json": {
+      "sha256": "a09b72f7ea1c51b9e80ee64f47ffded3aad9b75d242d009d36df6a486a9f3d55",
+      "bytes": 4085,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_source_check_2026-10-31/report_index.csv": {
+      "sha256": "3ada976c396eafe86bd4beb8cee4e6a826f1d30ca4fbaf41f9a8b9fa18cb1053",
+      "bytes": 3039499,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_source_check_2026-10-31/summary.json": {
+      "sha256": "428895c9d570fb1e329368b211b93bc3eb205aab4a29d9ac4ae0614eb30dab56",
+      "bytes": 9155,
+      "line_endings": "CRLF"
     }
   },
   "additions": [
@@ -1478,6 +1493,15 @@
         "outputs/scaleup_confirmation_2026-10-13/confirmation_1075.csv",
         "outputs/scaleup_confirmation_2026-10-13/excluded_unparseable_gold.csv",
         "outputs/scaleup_confirmation_2026-10-13/summary.json"
+      ]
+    },
+    {
+      "label": "Phase F Task 1: EDGAR-CORPUS source and size check (2026-10-31)",
+      "added_utc": "2026-10-31T14:20:19.184201+00:00",
+      "paths": [
+        "outputs/edgar_source_check_2026-10-31/download_manifest.json",
+        "outputs/edgar_source_check_2026-10-31/report_index.csv",
+        "outputs/edgar_source_check_2026-10-31/summary.json"
       ]
     }
   ]

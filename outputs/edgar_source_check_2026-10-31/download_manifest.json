@@ -1,0 +1,86 @@
+{
+ "dataset": "eloukas/edgar-corpus",
+ "revision": "7e90f0f342569b35213445f809cfaf3b91f9964f",
+ "files": [
+  {
+   "file": "2018/test.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2018/test.jsonl",
+   "bytes": 184475611,
+   "sha256": "f66ce0755e86fed09b986905c59962cfed9b28a523cdce57723075157c9c44c7",
+   "expected_lfs_sha256": "f66ce0755e86fed09b986905c59962cfed9b28a523cdce57723075157c9c44c7",
+   "match": true
+  },
+  {
+   "file": "2018/train.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2018/train.jsonl",
+   "bytes": 1448040916,
+   "sha256": "e81d3d4d380f00a5bc965f5f1d55a882d5f5c7bfdc905530b0b183a6124968ef",
+   "expected_lfs_sha256": "e81d3d4d380f00a5bc965f5f1d55a882d5f5c7bfdc905530b0b183a6124968ef",
+   "match": true
+  },
+  {
+   "file": "2018/validate.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2018/validate.jsonl",
+   "bytes": 183294040,
+   "sha256": "f0c62c3cec722a9e7f1e92ceb81e7b213bd6dacbd8b7ab4869207109ac56666e",
+   "expected_lfs_sha256": "f0c62c3cec722a9e7f1e92ceb81e7b213bd6dacbd8b7ab4869207109ac56666e",
+   "match": true
+  },
+  {
+   "file": "2019/test.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2019/test.jsonl",
+   "bytes": 178112607,
+   "sha256": "abb9947646fbc32a48dcb56f35f668fcef2f628307f6d7c14cc5c2fc14466042",
+   "expected_lfs_sha256": "abb9947646fbc32a48dcb56f35f668fcef2f628307f6d7c14cc5c2fc14466042",
+   "match": true
+  },
+  {
+   "file": "2019/train.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2019/train.jsonl",
+   "bytes": 1435739542,
+   "sha256": "9f05959fe52a99536c474c8cf61f2197e9bbce6c16b2a1c2dd4a81622e0a8d91",
+   "expected_lfs_sha256": "9f05959fe52a99536c474c8cf61f2197e9bbce6c16b2a1c2dd4a81622e0a8d91",
+   "match": true
+  },
+  {
+   "file": "2019/validate.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2019/validate.jsonl",
+   "bytes": 177385006,
+   "sha256": "9b220d29c23341cc9fa528dd81bdd06484aa246ad478231f57bb0097dd03b07e",
+   "expected_lfs_sha256": "9b220d29c23341cc9fa528dd81bdd06484aa246ad478231f57bb0097dd03b07e",
+   "match": true
+  },
+  {
+   "file": "2020/test.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2020/test.jsonl",
+   "bytes": 194501145,
+   "sha256": "5409efc829acfde7e1f96b93ff52be0b55e22dd47e2495986ce765f556538f72",
+   "expected_lfs_sha256": "5409efc829acfde7e1f96b93ff52be0b55e22dd47e2495986ce765f556538f72",
+   "match": true
+  },
+  {
+   "file": "2020/train.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2020/train.jsonl",
+   "bytes": 1557050199,
+   "sha256": "ee605e79b4ac9f91d6571228b3ad4c4db4509e741efba4438c679433a104f2bc",
+   "expected_lfs_sha256": "ee605e79b4ac9f91d6571228b3ad4c4db4509e741efba4438c679433a104f2bc",
+   "match": true
+  },
+  {
+   "file": "2020/validate.jsonl",
+   "url": "https://huggingface.co/datasets/eloukas/edgar-corpus/resolve/7e90f0f342569b35213445f809cfaf3b91f9964f/2020/validate.jsonl",
+   "bytes": 195364788,
+   "sha256": "89bba2f87645bf0e6639204987fe71434fcf6d63222cee7d92f85e192a2d9f59",
+   "expected_lfs_sha256": "89bba2f87645bf0e6639204987fe71434fcf6d63222cee7d92f85e192a2d9f59",
+   "match": true
+  },
+  {
+   "file": "qwen3_tokenizer/tokenizer.json",
+   "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B/resolve/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/tokenizer.json",
+   "bytes": 11422947,
+   "sha256": "83cdf8c3a34f68862319cb1810ee7b1e2c0a44e0864ae930194ddb76bb7feb8d",
+   "expected_lfs_sha256": "83cdf8c3a34f68862319cb1810ee7b1e2c0a44e0864ae930194ddb76bb7feb8d",
+   "match": true
+  }
+ ]
+}
