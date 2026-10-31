@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 258,
+  "n_files": 260,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1034,6 +1034,14 @@
     "outputs/phase_e_exploratory_exact_cache_2026-10-31/cell_comparison.csv": {
       "sha256": "863850de16d9cc7cd119e77ac23fca8aab404b959f9fe8d2551e286f4774c034",
       "bytes": 844
+    },
+    "outputs/finqa_router_v3_route_check_2026-10-31/route_check.csv": {
+      "sha256": "0bca9f919ea9998a50f926ffe75e4b4ad8db671b2cce07e7b70ad3c811242e83",
+      "bytes": 6850
+    },
+    "outputs/finqa_router_v3_route_check_2026-10-31/meta.json": {
+      "sha256": "6c509d97c18c8cc09d39e7b4ae861e1af867fe6de0cb525410c76c47b42b0ade",
+      "bytes": 960
     }
   },
   "additions": [
@@ -1301,6 +1309,14 @@
         "outputs/phase_e_exploratory_exact_cache_2026-10-31/host_load.json",
         "outputs/phase_e_exploratory_exact_cache_2026-10-31/results.jsonl",
         "outputs/phase_e_exploratory_exact_cache_2026-10-31/run_meta.json"
+      ]
+    },
+    {
+      "label": "finqa_router_v3_route_check_2026-10-31",
+      "added_utc": "2026-10-31T08:12:33.139682+00:00",
+      "paths": [
+        "outputs/finqa_router_v3_route_check_2026-10-31/meta.json",
+        "outputs/finqa_router_v3_route_check_2026-10-31/route_check.csv"
       ]
     }
   ]

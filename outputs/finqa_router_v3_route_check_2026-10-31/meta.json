@@ -1,0 +1,35 @@
+{
+  "label": "read-only check, no paid calls, no timed measurements",
+  "utc": "2026-10-31T08:11:29.086408+00:00",
+  "git_commit": "a3ccf1d836a8c71eab1a2049d42a4752a3ce7ae6",
+  "table": "finqa_evidence_qwen3",
+  "reltuples": 35873.0,
+  "actual_rows": 35862,
+  "T": 0.07119177617441379,
+  "T_source": "config/policy_v3_hm.json T_default",
+  "band_edges": [
+    0.035595888087206894,
+    0.14238355234882757
+  ],
+  "count_cap": 2554,
+  "frozen_subset": "outputs/phase2_selection_output/finqa_phase2_selected_50_20260819_140501.csv",
+  "n_questions": 50,
+  "routes": {
+    "exact": 50
+  },
+  "bands": {
+    "exact": 50
+  },
+  "plan_rows_distinct": [
+    1
+  ],
+  "est_over_exact_min": 0.0014342802908123072,
+  "est_over_exact_max": 0.04998466813480891,
+  "qwen3_counts_equal_finqa_evidence": true,
+  "census_vs_exact": {
+    "questions": 1147,
+    "corpus_rows": 35862,
+    "exact_raised": [],
+    "value_disagreements": []
+  }
+}
