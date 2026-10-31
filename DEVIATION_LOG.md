@@ -182,3 +182,23 @@ Amendment 9 (`docs/preregistration/PHASE_E_AMENDMENT_9.md`, tag `phase-e-amendme
 1. **Smoke timings on in-sample cells before the calibration session.** While testing the module (commit `b447c1c`), tuned iterative (`max_scan_tuples` 100000, `scan_mem_multiplier` 4) was timed with EXPLAIN ANALYZE on hm_clothes_0 lo1 and hm_clothes_100 lo2/lo3, vectors 0-1 (in-sample only): 0.2-14 s per query vs 150-190 ms for default iterative; one cold first call 28.6 s. No held-out cell was queried. These timings are not used anywhere.
 2. **Run-time estimate.** Because of (1), the D2 session is expected to take about 3-3.5 h, not the 1-1.5 h stated in the amendment (an estimate, not a rule; no rule changes).
 3. **D3 reproducibility check.** The pre-registered selection (3 in-sample cells with the lowest stored forced-hnsw mean recall) picked hm_clothes_0 lo1, hm_clothes_0 lo2 and hm_clothes_100 lo1, whose stored and new recall are 0.0 for every vector; identical (20/20 each) but unable to detect a difference. A **supplementary, not pre-registered** check on the 3 cells with stored mean closest to 0.5 (hm_clothes_100 ctl 0.520, hm_clothes_75 gap2 0.530, hm_clothes_100 gap2 0.455) also reproduced 20/20 vectors exactly (`outputs/ground_truth_hm/repro_check_supplementary.json`).
+
+## 2026-10-31 — Phase E: in-session CPU load during the calibration and Task 4 sessions (no result changed)
+
+A pause/re-run rule (10 s CPU sampling during the session; pause and re-run items when the 60 s rolling mean exceeds 40%) was drafted on 30 Oct in the author's planning notes but was not passed to the implementation session. The recorded instruction was 'Amend the CPU measure' (30 Oct, 10:29 UTC), and the tagged Addendum 2 (`phase-e-amendment-9-addendum-2-2026-10-30`) contains only the start-of-session check. The rule is recorded here for transparency; it was never part of the pre-registered protocol.
+
+The sessions logged one 1 s reading of `\Processor(_Total)\% Processor Time` every 5 minutes (`outputs/phase_e_calibration_hm_2026-10-30/host_load.json`, `outputs/phase_e_comparison_hm_2026-10-31/host_load_1793392187.json`), so a 60 s rolling mean cannot be computed. Every reading above 40 %, with the items finished within 60 s of it (cell: routes or modes, vector indices; full list in `outputs/phase_e_final_2026-10-31/load_spike_check.json`):
+
+- Calibration (D2) 2026-10-30 12:10:12 UTC, 43.8 %: 53 items. hm_clothes_25 gap3: exact, iterative_default, iterative_tuned, probe; vectors 0, 1, 3, 7, 8, 9, 10, 12, 14, 15, 16, 17, 18 | hm_clothes_25 lo1: probe; vectors 18
+- Calibration (D2) 2026-10-30 12:20:22 UTC, 53.0 %: 67 items. hm_clothes_25 idx3: exact, iterative_default, iterative_tuned, probe; vectors 0, 2, 3, 9, 10, 14, 15, 16, 18, 19 | hm_clothes_25 lo2: exact, iterative_default, iterative_tuned, probe; vectors 1, 4, 7, 8, 10, 11, 18, 19
+- Calibration (D2) 2026-10-30 12:55:58 UTC, 62.8 %: 65 items. hm_clothes_100 gap1: probe; vectors 10 | hm_clothes_100 idx3: exact, iterative_default, iterative_tuned, probe; vectors 0, 1, 3, 4, 6, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19
+- Task 4 2026-10-31 01:49:48 UTC, 41.5 %: 75 items. hm_clothes_75 h2d (ho2): 14 modes; vectors 43, 45, 49, 53, 55, 56
+- Task 4 2026-10-31 01:54:53 UTC, 43.0 %: 78 items. hm_clothes_75 h2c (ho2): 14 modes; vectors 40, 53, 55 | hm_clothes_75 h2d (ho2): 14 modes; vectors 48, 57, 58
+- Task 4 2026-10-31 02:30:27 UTC, 100 %: 77 items. hm_clothes_75 gap3: 13 modes; vectors 2, 3, 7, 8, 14, 15, 18
+- Task 4 2026-10-31 04:52:38 UTC, 44.4 %: 65 items. hm_clothes_50 gap3: 13 modes; vectors 0, 4, 5, 8, 15, 18
+
+None of the affected cells is within 20 % of the 500 ms limit (cell latencies are <= 270 ms or >= about 980 ms for the routes or modes concerned), so no verdict could change. Nothing was re-run. Earlier progress reports omitted the readings at 12:55:58 (calibration) and 01:49:48 and 01:54:53 (Task 4); `reports/phase_e_results_2026-10-31.md` lists all of them.
+
+## 2026-10-31 — Phase E Task 5 (concurrency test) not run (no result changed)
+
+Task 5 of the Amendment 9 testing prompt (concurrency test, optional) was **not run**, by the author's decision on 31 Oct 2026, because of time; it is first in the tagged cut order of `PHASE_E_AMENDMENT_9.md`. No output exists for it; no Phase E result depends on it.

@@ -1,0 +1,3012 @@
+{
+ "T": 0.07119177617441379,
+ "heldout_coverage": [
+  {
+   "filter_id": "ho1",
+   "selectivity": 0.020133206470028545,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "exact->exact": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "exact->exact": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 4
+  },
+  {
+   "filter_id": "ho2",
+   "selectivity": 0.029619410085632732,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "exact->exact": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "exact->exact": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "ho3",
+   "selectivity": 0.07052331113225499,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "count->exact": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "count->exact": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "ho4",
+   "selectivity": 0.14352045670789723,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 60,
+    "count->iterative": 40
+   },
+   "fixed_t_0_1_band->route": {
+    "count->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "ho5",
+   "selectivity": 0.18028544243577546,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "count->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "h2a",
+   "selectivity": 0.23038058991436727,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "iterative->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "h2b",
+   "selectivity": 0.2562511893434824,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "iterative->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "h2c",
+   "selectivity": 0.3262036156041865,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "iterative->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "h2d",
+   "selectivity": 0.37668886774500476,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "iterative->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  },
+  {
+   "filter_id": "h2e",
+   "selectivity": 0.4464224548049477,
+   "in_(T,0.1)": false,
+   "below_0.0105": false,
+   "router_band->route": {
+    "iterative->iterative": 100
+   },
+   "fixed_t_0_1_band->route": {
+    "iterative->iterative": 100
+   },
+   "router_pass_cells": 5,
+   "always_iterative_pass_cells": 5
+  }
+ ],
+ "always_iterative_heldout_failures": [
+  {
+   "set": "ho1",
+   "table": "hm_clothes_100",
+   "filter_id": "ho1",
+   "selectivity": "0.020133206470028545",
+   "mean_recall": "0.8949999999999999",
+   "full_k_rate": "1.0",
+   "median_ms": "36.16245000011986",
+   "p95_ms": "151.88250000210246",
+   "reason": "recall"
+  }
+ ],
+ "guard_triggers_normal_and_timed_runs": {
+  "retry_exact": 9036,
+  "iterative_tuned": 18
+ },
+ "router_variant_differences": {
+  "router_tuned": {
+   "cells_differing_gt10pct": 0,
+   "recall_gt10pct": 0,
+   "verdict_changes": 0,
+   "of_which_s_ge_T": 0,
+   "cells": []
+  },
+  "router_no_guard": {
+   "cells_differing_gt10pct": 0,
+   "recall_gt10pct": 0,
+   "verdict_changes": 0,
+   "of_which_s_ge_T": 0,
+   "cells": []
+  },
+  "router_always_count": {
+   "cells_differing_gt10pct": 84,
+   "recall_gt10pct": 0,
+   "verdict_changes": 0,
+   "of_which_s_ge_T": 74,
+   "cells": [
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.944699997111456,
+     "variant_ms": 19.802499999059364,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 16.52674999786541,
+     "variant_ms": 20.344099997601006,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 19.81080000041402,
+     "variant_ms": 22.811749997345032,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.554849997191923,
+     "variant_ms": 19.95829999941634,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.900049999094335,
+     "variant_ms": 19.60289999988163,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.915049996896414,
+     "variant_ms": 20.25435000177822,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.658600001392188,
+     "variant_ms": 19.672849997732555,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.850099997303914,
+     "variant_ms": 20.515149997663684,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 17.10705000368762,
+     "variant_ms": 20.103150003706105,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 18.25950000420562,
+     "variant_ms": 21.638349997374462,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.97,
+     "variant_recall": 0.97,
+     "router_ms": 16.25110000168206,
+     "variant_ms": 19.601300002250355,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.205449999688426,
+     "variant_ms": 19.249249999120366,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 17.127250001067296,
+     "variant_ms": 20.420949997060234,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.96,
+     "variant_recall": 0.96,
+     "router_ms": 17.228050004632678,
+     "variant_ms": 21.16770000066026,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.975,
+     "variant_recall": 0.975,
+     "router_ms": 18.969300002936507,
+     "variant_ms": 22.048199996788753,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.351899994333507,
+     "variant_ms": 20.18434999990859,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 16.433550001238473,
+     "variant_ms": 20.7508500025142,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 16.09219999954803,
+     "variant_ms": 20.17310000155703,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.97,
+     "variant_recall": 0.97,
+     "router_ms": 16.56485000421526,
+     "variant_ms": 20.50165000036941,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.59144999939599,
+     "variant_ms": 19.931949998863274,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.31545000054757,
+     "variant_ms": 19.58750000267173,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.088799999124603,
+     "variant_ms": 19.9695499977679,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 15.929399996821303,
+     "variant_ms": 19.07740000388003,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.546100003324682,
+     "variant_ms": 19.655849999253405,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.52539999849978,
+     "variant_ms": 20.07700000103796,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.250399999989895,
+     "variant_ms": 19.809900000836933,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 15.999750001356006,
+     "variant_ms": 19.432500001130393,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 15.906700002233265,
+     "variant_ms": 19.604849996539997,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.975,
+     "variant_recall": 0.975,
+     "router_ms": 16.996849997667596,
+     "variant_ms": 20.231949998560594,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.975,
+     "variant_recall": 0.975,
+     "router_ms": 16.954249997070292,
+     "variant_ms": 20.940049998898758,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 17.575449997821124,
+     "variant_ms": 21.363350002502557,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 17.734850003762404,
+     "variant_ms": 21.819899997353787,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.469450001750374,
+     "variant_ms": 19.696850002219435,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 17.024399996444117,
+     "variant_ms": 20.290250002290122,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.595500000927132,
+     "variant_ms": 19.073049996222835,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.641300004266668,
+     "variant_ms": 19.834450002235826,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.017250003642403,
+     "variant_ms": 19.82099999440834,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.714749996026512,
+     "variant_ms": 19.39689999562688,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.725100005511194,
+     "variant_ms": 18.86979999835603,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 14.921349997166544,
+     "variant_ms": 17.79884999996284,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.11925000179326,
+     "variant_ms": 18.64670000213664,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 14.558850001776591,
+     "variant_ms": 17.087299995182548,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.78284999798052,
+     "variant_ms": 19.08374999766238,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.96,
+     "variant_recall": 0.96,
+     "router_ms": 16.420150001067668,
+     "variant_ms": 18.846499995561317,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.490700003691018,
+     "variant_ms": 20.478650003497023,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.13444999384228,
+     "variant_ms": 19.399649994738866,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.590950002660975,
+     "variant_ms": 18.483649990230333,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.818649997527245,
+     "variant_ms": 18.456450001394842,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.306800007238053,
+     "variant_ms": 18.343200004892424,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 15.084350001416169,
+     "variant_ms": 18.209500005468726,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.129449995583855,
+     "variant_ms": 18.716200000199024,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 12.854299995524343,
+     "variant_ms": 15.18785000371281,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.261849999660626,
+     "variant_ms": 17.54064999113325,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.477000000828411,
+     "variant_ms": 18.489050002244767,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.917900003842078,
+     "variant_ms": 18.436150006891694,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.524850001384038,
+     "variant_ms": 18.12909999716794,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.406450002046768,
+     "variant_ms": 18.39730000210693,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.233650003210641,
+     "variant_ms": 18.28064999426715,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.119900002900977,
+     "variant_ms": 17.97785000235308,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.147950005484745,
+     "variant_ms": 18.09934999619145,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 14.877250003337394,
+     "variant_ms": 18.01480000722222,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 12.675849997322075,
+     "variant_ms": 14.747300003364217,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.797799998836126,
+     "variant_ms": 17.576300007931422,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.428999991854653,
+     "variant_ms": 18.848899999284185,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.642200007278007,
+     "variant_ms": 18.807500004186295,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.664799997466616,
+     "variant_ms": 18.721000000368804,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 17.245499999262393,
+     "variant_ms": 20.11415000015404,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.064049999637064,
+     "variant_ms": 18.27719999710098,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 14.838349998171907,
+     "variant_ms": 18.161100000725128,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.007349997176789,
+     "variant_ms": 17.898099999001715,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.036500000860542,
+     "variant_ms": 18.033050000667572,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 12.692450000031386,
+     "variant_ms": 14.940699998987839,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.504900002270006,
+     "variant_ms": 17.535550003231037,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.615699998510536,
+     "variant_ms": 19.92755000173929,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.27050000044983,
+     "variant_ms": 20.82064999922295,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 17.49730000301497,
+     "variant_ms": 19.660450001538265,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.758950001531048,
+     "variant_ms": 20.217049997881986,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.43684999726247,
+     "variant_ms": 19.955449999542907,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.40120000229217,
+     "variant_ms": 20.55819999804953,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.495300002134172,
+     "variant_ms": 19.74185000290163,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.23114999893005,
+     "variant_ms": 19.503349998558406,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 14.23860000068089,
+     "variant_ms": 15.952249996189494,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.192700000829063,
+     "variant_ms": 19.321399995533284,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo5"
+     ],
+     "s": 0.10608943862987631,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 25.517749996652128,
+     "variant_ms": 22.95684999990044,
+     "router_passed": "True",
+     "variant_passed": "True"
+    }
+   ]
+  },
+  "fixed_t_0_1": {
+   "cells_differing_gt10pct": 8,
+   "recall_gt10pct": 0,
+   "verdict_changes": 0,
+   "of_which_s_ge_T": 8,
+   "cells": [
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.944699997111456,
+     "variant_ms": 21.728599997004494,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 16.52674999786541,
+     "variant_ms": 21.601550000923453,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 19.81080000041402,
+     "variant_ms": 24.75840000261087,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.554849997191923,
+     "variant_ms": 21.325749999959953,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.900049999094335,
+     "variant_ms": 21.89984999859007,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.915049996896414,
+     "variant_ms": 21.805599997605896,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.658600001392188,
+     "variant_ms": 21.794000000227243,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.850099997303914,
+     "variant_ms": 22.82434999506222,
+     "router_passed": "True",
+     "variant_passed": "True"
+    }
+   ]
+  },
+  "router_plus_probe": {
+   "cells_differing_gt10pct": 108,
+   "recall_gt10pct": 0,
+   "verdict_changes": 5,
+   "of_which_s_ge_T": 80,
+   "cells": [
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho1"
+     ],
+     "s": 0.020133206470028545,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 85.57500000097207,
+     "variant_ms": 97.20015000129933,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho2"
+     ],
+     "s": 0.029619410085632732,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 117.52509999860195,
+     "variant_ms": 130.02699999924516,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho3"
+     ],
+     "s": 0.07052331113225499,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 260.4801999987103,
+     "variant_ms": 297.32010000225273,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.944699997111456,
+     "variant_ms": 28.718200002913363,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_0",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 16.52674999786541,
+     "variant_ms": 28.65150000070571,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho1"
+     ],
+     "s": 0.020133206470028545,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 84.6329500018328,
+     "variant_ms": 96.03325000352925,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho2"
+     ],
+     "s": 0.029619410085632732,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 115.86620000161929,
+     "variant_ms": 128.75899999926332,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho3"
+     ],
+     "s": 0.07052331113225499,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 258.5815500024182,
+     "variant_ms": 292.60155000156374,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.975,
+     "variant_recall": 1.0,
+     "router_ms": 22.169050000229618,
+     "variant_ms": 36.45975000108592,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_100",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 1.0,
+     "router_ms": 19.81080000041402,
+     "variant_ms": 720.2743000016198,
+     "router_passed": "True",
+     "variant_passed": "False"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho1"
+     ],
+     "s": 0.020133206470028545,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 84.86719999928027,
+     "variant_ms": 97.31619999729446,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho3"
+     ],
+     "s": 0.07052331113225499,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 260.05464999980177,
+     "variant_ms": 297.75490000247373,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.554849997191923,
+     "variant_ms": 28.248000002349727,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_25",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.900049999094335,
+     "variant_ms": 29.24514999904204,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho1"
+     ],
+     "s": 0.020133206470028545,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 84.74484999896958,
+     "variant_ms": 96.33780000149272,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho3"
+     ],
+     "s": 0.07052331113225499,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 261.3344999990659,
+     "variant_ms": 303.08024999976624,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.985,
+     "variant_recall": 0.99,
+     "router_ms": 16.915049996896414,
+     "variant_ms": 30.44900000168127,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_50",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.658600001392188,
+     "variant_ms": 29.40659999876516,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho1"
+     ],
+     "s": 0.020133206470028545,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 85.09179999600747,
+     "variant_ms": 97.76975000204402,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho2"
+     ],
+     "s": 0.029619410085632732,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 116.77844999940135,
+     "variant_ms": 129.6043499969528,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho3"
+     ],
+     "s": 0.07052331113225499,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 258.23289999971166,
+     "variant_ms": 300.5818999990879,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho4"
+     ],
+     "s": 0.14352045670789723,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 1.0,
+     "router_ms": 21.627950001857243,
+     "variant_ms": 309.1718499963463,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho1",
+      "hm_clothes_75",
+      "ho5"
+     ],
+     "s": 0.18028544243577546,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.850099997303914,
+     "variant_ms": 719.3593000010878,
+     "router_passed": "True",
+     "variant_passed": "False"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 17.10705000368762,
+     "variant_ms": 28.42859999873326,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 18.25950000420562,
+     "variant_ms": 32.71614999539452,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.97,
+     "variant_recall": 0.97,
+     "router_ms": 16.25110000168206,
+     "variant_ms": 28.169199995318195,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.205449999688426,
+     "variant_ms": 28.5256000024674,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_0",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 17.127250001067296,
+     "variant_ms": 30.999099999462487,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.96,
+     "variant_recall": 0.97,
+     "router_ms": 17.228050004632678,
+     "variant_ms": 31.01855000204523,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.975,
+     "variant_recall": 0.99,
+     "router_ms": 18.969300002936507,
+     "variant_ms": 997.2268499986967,
+     "router_passed": "True",
+     "variant_passed": "False"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.351899994333507,
+     "variant_ms": 29.0939000005892,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.433550001238473,
+     "variant_ms": 28.67609999884735,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_100",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.09219999954803,
+     "variant_ms": 28.32440000202041,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.97,
+     "variant_recall": 0.97,
+     "router_ms": 16.56485000421526,
+     "variant_ms": 28.099250001105247,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.59144999939599,
+     "variant_ms": 28.279649999603862,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.31545000054757,
+     "variant_ms": 28.551600000355393,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.088799999124603,
+     "variant_ms": 28.328500000498025,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_25",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 15.929399996821303,
+     "variant_ms": 27.97504999762168,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.546100003324682,
+     "variant_ms": 28.67790000527748,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.52539999849978,
+     "variant_ms": 29.143899995688116,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.250399999989895,
+     "variant_ms": 28.61520000078599,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.9800000000000001,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 15.999750001356006,
+     "variant_ms": 28.226300000824267,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_50",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 15.906700002233265,
+     "variant_ms": 28.111499999795342,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2a"
+     ],
+     "s": 0.23038058991436727,
+     "router_recall": 0.975,
+     "variant_recall": 0.9800000000000001,
+     "router_ms": 16.996849997667596,
+     "variant_ms": 29.834099997970043,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2b"
+     ],
+     "s": 0.2562511893434824,
+     "router_recall": 0.975,
+     "variant_recall": 0.985,
+     "router_ms": 16.954249997070292,
+     "variant_ms": 994.2497000010917,
+     "router_passed": "True",
+     "variant_passed": "False"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2c"
+     ],
+     "s": 0.3262036156041865,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 17.575449997821124,
+     "variant_ms": 29.949999996460974,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2d"
+     ],
+     "s": 0.37668886774500476,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 17.734850003762404,
+     "variant_ms": 30.13835000092513,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "ho2",
+      "hm_clothes_75",
+      "h2e"
+     ],
+     "s": 0.4464224548049477,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.469450001750374,
+     "variant_ms": 28.908599997521378,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 17.024399996444117,
+     "variant_ms": 28.787900002498645,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.595500000927132,
+     "variant_ms": 27.359150008123834,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.641300004266668,
+     "variant_ms": 28.684650002105627,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.017250003642403,
+     "variant_ms": 29.017849992669653,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 0.985,
+     "variant_recall": 0.985,
+     "router_ms": 16.714749996026512,
+     "variant_ms": 28.596600001037586,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.725100005511194,
+     "variant_ms": 27.680450002662838,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 14.921349997166544,
+     "variant_ms": 26.260650003678165,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.11925000179326,
+     "variant_ms": 27.18280000408413,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 14.558850001776591,
+     "variant_ms": 27.075750003859866,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.78284999798052,
+     "variant_ms": 29.059849999612197,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "lo3"
+     ],
+     "s": 0.010542340627973358,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 54.2632000069716,
+     "variant_ms": 66.86459999764338,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_0",
+      "lo5"
+     ],
+     "s": 0.10608943862987631,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 20.71820000128355,
+     "variant_ms": 448.71089999651304,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.96,
+     "variant_recall": 0.99,
+     "router_ms": 16.420150001067668,
+     "variant_ms": 27.88095000141766,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.490700003691018,
+     "variant_ms": 837.7366999993683,
+     "router_passed": "True",
+     "variant_passed": "False"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.99,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.13444999384228,
+     "variant_ms": 29.10150000388967,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.590950002660975,
+     "variant_ms": 28.297400000155903,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.818649997527245,
+     "variant_ms": 26.93474999978207,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.306800007238053,
+     "variant_ms": 26.780100000905804,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.99,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.084350001416169,
+     "variant_ms": 27.15830000670394,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 1.0,
+     "router_ms": 15.129449995583855,
+     "variant_ms": 27.331199999025557,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 12.854299995524343,
+     "variant_ms": 24.566199994296767,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.261849999660626,
+     "variant_ms": 27.077049991930835,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "lo3"
+     ],
+     "s": 0.010542340627973358,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 51.23089999688091,
+     "variant_ms": 63.0605500045931,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_100",
+      "lo5"
+     ],
+     "s": 0.10608943862987631,
+     "router_recall": 0.93,
+     "variant_recall": 1.0,
+     "router_ms": 92.89790000184439,
+     "variant_ms": 450.714649996371,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.477000000828411,
+     "variant_ms": 26.939599993056618,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.917900003842078,
+     "variant_ms": 27.31360000325367,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.524850001384038,
+     "variant_ms": 26.875550000113435,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.406450002046768,
+     "variant_ms": 26.65349999006139,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.233650003210641,
+     "variant_ms": 27.53435000340687,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.119900002900977,
+     "variant_ms": 26.863049999519717,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.147950005484745,
+     "variant_ms": 26.578549994155765,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 14.877250003337394,
+     "variant_ms": 26.54764999897452,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 12.675849997322075,
+     "variant_ms": 24.161400004231837,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.797799998836126,
+     "variant_ms": 27.34174999932293,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "lo3"
+     ],
+     "s": 0.010542340627973358,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 51.51009999826783,
+     "variant_ms": 66.11324999539647,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_25",
+      "lo5"
+     ],
+     "s": 0.10608943862987631,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 21.007299998018425,
+     "variant_ms": 240.65335000341292,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.428999991854653,
+     "variant_ms": 27.625349997833837,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.642200007278007,
+     "variant_ms": 27.60984999622451,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.664799997466616,
+     "variant_ms": 26.9408999956795,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 17.245499999262393,
+     "variant_ms": 29.590450001705904,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.064049999637064,
+     "variant_ms": 27.17234999727225,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 14.838349998171907,
+     "variant_ms": 26.839149999432266,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 15.007349997176789,
+     "variant_ms": 26.55284999491414,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.036500000860542,
+     "variant_ms": 25.992849994509015,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 12.692450000031386,
+     "variant_ms": 24.672699997609016,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 15.504900002270006,
+     "variant_ms": 27.08225000242237,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "lo3"
+     ],
+     "s": 0.010542340627973358,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 50.15550000098301,
+     "variant_ms": 61.48965000465978,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_50",
+      "lo5"
+     ],
+     "s": 0.10608943862987631,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 1.0,
+     "router_ms": 21.63519999885466,
+     "variant_ms": 453.79625000350643,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "ctl"
+     ],
+     "s": 0.20375832540437677,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.615699998510536,
+     "variant_ms": 29.907949996413663,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap1"
+     ],
+     "s": 0.21388201712654614,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 17.27050000044983,
+     "variant_ms": 31.99740000127349,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap2"
+     ],
+     "s": 0.230941960038059,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 17.49730000301497,
+     "variant_ms": 29.077850002067862,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap3"
+     ],
+     "s": 0.25991436726926737,
+     "router_recall": 0.99,
+     "variant_recall": 0.99,
+     "router_ms": 16.758950001531048,
+     "variant_ms": 29.258649999974295,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "gap4"
+     ],
+     "s": 0.2985918173168411,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.43684999726247,
+     "variant_ms": 28.363850000459934,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "idx1"
+     ],
+     "s": 0.3290104662226451,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.40120000229217,
+     "variant_ms": 28.792200002499158,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "idx2"
+     ],
+     "s": 0.37632730732635583,
+     "router_recall": 0.9949999999999999,
+     "variant_recall": 0.9949999999999999,
+     "router_ms": 16.495300002134172,
+     "variant_ms": 28.352500001346925,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "idx3"
+     ],
+     "s": 0.4705042816365366,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.23114999893005,
+     "variant_ms": 28.344850001303712,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo1"
+     ],
+     "s": 0.00012369172216936252,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 14.23860000068089,
+     "variant_ms": 26.157150001381524,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo2"
+     ],
+     "s": 0.0008468125594671741,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 16.192700000829063,
+     "variant_ms": 28.899599998112535,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo3"
+     ],
+     "s": 0.010542340627973358,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 51.95740000272053,
+     "variant_ms": 63.534399996569846,
+     "router_passed": "True",
+     "variant_passed": "True"
+    },
+    {
+     "cell": [
+      "in_sample",
+      "hm_clothes_75",
+      "lo5"
+     ],
+     "s": 0.10608943862987631,
+     "router_recall": 1.0,
+     "variant_recall": 1.0,
+     "router_ms": 25.517749996652128,
+     "variant_ms": 455.84464999774355,
+     "router_passed": "True",
+     "variant_passed": "True"
+    }
+   ]
+  }
+ },
+ "router_tuned_recall_differs": [
+  [
+   "in_sample",
+   "hm_clothes_100",
+   "lo5",
+   "0.93",
+   "0.975"
+  ]
+ ]
+}
