@@ -1,0 +1,22 @@
+{
+  "_note": "Phase F router config (Amendment 11) for edgar_chunks: same keys as config/router_hm.json; table-specific values only. L2 distance on the plain vector(1024) column (HNSW vector_l2_ops m 16 / ef_construction 64, index edgar_chunks_embedding_idx), k = 15 as the answer pipeline (Amendment 1).",
+  "tables": ["edgar_chunks"],
+  "id_column": "id",
+  "vector_expr": "embedding",
+  "query_cast": "vector(1024)",
+  "distance_operator": "<->",
+  "metric": "l2",
+  "hnsw_index_suffix": "embedding_idx",
+  "filter_columns": ["cik", "fiscal_year", "section"],
+  "k": 15,
+  "ef_search": 40,
+  "jit": "off",
+  "statement_timeout_ms": 120000,
+  "iterative_default": {"max_scan_tuples": 20000, "scan_mem_multiplier": 1},
+  "iterative_tuned": {"max_scan_tuples": 100000, "scan_mem_multiplier": 4},
+  "probe": {"m": 100, "ef_search": 100},
+  "fixed_T": 0.1,
+  "latency_limit_ms": 500,
+  "recall_target": 0.9,
+  "policy_file": "config/policy_v3_1_edgar.json"
+}

@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 333,
+  "n_files": 336,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1382,6 +1382,21 @@
       "sha256": "7b2169c75f092a3507221a20b81d2005156246a98c5c3869e7b86d1d2048b3d1",
       "bytes": 2655,
       "line_endings": "LF"
+    },
+    "outputs/edgar_eval_v31_checks_2026-11-01/hm_equivalence.csv": {
+      "sha256": "2aee8f22f5a2dca499946629eada8ccc96feb543bb3312c3e498c209f16e3702",
+      "bytes": 40430,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_v31_checks_2026-11-01/finqa_v31_routes.csv": {
+      "sha256": "aec82e25f62509bf962b3f5a8e59297efe7c942465e068d93680182301554e04",
+      "bytes": 10476,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_eval_v31_checks_2026-11-01/summary.json": {
+      "sha256": "6582b2b0c7cb89f0c1518371ac78653a74d210a68389b2cf3d340fcaf0c88e01",
+      "bytes": 394,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1808,6 +1823,15 @@
         "outputs/edgar_eval_set_2026-11-01/selected.csv",
         "outputs/edgar_eval_set_2026-11-01/selection_log.json",
         "outputs/edgar_questions_review_2026-11-01/review_sheet_author.csv"
+      ]
+    },
+    {
+      "label": "edgar_eval_task2_v31_checks",
+      "added_utc": "2026-10-31T21:52:49.246686+00:00",
+      "paths": [
+        "outputs/edgar_eval_v31_checks_2026-11-01/finqa_v31_routes.csv",
+        "outputs/edgar_eval_v31_checks_2026-11-01/hm_equivalence.csv",
+        "outputs/edgar_eval_v31_checks_2026-11-01/summary.json"
       ]
     }
   ]

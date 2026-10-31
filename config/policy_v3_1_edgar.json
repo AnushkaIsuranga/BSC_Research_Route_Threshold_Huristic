@@ -1,0 +1,5 @@
+{
+ "_note": "policy_v3.1 on edgar_chunks (Amendment 11). T_default / T_tuned are filled by the Task 3 calibration (src.phase_f_edgar.calibrate_edgar); null until then, so router modes refuse to run.",
+ "T_default": null,
+ "T_tuned": null
+}

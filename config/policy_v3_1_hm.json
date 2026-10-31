@@ -1,0 +1,6 @@
+{
+ "_note": "policy_v3.1 on H&M (Amendment 11): T copied unchanged from config/policy_v3_hm.json (Amendment 9 calibration, tag phase-e-calibration-hm-2026-10-30); used for the H&M equivalence check and as router_hmT on edgar_chunks.",
+ "T_default": 0.07119177617441379,
+ "T_tuned": 0.07119177617441379,
+ "source": "config/policy_v3_hm.json"
+}

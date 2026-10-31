@@ -1,0 +1,20 @@
+{
+ "T_hm": 0.07119177617441379,
+ "hm_rows": 230,
+ "hm_route_differences": 0,
+ "hm_rule_fired": 0,
+ "hm_routes": {
+  "exact": 70,
+  "iterative": 160
+ },
+ "finqa_rows": 50,
+ "finqa_rule_fired": 50,
+ "finqa_v31_routes": {
+  "exact": 50
+ },
+ "finqa_v3_routes": {
+  "exact": 50
+ },
+ "finqa_route_differences": 0,
+ "stored_v3_check": "outputs/finqa_router_v3_route_check_2026-10-31/route_check.csv"
+}
