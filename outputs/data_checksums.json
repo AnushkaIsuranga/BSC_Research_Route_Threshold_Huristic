@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 262,
+  "n_files": 265,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1050,6 +1050,18 @@
     "outputs/finqa_selectivity_timing_2026-10-31/meta.json": {
       "sha256": "258653fb7257857a2e4233b6920524fc41e4c072f4786e6f279efb9ebae1e42f",
       "bytes": 2389
+    },
+    "outputs/phase_d_always_hnsw_pilot_2026-10-31/results.csv": {
+      "sha256": "2c8d029ee51a10f74085eb358f6ef3ab40a6335cbcf7e1bd80ae96c4512945da",
+      "bytes": 5038
+    },
+    "outputs/phase_d_always_hnsw_pilot_2026-10-31/results.jsonl": {
+      "sha256": "56b67ed5df88ecfa23872adb2e71e97da9ced341485eafc5eb224f497194f63e",
+      "bytes": 10594
+    },
+    "outputs/phase_d_always_hnsw_pilot_2026-10-31/run_meta.json": {
+      "sha256": "1dd921a41bbbed84aa6c9d6843ba44611628a3c9f691aff80c42a5d11d7b519b",
+      "bytes": 7656
     }
   },
   "additions": [
@@ -1333,6 +1345,15 @@
       "paths": [
         "outputs/finqa_selectivity_timing_2026-10-31/meta.json",
         "outputs/finqa_selectivity_timing_2026-10-31/timing.csv"
+      ]
+    },
+    {
+      "label": "phase_d_always_hnsw_pilot_2026-10-31",
+      "added_utc": "2026-10-31T08:27:10.802575+00:00",
+      "paths": [
+        "outputs/phase_d_always_hnsw_pilot_2026-10-31/results.csv",
+        "outputs/phase_d_always_hnsw_pilot_2026-10-31/results.jsonl",
+        "outputs/phase_d_always_hnsw_pilot_2026-10-31/run_meta.json"
       ]
     }
   ]
