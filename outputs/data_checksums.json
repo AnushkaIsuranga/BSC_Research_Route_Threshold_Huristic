@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 317,
+  "n_files": 324,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1302,6 +1302,41 @@
       "sha256": "df87bed6ba57442b6e9569bdc22e02777a585404ec66137633c32896c2e90089",
       "bytes": 670,
       "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/checks.csv": {
+      "sha256": "d9a4c0b1a81f0c7e4b8bd9e34c45ba070fbbe22b9f16a3125e9c9d05ca8829f2",
+      "bytes": 20423,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/question_embeddings.json": {
+      "sha256": "408f9f052cbf50a09d98410cba7b2f9a0aca0f7370be848c3f3e1cfabbfadab8",
+      "bytes": 1385784,
+      "line_endings": "none"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/filters.json": {
+      "sha256": "1e4210107dee1a5c058f426b5a315681acf89b83966e6e424e59e0dadf83c731",
+      "bytes": 158031,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/judge_calls.jsonl": {
+      "sha256": "f1cf220651afc86b5447990bf0f3eae4d1c9316809d3a62847d1c2b0d263ddaa",
+      "bytes": 13154,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/api_calls_embeddings.jsonl": {
+      "sha256": "626d9e0d8a3ca29b8b0e516c6bbd9a0c09e73c133fb58313ae12b028c44ba9f1",
+      "bytes": 410,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/prompt_independent.json": {
+      "sha256": "c57f4f5e349b499f2e071df5e14df639cd0b2f45487163a1a298115c8cf3fc6e",
+      "bytes": 494,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_verify_2026-11-01/run_meta.json": {
+      "sha256": "7d13b4a7c015187fc603f8fc24952868dbb84e4eec8b538f8805055a2098fc57",
+      "bytes": 998,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1694,6 +1729,19 @@
         "outputs/edgar_questions_draft_2026-10-31/prompt.json",
         "outputs/edgar_questions_draft_2026-10-31/responses.jsonl",
         "outputs/edgar_questions_draft_2026-10-31/run_meta.json"
+      ]
+    },
+    {
+      "label": "edgar_questions_verify_2026-11-01_task1",
+      "added_utc": "2026-10-31T20:01:24.337310+00:00",
+      "paths": [
+        "outputs/edgar_questions_verify_2026-11-01/api_calls_embeddings.jsonl",
+        "outputs/edgar_questions_verify_2026-11-01/checks.csv",
+        "outputs/edgar_questions_verify_2026-11-01/filters.json",
+        "outputs/edgar_questions_verify_2026-11-01/judge_calls.jsonl",
+        "outputs/edgar_questions_verify_2026-11-01/prompt_independent.json",
+        "outputs/edgar_questions_verify_2026-11-01/question_embeddings.json",
+        "outputs/edgar_questions_verify_2026-11-01/run_meta.json"
       ]
     }
   ]

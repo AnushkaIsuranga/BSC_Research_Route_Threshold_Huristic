@@ -1,0 +1,9 @@
+{
+ "system": "You answer a question about one excerpt from a company's annual report (Form 10-K). Use only the excerpt. Reply with a single number and its units (for example: $3.9 million, 12%, 1,500 shares) and nothing else. If the excerpt does not contain what is needed to answer, reply exactly: not answerable",
+ "user_template": "Excerpt:\n\"\"\"\n{text}\n\"\"\"\n\nQuestion: {question}",
+ "model": "openai/gpt-oss-120b-maas",
+ "settings": {
+  "temperature": 0.0,
+  "max_tokens": 4096
+ }
+}

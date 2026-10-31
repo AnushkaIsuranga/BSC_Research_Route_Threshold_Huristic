@@ -1,0 +1,35 @@
+{
+ "utc": "2026-10-31T19:18:03.678689+00:00",
+ "candidates": "outputs/edgar_questions_draft_2026-10-31/candidates.csv",
+ "candidates_sha256": "1c5a86de21487f1d48adeb8ee999821e89030eafbdd3e1f6e5a3de451c78681a",
+ "table_rows": 158308,
+ "embedding": {
+  "model": "qwen/qwen3-embedding-8b",
+  "dimensions": 1024,
+  "query_task": "Given a financial question, retrieve the report passages and table rows that answer it",
+  "tokens": 3334,
+  "cost_usd": 3.334e-05,
+  "norm_min": 0.9999999115126484,
+  "norm_max": 1.0000000928800372
+ },
+ "judge": {
+  "model": "openai/gpt-oss-120b-maas",
+  "base_url": "https://us-central1-aiplatform.googleapis.com/v1/projects/bsc-research-project-511410/locations/us-central1/endpoints/openapi",
+  "settings": {
+   "temperature": 0.0,
+   "max_tokens": 4096
+  },
+  "client_max_retries": 0,
+  "price_per_token": [
+   1.5e-07,
+   6e-07
+  ],
+  "errors": 1
+ },
+ "cost_usd_total": 0.00898339,
+ "budget_usd": 0.5,
+ "status_counts": {
+  "auto_pass": 30,
+  "needs_review": 30
+ }
+}
