@@ -1,0 +1,94 @@
+{
+  "label": "read-only timing, no paid calls, no quiet rule",
+  "utc": "2026-10-31T08:16:23.983576+00:00",
+  "git_commit": "e9b6820f9a58617dc4351652697477416d90e516",
+  "table": "finqa_evidence_qwen3",
+  "T": 0.07119177617441379,
+  "frozen_subset": "outputs/phase2_selection_output/finqa_phase2_selected_50_20260819_140501.csv",
+  "n_questions": 50,
+  "warmup": 1,
+  "timed_repetitions": 5,
+  "clock": "client wall-clock, time.perf_counter",
+  "cpu_start": {
+    "utc": "2026-10-31T08:16:13.711943+00:00",
+    "cpu_total_pct": 19.94891869441522,
+    "cpu_load_pct_win32": 46,
+    "top5": [
+      {
+        "Name": "com.docker.backend",
+        "Id": 17936,
+        "CPU": 7194.328125
+      },
+      {
+        "Name": "claude",
+        "Id": 19448,
+        "CPU": 3520.71875
+      },
+      {
+        "Name": "claude",
+        "Id": 2256,
+        "CPU": 2519.671875
+      },
+      {
+        "Name": "explorer",
+        "Id": 5320,
+        "CPU": 1625.1875
+      },
+      {
+        "Name": "claude",
+        "Id": 21156,
+        "CPU": 885.71875
+      }
+    ]
+  },
+  "cpu_end": {
+    "utc": "2026-10-31T08:16:23.982577+00:00",
+    "cpu_total_pct": 18.98539889547034,
+    "cpu_load_pct_win32": 27,
+    "top5": [
+      {
+        "Name": "com.docker.backend",
+        "Id": 17936,
+        "CPU": 7197.328125
+      },
+      {
+        "Name": "claude",
+        "Id": 19448,
+        "CPU": 3523.796875
+      },
+      {
+        "Name": "claude",
+        "Id": 2256,
+        "CPU": 2520.9375
+      },
+      {
+        "Name": "explorer",
+        "Id": 5320,
+        "CPU": 1625.1875
+      },
+      {
+        "Name": "claude",
+        "Id": 21156,
+        "CPU": 885.796875
+      }
+    ]
+  },
+  "exact_selectivity": {
+    "median_of_question_medians_ms": 17.67429999745218,
+    "p95_of_question_medians_ms": 18.721309996180935,
+    "max_of_question_maxes_ms": 29.953999997815117,
+    "median_all_reps_ms": 17.581450003490318,
+    "p95_all_reps_ms": 20.0893749948591
+  },
+  "router_v3": {
+    "median_of_question_medians_ms": 2.8920499971718527,
+    "p95_of_question_medians_ms": 3.400929999043001,
+    "max_of_question_maxes_ms": 4.371799994260073,
+    "median_all_reps_ms": 2.919250000559259,
+    "p95_all_reps_ms": 3.729689996544039
+  },
+  "router_routes": {
+    "exact": 50
+  },
+  "router_count_used": 0
+}

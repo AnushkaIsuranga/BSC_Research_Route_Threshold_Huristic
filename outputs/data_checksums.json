@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 260,
+  "n_files": 262,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1042,6 +1042,14 @@
     "outputs/finqa_router_v3_route_check_2026-10-31/meta.json": {
       "sha256": "6c509d97c18c8cc09d39e7b4ae861e1af867fe6de0cb525410c76c47b42b0ade",
       "bytes": 960
+    },
+    "outputs/finqa_selectivity_timing_2026-10-31/timing.csv": {
+      "sha256": "d7ff917e89037d65f7e2e79af16729816637cba3673ceb806f4df3870aa5864b",
+      "bytes": 15896
+    },
+    "outputs/finqa_selectivity_timing_2026-10-31/meta.json": {
+      "sha256": "258653fb7257857a2e4233b6920524fc41e4c072f4786e6f279efb9ebae1e42f",
+      "bytes": 2389
     }
   },
   "additions": [
@@ -1317,6 +1325,14 @@
       "paths": [
         "outputs/finqa_router_v3_route_check_2026-10-31/meta.json",
         "outputs/finqa_router_v3_route_check_2026-10-31/route_check.csv"
+      ]
+    },
+    {
+      "label": "finqa_selectivity_timing_2026-10-31",
+      "added_utc": "2026-10-31T08:16:49.248273+00:00",
+      "paths": [
+        "outputs/finqa_selectivity_timing_2026-10-31/meta.json",
+        "outputs/finqa_selectivity_timing_2026-10-31/timing.csv"
       ]
     }
   ]

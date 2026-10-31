@@ -78,3 +78,16 @@ Read-only check: no retrieval, no model calls, no paid calls, no timed measureme
 ## Conclusion
 
 The Phase E router routes all 50 frozen FinQA questions to exact, and it would do so from the true selectivities as well (all below T/2 = 0.0356), so on this set the routing outcome is correct. It is correct for an uninformative reason: with no statistics on the JSON expressions, the planner returns Plan Rows = 1 for every ticker-year filter, an underestimate of 20x to 697x (median 142x). The router's estimate therefore carries no information about the filter on FinQA; it would send any ticker-year filter to exact without reaching the capped count, however many rows it matched. On this corpus that does no harm only because no FinQA question exceeds selectivity 0.0297.
+
+## Selectivity computation cost
+
+Read-only timing, no paid calls, no quiet rule. Script `src/phase_e_router/finqa_selectivity_timing.py`; outputs `outputs/finqa_selectivity_timing_2026-10-31/` (`timing.csv` with all repetitions per question, `meta.json`; checksummed). Table `finqa_evidence_qwen3`, frozen 50 questions; per question and path 1 untimed warm-up, then 5 timed repetitions, client wall-clock (`time.perf_counter`, the clock of `total_ms` in the Gemini run). Host CPU (processor counter) 19.9 % at start, 19.0 % at end (Win32 LoadPercentage 46 % / 27 %); the session took about 10 s.
+
+| path | per-question median (range over 50) | per-question max (range) | overall median | overall p95 |
+|---|---|---|---|---|
+| `exact_selectivity`: `COUNT(*)` of the table + `COUNT(*)` of the ticker-year filter | 16.2-19.1 ms | 17.1-30.0 ms | **17.7 ms** | 18.7 ms (all 250 reps: 20.1 ms) |
+| Phase E router: reltuples + EXPLAIN estimate (capped count used for 0 of 50) | 2.6-3.6 ms | 2.7-4.4 ms | **2.9 ms** | 3.4 ms (all 250 reps: 3.7 ms) |
+
+(Overall median and p95 are over the 50 per-question medians; the "all reps" p95 is over the 250 timed repetitions.)
+
+**The frozen Gemini latency difference of -2,827 ms (policy_v2 - naive_llm, `total_ms`) excludes this cost.** Measured here, computing selectivity as the run did costs about **17.7 ms per question** (p95 18.7 ms), about 0.6 % of the 2,827 ms difference; adding it to policy_v2 would leave the difference at about -2,809 ms. The Phase E router's own estimate path costs about **2.9 ms per question**. Caveats: in the Gemini run `exact_selectivity()` counted on `finqa_evidence` (the function is hard-wired to that table), not on `finqa_evidence_qwen3`; both tables have 35,862 rows and 1,105 pages and the counts do not touch the embeddings' index, but they were not timed on `finqa_evidence` here. The run computed selectivity once per (pass, question) and shared it across the four arms; these timings are from 31 Oct under the current 2 GB WSL VM, not from the conditions of 12 Oct, and the confidence interval of the reported difference was not recomputed.
