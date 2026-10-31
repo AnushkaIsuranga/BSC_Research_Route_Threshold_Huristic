@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 313,
+  "n_files": 317,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1282,6 +1282,26 @@
       "sha256": "2113f5f03380b4da508cbb2ce46cd3ee67fe64df77db27b33904fc9a7eb21ba1",
       "bytes": 791540986,
       "line_endings": "mixed"
+    },
+    "outputs/edgar_questions_draft_2026-10-31/candidates.csv": {
+      "sha256": "1c5a86de21487f1d48adeb8ee999821e89030eafbdd3e1f6e5a3de451c78681a",
+      "bytes": 125813,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_draft_2026-10-31/prompt.json": {
+      "sha256": "75e7123fec7cbdc9b8ba3c27cd9b50334f751fc3f1202e39f0071f1676eeb09f",
+      "bytes": 1420,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_draft_2026-10-31/responses.jsonl": {
+      "sha256": "3743b6aba885b8a658e7192f320ca4ae2030d501675558495209c2c2b7789db3",
+      "bytes": 35032,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_questions_draft_2026-10-31/run_meta.json": {
+      "sha256": "df87bed6ba57442b6e9569bdc22e02777a585404ec66137633c32896c2e90089",
+      "bytes": 670,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1664,6 +1684,16 @@
         "outputs/edgar_index_2026-10-31/spot_check_chunks.md",
         "outputs/edgar_vecadvisor_2026-10-31/analyze_edgar_chunks.json",
         "outputs/edgar_vecadvisor_2026-10-31/version.txt"
+      ]
+    },
+    {
+      "label": "Phase F Task 4: 60 drafted EDGAR candidate questions (2026-10-31); candidates.csv LF; no retrieval or answer evaluation run",
+      "added_utc": "2026-10-31T15:54:24.591139+00:00",
+      "paths": [
+        "outputs/edgar_questions_draft_2026-10-31/candidates.csv",
+        "outputs/edgar_questions_draft_2026-10-31/prompt.json",
+        "outputs/edgar_questions_draft_2026-10-31/responses.jsonl",
+        "outputs/edgar_questions_draft_2026-10-31/run_meta.json"
       ]
     }
   ]

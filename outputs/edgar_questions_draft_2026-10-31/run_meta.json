@@ -1,0 +1,29 @@
+{
+ "utc_end": "2026-10-31T14:42:26.593165+00:00",
+ "model": "gemini-3.8-flash",
+ "model_id": "gemini-3.8-flash",
+ "model_versions_reported": [
+  "gemini-3.8-flash"
+ ],
+ "temperature": 0,
+ "thinking": {
+  "thinking_level": "LOW"
+ },
+ "max_output_tokens": 2048,
+ "json_mode": true,
+ "location": "global",
+ "seed": "20261031-questions",
+ "min_numbers_in_chunk": 3,
+ "eligible_chunks": 23307,
+ "table_rows": 158308,
+ "candidates": 60,
+ "per_breadth": 15,
+ "cost_usd": 0.05356499999999998,
+ "budget_usd": 0.5,
+ "types": {
+  "lookup": 57,
+  "calculation": 3
+ },
+ "candidates_csv_line_endings": "LF",
+ "note": "No retrieval or answer evaluation was run with these questions."
+}
