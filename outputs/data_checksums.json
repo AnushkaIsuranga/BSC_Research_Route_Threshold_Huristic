@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 254,
+  "n_files": 258,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1018,6 +1018,22 @@
     "outputs/phase_e_comparison_hm_2026-10-31/run.log": {
       "sha256": "e8ffbf79b094793699d6a90c70d1303e906ca3a798a4c3ec67ad18041869415a",
       "bytes": 2848
+    },
+    "outputs/phase_e_exploratory_exact_cache_2026-10-31/host_load.json": {
+      "sha256": "7eee8e527b0b473a1a172669dd56825c60eff2d19448e3b457ff77cf75dd764d",
+      "bytes": 8438
+    },
+    "outputs/phase_e_exploratory_exact_cache_2026-10-31/run_meta.json": {
+      "sha256": "f3061cde57ac7a3a7f485a81c2470cb67fdb4ba0265d593076fd23a57e7548f5",
+      "bytes": 1391
+    },
+    "outputs/phase_e_exploratory_exact_cache_2026-10-31/results.jsonl": {
+      "sha256": "bf493434a7217ea722298f8835185fb53080c598470e744f622ca69ae56d9df1",
+      "bytes": 144843
+    },
+    "outputs/phase_e_exploratory_exact_cache_2026-10-31/cell_comparison.csv": {
+      "sha256": "863850de16d9cc7cd119e77ac23fca8aab404b959f9fe8d2551e286f4774c034",
+      "bytes": 844
     }
   },
   "additions": [
@@ -1275,6 +1291,16 @@
         "outputs/phase_e_comparison_hm_2026-10-31/run.log",
         "outputs/phase_e_comparison_hm_2026-10-31/run_meta.json",
         "outputs/phase_e_comparison_hm_2026-10-31/summary.json"
+      ]
+    },
+    {
+      "label": "phase_e_exploratory_exact_cache_2026-10-31",
+      "added_utc": "2026-10-31T07:23:26.576891+00:00",
+      "paths": [
+        "outputs/phase_e_exploratory_exact_cache_2026-10-31/cell_comparison.csv",
+        "outputs/phase_e_exploratory_exact_cache_2026-10-31/host_load.json",
+        "outputs/phase_e_exploratory_exact_cache_2026-10-31/results.jsonl",
+        "outputs/phase_e_exploratory_exact_cache_2026-10-31/run_meta.json"
       ]
     }
   ]

@@ -1,0 +1,57 @@
+{
+ "git_commit": "82128e2d8535560d3f84c0a807dc99ae269026d7",
+ "git_dirty_phase_e": false,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "server_settings": {
+  "shared_buffers": "128MB",
+  "work_mem": "4MB",
+  "effective_cache_size": "4GB",
+  "max_parallel_workers_per_gather": "2",
+  "jit": "off",
+  "statement_timeout": "2min",
+  "hnsw.max_scan_tuples": "20000",
+  "hnsw.scan_mem_multiplier": "1",
+  "hnsw.ef_search": "40"
+ },
+ "python": "3.11.9",
+ "platform": "Windows-10-10.0.26220-SP0",
+ "started_utc": "2026-10-31T07:13:50.100821+00:00",
+ "label": "exploratory, not pre-registered",
+ "seed": 20261101,
+ "filters": [
+  "lo4",
+  "lo5"
+ ],
+ "timed_repeats": 5,
+ "route": "exact",
+ "route_settings": {
+  "enable_indexscan": "off",
+  "hnsw.iterative_scan": "off",
+  "hnsw.ef_search": 40
+ },
+ "vectors_sha256_lines_0_19": "a3ac22dfda7ee627b5b402c175351c9f3ba34cdf72ccb31302147709205bc834",
+ "n_items": 200,
+ "quiet_check": {
+  "rule": "Amendment 9 Addendum 2",
+  "blocking_processes": [],
+  "cpu_samples": [
+   18.32,
+   23.32,
+   16.89,
+   14.22,
+   22.43,
+   14.33
+  ],
+  "cpu_mean": 18.25166666666667,
+  "win32_load_samples_disclosure": [
+   46,
+   52,
+   49,
+   37,
+   35,
+   33
+  ],
+  "quiet": true
+ }
+}

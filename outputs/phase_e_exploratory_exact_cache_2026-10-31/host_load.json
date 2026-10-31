@@ -1,0 +1,497 @@
+[
+ {
+  "utc": "2026-10-31T07:13:53.946614+00:00",
+  "cpu_total_pct": 17.09924230380976,
+  "cpu_load_pct_win32": 30,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6899.3125
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3230.09375
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2256.734375
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.015625
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 955.65625
+   }
+  ],
+  "tag": "start"
+ },
+ {
+  "utc": "2026-10-31T07:14:01.362526+00:00",
+  "cpu_total_pct": 27.60564474375824,
+  "cpu_load_pct_win32": 51,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6900.328125
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3232.453125
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2258.203125
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.0625
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 955.71875
+   }
+  ],
+  "tag": "table_start hm_clothes_50"
+ },
+ {
+  "utc": "2026-10-31T07:14:57.865099+00:00",
+  "cpu_total_pct": 28.506564442296444,
+  "cpu_load_pct_win32": 43,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6904.921875
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3249.546875
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2267.5
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.078125
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 956.34375
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:15:49.408274+00:00",
+  "cpu_total_pct": 19.019170331781254,
+  "cpu_load_pct_win32": 23,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6909.984375
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3264.34375
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2275.53125
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.1875
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 957.5
+   }
+  ],
+  "tag": "table_start hm_clothes_75"
+ },
+ {
+  "utc": "2026-10-31T07:16:01.826192+00:00",
+  "cpu_total_pct": 30.24249200476229,
+  "cpu_load_pct_win32": 60,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6910.296875
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3267.859375
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2277.515625
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.203125
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 957.71875
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:17:05.834723+00:00",
+  "cpu_total_pct": 41.740043591673256,
+  "cpu_load_pct_win32": 58,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6915.890625
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3286.09375
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2287.96875
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.3125
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 958.5
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:17:33.833616+00:00",
+  "cpu_total_pct": 22.216887890964053,
+  "cpu_load_pct_win32": 32,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6920.5
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3294.25
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2291.953125
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.390625
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 958.90625
+   }
+  ],
+  "tag": "table_start hm_clothes_25"
+ },
+ {
+  "utc": "2026-10-31T07:18:09.763140+00:00",
+  "cpu_total_pct": 17.547141540268484,
+  "cpu_load_pct_win32": 68,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6921.015625
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3304.15625
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2297.1875
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.40625
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 959.265625
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:19:13.691299+00:00",
+  "cpu_total_pct": 20.83426373158359,
+  "cpu_load_pct_win32": 35,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6926.65625
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3322.296875
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2307.21875
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.40625
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 960.3125
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:19:21.371545+00:00",
+  "cpu_total_pct": 22.368865985261564,
+  "cpu_load_pct_win32": 37,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6926.71875
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3324.375
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2308.40625
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.40625
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 960.4375
+   }
+  ],
+  "tag": "table_start hm_clothes_100"
+ },
+ {
+  "utc": "2026-10-31T07:20:17.795048+00:00",
+  "cpu_total_pct": 46.20493459698296,
+  "cpu_load_pct_win32": 63,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6931.8125
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3340.640625
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2316.46875
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.421875
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 961.078125
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:21:05.343633+00:00",
+  "cpu_total_pct": 10.302595217127708,
+  "cpu_load_pct_win32": 34,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6937
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3354.765625
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2324.0625
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.4375
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 961.609375
+   }
+  ],
+  "tag": "table_start hm_clothes_0"
+ },
+ {
+  "utc": "2026-10-31T07:21:21.681697+00:00",
+  "cpu_total_pct": 33.018464065523865,
+  "cpu_load_pct_win32": 34,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6937.234375
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3359.265625
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2326.234375
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.484375
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 961.890625
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:22:25.685751+00:00",
+  "cpu_total_pct": 32.062042467372095,
+  "cpu_load_pct_win32": 42,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6942.890625
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3377.90625
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2336.359375
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.484375
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 962.859375
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-10-31T07:22:48.641209+00:00",
+  "cpu_total_pct": 7.712551223327912,
+  "cpu_load_pct_win32": 38,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 17936,
+    "CPU": 6947.4375
+   },
+   {
+    "Name": "claude",
+    "Id": 19448,
+    "CPU": 3384.125
+   },
+   {
+    "Name": "claude",
+    "Id": 2256,
+    "CPU": 2339.6875
+   },
+   {
+    "Name": "explorer",
+    "Id": 5320,
+    "CPU": 1613.484375
+   },
+   {
+    "Name": "claude",
+    "Id": 5860,
+    "CPU": 963.015625
+   }
+  ],
+  "tag": "end"
+ }
+]
