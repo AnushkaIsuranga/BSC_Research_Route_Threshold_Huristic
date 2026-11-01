@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 394,
+  "n_files": 481,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1687,6 +1687,441 @@
       "sha256": "41ddaa923fda38409dc60a8ab73a3dfda4988f8b886ac84ce827c5c1a527abbe",
       "bytes": 1861769,
       "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/CAPTIONS.md": {
+      "sha256": "f3883e34d4ed878de4077eee873614efd0a05d8f79d5630c65dbeef74ccdf5a9",
+      "bytes": 16579,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/CHECKS.md": {
+      "sha256": "41b361a5e07a2e4b7feb804b3f546277dbdf82f01f00b9e47ad7841301ad1e99",
+      "bytes": 12830,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/SOURCES.md": {
+      "sha256": "45bb5daf9ed7f1db6c7c5e26b7ba6ecd1b7ad27ed3f6d933e973971aa97bf161",
+      "bytes": 8383,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_1_selectivity_distributions.csv": {
+      "sha256": "90b1a440ad6692889cf5192e0e96a5316d055a81e63fbdb558208d50a7d272f9",
+      "bytes": 11079,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_2_hm_recall_by_arm.csv": {
+      "sha256": "7004739ffc0149392d45155288326a516e3a4dae023688fd1537e26fd047e0c4",
+      "bytes": 21757,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_3_exact_latency.csv": {
+      "sha256": "763d394e3c24e372e96cb8b0d7fc46a5cc2b5fdbed7287a95504dce8ff71b8c0",
+      "bytes": 980,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_4_edgar_calibration_recall.csv": {
+      "sha256": "87ea2f5d94d9ddebccff346b18efab912d19331e09c9a46640ca28123488785e",
+      "bytes": 1866,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_5_edgar_failures_by_T.csv": {
+      "sha256": "14ecaf6eb009db195889d67b8d3dc96c20c8a8549514e2bc84beedd0e23c2bcc",
+      "bytes": 305,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_6_accuracy.csv": {
+      "sha256": "579df6b599276f7dd44976c9c74701489bf14d4b77679c8c65911714b42527a0",
+      "bytes": 1704,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_7_error_classes.csv": {
+      "sha256": "fe80cb0be90674b71c99ee78f86f80ceb2fb1a247ea36cc2e1a835c967e7b6e8",
+      "bytes": 1047,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_8_edgar_recall_vs_latency.csv": {
+      "sha256": "05de172bf3bf634228cdffdaa3b63b8c858eb6bbf46736b26d75feb67462ca6e",
+      "bytes": 641,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig4_9_router_overhead.csv": {
+      "sha256": "e577dae665c0e5d69dd06ffc113797c7f9fa2bef3b1e6ac6a5baa7c63f6f85da",
+      "bytes": 561,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/fig5_1_thresholds.csv": {
+      "sha256": "04710d6df19da8e0c83ae24553ec5537abea9f170b87a714f622d048a6c1ec01",
+      "bytes": 1182,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_1_edgar_calibration_per_vector.csv": {
+      "sha256": "954c3e04ba9ab9ab8753378f82c4a68626895ca25aacec5f813f8f82389ac604",
+      "bytes": 3536,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_2_edgar_recall_heatmap.csv": {
+      "sha256": "d8957d65c3b7d8cab3e2da28d245b636d69eb7d58c072416b4274953b54d094d",
+      "bytes": 789,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_3_edgar_latency_by_breadth.csv": {
+      "sha256": "8020a2a3b3d385aa2e0270cb3e12c684810d5f7ca9be804b4b4017766bae851a",
+      "bytes": 2551,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_4_edgar_route_mix.csv": {
+      "sha256": "dfac08f53d7b115a1875abaf80215727919f4e53e3ec5c3f944f9ec12ffe77f1",
+      "bytes": 3679,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_5_router_hmT_per_pair.csv": {
+      "sha256": "957eda74b0df4530d21985c6ff46c283197f97b29dbb446e0421604f4b0a109b",
+      "bytes": 11396,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_6_retrieval_vs_answer.csv": {
+      "sha256": "f7762186263ba15abc5bb1e149e136f89f1cc9157418cca175251a7a8db9a325",
+      "bytes": 750,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_7_default_hnsw_rows_vs_class.csv": {
+      "sha256": "13c3895287cad66f429cbd1afd47130a806d3584f9857a9c95f42aa48c5db7d2",
+      "bytes": 563,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_8_accuracy_three_rules.csv": {
+      "sha256": "47afcd401f8f2ef1ee0e52489f2b2d12e190aebcc0c598d94d2dcf7fe8ad41dd",
+      "bytes": 453,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/data/figA_9_hm_pass_counts.csv": {
+      "sha256": "da4d78b272ebff94c77e645228c42066b1e31b011baeaa73dc2b8010ee1e22d6",
+      "bytes": 1103,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_1_selectivity_distributions.pdf": {
+      "sha256": "a35fcb81b2893706d97409e6588974be9296b41aadb6376f16cf65387cc34a62",
+      "bytes": 21869,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_1_selectivity_distributions.png": {
+      "sha256": "841bd6576f684a6666b24e9384dca38882e8767fb168866136dd6f8fe3d4aee2",
+      "bytes": 100474,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_2_hm_recall_by_arm.pdf": {
+      "sha256": "26eeb670502583ccdded0efdbde829e6095fddd1528929b3280fd2b714044eda",
+      "bytes": 30476,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_2_hm_recall_by_arm.png": {
+      "sha256": "8640a4f9345b0e89895d019ea641a72f00dc0c114fd626d2f25f10cd125a84db",
+      "bytes": 309721,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_3_exact_latency.pdf": {
+      "sha256": "730497b342e9706e0b53cd4941c3d09d8e83a6ad6a8f0cabcc04c7ec9d73a895",
+      "bytes": 17147,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_3_exact_latency.png": {
+      "sha256": "1034a9ec26bf9a8769fef6e49c4ddb44e3fe4856b6b52959bc3837d3130df603",
+      "bytes": 184301,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_4_edgar_calibration_recall.pdf": {
+      "sha256": "a055a05c4f9de4f8f3e3d27bbd96aec88dc0699a86c3314aa3f7d16a48c56f0f",
+      "bytes": 19260,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_4_edgar_calibration_recall.png": {
+      "sha256": "e221c8af2a1ae1b09fcbf0a42053c831c5af286078a686d8c161655ae8b292c4",
+      "bytes": 153375,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_5_edgar_failures_by_T.pdf": {
+      "sha256": "1b58262496900491c2414782074a9967b46ebbe63a18116e967e4a61664ac25b",
+      "bytes": 14506,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_5_edgar_failures_by_T.png": {
+      "sha256": "6e02006f80aba62a7219f801146cab4f55391ef4bf853c8a74a90e020fcd4626",
+      "bytes": 84940,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_6_accuracy.pdf": {
+      "sha256": "5a3e0f277dc3e819a0b7501ed0f72562a508d276001c1fe918635186223c32a0",
+      "bytes": 20160,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_6_accuracy.png": {
+      "sha256": "e9b6a5bee7def5d9598dd025a0ed6a8e43d555c0beabdb70b8c850b9b446a933",
+      "bytes": 170254,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_7_error_classes.pdf": {
+      "sha256": "e91c5b9e9b283c1402c670b3366dc6cddfb58050fc97329b54ef888612134e64",
+      "bytes": 20110,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_7_error_classes.png": {
+      "sha256": "e75e46aeb7c98ac665a0ba6c61d9c996b4093afb047350d9eb1c5c2a6c13a5eb",
+      "bytes": 281913,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_8_edgar_recall_vs_latency.pdf": {
+      "sha256": "15242787f708197e121cd4cecc55a71b18c33d6610053012ba0157bf9a18d88b",
+      "bytes": 20630,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_8_edgar_recall_vs_latency.png": {
+      "sha256": "a9544deaac61ca5cce458c4b785e58ab285f788eff8d8ad268b2b466324aea8d",
+      "bytes": 239095,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig4_9_router_overhead.pdf": {
+      "sha256": "30d47fe953a7fc90e71ae3af4b18e43adf66cb0068617a642a40649739b0c61d",
+      "bytes": 12164,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig4_9_router_overhead.png": {
+      "sha256": "7632ead071736719e0e848bfa34b71102e464c0e18e9148cae85308538d04c9a",
+      "bytes": 75902,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/fig5_1_thresholds.pdf": {
+      "sha256": "2269d8b1f7402d0589f9b51441c287b31bcff909fdd8c23495a029942c121bec",
+      "bytes": 22389,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/fig5_1_thresholds.png": {
+      "sha256": "c970c050da9f61e56aaca0a0dd71ee6978bebd6078b0a770c7ccbfb2d6168a80",
+      "bytes": 147428,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_1_edgar_calibration_per_vector.pdf": {
+      "sha256": "3f001b0c2ebbc06e409c432a282a9c504adaa4d1290c6f85bd34ee8ff6a67bb5",
+      "bytes": 21095,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_1_edgar_calibration_per_vector.png": {
+      "sha256": "d2c7f8ec122841646352f14195a364554930ed7bbeb0a797b83b8252f83dd456",
+      "bytes": 161731,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_2_edgar_recall_heatmap.pdf": {
+      "sha256": "924faf24b453a8248a4cf8f8e80f170eb201a8fc497820905485c6b598cb09f0",
+      "bytes": 30059,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_2_edgar_recall_heatmap.png": {
+      "sha256": "69d44bdf45da591b4d42536ed3447c02755d616b3ee58dbffe492178052e7bd4",
+      "bytes": 365081,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_3_edgar_latency_by_breadth.pdf": {
+      "sha256": "05c34767a9935a442ea58715eab3cf2ad0d061748847ab05ce91951ab6541058",
+      "bytes": 20950,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_3_edgar_latency_by_breadth.png": {
+      "sha256": "1046434877eebf5306bc8bc4c61da781c8bf98e7a2ce939f17330d42fcde282c",
+      "bytes": 91111,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_4_edgar_route_mix.pdf": {
+      "sha256": "7222f814e22d2dcd4451882fbe3a27792a78f6e1b968efa105ebcee27c5ec162",
+      "bytes": 24302,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_4_edgar_route_mix.png": {
+      "sha256": "e38ffc7ef699ad3d315a9f8cd86d96ca2d8180654792b1bf72166a62d9cb47dd",
+      "bytes": 205226,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_5_router_hmT_per_pair.pdf": {
+      "sha256": "e5b227fce0699d8e4ac7b3f56d706991f963ee90cbe4d9d5151655536a2eff10",
+      "bytes": 21011,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_5_router_hmT_per_pair.png": {
+      "sha256": "cffd11a0cbeced02a974665fa66b2003429f45b22cbbf70c37696240787c8e67",
+      "bytes": 92685,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_6_retrieval_vs_answer.pdf": {
+      "sha256": "d9ee60ea0ecfc62ff57055e7af512c387b4773dfd883b80efc76957446f4d6f1",
+      "bytes": 28489,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_6_retrieval_vs_answer.png": {
+      "sha256": "f73f0edc19d0070697c53659516ffd93da43bc30ae4b8a6a8774390119e48645",
+      "bytes": 172954,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_7_default_hnsw_rows_vs_class.pdf": {
+      "sha256": "f69837db3e12b8b04c6b4722f76cb9e2c4faffd66f3f1363d5921568b9513f8b",
+      "bytes": 21005,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_7_default_hnsw_rows_vs_class.png": {
+      "sha256": "b612836fdf671607522e2094032f27bce8a9a71cb47b0ed1b93568d01dbcb672",
+      "bytes": 110009,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_8_accuracy_three_rules.pdf": {
+      "sha256": "54c2338d00740a936308779c8bc3bbd853104f5cba4bc8f94469f9d5b15c79f3",
+      "bytes": 18301,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_8_accuracy_three_rules.png": {
+      "sha256": "1e5be91f14e304feea31b9215fbf132535d4f5e08bbb7c12f1623b18d281d6ea",
+      "bytes": 116686,
+      "line_endings": "mixed"
+    },
+    "reports/figures_2026-11-01/figA_9_hm_pass_counts.pdf": {
+      "sha256": "c70c119f82ac24c1b4f01b6d57e55f68f6844032b42ffe7233ef3a9a018f4501",
+      "bytes": 30033,
+      "line_endings": "LF"
+    },
+    "reports/figures_2026-11-01/figA_9_hm_pass_counts.png": {
+      "sha256": "3c8113966f03b0deacb7e61453fcee8635be3f84efaabace7aa55e2357144015",
+      "bytes": 280849,
+      "line_endings": "mixed"
+    },
+    "reports/tables_2026-11-01/SOURCES_TABLES.md": {
+      "sha256": "3b57e73eb4c3a52e4d6f1665bdcc96e8dbf8a91444112dfc6ce7abf0b9677639",
+      "bytes": 4929,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_1_corpus_audit.csv": {
+      "sha256": "a647dc31c8308c73e580d53f544be68be1f6769c31c559abe2f3ad9b6491ce30",
+      "bytes": 654,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_1_corpus_audit.md": {
+      "sha256": "5ae6a6fff0956de538804779f33af2dd89797290b94f61612450dd44665b6113",
+      "bytes": 2232,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_2_calibrated_T.csv": {
+      "sha256": "a48cf1153c4db3fbfb2d86b87a26b9085f27bf27879c393159efd1306f119d69",
+      "bytes": 1627,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_2_calibrated_T.md": {
+      "sha256": "b3ad88263f0e7c6900e0ade1849b713ca8e4cbc75bb81b5ad3448367e3423914",
+      "bytes": 3661,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_3_hm_pass_counts.csv": {
+      "sha256": "643104c709918627c24d9fb7a1f0c50f9f99ca8c600d4347e5ab9d0052d10f1b",
+      "bytes": 1627,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_3_hm_pass_counts.md": {
+      "sha256": "7d82a555c75a17c5e802e0fa5f8a8ec4a72619d602bdf93bda605e2571f91a41",
+      "bytes": 5049,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_4_finqa_accuracy.csv": {
+      "sha256": "eba2558bab1c84c9478899b32a395bf37e6d7031cb97e46361f83dd0225105b4",
+      "bytes": 977,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_4_finqa_accuracy.md": {
+      "sha256": "9fcaa7d2eec1bbf0ba81a9041d864f87fd466172a6ab647369940e430a7b4ec3",
+      "bytes": 3157,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_5_finqa_latency_cost.csv": {
+      "sha256": "286317535831067efd09ffd53133f2968afd187dcf97e8fa0bbcfc602f5d6a6f",
+      "bytes": 1161,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_5_finqa_latency_cost.md": {
+      "sha256": "cb23bfd5bbd3bfb41a63d5e4b4ae6f090c2b35ca809d1b9c8324b376c87e2f46",
+      "bytes": 2925,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_6_edgar_per_mode.csv": {
+      "sha256": "a84866fc2adeaa3a0ba73f274a6469335e37d14afbff16bb650b481073b5df07",
+      "bytes": 1739,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_6_edgar_per_mode.md": {
+      "sha256": "666bcd25ccc105235ef3f985ab35a28bc5f002e5bdaa4c7dcc1d9efadce16804",
+      "bytes": 4437,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_7_label_validation.csv": {
+      "sha256": "82f62e2c69929388554033db4438c8a401696ea6415d03108d2dc07deac24b78",
+      "bytes": 332,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/T4_7_label_validation.md": {
+      "sha256": "0603804a88e6976fedc015c6d8c58f0c2fbb88732bf4397b8d65f9563db81f4d",
+      "bytes": 1194,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_1_vecadvisor_decisions.csv": {
+      "sha256": "adf7b0750579c28d8e39ba91558df2c6dedd6723d9446abff13898e6bfe278e5",
+      "bytes": 251,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_1_vecadvisor_decisions.md": {
+      "sha256": "0579511339b2fd0ceefd3295ebbfeee31029ecae2e44c07adda676ee094a2d1e",
+      "bytes": 585,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_2_llm_router_decisions.csv": {
+      "sha256": "1686d4876edbb8641a923d0125c6196bdb2dc025cb3468059ac7961f40f1c049",
+      "bytes": 114,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_2_llm_router_decisions.md": {
+      "sha256": "e993fe95317240d77ecfa24df992044050847449bcdf02d1ff8daf131c5a7c2e",
+      "bytes": 453,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_3_edgar_cost.csv": {
+      "sha256": "06cb44e727dfb444423e8152edf0268bbf331467c2f93b7c4c5a51ddcafb7c56",
+      "bytes": 378,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_3_edgar_cost.md": {
+      "sha256": "55b193696a5d506e6116e5acf737bd462c60734360de928d7cd39fe25d7fb983",
+      "bytes": 994,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_4_scale_changes.csv": {
+      "sha256": "477da15f7a4ffeaab2a423229dcd5886ae84459f19aa95893c8037f07b144561",
+      "bytes": 369,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_4_scale_changes.md": {
+      "sha256": "9c49cb3865dbd9ef0a6be5b80acc9802a2bc9dd255156cc92363c9b4836c4987",
+      "bytes": 995,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_5_zero_passages.csv": {
+      "sha256": "25df231172ea40fb35d617ab9c1a7638497fad926b9541b94bc30a8f433df595",
+      "bytes": 268,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_5_zero_passages.md": {
+      "sha256": "9bd8aeed91c5029119a747b068b00176ff59f330fa5e4811e8f65c498bc637d7",
+      "bytes": 1123,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_6_wrong_source_year.csv": {
+      "sha256": "74f79a8978c5985b0b1881210c3ac48421257bc2d956838ae67c261f92797abe",
+      "bytes": 633,
+      "line_endings": "LF"
+    },
+    "reports/tables_2026-11-01/TA_6_wrong_source_year.md": {
+      "sha256": "fe1b4052d12f13cdc4f301403d6d4be253ca1e4a7f5f190abb3ff55983da4aab",
+      "bytes": 1746,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -2186,6 +2621,99 @@
         "outputs/edgar_retrieval_comparison_2026-11-01/run_stdout_restart.log",
         "outputs/edgar_retrieval_comparison_2026-11-01/summary_by_mode_breadth.csv",
         "outputs/edgar_retrieval_comparison_2026-11-01/vecadvisor_decisions.json"
+      ]
+    },
+    {
+      "label": "figures-2026-11-01",
+      "added_utc": "2026-11-01T11:03:18.132622+00:00",
+      "paths": [
+        "reports/figures_2026-11-01/CAPTIONS.md",
+        "reports/figures_2026-11-01/CHECKS.md",
+        "reports/figures_2026-11-01/SOURCES.md",
+        "reports/figures_2026-11-01/data/fig4_1_selectivity_distributions.csv",
+        "reports/figures_2026-11-01/data/fig4_2_hm_recall_by_arm.csv",
+        "reports/figures_2026-11-01/data/fig4_3_exact_latency.csv",
+        "reports/figures_2026-11-01/data/fig4_4_edgar_calibration_recall.csv",
+        "reports/figures_2026-11-01/data/fig4_5_edgar_failures_by_T.csv",
+        "reports/figures_2026-11-01/data/fig4_6_accuracy.csv",
+        "reports/figures_2026-11-01/data/fig4_7_error_classes.csv",
+        "reports/figures_2026-11-01/data/fig4_8_edgar_recall_vs_latency.csv",
+        "reports/figures_2026-11-01/data/fig4_9_router_overhead.csv",
+        "reports/figures_2026-11-01/data/fig5_1_thresholds.csv",
+        "reports/figures_2026-11-01/data/figA_1_edgar_calibration_per_vector.csv",
+        "reports/figures_2026-11-01/data/figA_2_edgar_recall_heatmap.csv",
+        "reports/figures_2026-11-01/data/figA_3_edgar_latency_by_breadth.csv",
+        "reports/figures_2026-11-01/data/figA_4_edgar_route_mix.csv",
+        "reports/figures_2026-11-01/data/figA_5_router_hmT_per_pair.csv",
+        "reports/figures_2026-11-01/data/figA_6_retrieval_vs_answer.csv",
+        "reports/figures_2026-11-01/data/figA_7_default_hnsw_rows_vs_class.csv",
+        "reports/figures_2026-11-01/data/figA_8_accuracy_three_rules.csv",
+        "reports/figures_2026-11-01/data/figA_9_hm_pass_counts.csv",
+        "reports/figures_2026-11-01/fig4_1_selectivity_distributions.pdf",
+        "reports/figures_2026-11-01/fig4_1_selectivity_distributions.png",
+        "reports/figures_2026-11-01/fig4_2_hm_recall_by_arm.pdf",
+        "reports/figures_2026-11-01/fig4_2_hm_recall_by_arm.png",
+        "reports/figures_2026-11-01/fig4_3_exact_latency.pdf",
+        "reports/figures_2026-11-01/fig4_3_exact_latency.png",
+        "reports/figures_2026-11-01/fig4_4_edgar_calibration_recall.pdf",
+        "reports/figures_2026-11-01/fig4_4_edgar_calibration_recall.png",
+        "reports/figures_2026-11-01/fig4_5_edgar_failures_by_T.pdf",
+        "reports/figures_2026-11-01/fig4_5_edgar_failures_by_T.png",
+        "reports/figures_2026-11-01/fig4_6_accuracy.pdf",
+        "reports/figures_2026-11-01/fig4_6_accuracy.png",
+        "reports/figures_2026-11-01/fig4_7_error_classes.pdf",
+        "reports/figures_2026-11-01/fig4_7_error_classes.png",
+        "reports/figures_2026-11-01/fig4_8_edgar_recall_vs_latency.pdf",
+        "reports/figures_2026-11-01/fig4_8_edgar_recall_vs_latency.png",
+        "reports/figures_2026-11-01/fig4_9_router_overhead.pdf",
+        "reports/figures_2026-11-01/fig4_9_router_overhead.png",
+        "reports/figures_2026-11-01/fig5_1_thresholds.pdf",
+        "reports/figures_2026-11-01/fig5_1_thresholds.png",
+        "reports/figures_2026-11-01/figA_1_edgar_calibration_per_vector.pdf",
+        "reports/figures_2026-11-01/figA_1_edgar_calibration_per_vector.png",
+        "reports/figures_2026-11-01/figA_2_edgar_recall_heatmap.pdf",
+        "reports/figures_2026-11-01/figA_2_edgar_recall_heatmap.png",
+        "reports/figures_2026-11-01/figA_3_edgar_latency_by_breadth.pdf",
+        "reports/figures_2026-11-01/figA_3_edgar_latency_by_breadth.png",
+        "reports/figures_2026-11-01/figA_4_edgar_route_mix.pdf",
+        "reports/figures_2026-11-01/figA_4_edgar_route_mix.png",
+        "reports/figures_2026-11-01/figA_5_router_hmT_per_pair.pdf",
+        "reports/figures_2026-11-01/figA_5_router_hmT_per_pair.png",
+        "reports/figures_2026-11-01/figA_6_retrieval_vs_answer.pdf",
+        "reports/figures_2026-11-01/figA_6_retrieval_vs_answer.png",
+        "reports/figures_2026-11-01/figA_7_default_hnsw_rows_vs_class.pdf",
+        "reports/figures_2026-11-01/figA_7_default_hnsw_rows_vs_class.png",
+        "reports/figures_2026-11-01/figA_8_accuracy_three_rules.pdf",
+        "reports/figures_2026-11-01/figA_8_accuracy_three_rules.png",
+        "reports/figures_2026-11-01/figA_9_hm_pass_counts.pdf",
+        "reports/figures_2026-11-01/figA_9_hm_pass_counts.png",
+        "reports/tables_2026-11-01/SOURCES_TABLES.md",
+        "reports/tables_2026-11-01/T4_1_corpus_audit.csv",
+        "reports/tables_2026-11-01/T4_1_corpus_audit.md",
+        "reports/tables_2026-11-01/T4_2_calibrated_T.csv",
+        "reports/tables_2026-11-01/T4_2_calibrated_T.md",
+        "reports/tables_2026-11-01/T4_3_hm_pass_counts.csv",
+        "reports/tables_2026-11-01/T4_3_hm_pass_counts.md",
+        "reports/tables_2026-11-01/T4_4_finqa_accuracy.csv",
+        "reports/tables_2026-11-01/T4_4_finqa_accuracy.md",
+        "reports/tables_2026-11-01/T4_5_finqa_latency_cost.csv",
+        "reports/tables_2026-11-01/T4_5_finqa_latency_cost.md",
+        "reports/tables_2026-11-01/T4_6_edgar_per_mode.csv",
+        "reports/tables_2026-11-01/T4_6_edgar_per_mode.md",
+        "reports/tables_2026-11-01/T4_7_label_validation.csv",
+        "reports/tables_2026-11-01/T4_7_label_validation.md",
+        "reports/tables_2026-11-01/TA_1_vecadvisor_decisions.csv",
+        "reports/tables_2026-11-01/TA_1_vecadvisor_decisions.md",
+        "reports/tables_2026-11-01/TA_2_llm_router_decisions.csv",
+        "reports/tables_2026-11-01/TA_2_llm_router_decisions.md",
+        "reports/tables_2026-11-01/TA_3_edgar_cost.csv",
+        "reports/tables_2026-11-01/TA_3_edgar_cost.md",
+        "reports/tables_2026-11-01/TA_4_scale_changes.csv",
+        "reports/tables_2026-11-01/TA_4_scale_changes.md",
+        "reports/tables_2026-11-01/TA_5_zero_passages.csv",
+        "reports/tables_2026-11-01/TA_5_zero_passages.md",
+        "reports/tables_2026-11-01/TA_6_wrong_source_year.csv",
+        "reports/tables_2026-11-01/TA_6_wrong_source_year.md"
       ]
     }
   ]

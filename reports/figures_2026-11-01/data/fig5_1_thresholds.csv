@@ -1,0 +1,10 @@
+label,kind,lo,hi,x,colour,source
+H&M router: safe interval and T,band,0.047773549000951473,0.10608943862987631,0.07119177617441379,#009E73,config/policy_v3_hm.json
+EDGAR router T (empty-interval rule),line,,,0.3786921696945195,#0072B2,config/policy_v3_1_edgar.json
+VBASE: exact if s < 0.18,line,,,0.18,#AA4499,src/phase_c_analysis/amendment6_partb.py:58
+Milvus (via NaviX): exact if s <= 0.05,line,,,0.05,#88CCEE,src/phase_c_analysis/amendment6_partb.py:59
+"Qdrant, H&M (1,250 rows / 105,100)",line,,,0.011893434823977164,#CC6677,"src/phase_c_analysis/amendment6_partb.py:27 (DIMS line 26, N_ROWS line 25)"
+"Qdrant, FinQA (2,500 rows / 35,862)",line,,,0.06971167252244716,#CC6677,"src/phase_d_validation/amendment7_step1.py:219 (N_TOTAL, DIMS line 42)"
+"Qdrant, EDGAR (2,500 rows / 158,308)",line,,,0.01579200040427521,#CC6677,"src/phase_f_edgar/compare_edgar.py:46 (N = chunks_total, outputs/edgar_chunks_2026-10-31/summary.json)"
+H&M planner switch exact -> HNSW,band,0.2599143672692673,0.2985918173168411,,#777777,outputs/phase_a_arms/analysis/cell_summary.csv
+Post-filter cliff k / ef_search = 10/40,line,,,0.25,#D55E00,computed from k and ef_search in config/policy_v3_hm.json

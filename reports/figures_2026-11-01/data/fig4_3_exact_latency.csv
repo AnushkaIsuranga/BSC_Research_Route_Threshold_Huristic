@@ -1,0 +1,27 @@
+s,exact_ms,iter_guard_ms,corpus
+0.000124,0.57,162.05,H&M (median of 5 tables)
+0.000847,3.39,151.96,H&M (median of 5 tables)
+0.010542,39.76,19.97,H&M (median of 5 tables)
+0.047774,175.71,6.17,H&M (median of 5 tables)
+0.106089,452.28,3.5,H&M (median of 5 tables)
+0.203758,840.05,2.26,H&M (median of 5 tables)
+0.213882,884.17,2.08,H&M (median of 5 tables)
+0.230942,950.16,2.01,H&M (median of 5 tables)
+0.259914,1063.78,2.02,H&M (median of 5 tables)
+0.298592,1208.17,1.77,H&M (median of 5 tables)
+0.32901,1324.41,1.73,H&M (median of 5 tables)
+0.376327,1508.24,1.61,H&M (median of 5 tables)
+0.470504,1854.91,1.64,H&M (median of 5 tables)
+0.000152,0.24,191.99,EDGAR
+0.000954,1.01,185.76,EDGAR
+0.010587,9.92,108.41,EDGAR
+0.048298,47.07,3.62,EDGAR
+0.106324,152.14,4.58,EDGAR
+0.203742,316.05,1.47,EDGAR
+0.214013,330.82,2.5,EDGAR
+0.231694,192.95,2.45,EDGAR
+0.260138,215.52,2.71,EDGAR
+0.2991,242.59,2.52,EDGAR
+0.329029,267.99,1.78,EDGAR
+0.378692,297.22,1.36,EDGAR
+0.470892,336.45,1.71,EDGAR

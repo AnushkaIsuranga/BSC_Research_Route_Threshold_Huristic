@@ -1,0 +1,15 @@
+group,lead,gold_hit,n,correct
+Router (= always-exact; 7 identical modes),router,True,144,144
+Router (= always-exact; 7 identical modes),router,False,16,1
+Fixed T = 0.1,fixed_t_0_1,True,143,143
+Fixed T = 0.1,fixed_t_0_1,False,17,1
+Router with H&M T (+5 identical),router_hmT,True,142,142
+Router with H&M T (+5 identical),router_hmT,False,18,1
+"HNSW, retry exact",retry_exact,True,144,144
+"HNSW, retry exact",retry_exact,False,16,1
+"Iterative, tuned (+1 identical)",iterative_tuned,True,143,141
+"Iterative, tuned (+1 identical)",iterative_tuned,False,17,1
+VBASE rule (s < 0.18),vbase,True,143,143
+VBASE rule (s < 0.18),vbase,False,17,1
+Filtered HNSW (pgvector default),default_hnsw,True,125,124
+Filtered HNSW (pgvector default),default_hnsw,False,35,4

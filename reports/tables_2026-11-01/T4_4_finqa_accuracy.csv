@@ -1,0 +1,6 @@
+arm,pass-1 accuracy,pass-1 95% CI,pooled 5-pass accuracy,pooled 95% CI,CI source,b (arm only correct),c (policy_v2 only correct),McNemar p (pass 1),"diff vs policy_v2, pass 1 [Newcombe CI]","diff vs policy_v2, pooled [bootstrap CI]"
+Router (policy_v2) [policy_v2],0.72,"[0.583, 0.825]",0.704,"[0.645, 0.757]",saved,,,,,
+LLM router [naive_llm],0.64,"[0.501, 0.759]",0.632,"[0.571, 0.689]",saved,0.0,4.0,0.125,"-0.080 [-0.158, -0.004]","-0.072 [-0.148, -0.012]"
+"LLM router, informed prompt [naive_informed]",0.68,"[0.542, 0.792]",0.704,"[0.645, 0.757]",saved,0.0,2.0,0.5,"-0.040 [-0.101, +0.018]","-0.000 [-0.020, +0.016]"
+Decision matrix v1 (LLM-free) [decision_matrix],0.68,"[0.542, 0.792]",0.696,"[0.636, 0.750]",saved,0.0,2.0,0.5,"-0.040 [-0.101, +0.018]","-0.008 [-0.028, +0.008]"
+Filtered HNSW (pgvector default) [always_hnsw],0.48,"[0.348, 0.615]",0.52,"[0.458, 0.581]",recomputed (Amendment 5 Wilson),0.0,12.0,0.00049,"-0.240 [-0.349, -0.118]","-0.184 [-0.288, -0.088]"

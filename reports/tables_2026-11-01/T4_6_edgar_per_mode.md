@@ -1,0 +1,27 @@
+# Table 4.6 EDGAR per mode (160 pairs, 1 answer pass)
+
+| mode                                            |   pairs recall@15 >= 0.90 /160 |   mean recall@15 |   gold hit |   median latency ms |   accuracy | accuracy 95% CI   |   wrong_not_in_context |
+|:------------------------------------------------|-------------------------------:|-----------------:|-----------:|--------------------:|-----------:|:------------------|-----------------------:|
+| Router (policy_v3.1) [router]                   |                            160 |           1      |     0.9    |               38.71 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| Router, tuned iterative [router_tuned]          |                            160 |           1      |     0.9    |               40.25 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| Router, no guard [router_no_guard]              |                            160 |           1      |     0.9    |               33.69 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| Router, always count [router_always_count]      |                            160 |           1      |     0.9    |               34.39 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| Router + local probe [router_plus_probe]        |                            160 |           1      |     0.9    |               49.76 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| Always exact [always_exact]                     |                            160 |           1      |     0.9    |               20.84 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| LLM router [llm_router]                         |                            160 |           1      |     0.9    |               22.12 |     0.9062 | [0.838, 0.963]    |                 0.0187 |
+| Fixed T = 0.1 [fixed_t_0_1]                     |                            143 |           0.9579 |     0.8938 |               22.51 |     0.9    | [0.831, 0.956]    |                 0.0187 |
+| Router with H&M T [router_hmT]                  |                            131 |           0.9358 |     0.8875 |               22.13 |     0.8938 | [0.825, 0.950]    |                 0.025  |
+| Local probe [local_probe]                       |                            128 |           0.9325 |     0.8875 |               19.11 |     0.8938 | [0.825, 0.950]    |                 0.025  |
+| Planner + iterative [planner_iterative]         |                            126 |           0.9296 |     0.8875 |                9.34 |     0.8938 | [0.825, 0.950]    |                 0.025  |
+| HNSW, retry exact [retry_exact]                 |                            138 |           0.9504 |     0.9    |               15.85 |     0.9062 | [0.844, 0.956]    |                 0.0125 |
+| Iterative, tuned [iterative_tuned]              |                            113 |           0.9083 |     0.8938 |               11.91 |     0.8875 | [0.819, 0.944]    |                 0.025  |
+| Always iterative [always_iterative]             |                            103 |           0.8911 |     0.8938 |               11.33 |     0.8875 | [0.819, 0.944]    |                 0.025  |
+| VecAdvisor [vecadvisor]                         |                            127 |           0.93   |     0.8875 |                8.97 |     0.8938 | [0.825, 0.950]    |                 0.025  |
+| VBASE rule (s < 0.18) [vbase]                   |                            146 |           0.965  |     0.8938 |               15.59 |     0.9    | [0.831, 0.956]    |                 0.0187 |
+| Milvus rule (s <= 0.05) [milvus]                |                            127 |           0.9304 |     0.8875 |               15.37 |     0.8938 | [0.825, 0.950]    |                 0.025  |
+| Qdrant rule (rows) [qdrant]                     |                            126 |           0.9296 |     0.8875 |               15.94 |     0.8938 | [0.825, 0.950]    |                 0.025  |
+| Filtered HNSW (pgvector default) [default_hnsw] |                             34 |           0.5384 |     0.7812 |                9.11 |     0.8    | [0.681, 0.906]    |                 0.0875 |
+
+Source: `outputs/edgar_retrieval_comparison_2026-11-01/summary_by_mode_breadth.csv`, `outputs/edgar_analysis_2026-11-01/answers_by_mode_breadth.csv`
+
+Note: Accuracy CI: cluster bootstrap over the 40 questions (10,000 resamples, seed 20261104).

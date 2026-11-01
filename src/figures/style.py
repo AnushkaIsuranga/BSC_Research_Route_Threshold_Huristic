@@ -97,10 +97,12 @@ def marker(mode: str) -> str:
 
 def half_up(x: float, places: int = 3) -> str:
     """Report-style rounding (half away from zero on the decimal text of the value)."""
-    return str(Decimal(repr(x)).quantize(Decimal(1).scaleb(-places), rounding=ROUND_HALF_UP))
+    return str(Decimal(repr(float(x))).quantize(Decimal(1).scaleb(-places), rounding=ROUND_HALF_UP))
 
 
 def fig(h_cm: float, ncols: int = 1, nrows: int = 1, w_cm: float | None = None, **kw):
+    """Fixed-size canvas (16 cm wide unless w_cm), constrained layout: text keeps its point size when printed at that width."""
+    kw.setdefault("layout", "constrained")
     return plt.subplots(nrows, ncols, figsize=((w_cm * CM) if w_cm else FULL_W, h_cm * CM), **kw)
 
 
@@ -109,7 +111,7 @@ def save(f, stem: str) -> list[Path]:
     out = []
     for ext in ("png", "pdf"):
         p = FIG_DIR / f"{stem}.{ext}"
-        f.savefig(p, dpi=300, bbox_inches="tight", pad_inches=0.03, metadata={"CreationDate": None} if ext == "pdf" else {"Software": None})
+        f.savefig(p, dpi=300, metadata={"CreationDate": None} if ext == "pdf" else {"Software": None})
         out.append(p)
     plt.close(f)
     return out

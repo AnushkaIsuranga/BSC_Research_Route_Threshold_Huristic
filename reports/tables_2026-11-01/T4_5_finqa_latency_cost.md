@@ -1,0 +1,19 @@
+# Table 4.5 FinQA latency and cost, Router (policy_v2) vs LLM router (naive_llm)
+
+| quantity                                                                             |     estimate | 95% CI                 | source                                                     |
+|:-------------------------------------------------------------------------------------|-------------:|:-----------------------|:-----------------------------------------------------------|
+| latency, policy_v2 - naive_llm, pass 1 (mean of paired per-question differences, ms) | -2826.7      | [-3753.5, -1993.4]     | stats_primary.json pairs                                   |
+| latency, policy_v2 - naive_llm, pooled 5 passes (ms)                                 | -2590.3      | [-3215.1, -2033.0]     | audit.json recomputed.lat_diff_all                         |
+| latency, difference of pass-1 medians (ms)                                           | -2142.8      | -                      | audit.json recomputed.lat_diff                             |
+| cost per arm-run, policy_v2 - naive_llm, pass 1 (USD)                                |    -0.000688 | [-0.001146, -0.000288] | audit.json recomputed.cost_diff_boot_p1                    |
+| cost per arm-run, policy_v2 - naive_llm, pooled 5 passes (USD)                       |    -0.000364 | [-0.000654, -0.000118] | audit.json recomputed.cost_diff_boot_all                   |
+| share cheaper, pass 1 (%)                                                            |    33.8      | -                      | audit.json recomputed.pct                                  |
+| share cheaper, 5 passes (%)                                                          |    19.4      | -                      | audit.json recomputed.pct                                  |
+| share cheaper, answer call only, 5 passes (%)                                        |     5.6      | -                      | audit.json recomputed.pct                                  |
+| mean saving per arm-run, 5 passes (USD)                                              |     0.000364 | -                      | audit.json recomputed.cost (all|naive_llm - all|policy_v2) |
+| of which the skipped router call (USD)                                               |     0.000274 | -                      | audit.json recomputed.cost all|naive_llm router_mean       |
+| share of the saving from the skipped router call (%)                                 |    75.2      | -                      | ratio of the two rows above                                |
+
+Source: `outputs/phase_d_gemini_full_2026-10-12/stats_primary.json`, `outputs/headline_audit_2026-10-23/audit.json`
+
+Note: Negative differences mean policy_v2 is faster / cheaper. Bootstrap: paired over questions, 10,000 resamples (headline audit). The last row is a ratio of two committed values; reports/headline_audit_2026-10-23.md states it as 'about three quarters'.

@@ -1,0 +1,8 @@
+group,lead,primary,scale_aware,refusal_rule
+Router (= always-exact; 7 identical modes),router,0.9062,0.89375,0.9062
+Fixed T = 0.1,fixed_t_0_1,0.9,0.8875,0.9
+Router with H&M T (+5 identical),router_hmT,0.8938,0.88125,0.8938
+"HNSW, retry exact",retry_exact,0.9062,0.89375,0.9062
+"Iterative, tuned (+1 identical)",iterative_tuned,0.8875,0.88125,0.8875
+VBASE rule (s < 0.18),vbase,0.9,0.8875,0.9
+Filtered HNSW (pgvector default),default_hnsw,0.8,0.8125,0.8

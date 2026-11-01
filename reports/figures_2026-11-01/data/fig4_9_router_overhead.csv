@@ -1,0 +1,5 @@
+breadth,n_pairs,pairs_with_count,median_stats_check_ms,median_estimate_ms,median_count_ms,median_decision_ms,median_route_ms,median_other_ms,median_latency_ms,router_median_latency_ms,always_exact_median_latency_ms,router_minus_always_exact_ms
+cik+year+section,40,0,10.316,4.042,,14.358,6.565,1.14,22.113,22.113,7.2,14.912
+cik+year,40,0,8.101,4.045,,12.181,7.126,1.082,20.384,20.384,8.289,12.095
+year+section,40,0,8.503,3.939,,12.476,167.538,1.01,181.548,181.548,162.57,18.978
+section,40,30,6.357,3.785,8.403,17.983,265.994,1.252,287.232,287.232,267.249,19.983

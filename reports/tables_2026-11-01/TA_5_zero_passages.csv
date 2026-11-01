@@ -1,0 +1,6 @@
+mode,breadth,n_pairs,zero_passage_pairs,gave_number,abstained_primary,refusal,correct
+default_hnsw,all,160,8,8,0,0,0
+default_hnsw,cik+year+section,40,4,4,0,0,0
+default_hnsw,cik+year,40,2,2,0,0,0
+default_hnsw,year+section,40,1,1,0,0,0
+default_hnsw,section,40,1,1,0,0,0

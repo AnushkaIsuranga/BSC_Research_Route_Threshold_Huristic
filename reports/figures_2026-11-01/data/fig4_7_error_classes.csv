@@ -1,0 +1,18 @@
+panel,arm,correct,wrong_grounded,wrong_ungrounded,abstain_or_parse_fail,wrong_in_context,wrong_not_in_context,abstained
+a,policy_v2,0.704,0.132,0.14,0.024,,,
+a,naive_llm,0.632,0.14,0.208,0.02,,,
+a,always_hnsw,0.52,0.144,0.328,0.008,,,
+b,Router (= always-exact; 7 identical modes),0.9062,,,,0.0688,0.0187,0.0063
+b,Fixed T = 0.1,0.9,,,,0.0813,0.0187,0.0
+b,Router with H&M T (+5 identical),0.8938,,,,0.0813,0.025,0.0
+b,"HNSW, retry exact",0.9062,,,,0.0813,0.0125,0.0
+b,"Iterative, tuned (+1 identical)",0.8875,,,,0.0875,0.025,0.0
+b,VBASE rule (s < 0.18),0.9,,,,0.075,0.0187,0.0063
+b,Filtered HNSW (pgvector default),0.8,,,,0.1,0.0875,0.0125
+c,Router (= always-exact; 7 identical modes),0.9062,,,,0.025,0.0187,0.05
+c,Fixed T = 0.1,0.9,,,,0.0312,0.0187,0.05
+c,Router with H&M T (+5 identical),0.8938,,,,0.0375,0.0187,0.05
+c,"HNSW, retry exact",0.9062,,,,0.0437,0.0125,0.0375
+c,"Iterative, tuned (+1 identical)",0.8875,,,,0.0437,0.0187,0.05
+c,VBASE rule (s < 0.18),0.9,,,,0.0312,0.0187,0.05
+c,Filtered HNSW (pgvector default),0.8,,,,0.0375,0.075,0.0875

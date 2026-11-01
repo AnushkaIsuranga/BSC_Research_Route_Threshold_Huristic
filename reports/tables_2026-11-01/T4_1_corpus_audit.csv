@@ -1,0 +1,3 @@
+corpus,rows,unique texts,companies,years,reltuples after VACUUM ANALYZE,gold resolution,zero vectors,dimension,index / self-retrieval
+FinQA (finqa_evidence_qwen3),35862,10843,not in a committed result file,not in a committed result file,not in a committed result file,0 unresolved gold pairs,0,1024,self-retrieval 5/5
+EDGAR (edgar_chunks),158308,"not in a committed result file (154,824 is stated only in docs/RUNBOOK_EDGAR.md)",433,2018-2020,158278,n/a (gold = chunk ids),0,not in a committed result file (0 dimension mismatches against the build's expected size),"hnsw (embedding vector_l2_ops) WITH (m='16', ef_construction='64'); self-retrieval 5/5"

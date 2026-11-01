@@ -1,0 +1,14 @@
+arm,estimate,k,n,acc,lo,hi,ci_source,panel,lead,members,correct_ci
+policy_v2,pass 1,36.0,50.0,0.72,0.5833487619095525,0.8252582940118571,"saved (Wilson, summary_counts_gemini_full.csv)",a,,,
+policy_v2,pooled 5 passes,176.0,250.0,0.704,0.6446716449486691,0.7571539687612578,"saved (Wilson, summary_counts_gemini_full.csv)",a,,,
+naive_llm,pass 1,32.0,50.0,0.64,0.5014101676670928,0.7586125042828953,"saved (Wilson, summary_counts_gemini_full.csv)",a,,,
+naive_llm,pooled 5 passes,158.0,250.0,0.632,0.5706422098083882,0.6893625990627411,"saved (Wilson, summary_counts_gemini_full.csv)",a,,,
+always_hnsw,pass 1,24.0,50.0,0.48,0.3479713519089993,0.6148825520981452,"recomputed (Amendment 5 Wilson, paired_stats.wilson)",a,,,
+always_hnsw,pooled 5 passes,130.0,250.0,0.52,0.4582370767698811,0.5811575912408962,"recomputed (Amendment 5 Wilson, paired_stats.wilson)",a,,,
+Filtered HNSW (pgvector default),pass 1,,,0.8,0.681,0.906,,b,default_hnsw,default_hnsw,"[0.681, 0.906]"
+"Iterative, tuned (+1 identical)",pass 1,,,0.8875,0.819,0.944,,b,iterative_tuned,iterative_tuned|always_iterative,"[0.819, 0.944]"
+Router with H&M T (+5 identical),pass 1,,,0.8938,0.825,0.95,,b,router_hmT,router_hmT|local_probe|planner_iterative|vecadvisor|milvus|qdrant,"[0.825, 0.950]"
+Fixed T = 0.1,pass 1,,,0.9,0.831,0.956,,b,fixed_t_0_1,fixed_t_0_1,"[0.831, 0.956]"
+VBASE rule (s < 0.18),pass 1,,,0.9,0.831,0.956,,b,vbase,vbase,"[0.831, 0.956]"
+Router (= always-exact; 7 identical modes),pass 1,,,0.9062,0.838,0.963,,b,router,router|router_tuned|router_no_guard|router_always_count|router_plus_probe|always_exact|llm_router,"[0.838, 0.963]"
+"HNSW, retry exact",pass 1,,,0.9062,0.844,0.956,,b,retry_exact,retry_exact,"[0.844, 0.956]"

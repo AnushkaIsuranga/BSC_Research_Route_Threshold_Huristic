@@ -1,0 +1,8 @@
+step,calls,cost_usd
+llm_router decision,160,0.0447435
+answer pilot (excluded),5,0.022171499999999997
+answer main pass 1,355,1.39633575
+session total,520,1.4632507499999992
+"projection, 5 pass(es) (pilot mean x 355 prompts)",,7.8708825
+"projection, 3 pass(es) (pilot mean x 355 prompts)",,4.722529499999999
+"projection, 1 pass(es) (pilot mean x 355 prompts)",,1.5741764999999999

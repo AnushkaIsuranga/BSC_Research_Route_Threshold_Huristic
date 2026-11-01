@@ -1,0 +1,6 @@
+dataset,automatic class,S,C,N,X
+"FinQA (Amendment 5, 40 rows)",wrong_grounded,7,13,0,-
+"FinQA (Amendment 5, 40 rows)",wrong_ungrounded,0,14,6,-
+"EDGAR (Amendment 11, 40 rows)",wrong_in_context,8,0,2,16
+"EDGAR (Amendment 11, 40 rows)",wrong_not_in_context,0,0,12,2
+EDGAR agreement (S/C/N rows),20/22 = 0.909,-,-,-,18 X rows excluded
