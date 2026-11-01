@@ -1,0 +1,25 @@
+g00: grid 0.000124 achieved 0.000152 (24 rows, 2 CIKs)
+g01: grid 0.000847 achieved 0.000954 (151 rows, 1 CIKs)
+g02: grid 0.010542 achieved 0.010587 (1676 rows, 9 CIKs)
+g03: grid 0.047774 achieved 0.048298 (7646 rows, 23 CIKs)
+g04: grid 0.106089 achieved 0.106324 (16832 rows, 49 CIKs)
+g05: grid 0.203758 achieved 0.203742 (32254 rows, 88 CIKs)
+g06: grid 0.213882 achieved 0.214013 (33880 rows, 88 CIKs)
+g07: grid 0.230942 achieved 0.231694 (36679 rows, 104 CIKs)
+g08: grid 0.259914 achieved 0.260138 (41182 rows, 111 CIKs)
+g09: grid 0.298592 achieved 0.299100 (47350 rows, 136 CIKs)
+g10: grid 0.329010 achieved 0.329029 (52088 rows, 141 CIKs)
+g11: grid 0.376327 achieved 0.378692 (59950 rows, 157 CIKs)
+g12: grid 0.470504 achieved 0.470892 (74546 rows, 211 CIKs)
+quiet check: {'attempt': 1, 'cpu_mean': 21.97, 'blocking_processes': [], 'quiet': True}
+100/1040 items, 100 new in 0.9 min
+200/1040 items, 200 new in 1.9 min
+300/1040 items, 300 new in 2.8 min
+400/1040 items, 400 new in 3.5 min
+500/1040 items, 500 new in 8.5 min
+600/1040 items, 600 new in 19.6 min
+700/1040 items, 700 new in 20.7 min
+800/1040 items, 800 new in 22.2 min
+900/1040 items, 900 new in 26.1 min
+1000/1040 items, 1000 new in 31.1 min
+done: 1040 new rows in 31.6 min

@@ -1,0 +1,424 @@
+{
+ "checked_utc": "2026-11-01T03:12:56.353051+00:00",
+ "n_checks": 52,
+ "n_failed": 0,
+ "failures": [],
+ "checks": [
+  {
+   "filter_id": "g00",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g00",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g00",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g00",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g01",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g01",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g01",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g01",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g02",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g02",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g02",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g02",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g03",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g03",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g03",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g03",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g04",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g04",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g04",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g04",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g05",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g05",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g05",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g05",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g06",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan",
+   "scan_node": "Bitmap Heap Scan",
+   "index_used": "edgar_chunks_cik_idx"
+  },
+  {
+   "filter_id": "g06",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g06",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g06",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g07",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Gather Merge/Sort/Seq Scan",
+   "scan_node": "Seq Scan",
+   "index_used": null
+  },
+  {
+   "filter_id": "g07",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g07",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g07",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g08",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Gather Merge/Sort/Seq Scan",
+   "scan_node": "Seq Scan",
+   "index_used": null
+  },
+  {
+   "filter_id": "g08",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g08",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g08",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g09",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Gather Merge/Sort/Seq Scan",
+   "scan_node": "Seq Scan",
+   "index_used": null
+  },
+  {
+   "filter_id": "g09",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g09",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g09",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g10",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Gather Merge/Sort/Seq Scan",
+   "scan_node": "Seq Scan",
+   "index_used": null
+  },
+  {
+   "filter_id": "g10",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g10",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g10",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g11",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Gather Merge/Sort/Seq Scan",
+   "scan_node": "Seq Scan",
+   "index_used": null
+  },
+  {
+   "filter_id": "g11",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g11",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g11",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g12",
+   "route": "exact",
+   "ok": true,
+   "plan_nodes": "Limit/Gather Merge/Sort/Seq Scan",
+   "scan_node": "Seq Scan",
+   "index_used": null
+  },
+  {
+   "filter_id": "g12",
+   "route": "iterative_default",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g12",
+   "route": "iterative_tuned",
+   "ok": true,
+   "plan_nodes": "Sort/Limit/Index Scan/CTE Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  },
+  {
+   "filter_id": "g12",
+   "route": "probe",
+   "ok": true,
+   "plan_nodes": "Limit/Index Scan",
+   "scan_node": "Index Scan",
+   "index_used": "edgar_chunks_embedding_idx"
+  }
+ ]
+}

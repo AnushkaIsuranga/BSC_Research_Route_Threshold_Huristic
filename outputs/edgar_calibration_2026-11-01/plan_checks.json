@@ -1,0 +1,36 @@
+{
+ "exact_routes_without_hnsw": 260,
+ "iterative_routes_on_hnsw": 520,
+ "probe_routes_on_hnsw": 260,
+ "plan_mismatches": 0,
+ "index_used_by_route": {
+  "exact": [
+   "None",
+   "edgar_chunks_cik_idx"
+  ],
+  "iterative_default": [
+   "edgar_chunks_embedding_idx"
+  ],
+  "iterative_tuned": [
+   "edgar_chunks_embedding_idx"
+  ],
+  "probe": [
+   "edgar_chunks_embedding_idx"
+  ]
+ },
+ "scan_nodes_by_route": {
+  "exact": [
+   "Bitmap Heap Scan",
+   "Seq Scan"
+  ],
+  "iterative_default": [
+   "Index Scan"
+  ],
+  "iterative_tuned": [
+   "Index Scan"
+  ],
+  "probe": [
+   "Index Scan"
+  ]
+ }
+}

@@ -1,0 +1,3089 @@
+{
+ "T_edgar": 0.3786921696945195,
+ "T_hm": 0.07119177617441379,
+ "n_pairs": 160,
+ "routes": {
+  "router": {
+   "exact": 160
+  },
+  "router_hmT": {
+   "exact": 92,
+   "iterative": 68
+  }
+ },
+ "routes_by_breadth": {
+  "router": {
+   "cik+year+section": {
+    "exact": 40
+   },
+   "cik+year": {
+    "exact": 40
+   },
+   "year+section": {
+    "exact": 40
+   },
+   "section": {
+    "exact": 40
+   }
+  },
+  "router_hmT": {
+   "cik+year+section": {
+    "exact": 40
+   },
+   "cik+year": {
+    "exact": 40
+   },
+   "year+section": {
+    "iterative": 30,
+    "exact": 10
+   },
+   "section": {
+    "iterative": 38,
+    "exact": 2
+   }
+  }
+ },
+ "same_route_pairs": 92,
+ "pairs": [
+  {
+   "pair_id": "edgar_q001|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00025898880663011343,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013899594384563868,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013899594384563868,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q001|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0007327488187583698,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q001|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q001|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q003|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00024003840614498319,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013899594384563868,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013899594384563868,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q003|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0003979584101877353,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q003|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q003|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q004|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 5.053440129368067e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001010879591604645,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001010879591604645,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q004|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0007706496197286303,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q004|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.05772923667786846,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0600652017336585,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.0600652017336585,
+    "count": 9139,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q004|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q006|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00017055360436617228,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q006|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0006190464158475883,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q006|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.07695757637011395,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.07893074211198019,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.07893074211198019,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q006|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q007|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0006316800161710085,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001832219259783419,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001832219259783419,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q007|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0012570432321803067,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q007|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.10775197715845061,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.10799984836806126,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.10799984836806126,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q007|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q008|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00022740480582156302,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001010879591604645,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001010879591604645,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q008|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0012444096318568866,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q008|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.05772923667786846,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0600652017336585,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.0600652017336585,
+    "count": 9139,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q008|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q009|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0003663744093791849,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00029062788258633546,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00029062788258633546,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q009|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.001263360032342017,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0011435575380027547,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0011435575380027547,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q009|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q009|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q010|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00041690881067286555,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q010|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0010928064279758446,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q010|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.05807666068676251,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.05666611910688788,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.05666611910688788,
+    "count": 9194,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q010|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q011|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00012001920307249159,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q011|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0008275008211840211,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q011|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.059024180711019024,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.05706415294608221,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.05706415294608221,
+    "count": 9344,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q011|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q012|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0004674432119665462,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00034748985961409673,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00034748985961409673,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q012|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.001339161634282538,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0014720934052742643,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0014720934052742643,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q012|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08148040528589838,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.08333438633290792,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.08333438633290792,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q012|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q013|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00038532480986431514,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00033485386471903864,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00033485386471903864,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q013|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0014023296358996386,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015984533542248449,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015984533542248449,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q013|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.07695757637011395,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.07893074211198019,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.07893074211198019,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q013|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q014|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0001642368042044622,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00017058593108328383,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00017058593108328383,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q014|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0003600576092174748,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q014|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09811885691184273,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09903460999001756,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09903460999001756,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q014|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q015|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0004737600121282563,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00017058593108328383,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00017058593108328383,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q015|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.001124390428784395,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q015|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09811885691184273,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09903460999001756,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09903460999001756,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q015|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q018|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00034742400889405464,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005370297830399677,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005370297830399677,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q018|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0016739520428531722,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0019017172317062384,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0019017172317062384,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q018|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09811885691184273,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09903460999001756,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09903460999001756,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q018|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q019|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0009601536245799327,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005117577932498515,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005117577932498515,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q019|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0016297344417212018,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015984533542248449,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015984533542248449,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q019|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09811885691184273,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09903460999001756,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09903460999001756,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q019|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q022|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00025898880663011343,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0003158998723764516,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0003158998723764516,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q022|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0015855168405892312,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00123832749971569,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00123832749971569,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q022|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q022|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q023|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0005748288147156177,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00035380785706162575,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00035380785706162575,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q023|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0011812416302397857,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.001213055509925574,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.001213055509925574,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q023|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09253480556889103,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09293142445570451,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09293142445570451,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q023|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q026|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00022108800565985294,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q026|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0005685120145539075,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q026|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09253480556889103,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09293142445570451,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09293142445570451,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q026|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q027|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 2.5267200646840336e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q027|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0003221568082472143,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q027|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.059024180711019024,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.05706415294608221,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.05706415294608221,
+    "count": 9344,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q027|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q028|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00042322561083457563,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q028|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0009033024231245421,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q028|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09253480556889103,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09293142445570451,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09293142445570451,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q028|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q029|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 3.158400080855042e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 1.8953992342587093e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 1.8953992342587093e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q029|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0012570432321803067,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0011941015175829868,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0011941015175829868,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q029|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.005501932940849484,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.005067033952918283,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.005067033952918283,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q029|section",
+   "breadth": "section",
+   "selectivity": 0.01749753644793693,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.01696382314661545,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.01696382314661545,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q031|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0005937792152007479,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q031|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0008969856229628319,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q031|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.07695757637011395,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.07893074211198019,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.07893074211198019,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q031|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q032|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0001642368042044622,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q032|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0002653056067918235,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q032|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.05807666068676251,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.05666611910688788,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.05666611910688788,
+    "count": 9194,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q032|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q034|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00030320640776208406,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q034|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0011117568284609747,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q034|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.07695757637011395,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.07893074211198019,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.07893074211198019,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q034|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q036|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00028425600727695376,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0002969458800338645,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0002969458800338645,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q036|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0011559744295929454,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0011751475252403999,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0011751475252403999,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q036|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q036|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q037|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00045480961164312604,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q037|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0011559744295929454,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q037|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09253480556889103,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09293142445570451,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09293142445570451,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q037|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q038|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.0006064128155241681,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001832219259783419,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001832219259783419,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q038|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0012886272329888572,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q038|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.10775197715845061,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.10799984836806126,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.10799984836806126,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q038|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q039|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00015792000404275211,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00033485386471903864,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00033485386471903864,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q039|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0012949440331505673,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0013204614665335676,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0013204614665335676,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q039|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q039|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q040|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.000530611213583647,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00036012585450915477,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00036012585450915477,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q040|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.001269676832503727,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.001213055509925574,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.001213055509925574,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q040|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09811885691184273,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09903460999001756,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09903460999001756,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q040|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q041|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00025898880663011343,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q041|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.000669580817141269,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q041|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09253480556889103,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09293142445570451,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09293142445570451,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q041|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q044|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 5.053440129368067e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q044|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0005369280137453572,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q044|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.05807666068676251,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.05666611910688788,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.05666611910688788,
+    "count": 9194,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q044|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q046|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00020845440533643277,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013267794639810966,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q046|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0004737600121282563,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005623017728300838,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q046|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.07695757637011395,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.07893074211198019,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.07893074211198019,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q046|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q051|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00013896960355762184,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 9.476996171293547e-05,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q051|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0007643328195669201,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q051|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.05807666068676251,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.05666611910688788,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.05666611910688788,
+    "count": 9194,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q051|section",
+   "breadth": "section",
+   "selectivity": 0.17483007807565,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.17380179178407612,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q052|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00029057280743866385,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00035380785706162575,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00035380785706162575,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q052|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.001414963236223059,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015984533542248449,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015984533542248449,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q052|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q052|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q053|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00018950400485130253,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0001579499361882258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q053|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.00034742400889405464,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q053|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.09253480556889103,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.09293142445570451,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.09293142445570451,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q053|section",
+   "breadth": "section",
+   "selectivity": 0.2984056396391844,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.29996588281378334,
+    "count": 47240,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.29996588281378334,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q054|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 7.580160194052102e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013899594384563868,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00013899594384563868,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q054|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.00025267200646840335,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q054|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08345124693635192,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0815021670731245,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.0815021670731245,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q054|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q056|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 8.21184021022311e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00014531394129316773,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00014531394129316773,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q056|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.00022740480582156302,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.000600209757515258,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q056|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08148040528589838,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.08333438633290792,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.08333438633290792,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q056|section",
+   "breadth": "section",
+   "selectivity": 0.24188922859236425,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2437672955180126,
+    "count": 38293,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2437672955180126,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q058|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 3.158400080855042e-05,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 6.3179974475290314e-06,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 6.3179974475290314e-06,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q058|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0012317760315334663,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015352733797495545,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0015352733797495545,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q058|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.005501932940849484,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.005067033952918283,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.005067033952918283,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q058|section",
+   "breadth": "section",
+   "selectivity": 0.01749753644793693,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.01696382314661545,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.01696382314661545,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q059|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00034110720873234456,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00014531394129316773,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00014531394129316773,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q059|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.0009917376253884833,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0005496657779350257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q059|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08479040857063445,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.08366924019762696,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.08366924019762696,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q059|section",
+   "breadth": "section",
+   "selectivity": 0.2673775172448644,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2655012067375125,
+    "count": 42328,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2655012067375125,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q060|cik+year+section",
+   "breadth": "cik+year+section",
+   "selectivity": 0.00024635520630669327,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00036012585450915477,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.00036012585450915477,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q060|cik+year",
+   "breadth": "cik+year",
+   "selectivity": 0.001414963236223059,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0013330974614286257,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.0013330974614286257,
+    "count": null,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q060|year+section",
+   "breadth": "year+section",
+   "selectivity": 0.08754453344114006,
+   "router": {
+    "route": "exact",
+    "band": "exact",
+    "s_est": 0.08876786413778288,
+    "count": null,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "count",
+    "s_est": 0.08876786413778288,
+    "count": 11269,
+    "no_stats": false
+   }
+  },
+  {
+   "pair_id": "edgar_q060|section",
+   "breadth": "section",
+   "selectivity": 0.2673775172448644,
+   "router": {
+    "route": "exact",
+    "band": "count",
+    "s_est": 0.2655012067375125,
+    "count": 42328,
+    "no_stats": false
+   },
+   "router_hmT": {
+    "route": "iterative",
+    "band": "iterative",
+    "s_est": 0.2655012067375125,
+    "count": null,
+    "no_stats": false
+   }
+  }
+ ]
+}

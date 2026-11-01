@@ -1,0 +1,266 @@
+[
+ {
+  "utc": "2026-11-01T03:14:07.667446+00:00",
+  "cpu_total_pct": 12.739564841371909,
+  "cpu_load_pct_win32": 44,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3697.375
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1414.1875
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 961.34375
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 835.671875
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 775.703125
+   }
+  ],
+  "tag": "start"
+ },
+ {
+  "utc": "2026-11-01T03:19:13.629885+00:00",
+  "cpu_total_pct": 19.22699864764621,
+  "cpu_load_pct_win32": 60,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3734.765625
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1428.296875
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 993.84375
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 886.921875
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 787.921875
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-11-01T03:24:19.799696+00:00",
+  "cpu_total_pct": 28.821782005061745,
+  "cpu_load_pct_win32": 44,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3767.421875
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1443.5
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 1005.59375
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 913.375
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 798.125
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-11-01T03:29:25.808782+00:00",
+  "cpu_total_pct": 11.357851061574076,
+  "cpu_load_pct_win32": 60,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3798.484375
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1457.921875
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 1008.375
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 917.921875
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 807.46875
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-11-01T03:34:31.939583+00:00",
+  "cpu_total_pct": 37.37483132607825,
+  "cpu_load_pct_win32": 52,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3828.546875
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1473.078125
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 1011.078125
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 923.75
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 817.671875
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-11-01T03:39:38.024176+00:00",
+  "cpu_total_pct": 14.700226488174861,
+  "cpu_load_pct_win32": 57,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3863.65625
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1487.609375
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 1013.546875
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 927.984375
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 827.953125
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-11-01T03:44:44.050939+00:00",
+  "cpu_total_pct": 17.042004649086163,
+  "cpu_load_pct_win32": 36,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3894.984375
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1502.265625
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 1018.8125
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 937.921875
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 837.8125
+   }
+  ],
+  "tag": "periodic"
+ },
+ {
+  "utc": "2026-11-01T03:45:44.770716+00:00",
+  "cpu_total_pct": 14.33549568889153,
+  "cpu_load_pct_win32": 33,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 19308,
+    "CPU": 3902.28125
+   },
+   {
+    "Name": "Docker Desktop",
+    "Id": 6184,
+    "CPU": 1505.125
+   },
+   {
+    "Name": "claude",
+    "Id": 24548,
+    "CPU": 1019.4375
+   },
+   {
+    "Name": "claude",
+    "Id": 25008,
+    "CPU": 940.53125
+   },
+   {
+    "Name": "explorer",
+    "Id": 15340,
+    "CPU": 840.15625
+   }
+  ],
+  "tag": "end"
+ }
+]

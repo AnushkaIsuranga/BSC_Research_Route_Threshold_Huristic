@@ -1,0 +1,847 @@
+[
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g00",
+  "s": 0.00015160320388104203,
+  "grid_s": 0.00012369172216936252,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 0.2405,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.06333333333333332,
+   "median_latency_ms": 191.74099999999999,
+   "mean_recall10": 0.095,
+   "underfill": 20,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 191.9915,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 20,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall+latency",
+   "mean_recall": 0.6666666666666667,
+   "median_latency_ms": 9250.67725,
+   "mean_recall10": 0.72,
+   "underfill": 10,
+   "guard_fired": 0,
+   "early_stop_vectors": 15
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9,
+   "median_latency_ms": 9250.93275,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 10,
+   "early_stop_vectors": 15
+  },
+  "probe": {
+   "n_p_below_k": 20,
+   "median_latency_ms": 2.7725
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g01",
+  "s": 0.0009538368244182227,
+  "grid_s": 0.0008468125594671741,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 1.0110000000000001,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.36333333333333334,
+   "median_latency_ms": 184.72199999999998,
+   "mean_recall10": 0.41500000000000004,
+   "underfill": 14,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9233333333333332,
+   "median_latency_ms": 185.762,
+   "mean_recall10": 0.9550000000000001,
+   "underfill": 0,
+   "guard_fired": 14,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9933333333333334,
+   "median_latency_ms": 813.0215000000001,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 2
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "latency",
+   "mean_recall": 0.9933333333333334,
+   "median_latency_ms": 813.0215000000001,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 2
+  },
+  "probe": {
+   "n_p_below_k": 20,
+   "median_latency_ms": 2.6055
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g02",
+  "s": 0.010586957071026101,
+  "grid_s": 0.010542340627973358,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 9.917000000000002,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.89,
+   "median_latency_ms": 108.4065,
+   "mean_recall10": 0.915,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.89,
+   "median_latency_ms": 108.4065,
+   "mean_recall10": 0.915,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9566666666666667,
+   "median_latency_ms": 113.491,
+   "mean_recall10": 0.975,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9566666666666667,
+   "median_latency_ms": 113.491,
+   "mean_recall10": 0.975,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 20,
+   "median_latency_ms": 2.6595
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g03",
+  "s": 0.048298254036435305,
+  "grid_s": 0.047773549000951473,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 47.0695,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.95,
+   "median_latency_ms": 3.6235,
+   "mean_recall10": 0.97,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.95,
+   "median_latency_ms": 3.6235,
+   "mean_recall10": 0.97,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.95,
+   "median_latency_ms": 3.621,
+   "mean_recall10": 0.97,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.95,
+   "median_latency_ms": 3.621,
+   "mean_recall10": 0.97,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 15,
+   "median_latency_ms": 2.5170000000000003
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g04",
+  "s": 0.10632438032190414,
+  "grid_s": 0.10608943862987631,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 152.1395,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9066666666666666,
+   "median_latency_ms": 4.582000000000001,
+   "mean_recall10": 0.95,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9066666666666666,
+   "median_latency_ms": 4.582000000000001,
+   "mean_recall10": 0.95,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9066666666666666,
+   "median_latency_ms": 4.612,
+   "mean_recall10": 0.95,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9066666666666666,
+   "median_latency_ms": 4.612,
+   "mean_recall10": 0.95,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 16,
+   "median_latency_ms": 2.855
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g05",
+  "s": 0.20374207241579706,
+  "grid_s": 0.20375832540437677,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 316.049,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8733333333333334,
+   "median_latency_ms": 1.4665,
+   "mean_recall10": 0.9099999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8733333333333334,
+   "median_latency_ms": 1.4665,
+   "mean_recall10": 0.9099999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8733333333333334,
+   "median_latency_ms": 1.639,
+   "mean_recall10": 0.9099999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8733333333333334,
+   "median_latency_ms": 1.639,
+   "mean_recall10": 0.9099999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 5,
+   "median_latency_ms": 2.8185000000000002
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g06",
+  "s": 0.21401318947873765,
+  "grid_s": 0.21388201712654614,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 330.8185,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9166666666666666,
+   "median_latency_ms": 2.4975,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9166666666666666,
+   "median_latency_ms": 2.4975,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9166666666666666,
+   "median_latency_ms": 2.3869999999999996,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.9166666666666666,
+   "median_latency_ms": 2.3869999999999996,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 12,
+   "median_latency_ms": 2.8705
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g07",
+  "s": 0.23169391313136417,
+  "grid_s": 0.230941960038059,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 192.951,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.451,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.451,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.524,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.524,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 8,
+   "median_latency_ms": 2.7485
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g08",
+  "s": 0.2601384642595447,
+  "grid_s": 0.25991436726926737,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 215.51850000000002,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.706,
+   "mean_recall10": 0.8949999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.706,
+   "mean_recall10": 0.8949999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.8689999999999998,
+   "mean_recall10": 0.8949999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8933333333333333,
+   "median_latency_ms": 2.8689999999999998,
+   "mean_recall10": 0.8949999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 7,
+   "median_latency_ms": 2.7495000000000003
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g09",
+  "s": 0.2991004876569725,
+  "grid_s": 0.2985918173168411,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 242.5895,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8833333333333334,
+   "median_latency_ms": 2.5244999999999997,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8833333333333334,
+   "median_latency_ms": 2.5244999999999997,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8833333333333334,
+   "median_latency_ms": 2.746,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8833333333333334,
+   "median_latency_ms": 2.746,
+   "mean_recall10": 0.905,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 6,
+   "median_latency_ms": 2.6399999999999997
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g10",
+  "s": 0.32902948682315486,
+  "grid_s": 0.3290104662226451,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 267.988,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8533333333333333,
+   "median_latency_ms": 1.7755,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8533333333333333,
+   "median_latency_ms": 1.7755,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8533333333333333,
+   "median_latency_ms": 1.6400000000000001,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8533333333333333,
+   "median_latency_ms": 1.6400000000000001,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 3,
+   "median_latency_ms": 2.505
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g11",
+  "s": 0.3786921696945195,
+  "grid_s": 0.37632730732635583,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 297.2155,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.93,
+   "median_latency_ms": 1.3645,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.93,
+   "median_latency_ms": 1.3645,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.93,
+   "median_latency_ms": 1.4555,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 0.93,
+   "median_latency_ms": 1.4555,
+   "mean_recall10": 0.9349999999999999,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 4,
+   "median_latency_ms": 2.5374999999999996
+  }
+ },
+ {
+  "table": "edgar_chunks",
+  "filter_id": "g12",
+  "s": 0.4708921848548399,
+  "grid_s": 0.4705042816365366,
+  "exact": {
+   "passed": true,
+   "valid": true,
+   "reason": null,
+   "mean_recall": 1.0,
+   "median_latency_ms": 336.453,
+   "mean_recall10": 1.0,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8866666666666667,
+   "median_latency_ms": 1.7135,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "iter_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8866666666666667,
+   "median_latency_ms": 1.7135,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8866666666666667,
+   "median_latency_ms": 2.002,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "tuned_guard": {
+   "passed": false,
+   "valid": true,
+   "reason": "recall",
+   "mean_recall": 0.8866666666666667,
+   "median_latency_ms": 2.002,
+   "mean_recall10": 0.9,
+   "underfill": 0,
+   "guard_fired": 0,
+   "early_stop_vectors": 0
+  },
+  "probe": {
+   "n_p_below_k": 2,
+   "median_latency_ms": 2.919
+  }
+ }
+]

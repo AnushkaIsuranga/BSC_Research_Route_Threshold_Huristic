@@ -1,0 +1,24 @@
+{
+ "rule": "Amendment 9 Addendum 2",
+ "blocking_processes": [],
+ "cpu_samples": [
+  39.74,
+  47.7,
+  46.61,
+  64.18,
+  71.74,
+  74.84
+ ],
+ "cpu_mean": 57.46833333333334,
+ "win32_load_samples_disclosure": [
+  90,
+  87,
+  70,
+  71,
+  60,
+  68
+ ],
+ "quiet": false,
+ "attempt": 1,
+ "utc": "2026-10-31T21:57:10.257918+00:00"
+}

@@ -1,0 +1,178 @@
+{
+ "git_commit": "c5e6cf8112b94fae98827de84cbc91ba28d91b4c",
+ "git_dirty_phase_e": false,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "server_settings": {
+  "shared_buffers": "128MB",
+  "work_mem": "4MB",
+  "effective_cache_size": "4GB",
+  "max_parallel_workers_per_gather": "2",
+  "jit": "off",
+  "statement_timeout": "2min",
+  "hnsw.max_scan_tuples": "20000",
+  "hnsw.scan_mem_multiplier": "1",
+  "hnsw.ef_search": "40"
+ },
+ "python": "3.11.9",
+ "platform": "Windows-10-10.0.26220-SP0",
+ "started_utc": "2026-11-01T03:14:02.532724+00:00",
+ "amendment": "docs/preregistration/PHASE_F_AMENDMENT_11.md",
+ "seed": 20261102,
+ "k": 15,
+ "timed_repeats": 5,
+ "routes": [
+  "exact",
+  "iterative_default",
+  "iterative_tuned",
+  "probe"
+ ],
+ "route_settings": {
+  "exact": {
+   "enable_indexscan": "off",
+   "hnsw.iterative_scan": "off",
+   "hnsw.ef_search": 40
+  },
+  "iterative_default": {
+   "enable_indexscan": "on",
+   "enable_seqscan": "off",
+   "enable_bitmapscan": "off",
+   "enable_sort": "off",
+   "hnsw.iterative_scan": "relaxed_order",
+   "hnsw.ef_search": 40,
+   "hnsw.max_scan_tuples": 20000,
+   "hnsw.scan_mem_multiplier": 1
+  },
+  "iterative_tuned": {
+   "enable_indexscan": "on",
+   "enable_seqscan": "off",
+   "enable_bitmapscan": "off",
+   "enable_sort": "off",
+   "hnsw.iterative_scan": "relaxed_order",
+   "hnsw.ef_search": 40,
+   "hnsw.max_scan_tuples": 100000,
+   "hnsw.scan_mem_multiplier": 4
+  },
+  "probe": {
+   "enable_indexscan": "on",
+   "enable_seqscan": "off",
+   "enable_bitmapscan": "off",
+   "enable_sort": "off",
+   "hnsw.iterative_scan": "off",
+   "hnsw.ef_search": 100
+  }
+ },
+ "calibration_qids": [
+  "edgar_q002",
+  "edgar_q005",
+  "edgar_q016",
+  "edgar_q017",
+  "edgar_q020",
+  "edgar_q021",
+  "edgar_q024",
+  "edgar_q025",
+  "edgar_q030",
+  "edgar_q033",
+  "edgar_q035",
+  "edgar_q042",
+  "edgar_q043",
+  "edgar_q045",
+  "edgar_q047",
+  "edgar_q048",
+  "edgar_q049",
+  "edgar_q050",
+  "edgar_q055",
+  "edgar_q057"
+ ],
+ "schedule_sha256": "b107f13768bd437cf18fa8af43927fade1924812e4290db5b886406e1db0ce5b",
+ "n_items": 1040,
+ "quiet_check": {
+  "passed": {
+   "rule": "Amendment 9 Addendum 2",
+   "blocking_processes": [],
+   "cpu_samples": [
+    27.31,
+    26.44,
+    23.74,
+    13.67,
+    14.77,
+    25.89
+   ],
+   "cpu_mean": 21.97,
+   "win32_load_samples_disclosure": [
+    34,
+    32,
+    50,
+    40,
+    29,
+    30
+   ],
+   "quiet": true,
+   "attempt": 1,
+   "utc": "2026-11-01T03:12:55.960673+00:00"
+  },
+  "attempts": [
+   {
+    "rule": "Amendment 9 Addendum 2",
+    "blocking_processes": [],
+    "cpu_samples": [
+     27.31,
+     26.44,
+     23.74,
+     13.67,
+     14.77,
+     25.89
+    ],
+    "cpu_mean": 21.97,
+    "win32_load_samples_disclosure": [
+     34,
+     32,
+     50,
+     40,
+     29,
+     30
+    ],
+    "quiet": true,
+    "attempt": 1,
+    "utc": "2026-11-01T03:12:55.960673+00:00"
+   }
+  ]
+ },
+ "config": {
+  "_note": "Phase F router config (Amendment 11) for edgar_chunks: same keys as config/router_hm.json; table-specific values only. L2 distance on the plain vector(1024) column (HNSW vector_l2_ops m 16 / ef_construction 64, index edgar_chunks_embedding_idx), k = 15 as the answer pipeline (Amendment 1).",
+  "tables": [
+   "edgar_chunks"
+  ],
+  "id_column": "id",
+  "vector_expr": "embedding",
+  "query_cast": "vector(1024)",
+  "distance_operator": "<->",
+  "metric": "l2",
+  "hnsw_index_suffix": "embedding_idx",
+  "filter_columns": [
+   "cik",
+   "fiscal_year",
+   "section"
+  ],
+  "k": 15,
+  "ef_search": 40,
+  "jit": "off",
+  "statement_timeout_ms": 120000,
+  "iterative_default": {
+   "max_scan_tuples": 20000,
+   "scan_mem_multiplier": 1
+  },
+  "iterative_tuned": {
+   "max_scan_tuples": 100000,
+   "scan_mem_multiplier": 4
+  },
+  "probe": {
+   "m": 100,
+   "ef_search": 100
+  },
+  "fixed_T": 0.1,
+  "latency_limit_ms": 500,
+  "recall_target": 0.9,
+  "policy_file": "config/policy_v3_1_edgar.json"
+ }
+}
