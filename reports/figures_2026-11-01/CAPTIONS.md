@@ -4,11 +4,9 @@ Every figure: PNG (300 dpi) and PDF in this folder; the plotted values are in `d
 
 ## Figure 4.1: `fig4_1_selectivity_distributions`
 
-Selectivity of the 160 EDGAR evaluation pairs (40 questions x 4 filter breadths), exact selectivity = matching rows / 158,308, one point per pair (vertical jitter for display only). Vertical lines: calibrated thresholds T = 0.0712 (H&M) and T = 0.3787 (EDGAR). Only panel (b) of the planned figure is shown; see the panel note.
+Filter selectivity distributions on one log axis. (a) FinQA: histogram of the exact ticker-year selectivity of all 1,147 test questions (census, maximum 0.0297). (b) EDGAR: the 160 evaluation pairs (40 questions x 4 filter breadths), one point per pair (vertical jitter for display only). Dashed lines: calibrated thresholds T = 0.0712 (H&M, both panels) and T = 0.3787 (EDGAR, panel b). Every FinQA question lies below T/2 of the H&M threshold, so a threshold router sends all of them to exact search.
 
-Sources: `outputs/edgar_eval_set_2026-11-01/pairs.csv`, `config/policy_v3_hm.json`, `config/policy_v3_1_edgar.json`
-
-Note: Panel skipped: (a) FinQA census histogram, source not committed (see 'Not produced').
+Sources: `outputs/finqa_selectivity_census/all_1147_selectivity.csv`, `outputs/edgar_eval_set_2026-11-01/pairs.csv`, `config/policy_v3_hm.json`, `config/policy_v3_1_edgar.json`
 
 ## Figure 4.2: `fig4_2_hm_recall_by_arm`
 
@@ -126,5 +124,4 @@ Sources: `outputs/phase_e_comparison_hm_2026-10-31/summary.json`, `outputs/phase
 
 ## Not produced
 
-- **Fig 4.1 panel (a), FinQA census histogram**: `outputs/finqa_selectivity_census/all_1147_selectivity.csv` is not committed in git (untracked; its checksum entry matches, but the rule requires a committed file). No other committed file holds the 1,147 selectivities; `outputs/finqa_selectivity_timing_2026-10-31/timing.csv` holds only the 50 frozen questions and was not substituted.
 - **Fig 4.5 panel (b), H&M failing cells vs T**: the H&M calibration (`config/policy_v3_hm.json`) found a non-empty interval, so the empty-interval rule was never run and no `failures_by_T` was saved.

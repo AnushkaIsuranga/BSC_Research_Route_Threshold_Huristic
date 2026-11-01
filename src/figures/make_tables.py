@@ -35,26 +35,46 @@ def r(x, n=4):
 
 # ------------------------------------------------------------------ T4.1
 
+RUNBOOK = "docs/RUNBOOK_EDGAR.md"
+AMENDMENT_11 = "docs/preregistration/PHASE_F_AMENDMENT_11.md"
+
+
+def doc_quote(rel: str, needle: str) -> str:
+    """The sentence fragment of a committed document that states a value (fails if the text is not there)."""
+    text = L.path(rel).read_text(encoding="utf-8")
+    assert needle in text, (rel, needle)
+    return needle
+
+
 def t4_1():
     fa, ec, st, ic = L.finqa_audit(), L.edgar_corpus(), L.edgar_stats(), L.edgar_index_checks()
+    cen = L.finqa_census()
+    q_texts = doc_quote(RUNBOOK, "158,308 chunks, 154,824 distinct texts")
+    q_dim_a = doc_quote(AMENDMENT_11, "Qwen3-Embedding-8B 1024-d")
+    q_dim_r = doc_quote(RUNBOOK, "`dimensions=1024`")
     idx = [i for i in ic["build"]["indexes"] if "hnsw" in i][0]
     rows = [
         {"corpus": "FinQA (finqa_evidence_qwen3)", "rows": fa["db_rows"], "unique texts": fa["db_unique"],
-         "companies": NA, "years": NA, "reltuples after VACUUM ANALYZE": NA,
+         "companies": f"{cen.ticker.nunique()} tickers among the {len(cen):,} test questions' filters (census)",
+         "years": f"{cen.year.min()}-{cen.year.max()} among the test questions' filters (census)", "reltuples after VACUUM ANALYZE": NA,
          "gold resolution": f"{fa['unresolved_gold_pairs']} unresolved gold pairs", "zero vectors": fa["zero_vectors"],
          "dimension": fa["dimension"], "index / self-retrieval": f"self-retrieval {fa['self_retrieval']}"},
-        {"corpus": "EDGAR (edgar_chunks)", "rows": ec["chunks_total"], "unique texts": NA + " (154,824 is stated only in docs/RUNBOOK_EDGAR.md)",
+        {"corpus": "EDGAR (edgar_chunks)", "rows": ec["chunks_total"], "unique texts": "154,824 (from committed documentation)",
          "companies": ec["sampled_companies"], "years": "-".join([min(ec["chunks_by_year"]), max(ec["chunks_by_year"])]),
          "reltuples after VACUUM ANALYZE": int(float(st["after"]["reltuples"])), "gold resolution": "n/a (gold = chunk ids)",
          "zero vectors": ic["checks"]["zero_vectors"],
-         "dimension": f"{NA} ({ic['checks']['dimension_mismatches']} dimension mismatches against the build's expected size)",
+         "dimension": f"1024 (from committed documentation; {ic['checks']['dimension_mismatches']} dimension mismatches in the index checks)",
          "index / self-retrieval": idx.split(" USING ")[1] + f"; self-retrieval {ic['self_retrieval']['passed']}/{ic['self_retrieval']['of']}"},
     ]
     put("T4_1_corpus_audit", "Table 4.1 Database and corpus audit", pd.DataFrame(rows),
         ["outputs/embedding_build_2026-10-12/audit_finqa_evidence_qwen3.json", "outputs/edgar_chunks_2026-10-31/summary.json",
-         "outputs/edgar_eval_preflight_2026-11-01/stats.json", "outputs/edgar_index_2026-10-31/checks.json"],
-        "FinQA companies/years and EDGAR distinct-text count and vector dimension are not stated in any committed result file; "
-        "they are left blank rather than typed in.")
+         "outputs/edgar_eval_preflight_2026-11-01/stats.json", "outputs/edgar_index_2026-10-31/checks.json",
+         "outputs/finqa_selectivity_census/all_1147_selectivity.csv", RUNBOOK, AMENDMENT_11],
+        f"From committed documentation, not from an output file: EDGAR unique texts, `{RUNBOOK}`: \"{q_texts}\"; EDGAR "
+        f"dimension, `{AMENDMENT_11}` (tag phase-f-amendment-11-2026-11-01): \"{q_dim_a}\", and `{RUNBOOK}`: \"{q_dim_r}\". "
+        "FinQA tickers and years are counted over the ticker-year filters of the 1,147 test questions in the committed census "
+        "(every filter matches corpus rows); the distinct tickers and years of all 35,862 corpus rows are not in a committed file. "
+        "FinQA reltuples was not recorded.")
 
 
 # ------------------------------------------------------------------ T4.2

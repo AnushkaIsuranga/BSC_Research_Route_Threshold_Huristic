@@ -1,2 +1,4 @@
 # Phase F (EDGAR) outputs are stored byte-for-byte: no CRLF conversion on checkout, so data_checksums.json hashes hold on every clone
 outputs/edgar_*/** -text
+reports/figures_2026-11-01/** -text
+reports/tables_2026-11-01/** -text

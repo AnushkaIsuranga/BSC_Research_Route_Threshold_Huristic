@@ -231,6 +231,14 @@ def hm_v1_pass_counts() -> dict:
 
 # ------------------------------------------------------------------ FinQA (Phase D)
 
+def finqa_census() -> pd.DataFrame:
+    """All 1,147 FinQA test questions with their exact ticker-year selectivity (FINQA_SELECTIVITY_CENSUS_PROTOCOL.md)."""
+    return _csv("outputs/finqa_selectivity_census/all_1147_selectivity.csv")
+
+
+def finqa_census_summary() -> dict:
+    return _json("outputs/finqa_selectivity_census/summary.json")
+
 def finqa_class_counts() -> pd.DataFrame:
     return _csv(HAL + "summary_counts_gemini_full.csv")
 

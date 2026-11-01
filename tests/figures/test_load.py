@@ -108,6 +108,11 @@ def test_prior_constants_from_code():
     assert p["qdrant_hm"]["rows"] == 1250 and p["qdrant_finqa"]["rows"] == 2500 and p["qdrant_edgar"]["rows"] == 2500
 
 
-@pytest.mark.skip(reason="outputs/finqa_selectivity_census/ is not committed in git; no committed source for the 1,147 selectivities")
 def test_finqa_census_anchor():
-    pass
+    # FINQA_SELECTIVITY_CENSUS_PROTOCOL.md: "2. Run a read-only census over all 1,147 raw FinQA queries."
+    # reports/finqa_router_v3_route_check_2026-10-31.md: "no FinQA question exceeds selectivity 0.0297"
+    c = L.finqa_census()
+    assert len(c) == 1147 and c.id.is_unique
+    assert half_up(c.selectivity.max(), 4) == "0.0297"
+    s = L.finqa_census_summary()
+    assert s["query_count"] == 1147 and s["selectivity_max"] == pytest.approx(c.selectivity.max(), rel=1e-12) and s["corpus_size"] == 35862

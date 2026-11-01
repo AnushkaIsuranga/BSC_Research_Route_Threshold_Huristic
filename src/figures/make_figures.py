@@ -22,9 +22,6 @@ from src.phase_d_validation.paired_stats import wilson
 DATA_DIR = S.FIG_DIR / "data"
 CAPTIONS: list[dict] = []
 NOT_PRODUCED: list[tuple[str, str]] = [
-    ("Fig 4.1 panel (a), FinQA census histogram", "`outputs/finqa_selectivity_census/all_1147_selectivity.csv` is not committed in git "
-     "(untracked; its checksum entry matches, but the rule requires a committed file). No other committed file holds the 1,147 "
-     "selectivities; `outputs/finqa_selectivity_timing_2026-10-31/timing.csv` holds only the 50 frozen questions and was not substituted."),
     ("Fig 4.5 panel (b), H&M failing cells vs T", "the H&M calibration (`config/policy_v3_hm.json`) found a non-empty interval, so the "
      "empty-interval rule was never run and no `failures_by_T` was saved."),
 ]
@@ -82,26 +79,39 @@ def groups_note(groups) -> str:
 
 def fig_4_1():
     stem = "fig4_1_selectivity_distributions"
+    c = L.finqa_census()
     p = L.edgar_pairs()
-    f, ax = S.fig(10)
+    f, (a1, a2) = S.fig(15, nrows=2, sharex=True, gridspec_kw={"height_ratios": [1, 1.25]})
+    bins = np.logspace(np.log10(min(c.selectivity.min(), p.selectivity.min())), 0, 46)
+    a1.hist(c.selectivity, bins=bins, color="#555555", edgecolor="white", lw=0.4)
+    a1.set_ylabel("FinQA questions")
+    a1.set_title(f"(a) FinQA test set, {len(c):,} questions (corpus 35,862 rows)", fontsize=S.FONT, loc="left")
     rng = np.random.default_rng(0)                       # vertical jitter only (display)
     order = list(L.BREADTHS)
     for i, b in enumerate(order):
         s = p.loc[p.breadth == b, "selectivity"].to_numpy()
-        ax.scatter(s, i + rng.uniform(-0.2, 0.2, len(s)), s=22, color="#333333", alpha=0.7, lw=0)
-    ax.set_yticks(range(len(order)), [S.BREADTH_LABEL[b] for b in order])
-    ax.set_xscale("log")
-    ax.set_xlabel("Exact filter selectivity (matching rows / 158,308; log scale)")
-    ax.set_ylim(-0.6, len(order) - 0.4)
-    tline(ax, T_HM, f"H&M T = {T_HM:.4f} ", S.T_HM_COLOUR, ha="right")
-    tline(ax, T_ED, f"EDGAR T = {T_ED:.4f} ", S.T_EDGAR_COLOUR, ha="right", level=1)
+        a2.scatter(s, i + rng.uniform(-0.2, 0.2, len(s)), s=22, color="#333333", alpha=0.7, lw=0)
+    a2.set_yticks(range(len(order)), [S.BREADTH_LABEL[b] for b in order])
+    a2.set_ylim(-0.6, len(order) - 0.4)
+    a2.set_title("(b) EDGAR, 160 evaluation pairs (corpus 158,308 rows)", fontsize=S.FONT, loc="left")
+    a2.set_xscale("log")
+    a2.set_xlabel("Exact filter selectivity = matching rows / corpus rows (log scale)")
+    for ax in (a1, a2):
+        ax.axvline(T_HM, color=S.T_HM_COLOUR, ls="--", lw=1)
+    a2.axvline(T_ED, color=S.T_EDGAR_COLOUR, ls="--", lw=1)
+    a1.text(T_HM, 0.97, f" H&M T = {T_HM:.4f}", transform=a1.get_xaxis_transform(), color=S.T_HM_COLOUR, ha="left", va="top")
+    a2.text(T_ED, 0.5, f"EDGAR T = {T_ED:.4f} ", transform=a2.get_xaxis_transform(), color=S.T_EDGAR_COLOUR, ha="right", va="center",
+            rotation=90)
     S.save(f, stem)
-    dump(stem, p)
-    caption("4.1", stem, "Selectivity of the 160 EDGAR evaluation pairs (40 questions x 4 filter breadths), exact selectivity = "
-            "matching rows / 158,308, one point per pair (vertical jitter for display only). Vertical lines: calibrated thresholds "
-            f"T = {T_HM:.4f} (H&M) and T = {T_ED:.4f} (EDGAR). Only panel (b) of the planned figure is shown; see the panel note.",
-            ["outputs/edgar_eval_set_2026-11-01/pairs.csv", "config/policy_v3_hm.json", "config/policy_v3_1_edgar.json"],
-            "Panel skipped: (a) FinQA census histogram, source not committed (see 'Not produced').")
+    dump(stem, pd.concat([c[["id", "selectivity"]].rename(columns={"id": "item"}).assign(panel="a FinQA census", breadth=""),
+                          p[["pair_id", "selectivity", "breadth"]].rename(columns={"pair_id": "item"}).assign(panel="b EDGAR pairs")]))
+    caption("4.1", stem, f"Filter selectivity distributions on one log axis. (a) FinQA: histogram of the exact ticker-year selectivity of "
+            f"all {len(c):,} test questions (census, maximum {c.selectivity.max():.4f}). (b) EDGAR: the 160 evaluation pairs (40 questions x "
+            "4 filter breadths), one point per pair (vertical jitter for display only). Dashed lines: calibrated thresholds "
+            f"T = {T_HM:.4f} (H&M, both panels) and T = {T_ED:.4f} (EDGAR, panel b). Every FinQA question lies below T/2 of the H&M "
+            "threshold, so a threshold router sends all of them to exact search.",
+            ["outputs/finqa_selectivity_census/all_1147_selectivity.csv", "outputs/edgar_eval_set_2026-11-01/pairs.csv",
+             "config/policy_v3_hm.json", "config/policy_v3_1_edgar.json"])
 
 
 # ------------------------------------------------------------------ Fig 4.2

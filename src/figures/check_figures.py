@@ -45,8 +45,12 @@ def run():
     R_H = "reports/phase_d_always_hnsw_2026-10-31.md"
 
     f = fig("fig4_1_selectivity_distributions")
-    check("Fig 4.1", "EDGAR pairs plotted", len(f), 160, R_F + ' "160 pairs"')
-    check("Fig 4.1", "pairs per breadth", sorted(f.groupby("breadth").size().unique().tolist()), [40], R_F + ' "40 / 40 at each breadth"')
+    fa, fb = f[f.panel == "a FinQA census"], f[f.panel == "b EDGAR pairs"]
+    check("Fig 4.1a", "FinQA questions plotted", len(fa), 1147, 'FINQA_SELECTIVITY_CENSUS_PROTOCOL.md "all 1,147 raw FinQA queries"')
+    check("Fig 4.1a", "max FinQA selectivity (half-up)", S.half_up(fa.selectivity.max(), 4), "0.0297",
+          'reports/finqa_router_v3_route_check_2026-10-31.md "no FinQA question exceeds selectivity 0.0297"')
+    check("Fig 4.1b", "EDGAR pairs plotted", len(fb), 160, R_F + ' "160 pairs"')
+    check("Fig 4.1b", "pairs per breadth", sorted(fb.groupby("breadth").size().unique().tolist()), [40], R_F + ' "40 / 40 at each breadth"')
 
     f = fig("fig4_2_hm_recall_by_arm")
     check("Fig 4.2", "cells x arms", len(f), 325, R_A + " (65 cells x 5 arms)")
@@ -139,6 +143,11 @@ def run():
               R_E + " section 2 / reports/policy_evaluation_2026-10-10.md, holdout reports / reports/amendment6_partb_2026-10-23.md")
 
     # ---- tables
+    t = tab("T4_1_corpus_audit").set_index("corpus")
+    check("T4.1", "EDGAR unique texts / dimension (documentation)", (t.loc["EDGAR (edgar_chunks)", "unique texts"][:7], t.loc["EDGAR (edgar_chunks)", "dimension"][:4]),
+          ("154,824", "1024"), 'docs/RUNBOOK_EDGAR.md "158,308 chunks, 154,824 distinct texts"; Amendment 11 "Qwen3-Embedding-8B 1024-d"')
+    check("T4.1", "FinQA rows / unique", (int(t.loc["FinQA (finqa_evidence_qwen3)", "rows"]), int(t.loc["FinQA (finqa_evidence_qwen3)", "unique texts"])), (35862, 10843),
+          'reports/pre_paid_fixes_2026-10-12.md "row count 35,862, 10,843 unique texts"')
     t = tab("T4_2_calibrated_T")
     pooled = t[(t.scope == "pooled") & (t["iterative variant"] == "default iterative")].iloc[0]
     check("T4.2", "H&M pooled T / interval", (pooled["T"], pooled["lower"], pooled["upper (s_exact_max)"]), (0.0712, 0.0478, 0.1061), R_C)

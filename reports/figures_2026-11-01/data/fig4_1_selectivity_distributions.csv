@@ -1,161 +1,1308 @@
-pair_id,qid,breadth,selectivity,n_match
-edgar_q001|cik+year+section,edgar_q001,cik+year+section,0.0002589888066301,41
-edgar_q001|cik+year,edgar_q001,cik+year,0.0007327488187583,116
-edgar_q001|year+section,edgar_q001,year+section,0.0834512469363519,13211
-edgar_q001|section,edgar_q001,section,0.2418892285923642,38293
-edgar_q003|cik+year+section,edgar_q003,cik+year+section,0.0002400384061449,38
-edgar_q003|cik+year,edgar_q003,cik+year,0.0003979584101877,63
-edgar_q003|year+section,edgar_q003,year+section,0.0834512469363519,13211
-edgar_q003|section,edgar_q003,section,0.2418892285923642,38293
-edgar_q004|cik+year+section,edgar_q004,cik+year+section,5.053440129368067e-05,8
-edgar_q004|cik+year,edgar_q004,cik+year,0.0007706496197286,122
-edgar_q004|year+section,edgar_q004,year+section,0.0577292366778684,9139
-edgar_q004|section,edgar_q004,section,0.17483007807565,27677
-edgar_q006|cik+year+section,edgar_q006,cik+year+section,0.0001705536043661,27
-edgar_q006|cik+year,edgar_q006,cik+year,0.0006190464158475,98
-edgar_q006|year+section,edgar_q006,year+section,0.0769575763701139,12183
-edgar_q006|section,edgar_q006,section,0.2418892285923642,38293
-edgar_q007|cik+year+section,edgar_q007,cik+year+section,0.000631680016171,100
-edgar_q007|cik+year,edgar_q007,cik+year,0.0012570432321803,199
-edgar_q007|year+section,edgar_q007,year+section,0.1077519771584506,17058
-edgar_q007|section,edgar_q007,section,0.2984056396391844,47240
-edgar_q008|cik+year+section,edgar_q008,cik+year+section,0.0002274048058215,36
-edgar_q008|cik+year,edgar_q008,cik+year,0.0012444096318568,197
-edgar_q008|year+section,edgar_q008,year+section,0.0577292366778684,9139
-edgar_q008|section,edgar_q008,section,0.17483007807565,27677
-edgar_q009|cik+year+section,edgar_q009,cik+year+section,0.0003663744093791,58
-edgar_q009|cik+year,edgar_q009,cik+year,0.001263360032342,200
-edgar_q009|year+section,edgar_q009,year+section,0.0834512469363519,13211
-edgar_q009|section,edgar_q009,section,0.2418892285923642,38293
-edgar_q010|cik+year+section,edgar_q010,cik+year+section,0.0004169088106728,66
-edgar_q010|cik+year,edgar_q010,cik+year,0.0010928064279758,173
-edgar_q010|year+section,edgar_q010,year+section,0.0580766606867625,9194
-edgar_q010|section,edgar_q010,section,0.17483007807565,27677
-edgar_q011|cik+year+section,edgar_q011,cik+year+section,0.0001200192030724,19
-edgar_q011|cik+year,edgar_q011,cik+year,0.000827500821184,131
-edgar_q011|year+section,edgar_q011,year+section,0.059024180711019,9344
-edgar_q011|section,edgar_q011,section,0.17483007807565,27677
-edgar_q012|cik+year+section,edgar_q012,cik+year+section,0.0004674432119665,74
-edgar_q012|cik+year,edgar_q012,cik+year,0.0013391616342825,212
-edgar_q012|year+section,edgar_q012,year+section,0.0814804052858983,12899
-edgar_q012|section,edgar_q012,section,0.2418892285923642,38293
-edgar_q013|cik+year+section,edgar_q013,cik+year+section,0.0003853248098643,61
-edgar_q013|cik+year,edgar_q013,cik+year,0.0014023296358996,222
-edgar_q013|year+section,edgar_q013,year+section,0.0769575763701139,12183
-edgar_q013|section,edgar_q013,section,0.2418892285923642,38293
-edgar_q014|cik+year+section,edgar_q014,cik+year+section,0.0001642368042044,26
-edgar_q014|cik+year,edgar_q014,cik+year,0.0003600576092174,57
-edgar_q014|year+section,edgar_q014,year+section,0.0981188569118427,15533
-edgar_q014|section,edgar_q014,section,0.2984056396391844,47240
-edgar_q015|cik+year+section,edgar_q015,cik+year+section,0.0004737600121282,75
-edgar_q015|cik+year,edgar_q015,cik+year,0.0011243904287843,178
-edgar_q015|year+section,edgar_q015,year+section,0.0981188569118427,15533
-edgar_q015|section,edgar_q015,section,0.2984056396391844,47240
-edgar_q018|cik+year+section,edgar_q018,cik+year+section,0.000347424008894,55
-edgar_q018|cik+year,edgar_q018,cik+year,0.0016739520428531,265
-edgar_q018|year+section,edgar_q018,year+section,0.0981188569118427,15533
-edgar_q018|section,edgar_q018,section,0.2984056396391844,47240
-edgar_q019|cik+year+section,edgar_q019,cik+year+section,0.0009601536245799,152
-edgar_q019|cik+year,edgar_q019,cik+year,0.0016297344417212,258
-edgar_q019|year+section,edgar_q019,year+section,0.0981188569118427,15533
-edgar_q019|section,edgar_q019,section,0.2984056396391844,47240
-edgar_q022|cik+year+section,edgar_q022,cik+year+section,0.0002589888066301,41
-edgar_q022|cik+year,edgar_q022,cik+year,0.0015855168405892,251
-edgar_q022|year+section,edgar_q022,year+section,0.0834512469363519,13211
-edgar_q022|section,edgar_q022,section,0.2418892285923642,38293
-edgar_q023|cik+year+section,edgar_q023,cik+year+section,0.0005748288147156,91
-edgar_q023|cik+year,edgar_q023,cik+year,0.0011812416302397,187
-edgar_q023|year+section,edgar_q023,year+section,0.092534805568891,14649
-edgar_q023|section,edgar_q023,section,0.2984056396391844,47240
-edgar_q026|cik+year+section,edgar_q026,cik+year+section,0.0002210880056598,35
-edgar_q026|cik+year,edgar_q026,cik+year,0.0005685120145539,90
-edgar_q026|year+section,edgar_q026,year+section,0.092534805568891,14649
-edgar_q026|section,edgar_q026,section,0.2984056396391844,47240
-edgar_q027|cik+year+section,edgar_q027,cik+year+section,2.5267200646840336e-05,4
-edgar_q027|cik+year,edgar_q027,cik+year,0.0003221568082472,51
-edgar_q027|year+section,edgar_q027,year+section,0.059024180711019,9344
-edgar_q027|section,edgar_q027,section,0.17483007807565,27677
-edgar_q028|cik+year+section,edgar_q028,cik+year+section,0.0004232256108345,67
-edgar_q028|cik+year,edgar_q028,cik+year,0.0009033024231245,143
-edgar_q028|year+section,edgar_q028,year+section,0.092534805568891,14649
-edgar_q028|section,edgar_q028,section,0.2984056396391844,47240
-edgar_q029|cik+year+section,edgar_q029,cik+year+section,3.158400080855042e-05,5
-edgar_q029|cik+year,edgar_q029,cik+year,0.0012570432321803,199
-edgar_q029|year+section,edgar_q029,year+section,0.0055019329408494,871
-edgar_q029|section,edgar_q029,section,0.0174975364479369,2770
-edgar_q031|cik+year+section,edgar_q031,cik+year+section,0.0005937792152007,94
-edgar_q031|cik+year,edgar_q031,cik+year,0.0008969856229628,142
-edgar_q031|year+section,edgar_q031,year+section,0.0769575763701139,12183
-edgar_q031|section,edgar_q031,section,0.2418892285923642,38293
-edgar_q032|cik+year+section,edgar_q032,cik+year+section,0.0001642368042044,26
-edgar_q032|cik+year,edgar_q032,cik+year,0.0002653056067918,42
-edgar_q032|year+section,edgar_q032,year+section,0.0580766606867625,9194
-edgar_q032|section,edgar_q032,section,0.17483007807565,27677
-edgar_q034|cik+year+section,edgar_q034,cik+year+section,0.000303206407762,48
-edgar_q034|cik+year,edgar_q034,cik+year,0.0011117568284609,176
-edgar_q034|year+section,edgar_q034,year+section,0.0769575763701139,12183
-edgar_q034|section,edgar_q034,section,0.2418892285923642,38293
-edgar_q036|cik+year+section,edgar_q036,cik+year+section,0.0002842560072769,45
-edgar_q036|cik+year,edgar_q036,cik+year,0.0011559744295929,183
-edgar_q036|year+section,edgar_q036,year+section,0.0834512469363519,13211
-edgar_q036|section,edgar_q036,section,0.2418892285923642,38293
-edgar_q037|cik+year+section,edgar_q037,cik+year+section,0.0004548096116431,72
-edgar_q037|cik+year,edgar_q037,cik+year,0.0011559744295929,183
-edgar_q037|year+section,edgar_q037,year+section,0.092534805568891,14649
-edgar_q037|section,edgar_q037,section,0.2984056396391844,47240
-edgar_q038|cik+year+section,edgar_q038,cik+year+section,0.0006064128155241,96
-edgar_q038|cik+year,edgar_q038,cik+year,0.0012886272329888,204
-edgar_q038|year+section,edgar_q038,year+section,0.1077519771584506,17058
-edgar_q038|section,edgar_q038,section,0.2984056396391844,47240
-edgar_q039|cik+year+section,edgar_q039,cik+year+section,0.0001579200040427,25
-edgar_q039|cik+year,edgar_q039,cik+year,0.0012949440331505,205
-edgar_q039|year+section,edgar_q039,year+section,0.0834512469363519,13211
-edgar_q039|section,edgar_q039,section,0.2418892285923642,38293
-edgar_q040|cik+year+section,edgar_q040,cik+year+section,0.0005306112135836,84
-edgar_q040|cik+year,edgar_q040,cik+year,0.0012696768325037,201
-edgar_q040|year+section,edgar_q040,year+section,0.0981188569118427,15533
-edgar_q040|section,edgar_q040,section,0.2984056396391844,47240
-edgar_q041|cik+year+section,edgar_q041,cik+year+section,0.0002589888066301,41
-edgar_q041|cik+year,edgar_q041,cik+year,0.0006695808171412,106
-edgar_q041|year+section,edgar_q041,year+section,0.092534805568891,14649
-edgar_q041|section,edgar_q041,section,0.2984056396391844,47240
-edgar_q044|cik+year+section,edgar_q044,cik+year+section,5.053440129368067e-05,8
-edgar_q044|cik+year,edgar_q044,cik+year,0.0005369280137453,85
-edgar_q044|year+section,edgar_q044,year+section,0.0580766606867625,9194
-edgar_q044|section,edgar_q044,section,0.17483007807565,27677
-edgar_q046|cik+year+section,edgar_q046,cik+year+section,0.0002084544053364,33
-edgar_q046|cik+year,edgar_q046,cik+year,0.0004737600121282,75
-edgar_q046|year+section,edgar_q046,year+section,0.0769575763701139,12183
-edgar_q046|section,edgar_q046,section,0.2418892285923642,38293
-edgar_q051|cik+year+section,edgar_q051,cik+year+section,0.0001389696035576,22
-edgar_q051|cik+year,edgar_q051,cik+year,0.0007643328195669,121
-edgar_q051|year+section,edgar_q051,year+section,0.0580766606867625,9194
-edgar_q051|section,edgar_q051,section,0.17483007807565,27677
-edgar_q052|cik+year+section,edgar_q052,cik+year+section,0.0002905728074386,46
-edgar_q052|cik+year,edgar_q052,cik+year,0.001414963236223,224
-edgar_q052|year+section,edgar_q052,year+section,0.0834512469363519,13211
-edgar_q052|section,edgar_q052,section,0.2418892285923642,38293
-edgar_q053|cik+year+section,edgar_q053,cik+year+section,0.0001895040048513,30
-edgar_q053|cik+year,edgar_q053,cik+year,0.000347424008894,55
-edgar_q053|year+section,edgar_q053,year+section,0.092534805568891,14649
-edgar_q053|section,edgar_q053,section,0.2984056396391844,47240
-edgar_q054|cik+year+section,edgar_q054,cik+year+section,7.580160194052102e-05,12
-edgar_q054|cik+year,edgar_q054,cik+year,0.0002526720064684,40
-edgar_q054|year+section,edgar_q054,year+section,0.0834512469363519,13211
-edgar_q054|section,edgar_q054,section,0.2418892285923642,38293
-edgar_q056|cik+year+section,edgar_q056,cik+year+section,8.21184021022311e-05,13
-edgar_q056|cik+year,edgar_q056,cik+year,0.0002274048058215,36
-edgar_q056|year+section,edgar_q056,year+section,0.0814804052858983,12899
-edgar_q056|section,edgar_q056,section,0.2418892285923642,38293
-edgar_q058|cik+year+section,edgar_q058,cik+year+section,3.158400080855042e-05,5
-edgar_q058|cik+year,edgar_q058,cik+year,0.0012317760315334,195
-edgar_q058|year+section,edgar_q058,year+section,0.0055019329408494,871
-edgar_q058|section,edgar_q058,section,0.0174975364479369,2770
-edgar_q059|cik+year+section,edgar_q059,cik+year+section,0.0003411072087323,54
-edgar_q059|cik+year,edgar_q059,cik+year,0.0009917376253884,157
-edgar_q059|year+section,edgar_q059,year+section,0.0847904085706344,13423
-edgar_q059|section,edgar_q059,section,0.2673775172448644,42328
-edgar_q060|cik+year+section,edgar_q060,cik+year+section,0.0002463552063066,39
-edgar_q060|cik+year,edgar_q060,cik+year,0.001414963236223,224
-edgar_q060|year+section,edgar_q060,year+section,0.08754453344114,13859
-edgar_q060|section,edgar_q060,section,0.2673775172448644,42328
+item,selectivity,panel,breadth
+ETR/2016/page_23.pdf-2,0.0072500139423345,a FinQA census,
+INTC/2015/page_41.pdf-4,0.0161731080252077,a FinQA census,
+ADI/2011/page_61.pdf-2,0.0014500027884669,a FinQA census,
+FIS/2010/page_70.pdf-2,0.0006971167252244,a FinQA census,
+MAS/2017/page_27.pdf-2,0.0010038480843232,a FinQA census,
+SYY/2006/page_71.pdf-1,0.0018403881545926,a FinQA census,
+AES/2010/page_227.pdf-3,0.0020076961686464,a FinQA census,
+GS/2015/page_188.pdf-2,0.0071384752662985,a FinQA census,
+MO/2016/page_19.pdf-1,0.0040153923372929,a FinQA census,
+CMCSA/2015/page_112.pdf-2,0.0054096257877419,a FinQA census,
+STT/2007/page_111.pdf-3,0.0034576989571133,a FinQA census,
+UAA/2016/page_42.pdf-2,0.0010038480843232,a FinQA census,
+GIS/2018/page_110.pdf-2,0.002509620210808,a FinQA census,
+JKHY/2019/page_18.pdf-3,0.001254810105404,a FinQA census,
+AWK/2014/page_121.pdf-2,0.0036807763091852,a FinQA census,
+MRO/2011/page_108.pdf-1,0.0008923094082873,a FinQA census,
+RCL/2012/page_75.pdf-1,0.0037644303162121,a FinQA census,
+ETR/2017/page_372.pdf-1,0.0032625062740505,a FinQA census,
+ADBE/2008/page_89.pdf-3,0.006469243210083,a FinQA census,
+JPM/2010/page_273.pdf-2,0.0053259717807149,a FinQA census,
+PNC/2012/page_68.pdf-2,0.0213317717918688,a FinQA census,
+FIS/2016/page_31.pdf-2,0.0075846299704422,a FinQA census,
+AMT/2016/page_49.pdf-1,0.0056884724778316,a FinQA census,
+MAR/2018/page_43.pdf-2,0.0018961574926105,a FinQA census,
+AAL/2016/page_8.pdf-4,0.0036807763091852,a FinQA census,
+ETFC/2007/page_18.pdf-1,0.0017846188165746,a FinQA census,
+GPN/2010/page_87.pdf-3,0.0053817411187329,a FinQA census,
+ADBE/2008/page_89.pdf-2,0.006469243210083,a FinQA census,
+DG/2005/page_44.pdf-2,0.002593274217835,a FinQA census,
+ALXN/2016/page_153.pdf-2,0.0037923149852211,a FinQA census,
+UNP/2015/page_56.pdf-1,0.003903853661257,a FinQA census,
+C/2009/page_45.pdf-1,0.0073894372873793,a FinQA census,
+AAPL/2006/page_100.pdf-3,0.006525012548101,a FinQA census,
+JPM/2018/page_90.pdf-1,0.0070269365902626,a FinQA census,
+PNC/2012/page_65.pdf-4,0.0213317717918688,a FinQA census,
+ABMD/2008/page_86.pdf-1,0.0033461602810774,a FinQA census,
+ETFC/2012/page_24.pdf-1,0.0029836595839607,a FinQA census,
+ETFC/2007/page_18.pdf-2,0.0017846188165746,a FinQA census,
+GS/2017/page_179.pdf-4,0.0122692543639507,a FinQA census,
+MKTX/2004/page_99.pdf-3,0.0027884669008978,a FinQA census,
+ETR/2013/page_21.pdf-3,0.0026769282248619,a FinQA census,
+GS/2013/page_220.pdf-2,0.0136077184763816,a FinQA census,
+FBHS/2017/page_83.pdf-1,0.0036250069711672,a FinQA census,
+ZBH/2008/page_57.pdf-2,0.0051307790976521,a FinQA census,
+K/2006/page_52.pdf-2,0.0029278902459427,a FinQA census,
+GPN/2014/page_92.pdf-1,0.0006692320562154,a FinQA census,
+FIS/2017/page_64.pdf-3,0.0033461602810774,a FinQA census,
+BLL/2010/page_37.pdf-2,0.006580781886119,a FinQA census,
+PNC/2012/page_65.pdf-1,0.0213317717918688,a FinQA census,
+SNA/2018/page_31.pdf-1,0.0018403881545926,a FinQA census,
+FIS/2016/page_45.pdf-4,0.0075846299704422,a FinQA census,
+ETFC/2011/page_144.pdf-2,0.0016730801405387,a FinQA census,
+STT/2009/page_127.pdf-4,0.0044057777034186,a FinQA census,
+ILMN/2008/page_82.pdf-1,0.00518654843567,a FinQA census,
+ETR/2004/page_239.pdf-3,0.0055769338017957,a FinQA census,
+HOLX/2007/page_126.pdf-2,0.006580781886119,a FinQA census,
+FBHS/2017/page_83.pdf-2,0.0036250069711672,a FinQA census,
+UA/2007/page_70.pdf-2,0.001226925436395,a FinQA census,
+FIS/2012/page_48.pdf-1,0.0017846188165746,a FinQA census,
+AON/2015/page_96.pdf-1,0.0030115442529697,a FinQA census,
+CME/2010/page_91.pdf-1,0.0153365679549383,a FinQA census,
+HIG/2004/page_140.pdf-1,0.0044336623724276,a FinQA census,
+CME/2010/page_123.pdf-2,0.0153365679549383,a FinQA census,
+AON/2007/page_175.pdf-2,0.0045173163794545,a FinQA census,
+ETR/2013/page_21.pdf-2,0.0026769282248619,a FinQA census,
+ABMD/2005/page_29.pdf-2,0.0033461602810774,a FinQA census,
+NWS/2017/page_119.pdf-2,0.0017846188165746,a FinQA census,
+PNC/2012/page_65.pdf-3,0.0213317717918688,a FinQA census,
+AES/2010/page_227.pdf-4,0.0020076961686464,a FinQA census,
+PNC/2012/page_68.pdf-4,0.0213317717918688,a FinQA census,
+GIS/2017/page_31.pdf-1,0.0042384696893647,a FinQA census,
+PM/2017/page_32.pdf-1,0.0022865428587362,a FinQA census,
+CME/2010/page_123.pdf-4,0.0153365679549383,a FinQA census,
+HUM/2014/page_44.pdf-1,0.0002230773520718,a FinQA census,
+VNO/2014/page_57.pdf-1,0.0004461547041436,a FinQA census,
+MSI/2014/page_76.pdf-3,0.0030951982599966,a FinQA census,
+MRO/2008/page_45.pdf-1,0.0033461602810774,a FinQA census,
+CB/2010/page_83.pdf-1,0.0032903909430595,a FinQA census,
+GS/2017/page_86.pdf-2,0.0122692543639507,a FinQA census,
+BLL/2012/page_31.pdf-3,0.0011153867603591,a FinQA census,
+BLL/2012/page_31.pdf-4,0.0011153867603591,a FinQA census,
+MRO/2007/page_136.pdf-2,0.0016730801405387,a FinQA census,
+AMT/2012/page_50.pdf-3,0.005158663766661,a FinQA census,
+AWK/2012/page_117.pdf-4,0.002565389548826,a FinQA census,
+SNA/2007/page_49.pdf-4,0.0076403993084602,a FinQA census,
+GS/2015/page_188.pdf-1,0.0071384752662985,a FinQA census,
+UPS/2012/page_32.pdf-4,0.0008923094082873,a FinQA census,
+AON/2015/page_96.pdf-3,0.0030115442529697,a FinQA census,
+STT/2009/page_127.pdf-2,0.0044057777034186,a FinQA census,
+RSG/2018/page_94.pdf-1,0.0029000055769338,a FinQA census,
+MRO/2004/page_46.pdf-1,0.0043500083654007,a FinQA census,
+IP/2006/page_30.pdf-1,0.0194356142992582,a FinQA census,
+APD/2016/page_40.pdf-2,0.0017846188165746,a FinQA census,
+CDNS/2018/page_66.pdf-4,0.0029000055769338,a FinQA census,
+CDNS/2015/page_30.pdf-2,0.001226925436395,a FinQA census,
+AAPL/2006/page_131.pdf-2,0.006525012548101,a FinQA census,
+L/2009/page_84.pdf-4,0.0015615414645028,a FinQA census,
+ECL/2016/page_52.pdf-4,0.0045730857174725,a FinQA census,
+ETR/2011/page_301.pdf-1,0.0045173163794545,a FinQA census,
+AWK/2013/page_122.pdf-3,0.002565389548826,a FinQA census,
+DISCA/2014/page_64.pdf-1,0.0015057721264848,a FinQA census,
+C/2009/page_45.pdf-2,0.0073894372873793,a FinQA census,
+GPN/2013/page_92.pdf-1,0.0047403937315264,a FinQA census,
+GPN/2010/page_89.pdf-4,0.0053817411187329,a FinQA census,
+AON/2010/page_86.pdf-1,0.0016173108025207,a FinQA census,
+EOG/2018/page_75.pdf-1,0.0020076961686464,a FinQA census,
+CME/2010/page_69.pdf-2,0.0153365679549383,a FinQA census,
+GS/2014/page_51.pdf-2,0.0105961742234119,a FinQA census,
+UNP/2007/page_25.pdf-1,0.0033461602810774,a FinQA census,
+AES/2002/page_128.pdf-2,0.0029000055769338,a FinQA census,
+AMT/2016/page_49.pdf-3,0.0056884724778316,a FinQA census,
+ADBE/1999/page_64.pdf-3,0.0015057721264848,a FinQA census,
+GPN/2008/page_78.pdf-2,0.0031230829290056,a FinQA census,
+PNC/2012/page_68.pdf-1,0.0213317717918688,a FinQA census,
+MRO/2013/page_19.pdf-3,0.0073894372873793,a FinQA census,
+C/2008/page_22.pdf-2,0.0081702080196308,a FinQA census,
+UPS/2007/page_49.pdf-1,0.0051307790976521,a FinQA census,
+NCLH/2018/page_64.pdf-1,0.006469243210083,a FinQA census,
+MKTX/2012/page_42.pdf-1,0.0019240421616195,a FinQA census,
+PNC/2014/page_111.pdf-2,0.0020634655066644,a FinQA census,
+AWK/2014/page_121.pdf-1,0.0036807763091852,a FinQA census,
+AAL/2013/page_172.pdf-4,0.0071384752662985,a FinQA census,
+ECL/2016/page_52.pdf-1,0.0045730857174725,a FinQA census,
+JPM/2010/page_281.pdf-3,0.0053259717807149,a FinQA census,
+CME/2017/page_40.pdf-2,0.0054375104567508,a FinQA census,
+AMT/2012/page_50.pdf-1,0.005158663766661,a FinQA census,
+SNA/2012/page_110.pdf-2,0.0024259662037811,a FinQA census,
+GPN/2010/page_89.pdf-3,0.0053817411187329,a FinQA census,
+C/2018/page_175.pdf-3,0.0033461602810774,a FinQA census,
+AMT/2012/page_118.pdf-2,0.005158663766661,a FinQA census,
+DISCA/2011/page_49.pdf-1,0.0017846188165746,a FinQA census,
+ZBH/2007/page_67.pdf-2,0.0030115442529697,a FinQA census,
+RSG/2016/page_145.pdf-1,0.002509620210808,a FinQA census,
+ZBH/2009/page_58.pdf-2,0.0050192404216161,a FinQA census,
+DRE/2008/page_46.pdf-2,0.0030115442529697,a FinQA census,
+IP/2006/page_75.pdf-2,0.0194356142992582,a FinQA census,
+DRE/2002/page_15.pdf-2,0.0036807763091852,a FinQA census,
+MRO/2003/page_84.pdf-3,0.0059394344989124,a FinQA census,
+AON/2007/page_171.pdf-1,0.0045173163794545,a FinQA census,
+K/2013/page_23.pdf-1,0.0030673135909876,a FinQA census,
+AMT/2003/page_102.pdf-2,0.0046846243935084,a FinQA census,
+JPM/2018/page_90.pdf-5,0.0070269365902626,a FinQA census,
+AMT/2014/page_160.pdf-4,0.0037365456472031,a FinQA census,
+PNC/2007/page_92.pdf-2,0.0016173108025207,a FinQA census,
+ETR/2016/page_23.pdf-3,0.0072500139423345,a FinQA census,
+IP/2006/page_31.pdf-2,0.0194356142992582,a FinQA census,
+HST/2018/page_135.pdf-1,0.0006413473872065,a FinQA census,
+PNC/2012/page_174.pdf-5,0.0213317717918688,a FinQA census,
+CME/2017/page_40.pdf-5,0.0054375104567508,a FinQA census,
+CMCSA/2015/page_67.pdf-2,0.0054096257877419,a FinQA census,
+ANET/2015/page_156.pdf-2,0.0015615414645028,a FinQA census,
+AMAT/2013/page_37.pdf-2,0.0009480787463052,a FinQA census,
+PNC/2012/page_247.pdf-3,0.0213317717918688,a FinQA census,
+HOLX/2006/page_100.pdf-1,0.0037644303162121,a FinQA census,
+UPS/2007/page_98.pdf-1,0.0051307790976521,a FinQA census,
+CB/2010/page_83.pdf-2,0.0032903909430595,a FinQA census,
+GPN/2018/page_94.pdf-1,0.0018961574926105,a FinQA census,
+BLK/2014/page_120.pdf-2,0.0058000111538676,a FinQA census,
+AWK/2014/page_121.pdf-4,0.0036807763091852,a FinQA census,
+DG/2010/page_136.pdf-1,0.0010596174223411,a FinQA census,
+MKTX/2004/page_99.pdf-1,0.0027884669008978,a FinQA census,
+DG/2007/page_67.pdf-1,0.0010596174223411,a FinQA census,
+EOG/2018/page_75.pdf-2,0.0020076961686464,a FinQA census,
+AES/2001/page_33.pdf-2,0.0053538564497239,a FinQA census,
+CMCSA/2015/page_67.pdf-1,0.0054096257877419,a FinQA census,
+SLG/2001/page_48.pdf-3,0.0034298142881044,a FinQA census,
+JKHY/2017/page_26.pdf-1,0.0007528860632424,a FinQA census,
+CE/2016/page_19.pdf-3,0.0033461602810774,a FinQA census,
+GS/2012/page_189.pdf-2,0.0092577101109809,a FinQA census,
+FIS/2016/page_45.pdf-2,0.0075846299704422,a FinQA census,
+SNA/2007/page_69.pdf-3,0.0076403993084602,a FinQA census,
+IPG/2017/page_92.pdf-2,0.0027884669008978,a FinQA census,
+GS/2017/page_132.pdf-2,0.0122692543639507,a FinQA census,
+ETR/2008/page_298.pdf-3,0.0044057777034186,a FinQA census,
+MRO/2013/page_19.pdf-1,0.0073894372873793,a FinQA census,
+LMT/2012/page_73.pdf-3,0.0026769282248619,a FinQA census,
+ZBH/2015/page_57.pdf-2,0.0033461602810774,a FinQA census,
+ADBE/2008/page_89.pdf-4,0.006469243210083,a FinQA census,
+MRO/2003/page_45.pdf-2,0.0059394344989124,a FinQA census,
+ABMD/2012/page_41.pdf-2,0.005242317773688,a FinQA census,
+BLL/2012/page_31.pdf-2,0.0011153867603591,a FinQA census,
+AON/2007/page_188.pdf-4,0.0045173163794545,a FinQA census,
+MRO/2004/page_46.pdf-3,0.0043500083654007,a FinQA census,
+L/2009/page_84.pdf-3,0.0015615414645028,a FinQA census,
+IP/2006/page_38.pdf-1,0.0194356142992582,a FinQA census,
+AWK/2012/page_117.pdf-2,0.002565389548826,a FinQA census,
+V/2014/page_126.pdf-2,0.001226925436395,a FinQA census,
+UA/2007/page_70.pdf-1,0.001226925436395,a FinQA census,
+SLG/2011/page_91.pdf-1,0.0073615526183704,a FinQA census,
+LMT/2016/page_49.pdf-4,0.0029000055769338,a FinQA census,
+JPM/2008/page_87.pdf-2,0.0044615470414366,a FinQA census,
+HWM/2018/page_96.pdf-2,0.0005576933801795,a FinQA census,
+PKG/2013/page_88.pdf-2,0.0007807707322514,a FinQA census,
+AES/2001/page_33.pdf-1,0.0053538564497239,a FinQA census,
+GS/2018/page_78.pdf-4,0.0080307846745859,a FinQA census,
+STT/2006/page_95.pdf-3,0.003903853661257,a FinQA census,
+ECL/2016/page_52.pdf-2,0.0045730857174725,a FinQA census,
+HOLX/2009/page_151.pdf-1,0.005270202442697,a FinQA census,
+RSG/2018/page_94.pdf-2,0.0029000055769338,a FinQA census,
+MMM/2007/page_23.pdf-1,0.0023701968657632,a FinQA census,
+LMT/2014/page_91.pdf-2,0.0089509787518822,a FinQA census,
+FBHS/2017/page_22.pdf-1,0.0036250069711672,a FinQA census,
+AAPL/2003/page_48.pdf-2,0.0023980815347721,a FinQA census,
+AMT/2007/page_29.pdf-4,0.0069153979142267,a FinQA census,
+IPG/2006/page_77.pdf-4,0.0030115442529697,a FinQA census,
+CDNS/2018/page_66.pdf-1,0.0029000055769338,a FinQA census,
+AAL/2016/page_8.pdf-3,0.0036807763091852,a FinQA census,
+CDW/2017/page_38.pdf-1,0.0010596174223411,a FinQA census,
+AMT/2006/page_113.pdf-4,0.0051307790976521,a FinQA census,
+C/2008/page_44.pdf-2,0.0081702080196308,a FinQA census,
+CME/2010/page_91.pdf-2,0.0153365679549383,a FinQA census,
+ADI/2019/page_29.pdf-2,0.0015894261335117,a FinQA census,
+ABMD/2007/page_78.pdf-2,0.0043500083654007,a FinQA census,
+AMT/2007/page_29.pdf-3,0.0069153979142267,a FinQA census,
+DVN/2012/page_77.pdf-2,0.0021750041827003,a FinQA census,
+ETR/2016/page_374.pdf-2,0.0072500139423345,a FinQA census,
+IPG/2017/page_92.pdf-1,0.0027884669008978,a FinQA census,
+DRE/2002/page_15.pdf-3,0.0036807763091852,a FinQA census,
+GPN/2010/page_87.pdf-1,0.0053817411187329,a FinQA census,
+MSI/2012/page_87.pdf-4,0.0036807763091852,a FinQA census,
+GS/2013/page_63.pdf-1,0.0136077184763816,a FinQA census,
+ADI/2010/page_80.pdf-2,0.0038201996542301,a FinQA census,
+MMM/2013/page_75.pdf-2,0.0027884669008978,a FinQA census,
+UPS/2007/page_98.pdf-2,0.0051307790976521,a FinQA census,
+GPN/2008/page_78.pdf-4,0.0031230829290056,a FinQA census,
+MRO/2006/page_93.pdf-4,0.007807707322514,a FinQA census,
+CMCSA/2008/page_36.pdf-2,0.0029278902459427,a FinQA census,
+GS/2018/page_78.pdf-3,0.0080307846745859,a FinQA census,
+ABC/2005/page_49.pdf-4,0.0023423121967542,a FinQA census,
+TFX/2017/page_78.pdf-1,0.0023423121967542,a FinQA census,
+UNP/2018/page_74.pdf-1,0.0042384696893647,a FinQA census,
+STT/2009/page_25.pdf-2,0.0044057777034186,a FinQA census,
+CDW/2015/page_93.pdf-4,0.0046288550554904,a FinQA census,
+IP/2006/page_31.pdf-1,0.0194356142992582,a FinQA census,
+SNA/2012/page_110.pdf-3,0.0024259662037811,a FinQA census,
+CDW/2015/page_93.pdf-1,0.0046288550554904,a FinQA census,
+JPM/2010/page_120.pdf-1,0.0053259717807149,a FinQA census,
+IP/2006/page_35.pdf-2,0.0194356142992582,a FinQA census,
+LMT/2016/page_49.pdf-2,0.0029000055769338,a FinQA census,
+PKG/2005/page_74.pdf-2,0.0037923149852211,a FinQA census,
+ETR/2017/page_143.pdf-1,0.0032625062740505,a FinQA census,
+ETR/2016/page_23.pdf-1,0.0072500139423345,a FinQA census,
+STT/2006/page_95.pdf-4,0.003903853661257,a FinQA census,
+MSI/2007/page_70.pdf-1,0.0021750041827003,a FinQA census,
+AMAT/2018/page_33.pdf-1,0.0009480787463052,a FinQA census,
+GS/2012/page_189.pdf-3,0.0092577101109809,a FinQA census,
+IP/2006/page_75.pdf-1,0.0194356142992582,a FinQA census,
+RCL/2016/page_6.pdf-1,0.0010038480843232,a FinQA census,
+AAL/2016/page_8.pdf-2,0.0036807763091852,a FinQA census,
+ZBH/2009/page_58.pdf-4,0.0050192404216161,a FinQA census,
+PPG/2006/page_42.pdf-1,0.006469243210083,a FinQA census,
+PKG/2013/page_88.pdf-1,0.0007807707322514,a FinQA census,
+AMT/2003/page_102.pdf-3,0.0046846243935084,a FinQA census,
+ETR/2015/page_17.pdf-2,0.0023423121967542,a FinQA census,
+ILMN/2008/page_86.pdf-3,0.00518654843567,a FinQA census,
+INTC/2015/page_41.pdf-2,0.0161731080252077,a FinQA census,
+AMT/2014/page_160.pdf-3,0.0037365456472031,a FinQA census,
+JPM/2014/page_70.pdf-2,0.0041827003513468,a FinQA census,
+PPG/2012/page_29.pdf-2,0.0055769338017957,a FinQA census,
+AAPL/2004/page_68.pdf-1,0.0008923094082873,a FinQA census,
+STT/2009/page_127.pdf-3,0.0044057777034186,a FinQA census,
+DISCA/2011/page_49.pdf-3,0.0017846188165746,a FinQA census,
+ETR/2016/page_150.pdf-1,0.0072500139423345,a FinQA census,
+WRK/2018/page_107.pdf-4,0.0048798170765713,a FinQA census,
+GS/2018/page_69.pdf-4,0.0080307846745859,a FinQA census,
+AMT/2007/page_29.pdf-2,0.0069153979142267,a FinQA census,
+SLG/2001/page_48.pdf-2,0.0034298142881044,a FinQA census,
+AAL/2010/page_72.pdf-3,0.0029000055769338,a FinQA census,
+MRO/2017/page_96.pdf-1,0.0051307790976521,a FinQA census,
+IPG/2008/page_72.pdf-1,0.0033461602810774,a FinQA census,
+ETR/2015/page_17.pdf-4,0.0023423121967542,a FinQA census,
+STT/2007/page_111.pdf-2,0.0034576989571133,a FinQA census,
+UNP/2007/page_25.pdf-2,0.0033461602810774,a FinQA census,
+BLL/2012/page_31.pdf-1,0.0011153867603591,a FinQA census,
+C/2015/page_96.pdf-1,0.0029278902459427,a FinQA census,
+AMT/2008/page_107.pdf-1,0.006580781886119,a FinQA census,
+PPG/2008/page_52.pdf-1,0.0045730857174725,a FinQA census,
+BLK/2015/page_124.pdf-1,0.0055769338017957,a FinQA census,
+FIS/2006/page_31.pdf-1,0.0020076961686464,a FinQA census,
+ZBH/2008/page_57.pdf-4,0.0051307790976521,a FinQA census,
+GS/2017/page_179.pdf-3,0.0122692543639507,a FinQA census,
+JPM/2009/page_175.pdf-5,0.0019519268306285,a FinQA census,
+RCL/2012/page_75.pdf-2,0.0037644303162121,a FinQA census,
+KHC/2018/page_132.pdf-3,0.0029278902459427,a FinQA census,
+IP/2006/page_35.pdf-1,0.0194356142992582,a FinQA census,
+AMT/2014/page_160.pdf-1,0.0037365456472031,a FinQA census,
+C/2009/page_243.pdf-2,0.0073894372873793,a FinQA census,
+MKTX/2004/page_99.pdf-4,0.0027884669008978,a FinQA census,
+BLK/2012/page_33.pdf-1,0.00655289721711,a FinQA census,
+AMT/2014/page_160.pdf-2,0.0037365456472031,a FinQA census,
+AWK/2017/page_148.pdf-1,0.0296692878255535,a FinQA census,
+GRMN/2008/page_73.pdf-1,0.002565389548826,a FinQA census,
+GS/2013/page_72.pdf-2,0.0136077184763816,a FinQA census,
+ZBH/2008/page_57.pdf-1,0.0051307790976521,a FinQA census,
+LMT/2014/page_50.pdf-1,0.0089509787518822,a FinQA census,
+PNC/2012/page_247.pdf-1,0.0213317717918688,a FinQA census,
+GS/2014/page_165.pdf-2,0.0105961742234119,a FinQA census,
+AMT/2005/page_102.pdf-3,0.0016730801405387,a FinQA census,
+AON/2015/page_96.pdf-2,0.0030115442529697,a FinQA census,
+ADI/2010/page_60.pdf-1,0.0038201996542301,a FinQA census,
+C/2008/page_44.pdf-1,0.0081702080196308,a FinQA census,
+ADBE/1999/page_64.pdf-1,0.0015057721264848,a FinQA census,
+SLG/2011/page_91.pdf-4,0.0073615526183704,a FinQA census,
+GS/2013/page_126.pdf-1,0.0136077184763816,a FinQA census,
+ETR/2004/page_281.pdf-1,0.0055769338017957,a FinQA census,
+AES/2001/page_85.pdf-1,0.0053538564497239,a FinQA census,
+ABC/2005/page_49.pdf-1,0.0023423121967542,a FinQA census,
+UNP/2018/page_74.pdf-2,0.0042384696893647,a FinQA census,
+MSI/2014/page_76.pdf-1,0.0030951982599966,a FinQA census,
+ETFC/2012/page_24.pdf-2,0.0029836595839607,a FinQA census,
+UA/2011/page_69.pdf-1,0.0017288494785566,a FinQA census,
+RL/2008/page_23.pdf-1,0.0015615414645028,a FinQA census,
+PNC/2012/page_100.pdf-1,0.0213317717918688,a FinQA census,
+HWM/2015/page_173.pdf-1,0.0018403881545926,a FinQA census,
+ECL/2017/page_94.pdf-1,0.0068038592381908,a FinQA census,
+NKE/2009/page_43.pdf-1,0.0132173331102559,a FinQA census,
+CME/2017/page_40.pdf-1,0.0054375104567508,a FinQA census,
+MMM/2015/page_93.pdf-2,0.0019519268306285,a FinQA census,
+GS/2013/page_126.pdf-2,0.0136077184763816,a FinQA census,
+AON/2007/page_188.pdf-2,0.0045173163794545,a FinQA census,
+GS/2017/page_132.pdf-3,0.0122692543639507,a FinQA census,
+UNP/2010/page_21.pdf-1,0.0015615414645028,a FinQA census,
+ADBE/2008/page_74.pdf-2,0.006469243210083,a FinQA census,
+MRK/2013/page_125.pdf-4,0.0063019351960292,a FinQA census,
+SYY/2006/page_71.pdf-2,0.0018403881545926,a FinQA census,
+JPM/2009/page_175.pdf-1,0.0019519268306285,a FinQA census,
+MMM/2007/page_84.pdf-1,0.0023701968657632,a FinQA census,
+MAS/2017/page_27.pdf-4,0.0010038480843232,a FinQA census,
+IPG/2006/page_77.pdf-2,0.0030115442529697,a FinQA census,
+JPM/2008/page_87.pdf-1,0.0044615470414366,a FinQA census,
+AMT/2008/page_107.pdf-4,0.006580781886119,a FinQA census,
+RSG/2009/page_140.pdf-1,0.001226925436395,a FinQA census,
+SLB/2012/page_56.pdf-1,0.0010596174223411,a FinQA census,
+TMUS/2017/page_29.pdf-2,0.0032346216050415,a FinQA census,
+UPS/2016/page_114.pdf-2,0.0014500027884669,a FinQA census,
+MRO/2017/page_96.pdf-3,0.0051307790976521,a FinQA census,
+GS/2013/page_220.pdf-1,0.0136077184763816,a FinQA census,
+LKQ/2016/page_87.pdf-1,0.002565389548826,a FinQA census,
+SNA/2013/page_84.pdf-1,0.0066923205621549,a FinQA census,
+DVN/2015/page_79.pdf-3,0.0024259662037811,a FinQA census,
+FIS/2017/page_64.pdf-4,0.0033461602810774,a FinQA census,
+LMT/2014/page_77.pdf-3,0.0089509787518822,a FinQA census,
+ETFC/2012/page_43.pdf-1,0.0029836595839607,a FinQA census,
+HWM/2017/page_42.pdf-2,0.0003067313590987,a FinQA census,
+GRMN/2006/page_68.pdf-2,0.0014500027884669,a FinQA census,
+JPM/2003/page_106.pdf-1,0.005242317773688,a FinQA census,
+PNC/2012/page_247.pdf-2,0.0213317717918688,a FinQA census,
+SLG/2011/page_91.pdf-3,0.0073615526183704,a FinQA census,
+PNC/2012/page_65.pdf-5,0.0213317717918688,a FinQA census,
+MS/2013/page_132.pdf-1,0.0035134682951313,a FinQA census,
+GPN/2010/page_89.pdf-2,0.0053817411187329,a FinQA census,
+TFX/2015/page_89.pdf-1,0.0021750041827003,a FinQA census,
+ETR/2011/page_17.pdf-3,0.0045173163794545,a FinQA census,
+CDW/2015/page_93.pdf-3,0.0046288550554904,a FinQA census,
+FIS/2016/page_31.pdf-1,0.0075846299704422,a FinQA census,
+IP/2009/page_84.pdf-1,0.0076961686464781,a FinQA census,
+CDW/2017/page_38.pdf-2,0.0010596174223411,a FinQA census,
+SYY/2005/page_70.pdf-2,0.0006971167252244,a FinQA census,
+CB/2008/page_229.pdf-4,0.0032346216050415,a FinQA census,
+GS/2013/page_72.pdf-1,0.0136077184763816,a FinQA census,
+GIS/2019/page_68.pdf-1,0.0015057721264848,a FinQA census,
+CME/2017/page_89.pdf-3,0.0054375104567508,a FinQA census,
+AWK/2013/page_122.pdf-2,0.002565389548826,a FinQA census,
+V/2008/page_180.pdf-2,0.0020913501756734,a FinQA census,
+AAL/2010/page_72.pdf-1,0.0029000055769338,a FinQA census,
+ETR/2004/page_212.pdf-1,0.0055769338017957,a FinQA census,
+MRO/2004/page_46.pdf-4,0.0043500083654007,a FinQA census,
+AES/2001/page_33.pdf-4,0.0053538564497239,a FinQA census,
+LMT/2014/page_50.pdf-2,0.0089509787518822,a FinQA census,
+AMAT/2013/page_37.pdf-1,0.0009480787463052,a FinQA census,
+C/2009/page_63.pdf-3,0.0073894372873793,a FinQA census,
+ADBE/2008/page_74.pdf-1,0.006469243210083,a FinQA census,
+HIG/2011/page_53.pdf-3,0.0037923149852211,a FinQA census,
+BLL/2010/page_37.pdf-3,0.006580781886119,a FinQA census,
+JPM/2005/page_80.pdf-1,0.0018961574926105,a FinQA census,
+CDNS/2015/page_30.pdf-3,0.001226925436395,a FinQA census,
+RSG/2013/page_123.pdf-1,0.0011153867603591,a FinQA census,
+ECL/2017/page_69.pdf-1,0.0068038592381908,a FinQA census,
+GS/2013/page_85.pdf-1,0.0136077184763816,a FinQA census,
+GS/2018/page_69.pdf-3,0.0080307846745859,a FinQA census,
+JPM/2010/page_281.pdf-2,0.0053259717807149,a FinQA census,
+AMT/2006/page_113.pdf-1,0.0051307790976521,a FinQA census,
+ETR/2004/page_212.pdf-4,0.0055769338017957,a FinQA census,
+ECL/2017/page_79.pdf-1,0.0068038592381908,a FinQA census,
+CME/2010/page_69.pdf-1,0.0153365679549383,a FinQA census,
+JPM/2015/page_137.pdf-1,0.0063019351960292,a FinQA census,
+AWK/2018/page_146.pdf-4,0.0016730801405387,a FinQA census,
+GIS/2018/page_110.pdf-3,0.002509620210808,a FinQA census,
+GPN/2013/page_87.pdf-1,0.0047403937315264,a FinQA census,
+GPN/2013/page_92.pdf-2,0.0047403937315264,a FinQA census,
+ETR/2017/page_143.pdf-2,0.0032625062740505,a FinQA census,
+DISH/2011/page_122.pdf-3,0.0035692376331492,a FinQA census,
+HWM/2018/page_96.pdf-1,0.0005576933801795,a FinQA census,
+CE/2009/page_65.pdf-2,0.0009480787463052,a FinQA census,
+FIS/2012/page_48.pdf-3,0.0017846188165746,a FinQA census,
+GS/2013/page_149.pdf-4,0.0136077184763816,a FinQA census,
+BLL/2006/page_67.pdf-2,0.0034576989571133,a FinQA census,
+FIS/2016/page_9.pdf-4,0.0075846299704422,a FinQA census,
+GS/2018/page_69.pdf-2,0.0080307846745859,a FinQA census,
+DVN/2012/page_77.pdf-1,0.0021750041827003,a FinQA census,
+ECL/2017/page_94.pdf-2,0.0068038592381908,a FinQA census,
+SNA/2013/page_83.pdf-1,0.0066923205621549,a FinQA census,
+FIS/2006/page_31.pdf-2,0.0020076961686464,a FinQA census,
+AMT/2012/page_144.pdf-2,0.005158663766661,a FinQA census,
+GPN/2013/page_92.pdf-3,0.0047403937315264,a FinQA census,
+V/2014/page_126.pdf-1,0.001226925436395,a FinQA census,
+SLG/2011/page_91.pdf-2,0.0073615526183704,a FinQA census,
+ILMN/2008/page_86.pdf-4,0.00518654843567,a FinQA census,
+MAS/2012/page_26.pdf-1,0.0010038480843232,a FinQA census,
+UPS/2010/page_52.pdf-4,0.0036807763091852,a FinQA census,
+AMT/2012/page_118.pdf-1,0.005158663766661,a FinQA census,
+AON/2007/page_188.pdf-1,0.0045173163794545,a FinQA census,
+CDW/2015/page_70.pdf-2,0.0046288550554904,a FinQA census,
+LMT/2014/page_77.pdf-2,0.0089509787518822,a FinQA census,
+GPN/2008/page_78.pdf-1,0.0031230829290056,a FinQA census,
+AON/2007/page_171.pdf-2,0.0045173163794545,a FinQA census,
+HOLX/2009/page_127.pdf-2,0.005270202442697,a FinQA census,
+PNC/2015/page_93.pdf-2,0.0022865428587362,a FinQA census,
+C/2008/page_65.pdf-1,0.0081702080196308,a FinQA census,
+AMT/2006/page_113.pdf-2,0.0051307790976521,a FinQA census,
+DVN/2018/page_35.pdf-2,0.0022307735207183,a FinQA census,
+AWK/2018/page_146.pdf-3,0.0016730801405387,a FinQA census,
+HIG/2011/page_53.pdf-1,0.0037923149852211,a FinQA census,
+NWS/2017/page_119.pdf-1,0.0017846188165746,a FinQA census,
+MRO/2008/page_45.pdf-4,0.0033461602810774,a FinQA census,
+JPM/2014/page_122.pdf-1,0.0041827003513468,a FinQA census,
+MO/2016/page_19.pdf-2,0.0040153923372929,a FinQA census,
+TFX/2015/page_89.pdf-2,0.0021750041827003,a FinQA census,
+AMT/2008/page_94.pdf-2,0.006580781886119,a FinQA census,
+AMT/2006/page_104.pdf-3,0.0051307790976521,a FinQA census,
+RSG/2015/page_98.pdf-1,0.0015615414645028,a FinQA census,
+MO/2014/page_62.pdf-2,0.0069153979142267,a FinQA census,
+NCLH/2018/page_64.pdf-2,0.006469243210083,a FinQA census,
+STT/2006/page_95.pdf-1,0.003903853661257,a FinQA census,
+PNC/2012/page_174.pdf-3,0.0213317717918688,a FinQA census,
+MAS/2017/page_27.pdf-3,0.0010038480843232,a FinQA census,
+HOLX/2009/page_127.pdf-1,0.005270202442697,a FinQA census,
+AOS/2010/page_18.pdf-1,0.0003903853661257,a FinQA census,
+GPN/2013/page_87.pdf-2,0.0047403937315264,a FinQA census,
+STT/2011/page_69.pdf-2,0.0029000055769338,a FinQA census,
+HUM/2009/page_105.pdf-1,0.0015057721264848,a FinQA census,
+HIG/2004/page_140.pdf-3,0.0044336623724276,a FinQA census,
+GS/2018/page_69.pdf-1,0.0080307846745859,a FinQA census,
+EL/2008/page_59.pdf-1,0.0019519268306285,a FinQA census,
+PNC/2012/page_100.pdf-2,0.0213317717918688,a FinQA census,
+UAA/2016/page_42.pdf-3,0.0010038480843232,a FinQA census,
+HII/2015/page_88.pdf-1,0.0024817355417991,a FinQA census,
+MRO/2004/page_125.pdf-2,0.0043500083654007,a FinQA census,
+GPN/2013/page_87.pdf-3,0.0047403937315264,a FinQA census,
+AWK/2013/page_122.pdf-1,0.002565389548826,a FinQA census,
+MRO/2017/page_96.pdf-2,0.0051307790976521,a FinQA census,
+AAL/2013/page_172.pdf-1,0.0071384752662985,a FinQA census,
+HII/2015/page_121.pdf-2,0.0024817355417991,a FinQA census,
+DG/2010/page_136.pdf-2,0.0010596174223411,a FinQA census,
+MRO/2007/page_136.pdf-1,0.0016730801405387,a FinQA census,
+DXC/2018/page_56.pdf-3,0.0020913501756734,a FinQA census,
+GS/2015/page_188.pdf-4,0.0071384752662985,a FinQA census,
+AAL/2016/page_8.pdf-1,0.0036807763091852,a FinQA census,
+ETR/2013/page_21.pdf-4,0.0026769282248619,a FinQA census,
+JPM/2018/page_90.pdf-6,0.0070269365902626,a FinQA census,
+UNP/2011/page_33.pdf-1,0.0075846299704422,a FinQA census,
+AMT/2012/page_118.pdf-4,0.005158663766661,a FinQA census,
+JPM/2008/page_117.pdf-1,0.0044615470414366,a FinQA census,
+C/2008/page_65.pdf-2,0.0081702080196308,a FinQA census,
+DG/2009/page_77.pdf-1,0.0005298087111705,a FinQA census,
+DRE/2002/page_15.pdf-1,0.0036807763091852,a FinQA census,
+SNA/2007/page_69.pdf-1,0.0076403993084602,a FinQA census,
+HOLX/2006/page_71.pdf-1,0.0037644303162121,a FinQA census,
+ETR/2011/page_17.pdf-2,0.0045173163794545,a FinQA census,
+CDNS/2015/page_30.pdf-4,0.001226925436395,a FinQA census,
+GS/2017/page_132.pdf-1,0.0122692543639507,a FinQA census,
+MO/2014/page_39.pdf-1,0.0069153979142267,a FinQA census,
+UNP/2009/page_35.pdf-2,0.0046288550554904,a FinQA census,
+AWK/2018/page_146.pdf-1,0.0016730801405387,a FinQA census,
+HII/2015/page_121.pdf-1,0.0024817355417991,a FinQA census,
+GS/2018/page_78.pdf-2,0.0080307846745859,a FinQA census,
+IP/2009/page_45.pdf-1,0.0076961686464781,a FinQA census,
+PNC/2012/page_247.pdf-4,0.0213317717918688,a FinQA census,
+AMT/2016/page_49.pdf-2,0.0056884724778316,a FinQA census,
+RCL/2012/page_75.pdf-3,0.0037644303162121,a FinQA census,
+GS/2017/page_132.pdf-4,0.0122692543639507,a FinQA census,
+ZBH/2009/page_58.pdf-1,0.0050192404216161,a FinQA census,
+AMAT/2018/page_33.pdf-2,0.0009480787463052,a FinQA census,
+BLK/2012/page_145.pdf-2,0.00655289721711,a FinQA census,
+SNA/2007/page_29.pdf-1,0.0076403993084602,a FinQA census,
+MSI/2008/page_69.pdf-2,0.0022586581897272,a FinQA census,
+STT/2006/page_95.pdf-2,0.003903853661257,a FinQA census,
+AMT/2007/page_29.pdf-1,0.0069153979142267,a FinQA census,
+BLL/2011/page_32.pdf-3,0.0031230829290056,a FinQA census,
+MRO/2008/page_45.pdf-3,0.0033461602810774,a FinQA census,
+MRK/2013/page_3.pdf-1,0.0063019351960292,a FinQA census,
+CE/2013/page_16.pdf-1,0.0018403881545926,a FinQA census,
+ETR/2008/page_442.pdf-2,0.0044057777034186,a FinQA census,
+CB/2008/page_229.pdf-2,0.0032346216050415,a FinQA census,
+AMT/2010/page_99.pdf-2,0.0008365400702693,a FinQA census,
+GS/2014/page_74.pdf-2,0.0105961742234119,a FinQA census,
+AON/2018/page_87.pdf-4,0.0040153923372929,a FinQA census,
+GPN/2008/page_78.pdf-3,0.0031230829290056,a FinQA census,
+GS/2012/page_142.pdf-4,0.0092577101109809,a FinQA census,
+GS/2013/page_149.pdf-3,0.0136077184763816,a FinQA census,
+BLL/2010/page_35.pdf-4,0.006580781886119,a FinQA census,
+MRO/2013/page_19.pdf-4,0.0073894372873793,a FinQA census,
+APD/2018/page_121.pdf-2,0.0013663487814399,a FinQA census,
+AWK/2014/page_121.pdf-3,0.0036807763091852,a FinQA census,
+HUM/2017/page_118.pdf-2,0.001226925436395,a FinQA census,
+UPS/2010/page_52.pdf-3,0.0036807763091852,a FinQA census,
+DISCA/2014/page_64.pdf-2,0.0015057721264848,a FinQA census,
+AAPL/2006/page_100.pdf-1,0.006525012548101,a FinQA census,
+K/2013/page_23.pdf-2,0.0030673135909876,a FinQA census,
+APD/2016/page_40.pdf-1,0.0017846188165746,a FinQA census,
+GS/2013/page_63.pdf-2,0.0136077184763816,a FinQA census,
+ABMD/2012/page_41.pdf-1,0.005242317773688,a FinQA census,
+RSG/2018/page_135.pdf-1,0.0029000055769338,a FinQA census,
+ETR/2004/page_212.pdf-2,0.0055769338017957,a FinQA census,
+V/2008/page_180.pdf-3,0.0020913501756734,a FinQA census,
+AMT/2008/page_94.pdf-3,0.006580781886119,a FinQA census,
+C/2009/page_243.pdf-1,0.0073894372873793,a FinQA census,
+EMR/2017/page_78.pdf-1,0.0019519268306285,a FinQA census,
+ILMN/2003/page_58.pdf-3,0.0009201940772963,a FinQA census,
+AMT/2003/page_27.pdf-3,0.0046846243935084,a FinQA census,
+RSG/2010/page_98.pdf-2,0.0029557749149517,a FinQA census,
+MS/2007/page_179.pdf-2,0.0019519268306285,a FinQA census,
+NKE/2009/page_43.pdf-2,0.0132173331102559,a FinQA census,
+JPM/2012/page_140.pdf-1,0.0013384641124309,a FinQA census,
+GS/2014/page_74.pdf-1,0.0105961742234119,a FinQA census,
+AMT/2006/page_104.pdf-2,0.0051307790976521,a FinQA census,
+AOS/2010/page_18.pdf-2,0.0003903853661257,a FinQA census,
+DRE/2008/page_46.pdf-1,0.0030115442529697,a FinQA census,
+ETR/2011/page_301.pdf-3,0.0045173163794545,a FinQA census,
+PKG/2005/page_74.pdf-1,0.0037923149852211,a FinQA census,
+SNA/2007/page_29.pdf-3,0.0076403993084602,a FinQA census,
+PPG/2006/page_42.pdf-2,0.006469243210083,a FinQA census,
+HUM/2009/page_105.pdf-2,0.0015057721264848,a FinQA census,
+HOLX/2009/page_151.pdf-2,0.005270202442697,a FinQA census,
+RSG/2010/page_98.pdf-1,0.0029557749149517,a FinQA census,
+AMT/2012/page_50.pdf-2,0.005158663766661,a FinQA census,
+JPM/2003/page_106.pdf-4,0.005242317773688,a FinQA census,
+GS/2015/page_188.pdf-3,0.0071384752662985,a FinQA census,
+GS/2013/page_220.pdf-4,0.0136077184763816,a FinQA census,
+DVN/2018/page_35.pdf-3,0.0022307735207183,a FinQA census,
+AAL/2010/page_72.pdf-2,0.0029000055769338,a FinQA census,
+TMUS/2017/page_29.pdf-4,0.0032346216050415,a FinQA census,
+D/2002/page_87.pdf-2,0.0045730857174725,a FinQA census,
+AMT/2003/page_102.pdf-1,0.0046846243935084,a FinQA census,
+BLL/2006/page_67.pdf-4,0.0034576989571133,a FinQA census,
+ETR/2008/page_442.pdf-1,0.0044057777034186,a FinQA census,
+GS/2012/page_121.pdf-1,0.0092577101109809,a FinQA census,
+MS/2007/page_179.pdf-1,0.0019519268306285,a FinQA census,
+AAL/2013/page_18.pdf-3,0.0071384752662985,a FinQA census,
+IPG/2008/page_72.pdf-2,0.0033461602810774,a FinQA census,
+MRO/2006/page_93.pdf-1,0.007807707322514,a FinQA census,
+UNP/2010/page_21.pdf-2,0.0015615414645028,a FinQA census,
+MRK/2013/page_125.pdf-3,0.0063019351960292,a FinQA census,
+ABMD/2005/page_29.pdf-1,0.0033461602810774,a FinQA census,
+JPM/2003/page_106.pdf-2,0.005242317773688,a FinQA census,
+MKTX/2012/page_42.pdf-2,0.0019240421616195,a FinQA census,
+AON/2015/page_96.pdf-4,0.0030115442529697,a FinQA census,
+GS/2014/page_40.pdf-1,0.0105961742234119,a FinQA census,
+TMUS/2017/page_29.pdf-3,0.0032346216050415,a FinQA census,
+MO/2014/page_39.pdf-2,0.0069153979142267,a FinQA census,
+BKNG/2016/page_33.pdf-2,0.0010038480843232,a FinQA census,
+GRMN/2006/page_68.pdf-1,0.0014500027884669,a FinQA census,
+CME/2017/page_89.pdf-4,0.0054375104567508,a FinQA census,
+DISH/2010/page_117.pdf-1,0.0013384641124309,a FinQA census,
+BKR/2017/page_56.pdf-1,0.0034576989571133,a FinQA census,
+MSI/2012/page_87.pdf-2,0.0036807763091852,a FinQA census,
+BLL/2010/page_35.pdf-3,0.006580781886119,a FinQA census,
+AES/2010/page_227.pdf-2,0.0020076961686464,a FinQA census,
+ADBE/2008/page_74.pdf-3,0.006469243210083,a FinQA census,
+CME/2010/page_123.pdf-3,0.0153365679549383,a FinQA census,
+UA/2011/page_69.pdf-2,0.0017288494785566,a FinQA census,
+NWS/2019/page_116.pdf-2,0.0010596174223411,a FinQA census,
+AMT/2005/page_102.pdf-1,0.0016730801405387,a FinQA census,
+ABMD/2008/page_86.pdf-2,0.0033461602810774,a FinQA census,
+JPM/2003/page_106.pdf-3,0.005242317773688,a FinQA census,
+LMT/2015/page_89.pdf-2,0.0032346216050415,a FinQA census,
+HOLX/2003/page_52.pdf-1,0.0023144275277452,a FinQA census,
+RSG/2015/page_98.pdf-2,0.0015615414645028,a FinQA census,
+INTC/2013/page_31.pdf-4,0.0014500027884669,a FinQA census,
+DVN/2018/page_35.pdf-4,0.0022307735207183,a FinQA census,
+GS/2015/page_171.pdf-2,0.0071384752662985,a FinQA census,
+C/2008/page_65.pdf-3,0.0081702080196308,a FinQA census,
+UPS/2010/page_52.pdf-2,0.0036807763091852,a FinQA census,
+SNA/2018/page_31.pdf-3,0.0018403881545926,a FinQA census,
+GIS/2017/page_31.pdf-2,0.0042384696893647,a FinQA census,
+AON/2007/page_188.pdf-3,0.0045173163794545,a FinQA census,
+GS/2017/page_86.pdf-4,0.0122692543639507,a FinQA census,
+IPG/2008/page_72.pdf-3,0.0033461602810774,a FinQA census,
+PNC/2008/page_122.pdf-2,0.0023980815347721,a FinQA census,
+PNC/2012/page_100.pdf-3,0.0213317717918688,a FinQA census,
+ETR/2004/page_239.pdf-4,0.0055769338017957,a FinQA census,
+AAL/2014/page_15.pdf-4,0.0036807763091852,a FinQA census,
+GS/2017/page_179.pdf-2,0.0122692543639507,a FinQA census,
+RSG/2010/page_57.pdf-2,0.0029557749149517,a FinQA census,
+HIG/2011/page_53.pdf-2,0.0037923149852211,a FinQA census,
+ABMD/2012/page_79.pdf-1,0.005242317773688,a FinQA census,
+LMT/2014/page_91.pdf-1,0.0089509787518822,a FinQA census,
+ETR/2013/page_21.pdf-1,0.0026769282248619,a FinQA census,
+UPS/2012/page_32.pdf-3,0.0008923094082873,a FinQA census,
+GRMN/2008/page_85.pdf-2,0.002565389548826,a FinQA census,
+FIS/2012/page_48.pdf-2,0.0017846188165746,a FinQA census,
+DG/2005/page_44.pdf-3,0.002593274217835,a FinQA census,
+AWK/2012/page_117.pdf-1,0.002565389548826,a FinQA census,
+ILMN/2003/page_58.pdf-2,0.0009201940772963,a FinQA census,
+SNA/2018/page_31.pdf-2,0.0018403881545926,a FinQA census,
+PNC/2007/page_92.pdf-1,0.0016173108025207,a FinQA census,
+AAPL/2005/page_43.pdf-2,0.0011432714293681,a FinQA census,
+RSG/2016/page_139.pdf-2,0.002509620210808,a FinQA census,
+UAA/2016/page_42.pdf-4,0.0010038480843232,a FinQA census,
+STT/2009/page_127.pdf-1,0.0044057777034186,a FinQA census,
+MS/2013/page_132.pdf-2,0.0035134682951313,a FinQA census,
+AAL/2014/page_15.pdf-2,0.0036807763091852,a FinQA census,
+MRO/2004/page_125.pdf-1,0.0043500083654007,a FinQA census,
+DRE/2002/page_15.pdf-4,0.0036807763091852,a FinQA census,
+JPM/2014/page_70.pdf-1,0.0041827003513468,a FinQA census,
+SNA/2007/page_49.pdf-3,0.0076403993084602,a FinQA census,
+SNA/2007/page_29.pdf-2,0.0076403993084602,a FinQA census,
+APD/2018/page_30.pdf-2,0.0013663487814399,a FinQA census,
+ETR/2011/page_301.pdf-2,0.0045173163794545,a FinQA census,
+BLL/2011/page_32.pdf-2,0.0031230829290056,a FinQA census,
+JPM/2010/page_120.pdf-2,0.0053259717807149,a FinQA census,
+UPS/2012/page_32.pdf-1,0.0008923094082873,a FinQA census,
+GS/2017/page_179.pdf-1,0.0122692543639507,a FinQA census,
+BLL/2010/page_35.pdf-1,0.006580781886119,a FinQA census,
+JPM/2012/page_140.pdf-2,0.0013384641124309,a FinQA census,
+MRO/2013/page_39.pdf-1,0.0073894372873793,a FinQA census,
+SLG/2001/page_48.pdf-1,0.0034298142881044,a FinQA census,
+MSI/2007/page_70.pdf-3,0.0021750041827003,a FinQA census,
+PPG/2018/page_85.pdf-1,0.0034576989571133,a FinQA census,
+PPG/2012/page_29.pdf-1,0.0055769338017957,a FinQA census,
+GS/2012/page_142.pdf-3,0.0092577101109809,a FinQA census,
+CME/2017/page_89.pdf-1,0.0054375104567508,a FinQA census,
+CME/2017/page_89.pdf-2,0.0054375104567508,a FinQA census,
+AON/2007/page_171.pdf-4,0.0045173163794545,a FinQA census,
+ETR/2015/page_17.pdf-1,0.0023423121967542,a FinQA census,
+GS/2012/page_142.pdf-1,0.0092577101109809,a FinQA census,
+LMT/2012/page_73.pdf-1,0.0026769282248619,a FinQA census,
+MS/2013/page_139.pdf-2,0.0035134682951313,a FinQA census,
+ILMN/2008/page_86.pdf-1,0.00518654843567,a FinQA census,
+GS/2017/page_86.pdf-3,0.0122692543639507,a FinQA census,
+EL/2008/page_59.pdf-2,0.0019519268306285,a FinQA census,
+CE/2016/page_19.pdf-4,0.0033461602810774,a FinQA census,
+JKHY/2019/page_18.pdf-1,0.001254810105404,a FinQA census,
+SNA/2007/page_69.pdf-2,0.0076403993084602,a FinQA census,
+L/2009/page_84.pdf-2,0.0015615414645028,a FinQA census,
+FBHS/2017/page_22.pdf-2,0.0036250069711672,a FinQA census,
+IPG/2006/page_77.pdf-1,0.0030115442529697,a FinQA census,
+AAL/2015/page_114.pdf-1,0.0013384641124309,a FinQA census,
+AMT/2014/page_149.pdf-1,0.0037365456472031,a FinQA census,
+C/2009/page_63.pdf-4,0.0073894372873793,a FinQA census,
+GS/2014/page_40.pdf-2,0.0105961742234119,a FinQA census,
+HOLX/2008/page_143.pdf-2,0.0019519268306285,a FinQA census,
+ALXN/2016/page_153.pdf-1,0.0037923149852211,a FinQA census,
+MRK/2013/page_3.pdf-2,0.0063019351960292,a FinQA census,
+RL/2008/page_23.pdf-2,0.0015615414645028,a FinQA census,
+AAL/2010/page_72.pdf-4,0.0029000055769338,a FinQA census,
+ZBH/2008/page_57.pdf-3,0.0051307790976521,a FinQA census,
+AMT/2016/page_125.pdf-4,0.0056884724778316,a FinQA census,
+DISCA/2011/page_49.pdf-2,0.0017846188165746,a FinQA census,
+AES/2001/page_85.pdf-4,0.0053538564497239,a FinQA census,
+ETR/2017/page_143.pdf-3,0.0032625062740505,a FinQA census,
+MSI/2014/page_76.pdf-2,0.0030951982599966,a FinQA census,
+BLK/2017/page_121.pdf-2,0.003848084323239,a FinQA census,
+UPS/2016/page_114.pdf-1,0.0014500027884669,a FinQA census,
+AMT/2003/page_27.pdf-1,0.0046846243935084,a FinQA census,
+CE/2013/page_16.pdf-2,0.0018403881545926,a FinQA census,
+MKTX/2012/page_42.pdf-3,0.0019240421616195,a FinQA census,
+PNC/2012/page_174.pdf-4,0.0213317717918688,a FinQA census,
+PPG/2008/page_52.pdf-2,0.0045730857174725,a FinQA census,
+ADBE/1999/page_64.pdf-2,0.0015057721264848,a FinQA census,
+IPG/2006/page_77.pdf-3,0.0030115442529697,a FinQA census,
+RSG/2012/page_93.pdf-2,0.0015057721264848,a FinQA census,
+JPM/2018/page_90.pdf-3,0.0070269365902626,a FinQA census,
+BKNG/2016/page_33.pdf-3,0.0010038480843232,a FinQA census,
+PNC/2012/page_68.pdf-5,0.0213317717918688,a FinQA census,
+C/2009/page_63.pdf-2,0.0073894372873793,a FinQA census,
+CB/2008/page_229.pdf-3,0.0032346216050415,a FinQA census,
+HIG/2011/page_53.pdf-4,0.0037923149852211,a FinQA census,
+BLL/2006/page_67.pdf-1,0.0034576989571133,a FinQA census,
+GS/2013/page_63.pdf-3,0.0136077184763816,a FinQA census,
+C/2008/page_22.pdf-3,0.0081702080196308,a FinQA census,
+HIG/2004/page_140.pdf-2,0.0044336623724276,a FinQA census,
+FIS/2016/page_9.pdf-1,0.0075846299704422,a FinQA census,
+C/2008/page_22.pdf-1,0.0081702080196308,a FinQA census,
+TMUS/2017/page_29.pdf-1,0.0032346216050415,a FinQA census,
+GPN/2010/page_89.pdf-1,0.0053817411187329,a FinQA census,
+BLL/2010/page_37.pdf-4,0.006580781886119,a FinQA census,
+HOLX/2007/page_126.pdf-1,0.006580781886119,a FinQA census,
+GS/2013/page_149.pdf-1,0.0136077184763816,a FinQA census,
+AWK/2012/page_117.pdf-3,0.002565389548826,a FinQA census,
+CDNS/2015/page_30.pdf-1,0.001226925436395,a FinQA census,
+AAL/2014/page_15.pdf-1,0.0036807763091852,a FinQA census,
+DRE/2008/page_46.pdf-4,0.0030115442529697,a FinQA census,
+INTC/2015/page_41.pdf-3,0.0161731080252077,a FinQA census,
+BLK/2014/page_120.pdf-1,0.0058000111538676,a FinQA census,
+GS/2013/page_85.pdf-3,0.0136077184763816,a FinQA census,
+C/2018/page_175.pdf-1,0.0033461602810774,a FinQA census,
+GS/2012/page_189.pdf-4,0.0092577101109809,a FinQA census,
+CMCSA/2015/page_112.pdf-1,0.0054096257877419,a FinQA census,
+GIS/2019/page_68.pdf-2,0.0015057721264848,a FinQA census,
+LMT/2014/page_91.pdf-4,0.0089509787518822,a FinQA census,
+D/2002/page_87.pdf-1,0.0045730857174725,a FinQA census,
+IP/2006/page_30.pdf-2,0.0194356142992582,a FinQA census,
+MMM/2013/page_75.pdf-1,0.0027884669008978,a FinQA census,
+AAL/2013/page_172.pdf-3,0.0071384752662985,a FinQA census,
+AMT/2007/page_127.pdf-4,0.0069153979142267,a FinQA census,
+SLB/2012/page_56.pdf-2,0.0010596174223411,a FinQA census,
+LMT/2015/page_89.pdf-3,0.0032346216050415,a FinQA census,
+AES/2002/page_128.pdf-4,0.0029000055769338,a FinQA census,
+VRTX/2006/page_111.pdf-2,0.0036807763091852,a FinQA census,
+AON/2007/page_171.pdf-3,0.0045173163794545,a FinQA census,
+ETFC/2011/page_144.pdf-1,0.0016730801405387,a FinQA census,
+AES/2001/page_33.pdf-3,0.0053538564497239,a FinQA census,
+DRE/2008/page_46.pdf-3,0.0030115442529697,a FinQA census,
+DVN/2014/page_87.pdf-2,0.002593274217835,a FinQA census,
+AMT/2016/page_49.pdf-4,0.0056884724778316,a FinQA census,
+AMT/2007/page_127.pdf-1,0.0069153979142267,a FinQA census,
+VNO/2014/page_57.pdf-2,0.0004461547041436,a FinQA census,
+AMT/2008/page_94.pdf-1,0.006580781886119,a FinQA census,
+PNC/2015/page_93.pdf-1,0.0022865428587362,a FinQA census,
+IPG/2017/page_92.pdf-4,0.0027884669008978,a FinQA census,
+ETR/2004/page_281.pdf-2,0.0055769338017957,a FinQA census,
+ETFC/2012/page_43.pdf-2,0.0029836595839607,a FinQA census,
+AAL/2013/page_172.pdf-2,0.0071384752662985,a FinQA census,
+DISH/2011/page_122.pdf-1,0.0035692376331492,a FinQA census,
+MSI/2012/page_87.pdf-3,0.0036807763091852,a FinQA census,
+MSI/2008/page_69.pdf-3,0.0022586581897272,a FinQA census,
+FIS/2016/page_9.pdf-2,0.0075846299704422,a FinQA census,
+ADBE/2008/page_74.pdf-4,0.006469243210083,a FinQA census,
+MRO/2003/page_45.pdf-1,0.0059394344989124,a FinQA census,
+AAPL/2006/page_100.pdf-2,0.006525012548101,a FinQA census,
+RSG/2016/page_139.pdf-1,0.002509620210808,a FinQA census,
+RSG/2013/page_123.pdf-2,0.0011153867603591,a FinQA census,
+UNP/2009/page_42.pdf-2,0.0046288550554904,a FinQA census,
+AMT/2016/page_125.pdf-2,0.0056884724778316,a FinQA census,
+AMT/2014/page_149.pdf-2,0.0037365456472031,a FinQA census,
+AAPL/2006/page_131.pdf-1,0.006525012548101,a FinQA census,
+C/2015/page_96.pdf-3,0.0029278902459427,a FinQA census,
+AON/2018/page_87.pdf-3,0.0040153923372929,a FinQA census,
+DVN/2014/page_87.pdf-1,0.002593274217835,a FinQA census,
+GIS/2018/page_110.pdf-1,0.002509620210808,a FinQA census,
+UNP/2006/page_15.pdf-1,0.0026769282248619,a FinQA census,
+C/2018/page_175.pdf-2,0.0033461602810774,a FinQA census,
+ANSS/2012/page_93.pdf-1,0.0035692376331492,a FinQA census,
+STT/2011/page_69.pdf-1,0.0029000055769338,a FinQA census,
+AES/2001/page_85.pdf-2,0.0053538564497239,a FinQA census,
+LMT/2014/page_91.pdf-3,0.0089509787518822,a FinQA census,
+GIS/2017/page_31.pdf-4,0.0042384696893647,a FinQA census,
+HUM/2017/page_118.pdf-1,0.001226925436395,a FinQA census,
+ABMD/2006/page_43.pdf-1,0.0026769282248619,a FinQA census,
+ANET/2015/page_156.pdf-1,0.0015615414645028,a FinQA census,
+MRO/2006/page_93.pdf-3,0.007807707322514,a FinQA census,
+AES/2010/page_227.pdf-1,0.0020076961686464,a FinQA census,
+BLL/2010/page_35.pdf-2,0.006580781886119,a FinQA census,
+NCLH/2018/page_97.pdf-1,0.006469243210083,a FinQA census,
+GS/2015/page_171.pdf-1,0.0071384752662985,a FinQA census,
+ETR/2003/page_157.pdf-1,0.0011711560983771,a FinQA census,
+CME/2010/page_123.pdf-5,0.0153365679549383,a FinQA census,
+RSG/2012/page_93.pdf-1,0.0015057721264848,a FinQA census,
+C/2009/page_197.pdf-1,0.0073894372873793,a FinQA census,
+JPM/2008/page_117.pdf-2,0.0044615470414366,a FinQA census,
+EMR/2017/page_78.pdf-2,0.0019519268306285,a FinQA census,
+FIS/2012/page_48.pdf-4,0.0017846188165746,a FinQA census,
+MRO/2011/page_108.pdf-2,0.0008923094082873,a FinQA census,
+PNC/2012/page_174.pdf-2,0.0213317717918688,a FinQA census,
+MAS/2012/page_26.pdf-2,0.0010038480843232,a FinQA census,
+UPS/2007/page_49.pdf-4,0.0051307790976521,a FinQA census,
+UNP/2011/page_33.pdf-2,0.0075846299704422,a FinQA census,
+UPS/2007/page_49.pdf-2,0.0051307790976521,a FinQA census,
+MRO/2003/page_84.pdf-2,0.0059394344989124,a FinQA census,
+PPG/2018/page_85.pdf-2,0.0034576989571133,a FinQA census,
+UPS/2007/page_49.pdf-3,0.0051307790976521,a FinQA census,
+UNP/2009/page_42.pdf-1,0.0046288550554904,a FinQA census,
+ECL/2017/page_79.pdf-2,0.0068038592381908,a FinQA census,
+LMT/2012/page_73.pdf-4,0.0026769282248619,a FinQA census,
+MO/2014/page_62.pdf-1,0.0069153979142267,a FinQA census,
+ECL/2017/page_69.pdf-2,0.0068038592381908,a FinQA census,
+MRO/2017/page_96.pdf-4,0.0051307790976521,a FinQA census,
+JPM/2018/page_90.pdf-2,0.0070269365902626,a FinQA census,
+ETR/2004/page_239.pdf-1,0.0055769338017957,a FinQA census,
+AMT/2012/page_50.pdf-4,0.005158663766661,a FinQA census,
+AAL/2013/page_18.pdf-1,0.0071384752662985,a FinQA census,
+JPM/2010/page_281.pdf-1,0.0053259717807149,a FinQA census,
+LMT/2012/page_73.pdf-2,0.0026769282248619,a FinQA census,
+AMT/2008/page_107.pdf-3,0.006580781886119,a FinQA census,
+KHC/2018/page_132.pdf-1,0.0029278902459427,a FinQA census,
+AES/2002/page_128.pdf-1,0.0029000055769338,a FinQA census,
+PKG/2002/page_52.pdf-2,0.0013384641124309,a FinQA census,
+DISH/2010/page_117.pdf-2,0.0013384641124309,a FinQA census,
+AAPL/2006/page_100.pdf-4,0.006525012548101,a FinQA census,
+SLG/2011/page_91.pdf-6,0.0073615526183704,a FinQA census,
+DRE/2007/page_56.pdf-3,0.0021750041827003,a FinQA census,
+MRK/2013/page_125.pdf-2,0.0063019351960292,a FinQA census,
+ZBH/2007/page_67.pdf-1,0.0030115442529697,a FinQA census,
+ETR/2016/page_374.pdf-4,0.0072500139423345,a FinQA census,
+CME/2010/page_123.pdf-1,0.0153365679549383,a FinQA census,
+UAA/2016/page_42.pdf-1,0.0010038480843232,a FinQA census,
+GPN/2018/page_94.pdf-2,0.0018961574926105,a FinQA census,
+BLL/2011/page_32.pdf-1,0.0031230829290056,a FinQA census,
+ETR/2011/page_17.pdf-1,0.0045173163794545,a FinQA census,
+AAL/2013/page_18.pdf-4,0.0071384752662985,a FinQA census,
+DG/2007/page_67.pdf-2,0.0010596174223411,a FinQA census,
+ADI/2010/page_80.pdf-1,0.0038201996542301,a FinQA census,
+SNA/2007/page_49.pdf-2,0.0076403993084602,a FinQA census,
+AAL/2014/page_15.pdf-3,0.0036807763091852,a FinQA census,
+CME/2010/page_69.pdf-4,0.0153365679549383,a FinQA census,
+AMT/2016/page_125.pdf-3,0.0056884724778316,a FinQA census,
+HWM/2015/page_173.pdf-2,0.0018403881545926,a FinQA census,
+BKNG/2016/page_33.pdf-4,0.0010038480843232,a FinQA census,
+AAL/2013/page_18.pdf-2,0.0071384752662985,a FinQA census,
+PKG/2005/page_74.pdf-4,0.0037923149852211,a FinQA census,
+ETR/2008/page_298.pdf-2,0.0044057777034186,a FinQA census,
+ILMN/2003/page_58.pdf-1,0.0009201940772963,a FinQA census,
+JPM/2015/page_82.pdf-2,0.0063019351960292,a FinQA census,
+STT/2011/page_69.pdf-3,0.0029000055769338,a FinQA census,
+MRO/2013/page_19.pdf-2,0.0073894372873793,a FinQA census,
+ABMD/2007/page_78.pdf-1,0.0043500083654007,a FinQA census,
+ETFC/2018/page_153.pdf-2,0.0007250013942334,a FinQA census,
+INTC/2013/page_31.pdf-3,0.0014500027884669,a FinQA census,
+SNA/2013/page_34.pdf-1,0.0066923205621549,a FinQA census,
+ADI/2011/page_61.pdf-1,0.0014500027884669,a FinQA census,
+ALLE/2015/page_24.pdf-2,0.0018403881545926,a FinQA census,
+JKHY/2017/page_26.pdf-3,0.0007528860632424,a FinQA census,
+UNP/2006/page_15.pdf-2,0.0026769282248619,a FinQA census,
+GS/2012/page_189.pdf-1,0.0092577101109809,a FinQA census,
+ECL/2016/page_52.pdf-3,0.0045730857174725,a FinQA census,
+MAS/2012/page_26.pdf-3,0.0010038480843232,a FinQA census,
+AWK/2017/page_148.pdf-2,0.0296692878255535,a FinQA census,
+GS/2017/page_86.pdf-1,0.0122692543639507,a FinQA census,
+FIS/2017/page_64.pdf-1,0.0033461602810774,a FinQA census,
+MMM/2007/page_23.pdf-2,0.0023701968657632,a FinQA census,
+FIS/2016/page_9.pdf-3,0.0075846299704422,a FinQA census,
+AON/2018/page_87.pdf-2,0.0040153923372929,a FinQA census,
+FIS/2016/page_31.pdf-4,0.0075846299704422,a FinQA census,
+GPN/2014/page_92.pdf-2,0.0006692320562154,a FinQA census,
+JPM/2009/page_175.pdf-4,0.0019519268306285,a FinQA census,
+UNP/2016/page_52.pdf-1,0.003903853661257,a FinQA census,
+DVN/2015/page_79.pdf-1,0.0024259662037811,a FinQA census,
+C/2018/page_175.pdf-4,0.0033461602810774,a FinQA census,
+ILMN/2008/page_86.pdf-2,0.00518654843567,a FinQA census,
+ETR/2003/page_157.pdf-2,0.0011711560983771,a FinQA census,
+GS/2014/page_165.pdf-4,0.0105961742234119,a FinQA census,
+INTC/2013/page_31.pdf-2,0.0014500027884669,a FinQA census,
+ETR/2008/page_298.pdf-1,0.0044057777034186,a FinQA census,
+HOLX/2006/page_100.pdf-2,0.0037644303162121,a FinQA census,
+CME/2017/page_40.pdf-3,0.0054375104567508,a FinQA census,
+JPM/2015/page_82.pdf-1,0.0063019351960292,a FinQA census,
+HII/2015/page_121.pdf-4,0.0024817355417991,a FinQA census,
+STT/2009/page_25.pdf-1,0.0044057777034186,a FinQA census,
+DG/2005/page_44.pdf-1,0.002593274217835,a FinQA census,
+AWK/2017/page_148.pdf-3,0.0296692878255535,a FinQA census,
+PNC/2012/page_65.pdf-2,0.0213317717918688,a FinQA census,
+AMT/2006/page_104.pdf-1,0.0051307790976521,a FinQA census,
+IPG/2008/page_72.pdf-4,0.0033461602810774,a FinQA census,
+NWS/2019/page_116.pdf-1,0.0010596174223411,a FinQA census,
+LMT/2015/page_89.pdf-1,0.0032346216050415,a FinQA census,
+CDW/2015/page_93.pdf-2,0.0046288550554904,a FinQA census,
+CE/2016/page_19.pdf-2,0.0033461602810774,a FinQA census,
+AON/2007/page_175.pdf-1,0.0045173163794545,a FinQA census,
+GPN/2010/page_87.pdf-2,0.0053817411187329,a FinQA census,
+FIS/2017/page_64.pdf-2,0.0033461602810774,a FinQA census,
+BLK/2015/page_124.pdf-2,0.0055769338017957,a FinQA census,
+DVN/2014/page_87.pdf-3,0.002593274217835,a FinQA census,
+WRK/2018/page_107.pdf-3,0.0048798170765713,a FinQA census,
+GS/2014/page_51.pdf-1,0.0105961742234119,a FinQA census,
+ETR/2015/page_17.pdf-3,0.0023423121967542,a FinQA census,
+MS/2013/page_139.pdf-1,0.0035134682951313,a FinQA census,
+UPS/2010/page_52.pdf-1,0.0036807763091852,a FinQA census,
+LMT/2016/page_49.pdf-3,0.0029000055769338,a FinQA census,
+ETR/2016/page_23.pdf-4,0.0072500139423345,a FinQA census,
+JPM/2014/page_122.pdf-2,0.0041827003513468,a FinQA census,
+DISH/2011/page_122.pdf-2,0.0035692376331492,a FinQA census,
+ETR/2016/page_150.pdf-4,0.0072500139423345,a FinQA census,
+SNA/2013/page_83.pdf-2,0.0066923205621549,a FinQA census,
+BLL/2011/page_32.pdf-4,0.0031230829290056,a FinQA census,
+CMCSA/2008/page_36.pdf-1,0.0029278902459427,a FinQA census,
+AMT/2005/page_102.pdf-2,0.0016730801405387,a FinQA census,
+HII/2015/page_121.pdf-3,0.0024817355417991,a FinQA census,
+AMT/2008/page_107.pdf-2,0.006580781886119,a FinQA census,
+MRO/2004/page_46.pdf-2,0.0043500083654007,a FinQA census,
+BLK/2012/page_33.pdf-2,0.00655289721711,a FinQA census,
+RSG/2009/page_140.pdf-2,0.001226925436395,a FinQA census,
+JPM/2009/page_175.pdf-3,0.0019519268306285,a FinQA census,
+ZBH/2015/page_57.pdf-1,0.0033461602810774,a FinQA census,
+DRE/2007/page_56.pdf-1,0.0021750041827003,a FinQA census,
+MSI/2007/page_70.pdf-2,0.0021750041827003,a FinQA census,
+PNC/2008/page_122.pdf-1,0.0023980815347721,a FinQA census,
+ETR/2016/page_374.pdf-1,0.0072500139423345,a FinQA census,
+DISCA/2011/page_49.pdf-4,0.0017846188165746,a FinQA census,
+CME/2017/page_40.pdf-4,0.0054375104567508,a FinQA census,
+RSG/2018/page_135.pdf-2,0.0029000055769338,a FinQA census,
+DISH/2011/page_122.pdf-4,0.0035692376331492,a FinQA census,
+GS/2018/page_78.pdf-1,0.0080307846745859,a FinQA census,
+PNC/2012/page_68.pdf-3,0.0213317717918688,a FinQA census,
+GIS/2015/page_62.pdf-1,0.0009480787463052,a FinQA census,
+DVN/2015/page_79.pdf-2,0.0024259662037811,a FinQA census,
+CME/2010/page_69.pdf-3,0.0153365679549383,a FinQA census,
+ABMD/2012/page_79.pdf-2,0.005242317773688,a FinQA census,
+ANSS/2016/page_47.pdf-1,0.0010038480843232,a FinQA census,
+ETR/2008/page_298.pdf-4,0.0044057777034186,a FinQA census,
+DISCA/2014/page_64.pdf-3,0.0015057721264848,a FinQA census,
+DXC/2018/page_56.pdf-1,0.0020913501756734,a FinQA census,
+GS/2015/page_171.pdf-3,0.0071384752662985,a FinQA census,
+DVN/2012/page_77.pdf-3,0.0021750041827003,a FinQA census,
+V/2010/page_28.pdf-1,0.0020913501756734,a FinQA census,
+SNA/2013/page_84.pdf-3,0.0066923205621549,a FinQA census,
+INTC/2013/page_31.pdf-1,0.0014500027884669,a FinQA census,
+BLL/2006/page_67.pdf-3,0.0034576989571133,a FinQA census,
+PNC/2012/page_174.pdf-1,0.0213317717918688,a FinQA census,
+MRO/2003/page_45.pdf-3,0.0059394344989124,a FinQA census,
+CB/2008/page_229.pdf-1,0.0032346216050415,a FinQA census,
+SNA/2013/page_84.pdf-2,0.0066923205621549,a FinQA census,
+AMT/2016/page_125.pdf-1,0.0056884724778316,a FinQA census,
+ETR/2017/page_372.pdf-3,0.0032625062740505,a FinQA census,
+ETR/2004/page_239.pdf-2,0.0055769338017957,a FinQA census,
+GS/2014/page_165.pdf-3,0.0105961742234119,a FinQA census,
+MKTX/2004/page_99.pdf-2,0.0027884669008978,a FinQA census,
+STT/2011/page_69.pdf-4,0.0029000055769338,a FinQA census,
+ZBH/2009/page_58.pdf-3,0.0050192404216161,a FinQA census,
+MRO/2013/page_39.pdf-3,0.0073894372873793,a FinQA census,
+C/2015/page_96.pdf-2,0.0029278902459427,a FinQA census,
+PM/2017/page_32.pdf-2,0.0022865428587362,a FinQA census,
+IP/2009/page_84.pdf-2,0.0076961686464781,a FinQA census,
+GPN/2013/page_87.pdf-4,0.0047403937315264,a FinQA census,
+JPM/2018/page_90.pdf-4,0.0070269365902626,a FinQA census,
+MRO/2006/page_93.pdf-2,0.007807707322514,a FinQA census,
+AAL/2015/page_114.pdf-2,0.0013384641124309,a FinQA census,
+HOLX/2007/page_93.pdf-1,0.006580781886119,a FinQA census,
+DXC/2018/page_56.pdf-2,0.0020913501756734,a FinQA census,
+FIS/2016/page_45.pdf-1,0.0075846299704422,a FinQA census,
+RSG/2016/page_135.pdf-1,0.002509620210808,a FinQA census,
+UPS/2012/page_32.pdf-2,0.0008923094082873,a FinQA census,
+DRE/2005/page_30.pdf-1,0.0019519268306285,a FinQA census,
+ETFC/2012/page_43.pdf-3,0.0029836595839607,a FinQA census,
+ETR/2016/page_374.pdf-3,0.0072500139423345,a FinQA census,
+LMT/2014/page_50.pdf-3,0.0089509787518822,a FinQA census,
+MSI/2012/page_87.pdf-1,0.0036807763091852,a FinQA census,
+DRE/2005/page_30.pdf-2,0.0019519268306285,a FinQA census,
+GS/2013/page_220.pdf-3,0.0136077184763816,a FinQA census,
+MSI/2008/page_69.pdf-1,0.0022586581897272,a FinQA census,
+GS/2013/page_85.pdf-2,0.0136077184763816,a FinQA census,
+MAR/2004/page_45.pdf-1,0.0026769282248619,a FinQA census,
+JPM/2005/page_80.pdf-2,0.0018961574926105,a FinQA census,
+FIS/2016/page_45.pdf-3,0.0075846299704422,a FinQA census,
+TFX/2017/page_78.pdf-2,0.0023423121967542,a FinQA census,
+CB/2010/page_103.pdf-1,0.0032903909430595,a FinQA census,
+HUM/2017/page_118.pdf-4,0.001226925436395,a FinQA census,
+WRK/2018/page_107.pdf-1,0.0048798170765713,a FinQA census,
+SNA/2013/page_83.pdf-3,0.0066923205621549,a FinQA census,
+WRK/2018/page_107.pdf-5,0.0048798170765713,a FinQA census,
+ETR/2017/page_372.pdf-2,0.0032625062740505,a FinQA census,
+ADBE/2008/page_89.pdf-1,0.006469243210083,a FinQA census,
+C/2018/page_176.pdf-2,0.0033461602810774,a FinQA census,
+DRE/2007/page_56.pdf-2,0.0021750041827003,a FinQA census,
+HUM/2017/page_118.pdf-3,0.001226925436395,a FinQA census,
+AON/2018/page_87.pdf-1,0.0040153923372929,a FinQA census,
+IP/2009/page_45.pdf-2,0.0076961686464781,a FinQA census,
+AON/2010/page_86.pdf-2,0.0016173108025207,a FinQA census,
+HOLX/2008/page_143.pdf-1,0.0019519268306285,a FinQA census,
+MRO/2003/page_84.pdf-4,0.0059394344989124,a FinQA census,
+UNP/2009/page_35.pdf-1,0.0046288550554904,a FinQA census,
+AMT/2012/page_118.pdf-3,0.005158663766661,a FinQA census,
+MMM/2015/page_93.pdf-1,0.0019519268306285,a FinQA census,
+PKG/2002/page_52.pdf-1,0.0013384641124309,a FinQA census,
+MRO/2008/page_45.pdf-2,0.0033461602810774,a FinQA census,
+UNP/2011/page_24.pdf-2,0.0075846299704422,a FinQA census,
+WRK/2018/page_107.pdf-2,0.0048798170765713,a FinQA census,
+SNA/2007/page_49.pdf-1,0.0076403993084602,a FinQA census,
+UNP/2011/page_24.pdf-1,0.0075846299704422,a FinQA census,
+GIS/2017/page_31.pdf-3,0.0042384696893647,a FinQA census,
+MRO/2013/page_39.pdf-2,0.0073894372873793,a FinQA census,
+JPM/2015/page_137.pdf-2,0.0063019351960292,a FinQA census,
+FIS/2016/page_31.pdf-3,0.0075846299704422,a FinQA census,
+ILMN/2008/page_82.pdf-2,0.00518654843567,a FinQA census,
+MAS/2017/page_27.pdf-1,0.0010038480843232,a FinQA census,
+HOLX/2007/page_93.pdf-2,0.006580781886119,a FinQA census,
+GS/2014/page_165.pdf-1,0.0105961742234119,a FinQA census,
+MAR/2018/page_43.pdf-1,0.0018961574926105,a FinQA census,
+AMT/2006/page_104.pdf-4,0.0051307790976521,a FinQA census,
+IP/2006/page_38.pdf-2,0.0194356142992582,a FinQA census,
+ETR/2004/page_212.pdf-3,0.0055769338017957,a FinQA census,
+UNP/2015/page_56.pdf-2,0.003903853661257,a FinQA census,
+DRE/2012/page_40.pdf-1,0.0006134627181975,a FinQA census,
+JPM/2010/page_273.pdf-1,0.0053259717807149,a FinQA census,
+ALLE/2015/page_24.pdf-1,0.0018403881545926,a FinQA census,
+AES/2002/page_128.pdf-3,0.0029000055769338,a FinQA census,
+SLG/2011/page_91.pdf-5,0.0073615526183704,a FinQA census,
+KHC/2018/page_132.pdf-2,0.0029278902459427,a FinQA census,
+GS/2012/page_142.pdf-2,0.0092577101109809,a FinQA census,
+SNA/2013/page_34.pdf-3,0.0066923205621549,a FinQA census,
+BKNG/2016/page_33.pdf-1,0.0010038480843232,a FinQA census,
+AWK/2013/page_122.pdf-4,0.002565389548826,a FinQA census,
+JPM/2015/page_137.pdf-4,0.0063019351960292,a FinQA census,
+IPG/2017/page_92.pdf-3,0.0027884669008978,a FinQA census,
+RSG/2010/page_57.pdf-1,0.0029557749149517,a FinQA census,
+K/2006/page_52.pdf-3,0.0029278902459427,a FinQA census,
+RCL/2016/page_6.pdf-2,0.0010038480843232,a FinQA census,
+ZBH/2015/page_57.pdf-3,0.0033461602810774,a FinQA census,
+STT/2014/page_54.pdf-2,0.0001951926830628,a FinQA census,
+STT/2007/page_111.pdf-4,0.0034576989571133,a FinQA census,
+SNA/2013/page_34.pdf-2,0.0066923205621549,a FinQA census,
+MRK/2013/page_125.pdf-1,0.0063019351960292,a FinQA census,
+CDNS/2018/page_66.pdf-2,0.0029000055769338,a FinQA census,
+DVN/2018/page_35.pdf-1,0.0022307735207183,a FinQA census,
+C/2008/page_22.pdf-4,0.0081702080196308,a FinQA census,
+AMT/2007/page_127.pdf-3,0.0069153979142267,a FinQA census,
+AES/2001/page_85.pdf-3,0.0053538564497239,a FinQA census,
+L/2009/page_84.pdf-1,0.0015615414645028,a FinQA census,
+ETR/2016/page_150.pdf-3,0.0072500139423345,a FinQA census,
+CE/2016/page_19.pdf-1,0.0033461602810774,a FinQA census,
+AMT/2006/page_113.pdf-3,0.0051307790976521,a FinQA census,
+CDW/2015/page_70.pdf-1,0.0046288550554904,a FinQA census,
+NCLH/2018/page_97.pdf-2,0.006469243210083,a FinQA census,
+AWK/2017/page_148.pdf-4,0.0296692878255535,a FinQA census,
+C/2009/page_63.pdf-1,0.0073894372873793,a FinQA census,
+AWK/2018/page_146.pdf-2,0.0016730801405387,a FinQA census,
+LMT/2015/page_89.pdf-4,0.0032346216050415,a FinQA census,
+PNC/2014/page_111.pdf-1,0.0020634655066644,a FinQA census,
+VRTX/2006/page_111.pdf-1,0.0036807763091852,a FinQA census,
+CDNS/2018/page_66.pdf-3,0.0029000055769338,a FinQA census,
+BKR/2017/page_56.pdf-2,0.0034576989571133,a FinQA census,
+JPM/2009/page_175.pdf-2,0.0019519268306285,a FinQA census,
+JKHY/2017/page_26.pdf-2,0.0007528860632424,a FinQA census,
+CB/2010/page_103.pdf-2,0.0032903909430595,a FinQA census,
+STT/2007/page_111.pdf-1,0.0034576989571133,a FinQA census,
+ETR/2016/page_150.pdf-2,0.0072500139423345,a FinQA census,
+V/2008/page_180.pdf-1,0.0020913501756734,a FinQA census,
+SLB/2015/page_59.pdf-1,0.0008086554012603,a FinQA census,
+UNP/2016/page_52.pdf-2,0.003903853661257,a FinQA census,
+INTC/2015/page_41.pdf-1,0.0161731080252077,a FinQA census,
+AMT/2003/page_102.pdf-4,0.0046846243935084,a FinQA census,
+PKG/2005/page_74.pdf-3,0.0037923149852211,a FinQA census,
+MRO/2003/page_84.pdf-1,0.0059394344989124,a FinQA census,
+LKQ/2016/page_87.pdf-2,0.002565389548826,a FinQA census,
+GS/2012/page_121.pdf-2,0.0092577101109809,a FinQA census,
+MAR/2004/page_45.pdf-2,0.0026769282248619,a FinQA census,
+AMT/2007/page_127.pdf-2,0.0069153979142267,a FinQA census,
+LMT/2016/page_49.pdf-1,0.0029000055769338,a FinQA census,
+JPM/2015/page_137.pdf-3,0.0063019351960292,a FinQA census,
+K/2006/page_52.pdf-1,0.0029278902459427,a FinQA census,
+GRMN/2008/page_85.pdf-1,0.002565389548826,a FinQA census,
+BDX/2018/page_106.pdf-1,0.0022586581897272,a FinQA census,
+LMT/2014/page_77.pdf-1,0.0089509787518822,a FinQA census,
+JKHY/2019/page_18.pdf-2,0.001254810105404,a FinQA census,
+ANSS/2012/page_93.pdf-2,0.0035692376331492,a FinQA census,
+BLL/2010/page_37.pdf-1,0.006580781886119,a FinQA census,
+LMT/2014/page_77.pdf-4,0.0089509787518822,a FinQA census,
+SNA/2012/page_110.pdf-1,0.0024259662037811,a FinQA census,
+AAPL/2003/page_48.pdf-1,0.0023980815347721,a FinQA census,
+GS/2013/page_149.pdf-2,0.0136077184763816,a FinQA census,
+PPG/2018/page_85.pdf-3,0.0034576989571133,a FinQA census,
+HOLX/2009/page_151.pdf-3,0.005270202442697,a FinQA census,
+ABMD/2012/page_79.pdf-3,0.005242317773688,a FinQA census,
+IP/2009/page_84.pdf-3,0.0076961686464781,a FinQA census,
+MO/2016/page_19.pdf-3,0.0040153923372929,a FinQA census,
+BLK/2012/page_33.pdf-3,0.00655289721711,a FinQA census,
+PPG/2018/page_85.pdf-4,0.0034576989571133,a FinQA census,
+D/2002/page_87.pdf-3,0.0045730857174725,a FinQA census,
+ABMD/2006/page_43.pdf-2,0.0026769282248619,a FinQA census,
+ADI/2010/page_80.pdf-3,0.0038201996542301,a FinQA census,
+UNP/2016/page_52.pdf-3,0.003903853661257,a FinQA census,
+ABMD/2008/page_86.pdf-3,0.0033461602810774,a FinQA census,
+ALXN/2016/page_153.pdf-3,0.0037923149852211,a FinQA census,
+NCLH/2018/page_64.pdf-3,0.006469243210083,a FinQA census,
+BLK/2014/page_120.pdf-3,0.0058000111538676,a FinQA census,
+UNP/2015/page_56.pdf-3,0.003903853661257,a FinQA census,
+PPG/2006/page_42.pdf-3,0.006469243210083,a FinQA census,
+ANSS/2016/page_47.pdf-2,0.0010038480843232,a FinQA census,
+BLK/2014/page_120.pdf-4,0.0058000111538676,a FinQA census,
+ANSS/2012/page_93.pdf-3,0.0035692376331492,a FinQA census,
+UNP/2018/page_74.pdf-3,0.0042384696893647,a FinQA census,
+D/2002/page_87.pdf-4,0.0045730857174725,a FinQA census,
+IP/2009/page_84.pdf-4,0.0076961686464781,a FinQA census,
+UNP/2011/page_33.pdf-3,0.0075846299704422,a FinQA census,
+IP/2006/page_35.pdf-3,0.0194356142992582,a FinQA census,
+UNP/2018/page_74.pdf-4,0.0042384696893647,a FinQA census,
+IP/2006/page_35.pdf-4,0.0194356142992582,a FinQA census,
+BLK/2012/page_33.pdf-4,0.00655289721711,a FinQA census,
+ABMD/2005/page_29.pdf-3,0.0033461602810774,a FinQA census,
+BDX/2018/page_106.pdf-2,0.0022586581897272,a FinQA census,
+BLK/2015/page_124.pdf-3,0.0055769338017957,a FinQA census,
+BKR/2017/page_56.pdf-3,0.0034576989571133,a FinQA census,
+ADI/2019/page_29.pdf-1,0.0015894261335117,a FinQA census,
+ABMD/2005/page_29.pdf-4,0.0033461602810774,a FinQA census,
+ABMD/2012/page_79.pdf-4,0.005242317773688,a FinQA census,
+TFX/2017/page_78.pdf-3,0.0023423121967542,a FinQA census,
+PPG/2006/page_42.pdf-4,0.006469243210083,a FinQA census,
+IP/2009/page_45.pdf-3,0.0076961686464781,a FinQA census,
+UNP/2007/page_25.pdf-3,0.0033461602810774,a FinQA census,
+ALXN/2016/page_153.pdf-4,0.0037923149852211,a FinQA census,
+IP/2006/page_31.pdf-3,0.0194356142992582,a FinQA census,
+HOLX/2009/page_127.pdf-3,0.005270202442697,a FinQA census,
+ANSS/2012/page_93.pdf-4,0.0035692376331492,a FinQA census,
+TFX/2015/page_89.pdf-3,0.0021750041827003,a FinQA census,
+IP/2006/page_30.pdf-3,0.0194356142992582,a FinQA census,
+VRTX/2006/page_111.pdf-3,0.0036807763091852,a FinQA census,
+MO/2016/page_19.pdf-4,0.0040153923372929,a FinQA census,
+ADI/2019/page_29.pdf-3,0.0015894261335117,a FinQA census,
+ABMD/2012/page_41.pdf-3,0.005242317773688,a FinQA census,
+UNP/2015/page_56.pdf-4,0.003903853661257,a FinQA census,
+BLK/2017/page_121.pdf-3,0.003848084323239,a FinQA census,
+MO/2014/page_62.pdf-3,0.0069153979142267,a FinQA census,
+IP/2006/page_75.pdf-3,0.0194356142992582,a FinQA census,
+BLK/2012/page_145.pdf-1,0.00655289721711,a FinQA census,
+PPG/2012/page_29.pdf-3,0.0055769338017957,a FinQA census,
+NCLH/2018/page_64.pdf-4,0.006469243210083,a FinQA census,
+PPG/2008/page_52.pdf-3,0.0045730857174725,a FinQA census,
+UNP/2010/page_21.pdf-3,0.0015615414645028,a FinQA census,
+IP/2009/page_45.pdf-4,0.0076961686464781,a FinQA census,
+UNP/2007/page_25.pdf-4,0.0033461602810774,a FinQA census,
+IP/2006/page_38.pdf-3,0.0194356142992582,a FinQA census,
+ABMD/2007/page_78.pdf-3,0.0043500083654007,a FinQA census,
+IP/2006/page_38.pdf-4,0.0194356142992582,a FinQA census,
+VRTX/2006/page_111.pdf-4,0.0036807763091852,a FinQA census,
+BLK/2015/page_124.pdf-4,0.0055769338017957,a FinQA census,
+UNP/2006/page_15.pdf-3,0.0026769282248619,a FinQA census,
+LKQ/2016/page_87.pdf-3,0.002565389548826,a FinQA census,
+UNP/2011/page_24.pdf-3,0.0075846299704422,a FinQA census,
+ABMD/2006/page_43.pdf-3,0.0026769282248619,a FinQA census,
+UNP/2006/page_15.pdf-4,0.0026769282248619,a FinQA census,
+MO/2014/page_39.pdf-3,0.0069153979142267,a FinQA census,
+PPG/2008/page_52.pdf-4,0.0045730857174725,a FinQA census,
+UNP/2011/page_33.pdf-4,0.0075846299704422,a FinQA census,
+BLK/2017/page_121.pdf-1,0.003848084323239,a FinQA census,
+PPG/2012/page_29.pdf-4,0.0055769338017957,a FinQA census,
+LKQ/2016/page_87.pdf-4,0.002565389548826,a FinQA census,
+CMCSA/2008/page_36.pdf-3,0.0029278902459427,a FinQA census,
+NCLH/2018/page_97.pdf-3,0.006469243210083,a FinQA census,
+UNP/2009/page_42.pdf-3,0.0046288550554904,a FinQA census,
+BKR/2017/page_56.pdf-4,0.0034576989571133,a FinQA census,
+CMCSA/2015/page_112.pdf-3,0.0054096257877419,a FinQA census,
+ABMD/2007/page_78.pdf-4,0.0043500083654007,a FinQA census,
+UNP/2016/page_52.pdf-4,0.003903853661257,a FinQA census,
+BLK/2012/page_145.pdf-3,0.00655289721711,a FinQA census,
+MO/2014/page_62.pdf-4,0.0069153979142267,a FinQA census,
+ABMD/2008/page_86.pdf-4,0.0033461602810774,a FinQA census,
+CMCSA/2015/page_67.pdf-3,0.0054096257877419,a FinQA census,
+IP/2006/page_75.pdf-4,0.0194356142992582,a FinQA census,
+UNP/2010/page_21.pdf-4,0.0015615414645028,a FinQA census,
+MO/2014/page_39.pdf-4,0.0069153979142267,a FinQA census,
+CMCSA/2015/page_112.pdf-4,0.0054096257877419,a FinQA census,
+UNP/2011/page_24.pdf-4,0.0075846299704422,a FinQA census,
+ABMD/2012/page_41.pdf-4,0.005242317773688,a FinQA census,
+UNP/2009/page_42.pdf-4,0.0046288550554904,a FinQA census,
+BDX/2018/page_106.pdf-3,0.0022586581897272,a FinQA census,
+HOLX/2009/page_127.pdf-4,0.005270202442697,a FinQA census,
+IP/2006/page_30.pdf-4,0.0194356142992582,a FinQA census,
+edgar_q001|cik+year+section,0.0002589888066301,b EDGAR pairs,cik+year+section
+edgar_q001|cik+year,0.0007327488187583,b EDGAR pairs,cik+year
+edgar_q001|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q001|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q003|cik+year+section,0.0002400384061449,b EDGAR pairs,cik+year+section
+edgar_q003|cik+year,0.0003979584101877,b EDGAR pairs,cik+year
+edgar_q003|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q003|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q004|cik+year+section,5.053440129368067e-05,b EDGAR pairs,cik+year+section
+edgar_q004|cik+year,0.0007706496197286,b EDGAR pairs,cik+year
+edgar_q004|year+section,0.0577292366778684,b EDGAR pairs,year+section
+edgar_q004|section,0.17483007807565,b EDGAR pairs,section
+edgar_q006|cik+year+section,0.0001705536043661,b EDGAR pairs,cik+year+section
+edgar_q006|cik+year,0.0006190464158475,b EDGAR pairs,cik+year
+edgar_q006|year+section,0.0769575763701139,b EDGAR pairs,year+section
+edgar_q006|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q007|cik+year+section,0.000631680016171,b EDGAR pairs,cik+year+section
+edgar_q007|cik+year,0.0012570432321803,b EDGAR pairs,cik+year
+edgar_q007|year+section,0.1077519771584506,b EDGAR pairs,year+section
+edgar_q007|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q008|cik+year+section,0.0002274048058215,b EDGAR pairs,cik+year+section
+edgar_q008|cik+year,0.0012444096318568,b EDGAR pairs,cik+year
+edgar_q008|year+section,0.0577292366778684,b EDGAR pairs,year+section
+edgar_q008|section,0.17483007807565,b EDGAR pairs,section
+edgar_q009|cik+year+section,0.0003663744093791,b EDGAR pairs,cik+year+section
+edgar_q009|cik+year,0.001263360032342,b EDGAR pairs,cik+year
+edgar_q009|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q009|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q010|cik+year+section,0.0004169088106728,b EDGAR pairs,cik+year+section
+edgar_q010|cik+year,0.0010928064279758,b EDGAR pairs,cik+year
+edgar_q010|year+section,0.0580766606867625,b EDGAR pairs,year+section
+edgar_q010|section,0.17483007807565,b EDGAR pairs,section
+edgar_q011|cik+year+section,0.0001200192030724,b EDGAR pairs,cik+year+section
+edgar_q011|cik+year,0.000827500821184,b EDGAR pairs,cik+year
+edgar_q011|year+section,0.059024180711019,b EDGAR pairs,year+section
+edgar_q011|section,0.17483007807565,b EDGAR pairs,section
+edgar_q012|cik+year+section,0.0004674432119665,b EDGAR pairs,cik+year+section
+edgar_q012|cik+year,0.0013391616342825,b EDGAR pairs,cik+year
+edgar_q012|year+section,0.0814804052858983,b EDGAR pairs,year+section
+edgar_q012|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q013|cik+year+section,0.0003853248098643,b EDGAR pairs,cik+year+section
+edgar_q013|cik+year,0.0014023296358996,b EDGAR pairs,cik+year
+edgar_q013|year+section,0.0769575763701139,b EDGAR pairs,year+section
+edgar_q013|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q014|cik+year+section,0.0001642368042044,b EDGAR pairs,cik+year+section
+edgar_q014|cik+year,0.0003600576092174,b EDGAR pairs,cik+year
+edgar_q014|year+section,0.0981188569118427,b EDGAR pairs,year+section
+edgar_q014|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q015|cik+year+section,0.0004737600121282,b EDGAR pairs,cik+year+section
+edgar_q015|cik+year,0.0011243904287843,b EDGAR pairs,cik+year
+edgar_q015|year+section,0.0981188569118427,b EDGAR pairs,year+section
+edgar_q015|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q018|cik+year+section,0.000347424008894,b EDGAR pairs,cik+year+section
+edgar_q018|cik+year,0.0016739520428531,b EDGAR pairs,cik+year
+edgar_q018|year+section,0.0981188569118427,b EDGAR pairs,year+section
+edgar_q018|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q019|cik+year+section,0.0009601536245799,b EDGAR pairs,cik+year+section
+edgar_q019|cik+year,0.0016297344417212,b EDGAR pairs,cik+year
+edgar_q019|year+section,0.0981188569118427,b EDGAR pairs,year+section
+edgar_q019|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q022|cik+year+section,0.0002589888066301,b EDGAR pairs,cik+year+section
+edgar_q022|cik+year,0.0015855168405892,b EDGAR pairs,cik+year
+edgar_q022|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q022|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q023|cik+year+section,0.0005748288147156,b EDGAR pairs,cik+year+section
+edgar_q023|cik+year,0.0011812416302397,b EDGAR pairs,cik+year
+edgar_q023|year+section,0.092534805568891,b EDGAR pairs,year+section
+edgar_q023|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q026|cik+year+section,0.0002210880056598,b EDGAR pairs,cik+year+section
+edgar_q026|cik+year,0.0005685120145539,b EDGAR pairs,cik+year
+edgar_q026|year+section,0.092534805568891,b EDGAR pairs,year+section
+edgar_q026|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q027|cik+year+section,2.5267200646840336e-05,b EDGAR pairs,cik+year+section
+edgar_q027|cik+year,0.0003221568082472,b EDGAR pairs,cik+year
+edgar_q027|year+section,0.059024180711019,b EDGAR pairs,year+section
+edgar_q027|section,0.17483007807565,b EDGAR pairs,section
+edgar_q028|cik+year+section,0.0004232256108345,b EDGAR pairs,cik+year+section
+edgar_q028|cik+year,0.0009033024231245,b EDGAR pairs,cik+year
+edgar_q028|year+section,0.092534805568891,b EDGAR pairs,year+section
+edgar_q028|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q029|cik+year+section,3.158400080855042e-05,b EDGAR pairs,cik+year+section
+edgar_q029|cik+year,0.0012570432321803,b EDGAR pairs,cik+year
+edgar_q029|year+section,0.0055019329408494,b EDGAR pairs,year+section
+edgar_q029|section,0.0174975364479369,b EDGAR pairs,section
+edgar_q031|cik+year+section,0.0005937792152007,b EDGAR pairs,cik+year+section
+edgar_q031|cik+year,0.0008969856229628,b EDGAR pairs,cik+year
+edgar_q031|year+section,0.0769575763701139,b EDGAR pairs,year+section
+edgar_q031|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q032|cik+year+section,0.0001642368042044,b EDGAR pairs,cik+year+section
+edgar_q032|cik+year,0.0002653056067918,b EDGAR pairs,cik+year
+edgar_q032|year+section,0.0580766606867625,b EDGAR pairs,year+section
+edgar_q032|section,0.17483007807565,b EDGAR pairs,section
+edgar_q034|cik+year+section,0.000303206407762,b EDGAR pairs,cik+year+section
+edgar_q034|cik+year,0.0011117568284609,b EDGAR pairs,cik+year
+edgar_q034|year+section,0.0769575763701139,b EDGAR pairs,year+section
+edgar_q034|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q036|cik+year+section,0.0002842560072769,b EDGAR pairs,cik+year+section
+edgar_q036|cik+year,0.0011559744295929,b EDGAR pairs,cik+year
+edgar_q036|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q036|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q037|cik+year+section,0.0004548096116431,b EDGAR pairs,cik+year+section
+edgar_q037|cik+year,0.0011559744295929,b EDGAR pairs,cik+year
+edgar_q037|year+section,0.092534805568891,b EDGAR pairs,year+section
+edgar_q037|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q038|cik+year+section,0.0006064128155241,b EDGAR pairs,cik+year+section
+edgar_q038|cik+year,0.0012886272329888,b EDGAR pairs,cik+year
+edgar_q038|year+section,0.1077519771584506,b EDGAR pairs,year+section
+edgar_q038|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q039|cik+year+section,0.0001579200040427,b EDGAR pairs,cik+year+section
+edgar_q039|cik+year,0.0012949440331505,b EDGAR pairs,cik+year
+edgar_q039|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q039|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q040|cik+year+section,0.0005306112135836,b EDGAR pairs,cik+year+section
+edgar_q040|cik+year,0.0012696768325037,b EDGAR pairs,cik+year
+edgar_q040|year+section,0.0981188569118427,b EDGAR pairs,year+section
+edgar_q040|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q041|cik+year+section,0.0002589888066301,b EDGAR pairs,cik+year+section
+edgar_q041|cik+year,0.0006695808171412,b EDGAR pairs,cik+year
+edgar_q041|year+section,0.092534805568891,b EDGAR pairs,year+section
+edgar_q041|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q044|cik+year+section,5.053440129368067e-05,b EDGAR pairs,cik+year+section
+edgar_q044|cik+year,0.0005369280137453,b EDGAR pairs,cik+year
+edgar_q044|year+section,0.0580766606867625,b EDGAR pairs,year+section
+edgar_q044|section,0.17483007807565,b EDGAR pairs,section
+edgar_q046|cik+year+section,0.0002084544053364,b EDGAR pairs,cik+year+section
+edgar_q046|cik+year,0.0004737600121282,b EDGAR pairs,cik+year
+edgar_q046|year+section,0.0769575763701139,b EDGAR pairs,year+section
+edgar_q046|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q051|cik+year+section,0.0001389696035576,b EDGAR pairs,cik+year+section
+edgar_q051|cik+year,0.0007643328195669,b EDGAR pairs,cik+year
+edgar_q051|year+section,0.0580766606867625,b EDGAR pairs,year+section
+edgar_q051|section,0.17483007807565,b EDGAR pairs,section
+edgar_q052|cik+year+section,0.0002905728074386,b EDGAR pairs,cik+year+section
+edgar_q052|cik+year,0.001414963236223,b EDGAR pairs,cik+year
+edgar_q052|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q052|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q053|cik+year+section,0.0001895040048513,b EDGAR pairs,cik+year+section
+edgar_q053|cik+year,0.000347424008894,b EDGAR pairs,cik+year
+edgar_q053|year+section,0.092534805568891,b EDGAR pairs,year+section
+edgar_q053|section,0.2984056396391844,b EDGAR pairs,section
+edgar_q054|cik+year+section,7.580160194052102e-05,b EDGAR pairs,cik+year+section
+edgar_q054|cik+year,0.0002526720064684,b EDGAR pairs,cik+year
+edgar_q054|year+section,0.0834512469363519,b EDGAR pairs,year+section
+edgar_q054|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q056|cik+year+section,8.21184021022311e-05,b EDGAR pairs,cik+year+section
+edgar_q056|cik+year,0.0002274048058215,b EDGAR pairs,cik+year
+edgar_q056|year+section,0.0814804052858983,b EDGAR pairs,year+section
+edgar_q056|section,0.2418892285923642,b EDGAR pairs,section
+edgar_q058|cik+year+section,3.158400080855042e-05,b EDGAR pairs,cik+year+section
+edgar_q058|cik+year,0.0012317760315334,b EDGAR pairs,cik+year
+edgar_q058|year+section,0.0055019329408494,b EDGAR pairs,year+section
+edgar_q058|section,0.0174975364479369,b EDGAR pairs,section
+edgar_q059|cik+year+section,0.0003411072087323,b EDGAR pairs,cik+year+section
+edgar_q059|cik+year,0.0009917376253884,b EDGAR pairs,cik+year
+edgar_q059|year+section,0.0847904085706344,b EDGAR pairs,year+section
+edgar_q059|section,0.2673775172448644,b EDGAR pairs,section
+edgar_q060|cik+year+section,0.0002463552063066,b EDGAR pairs,cik+year+section
+edgar_q060|cik+year,0.001414963236223,b EDGAR pairs,cik+year
+edgar_q060|year+section,0.08754453344114,b EDGAR pairs,year+section
+edgar_q060|section,0.2673775172448644,b EDGAR pairs,section
