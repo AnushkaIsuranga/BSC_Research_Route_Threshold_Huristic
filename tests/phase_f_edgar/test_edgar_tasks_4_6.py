@@ -63,6 +63,19 @@ def test_choose_skips_new_object_and_errors_fall_back_to_exact():
         VA.choose({"ranked": [_cand("iterative_strict")]})            # an index strategy without its ef_search
 
 
+def test_choose_skips_ef_search_above_pgvector_range():
+    rep = {"recommendation": {"decision": {"recommended_strategy": "partial"},
+                              "ranked": [_cand("partial", 40, new_object="partial index"), _cand("postfilter", 1500),
+                                         _cand("iterative_relaxed", 40, hint="SET hnsw.max_scan_tuples = 20000;"), _cand("exact")]}}
+    c = VA.choose(rep)
+    assert c["strategy"] == "iterative_relaxed" and c["params"] == {"ef_search": 40, "max_scan_tuples": 20000}
+    assert c["unavailable"] is True and c["unavailable_reason"] == "invalid_parameter"
+    assert [(s["strategy"], s["reason"]) for s in c["skipped"]] == [("partial", "requires_new_object"), ("postfilter", "invalid_parameter")]
+    c = VA.choose({"ranked": [_cand("postfilter", 1001), _cand("exact")]})
+    assert c["strategy"] == "exact" and c["unavailable_reason"] == "invalid_parameter"
+    assert VA.choose({"ranked": [_cand("postfilter", 1000)]})["strategy"] == "postfilter"     # 1000 is in range
+
+
 def test_strategy_settings_shapes():
     cfg = R.RouterConfig.load(CMP.CONFIG)
     route, s = VA.strategy_settings({"strategy": "iterative_strict", "params": {"ef_search": 60, "max_scan_tuples": None}}, cfg)

@@ -224,3 +224,24 @@ The edgar calibration (`PHASE_F_AMENDMENT_11.md` section 3) did not start: the s
 The load came from the Kaspersky `avp` process (a per-process sample showed about 480 % of one core, about 40 % of the 12 logical processors). Three refusals in a row is a stop condition of the Phase F evaluation prompt, so the session stopped. **No timed data was collected and no paid call was made**; the only calibration outputs are `grid_filters.json` (built before any timing) and the three refused checks, kept in `outputs/edgar_calibration_2026-11-01/`.
 
 The scan was stopped by the author. The calibration was then restarted with the same saved grid filters (`grid_filters.json`, unchanged) and a fresh quiet-rule start check (a new count of three attempts). The rule, its measure and its limit were not changed or overridden. Between the stop and the restart, tests for the Task 4-6 code were added and committed (`3d98f66`) so that no code or test work runs during timing.
+
+## 2026-11-01 — Phase F Task 4: VecAdvisor candidate with ef_search outside pgvector's range (decided before any timed data)
+
+The first Task 4 session (quiet check passed at attempt 1, 17.8 %) stopped in the pre-flight plan check, before ground truth and before any timed item: on 2 pairs the executed VecAdvisor strategy was `postfilter` with `ef_search = 1500`, and PostgreSQL rejected it (`1500 is outside the valid range for parameter "hnsw.ef_search" (1 .. 1000)`, pgvector 0.8.3). Only `quiet_checks_1793506395_1.json` was written.
+
+The tagged Amendment 11 section 4 (`phase-f-amendment-11-2026-11-01`) covers two cases, verbatim:
+
+> "if that candidate requires a new database object (partial or partition index), the pair is recorded **`vecadvisor_unavailable`** (reason `requires_new_object`) and VecAdvisor's next-ranked candidate that needs no new object is executed (its own ranking)."
+
+> "If `recommend` errors or returns no usable candidate, the pair is recorded `vecadvisor_unavailable` (reason `error`) and **exact** is executed, the fallback VecAdvisor's own output names ("exact is the recall-safe fallback")."
+
+It also states "Strategies run with VecAdvisor's own parameters, no guard". A candidate whose parameter is outside pgvector's allowed range (`hnsw.ef_search` 1-1000) is not covered by either case.
+
+**Decision (author, 2026-11-01):** such a candidate is treated like one that needs a new database object: it is skipped, and VecAdvisor's next-ranked candidate that can run here is executed with VecAdvisor's own parameters; the pair is recorded `vecadvisor_unavailable`, reason `invalid_parameter`. Why: it is consistent with the new-object rule (the recommendation cannot be executed on this database as given, so VecAdvisor's own ranking decides the substitute), and no VecAdvisor parameter is changed (the value is not clamped to 1000). The full ranking stays in `vecadvisor_decisions.json` (the cached reports; the choices were re-derived from them without a new `recommend` call; each changed pair keeps its previous choice under `superseded_choice`, and every pair lists its skipped candidates under `skipped`). Code: `src/phase_f_edgar/vecadvisor_adapter.py` (`EF_SEARCH_MAX = 1000`), test `test_choose_skips_ef_search_above_pgvector_range`.
+
+Affected pairs (both: rank 1 `partial` needs a new object; rank 2 `postfilter` ef_search 1500 skipped; rank 3 `iterative_relaxed`, ef_search 40, max_scan_tuples 20000, executed):
+
+- `edgar_q059|year+section`
+- `edgar_q060|year+section`
+
+VecAdvisor decisions after the change: 111 top-ranked candidate executed, 47 `requires_new_object`, 2 `invalid_parameter`; executed strategies exact 83, iterative_relaxed 74, postfilter 3. Task 4 is restarted with a fresh quiet check.

@@ -3,7 +3,8 @@
 decide(): per pair, `vecadvisor recommend --table edgar_chunks --vector embedding --query <filter literals> --q-vectors <the pair's
 question vector> --limit 15 --ef-search 40` (read-only, no DDL; run from .venv-vecadvisor). The executed strategy is the
 top-ranked candidate; if it requires a new database object (partial / partition index) the pair is `vecadvisor_unavailable`
-(requires_new_object) and the next-ranked candidate without a new object runs (VecAdvisor's own ranking); if recommend errors
+(requires_new_object) and the next-ranked candidate without a new object runs (VecAdvisor's own ranking); a candidate whose
+ef_search is outside pgvector's range (1 .. 1000) is skipped the same way (invalid_parameter; DEVIATION_LOG.md 2026-11-01); if recommend errors
 or gives no usable candidate, the pair is `vecadvisor_unavailable` (error) and exact runs ("exact is the recall-safe fallback").
 execute(): runs a strategy with VecAdvisor's own parameters, no guard, SQL shapes of retriever.py (iterative = MATERIALIZED CTE).
 """
@@ -22,6 +23,7 @@ from src.phase_e_router import retriever as R
 
 VECADVISOR = PROJECT_ROOT / ".venv-vecadvisor/Scripts/vecadvisor.exe"
 EXEC_STRATEGIES = ("exact", "iterative_relaxed", "iterative_strict", "postfilter")
+EF_SEARCH_MAX = 1000                                     # pgvector 0.8.3 hnsw.ef_search range 1 .. 1000
 FORCED = {"enable_indexscan": "on", "enable_seqscan": "off", "enable_bitmapscan": "off", "enable_sort": "off"}
 
 
@@ -45,18 +47,28 @@ def choose(report: dict | None, error: str | None = None) -> dict:
         return {"strategy": "exact", "params": {}, "unavailable": True, "unavailable_reason": "error", "detail": "no ranked candidates",
                 "recommended": rec}
     top = ranked[0]
-    usable = [c for c in ranked if not (c.get("plan") or {}).get("requires_new_object") and c["strategy"] in EXEC_STRATEGIES]
-    if not usable:
+    skipped, pick = [], None
+    for c in ranked:
+        plan = c.get("plan") or {}
+        if plan.get("requires_new_object"):
+            skipped.append({"strategy": c["strategy"], "reason": "requires_new_object", "detail": plan["requires_new_object"]})
+        elif (plan.get("ef_search") or 0) > EF_SEARCH_MAX:      # deviation log 2026-11-01: outside pgvector's range, same as new object
+            skipped.append({"strategy": c["strategy"], "reason": "invalid_parameter", "detail": f"ef_search {plan['ef_search']}"})
+        elif c["strategy"] in EXEC_STRATEGIES:
+            pick = c
+            break
+    if pick is None:
         return {"strategy": "exact", "params": {}, "unavailable": True, "unavailable_reason": "error",
-                "detail": "no ranked candidate without a new object", "recommended": rec}
-    pick = usable[0]
+                "detail": "no ranked candidate that can run without a new object", "recommended": rec, "skipped": skipped}
     plan = pick.get("plan") or {}
     hint = plan.get("sql_hint") or ""
     m = re.search(r"hnsw\.max_scan_tuples\s*=\s*(\d+)", hint)
     params = {"ef_search": plan.get("ef_search"), "max_scan_tuples": int(m.group(1)) if m else None}
+    reasons = {s["reason"] for s in skipped}
+    reason = None if pick is top else ("invalid_parameter" if "invalid_parameter" in reasons else "requires_new_object")
     out = {"strategy": pick["strategy"], "params": params, "recommended": rec, "top_ranked": top["strategy"],
-           "unavailable": pick is not top, "unavailable_reason": "requires_new_object" if pick is not top else None,
-           "detail": (top.get("plan") or {}).get("requires_new_object") if pick is not top else None}
+           "unavailable": pick is not top, "unavailable_reason": reason,
+           "detail": (top.get("plan") or {}).get("requires_new_object") if pick is not top else None, "skipped": skipped}
     if pick["strategy"] != "exact" and not params["ef_search"]:
         raise ValueError(f"strategy {pick['strategy']} without ef_search: {plan}")
     return out

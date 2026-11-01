@@ -1,0 +1,15 @@
+quiet check: {'attempt': 1, 'cpu_mean': 17.846666666666668, 'blocking_processes': [], 'quiet': True}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\src\phase_f_edgar\compare_edgar.py", line 350, in <module>
+    {"decide": decide, "run": run, "analyze": analyze}[a.cmd](a)
+  File "C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\src\phase_f_edgar\compare_edgar.py", line 198, in run
+    **VA.explain(conn, va[p["pair_id"]], TABLE, p["filters"], K, qv, cfg)})
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\src\phase_f_edgar\vecadvisor_adapter.py", line 130, in explain
+    R._set_local(cur, settings)
+  File "C:\Users\ASUS\Documents\GitHub\BSC_Research_Route_Threshold_Huristic\src\phase_e_router\retriever.py", line 147, in _set_local
+    cur.execute(";".join(f"SET LOCAL {g} = '{v}'" for g, v in settings.items()))
+psycopg2.errors.InvalidParameterValue: 1500 is outside the valid range for parameter "hnsw.ef_search" (1 .. 1000)
+
