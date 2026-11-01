@@ -207,3 +207,20 @@ Task 5 of the Amendment 9 testing prompt (concurrency test, optional) was **not 
 
 - **12 missing entries added** to `outputs/data_checksums.json` for committed 13 Oct outputs that had none (`outputs/embedding_build_2026-10-13/` 2 files, `outputs/phase_d_gemini_scaleup_smoke_2026-10-13/` 5, `outputs/scaleup_checks_2026-10-13/` 2, `outputs/scaleup_confirmation_2026-10-13/` 3), hashed as committed; the two cache/selection hashes equal those recorded in Amendment 7 Step 1. Total entries 285.
 - **Two registered hashes no longer match the files on disk:** `outputs/hallucination_classification_2026-10-23/labelling_sheet.csv` and `labelling_sheet_check.csv`. Cause: line endings only. The files were registered as written by Python's csv module (CRLF row endings, LF inside quoted passages); git stored them with LF and checks them out with CRLF everywhere. Rewriting the committed content with CSV row endings reproduces both registered hashes exactly (99,823 and 100,024 bytes). The content is unchanged; the existing entries were not edited.
+
+## 2026-11-01 — Phase F Task 3: calibration refused three times by the quiet-rule start check, then restarted (no data collected before the restart)
+
+The edgar calibration (`PHASE_F_AMENDMENT_11.md` section 3) did not start: the start check refused it three times in a row, 5 minutes apart, on 2026-11-01 local time (2026-10-31 21:57, 22:03 and 22:09 UTC). The rule applied is the tagged Addendum 2 (`phase-e-amendment-9-addendum-2-2026-10-30`, `PHASE_E_AMENDMENT_9_ADDENDUM_2.md`), verbatim:
+
+> - Measure: Windows performance counter `\Processor(_Total)\% Processor Time`, 6 consecutive samples at a 5 s interval (`Get-Counter -SampleInterval 5 -MaxSamples 6`, about 30 s); each sample is the average over its interval.
+> - The session starts only if no torrent client, Ollama or Jupyter process runs **and** the mean of the 6 samples is **<= 25 %**. The limit, the process list and "otherwise the session does not start" are unchanged.
+
+| attempt | UTC | samples (%) | mean | listed processes |
+|---|---|---|---|---|
+| 1 | 2026-10-31 21:57:10 | 39.74, 47.7, 46.61, 64.18, 71.74, 74.84 | 57.5 % | none |
+| 2 | 2026-10-31 22:03:23 | 60.89, 60.78, 62.25, 58.73, 61.6, 59.89 | 60.7 % | none |
+| 3 | 2026-10-31 22:09:37 | 56.56, 62.08, 58.04, 60.38, 59.81, 62.33 | 59.9 % | none |
+
+The load came from the Kaspersky `avp` process (a per-process sample showed about 480 % of one core, about 40 % of the 12 logical processors). Three refusals in a row is a stop condition of the Phase F evaluation prompt, so the session stopped. **No timed data was collected and no paid call was made**; the only calibration outputs are `grid_filters.json` (built before any timing) and the three refused checks, kept in `outputs/edgar_calibration_2026-11-01/`.
+
+The scan was stopped by the author. The calibration was then restarted with the same saved grid filters (`grid_filters.json`, unchanged) and a fresh quiet-rule start check (a new count of three attempts). The rule, its measure and its limit were not changed or overridden. Between the stop and the restart, tests for the Task 4-6 code were added and committed (`3d98f66`) so that no code or test work runs during timing.
