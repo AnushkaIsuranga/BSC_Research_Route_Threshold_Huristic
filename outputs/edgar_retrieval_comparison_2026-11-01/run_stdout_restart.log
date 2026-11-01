@@ -1,0 +1,17 @@
+quiet check: {'attempt': 1, 'cpu_mean': 16.514999999999997, 'blocking_processes': [], 'quiet': True}
+200/3040 items, 200 new in 4.1 min
+400/3040 items, 400 new in 6.0 min
+600/3040 items, 600 new in 8.6 min
+800/3040 items, 800 new in 11.2 min
+1000/3040 items, 1000 new in 13.8 min
+1200/3040 items, 1200 new in 15.3 min
+1400/3040 items, 1400 new in 19.2 min
+1600/3040 items, 1600 new in 20.9 min
+1800/3040 items, 1800 new in 24.1 min
+2000/3040 items, 2000 new in 25.9 min
+2200/3040 items, 2200 new in 29.2 min
+2400/3040 items, 2400 new in 31.2 min
+2600/3040 items, 2600 new in 35.3 min
+2800/3040 items, 2800 new in 39.3 min
+3000/3040 items, 3000 new in 42.4 min
+done: 3040 new rows in 43.1 min

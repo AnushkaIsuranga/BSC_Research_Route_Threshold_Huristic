@@ -1,0 +1,139 @@
+{
+ "git_commit": "36b85a27fb0f21aa16c1359780ddc56b0b8221f7",
+ "git_dirty_phase_e": false,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "server_settings": {
+  "shared_buffers": "128MB",
+  "work_mem": "4MB",
+  "effective_cache_size": "4GB",
+  "max_parallel_workers_per_gather": "2",
+  "jit": "off",
+  "statement_timeout": "2min",
+  "hnsw.max_scan_tuples": "20000",
+  "hnsw.scan_mem_multiplier": "1",
+  "hnsw.ef_search": "40"
+ },
+ "python": "3.11.9",
+ "platform": "Windows-10-10.0.26220-SP0",
+ "started_utc": "2026-11-01T04:23:00.403712+00:00",
+ "amendment": "docs/preregistration/PHASE_F_AMENDMENT_11.md",
+ "seed": 20261105,
+ "k": 15,
+ "timed_repeats": 5,
+ "modes": [
+  "router",
+  "router_tuned",
+  "router_no_guard",
+  "router_always_count",
+  "fixed_t_0_1",
+  "local_probe",
+  "router_plus_probe",
+  "iterative_tuned",
+  "default_hnsw",
+  "planner_iterative",
+  "retry_exact",
+  "always_exact",
+  "always_iterative",
+  "llm_router",
+  "router_hmT",
+  "vecadvisor",
+  "vbase",
+  "milvus",
+  "qdrant"
+ ],
+ "T_default": 0.3786921696945195,
+ "T_tuned": 0.3786921696945195,
+ "T_hm": 0.07119177617441379,
+ "schedule_sha256": "b5b77b9cb6e14d7cd34ef366e3663a83d9e77156d31bce861e08d07055508ba4",
+ "n_items": 3040,
+ "quiet_check": {
+  "passed": {
+   "rule": "Amendment 9 Addendum 2",
+   "blocking_processes": [],
+   "cpu_samples": [
+    20.55,
+    19.48,
+    12.34,
+    15.1,
+    13.88,
+    17.74
+   ],
+   "cpu_mean": 16.514999999999997,
+   "win32_load_samples_disclosure": [
+    26,
+    34,
+    28,
+    29,
+    31,
+    29
+   ],
+   "quiet": true,
+   "attempt": 1,
+   "utc": "2026-11-01T04:22:19.100156+00:00"
+  },
+  "attempts": [
+   {
+    "rule": "Amendment 9 Addendum 2",
+    "blocking_processes": [],
+    "cpu_samples": [
+     20.55,
+     19.48,
+     12.34,
+     15.1,
+     13.88,
+     17.74
+    ],
+    "cpu_mean": 16.514999999999997,
+    "win32_load_samples_disclosure": [
+     26,
+     34,
+     28,
+     29,
+     31,
+     29
+    ],
+    "quiet": true,
+    "attempt": 1,
+    "utc": "2026-11-01T04:22:19.100156+00:00"
+   }
+  ]
+ },
+ "config": {
+  "_note": "Phase F router config (Amendment 11) for edgar_chunks: same keys as config/router_hm.json; table-specific values only. L2 distance on the plain vector(1024) column (HNSW vector_l2_ops m 16 / ef_construction 64, index edgar_chunks_embedding_idx), k = 15 as the answer pipeline (Amendment 1).",
+  "tables": [
+   "edgar_chunks"
+  ],
+  "id_column": "id",
+  "vector_expr": "embedding",
+  "query_cast": "vector(1024)",
+  "distance_operator": "<->",
+  "metric": "l2",
+  "hnsw_index_suffix": "embedding_idx",
+  "filter_columns": [
+   "cik",
+   "fiscal_year",
+   "section"
+  ],
+  "k": 15,
+  "ef_search": 40,
+  "jit": "off",
+  "statement_timeout_ms": 120000,
+  "iterative_default": {
+   "max_scan_tuples": 20000,
+   "scan_mem_multiplier": 1
+  },
+  "iterative_tuned": {
+   "max_scan_tuples": 100000,
+   "scan_mem_multiplier": 4
+  },
+  "probe": {
+   "m": 100,
+   "ef_search": 100
+  },
+  "fixed_T": 0.1,
+  "latency_limit_ms": 500,
+  "recall_target": 0.9,
+  "policy_file": "config/policy_v3_1_edgar.json"
+ }
+}
