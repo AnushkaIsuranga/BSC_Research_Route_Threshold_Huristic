@@ -17,6 +17,30 @@ QUESTION_EMBEDDINGS = "outputs/edgar_questions_verify_2026-11-01/question_embedd
 QUIET_ATTEMPTS, QUIET_WAIT_S = 3, 300
 
 
+COST_LOG = "outputs/edgar_cost_log_2026-11-01/cost_log.jsonl"
+SESSION_CAP_USD = 6.00
+
+
+def cost_spent(path: str = COST_LOG) -> float:
+    p = PROJECT_ROOT / path
+    if not p.exists():
+        return 0.0
+    return sum(json.loads(ln)["cost_usd"] for ln in p.read_text(encoding="utf-8").splitlines() if ln.strip())
+
+
+def cost_add(step: str, cost_usd: float, detail: dict | None = None, path: str = COST_LOG) -> float:
+    """Append one paid call (or batch) to the session's running cost log; returns the new total. Raises if the cap is passed."""
+    p = PROJECT_ROOT / path
+    p.parent.mkdir(parents=True, exist_ok=True)
+    total = cost_spent(path) + cost_usd
+    with open(p, "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps({"utc": datetime.now(timezone.utc).isoformat(), "step": step, "cost_usd": cost_usd,
+                             "running_total_usd": total, **(detail or {})}) + "\n")
+    if total > SESSION_CAP_USD:
+        raise SystemExit(f"STOP: session spend USD {total:.4f} exceeds the USD {SESSION_CAP_USD} cap")
+    return total
+
+
 def write_json(path: Path, obj) -> None:
     path.write_text(json.dumps(obj, indent=1, default=str), encoding="utf-8", newline="\n")
 
