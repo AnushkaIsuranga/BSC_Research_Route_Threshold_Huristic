@@ -1,0 +1,36 @@
+{
+  "protocol_commit": "037eb184d09d6b3ad0160d94b7138576b38bfab4",
+  "seed": 20260930,
+  "corpus_size": 35862,
+  "query_count": 1147,
+  "selectivity_min": 0.00019519268306285203,
+  "selectivity_max": 0.02966928782555351,
+  "bands": {
+    "B1": {
+      "total": 1121,
+      "eligible": 1071,
+      "selected": 10,
+      "shortage_from_quota": 0
+    },
+    "B2": {
+      "total": 26,
+      "eligible": 26,
+      "selected": 10,
+      "shortage_from_quota": 0
+    },
+    "B3": {
+      "total": 0,
+      "eligible": 0,
+      "selected": 0,
+      "shortage_from_quota": 10
+    },
+    "B4": {
+      "total": 0,
+      "eligible": 0,
+      "selected": 0,
+      "shortage_from_quota": 10
+    }
+  },
+  "selected_count": 20,
+  "primary_overlap": 0
+}
