@@ -1,0 +1,338 @@
+{
+ "S_rows": 8,
+ "S_wrong_source": [
+  "L04",
+  "L33"
+ ],
+ "S_wrong_year": [
+  "L21"
+ ],
+ "other_labels_mentioning_wrong_source_or_year": [
+  [
+   "L13",
+   "N"
+  ]
+ ],
+ "rows": [
+  {
+   "sample_id": "L01",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N. No passages were retrieved; the value is correct (34.5 million) but came from the model's own memory, not the context. Scored wrong only by the scale artefact."
+  },
+  {
+   "sample_id": "L02",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L03",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L04",
+   "label": "S",
+   "mode": "default_hnsw",
+   "wrong_source": true,
+   "wrong_year": false,
+   "author_note": "Agree S. Number copied from another company's passage (wrong source)."
+  },
+  {
+   "sample_id": "L05",
+   "label": "S",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree S."
+  },
+  {
+   "sample_id": "L06",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L07",
+   "label": "S",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree S."
+  },
+  {
+   "sample_id": "L08",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L09",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L10",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L11",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L12",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L13",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": true,
+   "wrong_year": false,
+   "author_note": "Changed S -> N. The only $0 in the passages is another company's unbilled revenue: a coincidental match, not support. Consistent with L32."
+  },
+  {
+   "sample_id": "L14",
+   "label": "N",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  },
+  {
+   "sample_id": "L15",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L16",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  },
+  {
+   "sample_id": "L17",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L18",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N. Zero passages retrieved; the model still gave a number."
+  },
+  {
+   "sample_id": "L19",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. Refusal; the parsed number is $1.2 million quoted inside the refusal, not a year."
+  },
+  {
+   "sample_id": "L20",
+   "label": "S",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree S."
+  },
+  {
+   "sample_id": "L21",
+   "label": "S",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": true,
+   "author_note": "Agree S, but wrong report year: the passage is from the 2019 10-K (\"As of December 31, 2019\"), while the question asks about the 2018 report. Gold ($25.3m) is correct for 2018."
+  },
+  {
+   "sample_id": "L22",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N. Zero passages retrieved; the model still gave a number."
+  },
+  {
+   "sample_id": "L23",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L24",
+   "label": "S",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree S."
+  },
+  {
+   "sample_id": "L25",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L26",
+   "label": "S",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree S."
+  },
+  {
+   "sample_id": "L27",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L28",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L29",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  },
+  {
+   "sample_id": "L30",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N. Zero passages retrieved; the model still gave a number."
+  },
+  {
+   "sample_id": "L31",
+   "label": "X",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L32",
+   "label": "N",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  },
+  {
+   "sample_id": "L33",
+   "label": "S",
+   "mode": "default_hnsw",
+   "wrong_source": true,
+   "wrong_year": false,
+   "author_note": "Agree S. Number copied from another company's passage (wrong source)."
+  },
+  {
+   "sample_id": "L34",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L35",
+   "label": "X",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree X. The answer says the evidence does not contain the figure (refusal)."
+  },
+  {
+   "sample_id": "L36",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N. Same as L01: zero passages, correct value from model memory; scale artefact."
+  },
+  {
+   "sample_id": "L37",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N. Zero passages retrieved; the model still gave a number."
+  },
+  {
+   "sample_id": "L38",
+   "label": "N",
+   "mode": "default_hnsw",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  },
+  {
+   "sample_id": "L39",
+   "label": "N",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  },
+  {
+   "sample_id": "L40",
+   "label": "N",
+   "mode": "router",
+   "wrong_source": false,
+   "wrong_year": false,
+   "author_note": "Agree N."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "all": {
+  "confusion": {
+   "wrong_in_context": {
+    "S": 8,
+    "C": 0,
+    "N": 2,
+    "X": 16
+   },
+   "wrong_not_in_context": {
+    "S": 0,
+    "C": 0,
+    "N": 12,
+    "X": 2
+   }
+  },
+  "n_scn": 22,
+  "n_x": 18,
+  "agree": 20,
+  "agreement": 0.9090909090909091,
+  "N_and_proxy": 12,
+  "N_labels": 14,
+  "proxy_wrong_not_in_context": 12,
+  "share_of_N_flagged_by_proxy": 0.8571428571428571,
+  "share_of_proxy_labelled_N": 1.0
+ },
+ "router": {
+  "confusion": {
+   "wrong_in_context": {
+    "S": 3,
+    "C": 0,
+    "N": 1,
+    "X": 7
+   },
+   "wrong_not_in_context": {
+    "S": 0,
+    "C": 0,
+    "N": 3,
+    "X": 0
+   }
+  },
+  "n_scn": 7,
+  "n_x": 7,
+  "agree": 6,
+  "agreement": 0.8571428571428571,
+  "N_and_proxy": 3,
+  "N_labels": 4,
+  "proxy_wrong_not_in_context": 3,
+  "share_of_N_flagged_by_proxy": 0.75,
+  "share_of_proxy_labelled_N": 1.0
+ },
+ "default_hnsw": {
+  "confusion": {
+   "wrong_in_context": {
+    "S": 5,
+    "C": 0,
+    "N": 1,
+    "X": 9
+   },
+   "wrong_not_in_context": {
+    "S": 0,
+    "C": 0,
+    "N": 9,
+    "X": 2
+   }
+  },
+  "n_scn": 15,
+  "n_x": 11,
+  "agree": 14,
+  "agreement": 0.9333333333333333,
+  "N_and_proxy": 9,
+  "N_labels": 10,
+  "proxy_wrong_not_in_context": 9,
+  "share_of_N_flagged_by_proxy": 0.9,
+  "share_of_proxy_labelled_N": 1.0
+ },
+ "changed_from_draft": [
+  [
+   "L13",
+   "S",
+   "N"
+  ]
+ ]
+}

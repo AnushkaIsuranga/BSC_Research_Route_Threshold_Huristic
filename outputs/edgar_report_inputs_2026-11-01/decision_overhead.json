@@ -1,0 +1,65 @@
+{
+ "traces_hold": [
+  "stats_check_ms",
+  "estimate_ms",
+  "count_ms"
+ ],
+ "by_breadth": {
+  "cik+year+section": {
+   "n_pairs": 40,
+   "pairs_with_count": 0,
+   "median_stats_check_ms": 10.316,
+   "median_estimate_ms": 4.042,
+   "median_count_ms": null,
+   "median_decision_ms": 14.358,
+   "median_route_ms": 6.565,
+   "median_other_ms": 1.14,
+   "median_latency_ms": 22.113,
+   "router_median_latency_ms": 22.113,
+   "always_exact_median_latency_ms": 7.2,
+   "router_minus_always_exact_ms": 14.912
+  },
+  "cik+year": {
+   "n_pairs": 40,
+   "pairs_with_count": 0,
+   "median_stats_check_ms": 8.101,
+   "median_estimate_ms": 4.045,
+   "median_count_ms": null,
+   "median_decision_ms": 12.181,
+   "median_route_ms": 7.126,
+   "median_other_ms": 1.082,
+   "median_latency_ms": 20.384,
+   "router_median_latency_ms": 20.384,
+   "always_exact_median_latency_ms": 8.289,
+   "router_minus_always_exact_ms": 12.095
+  },
+  "year+section": {
+   "n_pairs": 40,
+   "pairs_with_count": 0,
+   "median_stats_check_ms": 8.503,
+   "median_estimate_ms": 3.939,
+   "median_count_ms": null,
+   "median_decision_ms": 12.476,
+   "median_route_ms": 167.538,
+   "median_other_ms": 1.01,
+   "median_latency_ms": 181.548,
+   "router_median_latency_ms": 181.548,
+   "always_exact_median_latency_ms": 162.57,
+   "router_minus_always_exact_ms": 18.978
+  },
+  "section": {
+   "n_pairs": 40,
+   "pairs_with_count": 30,
+   "median_stats_check_ms": 6.357,
+   "median_estimate_ms": 3.785,
+   "median_count_ms": 8.403,
+   "median_decision_ms": 17.983,
+   "median_route_ms": 265.994,
+   "median_other_ms": 1.252,
+   "median_latency_ms": 287.232,
+   "router_median_latency_ms": 287.232,
+   "always_exact_median_latency_ms": 267.249,
+   "router_minus_always_exact_ms": 19.983
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "answer_diff_router_minus_router_hmT": {
+  "est": 0.012499999999999956,
+  "lo": -0.018750000000000044,
+  "hi": 0.05624999999999991
+ },
+ "same_route_pairs": 92,
+ "n_pairs": 160
+}

@@ -1,0 +1,11 @@
+{
+ "n_mode_pairs": 3040,
+ "n_unique_prompts": 355,
+ "unique_prompts_per_pair": {
+  "min": 1,
+  "max": 4,
+  "mean": 2.21875
+ },
+ "n_rows_with_duplicates_dropped": 9,
+ "created_utc": "2026-11-01T05:08:40.458630+00:00"
+}

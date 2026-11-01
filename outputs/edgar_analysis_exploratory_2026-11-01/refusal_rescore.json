@@ -1,0 +1,49 @@
+{
+ "rule": "\\b(?:does|do) not (?:contain|include|provide|mention|specify|state)\\b|\\bno mention of\\b|\\bis not (?:explicitly |directly )?(?:stated|provided|mentioned|available|specified|given|disclosed|contained)\\b",
+ "refusal_answers": 146,
+ "refusal_by_primary_class": {
+  "wrong_in_context": 136,
+  "wrong_not_in_context": 10
+ },
+ "distinct_refusal_prompts": 25,
+ "primary": {
+  "P3": {
+   "b_router_only": 19,
+   "c_default_hnsw_only": 2,
+   "p_exact_mcnemar": 0.00022125244140625,
+   "held": true,
+   "router_correct": 145,
+   "default_hnsw_correct": 128
+  },
+  "P4": {
+   "router_minus_default_hnsw_wrong_not_in_context": -0.06874999999999999,
+   "ci95": [
+    -0.13749999999999998,
+    -0.012499999999999997
+   ],
+   "held": true,
+   "router_rate": 0.01875,
+   "default_hnsw_rate": 0.0875
+  }
+ },
+ "refusal_rule": {
+  "P3": {
+   "b_router_only": 19,
+   "c_default_hnsw_only": 2,
+   "p_exact_mcnemar": 0.00022125244140625,
+   "held": true,
+   "router_correct": 145,
+   "default_hnsw_correct": 128
+  },
+  "P4": {
+   "router_minus_default_hnsw_wrong_not_in_context": -0.056249999999999994,
+   "ci95": [
+    -0.11875,
+    -0.006249999999999999
+   ],
+   "held": true,
+   "router_rate": 0.01875,
+   "default_hnsw_rate": 0.075
+  }
+ }
+}

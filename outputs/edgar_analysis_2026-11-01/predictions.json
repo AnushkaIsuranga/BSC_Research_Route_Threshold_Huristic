@@ -1,0 +1,77 @@
+{
+ "P1": {
+  "router_pairs_recall15_ge_0.90": 160,
+  "n": 160,
+  "share": 1.0,
+  "held": true,
+  "by_breadth": {
+   "cik+year+section": 40,
+   "cik+year": 40,
+   "year+section": 40,
+   "section": 40
+  }
+ },
+ "P2": {
+  "router_minus_always_exact": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "margin": -0.1,
+  "held": true,
+  "by_breadth": {
+   "cik+year+section": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "cik+year": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "year+section": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "section": {
+    "est": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  }
+ },
+ "P3": {
+  "b_router_only": 19,
+  "c_default_hnsw_only": 2,
+  "p_exact_mcnemar": 0.00022125244140625,
+  "held": true,
+  "router_correct_pass1": 145,
+  "default_hnsw_correct_pass1": 128
+ },
+ "P4": {
+  "router_minus_default_hnsw_wrong_not_in_context": -0.06874999999999999,
+  "ci95": [
+   -0.13749999999999998,
+   -0.012499999999999997
+  ],
+  "held": true,
+  "router_rate": 0.01875,
+  "default_hnsw_rate": 0.0875,
+  "note": "descriptive; held = point estimate lower"
+ },
+ "P5": {
+  "year+section": {
+   "router": 181.54845000026398,
+   "always_exact": 162.57034999944153,
+   "router_lower": false
+  },
+  "section": {
+   "router": 287.23209999952815,
+   "always_exact": 267.24934999947436,
+   "router_lower": false
+  },
+  "held": false
+ }
+}

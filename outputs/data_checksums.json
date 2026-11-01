@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-12T08:01:16.710717+00:00",
   "root": "outputs",
-  "n_files": 336,
+  "n_files": 394,
   "files": {
     "outputs/baselines_reference.json": {
       "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
@@ -1397,6 +1397,296 @@
       "sha256": "6582b2b0c7cb89f0c1518371ac78653a74d210a68389b2cf3d340fcaf0c88e01",
       "bytes": 394,
       "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_2026-11-01/answers_by_mode_breadth.csv": {
+      "sha256": "a36be22f74bac5eea5345400d07d49aab6d778b12e36dbba12b1fd73764db1e5",
+      "bytes": 12118,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_2026-11-01/answers_scored.csv": {
+      "sha256": "b0e77cf9de56fb61e3ce75d2876565c9424424f38e5e6f641fe4fe5029b16b6a",
+      "bytes": 589598,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_2026-11-01/label_key.csv": {
+      "sha256": "23cf96b6bcc8fe83bbfbb42a5b0f4c4e7da7ea8eca293df22093779308c8363d",
+      "bytes": 2331,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_2026-11-01/label_sheet.csv": {
+      "sha256": "d27aea656411af97cabcbf51e9fd3155bdb715d12d0f1acfbda8a7b1443f43e2",
+      "bytes": 745616,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_2026-11-01/predictions.json": {
+      "sha256": "ba1c83382b8eec424d9e7512cd1f40249f0f5a7ae2f179382842666e1d2bc799",
+      "bytes": 1363,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_2026-11-01/transfer.json": {
+      "sha256": "922c571c1dc7f9d0b24c2fcb43887fe349d97970604fcc14455e946553bcc14d",
+      "bytes": 180,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/agreement.json": {
+      "sha256": "44fb974339cdaa44fa9c8ff512a1deb8433be32bc026dd1e345fbf32522a1995",
+      "bytes": 1349,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/agreement_rows.csv": {
+      "sha256": "7d4ee01fc396d2113e6ca1f98e2da0395ea4b9e4b6dec869023735a4b9c310a2",
+      "bytes": 1539,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/answers_exploratory.csv": {
+      "sha256": "582fd26e90d7c6e9a9eb0c90c568e9aef8360a056e2d3fb9ed75263bf89259d4",
+      "bytes": 526168,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/label_error_sources.json": {
+      "sha256": "855f2e74ffdf9517dc0a7464c237df46c162aa53e56c1db9fc868e21c2974794",
+      "bytes": 8416,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/refusal_by_mode_breadth.csv": {
+      "sha256": "48d87bc35e34b070ce049acbf14577e8f34985002848d2944ba173dd268c3891",
+      "bytes": 6558,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/refusal_rescore.json": {
+      "sha256": "571483e6e608ac6bd7cb513547bd7fee05a3cf4c88f186a3973a6b4643a17ea9",
+      "bytes": 1239,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/scale_changes.csv": {
+      "sha256": "a343ff51afdb01d628fb6eede7ba20bf11138ea984fc46eaccca65b46dd4ccfd",
+      "bytes": 9446,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/scale_rescore.json": {
+      "sha256": "c5efe3c7edd842780339b07ec25a9d34f3a1e42fcc1f1debc80a03b3d6136351",
+      "bytes": 2602,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_exploratory_2026-11-01/zero_passages.csv": {
+      "sha256": "0ba46b4809851ab96348047c5924cd04f053de2579bbc0ec6cf570503734bc8a",
+      "bytes": 3509,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/main_stdout.log": {
+      "sha256": "dae3579b3608b8fb22a047569e191344e288186016cc4edc4217b50545e423af",
+      "bytes": 154,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_answers_2026-11-01/pass_decision.json": {
+      "sha256": "1a056873681313ba2c898ecae3585d08858252c58f7f4aaaa0bed114795878aa",
+      "bytes": 482,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/pilot.jsonl": {
+      "sha256": "314ea25bf4534ef15e3738a95de358ff6f44d1793b2be818f45bd107329a1471",
+      "bytes": 1969,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/plan.json": {
+      "sha256": "995466921b2d55b3765fc1caf8044ec26d30c4fcb2d9de7c4ed988a0ceee71e9",
+      "bytes": 217,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/prompts.jsonl": {
+      "sha256": "2dc08fa254b9f1b2be7e71b32e4a392d055bc7ef2621a7f8287a4e83c8250982",
+      "bytes": 7991105,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/responses.jsonl": {
+      "sha256": "40d3c1f3d8a7bbff88c4792110b7e04c599b481f4467ff5c082e7291a60b64e6",
+      "bytes": 141725,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/reuse_map.json": {
+      "sha256": "55ea8729e305e56931fafa12da20e57096f8c684de257d06134f39931c9a40bf",
+      "bytes": 249682,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_answers_2026-11-01/run_log.jsonl": {
+      "sha256": "774e1b11601e47e8da9f480520c3d04efaf192ec624128852cd0050c7985338b",
+      "bytes": 755,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_cost_log_2026-11-01/cost_log.jsonl": {
+      "sha256": "f6e7f4ca0f22b3db4dcc2e92f27c011e93e77a86ea1b8c2adc84d59c55b3bdf9",
+      "bytes": 103313,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_report_inputs_2026-11-01/decision_overhead.json": {
+      "sha256": "9269aa3c49b5c2c7dfac18ecc5199ae66bfb8588af8a5f84f9916527a32990f2",
+      "bytes": 1747,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_report_inputs_2026-11-01/host_load.json": {
+      "sha256": "1ddfe1868507e9bc44a06ed48e05171bbfbfce6772e814c944cd7f658b9d3052",
+      "bytes": 32042,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_labels_joined_2026-11-01/label_sheet_joined.csv": {
+      "sha256": "e8f2471bdcd1c192ad6a25d002de1f46d9056e12bc6f83e4418fad4ddde32af1",
+      "bytes": 748107,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_analysis_review_2026-11-01/label_sheet_author.csv": {
+      "sha256": "e0b5861eb657ed5076cd3104357f38d5bc0203dec556629127b119b56ab9518c",
+      "bytes": 748175,
+      "line_endings": "mixed"
+    },
+    "outputs/edgar_calibration_2026-11-01/calibration.json": {
+      "sha256": "1b3d072bda3c0f5f5c8d53e5d8f59b84ab471ae90fd2d9bed1f9f2a12fb60897",
+      "bytes": 3800,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/cell_summary.csv": {
+      "sha256": "0cd858f934728ece510ee68c27191f0321a5b69b614342b827b11b8f815e70c2",
+      "bytes": 2702,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/cells.json": {
+      "sha256": "8afde4684e2224186f199be290ec7f5d1b4487de061d0d99aab78b84356fc7c8",
+      "bytes": 18293,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/grid_filters.json": {
+      "sha256": "de179b392f5c70dba0475498e9cb2336463a7f9e7dc7a32cf76b3b75b955050b",
+      "bytes": 20467,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/ground_truth.json": {
+      "sha256": "9e52bacc99304f74043ebfe30a0b86b192d98e09d93771b3f170f6d5cc167407",
+      "bytes": 42752,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/host_load_1793502842.json": {
+      "sha256": "48f992b26ad72b796b50671ad5585d7f50c6a36f87c77d2782506cf546ec7a30",
+      "bytes": 4261,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/plan_checks.json": {
+      "sha256": "a8f4256d8c40ea6132ffb00e8432e6bf529013a7de6e2d6148e4e65ff0ecf090",
+      "bytes": 588,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/preflight.json": {
+      "sha256": "f4a8166475e5c74185100dbe15ca70aa2608997804e3fbb756b926682463fab6",
+      "bytes": 10325,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/quiet_checks_1793483830_1.json": {
+      "sha256": "1acd3c27b29be3e832398717b87e763eceae83afab6c54516c10f480b5559cc3",
+      "bytes": 321,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/quiet_checks_1793484203_2.json": {
+      "sha256": "cdd452e4866c90526974f05c96d590bffce7d9ade0c8f6a95f14defdaa71e075",
+      "bytes": 309,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/quiet_checks_1793484577_3.json": {
+      "sha256": "d0d9102e0378bfb88d4a328d757070e400f49591d97ced0af30ec61da9652a0e",
+      "bytes": 322,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/quiet_checks_1793502775_1.json": {
+      "sha256": "a8662cd1f3c10d02df4d383c84e66216de88d3becd3a9f72d71ecdb3edb9b72e",
+      "bytes": 309,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/results.jsonl": {
+      "sha256": "7d52a9bf33493f44684637d3bb2a4f104b0ae874474ba62bc454b0d948e18b60",
+      "bytes": 611927,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/route_counts_160.json": {
+      "sha256": "8fd592723ed306673355eb3fc3347f567ccdeb34ee583c751cd4cb01f69fb950",
+      "bytes": 65192,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/run_meta.json": {
+      "sha256": "2c103c185329d3d8e90284a2fafb2e07ccf66321b14718b20c06701d3ceea70b",
+      "bytes": 4003,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_calibration_2026-11-01/run_stdout_restart.log": {
+      "sha256": "ec9b70bf1bc51729fe103e0fbc353d819d773ee362ae51cd1ccba5c077988638",
+      "bytes": 1265,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/decide_stdout.log": {
+      "sha256": "38d591eee6796a9e739f6546b443c29602ea624d1d059ac248a36ff5a8a41029",
+      "bytes": 13740,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/ground_truth.json": {
+      "sha256": "bd48dfe7697800fefdf5f809d52251407efdf4edc77c1612926a62323756824b",
+      "bytes": 26441,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/host_load_1793506980.json": {
+      "sha256": "a5b767ea7ead10974d0c0ce38a5cb0e408220dd2bb07d91125fb626c3ede3111",
+      "bytes": 5350,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/llm_decisions.json": {
+      "sha256": "9c7db36f9701ee30b3fe8e21c20c9ac10576ef2641d588c40e702687e39b09a8",
+      "bytes": 142699,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/per_pair_mode.csv": {
+      "sha256": "080fad8d613c12288f25e7eefc96476ec3d47dc574dfefad753cb003d45d4bef",
+      "bytes": 797730,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/preflight.json": {
+      "sha256": "71d3b191ce2a9a642c18a7ef1e756785bbdeab66852c325b97855eb690353ee3",
+      "bytes": 255981,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/quiet_checks_1793506395_1.json": {
+      "sha256": "a31280c16fda9b90561f65f37d497316788f169181ed734e0fce67c1e6ffaeb2",
+      "bytes": 322,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/quiet_checks_1793506939_1.json": {
+      "sha256": "23283c4e3e5d695cadea735918720f11def6ef988294d1c4cb2d9bc1a42a8469",
+      "bytes": 321,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/results.jsonl": {
+      "sha256": "6949f53c34261897eb911cda41f945a8542faa1413227a07be0d6bea572d994e",
+      "bytes": 7839131,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/run_meta.json": {
+      "sha256": "285d3745e37cf84402626379ab20430f7c4fa9dcdc9e1196169fe447c9c5089e",
+      "bytes": 3172,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/run_stdout.log": {
+      "sha256": "86920a4dc60afa8318ac06da89e54de4c62c767a01a171023e8740fe73f6d580",
+      "bytes": 1241,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/run_stdout_restart.log": {
+      "sha256": "c2130e9e2a9c65eccd7355d6c9f55fe69b5b9ed11cb602d0d15f2d87dad94ac1",
+      "bytes": 709,
+      "line_endings": "CRLF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/summary_by_mode_breadth.csv": {
+      "sha256": "ba774739b4bf698a3d7542e9a4dcec06b2d51cff79a8572bf9f2ed4aae521f91",
+      "bytes": 8795,
+      "line_endings": "LF"
+    },
+    "outputs/edgar_retrieval_comparison_2026-11-01/vecadvisor_decisions.json": {
+      "sha256": "41ddaa923fda38409dc60a8ab73a3dfda4988f8b886ac84ce827c5c1a527abbe",
+      "bytes": 1861769,
+      "line_endings": "LF"
     }
   },
   "additions": [
@@ -1832,6 +2122,70 @@
         "outputs/edgar_eval_v31_checks_2026-11-01/finqa_v31_routes.csv",
         "outputs/edgar_eval_v31_checks_2026-11-01/hm_equivalence.csv",
         "outputs/edgar_eval_v31_checks_2026-11-01/summary.json"
+      ]
+    },
+    {
+      "label": "phase-f-final-results-edgar-2026-11-01",
+      "added_utc": "2026-11-01T09:31:30.312028+00:00",
+      "paths": [
+        "outputs/edgar_analysis_2026-11-01/answers_by_mode_breadth.csv",
+        "outputs/edgar_analysis_2026-11-01/answers_scored.csv",
+        "outputs/edgar_analysis_2026-11-01/label_key.csv",
+        "outputs/edgar_analysis_2026-11-01/label_sheet.csv",
+        "outputs/edgar_analysis_2026-11-01/predictions.json",
+        "outputs/edgar_analysis_2026-11-01/transfer.json",
+        "outputs/edgar_analysis_exploratory_2026-11-01/agreement.json",
+        "outputs/edgar_analysis_exploratory_2026-11-01/agreement_rows.csv",
+        "outputs/edgar_analysis_exploratory_2026-11-01/answers_exploratory.csv",
+        "outputs/edgar_analysis_exploratory_2026-11-01/label_error_sources.json",
+        "outputs/edgar_analysis_exploratory_2026-11-01/refusal_by_mode_breadth.csv",
+        "outputs/edgar_analysis_exploratory_2026-11-01/refusal_rescore.json",
+        "outputs/edgar_analysis_exploratory_2026-11-01/scale_changes.csv",
+        "outputs/edgar_analysis_exploratory_2026-11-01/scale_rescore.json",
+        "outputs/edgar_analysis_exploratory_2026-11-01/zero_passages.csv",
+        "outputs/edgar_analysis_labels_joined_2026-11-01/label_sheet_joined.csv",
+        "outputs/edgar_analysis_review_2026-11-01/label_sheet_author.csv",
+        "outputs/edgar_answers_2026-11-01/main_stdout.log",
+        "outputs/edgar_answers_2026-11-01/pass_decision.json",
+        "outputs/edgar_answers_2026-11-01/pilot.jsonl",
+        "outputs/edgar_answers_2026-11-01/plan.json",
+        "outputs/edgar_answers_2026-11-01/prompts.jsonl",
+        "outputs/edgar_answers_2026-11-01/responses.jsonl",
+        "outputs/edgar_answers_2026-11-01/reuse_map.json",
+        "outputs/edgar_answers_2026-11-01/run_log.jsonl",
+        "outputs/edgar_calibration_2026-11-01/calibration.json",
+        "outputs/edgar_calibration_2026-11-01/cell_summary.csv",
+        "outputs/edgar_calibration_2026-11-01/cells.json",
+        "outputs/edgar_calibration_2026-11-01/grid_filters.json",
+        "outputs/edgar_calibration_2026-11-01/ground_truth.json",
+        "outputs/edgar_calibration_2026-11-01/host_load_1793502842.json",
+        "outputs/edgar_calibration_2026-11-01/plan_checks.json",
+        "outputs/edgar_calibration_2026-11-01/preflight.json",
+        "outputs/edgar_calibration_2026-11-01/quiet_checks_1793483830_1.json",
+        "outputs/edgar_calibration_2026-11-01/quiet_checks_1793484203_2.json",
+        "outputs/edgar_calibration_2026-11-01/quiet_checks_1793484577_3.json",
+        "outputs/edgar_calibration_2026-11-01/quiet_checks_1793502775_1.json",
+        "outputs/edgar_calibration_2026-11-01/results.jsonl",
+        "outputs/edgar_calibration_2026-11-01/route_counts_160.json",
+        "outputs/edgar_calibration_2026-11-01/run_meta.json",
+        "outputs/edgar_calibration_2026-11-01/run_stdout_restart.log",
+        "outputs/edgar_cost_log_2026-11-01/cost_log.jsonl",
+        "outputs/edgar_report_inputs_2026-11-01/decision_overhead.json",
+        "outputs/edgar_report_inputs_2026-11-01/host_load.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/decide_stdout.log",
+        "outputs/edgar_retrieval_comparison_2026-11-01/ground_truth.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/host_load_1793506980.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/llm_decisions.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/per_pair_mode.csv",
+        "outputs/edgar_retrieval_comparison_2026-11-01/preflight.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/quiet_checks_1793506395_1.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/quiet_checks_1793506939_1.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/results.jsonl",
+        "outputs/edgar_retrieval_comparison_2026-11-01/run_meta.json",
+        "outputs/edgar_retrieval_comparison_2026-11-01/run_stdout.log",
+        "outputs/edgar_retrieval_comparison_2026-11-01/run_stdout_restart.log",
+        "outputs/edgar_retrieval_comparison_2026-11-01/summary_by_mode_breadth.csv",
+        "outputs/edgar_retrieval_comparison_2026-11-01/vecadvisor_decisions.json"
       ]
     }
   ]

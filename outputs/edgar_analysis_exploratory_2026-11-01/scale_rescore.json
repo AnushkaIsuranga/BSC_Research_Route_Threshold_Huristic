@@ -1,0 +1,144 @@
+{
+ "changed_answers": 74,
+ "to_correct": 21,
+ "to_wrong": 53,
+ "changes_by_mode": {
+  "always_exact": 4,
+  "fixed_t_0_1": 4,
+  "llm_router": 4,
+  "local_probe": 4,
+  "milvus": 4,
+  "planner_iterative": 4,
+  "qdrant": 4,
+  "retry_exact": 4,
+  "router": 4,
+  "router_always_count": 4,
+  "router_hmT": 4,
+  "router_no_guard": 4,
+  "router_plus_probe": 4,
+  "router_tuned": 4,
+  "vbase": 4,
+  "vecadvisor": 4,
+  "always_iterative": 3,
+  "iterative_tuned": 3,
+  "default_hnsw": 4
+ },
+ "distinct_answer_gold": [
+  [
+   "$13,060 thousand",
+   "$13,060",
+   "correct",
+   "wrong_in_context"
+  ],
+  [
+   "$42.9 million",
+   "$42,915 thousand",
+   "wrong_in_context",
+   "correct"
+  ],
+  [
+   "34,500,000",
+   "34.5 million",
+   "wrong_not_in_context",
+   "correct"
+  ]
+ ],
+ "accuracy_by_mode": {
+  "router": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "router_tuned": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "router_no_guard": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "router_always_count": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "fixed_t_0_1": {
+   "primary": 0.9,
+   "scale_aware": 0.8875
+  },
+  "local_probe": {
+   "primary": 0.89375,
+   "scale_aware": 0.88125
+  },
+  "router_plus_probe": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "iterative_tuned": {
+   "primary": 0.8875,
+   "scale_aware": 0.88125
+  },
+  "default_hnsw": {
+   "primary": 0.8,
+   "scale_aware": 0.8125
+  },
+  "planner_iterative": {
+   "primary": 0.89375,
+   "scale_aware": 0.88125
+  },
+  "retry_exact": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "always_exact": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "always_iterative": {
+   "primary": 0.8875,
+   "scale_aware": 0.88125
+  },
+  "llm_router": {
+   "primary": 0.90625,
+   "scale_aware": 0.89375
+  },
+  "router_hmT": {
+   "primary": 0.89375,
+   "scale_aware": 0.88125
+  },
+  "vecadvisor": {
+   "primary": 0.89375,
+   "scale_aware": 0.88125
+  },
+  "vbase": {
+   "primary": 0.9,
+   "scale_aware": 0.8875
+  },
+  "milvus": {
+   "primary": 0.89375,
+   "scale_aware": 0.88125
+  },
+  "qdrant": {
+   "primary": 0.89375,
+   "scale_aware": 0.88125
+  }
+ },
+ "scale_aware": {
+  "P3": {
+   "b_router_only": 17,
+   "c_default_hnsw_only": 4,
+   "p_exact_mcnemar": 0.007197380065917969,
+   "held": true,
+   "router_correct": 143,
+   "default_hnsw_correct": 130
+  },
+  "P4": {
+   "router_minus_default_hnsw_wrong_not_in_context": -0.056249999999999994,
+   "ci95": [
+    -0.11250000000000002,
+    -0.00625
+   ],
+   "held": true,
+   "router_rate": 0.01875,
+   "default_hnsw_rate": 0.075
+  }
+ }
+}

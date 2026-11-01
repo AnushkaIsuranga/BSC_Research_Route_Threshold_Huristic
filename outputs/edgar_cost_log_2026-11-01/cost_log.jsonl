@@ -1,0 +1,520 @@
+{"utc": "2026-11-01T03:49:26.008945+00:00", "step": "llm_router decision", "cost_usd": 0.00031800000000000003, "running_total_usd": 0.00031800000000000003, "pair_id": "edgar_q001|cik+year+section"}
+{"utc": "2026-11-01T03:49:27.981001+00:00", "step": "llm_router decision", "cost_usd": 0.000306, "running_total_usd": 0.000624, "pair_id": "edgar_q001|cik+year"}
+{"utc": "2026-11-01T03:49:29.656044+00:00", "step": "llm_router decision", "cost_usd": 0.000261, "running_total_usd": 0.0008849999999999999, "pair_id": "edgar_q001|year+section"}
+{"utc": "2026-11-01T03:49:31.497381+00:00", "step": "llm_router decision", "cost_usd": 0.00025350000000000004, "running_total_usd": 0.0011385, "pair_id": "edgar_q001|section"}
+{"utc": "2026-11-01T03:49:34.742926+00:00", "step": "llm_router decision", "cost_usd": 0.000297, "running_total_usd": 0.0014355, "pair_id": "edgar_q003|cik+year+section"}
+{"utc": "2026-11-01T03:49:36.514867+00:00", "step": "llm_router decision", "cost_usd": 0.00026625, "running_total_usd": 0.00170175, "pair_id": "edgar_q003|cik+year"}
+{"utc": "2026-11-01T03:49:38.358143+00:00", "step": "llm_router decision", "cost_usd": 0.00028875, "running_total_usd": 0.0019905, "pair_id": "edgar_q003|year+section"}
+{"utc": "2026-11-01T03:49:39.582170+00:00", "step": "llm_router decision", "cost_usd": 0.00025875, "running_total_usd": 0.00224925, "pair_id": "edgar_q003|section"}
+{"utc": "2026-11-01T03:49:41.640203+00:00", "step": "llm_router decision", "cost_usd": 0.00030900000000000003, "running_total_usd": 0.0025582499999999998, "pair_id": "edgar_q004|cik+year+section"}
+{"utc": "2026-11-01T03:49:43.190401+00:00", "step": "llm_router decision", "cost_usd": 0.00030075, "running_total_usd": 0.0028589999999999996, "pair_id": "edgar_q004|cik+year"}
+{"utc": "2026-11-01T03:49:45.934916+00:00", "step": "llm_router decision", "cost_usd": 0.00028125000000000003, "running_total_usd": 0.00314025, "pair_id": "edgar_q004|year+section"}
+{"utc": "2026-11-01T03:49:47.475681+00:00", "step": "llm_router decision", "cost_usd": 0.00025125, "running_total_usd": 0.0033915, "pair_id": "edgar_q004|section"}
+{"utc": "2026-11-01T03:49:50.031701+00:00", "step": "llm_router decision", "cost_usd": 0.0002985, "running_total_usd": 0.00369, "pair_id": "edgar_q006|cik+year+section"}
+{"utc": "2026-11-01T03:49:51.362703+00:00", "step": "llm_router decision", "cost_usd": 0.000264, "running_total_usd": 0.003954, "pair_id": "edgar_q006|cik+year"}
+{"utc": "2026-11-01T03:49:53.717805+00:00", "step": "llm_router decision", "cost_usd": 0.00027075, "running_total_usd": 0.00422475, "pair_id": "edgar_q006|year+section"}
+{"utc": "2026-11-01T03:49:55.564788+00:00", "step": "llm_router decision", "cost_usd": 0.00026325000000000003, "running_total_usd": 0.004488000000000001, "pair_id": "edgar_q006|section"}
+{"utc": "2026-11-01T03:50:02.629326+00:00", "step": "llm_router decision", "cost_usd": 0.0002925, "running_total_usd": 0.004780500000000001, "pair_id": "edgar_q007|cik+year+section"}
+{"utc": "2026-11-01T03:50:04.332017+00:00", "step": "llm_router decision", "cost_usd": 0.00029549999999999997, "running_total_usd": 0.005076000000000001, "pair_id": "edgar_q007|cik+year"}
+{"utc": "2026-11-01T03:50:06.203677+00:00", "step": "llm_router decision", "cost_usd": 0.00027, "running_total_usd": 0.005346000000000001, "pair_id": "edgar_q007|year+section"}
+{"utc": "2026-11-01T03:50:08.542252+00:00", "step": "llm_router decision", "cost_usd": 0.0002475, "running_total_usd": 0.005593500000000001, "pair_id": "edgar_q007|section"}
+{"utc": "2026-11-01T03:50:11.228180+00:00", "step": "llm_router decision", "cost_usd": 0.00027225000000000003, "running_total_usd": 0.005865750000000001, "pair_id": "edgar_q008|cik+year+section"}
+{"utc": "2026-11-01T03:50:14.922337+00:00", "step": "llm_router decision", "cost_usd": 0.0005565, "running_total_usd": 0.006422250000000001, "pair_id": "edgar_q008|cik+year"}
+{"utc": "2026-11-01T03:50:16.660208+00:00", "step": "llm_router decision", "cost_usd": 0.00026325000000000003, "running_total_usd": 0.0066855000000000005, "pair_id": "edgar_q008|year+section"}
+{"utc": "2026-11-01T03:50:18.378272+00:00", "step": "llm_router decision", "cost_usd": 0.00023700000000000001, "running_total_usd": 0.006922500000000001, "pair_id": "edgar_q008|section"}
+{"utc": "2026-11-01T03:50:20.035018+00:00", "step": "llm_router decision", "cost_usd": 0.0002775, "running_total_usd": 0.007200000000000001, "pair_id": "edgar_q009|cik+year+section"}
+{"utc": "2026-11-01T03:50:21.845802+00:00", "step": "llm_router decision", "cost_usd": 0.0002505, "running_total_usd": 0.0074505000000000005, "pair_id": "edgar_q009|cik+year"}
+{"utc": "2026-11-01T03:50:23.622641+00:00", "step": "llm_router decision", "cost_usd": 0.00026475, "running_total_usd": 0.007715250000000001, "pair_id": "edgar_q009|year+section"}
+{"utc": "2026-11-01T03:50:25.155107+00:00", "step": "llm_router decision", "cost_usd": 0.00024224999999999998, "running_total_usd": 0.007957500000000001, "pair_id": "edgar_q009|section"}
+{"utc": "2026-11-01T03:50:27.100031+00:00", "step": "llm_router decision", "cost_usd": 0.0002835, "running_total_usd": 0.008241000000000002, "pair_id": "edgar_q010|cik+year+section"}
+{"utc": "2026-11-01T03:50:28.533778+00:00", "step": "llm_router decision", "cost_usd": 0.00026775, "running_total_usd": 0.008508750000000002, "pair_id": "edgar_q010|cik+year"}
+{"utc": "2026-11-01T03:50:29.865085+00:00", "step": "llm_router decision", "cost_usd": 0.000276, "running_total_usd": 0.008784750000000003, "pair_id": "edgar_q010|year+section"}
+{"utc": "2026-11-01T03:50:31.521261+00:00", "step": "llm_router decision", "cost_usd": 0.000231, "running_total_usd": 0.009015750000000003, "pair_id": "edgar_q010|section"}
+{"utc": "2026-11-01T03:50:54.497396+00:00", "step": "llm_router decision", "cost_usd": 0.0003075, "running_total_usd": 0.009323250000000003, "pair_id": "edgar_q011|cik+year+section"}
+{"utc": "2026-11-01T03:50:56.490253+00:00", "step": "llm_router decision", "cost_usd": 0.00032925, "running_total_usd": 0.009652500000000003, "pair_id": "edgar_q011|cik+year"}
+{"utc": "2026-11-01T03:50:58.025322+00:00", "step": "llm_router decision", "cost_usd": 0.00027299999999999997, "running_total_usd": 0.009925500000000004, "pair_id": "edgar_q011|year+section"}
+{"utc": "2026-11-01T03:50:59.458204+00:00", "step": "llm_router decision", "cost_usd": 0.00026175, "running_total_usd": 0.010187250000000004, "pair_id": "edgar_q011|section"}
+{"utc": "2026-11-01T03:51:01.715135+00:00", "step": "llm_router decision", "cost_usd": 0.0002925, "running_total_usd": 0.010479750000000003, "pair_id": "edgar_q012|cik+year+section"}
+{"utc": "2026-11-01T03:51:03.455950+00:00", "step": "llm_router decision", "cost_usd": 0.0002805, "running_total_usd": 0.010760250000000002, "pair_id": "edgar_q012|cik+year"}
+{"utc": "2026-11-01T03:51:05.175069+00:00", "step": "llm_router decision", "cost_usd": 0.0002655, "running_total_usd": 0.011025750000000003, "pair_id": "edgar_q012|year+section"}
+{"utc": "2026-11-01T03:51:07.756288+00:00", "step": "llm_router decision", "cost_usd": 0.00023925, "running_total_usd": 0.011265000000000002, "pair_id": "edgar_q012|section"}
+{"utc": "2026-11-01T03:51:09.396506+00:00", "step": "llm_router decision", "cost_usd": 0.000276, "running_total_usd": 0.011541000000000003, "pair_id": "edgar_q013|cik+year+section"}
+{"utc": "2026-11-01T03:51:10.824702+00:00", "step": "llm_router decision", "cost_usd": 0.00026399999999999997, "running_total_usd": 0.011805000000000003, "pair_id": "edgar_q013|cik+year"}
+{"utc": "2026-11-01T03:51:12.556260+00:00", "step": "llm_router decision", "cost_usd": 0.000252, "running_total_usd": 0.012057000000000003, "pair_id": "edgar_q013|year+section"}
+{"utc": "2026-11-01T03:51:13.999692+00:00", "step": "llm_router decision", "cost_usd": 0.00026325000000000003, "running_total_usd": 0.012320250000000003, "pair_id": "edgar_q013|section"}
+{"utc": "2026-11-01T03:51:15.744915+00:00", "step": "llm_router decision", "cost_usd": 0.00027675, "running_total_usd": 0.012597000000000002, "pair_id": "edgar_q014|cik+year+section"}
+{"utc": "2026-11-01T03:51:17.070454+00:00", "step": "llm_router decision", "cost_usd": 0.00024225, "running_total_usd": 0.012839250000000002, "pair_id": "edgar_q014|cik+year"}
+{"utc": "2026-11-01T03:51:19.019914+00:00", "step": "llm_router decision", "cost_usd": 0.00025275, "running_total_usd": 0.013092000000000001, "pair_id": "edgar_q014|year+section"}
+{"utc": "2026-11-01T03:51:20.347288+00:00", "step": "llm_router decision", "cost_usd": 0.00024150000000000002, "running_total_usd": 0.013333500000000002, "pair_id": "edgar_q014|section"}
+{"utc": "2026-11-01T03:51:23.420093+00:00", "step": "llm_router decision", "cost_usd": 0.00027075, "running_total_usd": 0.013604250000000002, "pair_id": "edgar_q015|cik+year+section"}
+{"utc": "2026-11-01T03:51:25.059675+00:00", "step": "llm_router decision", "cost_usd": 0.0002775, "running_total_usd": 0.013881750000000002, "pair_id": "edgar_q015|cik+year"}
+{"utc": "2026-11-01T03:51:26.574631+00:00", "step": "llm_router decision", "cost_usd": 0.000273, "running_total_usd": 0.014154750000000002, "pair_id": "edgar_q015|year+section"}
+{"utc": "2026-11-01T03:51:49.619438+00:00", "step": "llm_router decision", "cost_usd": 0.00027299999999999997, "running_total_usd": 0.014427750000000003, "pair_id": "edgar_q015|section"}
+{"utc": "2026-11-01T03:51:51.489935+00:00", "step": "llm_router decision", "cost_usd": 0.00027825, "running_total_usd": 0.014706000000000004, "pair_id": "edgar_q018|cik+year+section"}
+{"utc": "2026-11-01T03:51:53.115913+00:00", "step": "llm_router decision", "cost_usd": 0.0002625, "running_total_usd": 0.014968500000000004, "pair_id": "edgar_q018|cik+year"}
+{"utc": "2026-11-01T03:51:54.961123+00:00", "step": "llm_router decision", "cost_usd": 0.00026924999999999996, "running_total_usd": 0.015237750000000005, "pair_id": "edgar_q018|year+section"}
+{"utc": "2026-11-01T03:51:56.703564+00:00", "step": "llm_router decision", "cost_usd": 0.00024675, "running_total_usd": 0.015484500000000005, "pair_id": "edgar_q018|section"}
+{"utc": "2026-11-01T03:51:57.996625+00:00", "step": "llm_router decision", "cost_usd": 0.00027975000000000005, "running_total_usd": 0.015764250000000004, "pair_id": "edgar_q019|cik+year+section"}
+{"utc": "2026-11-01T03:51:59.771824+00:00", "step": "llm_router decision", "cost_usd": 0.00026399999999999997, "running_total_usd": 0.016028250000000004, "pair_id": "edgar_q019|cik+year"}
+{"utc": "2026-11-01T03:52:01.309134+00:00", "step": "llm_router decision", "cost_usd": 0.00024975, "running_total_usd": 0.016278000000000004, "pair_id": "edgar_q019|year+section"}
+{"utc": "2026-11-01T03:52:02.844558+00:00", "step": "llm_router decision", "cost_usd": 0.000261, "running_total_usd": 0.016539000000000005, "pair_id": "edgar_q019|section"}
+{"utc": "2026-11-01T03:52:05.496971+00:00", "step": "llm_router decision", "cost_usd": 0.00025725, "running_total_usd": 0.016796250000000006, "pair_id": "edgar_q022|cik+year+section"}
+{"utc": "2026-11-01T03:52:07.455484+00:00", "step": "llm_router decision", "cost_usd": 0.00027525, "running_total_usd": 0.017071500000000007, "pair_id": "edgar_q022|cik+year"}
+{"utc": "2026-11-01T03:52:08.886174+00:00", "step": "llm_router decision", "cost_usd": 0.00023325, "running_total_usd": 0.017304750000000008, "pair_id": "edgar_q022|year+section"}
+{"utc": "2026-11-01T03:52:10.607523+00:00", "step": "llm_router decision", "cost_usd": 0.00026325000000000003, "running_total_usd": 0.017568000000000007, "pair_id": "edgar_q022|section"}
+{"utc": "2026-11-01T03:52:12.574005+00:00", "step": "llm_router decision", "cost_usd": 0.00027375, "running_total_usd": 0.017841750000000007, "pair_id": "edgar_q023|cik+year+section"}
+{"utc": "2026-11-01T03:52:13.904483+00:00", "step": "llm_router decision", "cost_usd": 0.0002655, "running_total_usd": 0.018107250000000005, "pair_id": "edgar_q023|cik+year"}
+{"utc": "2026-11-01T03:52:15.645547+00:00", "step": "llm_router decision", "cost_usd": 0.000255, "running_total_usd": 0.018362250000000004, "pair_id": "edgar_q023|year+section"}
+{"utc": "2026-11-01T03:52:16.975921+00:00", "step": "llm_router decision", "cost_usd": 0.00026250000000000004, "running_total_usd": 0.018624750000000002, "pair_id": "edgar_q023|section"}
+{"utc": "2026-11-01T03:52:18.717787+00:00", "step": "llm_router decision", "cost_usd": 0.00025575, "running_total_usd": 0.0188805, "pair_id": "edgar_q026|cik+year+section"}
+{"utc": "2026-11-01T03:52:20.150086+00:00", "step": "llm_router decision", "cost_usd": 0.00028125000000000003, "running_total_usd": 0.01916175, "pair_id": "edgar_q026|cik+year"}
+{"utc": "2026-11-01T03:52:22.714314+00:00", "step": "llm_router decision", "cost_usd": 0.0002805, "running_total_usd": 0.01944225, "pair_id": "edgar_q026|year+section"}
+{"utc": "2026-11-01T03:52:23.631636+00:00", "step": "llm_router decision", "cost_usd": 0.000258, "running_total_usd": 0.019700250000000002, "pair_id": "edgar_q026|section"}
+{"utc": "2026-11-01T03:52:24.829033+00:00", "step": "llm_router decision", "cost_usd": 0.00025125, "running_total_usd": 0.019951500000000004, "pair_id": "edgar_q027|cik+year+section"}
+{"utc": "2026-11-01T03:52:26.703616+00:00", "step": "llm_router decision", "cost_usd": 0.00026925, "running_total_usd": 0.020220750000000003, "pair_id": "edgar_q027|cik+year"}
+{"utc": "2026-11-01T03:52:28.648367+00:00", "step": "llm_router decision", "cost_usd": 0.00025049999999999996, "running_total_usd": 0.020471250000000003, "pair_id": "edgar_q027|year+section"}
+{"utc": "2026-11-01T03:52:30.496704+00:00", "step": "llm_router decision", "cost_usd": 0.000243, "running_total_usd": 0.020714250000000003, "pair_id": "edgar_q027|section"}
+{"utc": "2026-11-01T03:52:32.131921+00:00", "step": "llm_router decision", "cost_usd": 0.00030524999999999997, "running_total_usd": 0.021019500000000003, "pair_id": "edgar_q028|cik+year+section"}
+{"utc": "2026-11-01T03:52:33.872215+00:00", "step": "llm_router decision", "cost_usd": 0.00025575, "running_total_usd": 0.021275250000000002, "pair_id": "edgar_q028|cik+year"}
+{"utc": "2026-11-01T03:52:37.045464+00:00", "step": "llm_router decision", "cost_usd": 0.00024, "running_total_usd": 0.021515250000000003, "pair_id": "edgar_q028|year+section"}
+{"utc": "2026-11-01T03:52:38.586110+00:00", "step": "llm_router decision", "cost_usd": 0.0002475, "running_total_usd": 0.021762750000000004, "pair_id": "edgar_q028|section"}
+{"utc": "2026-11-01T03:52:46.875832+00:00", "step": "llm_router decision", "cost_usd": 0.00028275, "running_total_usd": 0.022045500000000003, "pair_id": "edgar_q029|cik+year+section"}
+{"utc": "2026-11-01T03:52:48.514831+00:00", "step": "llm_router decision", "cost_usd": 0.0002925, "running_total_usd": 0.022338000000000004, "pair_id": "edgar_q029|cik+year"}
+{"utc": "2026-11-01T03:52:49.847641+00:00", "step": "llm_router decision", "cost_usd": 0.0002625, "running_total_usd": 0.022600500000000003, "pair_id": "edgar_q029|year+section"}
+{"utc": "2026-11-01T03:52:51.483784+00:00", "step": "llm_router decision", "cost_usd": 0.00026625, "running_total_usd": 0.02286675, "pair_id": "edgar_q029|section"}
+{"utc": "2026-11-01T03:53:18.564790+00:00", "step": "llm_router decision", "cost_usd": 0.00030225, "running_total_usd": 0.023169000000000002, "pair_id": "edgar_q031|cik+year+section"}
+{"utc": "2026-11-01T03:53:20.258798+00:00", "step": "llm_router decision", "cost_usd": 0.0002715, "running_total_usd": 0.023440500000000003, "pair_id": "edgar_q031|cik+year"}
+{"utc": "2026-11-01T03:53:22.102309+00:00", "step": "llm_router decision", "cost_usd": 0.00025575, "running_total_usd": 0.023696250000000002, "pair_id": "edgar_q031|year+section"}
+{"utc": "2026-11-01T03:53:27.444185+00:00", "step": "llm_router decision", "cost_usd": 0.00025575, "running_total_usd": 0.023952, "pair_id": "edgar_q031|section"}
+{"utc": "2026-11-01T03:53:29.169007+00:00", "step": "llm_router decision", "cost_usd": 0.00026849999999999997, "running_total_usd": 0.024220500000000002, "pair_id": "edgar_q032|cik+year+section"}
+{"utc": "2026-11-01T03:53:31.629979+00:00", "step": "llm_router decision", "cost_usd": 0.00026399999999999997, "running_total_usd": 0.024484500000000003, "pair_id": "edgar_q032|cik+year"}
+{"utc": "2026-11-01T03:53:33.365758+00:00", "step": "llm_router decision", "cost_usd": 0.00027150000000000004, "running_total_usd": 0.024756000000000004, "pair_id": "edgar_q032|year+section"}
+{"utc": "2026-11-01T03:53:38.346714+00:00", "step": "llm_router decision", "cost_usd": 0.000954, "running_total_usd": 0.025710000000000004, "pair_id": "edgar_q032|section"}
+{"utc": "2026-11-01T03:53:39.714937+00:00", "step": "llm_router decision", "cost_usd": 0.00026475, "running_total_usd": 0.025974750000000005, "pair_id": "edgar_q034|cik+year+section"}
+{"utc": "2026-11-01T03:53:41.046869+00:00", "step": "llm_router decision", "cost_usd": 0.00023024999999999999, "running_total_usd": 0.026205000000000006, "pair_id": "edgar_q034|cik+year"}
+{"utc": "2026-11-01T03:53:42.582801+00:00", "step": "llm_router decision", "cost_usd": 0.00024525, "running_total_usd": 0.026450250000000005, "pair_id": "edgar_q034|year+section"}
+{"utc": "2026-11-01T03:53:51.696474+00:00", "step": "llm_router decision", "cost_usd": 0.00023775, "running_total_usd": 0.026688000000000003, "pair_id": "edgar_q034|section"}
+{"utc": "2026-11-01T03:53:53.334812+00:00", "step": "llm_router decision", "cost_usd": 0.00029775, "running_total_usd": 0.026985750000000003, "pair_id": "edgar_q036|cik+year+section"}
+{"utc": "2026-11-01T03:54:09.823099+00:00", "step": "llm_router decision", "cost_usd": 0.00025949999999999997, "running_total_usd": 0.027245250000000002, "pair_id": "edgar_q036|cik+year"}
+{"utc": "2026-11-01T03:54:11.350166+00:00", "step": "llm_router decision", "cost_usd": 0.0002445, "running_total_usd": 0.027489750000000004, "pair_id": "edgar_q036|year+section"}
+{"utc": "2026-11-01T03:54:14.325894+00:00", "step": "llm_router decision", "cost_usd": 0.00025949999999999997, "running_total_usd": 0.027749250000000003, "pair_id": "edgar_q036|section"}
+{"utc": "2026-11-01T03:54:17.721398+00:00", "step": "llm_router decision", "cost_usd": 0.000276, "running_total_usd": 0.02802525, "pair_id": "edgar_q037|cik+year+section"}
+{"utc": "2026-11-01T03:54:20.378712+00:00", "step": "llm_router decision", "cost_usd": 0.00029775000000000005, "running_total_usd": 0.028323, "pair_id": "edgar_q037|cik+year"}
+{"utc": "2026-11-01T03:54:21.907947+00:00", "step": "llm_router decision", "cost_usd": 0.000267, "running_total_usd": 0.02859, "pair_id": "edgar_q037|year+section"}
+{"utc": "2026-11-01T03:54:23.750262+00:00", "step": "llm_router decision", "cost_usd": 0.00024075, "running_total_usd": 0.028830750000000002, "pair_id": "edgar_q037|section"}
+{"utc": "2026-11-01T03:54:27.442828+00:00", "step": "llm_router decision", "cost_usd": 0.0002925, "running_total_usd": 0.029123250000000003, "pair_id": "edgar_q038|cik+year+section"}
+{"utc": "2026-11-01T03:54:29.278994+00:00", "step": "llm_router decision", "cost_usd": 0.00028050000000000004, "running_total_usd": 0.029403750000000003, "pair_id": "edgar_q038|cik+year"}
+{"utc": "2026-11-01T03:54:30.926617+00:00", "step": "llm_router decision", "cost_usd": 0.00025350000000000004, "running_total_usd": 0.029657250000000003, "pair_id": "edgar_q038|year+section"}
+{"utc": "2026-11-01T03:54:32.966240+00:00", "step": "llm_router decision", "cost_usd": 0.000246, "running_total_usd": 0.029903250000000003, "pair_id": "edgar_q038|section"}
+{"utc": "2026-11-01T03:54:35.126493+00:00", "step": "llm_router decision", "cost_usd": 0.00030375, "running_total_usd": 0.030207, "pair_id": "edgar_q039|cik+year+section"}
+{"utc": "2026-11-01T03:54:36.447329+00:00", "step": "llm_router decision", "cost_usd": 0.00029549999999999997, "running_total_usd": 0.030502500000000002, "pair_id": "edgar_q039|cik+year"}
+{"utc": "2026-11-01T03:54:37.775584+00:00", "step": "llm_router decision", "cost_usd": 0.0003135, "running_total_usd": 0.030816000000000003, "pair_id": "edgar_q039|year+section"}
+{"utc": "2026-11-01T03:54:39.209579+00:00", "step": "llm_router decision", "cost_usd": 0.00027225000000000003, "running_total_usd": 0.031088250000000005, "pair_id": "edgar_q039|section"}
+{"utc": "2026-11-01T03:54:42.896204+00:00", "step": "llm_router decision", "cost_usd": 0.0002835, "running_total_usd": 0.031371750000000004, "pair_id": "edgar_q040|cik+year+section"}
+{"utc": "2026-11-01T03:54:44.230422+00:00", "step": "llm_router decision", "cost_usd": 0.00027525, "running_total_usd": 0.031647, "pair_id": "edgar_q040|cik+year"}
+{"utc": "2026-11-01T03:54:46.684957+00:00", "step": "llm_router decision", "cost_usd": 0.0002715, "running_total_usd": 0.0319185, "pair_id": "edgar_q040|year+section"}
+{"utc": "2026-11-01T03:54:48.836421+00:00", "step": "llm_router decision", "cost_usd": 0.00026775, "running_total_usd": 0.03218625, "pair_id": "edgar_q040|section"}
+{"utc": "2026-11-01T03:54:50.780280+00:00", "step": "llm_router decision", "cost_usd": 0.00027075, "running_total_usd": 0.032457, "pair_id": "edgar_q041|cik+year+section"}
+{"utc": "2026-11-01T03:54:52.410059+00:00", "step": "llm_router decision", "cost_usd": 0.00026625, "running_total_usd": 0.03272325, "pair_id": "edgar_q041|cik+year"}
+{"utc": "2026-11-01T03:54:53.750474+00:00", "step": "llm_router decision", "cost_usd": 0.0002655, "running_total_usd": 0.032988750000000004, "pair_id": "edgar_q041|year+section"}
+{"utc": "2026-11-01T03:54:55.289710+00:00", "step": "llm_router decision", "cost_usd": 0.00023925, "running_total_usd": 0.03322800000000001, "pair_id": "edgar_q041|section"}
+{"utc": "2026-11-01T03:54:57.027129+00:00", "step": "llm_router decision", "cost_usd": 0.0002925, "running_total_usd": 0.03352050000000001, "pair_id": "edgar_q044|cik+year+section"}
+{"utc": "2026-11-01T03:55:04.301101+00:00", "step": "llm_router decision", "cost_usd": 0.0006105, "running_total_usd": 0.03413100000000001, "pair_id": "edgar_q044|cik+year"}
+{"utc": "2026-11-01T03:55:06.447247+00:00", "step": "llm_router decision", "cost_usd": 0.000297, "running_total_usd": 0.03442800000000001, "pair_id": "edgar_q044|year+section"}
+{"utc": "2026-11-01T03:55:08.291143+00:00", "step": "llm_router decision", "cost_usd": 0.000267, "running_total_usd": 0.03469500000000001, "pair_id": "edgar_q044|section"}
+{"utc": "2026-11-01T03:55:10.444938+00:00", "step": "llm_router decision", "cost_usd": 0.0002565, "running_total_usd": 0.03495150000000001, "pair_id": "edgar_q046|cik+year+section"}
+{"utc": "2026-11-01T03:55:14.229859+00:00", "step": "llm_router decision", "cost_usd": 0.00027075, "running_total_usd": 0.03522225000000001, "pair_id": "edgar_q046|cik+year"}
+{"utc": "2026-11-01T03:55:15.662855+00:00", "step": "llm_router decision", "cost_usd": 0.00028875000000000005, "running_total_usd": 0.03551100000000001, "pair_id": "edgar_q046|year+section"}
+{"utc": "2026-11-01T03:55:16.902236+00:00", "step": "llm_router decision", "cost_usd": 0.00026625, "running_total_usd": 0.03577725000000001, "pair_id": "edgar_q046|section"}
+{"utc": "2026-11-01T03:55:18.632582+00:00", "step": "llm_router decision", "cost_usd": 0.00031725000000000004, "running_total_usd": 0.03609450000000001, "pair_id": "edgar_q051|cik+year+section"}
+{"utc": "2026-11-01T03:55:20.582070+00:00", "step": "llm_router decision", "cost_usd": 0.00027525, "running_total_usd": 0.036369750000000006, "pair_id": "edgar_q051|cik+year"}
+{"utc": "2026-11-01T03:55:22.276769+00:00", "step": "llm_router decision", "cost_usd": 0.00025275, "running_total_usd": 0.03662250000000001, "pair_id": "edgar_q051|year+section"}
+{"utc": "2026-11-01T03:55:35.323776+00:00", "step": "llm_router decision", "cost_usd": 0.00027525, "running_total_usd": 0.03689775000000001, "pair_id": "edgar_q051|section"}
+{"utc": "2026-11-01T03:55:41.267180+00:00", "step": "llm_router decision", "cost_usd": 0.000303, "running_total_usd": 0.037200750000000005, "pair_id": "edgar_q052|cik+year+section"}
+{"utc": "2026-11-01T03:55:43.004816+00:00", "step": "llm_router decision", "cost_usd": 0.00030975, "running_total_usd": 0.0375105, "pair_id": "edgar_q052|cik+year"}
+{"utc": "2026-11-01T03:55:44.852619+00:00", "step": "llm_router decision", "cost_usd": 0.000294, "running_total_usd": 0.037804500000000005, "pair_id": "edgar_q052|year+section"}
+{"utc": "2026-11-01T03:55:46.486688+00:00", "step": "llm_router decision", "cost_usd": 0.00026399999999999997, "running_total_usd": 0.038068500000000005, "pair_id": "edgar_q052|section"}
+{"utc": "2026-11-01T03:55:47.918880+00:00", "step": "llm_router decision", "cost_usd": 0.0002955, "running_total_usd": 0.038364, "pair_id": "edgar_q053|cik+year+section"}
+{"utc": "2026-11-01T03:55:50.684929+00:00", "step": "llm_router decision", "cost_usd": 0.00057975, "running_total_usd": 0.03894375, "pair_id": "edgar_q053|cik+year"}
+{"utc": "2026-11-01T03:55:52.736864+00:00", "step": "llm_router decision", "cost_usd": 0.00027525, "running_total_usd": 0.039219, "pair_id": "edgar_q053|year+section"}
+{"utc": "2026-11-01T03:55:54.681510+00:00", "step": "llm_router decision", "cost_usd": 0.0002715, "running_total_usd": 0.0394905, "pair_id": "edgar_q053|section"}
+{"utc": "2026-11-01T03:55:56.344966+00:00", "step": "llm_router decision", "cost_usd": 0.00026625, "running_total_usd": 0.03975675, "pair_id": "edgar_q054|cik+year+section"}
+{"utc": "2026-11-01T03:55:59.295963+00:00", "step": "llm_router decision", "cost_usd": 0.00024675, "running_total_usd": 0.0400035, "pair_id": "edgar_q054|cik+year"}
+{"utc": "2026-11-01T03:56:00.825254+00:00", "step": "llm_router decision", "cost_usd": 0.00027749999999999997, "running_total_usd": 0.040281, "pair_id": "edgar_q054|year+section"}
+{"utc": "2026-11-01T03:56:02.465487+00:00", "step": "llm_router decision", "cost_usd": 0.00024375000000000002, "running_total_usd": 0.04052475, "pair_id": "edgar_q054|section"}
+{"utc": "2026-11-01T03:56:04.099507+00:00", "step": "llm_router decision", "cost_usd": 0.000276, "running_total_usd": 0.04080075, "pair_id": "edgar_q056|cik+year+section"}
+{"utc": "2026-11-01T03:56:08.604405+00:00", "step": "llm_router decision", "cost_usd": 0.00026024999999999996, "running_total_usd": 0.04106099999999999, "pair_id": "edgar_q056|cik+year"}
+{"utc": "2026-11-01T03:56:12.599930+00:00", "step": "llm_router decision", "cost_usd": 0.00025725, "running_total_usd": 0.041318249999999994, "pair_id": "edgar_q056|year+section"}
+{"utc": "2026-11-01T03:56:14.339016+00:00", "step": "llm_router decision", "cost_usd": 0.00026475, "running_total_usd": 0.041582999999999995, "pair_id": "edgar_q056|section"}
+{"utc": "2026-11-01T03:56:16.390622+00:00", "step": "llm_router decision", "cost_usd": 0.00027525, "running_total_usd": 0.04185824999999999, "pair_id": "edgar_q058|cik+year+section"}
+{"utc": "2026-11-01T03:56:17.719609+00:00", "step": "llm_router decision", "cost_usd": 0.00029625, "running_total_usd": 0.04215449999999999, "pair_id": "edgar_q058|cik+year"}
+{"utc": "2026-11-01T03:56:19.974718+00:00", "step": "llm_router decision", "cost_usd": 0.00027375, "running_total_usd": 0.042428249999999994, "pair_id": "edgar_q058|year+section"}
+{"utc": "2026-11-01T03:56:21.916232+00:00", "step": "llm_router decision", "cost_usd": 0.00024375000000000002, "running_total_usd": 0.042671999999999995, "pair_id": "edgar_q058|section"}
+{"utc": "2026-11-01T03:56:23.452123+00:00", "step": "llm_router decision", "cost_usd": 0.000267, "running_total_usd": 0.042939, "pair_id": "edgar_q059|cik+year+section"}
+{"utc": "2026-11-01T03:56:25.603565+00:00", "step": "llm_router decision", "cost_usd": 0.000258, "running_total_usd": 0.043197, "pair_id": "edgar_q059|cik+year"}
+{"utc": "2026-11-01T03:56:27.652095+00:00", "step": "llm_router decision", "cost_usd": 0.00025049999999999996, "running_total_usd": 0.0434475, "pair_id": "edgar_q059|year+section"}
+{"utc": "2026-11-01T03:56:29.598235+00:00", "step": "llm_router decision", "cost_usd": 0.000258, "running_total_usd": 0.0437055, "pair_id": "edgar_q059|section"}
+{"utc": "2026-11-01T03:56:31.439763+00:00", "step": "llm_router decision", "cost_usd": 0.00027749999999999997, "running_total_usd": 0.043983, "pair_id": "edgar_q060|cik+year+section"}
+{"utc": "2026-11-01T03:56:33.078504+00:00", "step": "llm_router decision", "cost_usd": 0.00026475, "running_total_usd": 0.04424775, "pair_id": "edgar_q060|cik+year"}
+{"utc": "2026-11-01T03:56:34.822018+00:00", "step": "llm_router decision", "cost_usd": 0.00025350000000000004, "running_total_usd": 0.04450125, "pair_id": "edgar_q060|year+section"}
+{"utc": "2026-11-01T03:56:36.764664+00:00", "step": "llm_router decision", "cost_usd": 0.00024225, "running_total_usd": 0.0447435, "pair_id": "edgar_q060|section"}
+{"utc": "2026-11-01T05:09:00.275689+00:00", "step": "answer pilot (excluded)", "cost_usd": 0.004691249999999999, "running_total_usd": 0.04943475, "prompt_id": "edgar_q038|year+section#cd865965d1d732b1", "pass": 0}
+{"utc": "2026-11-01T05:09:03.063875+00:00", "step": "answer pilot (excluded)", "cost_usd": 0.004718249999999999, "running_total_usd": 0.054153, "prompt_id": "edgar_q037|year+section#4558e2a59ddea547", "pass": 0}
+{"utc": "2026-11-01T05:09:04.743079+00:00", "step": "answer pilot (excluded)", "cost_usd": 0.004818, "running_total_usd": 0.058971, "prompt_id": "edgar_q036|cik+year+section#ccbe7fcfc177bc8b", "pass": 0}
+{"utc": "2026-11-01T05:09:06.638218+00:00", "step": "answer pilot (excluded)", "cost_usd": 0.0025695, "running_total_usd": 0.061540500000000005, "prompt_id": "edgar_q012|cik+year+section#df35031e674ae928", "pass": 0}
+{"utc": "2026-11-01T05:09:08.914365+00:00", "step": "answer pilot (excluded)", "cost_usd": 0.0053745, "running_total_usd": 0.066915, "prompt_id": "edgar_q052|section#3d82e296d7a4c3db", "pass": 0}
+{"utc": "2026-11-01T05:09:35.197560+00:00", "step": "answer main pass 1", "cost_usd": 0.0027150000000000004, "running_total_usd": 0.06963, "prompt_id": "edgar_q041|cik+year+section#300bb209ae1eeeb4", "pass": 1}
+{"utc": "2026-11-01T05:09:37.033866+00:00", "step": "answer main pass 1", "cost_usd": 0.0034980000000000002, "running_total_usd": 0.073128, "prompt_id": "edgar_q010|year+section#8c2bdaba9208a382", "pass": 1}
+{"utc": "2026-11-01T05:09:41.112998+00:00", "step": "answer main pass 1", "cost_usd": 0.00573225, "running_total_usd": 0.07886024999999999, "prompt_id": "edgar_q039|section#0a1484a6fcbd330b", "pass": 1}
+{"utc": "2026-11-01T05:09:42.710774+00:00", "step": "answer main pass 1", "cost_usd": 0.0048315, "running_total_usd": 0.08369175, "prompt_id": "edgar_q009|cik+year+section#110571cfeab41ff3", "pass": 1}
+{"utc": "2026-11-01T05:09:47.468681+00:00", "step": "answer main pass 1", "cost_usd": 0.001419, "running_total_usd": 0.08511075, "prompt_id": "edgar_q037|cik+year#57693952b19ce323", "pass": 1}
+{"utc": "2026-11-01T05:09:48.936562+00:00", "step": "answer main pass 1", "cost_usd": 0.00363975, "running_total_usd": 0.0887505, "prompt_id": "edgar_q027|year+section#eff1ea73f79dfe27", "pass": 1}
+{"utc": "2026-11-01T05:09:51.011414+00:00", "step": "answer main pass 1", "cost_usd": 0.00456675, "running_total_usd": 0.09331724999999999, "prompt_id": "edgar_q026|cik+year#1f06514fbf680f36", "pass": 1}
+{"utc": "2026-11-01T05:09:57.087227+00:00", "step": "answer main pass 1", "cost_usd": 0.00464925, "running_total_usd": 0.09796649999999998, "prompt_id": "edgar_q041|cik+year#5be780b8c277e122", "pass": 1}
+{"utc": "2026-11-01T05:09:58.736689+00:00", "step": "answer main pass 1", "cost_usd": 0.0048337499999999995, "running_total_usd": 0.10280024999999998, "prompt_id": "edgar_q056|year+section#9d7415222d0fc6ef", "pass": 1}
+{"utc": "2026-11-01T05:10:35.385569+00:00", "step": "answer main pass 1", "cost_usd": 0.00070275, "running_total_usd": 0.10350299999999998, "prompt_id": "edgar_q019|cik+year+section#c4a1e36f70240214", "pass": 1}
+{"utc": "2026-11-01T05:10:37.638673+00:00", "step": "answer main pass 1", "cost_usd": 0.0052327499999999996, "running_total_usd": 0.10873574999999998, "prompt_id": "edgar_q022|cik+year+section#fbe2523f092d6502", "pass": 1}
+{"utc": "2026-11-01T05:10:39.389933+00:00", "step": "answer main pass 1", "cost_usd": 0.0039404999999999996, "running_total_usd": 0.11267624999999998, "prompt_id": "edgar_q029|year+section#ae6441c72622c3d9", "pass": 1}
+{"utc": "2026-11-01T05:10:41.704345+00:00", "step": "answer main pass 1", "cost_usd": 0.0048165, "running_total_usd": 0.11749274999999998, "prompt_id": "edgar_q028|section#015f2b2769baf136", "pass": 1}
+{"utc": "2026-11-01T05:10:43.419684+00:00", "step": "answer main pass 1", "cost_usd": 0.00384675, "running_total_usd": 0.12133949999999998, "prompt_id": "edgar_q019|section#b2c72d55f54f1752", "pass": 1}
+{"utc": "2026-11-01T05:10:45.669124+00:00", "step": "answer main pass 1", "cost_usd": 0.005156999999999999, "running_total_usd": 0.12649649999999998, "prompt_id": "edgar_q034|year+section#79f7e1d2ef55eebf", "pass": 1}
+{"utc": "2026-11-01T05:10:47.111532+00:00", "step": "answer main pass 1", "cost_usd": 0.0019477499999999998, "running_total_usd": 0.12844424999999998, "prompt_id": "edgar_q008|cik+year+section#20f4114a6839f72b", "pass": 1}
+{"utc": "2026-11-01T05:10:49.239602+00:00", "step": "answer main pass 1", "cost_usd": 0.0045075, "running_total_usd": 0.13295174999999998, "prompt_id": "edgar_q053|cik+year+section#3cea00f7ad3e1a27", "pass": 1}
+{"utc": "2026-11-01T05:10:51.062203+00:00", "step": "answer main pass 1", "cost_usd": 0.0011294999999999999, "running_total_usd": 0.13408124999999999, "prompt_id": "edgar_q052|cik+year+section#99ebc18ba2a718b8", "pass": 1}
+{"utc": "2026-11-01T05:10:53.086090+00:00", "step": "answer main pass 1", "cost_usd": 0.004785, "running_total_usd": 0.13886625, "prompt_id": "edgar_q054|year+section#41b1e3c1b39375bd", "pass": 1}
+{"utc": "2026-11-01T05:10:55.065976+00:00", "step": "answer main pass 1", "cost_usd": 0.00504975, "running_total_usd": 0.143916, "prompt_id": "edgar_q001|year+section#57714dd93c9b00af", "pass": 1}
+{"utc": "2026-11-01T05:10:56.585823+00:00", "step": "answer main pass 1", "cost_usd": 0.0024089999999999997, "running_total_usd": 0.14632499999999998, "prompt_id": "edgar_q044|cik+year+section#8e549065bc626642", "pass": 1}
+{"utc": "2026-11-01T05:10:58.428047+00:00", "step": "answer main pass 1", "cost_usd": 0.00183675, "running_total_usd": 0.14816174999999998, "prompt_id": "edgar_q003|cik+year+section#eb58e1ab0882a0d0", "pass": 1}
+{"utc": "2026-11-01T05:11:02.627141+00:00", "step": "answer main pass 1", "cost_usd": 0.0049035, "running_total_usd": 0.15306524999999999, "prompt_id": "edgar_q051|section#7924aaf60a49f9f9", "pass": 1}
+{"utc": "2026-11-01T05:11:04.472508+00:00", "step": "answer main pass 1", "cost_usd": 0.00489225, "running_total_usd": 0.15795749999999997, "prompt_id": "edgar_q013|year+section#7b79913ac01585b4", "pass": 1}
+{"utc": "2026-11-01T05:11:05.884641+00:00", "step": "answer main pass 1", "cost_usd": 0.00111375, "running_total_usd": 0.15907124999999997, "prompt_id": "edgar_q004|cik+year+section#5fa3a2c2d42a1da7", "pass": 1}
+{"utc": "2026-11-01T05:11:10.814462+00:00", "step": "answer main pass 1", "cost_usd": 0.0026692499999999997, "running_total_usd": 0.16174049999999998, "prompt_id": "edgar_q059|section#f85f3ef89b44efb2", "pass": 1}
+{"utc": "2026-11-01T05:11:12.615514+00:00", "step": "answer main pass 1", "cost_usd": 0.004758, "running_total_usd": 0.1664985, "prompt_id": "edgar_q009|cik+year#e8abe9c8ac4907c4", "pass": 1}
+{"utc": "2026-11-01T05:11:14.219831+00:00", "step": "answer main pass 1", "cost_usd": 0.0047009999999999994, "running_total_usd": 0.1711995, "prompt_id": "edgar_q023|section#68351783b34dd49b", "pass": 1}
+{"utc": "2026-11-01T05:11:17.372826+00:00", "step": "answer main pass 1", "cost_usd": 0.0048345, "running_total_usd": 0.176034, "prompt_id": "edgar_q036|year+section#5a1e98601909fd1c", "pass": 1}
+{"utc": "2026-11-01T05:11:18.802341+00:00", "step": "answer main pass 1", "cost_usd": 0.0010350000000000001, "running_total_usd": 0.177069, "prompt_id": "edgar_q029|cik+year#6860dfea402ff117", "pass": 1}
+{"utc": "2026-11-01T05:11:20.748576+00:00", "step": "answer main pass 1", "cost_usd": 0.00485925, "running_total_usd": 0.18192825, "prompt_id": "edgar_q006|year+section#067ea151bd02603a", "pass": 1}
+{"utc": "2026-11-01T05:11:22.696999+00:00", "step": "answer main pass 1", "cost_usd": 0.00474225, "running_total_usd": 0.18667050000000002, "prompt_id": "edgar_q037|cik+year+section#984eb87923d10164", "pass": 1}
+{"utc": "2026-11-01T05:11:24.435603+00:00", "step": "answer main pass 1", "cost_usd": 0.00462375, "running_total_usd": 0.19129425000000003, "prompt_id": "edgar_q014|year+section#756f13f4912be62e", "pass": 1}
+{"utc": "2026-11-01T05:11:35.391929+00:00", "step": "answer main pass 1", "cost_usd": 0.005088, "running_total_usd": 0.19638225000000004, "prompt_id": "edgar_q011|section#b7a1d0723b2470b2", "pass": 1}
+{"utc": "2026-11-01T05:11:37.951294+00:00", "step": "answer main pass 1", "cost_usd": 0.004731, "running_total_usd": 0.20111325000000005, "prompt_id": "edgar_q009|cik+year#61d90078e7fb1de7", "pass": 1}
+{"utc": "2026-11-01T05:11:39.543633+00:00", "step": "answer main pass 1", "cost_usd": 0.004605000000000001, "running_total_usd": 0.20571825000000005, "prompt_id": "edgar_q027|year+section#a6974dd22617a7d7", "pass": 1}
+{"utc": "2026-11-01T05:11:41.715361+00:00", "step": "answer main pass 1", "cost_usd": 0.004761, "running_total_usd": 0.21047925000000003, "prompt_id": "edgar_q001|cik+year#7eaba43b0aa20646", "pass": 1}
+{"utc": "2026-11-01T05:11:43.490925+00:00", "step": "answer main pass 1", "cost_usd": 0.0048435, "running_total_usd": 0.21532275000000003, "prompt_id": "edgar_q007|cik+year#208409953f056878", "pass": 1}
+{"utc": "2026-11-01T05:11:45.119971+00:00", "step": "answer main pass 1", "cost_usd": 0.004659750000000001, "running_total_usd": 0.21998250000000003, "prompt_id": "edgar_q004|section#3a349042259e7093", "pass": 1}
+{"utc": "2026-11-01T05:11:47.145717+00:00", "step": "answer main pass 1", "cost_usd": 0.004913249999999999, "running_total_usd": 0.22489575000000003, "prompt_id": "edgar_q013|year+section#10e85e29b52e6a2e", "pass": 1}
+{"utc": "2026-11-01T05:11:49.011864+00:00", "step": "answer main pass 1", "cost_usd": 0.004807499999999999, "running_total_usd": 0.22970325000000003, "prompt_id": "edgar_q040|cik+year#fb7a16694d032058", "pass": 1}
+{"utc": "2026-11-01T05:11:50.407669+00:00", "step": "answer main pass 1", "cost_usd": 0.00383625, "running_total_usd": 0.23353950000000004, "prompt_id": "edgar_q040|year+section#04ff79df96fd038e", "pass": 1}
+{"utc": "2026-11-01T05:11:51.988492+00:00", "step": "answer main pass 1", "cost_usd": 0.00474825, "running_total_usd": 0.23828775000000005, "prompt_id": "edgar_q032|cik+year+section#f3f3f67eef2a6066", "pass": 1}
+{"utc": "2026-11-01T05:11:53.929531+00:00", "step": "answer main pass 1", "cost_usd": 0.0008182500000000001, "running_total_usd": 0.23910600000000004, "prompt_id": "edgar_q060|year+section#8a5f30effb6c02b5", "pass": 1}
+{"utc": "2026-11-01T05:11:55.565139+00:00", "step": "answer main pass 1", "cost_usd": 0.0047715, "running_total_usd": 0.24387750000000005, "prompt_id": "edgar_q034|cik+year+section#06b30af323fc8bfc", "pass": 1}
+{"utc": "2026-11-01T05:11:58.167594+00:00", "step": "answer main pass 1", "cost_usd": 0.00543, "running_total_usd": 0.24930750000000004, "prompt_id": "edgar_q006|section#4fedb36ddf160d8f", "pass": 1}
+{"utc": "2026-11-01T05:11:59.970005+00:00", "step": "answer main pass 1", "cost_usd": 0.0047339999999999995, "running_total_usd": 0.25404150000000003, "prompt_id": "edgar_q010|cik+year#08c76f45ac479c6a", "pass": 1}
+{"utc": "2026-11-01T05:12:01.602485+00:00", "step": "answer main pass 1", "cost_usd": 0.004815, "running_total_usd": 0.25885650000000004, "prompt_id": "edgar_q036|section#fead61df283b92f7", "pass": 1}
+{"utc": "2026-11-01T05:12:03.212423+00:00", "step": "answer main pass 1", "cost_usd": 0.0047625, "running_total_usd": 0.26361900000000005, "prompt_id": "edgar_q039|cik+year#d2078a115960a463", "pass": 1}
+{"utc": "2026-11-01T05:12:04.796540+00:00", "step": "answer main pass 1", "cost_usd": 0.0013432499999999998, "running_total_usd": 0.26496225000000007, "prompt_id": "edgar_q060|cik+year+section#0545cbfc749c287a", "pass": 1}
+{"utc": "2026-11-01T05:12:06.624099+00:00", "step": "answer main pass 1", "cost_usd": 0.00485175, "running_total_usd": 0.26981400000000005, "prompt_id": "edgar_q037|year+section#5186ca92965aa86d", "pass": 1}
+{"utc": "2026-11-01T05:12:08.671740+00:00", "step": "answer main pass 1", "cost_usd": 0.0035310000000000003, "running_total_usd": 0.27334500000000006, "prompt_id": "edgar_q034|section#90b55c63342f344a", "pass": 1}
+{"utc": "2026-11-01T05:12:10.318190+00:00", "step": "answer main pass 1", "cost_usd": 0.004794, "running_total_usd": 0.2781390000000001, "prompt_id": "edgar_q053|section#51b2502b2d575ced", "pass": 1}
+{"utc": "2026-11-01T05:12:11.777866+00:00", "step": "answer main pass 1", "cost_usd": 0.00477975, "running_total_usd": 0.2829187500000001, "prompt_id": "edgar_q032|section#bd68daa969979146", "pass": 1}
+{"utc": "2026-11-01T05:12:14.283099+00:00", "step": "answer main pass 1", "cost_usd": 0.0047715, "running_total_usd": 0.2876902500000001, "prompt_id": "edgar_q028|cik+year#2d2a2dd6dcdd4ad1", "pass": 1}
+{"utc": "2026-11-01T05:12:15.658755+00:00", "step": "answer main pass 1", "cost_usd": 0.00134925, "running_total_usd": 0.2890395000000001, "prompt_id": "edgar_q060|cik+year#ea4daa7240baf948", "pass": 1}
+{"utc": "2026-11-01T05:12:17.425715+00:00", "step": "answer main pass 1", "cost_usd": 0.0049155, "running_total_usd": 0.29395500000000013, "prompt_id": "edgar_q059|cik+year+section#a778ba53ff481c9f", "pass": 1}
+{"utc": "2026-11-01T05:12:19.108968+00:00", "step": "answer main pass 1", "cost_usd": 0.00121575, "running_total_usd": 0.29517075000000015, "prompt_id": "edgar_q026|cik+year+section#24a18fecbbb98080", "pass": 1}
+{"utc": "2026-11-01T05:12:20.961947+00:00", "step": "answer main pass 1", "cost_usd": 0.00474825, "running_total_usd": 0.29991900000000016, "prompt_id": "edgar_q058|cik+year#a6c52ec7ed61e8d0", "pass": 1}
+{"utc": "2026-11-01T05:12:22.290956+00:00", "step": "answer main pass 1", "cost_usd": 0.0011970000000000001, "running_total_usd": 0.30111600000000016, "prompt_id": "edgar_q026|cik+year#f7182d34a6bd57ee", "pass": 1}
+{"utc": "2026-11-01T05:12:23.933320+00:00", "step": "answer main pass 1", "cost_usd": 0.002385, "running_total_usd": 0.3035010000000002, "prompt_id": "edgar_q009|year+section#4e69a7db3c548282", "pass": 1}
+{"utc": "2026-11-01T05:12:25.762110+00:00", "step": "answer main pass 1", "cost_usd": 0.0044055, "running_total_usd": 0.3079065000000002, "prompt_id": "edgar_q029|section#9660e5c42becfbde", "pass": 1}
+{"utc": "2026-11-01T05:12:27.443407+00:00", "step": "answer main pass 1", "cost_usd": 0.0047895, "running_total_usd": 0.3126960000000002, "prompt_id": "edgar_q044|year+section#90354578acc6faa1", "pass": 1}
+{"utc": "2026-11-01T05:12:29.090890+00:00", "step": "answer main pass 1", "cost_usd": 0.0047985, "running_total_usd": 0.3174945000000002, "prompt_id": "edgar_q011|year+section#75593c1e151bb1ca", "pass": 1}
+{"utc": "2026-11-01T05:12:30.922744+00:00", "step": "answer main pass 1", "cost_usd": 0.004164, "running_total_usd": 0.3216585000000002, "prompt_id": "edgar_q036|cik+year#0e183e7e8e59583b", "pass": 1}
+{"utc": "2026-11-01T05:12:49.940900+00:00", "step": "answer main pass 1", "cost_usd": 0.00465825, "running_total_usd": 0.32631675000000016, "prompt_id": "edgar_q014|year+section#bd9550092e50ae8c", "pass": 1}
+{"utc": "2026-11-01T05:12:51.581685+00:00", "step": "answer main pass 1", "cost_usd": 0.002898, "running_total_usd": 0.32921475000000017, "prompt_id": "edgar_q054|cik+year+section#e9d4578729355e06", "pass": 1}
+{"utc": "2026-11-01T05:12:53.972036+00:00", "step": "answer main pass 1", "cost_usd": 0.005193, "running_total_usd": 0.33440775000000017, "prompt_id": "edgar_q034|cik+year#2acd8731e93f8959", "pass": 1}
+{"utc": "2026-11-01T05:12:55.570654+00:00", "step": "answer main pass 1", "cost_usd": 0.00163725, "running_total_usd": 0.33604500000000015, "prompt_id": "edgar_q006|cik+year#3a9d7d40bdd92482", "pass": 1}
+{"utc": "2026-11-01T05:12:57.312842+00:00", "step": "answer main pass 1", "cost_usd": 0.0035107499999999995, "running_total_usd": 0.33955575000000016, "prompt_id": "edgar_q009|section#9438ab74a7d438be", "pass": 1}
+{"utc": "2026-11-01T05:12:58.819184+00:00", "step": "answer main pass 1", "cost_usd": 0.00381525, "running_total_usd": 0.34337100000000015, "prompt_id": "edgar_q051|year+section#72201bab953fa2a4", "pass": 1}
+{"utc": "2026-11-01T05:13:00.416241+00:00", "step": "answer main pass 1", "cost_usd": 0.00487725, "running_total_usd": 0.34824825000000015, "prompt_id": "edgar_q041|year+section#5f06ba66efee4996", "pass": 1}
+{"utc": "2026-11-01T05:13:02.217801+00:00", "step": "answer main pass 1", "cost_usd": 0.004739999999999999, "running_total_usd": 0.35298825000000017, "prompt_id": "edgar_q054|section#e1b0bc2af655701a", "pass": 1}
+{"utc": "2026-11-01T05:13:05.821203+00:00", "step": "answer main pass 1", "cost_usd": 0.004791750000000001, "running_total_usd": 0.35778000000000015, "prompt_id": "edgar_q004|cik+year#ad23fb78b181127a", "pass": 1}
+{"utc": "2026-11-01T05:13:10.762950+00:00", "step": "answer main pass 1", "cost_usd": 0.00333375, "running_total_usd": 0.3611137500000002, "prompt_id": "edgar_q027|cik+year#4a170d7d58623f37", "pass": 1}
+{"utc": "2026-11-01T05:13:12.270535+00:00", "step": "answer main pass 1", "cost_usd": 0.0029445, "running_total_usd": 0.3640582500000002, "prompt_id": "edgar_q004|section#379485eb502bbd88", "pass": 1}
+{"utc": "2026-11-01T05:13:14.312779+00:00", "step": "answer main pass 1", "cost_usd": 0.0051675, "running_total_usd": 0.3692257500000002, "prompt_id": "edgar_q056|year+section#21e5f962c8c84aed", "pass": 1}
+{"utc": "2026-11-01T05:13:16.107434+00:00", "step": "answer main pass 1", "cost_usd": 0.004521000000000001, "running_total_usd": 0.3737467500000002, "prompt_id": "edgar_q056|year+section#6715680231da6772", "pass": 1}
+{"utc": "2026-11-01T05:13:17.578502+00:00", "step": "answer main pass 1", "cost_usd": 0.0006495, "running_total_usd": 0.3743962500000002, "prompt_id": "edgar_q056|cik+year+section#2336a419ef49d342", "pass": 1}
+{"utc": "2026-11-01T05:13:21.175606+00:00", "step": "answer main pass 1", "cost_usd": 0.00482925, "running_total_usd": 0.3792255000000002, "prompt_id": "edgar_q051|cik+year#55443d57ad1d173a", "pass": 1}
+{"utc": "2026-11-01T05:13:22.574824+00:00", "step": "answer main pass 1", "cost_usd": 0.00270375, "running_total_usd": 0.3819292500000002, "prompt_id": "edgar_q013|year+section#666511a06317fb93", "pass": 1}
+{"utc": "2026-11-01T05:13:24.147404+00:00", "step": "answer main pass 1", "cost_usd": 0.004719749999999999, "running_total_usd": 0.38664900000000024, "prompt_id": "edgar_q010|section#d0880c95c979244a", "pass": 1}
+{"utc": "2026-11-01T05:13:25.779321+00:00", "step": "answer main pass 1", "cost_usd": 0.00480975, "running_total_usd": 0.39145875000000024, "prompt_id": "edgar_q046|year+section#06b79c405a966262", "pass": 1}
+{"utc": "2026-11-01T05:13:26.905886+00:00", "step": "answer main pass 1", "cost_usd": 0.00132975, "running_total_usd": 0.39278850000000026, "prompt_id": "edgar_q052|cik+year#3a0c5dce3056f940", "pass": 1}
+{"utc": "2026-11-01T05:13:28.449356+00:00", "step": "answer main pass 1", "cost_usd": 0.0016380000000000001, "running_total_usd": 0.39442650000000024, "prompt_id": "edgar_q038|year+section#cd865965d1d732b1", "pass": 1}
+{"utc": "2026-11-01T05:13:32.229635+00:00", "step": "answer main pass 1", "cost_usd": 0.0052935000000000005, "running_total_usd": 0.39972000000000024, "prompt_id": "edgar_q036|cik+year#e54ccf85698c7892", "pass": 1}
+{"utc": "2026-11-01T05:13:33.852516+00:00", "step": "answer main pass 1", "cost_usd": 0.0047835, "running_total_usd": 0.40450350000000024, "prompt_id": "edgar_q022|cik+year+section#a2b999d2b8b426e3", "pass": 1}
+{"utc": "2026-11-01T05:14:19.355098+00:00", "step": "answer main pass 1", "cost_usd": 0.004862999999999999, "running_total_usd": 0.40936650000000024, "prompt_id": "edgar_q001|year+section#a564963b3bcf4749", "pass": 1}
+{"utc": "2026-11-01T05:14:21.282463+00:00", "step": "answer main pass 1", "cost_usd": 0.00468525, "running_total_usd": 0.4140517500000002, "prompt_id": "edgar_q038|cik+year+section#73d76d01e43dd5df", "pass": 1}
+{"utc": "2026-11-01T05:14:22.920081+00:00", "step": "answer main pass 1", "cost_usd": 0.0015539999999999998, "running_total_usd": 0.4156057500000002, "prompt_id": "edgar_q058|cik+year+section#6d2a2721818de446", "pass": 1}
+{"utc": "2026-11-01T05:14:24.764939+00:00", "step": "answer main pass 1", "cost_usd": 0.0048045, "running_total_usd": 0.4204102500000002, "prompt_id": "edgar_q001|cik+year+section#811807e7a2c8bd6e", "pass": 1}
+{"utc": "2026-11-01T05:14:27.068311+00:00", "step": "answer main pass 1", "cost_usd": 0.00479325, "running_total_usd": 0.42520350000000023, "prompt_id": "edgar_q054|year+section#4b409e20e7b0d5af", "pass": 1}
+{"utc": "2026-11-01T05:14:28.553639+00:00", "step": "answer main pass 1", "cost_usd": 0.004667999999999999, "running_total_usd": 0.42987150000000024, "prompt_id": "edgar_q032|cik+year#c003007ba92a5e37", "pass": 1}
+{"utc": "2026-11-01T05:14:30.394725+00:00", "step": "answer main pass 1", "cost_usd": 0.0046905, "running_total_usd": 0.4345620000000002, "prompt_id": "edgar_q038|cik+year#c68f449491f902a9", "pass": 1}
+{"utc": "2026-11-01T05:14:31.965877+00:00", "step": "answer main pass 1", "cost_usd": 0.0047835, "running_total_usd": 0.4393455000000002, "prompt_id": "edgar_q008|section#428e08b3f9b29bd9", "pass": 1}
+{"utc": "2026-11-01T05:14:33.604424+00:00", "step": "answer main pass 1", "cost_usd": 0.004728, "running_total_usd": 0.44407350000000023, "prompt_id": "edgar_q010|cik+year+section#bee37d3bbc26a999", "pass": 1}
+{"utc": "2026-11-01T05:14:35.501970+00:00", "step": "answer main pass 1", "cost_usd": 0.000624, "running_total_usd": 0.44469750000000025, "prompt_id": "edgar_q054|cik+year+section#07570e356090fcb3", "pass": 1}
+{"utc": "2026-11-01T05:14:37.268866+00:00", "step": "answer main pass 1", "cost_usd": 0.00492975, "running_total_usd": 0.44962725000000026, "prompt_id": "edgar_q041|section#f392a9a4aa2ce3de", "pass": 1}
+{"utc": "2026-11-01T05:14:39.013775+00:00", "step": "answer main pass 1", "cost_usd": 0.00478125, "running_total_usd": 0.45440850000000027, "prompt_id": "edgar_q008|cik+year#b45faa08d21c6818", "pass": 1}
+{"utc": "2026-11-01T05:14:40.713520+00:00", "step": "answer main pass 1", "cost_usd": 0.00397875, "running_total_usd": 0.45838725000000025, "prompt_id": "edgar_q019|section#826c34ef2aa8d122", "pass": 1}
+{"utc": "2026-11-01T05:14:42.527139+00:00", "step": "answer main pass 1", "cost_usd": 0.004624499999999999, "running_total_usd": 0.4630117500000002, "prompt_id": "edgar_q056|cik+year#bb0222270cd15329", "pass": 1}
+{"utc": "2026-11-01T05:14:44.221306+00:00", "step": "answer main pass 1", "cost_usd": 0.00432525, "running_total_usd": 0.4673370000000002, "prompt_id": "edgar_q026|year+section#239aa248c941f533", "pass": 1}
+{"utc": "2026-11-01T05:14:45.650324+00:00", "step": "answer main pass 1", "cost_usd": 0.002895, "running_total_usd": 0.4702320000000002, "prompt_id": "edgar_q056|cik+year+section#dfaaa8df58c732a7", "pass": 1}
+{"utc": "2026-11-01T05:14:47.289080+00:00", "step": "answer main pass 1", "cost_usd": 0.00482175, "running_total_usd": 0.4750537500000002, "prompt_id": "edgar_q059|section#121d95378674d72f", "pass": 1}
+{"utc": "2026-11-01T05:14:48.978668+00:00", "step": "answer main pass 1", "cost_usd": 0.00373275, "running_total_usd": 0.4787865000000002, "prompt_id": "edgar_q019|year+section#96acb79d156f7751", "pass": 1}
+{"utc": "2026-11-01T05:14:50.392501+00:00", "step": "answer main pass 1", "cost_usd": 0.0048315, "running_total_usd": 0.4836180000000002, "prompt_id": "edgar_q003|year+section#362ffe405c65c8fd", "pass": 1}
+{"utc": "2026-11-01T05:14:52.053437+00:00", "step": "answer main pass 1", "cost_usd": 0.0026002499999999997, "running_total_usd": 0.48621825000000024, "prompt_id": "edgar_q015|cik+year#b74524c04191a8b5", "pass": 1}
+{"utc": "2026-11-01T05:14:53.740817+00:00", "step": "answer main pass 1", "cost_usd": 0.00488475, "running_total_usd": 0.49110300000000023, "prompt_id": "edgar_q031|year+section#ba8a5561eb4ba2e4", "pass": 1}
+{"utc": "2026-11-01T05:14:55.402231+00:00", "step": "answer main pass 1", "cost_usd": 0.00484425, "running_total_usd": 0.49594725000000023, "prompt_id": "edgar_q022|year+section#79418b71266d9944", "pass": 1}
+{"utc": "2026-11-01T05:14:57.089360+00:00", "step": "answer main pass 1", "cost_usd": 0.004802249999999999, "running_total_usd": 0.5007495000000002, "prompt_id": "edgar_q015|cik+year#e62baba3957edd4f", "pass": 1}
+{"utc": "2026-11-01T05:14:59.319927+00:00", "step": "answer main pass 1", "cost_usd": 0.005223749999999999, "running_total_usd": 0.5059732500000002, "prompt_id": "edgar_q060|cik+year+section#b754b17784a1fd12", "pass": 1}
+{"utc": "2026-11-01T05:15:02.280680+00:00", "step": "answer main pass 1", "cost_usd": 0.004812, "running_total_usd": 0.5107852500000002, "prompt_id": "edgar_q015|year+section#c2b57027d8e678e4", "pass": 1}
+{"utc": "2026-11-01T05:15:04.187910+00:00", "step": "answer main pass 1", "cost_usd": 0.0038475000000000002, "running_total_usd": 0.5146327500000002, "prompt_id": "edgar_q019|section#1dbf3a390aef2daf", "pass": 1}
+{"utc": "2026-11-01T05:15:06.352846+00:00", "step": "answer main pass 1", "cost_usd": 0.00536325, "running_total_usd": 0.5199960000000002, "prompt_id": "edgar_q052|section#3d82e296d7a4c3db", "pass": 1}
+{"utc": "2026-11-01T05:15:08.691734+00:00", "step": "answer main pass 1", "cost_usd": 0.00405375, "running_total_usd": 0.5240497500000002, "prompt_id": "edgar_q026|year+section#8747f63808687bdc", "pass": 1}
+{"utc": "2026-11-01T05:15:10.761836+00:00", "step": "answer main pass 1", "cost_usd": 0.00476925, "running_total_usd": 0.5288190000000002, "prompt_id": "edgar_q012|cik+year#4a64cdc212229ece", "pass": 1}
+{"utc": "2026-11-01T05:15:12.301480+00:00", "step": "answer main pass 1", "cost_usd": 0.0046395, "running_total_usd": 0.5334585000000002, "prompt_id": "edgar_q018|cik+year#e8e3bde08fa9561e", "pass": 1}
+{"utc": "2026-11-01T05:15:14.937707+00:00", "step": "answer main pass 1", "cost_usd": 0.00450825, "running_total_usd": 0.5379667500000002, "prompt_id": "edgar_q026|section#47a4edf4c12e66e3", "pass": 1}
+{"utc": "2026-11-01T05:15:16.434594+00:00", "step": "answer main pass 1", "cost_usd": 0.0048315, "running_total_usd": 0.5427982500000001, "prompt_id": "edgar_q006|cik+year#a1767351f8461758", "pass": 1}
+{"utc": "2026-11-01T05:15:18.051157+00:00", "step": "answer main pass 1", "cost_usd": 0.0045675, "running_total_usd": 0.5473657500000001, "prompt_id": "edgar_q014|section#509dc7687ead47b7", "pass": 1}
+{"utc": "2026-11-01T05:15:20.555637+00:00", "step": "answer main pass 1", "cost_usd": 0.0035340000000000002, "running_total_usd": 0.5508997500000001, "prompt_id": "edgar_q053|year+section#b51de851bb2371c6", "pass": 1}
+{"utc": "2026-11-01T05:15:22.302070+00:00", "step": "answer main pass 1", "cost_usd": 0.00130575, "running_total_usd": 0.5522055000000001, "prompt_id": "edgar_q056|cik+year#07a83dc4e9993c65", "pass": 1}
+{"utc": "2026-11-01T05:15:31.486857+00:00", "step": "answer main pass 1", "cost_usd": 0.004870500000000001, "running_total_usd": 0.5570760000000001, "prompt_id": "edgar_q059|year+section#9c6b1d113378b8d7", "pass": 1}
+{"utc": "2026-11-01T05:15:33.405023+00:00", "step": "answer main pass 1", "cost_usd": 0.004792499999999999, "running_total_usd": 0.5618685000000001, "prompt_id": "edgar_q028|cik+year+section#901c07b993fe1599", "pass": 1}
+{"utc": "2026-11-01T05:15:35.085039+00:00", "step": "answer main pass 1", "cost_usd": 0.0048172499999999995, "running_total_usd": 0.5666857500000001, "prompt_id": "edgar_q053|cik+year#794f014ebf69a6be", "pass": 1}
+{"utc": "2026-11-01T05:15:36.735510+00:00", "step": "answer main pass 1", "cost_usd": 0.0035594999999999997, "running_total_usd": 0.5702452500000001, "prompt_id": "edgar_q007|year+section#350909956d1c2c1b", "pass": 1}
+{"utc": "2026-11-01T05:15:39.012605+00:00", "step": "answer main pass 1", "cost_usd": 0.0031545, "running_total_usd": 0.5733997500000001, "prompt_id": "edgar_q058|year+section#79a5742529df2cd3", "pass": 1}
+{"utc": "2026-11-01T05:15:46.273819+00:00", "step": "answer main pass 1", "cost_usd": 0.00875925, "running_total_usd": 0.5821590000000001, "prompt_id": "edgar_q046|cik+year#f8e79975cc03b79c", "pass": 1}
+{"utc": "2026-11-01T05:15:47.827985+00:00", "step": "answer main pass 1", "cost_usd": 0.00479925, "running_total_usd": 0.5869582500000001, "prompt_id": "edgar_q053|year+section#f264ff823d05f5ca", "pass": 1}
+{"utc": "2026-11-01T05:15:49.461636+00:00", "step": "answer main pass 1", "cost_usd": 0.0046035, "running_total_usd": 0.5915617500000001, "prompt_id": "edgar_q039|year+section#3812bd2fe5dd9b99", "pass": 1}
+{"utc": "2026-11-01T05:15:50.924542+00:00", "step": "answer main pass 1", "cost_usd": 0.004644, "running_total_usd": 0.5962057500000001, "prompt_id": "edgar_q041|cik+year#ca89be36e6641325", "pass": 1}
+{"utc": "2026-11-01T05:15:52.696052+00:00", "step": "answer main pass 1", "cost_usd": 0.00475725, "running_total_usd": 0.6009630000000001, "prompt_id": "edgar_q039|cik+year#05b5c247c9a8915d", "pass": 1}
+{"utc": "2026-11-01T05:15:54.576325+00:00", "step": "answer main pass 1", "cost_usd": 0.0020865, "running_total_usd": 0.6030495000000001, "prompt_id": "edgar_q029|section#9a30576fc7bc2d44", "pass": 1}
+{"utc": "2026-11-01T05:15:56.235775+00:00", "step": "answer main pass 1", "cost_usd": 0.003621, "running_total_usd": 0.6066705000000001, "prompt_id": "edgar_q054|cik+year+section#6a4401858ff0f07b", "pass": 1}
+{"utc": "2026-11-01T05:15:57.938766+00:00", "step": "answer main pass 1", "cost_usd": 0.0048915, "running_total_usd": 0.6115620000000002, "prompt_id": "edgar_q028|year+section#b1b1aeb6d39403ac", "pass": 1}
+{"utc": "2026-11-01T05:15:59.488862+00:00", "step": "answer main pass 1", "cost_usd": 0.004591499999999999, "running_total_usd": 0.6161535000000001, "prompt_id": "edgar_q027|year+section#192046bec7cf4636", "pass": 1}
+{"utc": "2026-11-01T05:16:01.179152+00:00", "step": "answer main pass 1", "cost_usd": 0.004749, "running_total_usd": 0.6209025000000001, "prompt_id": "edgar_q018|section#8137ebbb0a363ecb", "pass": 1}
+{"utc": "2026-11-01T05:16:02.917649+00:00", "step": "answer main pass 1", "cost_usd": 0.00479025, "running_total_usd": 0.6256927500000001, "prompt_id": "edgar_q011|cik+year+section#4bfef83fa571f437", "pass": 1}
+{"utc": "2026-11-01T05:16:04.312287+00:00", "step": "answer main pass 1", "cost_usd": 0.0010237500000000001, "running_total_usd": 0.6267165000000001, "prompt_id": "edgar_q046|cik+year+section#2704adc19cff46c3", "pass": 1}
+{"utc": "2026-11-01T05:16:06.034492+00:00", "step": "answer main pass 1", "cost_usd": 0.00477225, "running_total_usd": 0.6314887500000002, "prompt_id": "edgar_q034|section#646ef87d04095572", "pass": 1}
+{"utc": "2026-11-01T05:16:08.286267+00:00", "step": "answer main pass 1", "cost_usd": 0.00476175, "running_total_usd": 0.6362505000000002, "prompt_id": "edgar_q052|cik+year#aa0cbeac49fecaaa", "pass": 1}
+{"utc": "2026-11-01T05:16:10.031916+00:00", "step": "answer main pass 1", "cost_usd": 0.004836, "running_total_usd": 0.6410865000000001, "prompt_id": "edgar_q051|cik+year+section#12779ebf482f6716", "pass": 1}
+{"utc": "2026-11-01T05:16:11.809096+00:00", "step": "answer main pass 1", "cost_usd": 0.0048449999999999995, "running_total_usd": 0.6459315000000001, "prompt_id": "edgar_q015|cik+year+section#d89a11f585150a27", "pass": 1}
+{"utc": "2026-11-01T05:16:13.918321+00:00", "step": "answer main pass 1", "cost_usd": 0.004677, "running_total_usd": 0.6506085000000001, "prompt_id": "edgar_q041|cik+year+section#ea38b0d83e3767d0", "pass": 1}
+{"utc": "2026-11-01T05:16:15.372374+00:00", "step": "answer main pass 1", "cost_usd": 0.0019432499999999999, "running_total_usd": 0.6525517500000001, "prompt_id": "edgar_q044|cik+year+section#97824a05dc0d81c1", "pass": 1}
+{"utc": "2026-11-01T05:16:18.223428+00:00", "step": "answer main pass 1", "cost_usd": 0.0059429999999999995, "running_total_usd": 0.6584947500000001, "prompt_id": "edgar_q053|cik+year+section#82be3a9b1266e291", "pass": 1}
+{"utc": "2026-11-01T05:16:20.547970+00:00", "step": "answer main pass 1", "cost_usd": 0.004804500000000001, "running_total_usd": 0.6632992500000001, "prompt_id": "edgar_q018|year+section#ae2813e763015ac9", "pass": 1}
+{"utc": "2026-11-01T05:16:22.269519+00:00", "step": "answer main pass 1", "cost_usd": 0.00456, "running_total_usd": 0.6678592500000001, "prompt_id": "edgar_q026|cik+year+section#b357d349bdc54da6", "pass": 1}
+{"utc": "2026-11-01T05:16:24.295814+00:00", "step": "answer main pass 1", "cost_usd": 0.0031995, "running_total_usd": 0.6710587500000001, "prompt_id": "edgar_q012|cik+year#849c5b8661defd12", "pass": 1}
+{"utc": "2026-11-01T05:16:26.831265+00:00", "step": "answer main pass 1", "cost_usd": 0.004605000000000001, "running_total_usd": 0.6756637500000001, "prompt_id": "edgar_q027|cik+year#cbc1878332420ad8", "pass": 1}
+{"utc": "2026-11-01T05:16:29.573797+00:00", "step": "answer main pass 1", "cost_usd": 0.0054982500000000005, "running_total_usd": 0.6811620000000002, "prompt_id": "edgar_q012|section#267207bf73c0b37f", "pass": 1}
+{"utc": "2026-11-01T05:16:31.183685+00:00", "step": "answer main pass 1", "cost_usd": 0.0033142499999999995, "running_total_usd": 0.6844762500000001, "prompt_id": "edgar_q058|section#76929ca19f4cafe6", "pass": 1}
+{"utc": "2026-11-01T05:16:33.253975+00:00", "step": "answer main pass 1", "cost_usd": 0.00519, "running_total_usd": 0.6896662500000001, "prompt_id": "edgar_q051|cik+year#0f26346f9144a122", "pass": 1}
+{"utc": "2026-11-01T05:16:35.961273+00:00", "step": "answer main pass 1", "cost_usd": 0.0030855, "running_total_usd": 0.6927517500000001, "prompt_id": "edgar_q044|year+section#c1ef2e136534f8cc", "pass": 1}
+{"utc": "2026-11-01T05:16:37.979084+00:00", "step": "answer main pass 1", "cost_usd": 0.005212499999999999, "running_total_usd": 0.6979642500000001, "prompt_id": "edgar_q018|cik+year+section#1af9e1333706a76e", "pass": 1}
+{"utc": "2026-11-01T05:16:39.318490+00:00", "step": "answer main pass 1", "cost_usd": 0.0013125, "running_total_usd": 0.6992767500000001, "prompt_id": "edgar_q018|cik+year+section#04a445a37931e4ae", "pass": 1}
+{"utc": "2026-11-01T05:16:40.788146+00:00", "step": "answer main pass 1", "cost_usd": 0.00474375, "running_total_usd": 0.7040205000000002, "prompt_id": "edgar_q034|cik+year#edc2a4a08b46304e", "pass": 1}
+{"utc": "2026-11-01T05:16:43.025497+00:00", "step": "answer main pass 1", "cost_usd": 0.0047655, "running_total_usd": 0.7087860000000001, "prompt_id": "edgar_q039|cik+year+section#b926695fa276203d", "pass": 1}
+{"utc": "2026-11-01T05:16:44.564314+00:00", "step": "answer main pass 1", "cost_usd": 0.00480525, "running_total_usd": 0.7135912500000001, "prompt_id": "edgar_q022|cik+year#81d404e94359436d", "pass": 1}
+{"utc": "2026-11-01T05:16:52.816439+00:00", "step": "answer main pass 1", "cost_usd": 0.0028515000000000003, "running_total_usd": 0.7164427500000001, "prompt_id": "edgar_q013|cik+year+section#c2b679c3695ba2e5", "pass": 1}
+{"utc": "2026-11-01T05:16:55.084514+00:00", "step": "answer main pass 1", "cost_usd": 0.00477375, "running_total_usd": 0.7212165000000001, "prompt_id": "edgar_q039|section#6c84765942472e39", "pass": 1}
+{"utc": "2026-11-01T05:16:56.606955+00:00", "step": "answer main pass 1", "cost_usd": 0.0047655, "running_total_usd": 0.7259820000000001, "prompt_id": "edgar_q014|cik+year#436a3c21351b944a", "pass": 1}
+{"utc": "2026-11-01T05:16:58.574842+00:00", "step": "answer main pass 1", "cost_usd": 0.00476925, "running_total_usd": 0.7307512500000001, "prompt_id": "edgar_q013|cik+year#8a467d931daf442a", "pass": 1}
+{"utc": "2026-11-01T05:17:08.427341+00:00", "step": "answer main pass 1", "cost_usd": 0.00207375, "running_total_usd": 0.7328250000000001, "prompt_id": "edgar_q013|cik+year#897808572d2af248", "pass": 1}
+{"utc": "2026-11-01T05:17:10.650486+00:00", "step": "answer main pass 1", "cost_usd": 0.0031027500000000005, "running_total_usd": 0.7359277500000001, "prompt_id": "edgar_q058|year+section#94f31e29fe406924", "pass": 1}
+{"utc": "2026-11-01T05:17:13.311664+00:00", "step": "answer main pass 1", "cost_usd": 0.00222975, "running_total_usd": 0.7381575000000001, "prompt_id": "edgar_q010|year+section#d944cf2adf0ac681", "pass": 1}
+{"utc": "2026-11-01T05:17:15.035429+00:00", "step": "answer main pass 1", "cost_usd": 0.0048105, "running_total_usd": 0.7429680000000002, "prompt_id": "edgar_q040|cik+year#8aa640337bc2afec", "pass": 1}
+{"utc": "2026-11-01T05:17:16.570527+00:00", "step": "answer main pass 1", "cost_usd": 0.00325875, "running_total_usd": 0.7462267500000002, "prompt_id": "edgar_q037|year+section#b36316ea71c3a51f", "pass": 1}
+{"utc": "2026-11-01T05:17:18.329232+00:00", "step": "answer main pass 1", "cost_usd": 0.0048135, "running_total_usd": 0.7510402500000002, "prompt_id": "edgar_q003|cik+year+section#c944aa71fee3a3a3", "pass": 1}
+{"utc": "2026-11-01T05:17:21.489291+00:00", "step": "answer main pass 1", "cost_usd": 0.00516225, "running_total_usd": 0.7562025000000002, "prompt_id": "edgar_q014|section#76cfa6b7ee339d29", "pass": 1}
+{"utc": "2026-11-01T05:17:23.551043+00:00", "step": "answer main pass 1", "cost_usd": 0.0006315, "running_total_usd": 0.7568340000000002, "prompt_id": "edgar_q054|cik+year#1bc00cebb037ca52", "pass": 1}
+{"utc": "2026-11-01T05:17:25.539417+00:00", "step": "answer main pass 1", "cost_usd": 0.0047617499999999995, "running_total_usd": 0.7615957500000002, "prompt_id": "edgar_q032|cik+year#b676dc9da5b0458c", "pass": 1}
+{"utc": "2026-11-01T05:17:27.086159+00:00", "step": "answer main pass 1", "cost_usd": 0.0019477499999999998, "running_total_usd": 0.7635435000000003, "prompt_id": "edgar_q008|year+section#ce26720b336af225", "pass": 1}
+{"utc": "2026-11-01T05:17:28.674143+00:00", "step": "answer main pass 1", "cost_usd": 0.00488625, "running_total_usd": 0.7684297500000002, "prompt_id": "edgar_q060|section#53ffe5e01753b8a8", "pass": 1}
+{"utc": "2026-11-01T05:17:30.243150+00:00", "step": "answer main pass 1", "cost_usd": 0.00306525, "running_total_usd": 0.7714950000000003, "prompt_id": "edgar_q018|cik+year#758d2fbb3ec9c534", "pass": 1}
+{"utc": "2026-11-01T05:17:31.832296+00:00", "step": "answer main pass 1", "cost_usd": 0.00468225, "running_total_usd": 0.7761772500000003, "prompt_id": "edgar_q041|cik+year+section#ea396b06eb127983", "pass": 1}
+{"utc": "2026-11-01T05:17:33.720183+00:00", "step": "answer main pass 1", "cost_usd": 0.004971, "running_total_usd": 0.7811482500000002, "prompt_id": "edgar_q006|section#a59c1fabf8b90cc4", "pass": 1}
+{"utc": "2026-11-01T05:17:35.224674+00:00", "step": "answer main pass 1", "cost_usd": 0.0010305, "running_total_usd": 0.7821787500000003, "prompt_id": "edgar_q001|cik+year#1818de1a65e005fe", "pass": 1}
+{"utc": "2026-11-01T05:17:36.681153+00:00", "step": "answer main pass 1", "cost_usd": 0.00490275, "running_total_usd": 0.7870815000000002, "prompt_id": "edgar_q031|section#e5973111e6110d11", "pass": 1}
+{"utc": "2026-11-01T05:17:37.894168+00:00", "step": "answer main pass 1", "cost_usd": 0.000972, "running_total_usd": 0.7880535000000002, "prompt_id": "edgar_q058|year+section#139aa007a7af0212", "pass": 1}
+{"utc": "2026-11-01T05:17:40.682418+00:00", "step": "answer main pass 1", "cost_usd": 0.00481875, "running_total_usd": 0.7928722500000002, "prompt_id": "edgar_q009|section#49b11dbd9afca6a2", "pass": 1}
+{"utc": "2026-11-01T05:17:43.433657+00:00", "step": "answer main pass 1", "cost_usd": 0.006123, "running_total_usd": 0.7989952500000002, "prompt_id": "edgar_q046|section#c65045daef79a7f2", "pass": 1}
+{"utc": "2026-11-01T05:17:45.069271+00:00", "step": "answer main pass 1", "cost_usd": 0.0046784999999999995, "running_total_usd": 0.8036737500000002, "prompt_id": "edgar_q037|section#2b1ae19accc5f700", "pass": 1}
+{"utc": "2026-11-01T05:17:48.536844+00:00", "step": "answer main pass 1", "cost_usd": 0.0012607500000000002, "running_total_usd": 0.8049345000000002, "prompt_id": "edgar_q029|cik+year+section#b156b1c8e917bc5d", "pass": 1}
+{"utc": "2026-11-01T05:17:49.980114+00:00", "step": "answer main pass 1", "cost_usd": 0.004779, "running_total_usd": 0.8097135000000002, "prompt_id": "edgar_q011|cik+year#70a80e7bbc2fcb4f", "pass": 1}
+{"utc": "2026-11-01T05:17:53.571403+00:00", "step": "answer main pass 1", "cost_usd": 0.00464325, "running_total_usd": 0.8143567500000002, "prompt_id": "edgar_q059|cik+year#978062fbd3b662ce", "pass": 1}
+{"utc": "2026-11-01T05:17:55.398391+00:00", "step": "answer main pass 1", "cost_usd": 0.00243825, "running_total_usd": 0.8167950000000002, "prompt_id": "edgar_q011|section#5c941ce1a0564555", "pass": 1}
+{"utc": "2026-11-01T05:18:25.720129+00:00", "step": "answer main pass 1", "cost_usd": 0.002499, "running_total_usd": 0.8192940000000002, "prompt_id": "edgar_q003|cik+year#bf209d52686b0864", "pass": 1}
+{"utc": "2026-11-01T05:18:27.552189+00:00", "step": "answer main pass 1", "cost_usd": 0.0019695, "running_total_usd": 0.8212635000000001, "prompt_id": "edgar_q051|cik+year+section#a225d0f9e0286892", "pass": 1}
+{"utc": "2026-11-01T05:18:29.121839+00:00", "step": "answer main pass 1", "cost_usd": 0.001923, "running_total_usd": 0.8231865000000002, "prompt_id": "edgar_q032|cik+year+section#fac7f5776c01eb8c", "pass": 1}
+{"utc": "2026-11-01T05:18:30.830981+00:00", "step": "answer main pass 1", "cost_usd": 0.00104025, "running_total_usd": 0.8242267500000001, "prompt_id": "edgar_q060|section#b3b89c6925cd7f44", "pass": 1}
+{"utc": "2026-11-01T05:18:33.420962+00:00", "step": "answer main pass 1", "cost_usd": 0.00477375, "running_total_usd": 0.8290005000000001, "prompt_id": "edgar_q012|cik+year+section#6604731fc6628e97", "pass": 1}
+{"utc": "2026-11-01T05:18:35.235138+00:00", "step": "answer main pass 1", "cost_usd": 0.00470775, "running_total_usd": 0.8337082500000002, "prompt_id": "edgar_q023|cik+year+section#34a7ff5e845ed9e8", "pass": 1}
+{"utc": "2026-11-01T05:18:37.286769+00:00", "step": "answer main pass 1", "cost_usd": 0.0048945, "running_total_usd": 0.8386027500000002, "prompt_id": "edgar_q031|cik+year+section#ca60af9e49345da7", "pass": 1}
+{"utc": "2026-11-01T05:18:39.026446+00:00", "step": "answer main pass 1", "cost_usd": 0.000813, "running_total_usd": 0.8394157500000001, "prompt_id": "edgar_q014|cik+year#ea1820a201cd64d1", "pass": 1}
+{"utc": "2026-11-01T05:18:40.250513+00:00", "step": "answer main pass 1", "cost_usd": 0.0010185, "running_total_usd": 0.8404342500000002, "prompt_id": "edgar_q040|cik+year#7e78abc72be924a9", "pass": 1}
+{"utc": "2026-11-01T05:18:42.106316+00:00", "step": "answer main pass 1", "cost_usd": 0.0047145, "running_total_usd": 0.8451487500000001, "prompt_id": "edgar_q023|cik+year#cb2a7ced0183411f", "pass": 1}
+{"utc": "2026-11-01T05:19:05.644241+00:00", "step": "answer main pass 1", "cost_usd": 0.00463275, "running_total_usd": 0.8497815000000001, "prompt_id": "edgar_q044|cik+year#17954b93f0f1e37c", "pass": 1}
+{"utc": "2026-11-01T05:19:07.384613+00:00", "step": "answer main pass 1", "cost_usd": 0.004796999999999999, "running_total_usd": 0.8545785000000001, "prompt_id": "edgar_q059|year+section#41a183ec3bbd3cf2", "pass": 1}
+{"utc": "2026-11-01T05:19:09.426444+00:00", "step": "answer main pass 1", "cost_usd": 0.0054540000000000005, "running_total_usd": 0.8600325000000001, "prompt_id": "edgar_q001|section#da4ba04eebd5a4c4", "pass": 1}
+{"utc": "2026-11-01T05:19:10.861439+00:00", "step": "answer main pass 1", "cost_usd": 0.0047669999999999995, "running_total_usd": 0.8647995, "prompt_id": "edgar_q013|cik+year+section#f524c279ddc32822", "pass": 1}
+{"utc": "2026-11-01T05:19:12.165930+00:00", "step": "answer main pass 1", "cost_usd": 0.0007049999999999999, "running_total_usd": 0.8655045, "prompt_id": "edgar_q039|cik+year#e5c4e962c6f22cef", "pass": 1}
+{"utc": "2026-11-01T05:19:15.550516+00:00", "step": "answer main pass 1", "cost_usd": 0.0047557499999999996, "running_total_usd": 0.87026025, "prompt_id": "edgar_q039|year+section#3421ac88bf76085d", "pass": 1}
+{"utc": "2026-11-01T05:19:17.448591+00:00", "step": "answer main pass 1", "cost_usd": 0.0049515, "running_total_usd": 0.87521175, "prompt_id": "edgar_q037|section#bc19a3c1ddafdb37", "pass": 1}
+{"utc": "2026-11-01T05:19:19.127774+00:00", "step": "answer main pass 1", "cost_usd": 0.002574, "running_total_usd": 0.8777857499999999, "prompt_id": "edgar_q034|year+section#e822fbafae94d4ce", "pass": 1}
+{"utc": "2026-11-01T05:19:20.801087+00:00", "step": "answer main pass 1", "cost_usd": 0.001956, "running_total_usd": 0.8797417499999999, "prompt_id": "edgar_q018|year+section#1ed7af143d2e6a65", "pass": 1}
+{"utc": "2026-11-01T05:19:22.595082+00:00", "step": "answer main pass 1", "cost_usd": 0.00480525, "running_total_usd": 0.8845469999999999, "prompt_id": "edgar_q028|cik+year+section#7f7b67c8c859005a", "pass": 1}
+{"utc": "2026-11-01T05:19:24.020889+00:00", "step": "answer main pass 1", "cost_usd": 0.0006967499999999999, "running_total_usd": 0.8852437499999999, "prompt_id": "edgar_q028|cik+year#918c81b2c2cc243c", "pass": 1}
+{"utc": "2026-11-01T05:19:40.156063+00:00", "step": "answer main pass 1", "cost_usd": 0.012143250000000001, "running_total_usd": 0.8973869999999999, "prompt_id": "edgar_q051|section#66b50ceae4a52359", "pass": 1}
+{"utc": "2026-11-01T05:19:41.894859+00:00", "step": "answer main pass 1", "cost_usd": 0.00476025, "running_total_usd": 0.90214725, "prompt_id": "edgar_q052|cik+year+section#0bee69318da54563", "pass": 1}
+{"utc": "2026-11-01T05:19:44.377060+00:00", "step": "answer main pass 1", "cost_usd": 0.00502125, "running_total_usd": 0.9071684999999999, "prompt_id": "edgar_q026|section#a368b0f58d68c0a2", "pass": 1}
+{"utc": "2026-11-01T05:19:47.253280+00:00", "step": "answer main pass 1", "cost_usd": 0.004796999999999999, "running_total_usd": 0.9119655, "prompt_id": "edgar_q044|year+section#b03c80ca23657a0d", "pass": 1}
+{"utc": "2026-11-01T05:19:49.267617+00:00", "step": "answer main pass 1", "cost_usd": 0.0048405, "running_total_usd": 0.916806, "prompt_id": "edgar_q022|section#8e8aa10f9b9eb668", "pass": 1}
+{"utc": "2026-11-01T05:20:33.400257+00:00", "step": "answer main pass 1", "cost_usd": 0.00532425, "running_total_usd": 0.92213025, "prompt_id": "edgar_q018|cik+year#c93d2f910308262e", "pass": 1}
+{"utc": "2026-11-01T05:20:44.976644+00:00", "step": "answer main pass 1", "cost_usd": 0.002265, "running_total_usd": 0.92439525, "prompt_id": "edgar_q053|cik+year+section#e9673602bb24100e", "pass": 1}
+{"utc": "2026-11-01T05:20:46.715975+00:00", "step": "answer main pass 1", "cost_usd": 0.004824, "running_total_usd": 0.92921925, "prompt_id": "edgar_q052|year+section#71aba8faf1536162", "pass": 1}
+{"utc": "2026-11-01T05:20:48.454049+00:00", "step": "answer main pass 1", "cost_usd": 0.001665, "running_total_usd": 0.9308842500000001, "prompt_id": "edgar_q037|year+section#4558e2a59ddea547", "pass": 1}
+{"utc": "2026-11-01T05:20:49.985591+00:00", "step": "answer main pass 1", "cost_usd": 0.0016567500000000002, "running_total_usd": 0.9325410000000001, "prompt_id": "edgar_q003|cik+year#3b5c7da3d8772245", "pass": 1}
+{"utc": "2026-11-01T05:20:57.365032+00:00", "step": "answer main pass 1", "cost_usd": 0.0034155, "running_total_usd": 0.9359565000000001, "prompt_id": "edgar_q059|cik+year+section#05a6a1b2caaeed9a", "pass": 1}
+{"utc": "2026-11-01T05:21:37.195780+00:00", "step": "answer main pass 1", "cost_usd": 0.005107500000000001, "running_total_usd": 0.9410640000000001, "prompt_id": "edgar_q051|year+section#0fae584de05e4a7b", "pass": 1}
+{"utc": "2026-11-01T05:21:40.476941+00:00", "step": "answer main pass 1", "cost_usd": 0.0009757500000000001, "running_total_usd": 0.9420397500000002, "prompt_id": "edgar_q058|cik+year+section#7183e97a4900681a", "pass": 1}
+{"utc": "2026-11-01T05:21:42.309862+00:00", "step": "answer main pass 1", "cost_usd": 0.0047925, "running_total_usd": 0.9468322500000002, "prompt_id": "edgar_q032|year+section#219bc50f63436463", "pass": 1}
+{"utc": "2026-11-01T05:21:43.870294+00:00", "step": "answer main pass 1", "cost_usd": 0.0047445, "running_total_usd": 0.9515767500000002, "prompt_id": "edgar_q013|cik+year#958c2e4d5f2beaee", "pass": 1}
+{"utc": "2026-11-01T05:21:45.819667+00:00", "step": "answer main pass 1", "cost_usd": 0.00479475, "running_total_usd": 0.9563715000000002, "prompt_id": "edgar_q009|section#b47e06259cd398ed", "pass": 1}
+{"utc": "2026-11-01T05:21:47.537857+00:00", "step": "answer main pass 1", "cost_usd": 0.004845, "running_total_usd": 0.9612165000000001, "prompt_id": "edgar_q029|cik+year#1a57cfae1ecb52c0", "pass": 1}
+{"utc": "2026-11-01T05:21:52.056573+00:00", "step": "answer main pass 1", "cost_usd": 0.00479625, "running_total_usd": 0.9660127500000001, "prompt_id": "edgar_q015|cik+year#dbe2839eaaca8fc1", "pass": 1}
+{"utc": "2026-11-01T05:21:53.590427+00:00", "step": "answer main pass 1", "cost_usd": 0.004812749999999999, "running_total_usd": 0.9708255000000001, "prompt_id": "edgar_q015|section#44d247d26b4243ce", "pass": 1}
+{"utc": "2026-11-01T05:22:02.063859+00:00", "step": "answer main pass 1", "cost_usd": 0.001332, "running_total_usd": 0.9721575000000001, "prompt_id": "edgar_q019|cik+year#1c30403baf57bfe2", "pass": 1}
+{"utc": "2026-11-01T05:22:03.668519+00:00", "step": "answer main pass 1", "cost_usd": 0.0048277500000000004, "running_total_usd": 0.9769852500000001, "prompt_id": "edgar_q052|year+section#0888edd77de35b47", "pass": 1}
+{"utc": "2026-11-01T05:22:05.265711+00:00", "step": "answer main pass 1", "cost_usd": 0.00491925, "running_total_usd": 0.9819045000000002, "prompt_id": "edgar_q013|section#fb7d518365165760", "pass": 1}
+{"utc": "2026-11-01T05:22:06.687596+00:00", "step": "answer main pass 1", "cost_usd": 0.00070575, "running_total_usd": 0.9826102500000001, "prompt_id": "edgar_q058|section#56d951bee2ebb1a9", "pass": 1}
+{"utc": "2026-11-01T05:22:10.578465+00:00", "step": "answer main pass 1", "cost_usd": 0.00447675, "running_total_usd": 0.9870870000000002, "prompt_id": "edgar_q015|year+section#d5798f103e3cd982", "pass": 1}
+{"utc": "2026-11-01T05:22:12.694448+00:00", "step": "answer main pass 1", "cost_usd": 0.005013750000000001, "running_total_usd": 0.9921007500000002, "prompt_id": "edgar_q011|year+section#0c21d3b95d242876", "pass": 1}
+{"utc": "2026-11-01T05:22:14.143171+00:00", "step": "answer main pass 1", "cost_usd": 0.00287025, "running_total_usd": 0.9949710000000002, "prompt_id": "edgar_q032|cik+year#0f72423e78537aea", "pass": 1}
+{"utc": "2026-11-01T05:22:16.290327+00:00", "step": "answer main pass 1", "cost_usd": 0.003609, "running_total_usd": 0.9985800000000001, "prompt_id": "edgar_q058|section#340b32f79deb613b", "pass": 1}
+{"utc": "2026-11-01T05:22:18.449958+00:00", "step": "answer main pass 1", "cost_usd": 0.0039135, "running_total_usd": 1.0024935000000001, "prompt_id": "edgar_q053|cik+year#3400ab0cf5f23f6e", "pass": 1}
+{"utc": "2026-11-01T05:22:19.982371+00:00", "step": "answer main pass 1", "cost_usd": 0.004718999999999999, "running_total_usd": 1.0072125, "prompt_id": "edgar_q037|cik+year#dc573f485c59b501", "pass": 1}
+{"utc": "2026-11-01T05:22:25.122369+00:00", "step": "answer main pass 1", "cost_usd": 0.0048135, "running_total_usd": 1.012026, "prompt_id": "edgar_q019|cik+year+section#b311f5e51050d63e", "pass": 1}
+{"utc": "2026-11-01T05:22:26.757685+00:00", "step": "answer main pass 1", "cost_usd": 0.001665, "running_total_usd": 1.0136910000000001, "prompt_id": "edgar_q037|cik+year+section#61aab981160a0650", "pass": 1}
+{"utc": "2026-11-01T05:22:28.124002+00:00", "step": "answer main pass 1", "cost_usd": 0.0016409999999999999, "running_total_usd": 1.0153320000000001, "prompt_id": "edgar_q029|cik+year+section#8d91cc8986d90887", "pass": 1}
+{"utc": "2026-11-01T05:22:31.058073+00:00", "step": "answer main pass 1", "cost_usd": 0.00537525, "running_total_usd": 1.02070725, "prompt_id": "edgar_q038|cik+year#af420f300e9c45c2", "pass": 1}
+{"utc": "2026-11-01T05:22:32.420385+00:00", "step": "answer main pass 1", "cost_usd": 0.0038265000000000005, "running_total_usd": 1.02453375, "prompt_id": "edgar_q008|cik+year#14fca7c86d2b74e1", "pass": 1}
+{"utc": "2026-11-01T05:22:34.240368+00:00", "step": "answer main pass 1", "cost_usd": 0.00355725, "running_total_usd": 1.028091, "prompt_id": "edgar_q036|year+section#1f73b7f191f7e2e6", "pass": 1}
+{"utc": "2026-11-01T05:22:36.492205+00:00", "step": "answer main pass 1", "cost_usd": 0.00545775, "running_total_usd": 1.03354875, "prompt_id": "edgar_q053|cik+year#2d38274d676645ab", "pass": 1}
+{"utc": "2026-11-01T05:22:38.636609+00:00", "step": "answer main pass 1", "cost_usd": 0.0050557499999999995, "running_total_usd": 1.0386045, "prompt_id": "edgar_q011|section#59cbbc577925f73e", "pass": 1}
+{"utc": "2026-11-01T05:22:40.268092+00:00", "step": "answer main pass 1", "cost_usd": 0.004659, "running_total_usd": 1.0432635, "prompt_id": "edgar_q027|section#b0db9ea6d19d5592", "pass": 1}
+{"utc": "2026-11-01T05:23:23.897009+00:00", "step": "answer main pass 1", "cost_usd": 0.00500325, "running_total_usd": 1.0482667499999998, "prompt_id": "edgar_q026|year+section#f033a0e962281a21", "pass": 1}
+{"utc": "2026-11-01T05:23:25.434129+00:00", "step": "answer main pass 1", "cost_usd": 0.0048465, "running_total_usd": 1.0531132499999998, "prompt_id": "edgar_q006|year+section#75d056f50d21071c", "pass": 1}
+{"utc": "2026-11-01T05:23:27.490347+00:00", "step": "answer main pass 1", "cost_usd": 0.00073875, "running_total_usd": 1.0538519999999998, "prompt_id": "edgar_q028|cik+year+section#f8ce4595f12db1d1", "pass": 1}
+{"utc": "2026-11-01T05:24:00.047862+00:00", "step": "answer main pass 1", "cost_usd": 0.006059999999999999, "running_total_usd": 1.0599119999999997, "prompt_id": "edgar_q001|cik+year+section#691e0be213da7386", "pass": 1}
+{"utc": "2026-11-01T05:24:01.683751+00:00", "step": "answer main pass 1", "cost_usd": 0.0024585, "running_total_usd": 1.0623704999999997, "prompt_id": "edgar_q004|cik+year+section#c82b0ab614fd1c79", "pass": 1}
+{"utc": "2026-11-01T05:24:03.140193+00:00", "step": "answer main pass 1", "cost_usd": 0.00481725, "running_total_usd": 1.0671877499999998, "prompt_id": "edgar_q060|cik+year#e225c0a25a69498e", "pass": 1}
+{"utc": "2026-11-01T05:24:07.629266+00:00", "step": "answer main pass 1", "cost_usd": 0.007011, "running_total_usd": 1.0741987499999999, "prompt_id": "edgar_q052|cik+year#6791b37e936374b3", "pass": 1}
+{"utc": "2026-11-01T05:24:09.771867+00:00", "step": "answer main pass 1", "cost_usd": 0.0008257500000000001, "running_total_usd": 1.0750244999999998, "prompt_id": "edgar_q022|cik+year#bb4b1a1d5159fbe2", "pass": 1}
+{"utc": "2026-11-01T05:24:11.405255+00:00", "step": "answer main pass 1", "cost_usd": 0.00480825, "running_total_usd": 1.0798327499999998, "prompt_id": "edgar_q040|cik+year+section#b7587a3246ad497b", "pass": 1}
+{"utc": "2026-11-01T05:24:13.017594+00:00", "step": "answer main pass 1", "cost_usd": 0.0041512499999999996, "running_total_usd": 1.0839839999999998, "prompt_id": "edgar_q054|cik+year#aa751e270591cf70", "pass": 1}
+{"utc": "2026-11-01T05:24:14.788779+00:00", "step": "answer main pass 1", "cost_usd": 0.0034905, "running_total_usd": 1.0874745, "prompt_id": "edgar_q010|cik+year+section#68effccfa97a3af2", "pass": 1}
+{"utc": "2026-11-01T05:24:16.431096+00:00", "step": "answer main pass 1", "cost_usd": 0.0045855, "running_total_usd": 1.0920599999999998, "prompt_id": "edgar_q032|year+section#4306d6157ab25eff", "pass": 1}
+{"utc": "2026-11-01T05:24:17.964795+00:00", "step": "answer main pass 1", "cost_usd": 0.0046995000000000006, "running_total_usd": 1.0967594999999999, "prompt_id": "edgar_q038|section#a9ed77acc23e0221", "pass": 1}
+{"utc": "2026-11-01T05:24:19.917363+00:00", "step": "answer main pass 1", "cost_usd": 0.00485775, "running_total_usd": 1.1016172499999999, "prompt_id": "edgar_q041|section#c5a37d2c57c3c8c4", "pass": 1}
+{"utc": "2026-11-01T05:24:21.858168+00:00", "step": "answer main pass 1", "cost_usd": 0.00225075, "running_total_usd": 1.1038679999999998, "prompt_id": "edgar_q032|year+section#df8ed4b4c157bc9e", "pass": 1}
+{"utc": "2026-11-01T05:24:23.800379+00:00", "step": "answer main pass 1", "cost_usd": 0.0048165, "running_total_usd": 1.1086844999999999, "prompt_id": "edgar_q003|cik+year#3f45dc92d88b3522", "pass": 1}
+{"utc": "2026-11-01T05:24:25.131930+00:00", "step": "answer main pass 1", "cost_usd": 0.0029235, "running_total_usd": 1.111608, "prompt_id": "edgar_q036|cik+year+section#6a1d4a34a021f6ad", "pass": 1}
+{"utc": "2026-11-01T05:24:26.823310+00:00", "step": "answer main pass 1", "cost_usd": 0.004803, "running_total_usd": 1.1164109999999998, "prompt_id": "edgar_q046|cik+year+section#93570f50ef28cbcc", "pass": 1}
+{"utc": "2026-11-01T05:24:38.117839+00:00", "step": "answer main pass 1", "cost_usd": 0.010662749999999999, "running_total_usd": 1.1270737499999999, "prompt_id": "edgar_q001|year+section#4c377ada135c0905", "pass": 1}
+{"utc": "2026-11-01T05:24:40.086160+00:00", "step": "answer main pass 1", "cost_usd": 0.00125175, "running_total_usd": 1.1283254999999999, "prompt_id": "edgar_q029|year+section#80108cabc03167ee", "pass": 1}
+{"utc": "2026-11-01T05:24:41.621487+00:00", "step": "answer main pass 1", "cost_usd": 0.0014925000000000001, "running_total_usd": 1.1298179999999998, "prompt_id": "edgar_q011|year+section#daced777dcce9661", "pass": 1}
+{"utc": "2026-11-01T05:24:44.183511+00:00", "step": "answer main pass 1", "cost_usd": 0.0035639999999999995, "running_total_usd": 1.1333819999999997, "prompt_id": "edgar_q007|year+section#328dd07b9c8c7b30", "pass": 1}
+{"utc": "2026-11-01T05:24:46.039440+00:00", "step": "answer main pass 1", "cost_usd": 0.0041325, "running_total_usd": 1.1375144999999998, "prompt_id": "edgar_q056|cik+year+section#364fb0735b328760", "pass": 1}
+{"utc": "2026-11-01T05:24:51.761523+00:00", "step": "answer main pass 1", "cost_usd": 0.00125025, "running_total_usd": 1.1387647499999998, "prompt_id": "edgar_q027|cik+year+section#d7e6e2f6a0ddc769", "pass": 1}
+{"utc": "2026-11-01T05:24:53.564547+00:00", "step": "answer main pass 1", "cost_usd": 0.00483225, "running_total_usd": 1.1435969999999998, "prompt_id": "edgar_q056|section#722a7e9e0e41cae8", "pass": 1}
+{"utc": "2026-11-01T05:24:55.405174+00:00", "step": "answer main pass 1", "cost_usd": 0.00501825, "running_total_usd": 1.1486152499999998, "prompt_id": "edgar_q011|cik+year#c1b31701ce592942", "pass": 1}
+{"utc": "2026-11-01T05:24:56.887499+00:00", "step": "answer main pass 1", "cost_usd": 0.004829249999999999, "running_total_usd": 1.1534444999999998, "prompt_id": "edgar_q028|section#297cb0f57c349d4c", "pass": 1}
+{"utc": "2026-11-01T05:24:58.313799+00:00", "step": "answer main pass 1", "cost_usd": 0.0048045, "running_total_usd": 1.1582489999999999, "prompt_id": "edgar_q040|cik+year+section#3c8d3b97379d1b55", "pass": 1}
+{"utc": "2026-11-01T05:24:59.743020+00:00", "step": "answer main pass 1", "cost_usd": 0.00039450000000000005, "running_total_usd": 1.1586435, "prompt_id": "edgar_q060|cik+year+section#66826b881a6b85b4", "pass": 1}
+{"utc": "2026-11-01T05:25:01.765026+00:00", "step": "answer main pass 1", "cost_usd": 0.0029205, "running_total_usd": 1.161564, "prompt_id": "edgar_q007|cik+year+section#ff0ab1e2056eeac8", "pass": 1}
+{"utc": "2026-11-01T05:25:03.280595+00:00", "step": "answer main pass 1", "cost_usd": 0.00476625, "running_total_usd": 1.1663302500000001, "prompt_id": "edgar_q012|cik+year#27974f005ff4e23d", "pass": 1}
+{"utc": "2026-11-01T05:25:04.659690+00:00", "step": "answer main pass 1", "cost_usd": 0.002778, "running_total_usd": 1.16910825, "prompt_id": "edgar_q019|year+section#5361ec73b12efd0b", "pass": 1}
+{"utc": "2026-11-01T05:25:06.416996+00:00", "step": "answer main pass 1", "cost_usd": 0.00463575, "running_total_usd": 1.1737440000000001, "prompt_id": "edgar_q004|year+section#3a67f05c6559bd4c", "pass": 1}
+{"utc": "2026-11-01T05:25:08.962964+00:00", "step": "answer main pass 1", "cost_usd": 0.0048465, "running_total_usd": 1.1785905, "prompt_id": "edgar_q038|section#810aef2fa4895b33", "pass": 1}
+{"utc": "2026-11-01T05:25:10.807774+00:00", "step": "answer main pass 1", "cost_usd": 0.0048075, "running_total_usd": 1.1833980000000002, "prompt_id": "edgar_q008|year+section#b5918e6fccecbd13", "pass": 1}
+{"utc": "2026-11-01T05:25:12.485562+00:00", "step": "answer main pass 1", "cost_usd": 0.004194, "running_total_usd": 1.1875920000000002, "prompt_id": "edgar_q007|section#baa216ecdbc26b07", "pass": 1}
+{"utc": "2026-11-01T05:25:14.283939+00:00", "step": "answer main pass 1", "cost_usd": 0.004801499999999999, "running_total_usd": 1.1923935, "prompt_id": "edgar_q053|section#7a088f0e4c1957c9", "pass": 1}
+{"utc": "2026-11-01T05:25:16.332294+00:00", "step": "answer main pass 1", "cost_usd": 0.0021255000000000002, "running_total_usd": 1.194519, "prompt_id": "edgar_q008|cik+year+section#32be17163ad974b6", "pass": 1}
+{"utc": "2026-11-01T05:25:17.974303+00:00", "step": "answer main pass 1", "cost_usd": 0.0048375, "running_total_usd": 1.1993565000000002, "prompt_id": "edgar_q056|section#9bf3f9676b2cfde5", "pass": 1}
+{"utc": "2026-11-01T05:25:21.144186+00:00", "step": "answer main pass 1", "cost_usd": 0.00542025, "running_total_usd": 1.2047767500000002, "prompt_id": "edgar_q053|cik+year+section#dd55222bb62807d4", "pass": 1}
+{"utc": "2026-11-01T05:25:23.601591+00:00", "step": "answer main pass 1", "cost_usd": 0.0008145, "running_total_usd": 1.2055912500000001, "prompt_id": "edgar_q022|cik+year+section#c0567c724c778adc", "pass": 1}
+{"utc": "2026-11-01T05:25:29.132998+00:00", "step": "answer main pass 1", "cost_usd": 0.00482025, "running_total_usd": 1.2104115000000002, "prompt_id": "edgar_q028|year+section#cdda981d26a576ac", "pass": 1}
+{"utc": "2026-11-01T05:25:31.076596+00:00", "step": "answer main pass 1", "cost_usd": 0.004566, "running_total_usd": 1.2149775000000003, "prompt_id": "edgar_q026|cik+year#5c623c61b6749428", "pass": 1}
+{"utc": "2026-11-01T05:25:32.478498+00:00", "step": "answer main pass 1", "cost_usd": 0.004668749999999999, "running_total_usd": 1.2196462500000003, "prompt_id": "edgar_q046|cik+year#97b21e5042e6cf9c", "pass": 1}
+{"utc": "2026-11-01T05:25:34.585229+00:00", "step": "answer main pass 1", "cost_usd": 0.0048045, "running_total_usd": 1.2244507500000004, "prompt_id": "edgar_q022|cik+year#e45854510567ef40", "pass": 1}
+{"utc": "2026-11-01T05:25:36.032526+00:00", "step": "answer main pass 1", "cost_usd": 0.0032347499999999998, "running_total_usd": 1.2276855000000004, "prompt_id": "edgar_q051|cik+year#de58671f69f0b3f5", "pass": 1}
+{"utc": "2026-11-01T05:25:37.532037+00:00", "step": "answer main pass 1", "cost_usd": 0.00085125, "running_total_usd": 1.2285367500000004, "prompt_id": "edgar_q039|cik+year+section#47bcb00c3195eaf8", "pass": 1}
+{"utc": "2026-11-01T05:25:39.378276+00:00", "step": "answer main pass 1", "cost_usd": 0.0047355, "running_total_usd": 1.2332722500000004, "prompt_id": "edgar_q012|year+section#5bae161a1e8f4d16", "pass": 1}
+{"utc": "2026-11-01T05:25:41.111803+00:00", "step": "answer main pass 1", "cost_usd": 0.004815, "running_total_usd": 1.2380872500000004, "prompt_id": "edgar_q004|section#72086386c5383ac6", "pass": 1}
+{"utc": "2026-11-01T05:25:42.966135+00:00", "step": "answer main pass 1", "cost_usd": 0.004818, "running_total_usd": 1.2429052500000004, "prompt_id": "edgar_q036|cik+year+section#ccbe7fcfc177bc8b", "pass": 1}
+{"utc": "2026-11-01T05:25:44.538311+00:00", "step": "answer main pass 1", "cost_usd": 0.0028005, "running_total_usd": 1.2457057500000004, "prompt_id": "edgar_q027|section#2df01c90ce3ba3cc", "pass": 1}
+{"utc": "2026-11-01T05:25:46.642799+00:00", "step": "answer main pass 1", "cost_usd": 0.00470175, "running_total_usd": 1.2504075000000003, "prompt_id": "edgar_q037|cik+year#4efcc5806ecbfaff", "pass": 1}
+{"utc": "2026-11-01T05:25:48.383862+00:00", "step": "answer main pass 1", "cost_usd": 0.0041962499999999995, "running_total_usd": 1.2546037500000002, "prompt_id": "edgar_q007|section#a51775fae665ac25", "pass": 1}
+{"utc": "2026-11-01T05:25:50.025429+00:00", "step": "answer main pass 1", "cost_usd": 0.00475875, "running_total_usd": 1.2593625000000002, "prompt_id": "edgar_q044|cik+year#8884b2139ceb0ef4", "pass": 1}
+{"utc": "2026-11-01T05:25:52.451332+00:00", "step": "answer main pass 1", "cost_usd": 0.0019927499999999997, "running_total_usd": 1.2613552500000003, "prompt_id": "edgar_q015|cik+year+section#d1b604c91004b15c", "pass": 1}
+{"utc": "2026-11-01T05:25:53.610298+00:00", "step": "answer main pass 1", "cost_usd": 0.00135225, "running_total_usd": 1.2627075000000003, "prompt_id": "edgar_q006|cik+year+section#a11c3d4c23ed1bd2", "pass": 1}
+{"utc": "2026-11-01T05:25:55.543637+00:00", "step": "answer main pass 1", "cost_usd": 0.004731, "running_total_usd": 1.2674385000000004, "prompt_id": "edgar_q044|section#9578bf9b57a93e4f", "pass": 1}
+{"utc": "2026-11-01T05:25:56.891206+00:00", "step": "answer main pass 1", "cost_usd": 0.0029219999999999997, "running_total_usd": 1.2703605000000004, "prompt_id": "edgar_q004|cik+year#8f67dcea5322180c", "pass": 1}
+{"utc": "2026-11-01T05:25:58.428717+00:00", "step": "answer main pass 1", "cost_usd": 0.0048007499999999995, "running_total_usd": 1.2751612500000005, "prompt_id": "edgar_q022|cik+year#8174b2e32e8c8129", "pass": 1}
+{"utc": "2026-11-01T05:26:00.853730+00:00", "step": "answer main pass 1", "cost_usd": 0.004820249999999999, "running_total_usd": 1.2799815000000005, "prompt_id": "edgar_q009|year+section#58c2f088951545dd", "pass": 1}
+{"utc": "2026-11-01T05:26:02.516873+00:00", "step": "answer main pass 1", "cost_usd": 0.00484125, "running_total_usd": 1.2848227500000005, "prompt_id": "edgar_q019|cik+year#47b1385aeacccff2", "pass": 1}
+{"utc": "2026-11-01T05:26:05.691084+00:00", "step": "answer main pass 1", "cost_usd": 0.004716, "running_total_usd": 1.2895387500000004, "prompt_id": "edgar_q060|year+section#cb5f86ca63c67765", "pass": 1}
+{"utc": "2026-11-01T05:26:07.433399+00:00", "step": "answer main pass 1", "cost_usd": 0.0046425, "running_total_usd": 1.2941812500000005, "prompt_id": "edgar_q054|cik+year#c023ca7df41a132c", "pass": 1}
+{"utc": "2026-11-01T05:26:10.505523+00:00", "step": "answer main pass 1", "cost_usd": 0.004899, "running_total_usd": 1.2990802500000005, "prompt_id": "edgar_q031|cik+year#c9af82f64aafd57c", "pass": 1}
+{"utc": "2026-11-01T05:26:12.169739+00:00", "step": "answer main pass 1", "cost_usd": 0.0048495, "running_total_usd": 1.3039297500000004, "prompt_id": "edgar_q038|year+section#ccdf6c720216fae4", "pass": 1}
+{"utc": "2026-11-01T05:26:13.834002+00:00", "step": "answer main pass 1", "cost_usd": 0.004767, "running_total_usd": 1.3086967500000004, "prompt_id": "edgar_q039|cik+year+section#556bf3ffefb7e822", "pass": 1}
+{"utc": "2026-11-01T05:26:15.254994+00:00", "step": "answer main pass 1", "cost_usd": 0.00475875, "running_total_usd": 1.3134555000000003, "prompt_id": "edgar_q040|section#c9058c0643480864", "pass": 1}
+{"utc": "2026-11-01T05:26:16.952736+00:00", "step": "answer main pass 1", "cost_usd": 0.0048330000000000005, "running_total_usd": 1.3182885000000004, "prompt_id": "edgar_q006|cik+year+section#1aa192397bc1fcc1", "pass": 1}
+{"utc": "2026-11-01T05:26:19.727208+00:00", "step": "answer main pass 1", "cost_usd": 0.00085275, "running_total_usd": 1.3191412500000004, "prompt_id": "edgar_q040|cik+year+section#6101c15c252076a0", "pass": 1}
+{"utc": "2026-11-01T05:26:21.359694+00:00", "step": "answer main pass 1", "cost_usd": 0.002931, "running_total_usd": 1.3220722500000004, "prompt_id": "edgar_q052|year+section#c94d13b888618c89", "pass": 1}
+{"utc": "2026-11-01T05:26:24.223270+00:00", "step": "answer main pass 1", "cost_usd": 0.0026145, "running_total_usd": 1.3246867500000004, "prompt_id": "edgar_q046|cik+year#538429331549cf3d", "pass": 1}
+{"utc": "2026-11-01T05:26:25.868902+00:00", "step": "answer main pass 1", "cost_usd": 0.00448725, "running_total_usd": 1.3291740000000003, "prompt_id": "edgar_q004|year+section#94b9b07f05f21ff8", "pass": 1}
+{"utc": "2026-11-01T05:26:27.304163+00:00", "step": "answer main pass 1", "cost_usd": 0.0007665, "running_total_usd": 1.3299405000000002, "prompt_id": "edgar_q038|cik+year+section#bc12e3186903feea", "pass": 1}
+{"utc": "2026-11-01T05:26:28.934709+00:00", "step": "answer main pass 1", "cost_usd": 0.00478725, "running_total_usd": 1.33472775, "prompt_id": "edgar_q051|year+section#2723d6d1a30e11e4", "pass": 1}
+{"utc": "2026-11-01T05:26:30.830476+00:00", "step": "answer main pass 1", "cost_usd": 0.00465, "running_total_usd": 1.3393777500000001, "prompt_id": "edgar_q059|cik+year#16d1c94d456f7aa5", "pass": 1}
+{"utc": "2026-11-01T05:26:32.912533+00:00", "step": "answer main pass 1", "cost_usd": 0.00496425, "running_total_usd": 1.3443420000000001, "prompt_id": "edgar_q041|year+section#18150ef1d4f7847e", "pass": 1}
+{"utc": "2026-11-01T05:26:34.883609+00:00", "step": "answer main pass 1", "cost_usd": 0.004749, "running_total_usd": 1.349091, "prompt_id": "edgar_q009|year+section#a2a2683a535268fa", "pass": 1}
+{"utc": "2026-11-01T05:26:36.340869+00:00", "step": "answer main pass 1", "cost_usd": 0.002574, "running_total_usd": 1.3516650000000001, "prompt_id": "edgar_q034|cik+year+section#704b6b5c536bb661", "pass": 1}
+{"utc": "2026-11-01T05:26:37.871069+00:00", "step": "answer main pass 1", "cost_usd": 0.0047722500000000004, "running_total_usd": 1.3564372500000001, "prompt_id": "edgar_q052|cik+year+section#bdbeaa1a4c63fb65", "pass": 1}
+{"utc": "2026-11-01T05:26:39.594783+00:00", "step": "answer main pass 1", "cost_usd": 0.0047715, "running_total_usd": 1.36120875, "prompt_id": "edgar_q013|cik+year+section#bc6c16bfb9d3c3b4", "pass": 1}
+{"utc": "2026-11-01T05:26:41.325392+00:00", "step": "answer main pass 1", "cost_usd": 0.0047655, "running_total_usd": 1.36597425, "prompt_id": "edgar_q040|year+section#93a175bd96a1728c", "pass": 1}
+{"utc": "2026-11-01T05:26:43.267297+00:00", "step": "answer main pass 1", "cost_usd": 0.00084675, "running_total_usd": 1.366821, "prompt_id": "edgar_q014|cik+year+section#9c487c771bb41705", "pass": 1}
+{"utc": "2026-11-01T05:26:45.223463+00:00", "step": "answer main pass 1", "cost_usd": 0.0048112499999999996, "running_total_usd": 1.37163225, "prompt_id": "edgar_q052|section#856c84ae7941fc18", "pass": 1}
+{"utc": "2026-11-01T05:26:47.084732+00:00", "step": "answer main pass 1", "cost_usd": 0.0047729999999999995, "running_total_usd": 1.37640525, "prompt_id": "edgar_q040|year+section#13a6d3d4738d1aff", "pass": 1}
+{"utc": "2026-11-01T05:26:50.646899+00:00", "step": "answer main pass 1", "cost_usd": 0.0054434999999999996, "running_total_usd": 1.3818487499999998, "prompt_id": "edgar_q007|cik+year+section#b63197c81c5fa24d", "pass": 1}
+{"utc": "2026-11-01T05:27:28.531024+00:00", "step": "answer main pass 1", "cost_usd": 0.00355125, "running_total_usd": 1.3853999999999997, "prompt_id": "edgar_q041|cik+year#dc28d4d89a4d098a", "pass": 1}
+{"utc": "2026-11-01T05:27:29.759030+00:00", "step": "answer main pass 1", "cost_usd": 0.0010275, "running_total_usd": 1.3864274999999997, "prompt_id": "edgar_q004|year+section#cc2b7b70bce9bcb6", "pass": 1}
+{"utc": "2026-11-01T05:27:31.294615+00:00", "step": "answer main pass 1", "cost_usd": 0.0004035, "running_total_usd": 1.3868309999999997, "prompt_id": "edgar_q029|cik+year+section#d96ebe39eb08b892", "pass": 1}
+{"utc": "2026-11-01T05:27:34.366407+00:00", "step": "answer main pass 1", "cost_usd": 0.0016544999999999997, "running_total_usd": 1.3884854999999996, "prompt_id": "edgar_q023|year+section#028aa06f48a21de4", "pass": 1}
+{"utc": "2026-11-01T05:27:35.902398+00:00", "step": "answer main pass 1", "cost_usd": 0.00125025, "running_total_usd": 1.3897357499999996, "prompt_id": "edgar_q027|year+section#f0081ca174e9325e", "pass": 1}
+{"utc": "2026-11-01T05:27:37.337330+00:00", "step": "answer main pass 1", "cost_usd": 0.004827, "running_total_usd": 1.3945627499999995, "prompt_id": "edgar_q003|section#59e4d01f1781765f", "pass": 1}
+{"utc": "2026-11-01T05:27:39.251785+00:00", "step": "answer main pass 1", "cost_usd": 0.00481425, "running_total_usd": 1.3993769999999994, "prompt_id": "edgar_q060|cik+year#5a08c802158551db", "pass": 1}
+{"utc": "2026-11-01T05:27:41.001357+00:00", "step": "answer main pass 1", "cost_usd": 0.0047009999999999994, "running_total_usd": 1.4040779999999995, "prompt_id": "edgar_q014|cik+year+section#400a231c3437a208", "pass": 1}
+{"utc": "2026-11-01T05:27:42.466510+00:00", "step": "answer main pass 1", "cost_usd": 0.0047279999999999996, "running_total_usd": 1.4088059999999996, "prompt_id": "edgar_q028|cik+year#c5a1554b09096f42", "pass": 1}
+{"utc": "2026-11-01T05:27:44.303828+00:00", "step": "answer main pass 1", "cost_usd": 0.0048795, "running_total_usd": 1.4136854999999995, "prompt_id": "edgar_q060|section#614e703f445b6f87", "pass": 1}
+{"utc": "2026-11-01T05:27:45.947384+00:00", "step": "answer main pass 1", "cost_usd": 0.00413325, "running_total_usd": 1.4178187499999995, "prompt_id": "edgar_q039|year+section#286cc83438abcb3f", "pass": 1}
+{"utc": "2026-11-01T05:27:48.398978+00:00", "step": "answer main pass 1", "cost_usd": 0.0050999999999999995, "running_total_usd": 1.4229187499999996, "prompt_id": "edgar_q059|section#1c99857fbbeaed9d", "pass": 1}
+{"utc": "2026-11-01T05:27:51.369977+00:00", "step": "answer main pass 1", "cost_usd": 0.004784999999999999, "running_total_usd": 1.4277037499999996, "prompt_id": "edgar_q013|section#bf7d0c1652e56814", "pass": 1}
+{"utc": "2026-11-01T05:27:55.470957+00:00", "step": "answer main pass 1", "cost_usd": 0.0046559999999999995, "running_total_usd": 1.4323597499999996, "prompt_id": "edgar_q027|section#5a409c338c10a5ee", "pass": 1}
+{"utc": "2026-11-01T05:27:56.793093+00:00", "step": "answer main pass 1", "cost_usd": 0.00039525000000000004, "running_total_usd": 1.4327549999999996, "prompt_id": "edgar_q038|cik+year#3b4bf2a21f76e506", "pass": 1}
+{"utc": "2026-11-01T05:27:58.434538+00:00", "step": "answer main pass 1", "cost_usd": 0.00395475, "running_total_usd": 1.4367097499999995, "prompt_id": "edgar_q013|section#b4b057cb73ad1982", "pass": 1}
+{"utc": "2026-11-01T05:28:00.176371+00:00", "step": "answer main pass 1", "cost_usd": 0.00475125, "running_total_usd": 1.4414609999999994, "prompt_id": "edgar_q058|cik+year#a119d84b109d3cf0", "pass": 1}
+{"utc": "2026-11-01T05:28:03.054715+00:00", "step": "answer main pass 1", "cost_usd": 0.00492975, "running_total_usd": 1.4463907499999995, "prompt_id": "edgar_q056|cik+year#1bcd37d5bbb2d353", "pass": 1}
+{"utc": "2026-11-01T05:28:07.040311+00:00", "step": "answer main pass 1", "cost_usd": 0.001374, "running_total_usd": 1.4477647499999995, "prompt_id": "edgar_q037|cik+year+section#b4897b2ce63e6026", "pass": 1}
+{"utc": "2026-11-01T05:28:08.546136+00:00", "step": "answer main pass 1", "cost_usd": 0.0017805, "running_total_usd": 1.4495452499999995, "prompt_id": "edgar_q009|cik+year+section#8985201e27ea235e", "pass": 1}
+{"utc": "2026-11-01T05:28:10.375219+00:00", "step": "answer main pass 1", "cost_usd": 0.004806749999999999, "running_total_usd": 1.4543519999999994, "prompt_id": "edgar_q054|section#27655670a4864171", "pass": 1}
+{"utc": "2026-11-01T05:28:13.485959+00:00", "step": "answer main pass 1", "cost_usd": 0.0025695, "running_total_usd": 1.4569214999999993, "prompt_id": "edgar_q012|cik+year+section#df35031e674ae928", "pass": 1}
+{"utc": "2026-11-01T05:28:15.776506+00:00", "step": "answer main pass 1", "cost_usd": 0.00483675, "running_total_usd": 1.4617582499999993, "prompt_id": "edgar_q060|cik+year+section#830b3a313f1070b9", "pass": 1}
+{"utc": "2026-11-01T05:28:17.481159+00:00", "step": "answer main pass 1", "cost_usd": 0.0014925000000000001, "running_total_usd": 1.4632507499999992, "prompt_id": "edgar_q011|cik+year+section#28c2a534b4f3e52c", "pass": 1}

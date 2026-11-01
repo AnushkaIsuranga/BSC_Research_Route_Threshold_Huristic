@@ -1,0 +1,75 @@
+pair_id,mode,breadth,class,class_scale,answer_span,gold_number,raw
+edgar_q015|cik+year,always_exact,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,fixed_t_0_1,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,llm_router,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,local_probe,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,milvus,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,planner_iterative,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,qdrant,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,retry_exact,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,router,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,router_always_count,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,router_hmT,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,router_no_guard,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,router_plus_probe,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,router_tuned,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,vbase,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year,vecadvisor,cik+year,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand"
+edgar_q015|cik+year+section,always_exact,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,always_iterative,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,fixed_t_0_1,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,iterative_tuned,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,llm_router,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,local_probe,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,milvus,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,planner_iterative,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,qdrant,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,retry_exact,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,router,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,router_always_count,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,router_hmT,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,router_no_guard,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,router_plus_probe,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,router_tuned,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,vbase,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|cik+year+section,vecadvisor,cik+year+section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13,060,000)"
+edgar_q015|section,always_exact,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,always_iterative,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,default_hnsw,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,fixed_t_0_1,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,iterative_tuned,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,llm_router,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,local_probe,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,milvus,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,planner_iterative,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,qdrant,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,retry_exact,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,router,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,router_always_count,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,router_hmT,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,router_no_guard,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,router_plus_probe,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,router_tuned,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,vbase,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q015|section,vecadvisor,section,correct,wrong_in_context,"$13,060 thousand","$13,060","$13,060 thousand (or $13.1 million)"
+edgar_q028|cik+year,always_exact,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,always_iterative,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,default_hnsw,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,fixed_t_0_1,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,iterative_tuned,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,llm_router,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,local_probe,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,milvus,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,planner_iterative,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,qdrant,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,retry_exact,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,router,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,router_always_count,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,router_hmT,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,router_no_guard,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,router_plus_probe,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,router_tuned,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,vbase,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q028|cik+year,vecadvisor,cik+year,wrong_in_context,correct,$42.9 million,"$42,915 thousand",$42.9 million
+edgar_q037|cik+year,default_hnsw,cik+year,wrong_not_in_context,correct,"34,500,000",34.5 million,"34,500,000"
+edgar_q037|cik+year+section,default_hnsw,cik+year+section,wrong_not_in_context,correct,"34,500,000",34.5 million,"34,500,000"
