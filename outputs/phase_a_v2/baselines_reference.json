@@ -1,0 +1,802 @@
+{
+  "hm_clothes_100_v0": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 0,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.275
+  },
+  "hm_clothes_100_v1": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 1,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.3054999999999999
+  },
+  "hm_clothes_100_v2": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 2,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.142
+  },
+  "hm_clothes_100_v3": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 3,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.883
+  },
+  "hm_clothes_100_v4": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 4,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8674999999999999
+  },
+  "hm_clothes_100_v5": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 5,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.12
+  },
+  "hm_clothes_100_v6": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 6,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.04
+  },
+  "hm_clothes_100_v7": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 7,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8105
+  },
+  "hm_clothes_100_v8": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 8,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9604999999999999
+  },
+  "hm_clothes_100_v9": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 9,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.052
+  },
+  "hm_clothes_100_v10": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 10,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2425000000000002
+  },
+  "hm_clothes_100_v11": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 11,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.147
+  },
+  "hm_clothes_100_v12": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 12,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.4289999999999998
+  },
+  "hm_clothes_100_v13": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 13,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2165
+  },
+  "hm_clothes_100_v14": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 14,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2189999999999999
+  },
+  "hm_clothes_100_v15": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 15,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.4
+  },
+  "hm_clothes_100_v16": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 16,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.952
+  },
+  "hm_clothes_100_v17": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 17,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.057
+  },
+  "hm_clothes_100_v18": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 18,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0675
+  },
+  "hm_clothes_100_v19": {
+    "table_name": "hm_clothes_100",
+    "query_vector_idx": 19,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.1789999999999998
+  },
+  "hm_clothes_75_v0": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 0,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0539999999999998
+  },
+  "hm_clothes_75_v1": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 1,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.751
+  },
+  "hm_clothes_75_v2": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 2,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2565
+  },
+  "hm_clothes_75_v3": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 3,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8195
+  },
+  "hm_clothes_75_v4": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 4,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.856
+  },
+  "hm_clothes_75_v5": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 5,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8645
+  },
+  "hm_clothes_75_v6": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 6,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.205
+  },
+  "hm_clothes_75_v7": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 7,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8069999999999999
+  },
+  "hm_clothes_75_v8": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 8,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.6525000000000001
+  },
+  "hm_clothes_75_v9": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 9,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.062
+  },
+  "hm_clothes_75_v10": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 10,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.6825000000000001
+  },
+  "hm_clothes_75_v11": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 11,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.884
+  },
+  "hm_clothes_75_v12": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 12,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.3054999999999999
+  },
+  "hm_clothes_75_v13": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 13,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.297
+  },
+  "hm_clothes_75_v14": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 14,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0190000000000001
+  },
+  "hm_clothes_75_v15": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 15,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.4335
+  },
+  "hm_clothes_75_v16": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 16,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9505
+  },
+  "hm_clothes_75_v17": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 17,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.937
+  },
+  "hm_clothes_75_v18": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 18,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.957
+  },
+  "hm_clothes_75_v19": {
+    "table_name": "hm_clothes_75",
+    "query_vector_idx": 19,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0434999999999999
+  },
+  "hm_clothes_50_v0": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 0,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0835
+  },
+  "hm_clothes_50_v1": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 1,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9969999999999999
+  },
+  "hm_clothes_50_v2": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 2,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9135
+  },
+  "hm_clothes_50_v3": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 3,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8260000000000001
+  },
+  "hm_clothes_50_v4": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 4,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0419999999999998
+  },
+  "hm_clothes_50_v5": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 5,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8705
+  },
+  "hm_clothes_50_v6": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 6,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.089
+  },
+  "hm_clothes_50_v7": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 7,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.7175
+  },
+  "hm_clothes_50_v8": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 8,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.738
+  },
+  "hm_clothes_50_v9": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 9,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.944
+  },
+  "hm_clothes_50_v10": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 10,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.744
+  },
+  "hm_clothes_50_v11": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 11,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.1484999999999999
+  },
+  "hm_clothes_50_v12": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 12,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.242
+  },
+  "hm_clothes_50_v13": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 13,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.001
+  },
+  "hm_clothes_50_v14": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 14,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.86
+  },
+  "hm_clothes_50_v15": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 15,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.147
+  },
+  "hm_clothes_50_v16": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 16,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.19
+  },
+  "hm_clothes_50_v17": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 17,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.248
+  },
+  "hm_clothes_50_v18": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 18,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.3490000000000002
+  },
+  "hm_clothes_50_v19": {
+    "table_name": "hm_clothes_50",
+    "query_vector_idx": 19,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2665
+  },
+  "hm_clothes_25_v0": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 0,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0659999999999998
+  },
+  "hm_clothes_25_v1": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 1,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.4575
+  },
+  "hm_clothes_25_v2": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 2,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9375
+  },
+  "hm_clothes_25_v3": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 3,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.082
+  },
+  "hm_clothes_25_v4": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 4,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.1535
+  },
+  "hm_clothes_25_v5": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 5,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8945000000000001
+  },
+  "hm_clothes_25_v6": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 6,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.1949999999999998
+  },
+  "hm_clothes_25_v7": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 7,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8665
+  },
+  "hm_clothes_25_v8": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 8,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8955
+  },
+  "hm_clothes_25_v9": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 9,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0665
+  },
+  "hm_clothes_25_v10": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 10,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.8425
+  },
+  "hm_clothes_25_v11": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 11,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2645
+  },
+  "hm_clothes_25_v12": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 12,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.3345
+  },
+  "hm_clothes_25_v13": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 13,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.4685000000000001
+  },
+  "hm_clothes_25_v14": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 14,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.992
+  },
+  "hm_clothes_25_v15": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 15,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.197
+  },
+  "hm_clothes_25_v16": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 16,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2120000000000002
+  },
+  "hm_clothes_25_v17": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 17,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.194
+  },
+  "hm_clothes_25_v18": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 18,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.376
+  },
+  "hm_clothes_25_v19": {
+    "table_name": "hm_clothes_25",
+    "query_vector_idx": 19,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.3385
+  },
+  "hm_clothes_0_v0": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 0,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.293
+  },
+  "hm_clothes_0_v1": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 1,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.5075
+  },
+  "hm_clothes_0_v2": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 2,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9595
+  },
+  "hm_clothes_0_v3": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 3,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.112
+  },
+  "hm_clothes_0_v4": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 4,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.171
+  },
+  "hm_clothes_0_v5": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 5,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.1880000000000002
+  },
+  "hm_clothes_0_v6": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 6,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.335
+  },
+  "hm_clothes_0_v7": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 7,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2040000000000002
+  },
+  "hm_clothes_0_v8": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 8,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.89
+  },
+  "hm_clothes_0_v9": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 9,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.37
+  },
+  "hm_clothes_0_v10": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 10,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 0.9430000000000001
+  },
+  "hm_clothes_0_v11": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 11,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.1015000000000001
+  },
+  "hm_clothes_0_v12": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 12,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2635
+  },
+  "hm_clothes_0_v13": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 13,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.4665
+  },
+  "hm_clothes_0_v14": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 14,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.2395
+  },
+  "hm_clothes_0_v15": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 15,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.9224999999999999
+  },
+  "hm_clothes_0_v16": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 16,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.266
+  },
+  "hm_clothes_0_v17": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 17,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.086
+  },
+  "hm_clothes_0_v18": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 18,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.0185
+  },
+  "hm_clothes_0_v19": {
+    "table_name": "hm_clothes_0",
+    "query_vector_idx": 19,
+    "hnsw_ef_search": 40,
+    "k": 10,
+    "memcap": false,
+    "baseline_ms": 1.525
+  }
+}
