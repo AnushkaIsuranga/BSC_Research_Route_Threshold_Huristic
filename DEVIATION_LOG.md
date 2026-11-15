@@ -317,3 +317,7 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 
 - **Runner tag (`phase-g-runner-12`):** Tagged commit `46f9f5e` (following `7cde80a` which added `src/phase_g_straddle/run_straddle.py`, `tests/test_phase_g_straddle.py`, and `outputs/straddle_t_smoke_2026-11-15/`) after re-running `tests/test_phase_g_straddle.py` (`7 passed`) and verifying clean `src/`, `tests/`, `config/`, and `docs/`.
 - **Addendum 3 added (`phase-g-amendment-12-addendum-3`):** Committed `docs/preregistration/PHASE_G_AMENDMENT_12_ADDENDUM_3.md` and `docs/preregistration/INDEX.md` specifying the exact statistical analysis rules before the main run.
+
+## 2026-11-16 (Part 10) — Straddle-T analysis script and tag `phase-g-analysis-12`
+
+- **Analysis script and tests added (`phase-g-analysis-12`):** Committed `src/phase_g_straddle/analyze_straddle.py` and `tests/test_phase_g_analysis.py` (`7 passed`) implementing the exact definitions in `docs/preregistration/PHASE_G_AMENDMENT_12_ADDENDUM_3.md` (`band_table.csv`, `group_table.csv`, `hypotheses.csv`, `secondary_tables.csv`, `descriptive_tables.csv`, `REPORT.md`, and the `--validation` smoke-path guard). Validated end-to-end on the smoke format in `outputs/straddle_t_analysis_validation/` (removed before commit).
