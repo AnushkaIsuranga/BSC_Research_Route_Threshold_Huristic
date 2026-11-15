@@ -1,0 +1,17 @@
+table,threshold,band,usable_total,natural,constructed,min_s,max_s
+edgar_chunks,T_edgar,far_below,6281,6222,59,0.000095,0.189232
+edgar_chunks,T_edgar,near_below,60,6,54,0.190654,0.376304
+edgar_chunks,T_edgar,near_above,42,0,42,0.388458,0.740613
+edgar_chunks,T_edgar,far_above,3,0,3,0.807672,1.000000
+edgar_chunks,T_hm,far_below,6212,6209,3,0.000095,0.017498
+edgar_chunks,T_hm,near_below,6,3,3,0.057729,0.065322
+edgar_chunks,T_hm,near_above,26,9,17,0.076958,0.142280
+edgar_chunks,T_hm,far_above,142,7,135,0.142867,1.000000
+finqa_evidence,T_hm,far_below,444,375,69,0.000446,0.035190
+finqa_evidence,T_hm,near_below,95,12,83,0.036473,0.071134
+finqa_evidence,T_hm,near_above,98,6,92,0.071245,0.139591
+finqa_evidence,T_hm,far_above,171,0,171,0.143076,1.000000
+finqa_evidence,T_edgar_ref,far_below,656,393,263,0.000446,0.187078
+finqa_evidence,T_edgar_ref,near_below,51,0,51,0.189448,0.377726
+finqa_evidence,T_edgar_ref,near_above,68,0,68,0.383135,0.755758
+finqa_evidence,T_edgar_ref,far_above,33,0,33,0.759383,1.000000

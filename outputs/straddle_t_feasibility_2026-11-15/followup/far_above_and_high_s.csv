@@ -1,0 +1,13 @@
+table,filter_id,where_clause,n_rows,s,type,is_full_table
+edgar_chunks,edgar_10125,"fiscal_year IN (2018, 2019, 2020)",158308,1.0,constructed,True
+edgar_chunks,edgar_10143,"section IN ('1A', '7', '8')",127861,0.8076723854764131,constructed,False
+edgar_chunks,edgar_10278,"fiscal_year IN (2018, 2019, 2020) AND section IN ('1A', '7', '8')",127861,0.8076723854764131,constructed,False
+finqa_evidence,finqa_00577,(metadata->>'year')::int BETWEEN 2003 AND 2018,34851,0.9718085996319223,constructed,False
+finqa_evidence,finqa_00578,(metadata->>'year')::int BETWEEN 2004 AND 2019,34232,0.9545479895153645,constructed,False
+finqa_evidence,finqa_00581,(metadata->>'year')::int BETWEEN 2002 AND 2018,35299,0.9843009313479449,constructed,False
+finqa_evidence,finqa_00582,(metadata->>'year')::int BETWEEN 2003 AND 2019,35045,0.9772182254196643,constructed,False
+finqa_evidence,finqa_00584,(metadata->>'year')::int BETWEEN 2001 AND 2018,35614,0.9930846020857732,constructed,False
+finqa_evidence,finqa_00585,(metadata->>'year')::int BETWEEN 2002 AND 2019,35493,0.9897105571356868,constructed,False
+finqa_evidence,finqa_00586,(metadata->>'year')::int BETWEEN 1999 AND 2018,35668,0.9945903742122582,constructed,False
+finqa_evidence,finqa_00587,(metadata->>'year')::int BETWEEN 2001 AND 2019,35808,0.9984942278735152,constructed,False
+finqa_evidence,finqa_00588,(metadata->>'year')::int BETWEEN 1999 AND 2019,35862,1.0,constructed,True

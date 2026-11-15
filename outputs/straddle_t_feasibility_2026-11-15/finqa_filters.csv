@@ -1,0 +1,814 @@
+filter_id,where_clause,n_rows,s,usable,type,band_hm,band_edgar_ref
+finqa_00001,metadata->>'ticker' = 'AAL' AND (metadata->>'year')::int = 2010,104,0.0029000055769338017,True,natural,far_below,far_below
+finqa_00002,metadata->>'ticker' = 'AAL' AND (metadata->>'year')::int = 2013,256,0.007138475266298589,True,natural,far_below,far_below
+finqa_00003,metadata->>'ticker' = 'AAL' AND (metadata->>'year')::int = 2014,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00004,metadata->>'ticker' = 'AAL' AND (metadata->>'year')::int = 2015,48,0.0013384641124309855,True,natural,far_below,far_below
+finqa_00005,metadata->>'ticker' = 'AAL' AND (metadata->>'year')::int = 2016,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00006,metadata->>'ticker' = 'AAPL' AND (metadata->>'year')::int = 2003,86,0.002398081534772182,True,natural,far_below,far_below
+finqa_00007,metadata->>'ticker' = 'AAPL' AND (metadata->>'year')::int = 2004,32,0.0008923094082873236,True,natural,far_below,far_below
+finqa_00008,metadata->>'ticker' = 'AAPL' AND (metadata->>'year')::int = 2005,41,0.0011432714293681335,True,natural,far_below,far_below
+finqa_00009,metadata->>'ticker' = 'AAPL' AND (metadata->>'year')::int = 2006,234,0.006525012548101054,True,natural,far_below,far_below
+finqa_00010,metadata->>'ticker' = 'ABC' AND (metadata->>'year')::int = 2005,84,0.0023423121967542245,True,natural,far_below,far_below
+finqa_00011,metadata->>'ticker' = 'ABMD' AND (metadata->>'year')::int = 2005,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00012,metadata->>'ticker' = 'ABMD' AND (metadata->>'year')::int = 2006,96,0.002676928224861971,True,natural,far_below,far_below
+finqa_00013,metadata->>'ticker' = 'ABMD' AND (metadata->>'year')::int = 2007,156,0.004350008365400703,True,natural,far_below,far_below
+finqa_00014,metadata->>'ticker' = 'ABMD' AND (metadata->>'year')::int = 2008,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00015,metadata->>'ticker' = 'ABMD' AND (metadata->>'year')::int = 2012,188,0.005242317773688027,True,natural,far_below,far_below
+finqa_00016,metadata->>'ticker' = 'ADBE' AND (metadata->>'year')::int = 1999,54,0.0015057721264848587,True,natural,far_below,far_below
+finqa_00017,metadata->>'ticker' = 'ADBE' AND (metadata->>'year')::int = 2008,232,0.006469243210083096,True,natural,far_below,far_below
+finqa_00018,metadata->>'ticker' = 'ADI' AND (metadata->>'year')::int = 2010,137,0.0038201996542301044,True,natural,far_below,far_below
+finqa_00019,metadata->>'ticker' = 'ADI' AND (metadata->>'year')::int = 2011,52,0.0014500027884669009,True,natural,far_below,far_below
+finqa_00020,metadata->>'ticker' = 'ADI' AND (metadata->>'year')::int = 2019,57,0.0015894261335117953,True,natural,far_below,far_below
+finqa_00021,metadata->>'ticker' = 'AES' AND (metadata->>'year')::int = 2001,192,0.005353856449723942,True,natural,far_below,far_below
+finqa_00022,metadata->>'ticker' = 'AES' AND (metadata->>'year')::int = 2002,104,0.0029000055769338017,True,natural,far_below,far_below
+finqa_00023,metadata->>'ticker' = 'AES' AND (metadata->>'year')::int = 2010,72,0.002007696168646478,True,natural,far_below,far_below
+finqa_00024,metadata->>'ticker' = 'ALLE' AND (metadata->>'year')::int = 2015,66,0.001840388154592605,True,natural,far_below,far_below
+finqa_00025,metadata->>'ticker' = 'ALXN' AND (metadata->>'year')::int = 2016,136,0.0037923149852211254,True,natural,far_below,far_below
+finqa_00026,metadata->>'ticker' = 'AMAT' AND (metadata->>'year')::int = 2013,34,0.0009480787463052813,True,natural,far_below,far_below
+finqa_00027,metadata->>'ticker' = 'AMAT' AND (metadata->>'year')::int = 2018,34,0.0009480787463052813,True,natural,far_below,far_below
+finqa_00028,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2003,168,0.004684624393508449,True,natural,far_below,far_below
+finqa_00029,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2005,60,0.0016730801405387319,True,natural,far_below,far_below
+finqa_00030,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2006,184,0.005130779097652111,True,natural,far_below,far_below
+finqa_00031,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2007,248,0.006915397914226758,True,natural,far_below,far_below
+finqa_00032,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2008,236,0.0065807818861190115,True,natural,far_below,far_below
+finqa_00033,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2010,30,0.0008365400702693659,True,natural,far_below,far_below
+finqa_00034,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2012,185,0.00515866376666109,True,natural,far_below,far_below
+finqa_00035,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2014,134,0.0037365456472031678,True,natural,far_below,far_below
+finqa_00036,metadata->>'ticker' = 'AMT' AND (metadata->>'year')::int = 2016,204,0.005688472477831688,True,natural,far_below,far_below
+finqa_00037,metadata->>'ticker' = 'ANET' AND (metadata->>'year')::int = 2015,56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00038,metadata->>'ticker' = 'ANSS' AND (metadata->>'year')::int = 2012,128,0.0035692376331492946,True,natural,far_below,far_below
+finqa_00039,metadata->>'ticker' = 'ANSS' AND (metadata->>'year')::int = 2016,36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00040,metadata->>'ticker' = 'AON' AND (metadata->>'year')::int = 2007,162,0.004517316379454576,True,natural,far_below,far_below
+finqa_00041,metadata->>'ticker' = 'AON' AND (metadata->>'year')::int = 2010,58,0.001617310802520774,True,natural,far_below,far_below
+finqa_00042,metadata->>'ticker' = 'AON' AND (metadata->>'year')::int = 2015,108,0.0030115442529697173,True,natural,far_below,far_below
+finqa_00043,metadata->>'ticker' = 'AON' AND (metadata->>'year')::int = 2018,144,0.004015392337292956,True,natural,far_below,far_below
+finqa_00044,metadata->>'ticker' = 'AOS' AND (metadata->>'year')::int = 2010,14,0.00039038536612570406,False,natural,far_below,far_below
+finqa_00045,metadata->>'ticker' = 'APD' AND (metadata->>'year')::int = 2016,64,0.0017846188165746473,True,natural,far_below,far_below
+finqa_00046,metadata->>'ticker' = 'APD' AND (metadata->>'year')::int = 2018,49,0.0013663487814399643,True,natural,far_below,far_below
+finqa_00047,metadata->>'ticker' = 'AWK' AND (metadata->>'year')::int = 2012,92,0.0025653895488260553,True,natural,far_below,far_below
+finqa_00048,metadata->>'ticker' = 'AWK' AND (metadata->>'year')::int = 2013,92,0.0025653895488260553,True,natural,far_below,far_below
+finqa_00049,metadata->>'ticker' = 'AWK' AND (metadata->>'year')::int = 2014,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00050,metadata->>'ticker' = 'AWK' AND (metadata->>'year')::int = 2017,1064,0.02966928782555351,True,natural,far_below,far_below
+finqa_00051,metadata->>'ticker' = 'AWK' AND (metadata->>'year')::int = 2018,60,0.0016730801405387319,True,natural,far_below,far_below
+finqa_00052,metadata->>'ticker' = 'BDX' AND (metadata->>'year')::int = 2018,81,0.002258658189727288,True,natural,far_below,far_below
+finqa_00053,metadata->>'ticker' = 'BKNG' AND (metadata->>'year')::int = 2016,36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00054,metadata->>'ticker' = 'BKR' AND (metadata->>'year')::int = 2017,124,0.003457698957113379,True,natural,far_below,far_below
+finqa_00055,metadata->>'ticker' = 'BLK' AND (metadata->>'year')::int = 2012,235,0.006552897217110033,True,natural,far_below,far_below
+finqa_00056,metadata->>'ticker' = 'BLK' AND (metadata->>'year')::int = 2014,208,0.0058000111538676034,True,natural,far_below,far_below
+finqa_00057,metadata->>'ticker' = 'BLK' AND (metadata->>'year')::int = 2015,200,0.005576933801795773,True,natural,far_below,far_below
+finqa_00058,metadata->>'ticker' = 'BLK' AND (metadata->>'year')::int = 2017,138,0.003848084323239083,True,natural,far_below,far_below
+finqa_00059,metadata->>'ticker' = 'BLL' AND (metadata->>'year')::int = 2006,124,0.003457698957113379,True,natural,far_below,far_below
+finqa_00060,metadata->>'ticker' = 'BLL' AND (metadata->>'year')::int = 2010,236,0.0065807818861190115,True,natural,far_below,far_below
+finqa_00061,metadata->>'ticker' = 'BLL' AND (metadata->>'year')::int = 2011,112,0.0031230829290056325,True,natural,far_below,far_below
+finqa_00062,metadata->>'ticker' = 'BLL' AND (metadata->>'year')::int = 2012,40,0.0011153867603591544,True,natural,far_below,far_below
+finqa_00063,metadata->>'ticker' = 'C' AND (metadata->>'year')::int = 2008,293,0.008170208019630807,True,natural,far_below,far_below
+finqa_00064,metadata->>'ticker' = 'C' AND (metadata->>'year')::int = 2009,265,0.0073894372873793985,True,natural,far_below,far_below
+finqa_00065,metadata->>'ticker' = 'C' AND (metadata->>'year')::int = 2015,105,0.0029278902459427807,True,natural,far_below,far_below
+finqa_00066,metadata->>'ticker' = 'C' AND (metadata->>'year')::int = 2018,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00067,metadata->>'ticker' = 'CB' AND (metadata->>'year')::int = 2008,116,0.003234621605041548,True,natural,far_below,far_below
+finqa_00068,metadata->>'ticker' = 'CB' AND (metadata->>'year')::int = 2010,118,0.0032903909430595057,True,natural,far_below,far_below
+finqa_00069,metadata->>'ticker' = 'CDNS' AND (metadata->>'year')::int = 2015,44,0.00122692543639507,True,natural,far_below,far_below
+finqa_00070,metadata->>'ticker' = 'CDNS' AND (metadata->>'year')::int = 2018,104,0.0029000055769338017,True,natural,far_below,far_below
+finqa_00071,metadata->>'ticker' = 'CDW' AND (metadata->>'year')::int = 2015,166,0.004628855055490491,True,natural,far_below,far_below
+finqa_00072,metadata->>'ticker' = 'CDW' AND (metadata->>'year')::int = 2017,38,0.0010596174223411968,True,natural,far_below,far_below
+finqa_00073,metadata->>'ticker' = 'CE' AND (metadata->>'year')::int = 2009,34,0.0009480787463052813,True,natural,far_below,far_below
+finqa_00074,metadata->>'ticker' = 'CE' AND (metadata->>'year')::int = 2013,66,0.001840388154592605,True,natural,far_below,far_below
+finqa_00075,metadata->>'ticker' = 'CE' AND (metadata->>'year')::int = 2016,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00076,metadata->>'ticker' = 'CMCSA' AND (metadata->>'year')::int = 2008,105,0.0029278902459427807,True,natural,far_below,far_below
+finqa_00077,metadata->>'ticker' = 'CMCSA' AND (metadata->>'year')::int = 2015,194,0.0054096257877419,True,natural,far_below,far_below
+finqa_00078,metadata->>'ticker' = 'CME' AND (metadata->>'year')::int = 2010,550,0.015336567954938376,True,natural,far_below,far_below
+finqa_00079,metadata->>'ticker' = 'CME' AND (metadata->>'year')::int = 2017,195,0.005437510456750878,True,natural,far_below,far_below
+finqa_00080,metadata->>'ticker' = 'D' AND (metadata->>'year')::int = 2002,164,0.004573085717472534,True,natural,far_below,far_below
+finqa_00081,metadata->>'ticker' = 'DG' AND (metadata->>'year')::int = 2005,93,0.0025932742178350343,True,natural,far_below,far_below
+finqa_00082,metadata->>'ticker' = 'DG' AND (metadata->>'year')::int = 2007,38,0.0010596174223411968,True,natural,far_below,far_below
+finqa_00083,metadata->>'ticker' = 'DG' AND (metadata->>'year')::int = 2009,19,0.0005298087111705984,True,natural,far_below,far_below
+finqa_00084,metadata->>'ticker' = 'DG' AND (metadata->>'year')::int = 2010,38,0.0010596174223411968,True,natural,far_below,far_below
+finqa_00085,metadata->>'ticker' = 'DISCA' AND (metadata->>'year')::int = 2011,64,0.0017846188165746473,True,natural,far_below,far_below
+finqa_00086,metadata->>'ticker' = 'DISCA' AND (metadata->>'year')::int = 2014,54,0.0015057721264848587,True,natural,far_below,far_below
+finqa_00087,metadata->>'ticker' = 'DISH' AND (metadata->>'year')::int = 2010,48,0.0013384641124309855,True,natural,far_below,far_below
+finqa_00088,metadata->>'ticker' = 'DISH' AND (metadata->>'year')::int = 2011,128,0.0035692376331492946,True,natural,far_below,far_below
+finqa_00089,metadata->>'ticker' = 'DRE' AND (metadata->>'year')::int = 2002,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00090,metadata->>'ticker' = 'DRE' AND (metadata->>'year')::int = 2005,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00091,metadata->>'ticker' = 'DRE' AND (metadata->>'year')::int = 2007,78,0.0021750041827003513,True,natural,far_below,far_below
+finqa_00092,metadata->>'ticker' = 'DRE' AND (metadata->>'year')::int = 2008,108,0.0030115442529697173,True,natural,far_below,far_below
+finqa_00093,metadata->>'ticker' = 'DRE' AND (metadata->>'year')::int = 2012,22,0.000613462718197535,True,natural,far_below,far_below
+finqa_00094,metadata->>'ticker' = 'DVN' AND (metadata->>'year')::int = 2012,78,0.0021750041827003513,True,natural,far_below,far_below
+finqa_00095,metadata->>'ticker' = 'DVN' AND (metadata->>'year')::int = 2014,93,0.0025932742178350343,True,natural,far_below,far_below
+finqa_00096,metadata->>'ticker' = 'DVN' AND (metadata->>'year')::int = 2015,87,0.002425966203781161,True,natural,far_below,far_below
+finqa_00097,metadata->>'ticker' = 'DVN' AND (metadata->>'year')::int = 2018,80,0.002230773520718309,True,natural,far_below,far_below
+finqa_00098,metadata->>'ticker' = 'DXC' AND (metadata->>'year')::int = 2018,75,0.0020913501756734147,True,natural,far_below,far_below
+finqa_00099,metadata->>'ticker' = 'ECL' AND (metadata->>'year')::int = 2016,164,0.004573085717472534,True,natural,far_below,far_below
+finqa_00100,metadata->>'ticker' = 'ECL' AND (metadata->>'year')::int = 2017,244,0.006803859238190843,True,natural,far_below,far_below
+finqa_00101,metadata->>'ticker' = 'EL' AND (metadata->>'year')::int = 2008,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00102,metadata->>'ticker' = 'EMR' AND (metadata->>'year')::int = 2017,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00103,metadata->>'ticker' = 'EOG' AND (metadata->>'year')::int = 2018,72,0.002007696168646478,True,natural,far_below,far_below
+finqa_00104,metadata->>'ticker' = 'ETFC' AND (metadata->>'year')::int = 2007,64,0.0017846188165746473,True,natural,far_below,far_below
+finqa_00105,metadata->>'ticker' = 'ETFC' AND (metadata->>'year')::int = 2011,60,0.0016730801405387319,True,natural,far_below,far_below
+finqa_00106,metadata->>'ticker' = 'ETFC' AND (metadata->>'year')::int = 2012,107,0.0029836595839607383,True,natural,far_below,far_below
+finqa_00107,metadata->>'ticker' = 'ETFC' AND (metadata->>'year')::int = 2018,26,0.0007250013942334504,True,natural,far_below,far_below
+finqa_00108,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2003,42,0.0011711560983771122,True,natural,far_below,far_below
+finqa_00109,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2004,200,0.005576933801795773,True,natural,far_below,far_below
+finqa_00110,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2008,158,0.004405777703418661,True,natural,far_below,far_below
+finqa_00111,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2011,162,0.004517316379454576,True,natural,far_below,far_below
+finqa_00112,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2013,96,0.002676928224861971,True,natural,far_below,far_below
+finqa_00113,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2015,84,0.0023423121967542245,True,natural,far_below,far_below
+finqa_00114,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2016,260,0.007250013942334504,True,natural,far_below,far_below
+finqa_00115,metadata->>'ticker' = 'ETR' AND (metadata->>'year')::int = 2017,117,0.003262506274050527,True,natural,far_below,far_below
+finqa_00116,metadata->>'ticker' = 'FBHS' AND (metadata->>'year')::int = 2017,130,0.003625006971167252,True,natural,far_below,far_below
+finqa_00117,metadata->>'ticker' = 'FIS' AND (metadata->>'year')::int = 2006,72,0.002007696168646478,True,natural,far_below,far_below
+finqa_00118,metadata->>'ticker' = 'FIS' AND (metadata->>'year')::int = 2010,25,0.0006971167252244716,True,natural,far_below,far_below
+finqa_00119,metadata->>'ticker' = 'FIS' AND (metadata->>'year')::int = 2012,64,0.0017846188165746473,True,natural,far_below,far_below
+finqa_00120,metadata->>'ticker' = 'FIS' AND (metadata->>'year')::int = 2016,272,0.007584629970442251,True,natural,far_below,far_below
+finqa_00121,metadata->>'ticker' = 'FIS' AND (metadata->>'year')::int = 2017,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00122,metadata->>'ticker' = 'GIS' AND (metadata->>'year')::int = 2015,34,0.0009480787463052813,True,natural,far_below,far_below
+finqa_00123,metadata->>'ticker' = 'GIS' AND (metadata->>'year')::int = 2017,152,0.004238469689364787,True,natural,far_below,far_below
+finqa_00124,metadata->>'ticker' = 'GIS' AND (metadata->>'year')::int = 2018,90,0.0025096202108080977,True,natural,far_below,far_below
+finqa_00125,metadata->>'ticker' = 'GIS' AND (metadata->>'year')::int = 2019,54,0.0015057721264848587,True,natural,far_below,far_below
+finqa_00126,metadata->>'ticker' = 'GPN' AND (metadata->>'year')::int = 2008,112,0.0031230829290056325,True,natural,far_below,far_below
+finqa_00127,metadata->>'ticker' = 'GPN' AND (metadata->>'year')::int = 2010,193,0.005381741118732921,True,natural,far_below,far_below
+finqa_00128,metadata->>'ticker' = 'GPN' AND (metadata->>'year')::int = 2013,170,0.004740393731526407,True,natural,far_below,far_below
+finqa_00129,metadata->>'ticker' = 'GPN' AND (metadata->>'year')::int = 2014,24,0.0006692320562154927,True,natural,far_below,far_below
+finqa_00130,metadata->>'ticker' = 'GPN' AND (metadata->>'year')::int = 2018,68,0.0018961574926105627,True,natural,far_below,far_below
+finqa_00131,metadata->>'ticker' = 'GRMN' AND (metadata->>'year')::int = 2006,52,0.0014500027884669009,True,natural,far_below,far_below
+finqa_00132,metadata->>'ticker' = 'GRMN' AND (metadata->>'year')::int = 2008,92,0.0025653895488260553,True,natural,far_below,far_below
+finqa_00133,metadata->>'ticker' = 'GS' AND (metadata->>'year')::int = 2012,332,0.009257710110980982,True,natural,far_below,far_below
+finqa_00134,metadata->>'ticker' = 'GS' AND (metadata->>'year')::int = 2013,488,0.013607718476381685,True,natural,far_below,far_below
+finqa_00135,metadata->>'ticker' = 'GS' AND (metadata->>'year')::int = 2014,380,0.010596174223411968,True,natural,far_below,far_below
+finqa_00136,metadata->>'ticker' = 'GS' AND (metadata->>'year')::int = 2015,256,0.007138475266298589,True,natural,far_below,far_below
+finqa_00137,metadata->>'ticker' = 'GS' AND (metadata->>'year')::int = 2017,440,0.0122692543639507,True,natural,far_below,far_below
+finqa_00138,metadata->>'ticker' = 'GS' AND (metadata->>'year')::int = 2018,288,0.008030784674585912,True,natural,far_below,far_below
+finqa_00139,metadata->>'ticker' = 'HIG' AND (metadata->>'year')::int = 2004,159,0.00443366237242764,True,natural,far_below,far_below
+finqa_00140,metadata->>'ticker' = 'HIG' AND (metadata->>'year')::int = 2011,136,0.0037923149852211254,True,natural,far_below,far_below
+finqa_00141,metadata->>'ticker' = 'HII' AND (metadata->>'year')::int = 2015,89,0.0024817355417991187,True,natural,far_below,far_below
+finqa_00142,metadata->>'ticker' = 'HOLX' AND (metadata->>'year')::int = 2003,83,0.0023144275277452455,True,natural,far_below,far_below
+finqa_00143,metadata->>'ticker' = 'HOLX' AND (metadata->>'year')::int = 2006,135,0.0037644303162121468,True,natural,far_below,far_below
+finqa_00144,metadata->>'ticker' = 'HOLX' AND (metadata->>'year')::int = 2007,236,0.0065807818861190115,True,natural,far_below,far_below
+finqa_00145,metadata->>'ticker' = 'HOLX' AND (metadata->>'year')::int = 2008,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00146,metadata->>'ticker' = 'HOLX' AND (metadata->>'year')::int = 2009,189,0.005270202442697005,True,natural,far_below,far_below
+finqa_00147,metadata->>'ticker' = 'HST' AND (metadata->>'year')::int = 2018,23,0.0006413473872065138,True,natural,far_below,far_below
+finqa_00148,metadata->>'ticker' = 'HUM' AND (metadata->>'year')::int = 2009,54,0.0015057721264848587,True,natural,far_below,far_below
+finqa_00149,metadata->>'ticker' = 'HUM' AND (metadata->>'year')::int = 2014,8,0.0002230773520718309,False,natural,far_below,far_below
+finqa_00150,metadata->>'ticker' = 'HUM' AND (metadata->>'year')::int = 2017,44,0.00122692543639507,True,natural,far_below,far_below
+finqa_00151,metadata->>'ticker' = 'HWM' AND (metadata->>'year')::int = 2015,66,0.001840388154592605,True,natural,far_below,far_below
+finqa_00152,metadata->>'ticker' = 'HWM' AND (metadata->>'year')::int = 2017,11,0.0003067313590987675,False,natural,far_below,far_below
+finqa_00153,metadata->>'ticker' = 'HWM' AND (metadata->>'year')::int = 2018,20,0.0005576933801795772,True,natural,far_below,far_below
+finqa_00154,metadata->>'ticker' = 'ILMN' AND (metadata->>'year')::int = 2003,33,0.0009201940772963025,True,natural,far_below,far_below
+finqa_00155,metadata->>'ticker' = 'ILMN' AND (metadata->>'year')::int = 2008,186,0.005186548435670069,True,natural,far_below,far_below
+finqa_00156,metadata->>'ticker' = 'INTC' AND (metadata->>'year')::int = 2013,52,0.0014500027884669009,True,natural,far_below,far_below
+finqa_00157,metadata->>'ticker' = 'INTC' AND (metadata->>'year')::int = 2015,580,0.01617310802520774,True,natural,far_below,far_below
+finqa_00158,metadata->>'ticker' = 'IP' AND (metadata->>'year')::int = 2006,697,0.019435614299258268,True,natural,far_below,far_below
+finqa_00159,metadata->>'ticker' = 'IP' AND (metadata->>'year')::int = 2009,276,0.007696168646478166,True,natural,far_below,far_below
+finqa_00160,metadata->>'ticker' = 'IPG' AND (metadata->>'year')::int = 2006,108,0.0030115442529697173,True,natural,far_below,far_below
+finqa_00161,metadata->>'ticker' = 'IPG' AND (metadata->>'year')::int = 2008,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00162,metadata->>'ticker' = 'IPG' AND (metadata->>'year')::int = 2017,100,0.0027884669008978865,True,natural,far_below,far_below
+finqa_00163,metadata->>'ticker' = 'JKHY' AND (metadata->>'year')::int = 2017,27,0.0007528860632424293,True,natural,far_below,far_below
+finqa_00164,metadata->>'ticker' = 'JKHY' AND (metadata->>'year')::int = 2019,45,0.0012548101054040489,True,natural,far_below,far_below
+finqa_00165,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2003,188,0.005242317773688027,True,natural,far_below,far_below
+finqa_00166,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2005,68,0.0018961574926105627,True,natural,far_below,far_below
+finqa_00167,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2008,160,0.004461547041436618,True,natural,far_below,far_below
+finqa_00168,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2009,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00169,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2010,191,0.005325971780714963,True,natural,far_below,far_below
+finqa_00170,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2012,48,0.0013384641124309855,True,natural,far_below,far_below
+finqa_00171,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2014,150,0.004182700351346829,True,natural,far_below,far_below
+finqa_00172,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2015,226,0.006301935196029223,True,natural,far_below,far_below
+finqa_00173,metadata->>'ticker' = 'JPM' AND (metadata->>'year')::int = 2018,252,0.007026936590262674,True,natural,far_below,far_below
+finqa_00174,metadata->>'ticker' = 'K' AND (metadata->>'year')::int = 2006,105,0.0029278902459427807,True,natural,far_below,far_below
+finqa_00175,metadata->>'ticker' = 'K' AND (metadata->>'year')::int = 2013,110,0.003067313590987675,True,natural,far_below,far_below
+finqa_00176,metadata->>'ticker' = 'KHC' AND (metadata->>'year')::int = 2018,105,0.0029278902459427807,True,natural,far_below,far_below
+finqa_00177,metadata->>'ticker' = 'L' AND (metadata->>'year')::int = 2009,56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00178,metadata->>'ticker' = 'LKQ' AND (metadata->>'year')::int = 2016,92,0.0025653895488260553,True,natural,far_below,far_below
+finqa_00179,metadata->>'ticker' = 'LMT' AND (metadata->>'year')::int = 2012,96,0.002676928224861971,True,natural,far_below,far_below
+finqa_00180,metadata->>'ticker' = 'LMT' AND (metadata->>'year')::int = 2014,321,0.008950978751882215,True,natural,far_below,far_below
+finqa_00181,metadata->>'ticker' = 'LMT' AND (metadata->>'year')::int = 2015,116,0.003234621605041548,True,natural,far_below,far_below
+finqa_00182,metadata->>'ticker' = 'LMT' AND (metadata->>'year')::int = 2016,104,0.0029000055769338017,True,natural,far_below,far_below
+finqa_00183,metadata->>'ticker' = 'MAR' AND (metadata->>'year')::int = 2004,96,0.002676928224861971,True,natural,far_below,far_below
+finqa_00184,metadata->>'ticker' = 'MAR' AND (metadata->>'year')::int = 2018,68,0.0018961574926105627,True,natural,far_below,far_below
+finqa_00185,metadata->>'ticker' = 'MAS' AND (metadata->>'year')::int = 2012,36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00186,metadata->>'ticker' = 'MAS' AND (metadata->>'year')::int = 2017,36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00187,metadata->>'ticker' = 'MKTX' AND (metadata->>'year')::int = 2004,100,0.0027884669008978865,True,natural,far_below,far_below
+finqa_00188,metadata->>'ticker' = 'MKTX' AND (metadata->>'year')::int = 2012,69,0.0019240421616195415,True,natural,far_below,far_below
+finqa_00189,metadata->>'ticker' = 'MMM' AND (metadata->>'year')::int = 2007,85,0.0023701968657632035,True,natural,far_below,far_below
+finqa_00190,metadata->>'ticker' = 'MMM' AND (metadata->>'year')::int = 2013,100,0.0027884669008978865,True,natural,far_below,far_below
+finqa_00191,metadata->>'ticker' = 'MMM' AND (metadata->>'year')::int = 2015,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00192,metadata->>'ticker' = 'MO' AND (metadata->>'year')::int = 2014,248,0.006915397914226758,True,natural,far_below,far_below
+finqa_00193,metadata->>'ticker' = 'MO' AND (metadata->>'year')::int = 2016,144,0.004015392337292956,True,natural,far_below,far_below
+finqa_00194,metadata->>'ticker' = 'MRK' AND (metadata->>'year')::int = 2013,226,0.006301935196029223,True,natural,far_below,far_below
+finqa_00195,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2003,213,0.005939434498912498,True,natural,far_below,far_below
+finqa_00196,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2004,156,0.004350008365400703,True,natural,far_below,far_below
+finqa_00197,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2006,280,0.007807707322514082,True,natural,far_below,far_below
+finqa_00198,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2007,60,0.0016730801405387319,True,natural,far_below,far_below
+finqa_00199,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2008,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00200,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2011,32,0.0008923094082873236,True,natural,far_below,far_below
+finqa_00201,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2013,265,0.0073894372873793985,True,natural,far_below,far_below
+finqa_00202,metadata->>'ticker' = 'MRO' AND (metadata->>'year')::int = 2017,184,0.005130779097652111,True,natural,far_below,far_below
+finqa_00203,metadata->>'ticker' = 'MS' AND (metadata->>'year')::int = 2007,70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00204,metadata->>'ticker' = 'MS' AND (metadata->>'year')::int = 2013,126,0.003513468295131337,True,natural,far_below,far_below
+finqa_00205,metadata->>'ticker' = 'MSI' AND (metadata->>'year')::int = 2007,78,0.0021750041827003513,True,natural,far_below,far_below
+finqa_00206,metadata->>'ticker' = 'MSI' AND (metadata->>'year')::int = 2008,81,0.002258658189727288,True,natural,far_below,far_below
+finqa_00207,metadata->>'ticker' = 'MSI' AND (metadata->>'year')::int = 2012,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00208,metadata->>'ticker' = 'MSI' AND (metadata->>'year')::int = 2014,111,0.003095198259996654,True,natural,far_below,far_below
+finqa_00209,metadata->>'ticker' = 'NCLH' AND (metadata->>'year')::int = 2018,232,0.006469243210083096,True,natural,far_below,far_below
+finqa_00210,metadata->>'ticker' = 'NKE' AND (metadata->>'year')::int = 2009,474,0.013217333110255981,True,natural,far_below,far_below
+finqa_00211,metadata->>'ticker' = 'NWS' AND (metadata->>'year')::int = 2017,64,0.0017846188165746473,True,natural,far_below,far_below
+finqa_00212,metadata->>'ticker' = 'NWS' AND (metadata->>'year')::int = 2019,38,0.0010596174223411968,True,natural,far_below,far_below
+finqa_00213,metadata->>'ticker' = 'PKG' AND (metadata->>'year')::int = 2002,48,0.0013384641124309855,True,natural,far_below,far_below
+finqa_00214,metadata->>'ticker' = 'PKG' AND (metadata->>'year')::int = 2005,136,0.0037923149852211254,True,natural,far_below,far_below
+finqa_00215,metadata->>'ticker' = 'PKG' AND (metadata->>'year')::int = 2013,28,0.0007807707322514081,True,natural,far_below,far_below
+finqa_00216,metadata->>'ticker' = 'PM' AND (metadata->>'year')::int = 2017,82,0.002286542858736267,True,natural,far_below,far_below
+finqa_00217,metadata->>'ticker' = 'PNC' AND (metadata->>'year')::int = 2007,58,0.001617310802520774,True,natural,far_below,far_below
+finqa_00218,metadata->>'ticker' = 'PNC' AND (metadata->>'year')::int = 2008,86,0.002398081534772182,True,natural,far_below,far_below
+finqa_00219,metadata->>'ticker' = 'PNC' AND (metadata->>'year')::int = 2012,765,0.02133177179186883,True,natural,far_below,far_below
+finqa_00220,metadata->>'ticker' = 'PNC' AND (metadata->>'year')::int = 2014,74,0.002063465506664436,True,natural,far_below,far_below
+finqa_00221,metadata->>'ticker' = 'PNC' AND (metadata->>'year')::int = 2015,82,0.002286542858736267,True,natural,far_below,far_below
+finqa_00222,metadata->>'ticker' = 'PPG' AND (metadata->>'year')::int = 2006,232,0.006469243210083096,True,natural,far_below,far_below
+finqa_00223,metadata->>'ticker' = 'PPG' AND (metadata->>'year')::int = 2008,164,0.004573085717472534,True,natural,far_below,far_below
+finqa_00224,metadata->>'ticker' = 'PPG' AND (metadata->>'year')::int = 2012,200,0.005576933801795773,True,natural,far_below,far_below
+finqa_00225,metadata->>'ticker' = 'PPG' AND (metadata->>'year')::int = 2018,124,0.003457698957113379,True,natural,far_below,far_below
+finqa_00226,metadata->>'ticker' = 'RCL' AND (metadata->>'year')::int = 2012,135,0.0037644303162121468,True,natural,far_below,far_below
+finqa_00227,metadata->>'ticker' = 'RCL' AND (metadata->>'year')::int = 2016,36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00228,metadata->>'ticker' = 'RL' AND (metadata->>'year')::int = 2008,56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00229,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2009,44,0.00122692543639507,True,natural,far_below,far_below
+finqa_00230,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2010,106,0.0029557749149517593,True,natural,far_below,far_below
+finqa_00231,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2012,54,0.0015057721264848587,True,natural,far_below,far_below
+finqa_00232,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2013,40,0.0011153867603591544,True,natural,far_below,far_below
+finqa_00233,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2015,56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00234,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2016,90,0.0025096202108080977,True,natural,far_below,far_below
+finqa_00235,metadata->>'ticker' = 'RSG' AND (metadata->>'year')::int = 2018,104,0.0029000055769338017,True,natural,far_below,far_below
+finqa_00236,metadata->>'ticker' = 'SLB' AND (metadata->>'year')::int = 2012,38,0.0010596174223411968,True,natural,far_below,far_below
+finqa_00237,metadata->>'ticker' = 'SLB' AND (metadata->>'year')::int = 2015,29,0.000808655401260387,True,natural,far_below,far_below
+finqa_00238,metadata->>'ticker' = 'SLG' AND (metadata->>'year')::int = 2001,123,0.0034298142881044004,True,natural,far_below,far_below
+finqa_00239,metadata->>'ticker' = 'SLG' AND (metadata->>'year')::int = 2011,264,0.00736155261837042,True,natural,far_below,far_below
+finqa_00240,metadata->>'ticker' = 'SNA' AND (metadata->>'year')::int = 2007,274,0.007640399308460209,True,natural,far_below,far_below
+finqa_00241,metadata->>'ticker' = 'SNA' AND (metadata->>'year')::int = 2012,87,0.002425966203781161,True,natural,far_below,far_below
+finqa_00242,metadata->>'ticker' = 'SNA' AND (metadata->>'year')::int = 2013,240,0.0066923205621549275,True,natural,far_below,far_below
+finqa_00243,metadata->>'ticker' = 'SNA' AND (metadata->>'year')::int = 2018,66,0.001840388154592605,True,natural,far_below,far_below
+finqa_00244,metadata->>'ticker' = 'STT' AND (metadata->>'year')::int = 2006,140,0.003903853661257041,True,natural,far_below,far_below
+finqa_00245,metadata->>'ticker' = 'STT' AND (metadata->>'year')::int = 2007,124,0.003457698957113379,True,natural,far_below,far_below
+finqa_00246,metadata->>'ticker' = 'STT' AND (metadata->>'year')::int = 2009,158,0.004405777703418661,True,natural,far_below,far_below
+finqa_00247,metadata->>'ticker' = 'STT' AND (metadata->>'year')::int = 2011,104,0.0029000055769338017,True,natural,far_below,far_below
+finqa_00248,metadata->>'ticker' = 'STT' AND (metadata->>'year')::int = 2014,7,0.00019519268306285203,False,natural,far_below,far_below
+finqa_00249,metadata->>'ticker' = 'SYY' AND (metadata->>'year')::int = 2005,25,0.0006971167252244716,True,natural,far_below,far_below
+finqa_00250,metadata->>'ticker' = 'SYY' AND (metadata->>'year')::int = 2006,66,0.001840388154592605,True,natural,far_below,far_below
+finqa_00251,metadata->>'ticker' = 'TFX' AND (metadata->>'year')::int = 2015,78,0.0021750041827003513,True,natural,far_below,far_below
+finqa_00252,metadata->>'ticker' = 'TFX' AND (metadata->>'year')::int = 2017,84,0.0023423121967542245,True,natural,far_below,far_below
+finqa_00253,metadata->>'ticker' = 'TMUS' AND (metadata->>'year')::int = 2017,116,0.003234621605041548,True,natural,far_below,far_below
+finqa_00254,metadata->>'ticker' = 'UA' AND (metadata->>'year')::int = 2007,44,0.00122692543639507,True,natural,far_below,far_below
+finqa_00255,metadata->>'ticker' = 'UA' AND (metadata->>'year')::int = 2011,62,0.0017288494785566895,True,natural,far_below,far_below
+finqa_00256,metadata->>'ticker' = 'UAA' AND (metadata->>'year')::int = 2016,36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00257,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2006,96,0.002676928224861971,True,natural,far_below,far_below
+finqa_00258,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2007,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00259,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2009,166,0.004628855055490491,True,natural,far_below,far_below
+finqa_00260,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2010,56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00261,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2011,272,0.007584629970442251,True,natural,far_below,far_below
+finqa_00262,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2015,140,0.003903853661257041,True,natural,far_below,far_below
+finqa_00263,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2016,140,0.003903853661257041,True,natural,far_below,far_below
+finqa_00264,metadata->>'ticker' = 'UNP' AND (metadata->>'year')::int = 2018,152,0.004238469689364787,True,natural,far_below,far_below
+finqa_00265,metadata->>'ticker' = 'UPS' AND (metadata->>'year')::int = 2007,184,0.005130779097652111,True,natural,far_below,far_below
+finqa_00266,metadata->>'ticker' = 'UPS' AND (metadata->>'year')::int = 2010,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00267,metadata->>'ticker' = 'UPS' AND (metadata->>'year')::int = 2012,32,0.0008923094082873236,True,natural,far_below,far_below
+finqa_00268,metadata->>'ticker' = 'UPS' AND (metadata->>'year')::int = 2016,52,0.0014500027884669009,True,natural,far_below,far_below
+finqa_00269,metadata->>'ticker' = 'V' AND (metadata->>'year')::int = 2008,75,0.0020913501756734147,True,natural,far_below,far_below
+finqa_00270,metadata->>'ticker' = 'V' AND (metadata->>'year')::int = 2010,75,0.0020913501756734147,True,natural,far_below,far_below
+finqa_00271,metadata->>'ticker' = 'V' AND (metadata->>'year')::int = 2014,44,0.00122692543639507,True,natural,far_below,far_below
+finqa_00272,metadata->>'ticker' = 'VNO' AND (metadata->>'year')::int = 2014,16,0.0004461547041436618,True,natural,far_below,far_below
+finqa_00273,metadata->>'ticker' = 'VRTX' AND (metadata->>'year')::int = 2006,132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00274,metadata->>'ticker' = 'WRK' AND (metadata->>'year')::int = 2018,175,0.004879817076571301,True,natural,far_below,far_below
+finqa_00275,metadata->>'ticker' = 'ZBH' AND (metadata->>'year')::int = 2007,108,0.0030115442529697173,True,natural,far_below,far_below
+finqa_00276,metadata->>'ticker' = 'ZBH' AND (metadata->>'year')::int = 2008,184,0.005130779097652111,True,natural,far_below,far_below
+finqa_00277,metadata->>'ticker' = 'ZBH' AND (metadata->>'year')::int = 2009,180,0.005019240421616195,True,natural,far_below,far_below
+finqa_00278,metadata->>'ticker' = 'ZBH' AND (metadata->>'year')::int = 2015,120,0.0033461602810774638,True,natural,far_below,far_below
+finqa_00279,metadata->>'ticker' = 'AAL',672,0.018738497574033796,True,natural,far_below,far_below
+finqa_00280,metadata->>'ticker' = 'AAPL',393,0.010958674920528693,True,natural,far_below,far_below
+finqa_00281,metadata->>'ticker' = 'ABC',84,0.0023423121967542245,True,natural,far_below,far_below
+finqa_00282,metadata->>'ticker' = 'ABMD',680,0.018961574926105628,True,natural,far_below,far_below
+finqa_00283,metadata->>'ticker' = 'ADBE',286,0.007975015336567954,True,natural,far_below,far_below
+finqa_00284,metadata->>'ticker' = 'ADI',246,0.006859628576208801,True,natural,far_below,far_below
+finqa_00285,metadata->>'ticker' = 'AES',368,0.010261558195304221,True,natural,far_below,far_below
+finqa_00286,metadata->>'ticker' = 'ALLE',66,0.001840388154592605,True,natural,far_below,far_below
+finqa_00287,metadata->>'ticker' = 'ALXN',136,0.0037923149852211254,True,natural,far_below,far_below
+finqa_00288,metadata->>'ticker' = 'AMAT',68,0.0018961574926105627,True,natural,far_below,far_below
+finqa_00289,metadata->>'ticker' = 'AMT',1449,0.040404885394010374,True,natural,near_below,far_below
+finqa_00290,metadata->>'ticker' = 'ANET',56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00291,metadata->>'ticker' = 'ANSS',164,0.004573085717472534,True,natural,far_below,far_below
+finqa_00292,metadata->>'ticker' = 'AON',472,0.013161563772238023,True,natural,far_below,far_below
+finqa_00293,metadata->>'ticker' = 'AOS',14,0.00039038536612570406,False,natural,far_below,far_below
+finqa_00294,metadata->>'ticker' = 'APD',113,0.0031509675980146115,True,natural,far_below,far_below
+finqa_00295,metadata->>'ticker' = 'AWK',1440,0.04015392337292956,True,natural,near_below,far_below
+finqa_00296,metadata->>'ticker' = 'BDX',81,0.002258658189727288,True,natural,far_below,far_below
+finqa_00297,metadata->>'ticker' = 'BKNG',36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00298,metadata->>'ticker' = 'BKR',124,0.003457698957113379,True,natural,far_below,far_below
+finqa_00299,metadata->>'ticker' = 'BLK',781,0.02177792649601249,True,natural,far_below,far_below
+finqa_00300,metadata->>'ticker' = 'BLL',512,0.014276950532597178,True,natural,far_below,far_below
+finqa_00301,metadata->>'ticker' = 'C',783,0.02183369583403045,True,natural,far_below,far_below
+finqa_00302,metadata->>'ticker' = 'CB',234,0.006525012548101054,True,natural,far_below,far_below
+finqa_00303,metadata->>'ticker' = 'CDNS',148,0.004126931013328872,True,natural,far_below,far_below
+finqa_00304,metadata->>'ticker' = 'CDW',204,0.005688472477831688,True,natural,far_below,far_below
+finqa_00305,metadata->>'ticker' = 'CE',220,0.00613462718197535,True,natural,far_below,far_below
+finqa_00306,metadata->>'ticker' = 'CMCSA',299,0.00833751603368468,True,natural,far_below,far_below
+finqa_00307,metadata->>'ticker' = 'CME',745,0.020774078411689254,True,natural,far_below,far_below
+finqa_00308,metadata->>'ticker' = 'D',164,0.004573085717472534,True,natural,far_below,far_below
+finqa_00309,metadata->>'ticker' = 'DG',188,0.005242317773688027,True,natural,far_below,far_below
+finqa_00310,metadata->>'ticker' = 'DISCA',118,0.0032903909430595057,True,natural,far_below,far_below
+finqa_00311,metadata->>'ticker' = 'DISH',176,0.00490770174558028,True,natural,far_below,far_below
+finqa_00312,metadata->>'ticker' = 'DRE',410,0.011432714293681335,True,natural,far_below,far_below
+finqa_00313,metadata->>'ticker' = 'DVN',338,0.009425018125034856,True,natural,far_below,far_below
+finqa_00314,metadata->>'ticker' = 'DXC',75,0.0020913501756734147,True,natural,far_below,far_below
+finqa_00315,metadata->>'ticker' = 'ECL',408,0.011376944955663377,True,natural,far_below,far_below
+finqa_00316,metadata->>'ticker' = 'EL',70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00317,metadata->>'ticker' = 'EMR',70,0.0019519268306285205,True,natural,far_below,far_below
+finqa_00318,metadata->>'ticker' = 'EOG',72,0.002007696168646478,True,natural,far_below,far_below
+finqa_00319,metadata->>'ticker' = 'ETFC',257,0.007166359935307568,True,natural,far_below,far_below
+finqa_00320,metadata->>'ticker' = 'ETR',1119,0.03120294462104735,True,natural,far_below,far_below
+finqa_00321,metadata->>'ticker' = 'FBHS',130,0.003625006971167252,True,natural,far_below,far_below
+finqa_00322,metadata->>'ticker' = 'FIS',553,0.01542022196196531,True,natural,far_below,far_below
+finqa_00323,metadata->>'ticker' = 'GIS',330,0.009201940772963026,True,natural,far_below,far_below
+finqa_00324,metadata->>'ticker' = 'GPN',567,0.015810607328091017,True,natural,far_below,far_below
+finqa_00325,metadata->>'ticker' = 'GRMN',144,0.004015392337292956,True,natural,far_below,far_below
+finqa_00326,metadata->>'ticker' = 'GS',2184,0.06090011711560984,True,natural,near_below,far_below
+finqa_00327,metadata->>'ticker' = 'HIG',295,0.008225977357648765,True,natural,far_below,far_below
+finqa_00328,metadata->>'ticker' = 'HII',89,0.0024817355417991187,True,natural,far_below,far_below
+finqa_00329,metadata->>'ticker' = 'HOLX',713,0.01988176900340193,True,natural,far_below,far_below
+finqa_00330,metadata->>'ticker' = 'HST',23,0.0006413473872065138,True,natural,far_below,far_below
+finqa_00331,metadata->>'ticker' = 'HUM',106,0.0029557749149517593,True,natural,far_below,far_below
+finqa_00332,metadata->>'ticker' = 'HWM',97,0.00270481289387095,True,natural,far_below,far_below
+finqa_00333,metadata->>'ticker' = 'ILMN',219,0.006106742512966371,True,natural,far_below,far_below
+finqa_00334,metadata->>'ticker' = 'INTC',632,0.017623110813674642,True,natural,far_below,far_below
+finqa_00335,metadata->>'ticker' = 'IP',973,0.027131782945736434,True,natural,far_below,far_below
+finqa_00336,metadata->>'ticker' = 'IPG',328,0.009146171434945068,True,natural,far_below,far_below
+finqa_00337,metadata->>'ticker' = 'JKHY',72,0.002007696168646478,True,natural,far_below,far_below
+finqa_00338,metadata->>'ticker' = 'JPM',1353,0.0377279571691484,True,natural,near_below,far_below
+finqa_00339,metadata->>'ticker' = 'K',215,0.005995203836930456,True,natural,far_below,far_below
+finqa_00340,metadata->>'ticker' = 'KHC',105,0.0029278902459427807,True,natural,far_below,far_below
+finqa_00341,metadata->>'ticker' = 'L',56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00342,metadata->>'ticker' = 'LKQ',92,0.0025653895488260553,True,natural,far_below,far_below
+finqa_00343,metadata->>'ticker' = 'LMT',637,0.017762534158719537,True,natural,far_below,far_below
+finqa_00344,metadata->>'ticker' = 'MAR',164,0.004573085717472534,True,natural,far_below,far_below
+finqa_00345,metadata->>'ticker' = 'MAS',72,0.002007696168646478,True,natural,far_below,far_below
+finqa_00346,metadata->>'ticker' = 'MKTX',169,0.004712509062517428,True,natural,far_below,far_below
+finqa_00347,metadata->>'ticker' = 'MMM',255,0.00711059059728961,True,natural,far_below,far_below
+finqa_00348,metadata->>'ticker' = 'MO',392,0.010930790251519714,True,natural,far_below,far_below
+finqa_00349,metadata->>'ticker' = 'MRK',226,0.006301935196029223,True,natural,far_below,far_below
+finqa_00350,metadata->>'ticker' = 'MRO',1310,0.03652891640176231,True,natural,near_below,far_below
+finqa_00351,metadata->>'ticker' = 'MS',196,0.005465395125759857,True,natural,far_below,far_below
+finqa_00352,metadata->>'ticker' = 'MSI',402,0.011209636941609502,True,natural,far_below,far_below
+finqa_00353,metadata->>'ticker' = 'NCLH',232,0.006469243210083096,True,natural,far_below,far_below
+finqa_00354,metadata->>'ticker' = 'NKE',474,0.013217333110255981,True,natural,far_below,far_below
+finqa_00355,metadata->>'ticker' = 'NWS',102,0.002844236238915844,True,natural,far_below,far_below
+finqa_00356,metadata->>'ticker' = 'PKG',212,0.005911549829903519,True,natural,far_below,far_below
+finqa_00357,metadata->>'ticker' = 'PM',82,0.002286542858736267,True,natural,far_below,far_below
+finqa_00358,metadata->>'ticker' = 'PNC',1065,0.02969717249456249,True,natural,far_below,far_below
+finqa_00359,metadata->>'ticker' = 'PPG',720,0.02007696168646478,True,natural,far_below,far_below
+finqa_00360,metadata->>'ticker' = 'RCL',171,0.004768278400535386,True,natural,far_below,far_below
+finqa_00361,metadata->>'ticker' = 'RL',56,0.0015615414645028163,True,natural,far_below,far_below
+finqa_00362,metadata->>'ticker' = 'RSG',494,0.013775026490435558,True,natural,far_below,far_below
+finqa_00363,metadata->>'ticker' = 'SLB',67,0.0018682728236015839,True,natural,far_below,far_below
+finqa_00364,metadata->>'ticker' = 'SLG',387,0.01079136690647482,True,natural,far_below,far_below
+finqa_00365,metadata->>'ticker' = 'SNA',667,0.0185990742289889,True,natural,far_below,far_below
+finqa_00366,metadata->>'ticker' = 'STT',533,0.014862528581785734,True,natural,far_below,far_below
+finqa_00367,metadata->>'ticker' = 'SYY',91,0.0025375048798170767,True,natural,far_below,far_below
+finqa_00368,metadata->>'ticker' = 'TFX',162,0.004517316379454576,True,natural,far_below,far_below
+finqa_00369,metadata->>'ticker' = 'TMUS',116,0.003234621605041548,True,natural,far_below,far_below
+finqa_00370,metadata->>'ticker' = 'UA',106,0.0029557749149517593,True,natural,far_below,far_below
+finqa_00371,metadata->>'ticker' = 'UAA',36,0.001003848084323239,True,natural,far_below,far_below
+finqa_00372,metadata->>'ticker' = 'UNP',1142,0.03184429200825386,True,natural,far_below,far_below
+finqa_00373,metadata->>'ticker' = 'UPS',400,0.011153867603591546,True,natural,far_below,far_below
+finqa_00374,metadata->>'ticker' = 'V',194,0.0054096257877419,True,natural,far_below,far_below
+finqa_00375,metadata->>'ticker' = 'VNO',16,0.0004461547041436618,True,natural,far_below,far_below
+finqa_00376,metadata->>'ticker' = 'VRTX',132,0.00368077630918521,True,natural,far_below,far_below
+finqa_00377,metadata->>'ticker' = 'WRK',175,0.004879817076571301,True,natural,far_below,far_below
+finqa_00378,metadata->>'ticker' = 'ZBH',592,0.01650772405331549,True,natural,far_below,far_below
+finqa_00379,(metadata->>'year')::int = 1999,54,0.0015057721264848587,True,natural,far_below,far_below
+finqa_00380,(metadata->>'year')::int = 2001,315,0.008783670737828342,True,natural,far_below,far_below
+finqa_00381,(metadata->>'year')::int = 2002,448,0.01249233171602253,True,natural,far_below,far_below
+finqa_00382,(metadata->>'year')::int = 2003,813,0.022670235904299816,True,natural,far_below,far_below
+finqa_00383,(metadata->>'year')::int = 2004,743,0.020718309073671295,True,natural,far_below,far_below
+finqa_00384,(metadata->>'year')::int = 2005,697,0.019435614299258268,True,natural,far_below,far_below
+finqa_00385,(metadata->>'year')::int = 2006,2753,0.0767664937817188,True,natural,near_above,far_below
+finqa_00386,(metadata->>'year')::int = 2007,2187,0.060983771122636775,True,natural,near_below,far_below
+finqa_00387,(metadata->>'year')::int = 2008,2944,0.08209246556243377,True,natural,near_above,far_below
+finqa_00388,(metadata->>'year')::int = 2009,1985,0.05535106798282304,True,natural,near_below,far_below
+finqa_00389,(metadata->>'year')::int = 2010,2183,0.06087223244660086,True,natural,near_below,far_below
+finqa_00390,(metadata->>'year')::int = 2011,1448,0.040377000725001395,True,natural,near_below,far_below
+finqa_00391,(metadata->>'year')::int = 2012,3163,0.08819920807540015,True,natural,near_above,far_below
+finqa_00392,(metadata->>'year')::int = 2013,2389,0.0666164742624505,True,natural,near_below,far_below
+finqa_00393,(metadata->>'year')::int = 2014,2136,0.05956165300317885,True,natural,near_below,far_below
+finqa_00394,(metadata->>'year')::int = 2015,3100,0.08644247392783448,True,natural,near_above,far_below
+finqa_00395,(metadata->>'year')::int = 2016,2118,0.05905972896101723,True,natural,near_below,far_below
+finqa_00396,(metadata->>'year')::int = 2017,3580,0.09982711505214432,True,natural,near_above,far_below
+finqa_00397,(metadata->>'year')::int = 2018,2612,0.07283475545145279,True,natural,near_above,far_below
+finqa_00398,(metadata->>'year')::int = 2019,194,0.0054096257877419,True,natural,far_below,far_below
+finqa_00399,(metadata->>'year')::int BETWEEN 1999 AND 2001,369,0.0102894428643132,True,constructed,far_below,far_below
+finqa_00400,(metadata->>'year')::int BETWEEN 2001 AND 2002,763,0.021276002453850872,True,constructed,far_below,far_below
+finqa_00401,(metadata->>'year')::int BETWEEN 2002 AND 2003,1261,0.03516256762032235,True,constructed,far_below,far_below
+finqa_00402,(metadata->>'year')::int BETWEEN 2003 AND 2004,1556,0.043388544977971115,True,constructed,near_below,far_below
+finqa_00403,(metadata->>'year')::int BETWEEN 2004 AND 2005,1440,0.04015392337292956,True,constructed,near_below,far_below
+finqa_00404,(metadata->>'year')::int BETWEEN 2005 AND 2006,3450,0.09620210808097708,True,constructed,near_above,far_below
+finqa_00405,(metadata->>'year')::int BETWEEN 2006 AND 2007,4940,0.13775026490435557,True,constructed,near_above,far_below
+finqa_00406,(metadata->>'year')::int BETWEEN 2007 AND 2008,5131,0.14307623668507055,True,constructed,far_above,far_below
+finqa_00407,(metadata->>'year')::int BETWEEN 2008 AND 2009,4929,0.13744353354525682,True,constructed,near_above,far_below
+finqa_00408,(metadata->>'year')::int BETWEEN 2009 AND 2010,4168,0.1162233004294239,True,constructed,near_above,far_below
+finqa_00409,(metadata->>'year')::int BETWEEN 2010 AND 2011,3631,0.10124923317160225,True,constructed,near_above,far_below
+finqa_00410,(metadata->>'year')::int BETWEEN 2011 AND 2012,4611,0.12857620880040155,True,constructed,near_above,far_below
+finqa_00411,(metadata->>'year')::int BETWEEN 2012 AND 2013,5552,0.15481568233785065,True,constructed,far_above,far_below
+finqa_00412,(metadata->>'year')::int BETWEEN 2013 AND 2014,4525,0.12617812726562935,True,constructed,near_above,far_below
+finqa_00413,(metadata->>'year')::int BETWEEN 2014 AND 2015,5236,0.14600412693101333,True,constructed,far_above,far_below
+finqa_00414,(metadata->>'year')::int BETWEEN 2015 AND 2016,5218,0.1455022028888517,True,constructed,far_above,far_below
+finqa_00415,(metadata->>'year')::int BETWEEN 2016 AND 2017,5698,0.15888684401316155,True,constructed,far_above,far_below
+finqa_00416,(metadata->>'year')::int BETWEEN 2017 AND 2018,6192,0.17266187050359713,True,constructed,far_above,far_below
+finqa_00417,(metadata->>'year')::int BETWEEN 2018 AND 2019,2806,0.0782443812391947,True,constructed,near_above,far_below
+finqa_00418,(metadata->>'year')::int BETWEEN 1999 AND 2002,817,0.022781774580335732,True,constructed,far_below,far_below
+finqa_00419,(metadata->>'year')::int BETWEEN 2001 AND 2003,1576,0.04394623835815069,True,constructed,near_below,far_below
+finqa_00420,(metadata->>'year')::int BETWEEN 2002 AND 2004,2004,0.05588087669399364,True,constructed,near_below,far_below
+finqa_00421,(metadata->>'year')::int BETWEEN 2003 AND 2005,2253,0.06282415927722938,True,constructed,near_below,far_below
+finqa_00422,(metadata->>'year')::int BETWEEN 2004 AND 2006,4193,0.11692041715464838,True,constructed,near_above,far_below
+finqa_00423,(metadata->>'year')::int BETWEEN 2005 AND 2007,5637,0.15718587920361385,True,constructed,far_above,far_below
+finqa_00424,(metadata->>'year')::int BETWEEN 2006 AND 2008,7884,0.21984273046678937,True,constructed,far_above,near_below
+finqa_00425,(metadata->>'year')::int BETWEEN 2007 AND 2009,7116,0.1984273046678936,True,constructed,far_above,near_below
+finqa_00426,(metadata->>'year')::int BETWEEN 2008 AND 2010,7112,0.19831576599185768,True,constructed,far_above,near_below
+finqa_00427,(metadata->>'year')::int BETWEEN 2009 AND 2011,5616,0.1566003011544253,True,constructed,far_above,far_below
+finqa_00428,(metadata->>'year')::int BETWEEN 2010 AND 2012,6794,0.18944844124700239,True,constructed,far_above,near_below
+finqa_00429,(metadata->>'year')::int BETWEEN 2011 AND 2013,7000,0.19519268306285203,True,constructed,far_above,near_below
+finqa_00430,(metadata->>'year')::int BETWEEN 2012 AND 2014,7688,0.2143773353410295,True,constructed,far_above,near_below
+finqa_00431,(metadata->>'year')::int BETWEEN 2013 AND 2015,7625,0.21262060119346382,True,constructed,far_above,near_below
+finqa_00432,(metadata->>'year')::int BETWEEN 2014 AND 2016,7354,0.20506385589203055,True,constructed,far_above,near_below
+finqa_00433,(metadata->>'year')::int BETWEEN 2015 AND 2017,8798,0.24532931794099605,True,constructed,far_above,near_below
+finqa_00434,(metadata->>'year')::int BETWEEN 2016 AND 2018,8310,0.23172159946461435,True,constructed,far_above,near_below
+finqa_00435,(metadata->>'year')::int BETWEEN 2017 AND 2019,6386,0.17807149629133903,True,constructed,far_above,far_below
+finqa_00436,(metadata->>'year')::int BETWEEN 1999 AND 2003,1630,0.04545201048463555,True,constructed,near_below,far_below
+finqa_00437,(metadata->>'year')::int BETWEEN 2001 AND 2004,2319,0.06466454743182198,True,constructed,near_below,far_below
+finqa_00438,(metadata->>'year')::int BETWEEN 2002 AND 2005,2701,0.07531649099325191,True,constructed,near_above,far_below
+finqa_00439,(metadata->>'year')::int BETWEEN 2003 AND 2006,5006,0.1395906530589482,True,constructed,near_above,far_below
+finqa_00440,(metadata->>'year')::int BETWEEN 2004 AND 2007,6380,0.17790418827728516,True,constructed,far_above,far_below
+finqa_00441,(metadata->>'year')::int BETWEEN 2005 AND 2008,8581,0.23927834476604762,True,constructed,far_above,near_below
+finqa_00442,(metadata->>'year')::int BETWEEN 2006 AND 2009,9869,0.2751937984496124,True,constructed,far_above,near_below
+finqa_00443,(metadata->>'year')::int BETWEEN 2007 AND 2010,9299,0.25929953711449444,True,constructed,far_above,near_below
+finqa_00444,(metadata->>'year')::int BETWEEN 2008 AND 2011,8560,0.23869276671685907,True,constructed,far_above,near_below
+finqa_00445,(metadata->>'year')::int BETWEEN 2009 AND 2012,8779,0.24479950922982543,True,constructed,far_above,near_below
+finqa_00446,(metadata->>'year')::int BETWEEN 2010 AND 2013,9183,0.25606491550945293,True,constructed,far_above,near_below
+finqa_00447,(metadata->>'year')::int BETWEEN 2011 AND 2014,9136,0.2547543360660309,True,constructed,far_above,near_below
+finqa_00448,(metadata->>'year')::int BETWEEN 2012 AND 2015,10788,0.300819809268864,True,constructed,far_above,near_below
+finqa_00449,(metadata->>'year')::int BETWEEN 2013 AND 2016,9743,0.27168033015448106,True,constructed,far_above,near_below
+finqa_00450,(metadata->>'year')::int BETWEEN 2014 AND 2017,10934,0.3048909709441749,True,constructed,far_above,near_below
+finqa_00451,(metadata->>'year')::int BETWEEN 2015 AND 2018,11410,0.31816407339244884,True,constructed,far_above,near_below
+finqa_00452,(metadata->>'year')::int BETWEEN 2016 AND 2019,8504,0.23713122525235625,True,constructed,far_above,near_below
+finqa_00453,(metadata->>'year')::int BETWEEN 1999 AND 2004,2373,0.06617031955830684,True,constructed,near_below,far_below
+finqa_00454,(metadata->>'year')::int BETWEEN 2001 AND 2005,3016,0.08410016173108026,True,constructed,near_above,far_below
+finqa_00455,(metadata->>'year')::int BETWEEN 2002 AND 2006,5454,0.15208298477497073,True,constructed,far_above,far_below
+finqa_00456,(metadata->>'year')::int BETWEEN 2003 AND 2007,7193,0.20057442418158497,True,constructed,far_above,near_below
+finqa_00457,(metadata->>'year')::int BETWEEN 2004 AND 2008,9324,0.2599966538397189,True,constructed,far_above,near_below
+finqa_00458,(metadata->>'year')::int BETWEEN 2005 AND 2009,10566,0.29462941274887067,True,constructed,far_above,near_below
+finqa_00459,(metadata->>'year')::int BETWEEN 2006 AND 2010,12052,0.3360660308962133,True,constructed,far_above,near_below
+finqa_00460,(metadata->>'year')::int BETWEEN 2007 AND 2011,10747,0.2996765378394958,True,constructed,far_above,near_below
+finqa_00461,(metadata->>'year')::int BETWEEN 2008 AND 2012,11723,0.32689197479225923,True,constructed,far_above,near_below
+finqa_00462,(metadata->>'year')::int BETWEEN 2009 AND 2013,11168,0.31141598349227595,True,constructed,far_above,near_below
+finqa_00463,(metadata->>'year')::int BETWEEN 2010 AND 2014,11319,0.31562656851263177,True,constructed,far_above,near_below
+finqa_00464,(metadata->>'year')::int BETWEEN 2011 AND 2015,12236,0.34119680999386537,True,constructed,far_above,near_below
+finqa_00465,(metadata->>'year')::int BETWEEN 2012 AND 2016,12906,0.3598795382298812,True,constructed,far_above,near_below
+finqa_00466,(metadata->>'year')::int BETWEEN 2013 AND 2017,13323,0.3715074452066254,True,constructed,far_above,near_below
+finqa_00467,(metadata->>'year')::int BETWEEN 2014 AND 2018,13546,0.3777257263956277,True,constructed,far_above,near_below
+finqa_00468,(metadata->>'year')::int BETWEEN 2015 AND 2019,11604,0.32357369918019074,True,constructed,far_above,near_below
+finqa_00469,(metadata->>'year')::int BETWEEN 1999 AND 2005,3070,0.08560593385756511,True,constructed,near_above,far_below
+finqa_00470,(metadata->>'year')::int BETWEEN 2001 AND 2006,5769,0.16086665551279905,True,constructed,far_above,far_below
+finqa_00471,(metadata->>'year')::int BETWEEN 2002 AND 2007,7641,0.21306675589760748,True,constructed,far_above,near_below
+finqa_00472,(metadata->>'year')::int BETWEEN 2003 AND 2008,10137,0.2826668897440187,True,constructed,far_above,near_below
+finqa_00473,(metadata->>'year')::int BETWEEN 2004 AND 2009,11309,0.31534772182254195,True,constructed,far_above,near_below
+finqa_00474,(metadata->>'year')::int BETWEEN 2005 AND 2010,12749,0.3555016451954715,True,constructed,far_above,near_below
+finqa_00475,(metadata->>'year')::int BETWEEN 2006 AND 2011,13500,0.3764430316212147,True,constructed,far_above,near_below
+finqa_00476,(metadata->>'year')::int BETWEEN 2007 AND 2012,13910,0.387875745914896,True,constructed,far_above,near_above
+finqa_00477,(metadata->>'year')::int BETWEEN 2008 AND 2013,14112,0.3935084490547097,True,constructed,far_above,near_above
+finqa_00478,(metadata->>'year')::int BETWEEN 2009 AND 2014,13304,0.3709776364954548,True,constructed,far_above,near_below
+finqa_00479,(metadata->>'year')::int BETWEEN 2010 AND 2015,14419,0.4020690424404662,True,constructed,far_above,near_above
+finqa_00480,(metadata->>'year')::int BETWEEN 2011 AND 2016,14354,0.4002565389548826,True,constructed,far_above,near_above
+finqa_00481,(metadata->>'year')::int BETWEEN 2012 AND 2017,16486,0.45970665328202553,True,constructed,far_above,near_above
+finqa_00482,(metadata->>'year')::int BETWEEN 2013 AND 2018,15935,0.44434220065807817,True,constructed,far_above,near_above
+finqa_00483,(metadata->>'year')::int BETWEEN 2014 AND 2019,13740,0.3831353521833696,True,constructed,far_above,near_above
+finqa_00484,(metadata->>'year')::int BETWEEN 1999 AND 2006,5823,0.16237242763928392,True,constructed,far_above,far_below
+finqa_00485,(metadata->>'year')::int BETWEEN 2001 AND 2007,7956,0.22185042663543583,True,constructed,far_above,near_below
+finqa_00486,(metadata->>'year')::int BETWEEN 2002 AND 2008,10585,0.29515922146004125,True,constructed,far_above,near_below
+finqa_00487,(metadata->>'year')::int BETWEEN 2003 AND 2009,12122,0.3380179577268418,True,constructed,far_above,near_below
+finqa_00488,(metadata->>'year')::int BETWEEN 2004 AND 2010,13492,0.37621995426914284,True,constructed,far_above,near_below
+finqa_00489,(metadata->>'year')::int BETWEEN 2005 AND 2011,14197,0.39587864592047295,True,constructed,far_above,near_above
+finqa_00490,(metadata->>'year')::int BETWEEN 2006 AND 2012,16663,0.4646422396966148,True,constructed,far_above,near_above
+finqa_00491,(metadata->>'year')::int BETWEEN 2007 AND 2013,16299,0.4544922201773465,True,constructed,far_above,near_above
+finqa_00492,(metadata->>'year')::int BETWEEN 2008 AND 2014,16248,0.45307010205788856,True,constructed,far_above,near_above
+finqa_00493,(metadata->>'year')::int BETWEEN 2009 AND 2015,16404,0.4574201104232893,True,constructed,far_above,near_above
+finqa_00494,(metadata->>'year')::int BETWEEN 2010 AND 2016,16537,0.46112877140148345,True,constructed,far_above,near_above
+finqa_00495,(metadata->>'year')::int BETWEEN 2011 AND 2017,17934,0.5000836540070269,True,constructed,far_above,near_above
+finqa_00496,(metadata->>'year')::int BETWEEN 2012 AND 2018,19098,0.5325414087334783,True,constructed,far_above,near_above
+finqa_00497,(metadata->>'year')::int BETWEEN 2013 AND 2019,16129,0.44975182644582007,True,constructed,far_above,near_above
+finqa_00498,(metadata->>'year')::int BETWEEN 1999 AND 2007,8010,0.2233561987619207,True,constructed,far_above,near_below
+finqa_00499,(metadata->>'year')::int BETWEEN 2001 AND 2008,10900,0.30394289219786963,True,constructed,far_above,near_below
+finqa_00500,(metadata->>'year')::int BETWEEN 2002 AND 2009,12570,0.35051028944286433,True,constructed,far_above,near_below
+finqa_00501,(metadata->>'year')::int BETWEEN 2003 AND 2010,14305,0.3988901901734426,True,constructed,far_above,near_above
+finqa_00502,(metadata->>'year')::int BETWEEN 2004 AND 2011,14940,0.41659695499414423,True,constructed,far_above,near_above
+finqa_00503,(metadata->>'year')::int BETWEEN 2005 AND 2012,17360,0.48407785399587305,True,constructed,far_above,near_above
+finqa_00504,(metadata->>'year')::int BETWEEN 2006 AND 2013,19052,0.5312587139590653,True,constructed,far_above,near_above
+finqa_00505,(metadata->>'year')::int BETWEEN 2007 AND 2014,18435,0.5140538731805253,True,constructed,far_above,near_above
+finqa_00506,(metadata->>'year')::int BETWEEN 2008 AND 2015,19348,0.539512575985723,True,constructed,far_above,near_above
+finqa_00507,(metadata->>'year')::int BETWEEN 2009 AND 2016,18522,0.5164798393843065,True,constructed,far_above,near_above
+finqa_00508,(metadata->>'year')::int BETWEEN 2010 AND 2017,20117,0.5609558864536278,True,constructed,far_above,near_above
+finqa_00509,(metadata->>'year')::int BETWEEN 2011 AND 2018,20546,0.5729184094584797,True,constructed,far_above,near_above
+finqa_00510,(metadata->>'year')::int BETWEEN 2012 AND 2019,19292,0.5379510345212203,True,constructed,far_above,near_above
+finqa_00511,(metadata->>'year')::int BETWEEN 1999 AND 2008,10954,0.30544866432435447,True,constructed,far_above,near_below
+finqa_00512,(metadata->>'year')::int BETWEEN 2001 AND 2009,12885,0.35929396018069265,True,constructed,far_above,near_below
+finqa_00513,(metadata->>'year')::int BETWEEN 2002 AND 2010,14753,0.41138252188946517,True,constructed,far_above,near_above
+finqa_00514,(metadata->>'year')::int BETWEEN 2003 AND 2011,15753,0.439267190898444,True,constructed,far_above,near_above
+finqa_00515,(metadata->>'year')::int BETWEEN 2004 AND 2012,18103,0.5047961630695443,True,constructed,far_above,near_above
+finqa_00516,(metadata->>'year')::int BETWEEN 2005 AND 2013,19749,0.5506943282583235,True,constructed,far_above,near_above
+finqa_00517,(metadata->>'year')::int BETWEEN 2006 AND 2014,21188,0.5908203669622442,True,constructed,far_above,near_above
+finqa_00518,(metadata->>'year')::int BETWEEN 2007 AND 2015,21535,0.6004963471083599,True,constructed,far_above,near_above
+finqa_00519,(metadata->>'year')::int BETWEEN 2008 AND 2016,21466,0.5985723049467403,True,constructed,far_above,near_above
+finqa_00520,(metadata->>'year')::int BETWEEN 2009 AND 2017,22102,0.6163069544364509,True,constructed,far_above,near_above
+finqa_00521,(metadata->>'year')::int BETWEEN 2010 AND 2018,22729,0.6337906419050806,True,constructed,far_above,near_above
+finqa_00522,(metadata->>'year')::int BETWEEN 2011 AND 2019,20740,0.5783280352462217,True,constructed,far_above,near_above
+finqa_00523,(metadata->>'year')::int BETWEEN 1999 AND 2009,12939,0.3607997323071775,True,constructed,far_above,near_below
+finqa_00524,(metadata->>'year')::int BETWEEN 2001 AND 2010,15068,0.4201661926272935,True,constructed,far_above,near_above
+finqa_00525,(metadata->>'year')::int BETWEEN 2002 AND 2011,16201,0.45175952261446656,True,constructed,far_above,near_above
+finqa_00526,(metadata->>'year')::int BETWEEN 2003 AND 2012,18916,0.5274663989738442,True,constructed,far_above,near_above
+finqa_00527,(metadata->>'year')::int BETWEEN 2004 AND 2013,20492,0.5714126373319949,True,constructed,far_above,near_above
+finqa_00528,(metadata->>'year')::int BETWEEN 2005 AND 2014,21885,0.6102559812615024,True,constructed,far_above,near_above
+finqa_00529,(metadata->>'year')::int BETWEEN 2006 AND 2015,24288,0.6772628408900786,True,constructed,far_above,near_above
+finqa_00530,(metadata->>'year')::int BETWEEN 2007 AND 2016,23653,0.659556076069377,True,constructed,far_above,near_above
+finqa_00531,(metadata->>'year')::int BETWEEN 2008 AND 2017,25046,0.6983994199988847,True,constructed,far_above,near_above
+finqa_00532,(metadata->>'year')::int BETWEEN 2009 AND 2018,24714,0.6891417098879036,True,constructed,far_above,near_above
+finqa_00533,(metadata->>'year')::int BETWEEN 2010 AND 2019,22923,0.6392002676928225,True,constructed,far_above,near_above
+finqa_00534,(metadata->>'year')::int BETWEEN 1999 AND 2010,15122,0.4216719647537784,True,constructed,far_above,near_above
+finqa_00535,(metadata->>'year')::int BETWEEN 2001 AND 2011,16516,0.46054319335229493,True,constructed,far_above,near_above
+finqa_00536,(metadata->>'year')::int BETWEEN 2002 AND 2012,19364,0.5399587306898667,True,constructed,far_above,near_above
+finqa_00537,(metadata->>'year')::int BETWEEN 2003 AND 2013,21305,0.5940828732362947,True,constructed,far_above,near_above
+finqa_00538,(metadata->>'year')::int BETWEEN 2004 AND 2014,22628,0.6309742903351737,True,constructed,far_above,near_above
+finqa_00539,(metadata->>'year')::int BETWEEN 2005 AND 2015,24985,0.6966984551893369,True,constructed,far_above,near_above
+finqa_00540,(metadata->>'year')::int BETWEEN 2006 AND 2016,26406,0.7363225698510959,True,constructed,far_above,near_above
+finqa_00541,(metadata->>'year')::int BETWEEN 2007 AND 2017,27233,0.7593831911215214,True,constructed,far_above,far_above
+finqa_00542,(metadata->>'year')::int BETWEEN 2008 AND 2018,27658,0.7712341754503375,True,constructed,far_above,far_above
+finqa_00543,(metadata->>'year')::int BETWEEN 2009 AND 2019,24908,0.6945513356756455,True,constructed,far_above,near_above
+finqa_00544,(metadata->>'year')::int BETWEEN 1999 AND 2011,16570,0.46204896547877977,True,constructed,far_above,near_above
+finqa_00545,(metadata->>'year')::int BETWEEN 2001 AND 2012,19679,0.548742401427695,True,constructed,far_above,near_above
+finqa_00546,(metadata->>'year')::int BETWEEN 2002 AND 2013,21753,0.6065752049523172,True,constructed,far_above,near_above
+finqa_00547,(metadata->>'year')::int BETWEEN 2003 AND 2014,23441,0.6536445262394736,True,constructed,far_above,near_above
+finqa_00548,(metadata->>'year')::int BETWEEN 2004 AND 2015,25728,0.7174167642630082,True,constructed,far_above,near_above
+finqa_00549,(metadata->>'year')::int BETWEEN 2005 AND 2016,27103,0.7557581841503541,True,constructed,far_above,near_above
+finqa_00550,(metadata->>'year')::int BETWEEN 2006 AND 2017,29986,0.8361496849032402,True,constructed,far_above,far_above
+finqa_00551,(metadata->>'year')::int BETWEEN 2007 AND 2018,29845,0.8322179465729742,True,constructed,far_above,far_above
+finqa_00552,(metadata->>'year')::int BETWEEN 2008 AND 2019,27852,0.7766438012380793,True,constructed,far_above,far_above
+finqa_00553,(metadata->>'year')::int BETWEEN 1999 AND 2012,19733,0.5502481735541799,True,constructed,far_above,near_above
+finqa_00554,(metadata->>'year')::int BETWEEN 2001 AND 2013,22068,0.6153588756901456,True,constructed,far_above,near_above
+finqa_00555,(metadata->>'year')::int BETWEEN 2002 AND 2014,23889,0.666136857955496,True,constructed,far_above,near_above
+finqa_00556,(metadata->>'year')::int BETWEEN 2003 AND 2015,26541,0.740087000167308,True,constructed,far_above,near_above
+finqa_00557,(metadata->>'year')::int BETWEEN 2004 AND 2016,27846,0.7764764932240255,True,constructed,far_above,far_above
+finqa_00558,(metadata->>'year')::int BETWEEN 2005 AND 2017,30683,0.8555852992024985,True,constructed,far_above,far_above
+finqa_00559,(metadata->>'year')::int BETWEEN 2006 AND 2018,32598,0.908984440354693,True,constructed,far_above,far_above
+finqa_00560,(metadata->>'year')::int BETWEEN 2007 AND 2019,30039,0.837627572360716,True,constructed,far_above,far_above
+finqa_00561,(metadata->>'year')::int BETWEEN 1999 AND 2013,22122,0.6168646478166304,True,constructed,far_above,near_above
+finqa_00562,(metadata->>'year')::int BETWEEN 2001 AND 2014,24204,0.6749205286933244,True,constructed,far_above,near_above
+finqa_00563,(metadata->>'year')::int BETWEEN 2002 AND 2015,26989,0.7525793318833306,True,constructed,far_above,near_above
+finqa_00564,(metadata->>'year')::int BETWEEN 2003 AND 2016,28659,0.7991467291283253,True,constructed,far_above,far_above
+finqa_00565,(metadata->>'year')::int BETWEEN 2004 AND 2017,31426,0.8763036082761697,True,constructed,far_above,far_above
+finqa_00566,(metadata->>'year')::int BETWEEN 2005 AND 2018,33295,0.9284200546539513,True,constructed,far_above,far_above
+finqa_00567,(metadata->>'year')::int BETWEEN 2006 AND 2019,32792,0.9143940661424349,True,constructed,far_above,far_above
+finqa_00568,(metadata->>'year')::int BETWEEN 1999 AND 2014,24258,0.6764263008198093,True,constructed,far_above,near_above
+finqa_00569,(metadata->>'year')::int BETWEEN 2001 AND 2015,27304,0.7613630026211589,True,constructed,far_above,far_above
+finqa_00570,(metadata->>'year')::int BETWEEN 2002 AND 2016,29107,0.8116390608443478,True,constructed,far_above,far_above
+finqa_00571,(metadata->>'year')::int BETWEEN 2003 AND 2017,32239,0.8989738441804696,True,constructed,far_above,far_above
+finqa_00572,(metadata->>'year')::int BETWEEN 2004 AND 2018,34038,0.9491383637276225,True,constructed,far_above,far_above
+finqa_00573,(metadata->>'year')::int BETWEEN 2005 AND 2019,33489,0.9338296804416931,True,constructed,far_above,far_above
+finqa_00574,(metadata->>'year')::int BETWEEN 1999 AND 2015,27358,0.7628687747476437,True,constructed,far_above,far_above
+finqa_00575,(metadata->>'year')::int BETWEEN 2001 AND 2016,29422,0.8204227315821762,True,constructed,far_above,far_above
+finqa_00576,(metadata->>'year')::int BETWEEN 2002 AND 2017,32687,0.9114661758964921,True,constructed,far_above,far_above
+finqa_00577,(metadata->>'year')::int BETWEEN 2003 AND 2018,34851,0.9718085996319223,True,constructed,far_above,far_above
+finqa_00578,(metadata->>'year')::int BETWEEN 2004 AND 2019,34232,0.9545479895153645,True,constructed,far_above,far_above
+finqa_00579,(metadata->>'year')::int BETWEEN 1999 AND 2016,29476,0.821928503708661,True,constructed,far_above,far_above
+finqa_00580,(metadata->>'year')::int BETWEEN 2001 AND 2017,33002,0.9202498466343204,True,constructed,far_above,far_above
+finqa_00581,(metadata->>'year')::int BETWEEN 2002 AND 2018,35299,0.9843009313479449,True,constructed,far_above,far_above
+finqa_00582,(metadata->>'year')::int BETWEEN 2003 AND 2019,35045,0.9772182254196643,True,constructed,far_above,far_above
+finqa_00583,(metadata->>'year')::int BETWEEN 1999 AND 2017,33056,0.9217556187608054,True,constructed,far_above,far_above
+finqa_00584,(metadata->>'year')::int BETWEEN 2001 AND 2018,35614,0.9930846020857732,True,constructed,far_above,far_above
+finqa_00585,(metadata->>'year')::int BETWEEN 2002 AND 2019,35493,0.9897105571356868,True,constructed,far_above,far_above
+finqa_00586,(metadata->>'year')::int BETWEEN 1999 AND 2018,35668,0.9945903742122582,True,constructed,far_above,far_above
+finqa_00587,(metadata->>'year')::int BETWEEN 2001 AND 2019,35808,0.9984942278735152,True,constructed,far_above,far_above
+finqa_00588,(metadata->>'year')::int BETWEEN 1999 AND 2019,35862,1.0,True,constructed,far_above,far_above
+finqa_00589,"metadata->>'ticker' IN ('ABMD', 'EMR')",750,0.02091350175673415,True,constructed,far_below,far_below
+finqa_00590,"metadata->>'ticker' IN ('K', 'TFX')",377,0.010512520216385032,True,constructed,far_below,far_below
+finqa_00591,"metadata->>'ticker' IN ('UA', 'WRK')",281,0.007835591991523061,True,constructed,far_below,far_below
+finqa_00592,"metadata->>'ticker' IN ('PKG', 'SLB')",279,0.007779822653505103,True,constructed,far_below,far_below
+finqa_00593,"metadata->>'ticker' IN ('BLK', 'GPN')",1348,0.03758853382410351,True,constructed,near_below,far_below
+finqa_00594,"metadata->>'ticker' IN ('C', 'TFX')",945,0.026351012213485025,True,constructed,far_below,far_below
+finqa_00595,"metadata->>'ticker' IN ('TFX', 'ZBH')",754,0.021025040432770065,True,constructed,far_below,far_below
+finqa_00596,"metadata->>'ticker' IN ('IPG', 'PPG')",1048,0.02922313312140985,True,constructed,far_below,far_below
+finqa_00597,"metadata->>'ticker' IN ('CDNS', 'UPS')",548,0.015280798616920417,True,constructed,far_below,far_below
+finqa_00598,"metadata->>'ticker' IN ('ADI', 'ANSS')",410,0.011432714293681335,True,constructed,far_below,far_below
+finqa_00599,"metadata->>'ticker' IN ('DG', 'MAS')",260,0.007250013942334504,True,constructed,far_below,far_below
+finqa_00600,"metadata->>'ticker' IN ('CB', 'STT')",767,0.02138754112988679,True,constructed,far_below,far_below
+finqa_00601,"metadata->>'ticker' IN ('AMT', 'BKR')",1573,0.04386258435112375,True,constructed,near_below,far_below
+finqa_00602,"metadata->>'ticker' IN ('LKQ', 'MO')",484,0.01349617980034577,True,constructed,far_below,far_below
+finqa_00603,"metadata->>'ticker' IN ('BLK', 'MAR')",945,0.026351012213485025,True,constructed,far_below,far_below
+finqa_00604,"metadata->>'ticker' IN ('UA', 'ZBH')",698,0.019463498968267247,True,constructed,far_below,far_below
+finqa_00605,"metadata->>'ticker' IN ('FIS', 'UA')",659,0.018375996876917072,True,constructed,far_below,far_below
+finqa_00606,"metadata->>'ticker' IN ('FIS', 'WRK')",728,0.020300039038536614,True,constructed,far_below,far_below
+finqa_00607,"metadata->>'ticker' IN ('BDX', 'GRMN')",225,0.006274050527020244,True,constructed,far_below,far_below
+finqa_00608,"metadata->>'ticker' IN ('GRMN', 'JPM')",1497,0.04174334950644136,True,constructed,near_below,far_below
+finqa_00609,"metadata->>'ticker' IN ('C', 'PPG')",1503,0.041910657520495234,True,constructed,near_below,far_below
+finqa_00610,"metadata->>'ticker' IN ('ADI', 'MO')",638,0.017790418827728516,True,constructed,far_below,far_below
+finqa_00611,"metadata->>'ticker' IN ('ILMN', 'PM')",301,0.008393285371702638,True,constructed,far_below,far_below
+finqa_00612,"metadata->>'ticker' IN ('AAPL', 'GRMN')",537,0.01497406725782165,True,constructed,far_below,far_below
+finqa_00613,"metadata->>'ticker' IN ('EMR', 'MRO')",1380,0.03848084323239083,True,constructed,near_below,far_below
+finqa_00614,"metadata->>'ticker' IN ('ETR', 'VRTX', 'WRK')",1426,0.03976353800680386,True,constructed,near_below,far_below
+finqa_00615,"metadata->>'ticker' IN ('GPN', 'HIG', 'NWS')",964,0.026880820924655623,True,constructed,far_below,far_below
+finqa_00616,"metadata->>'ticker' IN ('ANET', 'ETR', 'UPS')",1575,0.04391835368914171,True,constructed,near_below,far_below
+finqa_00617,"metadata->>'ticker' IN ('ANSS', 'CE', 'WRK')",559,0.015587529976019185,True,constructed,far_below,far_below
+finqa_00618,"metadata->>'ticker' IN ('ADBE', 'HUM', 'RCL')",563,0.0156990686520551,True,constructed,far_below,far_below
+finqa_00619,"metadata->>'ticker' IN ('ANSS', 'IP', 'RCL')",1308,0.036473147063744354,True,constructed,near_below,far_below
+finqa_00620,"metadata->>'ticker' IN ('GIS', 'IPG', 'UPS')",1058,0.029501979811499636,True,constructed,far_below,far_below
+finqa_00621,"metadata->>'ticker' IN ('APD', 'DG', 'MMM')",556,0.015503875968992248,True,constructed,far_below,far_below
+finqa_00622,"metadata->>'ticker' IN ('AOS', 'EOG', 'PNC')",1151,0.03209525402933467,True,constructed,far_below,far_below
+finqa_00623,"metadata->>'ticker' IN ('DISH', 'GIS', 'PM')",588,0.016396185377279573,True,constructed,far_below,far_below
+finqa_00624,"metadata->>'ticker' IN ('AAL', 'ABC', 'RSG')",1250,0.03485583626122358,True,constructed,far_below,far_below
+finqa_00625,"metadata->>'ticker' IN ('BDX', 'DRE', 'EOG')",563,0.0156990686520551,True,constructed,far_below,far_below
+finqa_00626,"metadata->>'ticker' IN ('EL', 'RCL', 'SNA')",908,0.02531927946015281,True,constructed,far_below,far_below
+finqa_00627,"metadata->>'ticker' IN ('BKR', 'NCLH', 'RSG')",850,0.023701968657632033,True,constructed,far_below,far_below
+finqa_00628,"metadata->>'ticker' IN ('BKR', 'ETFC', 'SYY')",472,0.013161563772238023,True,constructed,far_below,far_below
+finqa_00629,"metadata->>'ticker' IN ('BKR', 'MO', 'PPG')",1236,0.03446545089509787,True,constructed,far_below,far_below
+finqa_00630,"metadata->>'ticker' IN ('BLL', 'FBHS', 'MO')",1034,0.028832747755284143,True,constructed,far_below,far_below
+finqa_00631,"metadata->>'ticker' IN ('APD', 'GS', 'MKTX')",2466,0.06876359377614187,True,constructed,near_below,far_below
+finqa_00632,"metadata->>'ticker' IN ('GS', 'JKHY', 'LMT')",2893,0.08067034744297585,True,constructed,near_above,far_below
+finqa_00633,"metadata->>'ticker' IN ('EL', 'MO', 'PKG')",674,0.018794266912051754,True,constructed,far_below,far_below
+finqa_00634,"metadata->>'ticker' IN ('AOS', 'MSI', 'SLG')",803,0.022391389214210026,True,constructed,far_below,far_below
+finqa_00635,"metadata->>'ticker' IN ('HII', 'NKE', 'UA')",669,0.01865484356700686,True,constructed,far_below,far_below
+finqa_00636,"metadata->>'ticker' IN ('ALLE', 'APD', 'PKG')",391,0.010902905582510735,True,constructed,far_below,far_below
+finqa_00637,"metadata->>'ticker' IN ('CB', 'HUM', 'IP')",1313,0.03661257040878925,True,constructed,near_below,far_below
+finqa_00638,"metadata->>'ticker' IN ('BKNG', 'CDNS', 'CMCSA')",483,0.01346829513133679,True,constructed,far_below,far_below
+finqa_00639,"metadata->>'ticker' IN ('DRE', 'HUM', 'MRO', 'VRTX')",1958,0.054598181919580616,True,constructed,near_below,far_below
+finqa_00640,"metadata->>'ticker' IN ('ABMD', 'APD', 'DXC', 'ILMN')",1087,0.030310635212760024,True,constructed,far_below,far_below
+finqa_00641,"metadata->>'ticker' IN ('ABC', 'CDNS', 'HOLX', 'VNO')",961,0.02679716691762869,True,constructed,far_below,far_below
+finqa_00642,"metadata->>'ticker' IN ('AON', 'MRO', 'SNA', 'UA')",2555,0.07124532931794099,True,constructed,near_above,far_below
+finqa_00643,"metadata->>'ticker' IN ('AMAT', 'CMCSA', 'MRK', 'PKG')",805,0.022447158552227984,True,constructed,far_below,far_below
+finqa_00644,"metadata->>'ticker' IN ('ABC', 'DISCA', 'DISH', 'PKG')",590,0.01645195471529753,True,constructed,far_below,far_below
+finqa_00645,"metadata->>'ticker' IN ('BDX', 'GRMN', 'INTC', 'IP')",1830,0.05102894428643132,True,constructed,near_below,far_below
+finqa_00646,"metadata->>'ticker' IN ('ANSS', 'BLK', 'HST', 'INTC')",1600,0.044615470414366185,True,constructed,near_below,far_below
+finqa_00647,"metadata->>'ticker' IN ('ABC', 'FBHS', 'L', 'PM')",352,0.00981540349116056,True,constructed,far_below,far_below
+finqa_00648,"metadata->>'ticker' IN ('ABMD', 'APD', 'DG', 'UAA')",1017,0.028358708382131503,True,constructed,far_below,far_below
+finqa_00649,"metadata->>'ticker' IN ('APD', 'GRMN', 'LKQ', 'MAS')",421,0.011739445652780102,True,constructed,far_below,far_below
+finqa_00650,"metadata->>'ticker' IN ('CME', 'MMM', 'RL', 'RSG')",1550,0.04322123696391724,True,constructed,near_below,far_below
+finqa_00651,"metadata->>'ticker' IN ('GIS', 'LKQ', 'PNC', 'STT')",2020,0.05632703139813731,True,constructed,near_below,far_below
+finqa_00652,"metadata->>'ticker' IN ('AAL', 'DG', 'NWS', 'V')",1156,0.032234677374379565,True,constructed,far_below,far_below
+finqa_00653,"metadata->>'ticker' IN ('AAPL', 'DISH', 'HUM', 'WRK')",850,0.023701968657632033,True,constructed,far_below,far_below
+finqa_00654,"metadata->>'ticker' IN ('ANSS', 'FBHS', 'LKQ', 'VNO')",402,0.011209636941609502,True,constructed,far_below,far_below
+finqa_00655,"metadata->>'ticker' IN ('CDNS', 'DRE', 'IPG', 'STT')",1419,0.039568345323741004,True,constructed,near_below,far_below
+finqa_00656,"metadata->>'ticker' IN ('AES', 'DG', 'DVN', 'STT')",1427,0.039791422675812836,True,constructed,near_below,far_below
+finqa_00657,"metadata->>'ticker' IN ('ANET', 'DXC', 'SNA', 'TFX')",960,0.02676928224861971,True,constructed,far_below,far_below
+finqa_00658,"metadata->>'ticker' IN ('BLK', 'CB', 'EMR', 'GPN')",1652,0.04606547320283308,True,constructed,near_below,far_below
+finqa_00659,"metadata->>'ticker' IN ('AMT', 'BLL', 'EL', 'GIS')",2361,0.0658357035301991,True,constructed,near_below,far_below
+finqa_00660,"metadata->>'ticker' IN ('ALXN', 'CMCSA', 'KHC', 'LKQ')",632,0.017623110813674642,True,constructed,far_below,far_below
+finqa_00661,"metadata->>'ticker' IN ('ALLE', 'JKHY', 'MO', 'STT')",1063,0.02964140315654453,True,constructed,far_below,far_below
+finqa_00662,"metadata->>'ticker' IN ('HWM', 'KHC', 'NKE', 'V')",870,0.024259662037811613,True,constructed,far_below,far_below
+finqa_00663,"metadata->>'ticker' IN ('BKR', 'BLK', 'MO', 'NWS')",1399,0.03901065194356143,True,constructed,near_below,far_below
+finqa_00664,"metadata->>'ticker' IN ('AES', 'FIS', 'IP', 'MSI', 'UNP')",3438,0.09586749205286933,True,constructed,near_above,far_below
+finqa_00665,"metadata->>'ticker' IN ('ALLE', 'NKE', 'PPG', 'TMUS', 'VNO')",1392,0.03881545926049858,True,constructed,near_below,far_below
+finqa_00666,"metadata->>'ticker' IN ('BKR', 'CME', 'FBHS', 'GS', 'PNC')",4248,0.11845407395014221,True,constructed,near_above,far_below
+finqa_00667,"metadata->>'ticker' IN ('ADI', 'ANSS', 'DISCA', 'EOG', 'JPM')",1953,0.05445875857453572,True,constructed,near_below,far_below
+finqa_00668,"metadata->>'ticker' IN ('LMT', 'MMM', 'MRO', 'PPG', 'UNP')",4064,0.1133232948524901,True,constructed,near_above,far_below
+finqa_00669,"metadata->>'ticker' IN ('ALXN', 'FIS', 'IP', 'JPM', 'TFX')",3177,0.08858959344152585,True,constructed,near_above,far_below
+finqa_00670,"metadata->>'ticker' IN ('ALXN', 'DISCA', 'ECL', 'MKTX', 'TFX')",993,0.02768947632591601,True,constructed,far_below,far_below
+finqa_00671,"metadata->>'ticker' IN ('AMT', 'BLL', 'HST', 'LMT', 'UNP')",3763,0.10493000948078746,True,constructed,near_above,far_below
+finqa_00672,"metadata->>'ticker' IN ('ADI', 'ANET', 'BLL', 'DISCA', 'GIS')",1262,0.03519045228933133,True,constructed,far_below,far_below
+finqa_00673,"metadata->>'ticker' IN ('ADI', 'CE', 'CME', 'GPN', 'V')",1972,0.05498856728570632,True,constructed,near_below,far_below
+finqa_00674,"metadata->>'ticker' IN ('AES', 'AWK', 'ETFC', 'PNC', 'UNP')",4272,0.1191233060063577,True,constructed,near_above,far_below
+finqa_00675,"metadata->>'ticker' IN ('BKNG', 'CE', 'IPG', 'JPM', 'MRO')",3247,0.09054152027215437,True,constructed,near_above,far_below
+finqa_00676,"metadata->>'ticker' IN ('ANSS', 'AON', 'CMCSA', 'EL', 'PNC')",2070,0.057721264848586244,True,constructed,near_below,far_below
+finqa_00677,"metadata->>'ticker' IN ('DVN', 'HII', 'HST', 'MKTX', 'VNO')",635,0.01770676482070158,True,constructed,far_below,far_below
+finqa_00678,"metadata->>'ticker' IN ('BKR', 'GPN', 'GS', 'LKQ', 'ZBH')",3559,0.09924153700295578,True,constructed,near_above,far_below
+finqa_00679,"metadata->>'ticker' IN ('AON', 'CDW', 'ETR', 'MRK', 'SYY')",2112,0.05889242094696336,True,constructed,near_below,far_below
+finqa_00680,"metadata->>'ticker' IN ('AWK', 'DG', 'HWM', 'IPG', 'MS')",2249,0.06271262060119347,True,constructed,near_below,far_below
+finqa_00681,"metadata->>'ticker' IN ('BKR', 'NCLH', 'NKE', 'RCL', 'TMUS')",1117,0.03114717528302939,True,constructed,far_below,far_below
+finqa_00682,"metadata->>'ticker' IN ('ANET', 'AOS', 'EL', 'HWM', 'SLB')",304,0.008476939378729575,True,constructed,far_below,far_below
+finqa_00683,"metadata->>'ticker' IN ('AOS', 'EOG', 'IPG', 'KHC', 'LKQ')",611,0.017037532764486087,True,constructed,far_below,far_below
+finqa_00684,"metadata->>'ticker' IN ('CE', 'DISCA', 'GIS', 'GS', 'SYY')",2943,0.08206458089342479,True,constructed,near_above,far_below
+finqa_00685,"metadata->>'ticker' IN ('AAPL', 'ABC', 'AON', 'CB', 'ILMN')",1402,0.03909430595058837,True,constructed,near_below,far_below
+finqa_00686,"metadata->>'ticker' IN ('AES', 'JPM', 'NWS', 'PPG', 'VNO')",2559,0.0713568679939769,True,constructed,near_above,far_below
+finqa_00687,"metadata->>'ticker' IN ('BLK', 'GIS', 'GS', 'MAS', 'RSG')",3861,0.10766270704366739,True,constructed,near_above,far_below
+finqa_00688,"metadata->>'ticker' IN ('BKNG', 'BKR', 'GIS', 'MAS', 'UNP')",1704,0.04751547599129998,True,constructed,near_below,far_below
+finqa_00689,"metadata->>'ticker' IN ('ADI', 'GPN', 'K', 'MMM', 'SNA', 'UNP')",3092,0.08621939657576265,True,constructed,near_above,far_below
+finqa_00690,"metadata->>'ticker' IN ('ADBE', 'AMAT', 'DISH', 'SNA', 'TFX', 'VNO')",1375,0.038341419887345934,True,constructed,near_below,far_below
+finqa_00691,"metadata->>'ticker' IN ('ANET', 'AWK', 'L', 'MAS', 'SLB', 'WRK')",1866,0.05203279237075456,True,constructed,near_below,far_below
+finqa_00692,"metadata->>'ticker' IN ('AES', 'AOS', 'BLK', 'DISCA', 'HWM', 'MKTX')",1547,0.043137582956890304,True,constructed,near_below,far_below
+finqa_00693,"metadata->>'ticker' IN ('BDX', 'BLK', 'EMR', 'HUM', 'IP', 'TMUS')",2127,0.05931069098209804,True,constructed,near_below,far_below
+finqa_00694,"metadata->>'ticker' IN ('ABMD', 'AOS', 'CB', 'EOG', 'LKQ', 'SLG')",1479,0.04124142546427974,True,constructed,near_below,far_below
+finqa_00695,"metadata->>'ticker' IN ('ANET', 'CB', 'DXC', 'IPG', 'MO', 'ZBH')",1677,0.046762589928057555,True,constructed,near_below,far_below
+finqa_00696,"metadata->>'ticker' IN ('FIS', 'GS', 'NKE', 'PKG', 'STT', 'SYY')",4047,0.11284925547933745,True,constructed,near_above,far_below
+finqa_00697,"metadata->>'ticker' IN ('AWK', 'CDNS', 'HUM', 'ILMN', 'KHC', 'UPS')",2418,0.06742512966371089,True,constructed,near_below,far_below
+finqa_00698,"metadata->>'ticker' IN ('ABC', 'AOS', 'MKTX', 'PM', 'SLB', 'V')",610,0.017009648095477108,True,constructed,far_below,far_below
+finqa_00699,"metadata->>'ticker' IN ('ANSS', 'D', 'IP', 'LKQ', 'NCLH', 'SLG')",2012,0.056103954046065475,True,constructed,near_below,far_below
+finqa_00700,"metadata->>'ticker' IN ('BKR', 'D', 'HST', 'MS', 'TFX', 'UAA')",705,0.0196586916513301,True,constructed,far_below,far_below
+finqa_00701,"metadata->>'ticker' IN ('AWK', 'CE', 'DISH', 'IP', 'STT', 'WRK')",3517,0.09807038090457866,True,constructed,near_above,far_below
+finqa_00702,"metadata->>'ticker' IN ('ANSS', 'EL', 'GIS', 'JPM', 'MSI', 'PPG')",3039,0.08474150911828676,True,constructed,near_above,far_below
+finqa_00703,"metadata->>'ticker' IN ('ABC', 'AMAT', 'CME', 'DG', 'MRK', 'UPS')",1711,0.047710668674362834,True,constructed,near_below,far_below
+finqa_00704,"metadata->>'ticker' IN ('ADI', 'ANSS', 'BLK', 'CB', 'KHC', 'MKTX')",1699,0.047376052646255086,True,constructed,near_below,far_below
+finqa_00705,"metadata->>'ticker' IN ('ADBE', 'MAS', 'MO', 'MRO', 'MS', 'SYY')",2347,0.0654453181640734,True,constructed,near_below,far_below
+finqa_00706,"metadata->>'ticker' IN ('AMT', 'DRE', 'ETFC', 'JKHY', 'LMT', 'MRK')",3051,0.08507612514639451,True,constructed,near_above,far_below
+finqa_00707,"metadata->>'ticker' IN ('ADI', 'DVN', 'FBHS', 'HWM', 'MO', 'PNC')",2268,0.06324242931236407,True,constructed,near_below,far_below
+finqa_00708,"metadata->>'ticker' IN ('AWK', 'IP', 'KHC', 'SLG', 'TMUS', 'V')",3215,0.08964921086386704,True,constructed,near_above,far_below
+finqa_00709,"metadata->>'ticker' IN ('ADBE', 'HOLX', 'L', 'NWS', 'STT', 'UAA')",1726,0.04812893870949752,True,constructed,near_below,far_below
+finqa_00710,"metadata->>'ticker' IN ('ADBE', 'BLK', 'CME', 'EL', 'LKQ', 'NWS')",2076,0.05788857286264012,True,constructed,near_below,far_below
+finqa_00711,"metadata->>'ticker' IN ('ADI', 'DG', 'FIS', 'GRMN', 'L', 'MS')",1383,0.038564497239417767,True,constructed,near_below,far_below
+finqa_00712,"metadata->>'ticker' IN ('ADBE', 'BDX', 'DVN', 'NWS', 'PM', 'SYY')",980,0.027326975628799287,True,constructed,far_below,far_below
+finqa_00713,"metadata->>'ticker' IN ('AAPL', 'AOS', 'DXC', 'GIS', 'V', 'ZBH')",1598,0.044559701076348227,True,constructed,near_below,far_below
+finqa_00714,"metadata->>'ticker' IN ('ADI', 'AES', 'GPN', 'HIG', 'JPM', 'SLB', 'UPS')",3296,0.09190786905359434,True,constructed,near_above,far_below
+finqa_00715,"metadata->>'ticker' IN ('ABC', 'AES', 'BLK', 'CE', 'HST', 'IP', 'MMM')",2704,0.07540014500027885,True,constructed,near_above,far_below
+finqa_00716,"metadata->>'ticker' IN ('AMT', 'CMCSA', 'GPN', 'JKHY', 'PKG', 'RCL', 'SLG')",3157,0.08803190006134627,True,constructed,near_above,far_below
+finqa_00717,"metadata->>'ticker' IN ('BDX', 'BLK', 'CME', 'HIG', 'IP', 'IPG', 'MRO')",4513,0.1258435112375216,True,constructed,near_above,far_below
+finqa_00718,"metadata->>'ticker' IN ('ADI', 'AES', 'CB', 'DISH', 'JPM', 'L', 'MS')",2629,0.07330879482460544,True,constructed,near_above,far_below
+finqa_00719,"metadata->>'ticker' IN ('BKNG', 'C', 'INTC', 'IP', 'UNP', 'V', 'VRTX')",3892,0.10852713178294573,True,constructed,near_above,far_below
+finqa_00720,"metadata->>'ticker' IN ('AAL', 'AWK', 'CMCSA', 'EMR', 'GIS', 'KHC', 'UNP')",4058,0.11315598683843622,True,constructed,near_above,far_below
+finqa_00721,"metadata->>'ticker' IN ('C', 'EOG', 'GS', 'HST', 'INTC', 'RSG', 'SNA')",4855,0.13538006803859237,True,constructed,near_above,far_below
+finqa_00722,"metadata->>'ticker' IN ('AMAT', 'AOS', 'APD', 'HII', 'LKQ', 'PPG', 'SYY')",1187,0.03309910211365791,True,constructed,far_below,far_below
+finqa_00723,"metadata->>'ticker' IN ('AMAT', 'CDNS', 'GS', 'HII', 'IP', 'MRK', 'SLG')",4075,0.11363002621158887,True,constructed,near_above,far_below
+finqa_00724,"metadata->>'ticker' IN ('APD', 'BDX', 'BLL', 'CME', 'MRO', 'NWS', 'UPS')",3263,0.09098767497629803,True,constructed,near_above,far_below
+finqa_00725,"metadata->>'ticker' IN ('AAPL', 'ADI', 'AMT', 'BKR', 'KHC', 'MRK', 'MRO')",3853,0.10743962969159557,True,constructed,near_above,far_below
+finqa_00726,"metadata->>'ticker' IN ('C', 'ECL', 'EOG', 'JPM', 'PM', 'PPG', 'RL')",3474,0.09687134013719258,True,constructed,near_above,far_below
+finqa_00727,"metadata->>'ticker' IN ('ANET', 'BKR', 'BLK', 'K', 'KHC', 'LKQ', 'MO')",1765,0.049216440800847694,True,constructed,near_below,far_below
+finqa_00728,"metadata->>'ticker' IN ('ALLE', 'BLK', 'EOG', 'FBHS', 'NWS', 'PKG', 'UA')",1469,0.04096257877418995,True,constructed,near_below,far_below
+finqa_00729,"metadata->>'ticker' IN ('ALLE', 'BKR', 'HWM', 'LMT', 'NCLH', 'RSG', 'UAA')",1686,0.047013551949138366,True,constructed,near_below,far_below
+finqa_00730,"metadata->>'ticker' IN ('AMT', 'AOS', 'CE', 'GRMN', 'K', 'MS', 'PPG')",2958,0.08248285092855948,True,constructed,near_above,far_below
+finqa_00731,"metadata->>'ticker' IN ('AMAT', 'AWK', 'BDX', 'ETR', 'MAS', 'PKG', 'UA')",3098,0.08638670458981652,True,constructed,near_above,far_below
+finqa_00732,"metadata->>'ticker' IN ('AON', 'AOS', 'C', 'CB', 'FIS', 'IPG', 'MRO')",3694,0.10300596731916792,True,constructed,near_above,far_below
+finqa_00733,"metadata->>'ticker' IN ('AES', 'CB', 'D', 'ETFC', 'GIS', 'MAS', 'UPS')",1825,0.05088952094138643,True,constructed,near_below,far_below
+finqa_00734,"metadata->>'ticker' IN ('EMR', 'EOG', 'HUM', 'IPG', 'LKQ', 'RCL', 'SLG')",1226,0.03418660420500809,True,constructed,far_below,far_below
+finqa_00735,"metadata->>'ticker' IN ('AAPL', 'CE', 'DXC', 'GRMN', 'MKTX', 'PNC', 'RCL')",2237,0.06237800457308572,True,constructed,near_below,far_below
+finqa_00736,"metadata->>'ticker' IN ('ABC', 'DISCA', 'FBHS', 'GIS', 'JPM', 'KHC', 'PPG')",2840,0.07919245998549997,True,constructed,near_above,far_below
+finqa_00737,"metadata->>'ticker' IN ('AON', 'CDW', 'IPG', 'MKTX', 'MMM', 'UA', 'UAA')",1570,0.043778930344096814,True,constructed,near_below,far_below
+finqa_00738,"metadata->>'ticker' IN ('AES', 'BKR', 'BLL', 'JKHY', 'NCLH', 'RCL', 'VRTX')",1611,0.04492220177346495,True,constructed,near_below,far_below
+finqa_00739,"metadata->>'ticker' IN ('ALLE', 'AWK', 'EOG', 'ETR', 'FIS', 'LKQ', 'RL', 'UA')",3504,0.09770788020746193,True,constructed,near_above,far_below
+finqa_00740,"metadata->>'ticker' IN ('ALXN', 'AOS', 'APD', 'CDW', 'HII', 'JKHY', 'MRK', 'UA')",960,0.02676928224861971,True,constructed,far_below,far_below
+finqa_00741,"metadata->>'ticker' IN ('BLK', 'C', 'CDW', 'EL', 'HOLX', 'LMT', 'PKG', 'PPG')",4120,0.11488483631699292,True,constructed,near_above,far_below
+finqa_00742,"metadata->>'ticker' IN ('EMR', 'GRMN', 'HST', 'IP', 'MS', 'MSI', 'NKE', 'SLB')",2349,0.06550108750209135,True,constructed,near_below,far_below
+finqa_00743,"metadata->>'ticker' IN ('ADBE', 'AES', 'ALXN', 'AMAT', 'APD', 'MAR', 'MAS', 'NCLH')",1439,0.040126038703920584,True,constructed,near_below,far_below
+finqa_00744,"metadata->>'ticker' IN ('AMT', 'CDNS', 'DXC', 'FIS', 'K', 'MSI', 'NKE', 'SLG')",3703,0.10325692934024873,True,constructed,near_above,far_below
+finqa_00745,"metadata->>'ticker' IN ('AOS', 'CE', 'ETR', 'GPN', 'HUM', 'NCLH', 'PKG', 'UAA')",2506,0.06987898053650103,True,constructed,near_below,far_below
+finqa_00746,"metadata->>'ticker' IN ('AMT', 'AOS', 'D', 'ETFC', 'K', 'MKTX', 'PPG', 'SNA')",3655,0.10191846522781775,True,constructed,near_above,far_below
+finqa_00747,"metadata->>'ticker' IN ('ALXN', 'ANSS', 'KHC', 'MKTX', 'MSI', 'NCLH', 'SNA', 'UAA')",1911,0.05328760247615861,True,constructed,near_below,far_below
+finqa_00748,"metadata->>'ticker' IN ('ABMD', 'AOS', 'CDNS', 'DISCA', 'FBHS', 'MRK', 'MS', 'SYY')",1603,0.044699124421393115,True,constructed,near_below,far_below
+finqa_00749,"metadata->>'ticker' IN ('ABMD', 'AES', 'CMCSA', 'DVN', 'ECL', 'EOG', 'GPN', 'UAA')",2768,0.07718476381685349,True,constructed,near_above,far_below
+finqa_00750,"metadata->>'ticker' IN ('EMR', 'IP', 'MMM', 'RCL', 'RSG', 'STT', 'TFX', 'V')",2852,0.07952707601360771,True,constructed,near_above,far_below
+finqa_00751,"metadata->>'ticker' IN ('AES', 'CDNS', 'ECL', 'GIS', 'RCL', 'RL', 'SNA', 'SYY')",2239,0.06243377391110368,True,constructed,near_below,far_below
+finqa_00752,"metadata->>'ticker' IN ('AAL', 'ALLE', 'CDW', 'FBHS', 'GS', 'MRK', 'TMUS', 'UPS')",3998,0.1114829066978975,True,constructed,near_above,far_below
+finqa_00753,"metadata->>'ticker' IN ('AAPL', 'DISCA', 'GIS', 'HWM', 'RCL', 'UNP', 'VNO', 'VRTX')",2399,0.06689532095254029,True,constructed,near_below,far_below
+finqa_00754,"metadata->>'ticker' IN ('C', 'DXC', 'EOG', 'FIS', 'LKQ', 'RCL', 'TMUS', 'UPS')",2262,0.0630751212983102,True,constructed,near_below,far_below
+finqa_00755,"metadata->>'ticker' IN ('ABMD', 'CE', 'EL', 'ETR', 'HIG', 'INTC', 'KHC', 'SLB')",3188,0.08889632480062462,True,constructed,near_above,far_below
+finqa_00756,"metadata->>'ticker' IN ('ALLE', 'AOS', 'GIS', 'GRMN', 'HWM', 'PKG', 'SLG', 'TMUS')",1366,0.03809045786626513,True,constructed,near_below,far_below
+finqa_00757,"metadata->>'ticker' IN ('ADBE', 'ALXN', 'CB', 'CDW', 'CME', 'DISCA', 'VRTX', 'ZBH')",2447,0.06823378506497128,True,constructed,near_below,far_below
+finqa_00758,"metadata->>'ticker' IN ('ALLE', 'APD', 'CB', 'GRMN', 'HST', 'NKE', 'VRTX', 'WRK')",1361,0.037951034521220235,True,constructed,near_below,far_below
+finqa_00759,"metadata->>'ticker' IN ('AES', 'ANSS', 'DISCA', 'LKQ', 'MKTX', 'MRO', 'PPG', 'RCL')",3112,0.08677708995594223,True,constructed,near_above,far_below
+finqa_00760,"metadata->>'ticker' IN ('ADI', 'ANET', 'BLK', 'C', 'DISH', 'K', 'MS', 'UNP')",3595,0.10024538508727901,True,constructed,near_above,far_below
+finqa_00761,"metadata->>'ticker' IN ('AMAT', 'FBHS', 'GIS', 'HUM', 'LKQ', 'MO', 'SLB', 'UPS')",1585,0.0441972003792315,True,constructed,near_below,far_below
+finqa_00762,"metadata->>'ticker' IN ('AOS', 'DISCA', 'HIG', 'MKTX', 'NCLH', 'PNC', 'SNA', 'UAA')",2596,0.07238860074730913,True,constructed,near_above,far_below
+finqa_00763,"metadata->>'ticker' IN ('AAL', 'ADI', 'ANET', 'D', 'DVN', 'HST', 'SNA', 'UPS')",2566,0.07155206067703976,True,constructed,near_above,far_below
+finqa_00764,"metadata->>'ticker' IN ('ANET', 'BLL', 'DG', 'GPN', 'HWM', 'SNA', 'UA', 'UNP', 'UPS')",3735,0.10414923874853606,True,constructed,near_above,far_below
+finqa_00765,"metadata->>'ticker' IN ('BDX', 'BKNG', 'CDW', 'GIS', 'NKE', 'RL', 'SYY', 'UPS', 'VRTX')",1804,0.05030394289219787,True,constructed,near_below,far_below
+finqa_00766,"metadata->>'ticker' IN ('AAPL', 'AON', 'AOS', 'CME', 'FIS', 'IP', 'K', 'SLB', 'V')",3626,0.10110980982655736,True,constructed,near_above,far_below
+finqa_00767,"metadata->>'ticker' IN ('CMCSA', 'DXC', 'HIG', 'ILMN', 'INTC', 'JPM', 'MAR', 'MO', 'PKG')",3641,0.10152807986169204,True,constructed,near_above,far_below
+finqa_00768,"metadata->>'ticker' IN ('AMAT', 'CDNS', 'DG', 'DRE', 'GPN', 'MMM', 'PM', 'SYY', 'VRTX')",1941,0.05412414254642797,True,constructed,near_below,far_below
+finqa_00769,"metadata->>'ticker' IN ('GRMN', 'GS', 'HIG', 'HII', 'HUM', 'IP', 'JPM', 'MMM', 'MRO')",6709,0.18707824438123918,True,constructed,far_above,far_below
+finqa_00770,"metadata->>'ticker' IN ('CE', 'DISCA', 'FIS', 'JPM', 'RL', 'SYY', 'VNO', 'WRK', 'ZBH')",3174,0.08850593943449891,True,constructed,near_above,far_below
+finqa_00771,"metadata->>'ticker' IN ('ANET', 'C', 'CME', 'DISCA', 'DVN', 'GRMN', 'HUM', 'HWM', 'MAR')",2551,0.07113379064190509,True,constructed,near_below,far_below
+finqa_00772,"metadata->>'ticker' IN ('ABMD', 'AES', 'BDX', 'FIS', 'HOLX', 'L', 'NCLH', 'SNA', 'UPS')",3750,0.10456750878367074,True,constructed,near_above,far_below
+finqa_00773,"metadata->>'ticker' IN ('AAPL', 'AWK', 'CDNS', 'CMCSA', 'ECL', 'GS', 'HST', 'LMT', 'RL')",5588,0.1558195304221739,True,constructed,far_above,far_below
+finqa_00774,"metadata->>'ticker' IN ('AAPL', 'ABC', 'ANSS', 'CE', 'EMR', 'JKHY', 'MKTX', 'PNC', 'SNA')",2904,0.08097707880207462,True,constructed,near_above,far_below
+finqa_00775,"metadata->>'ticker' IN ('ADI', 'AMT', 'BLK', 'DG', 'HOLX', 'LKQ', 'NWS', 'RL', 'RSG')",4121,0.1149127209860019,True,constructed,near_above,far_below
+finqa_00776,"metadata->>'ticker' IN ('ABMD', 'CME', 'HST', 'NWS', 'PNC', 'PPG', 'RSG', 'SNA', 'TFX')",4658,0.12988678824382355,True,constructed,near_above,far_below
+finqa_00777,"metadata->>'ticker' IN ('ADI', 'AES', 'APD', 'D', 'FBHS', 'ILMN', 'IP', 'NWS', 'WRK')",2490,0.06943282583235737,True,constructed,near_below,far_below
+finqa_00778,"metadata->>'ticker' IN ('ALLE', 'CE', 'DRE', 'HIG', 'MS', 'RSG', 'SLB', 'STT', 'VRTX')",2413,0.067285706318666,True,constructed,near_below,far_below
+finqa_00779,"metadata->>'ticker' IN ('AMAT', 'C', 'CDNS', 'CE', 'EMR', 'EOG', 'HIG', 'HOLX', 'ILMN')",2588,0.0721655233952373,True,constructed,near_above,far_below
+finqa_00780,"metadata->>'ticker' IN ('CB', 'FBHS', 'FIS', 'GIS', 'HST', 'LMT', 'NCLH', 'RL', 'SLG')",2582,0.07199821538118342,True,constructed,near_above,far_below
+finqa_00781,"metadata->>'ticker' IN ('ADI', 'ANSS', 'AOS', 'BKR', 'CDNS', 'GIS', 'JKHY', 'MO', 'PKG')",1702,0.04745970665328202,True,constructed,near_below,far_below
+finqa_00782,"metadata->>'ticker' IN ('ANSS', 'BKNG', 'BLL', 'DG', 'DXC', 'NKE', 'SLB', 'SNA', 'SYY')",2274,0.06340973732641794,True,constructed,near_below,far_below
+finqa_00783,"metadata->>'ticker' IN ('ADBE', 'BKNG', 'BKR', 'DISCA', 'L', 'LMT', 'MKTX', 'MS', 'SYY')",1713,0.04776643801238079,True,constructed,near_below,far_below
+finqa_00784,"metadata->>'ticker' IN ('BLL', 'CME', 'FBHS', 'GRMN', 'LKQ', 'LMT', 'MKTX', 'PPG', 'UPS')",3549,0.09896269031286599,True,constructed,near_above,far_below
+finqa_00785,"metadata->>'ticker' IN ('BLK', 'DRE', 'EL', 'ETR', 'HOLX', 'K', 'MAR', 'NCLH', 'WRK')",3879,0.10816463108582901,True,constructed,near_above,far_below
+finqa_00786,"metadata->>'ticker' IN ('AAL', 'HUM', 'KHC', 'MO', 'MSI', 'PKG', 'PNC', 'SLG', 'SYY')",3432,0.09570018403881546,True,constructed,near_above,far_below
+finqa_00787,"metadata->>'ticker' IN ('AMT', 'BDX', 'CDW', 'DRE', 'GRMN', 'MAR', 'MS', 'MSI', 'ZBH')",3642,0.10155596453070102,True,constructed,near_above,far_below
+finqa_00788,"metadata->>'ticker' IN ('CB', 'CME', 'DVN', 'GIS', 'HST', 'INTC', 'K', 'MRK', 'MRO')",4053,0.11301656349339133,True,constructed,near_above,far_below
+finqa_00789,"metadata->>'ticker' IN ('AES', 'ALXN', 'AMAT', 'AON', 'C', 'MRK', 'NWS', 'PNC', 'UPS', 'ZBH')",4212,0.11745022586581898,True,constructed,near_above,far_below
+finqa_00790,"metadata->>'ticker' IN ('AOS', 'BKNG', 'BLL', 'EOG', 'MKTX', 'NCLH', 'RCL', 'SNA', 'TFX', 'UPS')",2435,0.06789916903686354,True,constructed,near_below,far_below
+finqa_00791,"metadata->>'ticker' IN ('ADI', 'AOS', 'BDX', 'HII', 'HWM', 'L', 'NCLH', 'PNC', 'RCL', 'UA')",2157,0.06014723105236741,True,constructed,near_below,far_below
+finqa_00792,"metadata->>'ticker' IN ('ABMD', 'ADI', 'C', 'FIS', 'GS', 'KHC', 'NCLH', 'NWS', 'PPG', 'UA')",5711,0.1592493447102783,True,constructed,far_above,far_below
+finqa_00793,"metadata->>'ticker' IN ('AAL', 'AOS', 'CDNS', 'ETFC', 'GPN', 'JKHY', 'LKQ', 'RL', 'VNO', 'ZBH')",2486,0.06932128715632145,True,constructed,near_below,far_below
+finqa_00794,"metadata->>'ticker' IN ('ALLE', 'ALXN', 'CDNS', 'DG', 'DRE', 'FBHS', 'GRMN', 'HUM', 'IPG', 'UNP')",2798,0.07802130388712286,True,constructed,near_above,far_below
+finqa_00795,"metadata->>'ticker' IN ('AAL', 'ANSS', 'BLK', 'BLL', 'D', 'ECL', 'INTC', 'MAS', 'MS', 'PNC')",4666,0.13010986559589538,True,constructed,near_above,far_below
+finqa_00796,"metadata->>'ticker' IN ('BLK', 'CE', 'FBHS', 'ILMN', 'INTC', 'LKQ', 'MMM', 'NWS', 'RSG', 'ZBH')",3517,0.09807038090457866,True,constructed,near_above,far_below
+finqa_00797,"metadata->>'ticker' IN ('ANSS', 'BDX', 'D', 'ECL', 'HWM', 'ILMN', 'MAR', 'RCL', 'RL', 'V')",1718,0.04790586135742569,True,constructed,near_below,far_below
+finqa_00798,"metadata->>'ticker' IN ('AMAT', 'ANET', 'CDNS', 'DISCA', 'ETR', 'KHC', 'LMT', 'NKE', 'NWS', 'TMUS')",2943,0.08206458089342479,True,constructed,near_above,far_below
+finqa_00799,"metadata->>'ticker' IN ('AES', 'AMT', 'BDX', 'DRE', 'GIS', 'GRMN', 'SLB', 'UA', 'VNO', 'WRK')",3146,0.0877251687022475,True,constructed,near_above,far_below
+finqa_00800,"metadata->>'ticker' IN ('AAL', 'CB', 'DXC', 'ETR', 'IP', 'MKTX', 'MSI', 'RCL', 'TFX', 'UAA')",4013,0.11190117673303218,True,constructed,near_above,far_below
+finqa_00801,"metadata->>'ticker' IN ('ALXN', 'DXC', 'ETFC', 'FIS', 'HIG', 'JPM', 'PKG', 'SLG', 'STT', 'UAA')",3837,0.1069934749874519,True,constructed,near_above,far_below
+finqa_00802,"metadata->>'ticker' IN ('BKR', 'BLL', 'EOG', 'GPN', 'JKHY', 'MMM', 'MO', 'NKE', 'SYY', 'UPS')",2959,0.08251073559756845,True,constructed,near_above,far_below
+finqa_00803,"metadata->>'ticker' IN ('ABMD', 'BLK', 'BLL', 'DISH', 'HIG', 'MRK', 'NCLH', 'RSG', 'TFX', 'WRK')",3733,0.1040934694105181,True,constructed,near_above,far_below
+finqa_00804,"metadata->>'ticker' IN ('BLK', 'CDNS', 'FIS', 'GIS', 'K', 'MKTX', 'NCLH', 'PKG', 'RSG', 'SNA')",3801,0.10598962690312866,True,constructed,near_above,far_below
+finqa_00805,"metadata->>'ticker' IN ('ABMD', 'CDNS', 'CME', 'ETFC', 'IP', 'IPG', 'MKTX', 'MMM', 'PPG', 'SNA')",4942,0.13780603424237353,True,constructed,near_above,far_below
+finqa_00806,"metadata->>'ticker' IN ('AAL', 'ABMD', 'AMAT', 'BDX', 'DRE', 'L', 'PKG', 'PM', 'TMUS', 'UNP')",3519,0.09812615024259662,True,constructed,near_above,far_below
+finqa_00807,"metadata->>'ticker' IN ('ABMD', 'AOS', 'BLK', 'BLL', 'HOLX', 'MAS', 'NCLH', 'RSG', 'STT', 'UPS')",4431,0.12355696837878534,True,constructed,near_above,far_below
+finqa_00808,"metadata->>'ticker' IN ('AOS', 'BLK', 'EL', 'GRMN', 'GS', 'JPM', 'L', 'UAA', 'UNP', 'UPS')",6180,0.17232725447548938,True,constructed,far_above,far_below
+finqa_00809,"metadata->>'ticker' IN ('BDX', 'ECL', 'HWM', 'IP', 'IPG', 'L', 'PKG', 'RSG', 'UA', 'V')",2949,0.08223188890747866,True,constructed,near_above,far_below
+finqa_00810,"metadata->>'ticker' IN ('ABC', 'ALLE', 'AWK', 'FIS', 'GS', 'HWM', 'INTC', 'LKQ', 'MRK', 'MS')",5570,0.15531760638001227,True,constructed,far_above,far_below
+finqa_00811,"metadata->>'ticker' IN ('ABMD', 'AWK', 'CME', 'D', 'GRMN', 'IP', 'LKQ', 'PPG', 'SYY', 'UNP')",6191,0.17263398583458814,True,constructed,far_above,far_below
+finqa_00812,"metadata->>'ticker' IN ('AMAT', 'AOS', 'BKR', 'CB', 'CE', 'HST', 'PPG', 'SLB', 'UNP', 'VNO')",2628,0.07328091015559646,True,constructed,near_above,far_below
+finqa_00813,"metadata->>'ticker' IN ('ABMD', 'AMAT', 'AON', 'BLK', 'DISCA', 'DRE', 'GIS', 'MMM', 'SLB', 'UAA')",3217,0.089704980201885,True,constructed,near_above,far_below

@@ -1,0 +1,13 @@
+dataset,threshold,band,n_questions,questions_with_ge_1_filter
+edgar_chunks,T_edgar,far_below,40,40
+edgar_chunks,T_edgar,near_below,40,40
+edgar_chunks,T_edgar,near_above,40,40
+edgar_chunks,T_edgar,far_above,40,40
+edgar_chunks,T_hm,far_below,40,40
+edgar_chunks,T_hm,near_below,40,10
+edgar_chunks,T_hm,near_above,40,40
+edgar_chunks,T_hm,far_above,40,40
+finqa_evidence,T_hm,far_below,1147,1147
+finqa_evidence,T_hm,near_below,1147,1147
+finqa_evidence,T_hm,near_above,1147,1147
+finqa_evidence,T_hm,far_above,1147,1147

@@ -1,0 +1,13 @@
+table,threshold,rule,far_below,near_below,near_above,far_above,total
+edgar_chunks,T_edgar,section_in_list,0,4,15,1,20
+edgar_chunks,T_edgar,single_year + section_in_list,44,16,0,0,60
+edgar_chunks,T_edgar,year_range,0,0,2,1,3
+edgar_chunks,T_edgar,year_range + section_in_list,5,29,25,1,60
+edgar_chunks,T_edgar,year_range + single_section,10,5,0,0,15
+edgar_chunks,T_hm,section_in_list,0,0,0,20,20
+edgar_chunks,T_hm,single_year + section_in_list,0,3,13,44,60
+edgar_chunks,T_hm,year_range,0,0,0,3,3
+edgar_chunks,T_hm,year_range + section_in_list,0,0,2,58,60
+edgar_chunks,T_hm,year_range + single_section,3,0,2,10,15
+finqa_evidence,T_hm,ticker_in_list_seed_20261115,65,75,79,6,225
+finqa_evidence,T_hm,year_range_between,4,8,13,165,190
