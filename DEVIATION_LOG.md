@@ -261,3 +261,13 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 - **Primary vs. secondary:** Primary analysis is EDGAR under `T_edgar = 0.3786921696945195` (noting it came from Amendment 11's empty-interval minimum-failures fallback). Secondary analysis is EDGAR and FinQA under `T_hm = 0.07119177617441379` (transfer test).
 - **Revised EDGAR bands:** Because `4 * T_edgar = 1.5148 > 1.0`, the `s >= 4T` band is empty on `edgar_chunks`. EDGAR uses Far below (`s <= T/2`), Near below (`T/2 < s <= T`), Near above (`T < s <= 2T`, up to ~0.7574), and an optional "very wide" band (`s > 2T`) if SQL enumeration finds filters there.
 - **Scope:** Calibration sensitivity (varying recall target and latency limit L, plus 10/25/50/100% row subsamples) and a disjoint calibration/test split precede any new timed retrieval run; answer-level runs remain a separate later amendment.
+
+## 2026-11-15 — Repository hygiene, post-hoc commits, and root `outputs/sweep_results.jsonl` audit
+
+- **Post-hoc commits on 2026-11-15:**
+  - `a56b4ec`: `src/phase_a_sweep/run_phase_a_v2.py`, `src/phase_a_sweep/targeted_sweeps.py`, `src/phase_d_validation/finqa_selectivity_census.py`, `src/phase_d_validation/test_retest_reliability.py`, `scripts/straddle_t_enumerate.py`.
+  - `a4055b3`: `outputs/straddle_t_feasibility_2026-11-15/` (including `followup/` and `pool/`, all files < 5 MB).
+  - `7169c48`: `outputs/data_checksums_posthoc_2026-11-15.json` (holds after-the-fact SHA-256, size, and mtime values recorded on 2026-11-15; not freeze-time checksums; `outputs/data_checksums.json` unchanged).
+  - `447d932`: `DEVIATION_LOG.md` and `docs/preregistration/INDEX.md`.
+- **Root `outputs/sweep_results.jsonl` status:** The working-tree `outputs/sweep_results.jsonl` (1,100 rows, timestamps `2026-09-04T02:48:30.704414+00:00` to `2026-09-04T03:06:44.780293+00:00`) differs in content from the committed `HEAD` version (1,100 rows, timestamps `2026-08-23T02:22:25.361953+00:00` to `2026-08-23T02:35:09.533592+00:00`) and has **not** been committed.
+- **Step 1 audit result:** No number in any report or protocol is derived from the root `outputs/sweep_results.jsonl`. Phase A reports derive numbers from `outputs/phase_a_v1/sweep_results.jsonl` and `outputs/phase_a_v2/sweep_results.jsonl` (and `reports/phase_d_local_2026-10-12.md` only notes the dirty working-tree file as left as found).
