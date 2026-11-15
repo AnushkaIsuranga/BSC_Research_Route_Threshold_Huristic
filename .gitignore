@@ -35,3 +35,5 @@ outputs/db_dumps_*/*.dump
 data/raw/edgar_corpus/
 # Phase F chunk file (354 MB; sha256 in outputs/data_checksums.json; rebuild with src.phase_f_edgar.build_chunks)
 outputs/edgar_chunks_*/chunks.jsonl
+reports/figures_2026-11-01.zip
+reports/tables_2026-11-01.zip
