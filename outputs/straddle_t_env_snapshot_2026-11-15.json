@@ -1,0 +1,163 @@
+{
+  "captured_utc": "2026-11-15T12:01:32.186833+00:00",
+  "git_head": "3a20691ced99129e74eca4cd7daa93f3bee5540b",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "machine": {
+    "platform": "Windows-10-10.0.26320-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "logical_cores": 12,
+    "total_ram_bytes": 16366764032
+  },
+  "postgresql_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+  "extensions": {
+    "plpgsql": "1.0",
+    "vector": "0.8.3"
+  },
+  "settings": {
+    "shared_buffers": "128MB",
+    "effective_cache_size": "4GB",
+    "work_mem": "4MB",
+    "maintenance_work_mem": "64MB",
+    "max_parallel_workers_per_gather": "2",
+    "jit": "on",
+    "random_page_cost": "4",
+    "seq_page_cost": "1",
+    "cpu_tuple_cost": "0.01",
+    "default_statistics_target": "100",
+    "hnsw.ef_search": null,
+    "hnsw.iterative_scan": null,
+    "hnsw.max_scan_tuples": null
+  },
+  "tables": {
+    "edgar_chunks": {
+      "exists": true,
+      "row_count": 158308,
+      "reltuples": 158278.0,
+      "relpages": 38436,
+      "total_size_bytes": 2482503680,
+      "indexes": [
+        {
+          "name": "edgar_chunks_cik_fiscal_year_section_chunk_index_key",
+          "indexdef": "CREATE UNIQUE INDEX edgar_chunks_cik_fiscal_year_section_chunk_index_key ON public.edgar_chunks USING btree (cik, fiscal_year, section, chunk_index)"
+        },
+        {
+          "name": "edgar_chunks_cik_idx",
+          "indexdef": "CREATE INDEX edgar_chunks_cik_idx ON public.edgar_chunks USING btree (cik)"
+        },
+        {
+          "name": "edgar_chunks_embedding_idx",
+          "indexdef": "CREATE INDEX edgar_chunks_embedding_idx ON public.edgar_chunks USING hnsw (embedding vector_l2_ops) WITH (m='16', ef_construction='64')"
+        },
+        {
+          "name": "edgar_chunks_fiscal_year_idx",
+          "indexdef": "CREATE INDEX edgar_chunks_fiscal_year_idx ON public.edgar_chunks USING btree (fiscal_year)"
+        },
+        {
+          "name": "edgar_chunks_pkey",
+          "indexdef": "CREATE UNIQUE INDEX edgar_chunks_pkey ON public.edgar_chunks USING btree (id)"
+        },
+        {
+          "name": "edgar_chunks_section_idx",
+          "indexdef": "CREATE INDEX edgar_chunks_section_idx ON public.edgar_chunks USING btree (section)"
+        }
+      ],
+      "stats_meta": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "last_vacuum": null,
+        "last_autovacuum": null,
+        "n_mod_since_analyze": 0
+      },
+      "pg_stats_columns": [
+        "chunk_index",
+        "cik",
+        "company_name",
+        "embedding",
+        "fiscal_year",
+        "id",
+        "section",
+        "text",
+        "text_hash"
+      ],
+      "pg_stats_ext_exprs": [],
+      "fingerprints": {
+        "sorted_id_sha256": "cb7214cbb830faa7c6660a11dcb0f97e999ce0c109eae34712883a32316e613c",
+        "sorted_text_hash_sha256": "70181f8754d9ea00f62a777eb6364a7bc072e5bbd4ad50a16b155a11f814395f"
+      }
+    },
+    "finqa_evidence": {
+      "exists": true,
+      "row_count": 35862,
+      "reltuples": 35862.0,
+      "relpages": 1105,
+      "total_size_bytes": 218701824,
+      "indexes": [
+        {
+          "name": "finqa_evidence_embedding_idx",
+          "indexdef": "CREATE INDEX finqa_evidence_embedding_idx ON public.finqa_evidence USING hnsw (embedding vector_l2_ops) WITH (m='16', ef_construction='64')"
+        },
+        {
+          "name": "finqa_evidence_pkey",
+          "indexdef": "CREATE UNIQUE INDEX finqa_evidence_pkey ON public.finqa_evidence USING btree (id)"
+        }
+      ],
+      "stats_meta": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "last_vacuum": null,
+        "last_autovacuum": null,
+        "n_mod_since_analyze": 0
+      },
+      "pg_stats_columns": [
+        "content",
+        "embedding",
+        "evidence_key",
+        "id",
+        "metadata",
+        "query_id"
+      ],
+      "pg_stats_ext_exprs": [],
+      "fingerprints": {
+        "sorted_id_sha256": "6c5e7388b9d71c82917675160176332ffbadba9e884b51ddf367d4a2f1a4c9a5",
+        "sorted_evidence_key_sha256": "67900215506527ebd228280251a5fc81a0d5a0fa2eeb8fc13f62e453b63d0449"
+      }
+    },
+    "finqa_evidence_qwen3": {
+      "exists": true,
+      "row_count": 35862,
+      "reltuples": 35873.0,
+      "relpages": 1105,
+      "total_size_bytes": 315236352,
+      "indexes": [
+        {
+          "name": "finqa_evidence_qwen3_embedding_idx",
+          "indexdef": "CREATE INDEX finqa_evidence_qwen3_embedding_idx ON public.finqa_evidence_qwen3 USING hnsw (embedding vector_l2_ops) WITH (m='16', ef_construction='64')"
+        },
+        {
+          "name": "finqa_evidence_qwen3_pkey",
+          "indexdef": "CREATE UNIQUE INDEX finqa_evidence_qwen3_pkey ON public.finqa_evidence_qwen3 USING btree (id)"
+        }
+      ],
+      "stats_meta": {
+        "last_analyze": null,
+        "last_autoanalyze": null,
+        "last_vacuum": null,
+        "last_autovacuum": null,
+        "n_mod_since_analyze": 0
+      },
+      "pg_stats_columns": [
+        "content",
+        "embedding",
+        "evidence_key",
+        "id",
+        "metadata",
+        "query_id"
+      ],
+      "pg_stats_ext_exprs": [],
+      "fingerprints": {
+        "sorted_id_sha256": "6c5e7388b9d71c82917675160176332ffbadba9e884b51ddf367d4a2f1a4c9a5",
+        "sorted_evidence_key_sha256": "67900215506527ebd228280251a5fc81a0d5a0fa2eeb8fc13f62e453b63d0449"
+      }
+    }
+  }
+}
