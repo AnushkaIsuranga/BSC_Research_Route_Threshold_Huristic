@@ -1,0 +1,33 @@
+{
+  "table": "hm_clothes_100",
+  "range": [
+    0.2,
+    0.33
+  ],
+  "columns": {
+    "index_group_name": [
+      {
+        "value": "Baby/Children",
+        "count": 34579,
+        "frequency": 0.3290104662226451
+      }
+    ],
+    "product_type_name": [],
+    "garment_group_name": [
+      {
+        "value": "Jersey Fancy",
+        "count": 21415,
+        "frequency": 0.20375832540437677
+      }
+    ],
+    "perceived_colour_master_name": [
+      {
+        "value": "Black",
+        "count": 22479,
+        "frequency": 0.21388201712654614
+      }
+    ],
+    "graphical_appearance_name": []
+  },
+  "row_count": 105100
+}
