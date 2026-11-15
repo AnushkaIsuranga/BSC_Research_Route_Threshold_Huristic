@@ -1,0 +1,111 @@
+pair_id,qid,band,T_name,T_value,analysis_group,pool_id,where_clause,n_rows,s,tier,boundary_flag,natural_available,gold_in_filter
+edgar_T_hm_natural|far_below|edgar_q001,edgar_q001,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09856,cik = '867665',367,0.0023182656593476007,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q003,edgar_q003,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09177,cik = '906345',179,0.001130707228946105,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q004,edgar_q004,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_04889,cik = '1414043' AND section = '1',26,0.0001642368042044622,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q006,edgar_q006,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08123,cik = '1347858' AND fiscal_year = 2019,98,0.0006190464158475883,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q007,edgar_q007,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08174,cik = '54476' AND fiscal_year = 2020 AND section = '8',100,0.0006316800161710085,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q008,edgar_q008,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09957,cik = '1158463',507,0.0032026176819870125,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q009,edgar_q009,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_06913,cik = '1401564' AND fiscal_year = 2018 AND section = '7',58,0.0003663744093791849,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q010,edgar_q010,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09266,cik = '40730' AND section = '1',189,0.001193875230563206,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q011,edgar_q011,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_04358,cik = '896622' AND fiscal_year = 2019 AND section = '1',19,0.00012001920307249159,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q012,edgar_q012,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10047,cik = '914208',681,0.004301740910124567,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q013,edgar_q013,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10039,cik = '1065696',660,0.004169088106728656,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q014,edgar_q014,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_07584,cik = '1422768' AND section = '8',77,0.00048639361245167645,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q015,edgar_q015,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09167,cik = '1220754' AND fiscal_year = 2019,178,0.001124390428784395,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q018,edgar_q018,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10071,cik = '1326190',813,0.0051355585314702985,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q019,edgar_q019,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09915,cik = '91928' AND section = '8',444,0.0028046592717992772,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q022,edgar_q022,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08475,cik = '1610950' AND section = '7',116,0.0007327488187583698,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q023,edgar_q023,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09243,cik = '31235' AND fiscal_year = 2018,187,0.0011812416302397857,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q026,edgar_q026,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08854,cik = '1477009' AND section = '8',145,0.0009159360234479622,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q027,edgar_q027,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_06635,cik = '887596' AND fiscal_year = 2019,51,0.0003221568082472143,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q028,edgar_q028,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09914,cik = '1320461',444,0.0028046592717992772,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q029,edgar_q029,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10073,fiscal_year = 2018 AND section = '7A',871,0.005501932940849484,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q031,edgar_q031,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08823,cik = '1378946' AND fiscal_year = 2019,142,0.0008969856229628319,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q032,edgar_q032,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08759,cik = '101295',137,0.0008654016221542816,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q034,edgar_q034,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_06472,cik = '842162' AND fiscal_year = 2019 AND section = '7',48,0.00030320640776208406,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q036,edgar_q036,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09210,cik = '831641' AND fiscal_year = 2018,183,0.0011559744295929454,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q037,edgar_q037,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09467,cik = '1674910' AND section = '8',218,0.0013770624352527983,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q038,edgar_q038,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09377,cik = '1063761' AND fiscal_year = 2020,204,0.0012886272329888572,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q039,edgar_q039,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10038,cik = '1425450',659,0.0041627713065669454,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q040,edgar_q040,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_07793,cik = '759944' AND fiscal_year = 2019 AND section = '8',84,0.000530611213583647,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q041,edgar_q041,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08669,cik = '1075736' AND section = '8',129,0.0008148672208606009,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q044,edgar_q044,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_09645,cik = '6207',259,0.0016360512418829118,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q046,edgar_q046,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_07506,cik = '1045610' AND fiscal_year = 2019,75,0.0004737600121282563,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q051,edgar_q051,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_08552,cik = '924901' AND fiscal_year = 2018,121,0.0007643328195669201,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q052,edgar_q052,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_06337,cik = '1535955' AND fiscal_year = 2018 AND section = '7',46,0.00029057280743866385,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q053,edgar_q053,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_06779,cik = '1099132' AND fiscal_year = 2018,55,0.00034742400889405464,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q054,edgar_q054,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_05986,cik = '15847' AND fiscal_year = 2018,40,0.00025267200646840335,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q056,edgar_q056,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_07288,cik = '84112',67,0.00042322561083457563,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q058,edgar_q058,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10073,fiscal_year = 2018 AND section = '7A',871,0.005501932940849484,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q059,edgar_q059,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_06743,cik = '1487712' AND fiscal_year = 2018 AND section = '1A',54,0.00034110720873234456,natural,False,True,True
+edgar_T_hm_natural|far_below|edgar_q060,edgar_q060,far_below,T_hm,0.07119177617441379,below_T,edgar_pool_10037,cik = '1530249',655,0.004137504105920105,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q001,edgar_q001,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q003,edgar_q003,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q006,edgar_q006,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10094,fiscal_year = 2019 AND section = '7',12183,0.07695757637011395,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q007,edgar_q007,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10110,fiscal_year = 2020 AND section = '8',17058,0.10775197715845061,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q009,edgar_q009,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q012,edgar_q012,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10095,fiscal_year = 2020 AND section = '7',12899,0.08148040528589838,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q013,edgar_q013,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10094,fiscal_year = 2019 AND section = '7',12183,0.07695757637011395,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q014,edgar_q014,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10107,fiscal_year = 2019 AND section = '8',15533,0.09811885691184273,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q015,edgar_q015,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10107,fiscal_year = 2019 AND section = '8',15533,0.09811885691184273,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q018,edgar_q018,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10107,fiscal_year = 2019 AND section = '8',15533,0.09811885691184273,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q019,edgar_q019,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10107,fiscal_year = 2019 AND section = '8',15533,0.09811885691184273,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q022,edgar_q022,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q023,edgar_q023,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10103,fiscal_year = 2018 AND section = '8',14649,0.09253480556889103,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q026,edgar_q026,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10103,fiscal_year = 2018 AND section = '8',14649,0.09253480556889103,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q028,edgar_q028,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10103,fiscal_year = 2018 AND section = '8',14649,0.09253480556889103,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q031,edgar_q031,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10094,fiscal_year = 2019 AND section = '7',12183,0.07695757637011395,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q034,edgar_q034,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10094,fiscal_year = 2019 AND section = '7',12183,0.07695757637011395,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q036,edgar_q036,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q037,edgar_q037,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10103,fiscal_year = 2018 AND section = '8',14649,0.09253480556889103,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q038,edgar_q038,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10110,fiscal_year = 2020 AND section = '8',17058,0.10775197715845061,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q039,edgar_q039,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q040,edgar_q040,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10107,fiscal_year = 2019 AND section = '8',15533,0.09811885691184273,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q041,edgar_q041,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10103,fiscal_year = 2018 AND section = '8',14649,0.09253480556889103,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q046,edgar_q046,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10094,fiscal_year = 2019 AND section = '7',12183,0.07695757637011395,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q052,edgar_q052,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q053,edgar_q053,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10103,fiscal_year = 2018 AND section = '8',14649,0.09253480556889103,natural,False,True,True
+edgar_T_hm_natural|near_above|edgar_q054,edgar_q054,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10097,fiscal_year = 2018 AND section = '7',13211,0.08345124693635192,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q056,edgar_q056,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10095,fiscal_year = 2020 AND section = '7',12899,0.08148040528589838,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q059,edgar_q059,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10098,fiscal_year = 2018 AND section = '1A',13423,0.08479040857063445,natural,True,True,True
+edgar_T_hm_natural|near_above|edgar_q060,edgar_q060,near_above,T_hm,0.07119177617441379,above_T,edgar_pool_10100,fiscal_year = 2019 AND section = '1A',13859,0.08754453344114006,natural,True,True,True
+edgar_T_hm_natural|far_above|edgar_q001,edgar_q001,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q003,edgar_q003,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q004,edgar_q004,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q006,edgar_q006,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q007,edgar_q007,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10201,fiscal_year = 2020,55044,0.3477019481011699,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q008,edgar_q008,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10201,fiscal_year = 2020,55044,0.3477019481011699,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q009,edgar_q009,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q010,edgar_q010,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q011,edgar_q011,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q012,edgar_q012,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q013,edgar_q013,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10196,fiscal_year = 2019,51916,0.3279429971953407,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q014,edgar_q014,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10187,section = '8',47240,0.2984056396391844,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q015,edgar_q015,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10196,fiscal_year = 2019,51916,0.3279429971953407,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q018,edgar_q018,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10196,fiscal_year = 2019,51916,0.3279429971953407,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q019,edgar_q019,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10196,fiscal_year = 2019,51916,0.3279429971953407,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q022,edgar_q022,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q023,edgar_q023,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q026,edgar_q026,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q027,edgar_q027,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q028,edgar_q028,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10187,section = '8',47240,0.2984056396391844,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q029,edgar_q029,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q031,edgar_q031,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10196,fiscal_year = 2019,51916,0.3279429971953407,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q032,edgar_q032,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q034,edgar_q034,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q036,edgar_q036,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q037,edgar_q037,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10187,section = '8',47240,0.2984056396391844,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q038,edgar_q038,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10187,section = '8',47240,0.2984056396391844,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q039,edgar_q039,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q040,edgar_q040,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10196,fiscal_year = 2019,51916,0.3279429971953407,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q041,edgar_q041,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10187,section = '8',47240,0.2984056396391844,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q044,edgar_q044,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q046,edgar_q046,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q051,edgar_q051,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10143,section = '1',27677,0.17483007807565,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q052,edgar_q052,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q053,edgar_q053,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q054,edgar_q054,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q056,edgar_q056,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10172,section = '7',38293,0.24188922859236425,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q058,edgar_q058,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q059,edgar_q059,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10195,fiscal_year = 2018,51348,0.3243550547034894,natural,False,True,True
+edgar_T_hm_natural|far_above|edgar_q060,edgar_q060,far_above,T_hm,0.07119177617441379,above_T,edgar_pool_10179,section = '1A',42328,0.2673775172448644,natural,False,True,True

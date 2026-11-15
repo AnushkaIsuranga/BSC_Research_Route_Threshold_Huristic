@@ -1,0 +1,15 @@
+pair_id,qid,band,T_name,T_value,analysis_group,pool_id,where_clause,n_rows,s,tier,boundary_flag,natural_available,gold_in_filter
+edgar_T_edgar|far_below|edgar_q018,edgar_q018,far_below,T_edgar,0.3786921696945195,below_T,edgar_pool_09664,cik = '1326190' AND fiscal_year = 2019,265,0.0016739520428531722,natural,False,True,True
+edgar_T_edgar|far_below|edgar_q037,edgar_q037,far_below,T_edgar,0.3786921696945195,below_T,edgar_pool_09963,cik = '1674910',517,0.0032657856836041136,natural,False,True,True
+edgar_T_edgar|near_below|edgar_q031,edgar_q031,near_below,T_edgar,0.3786921696945195,below_T,edgar_pool_10169,"fiscal_year = 2019 AND section IN ('1', '7', '8')",37060,0.23410061399297571,plausible_constructed,False,True,True
+edgar_T_edgar|near_below|edgar_q051,edgar_q051,near_below,T_edgar,0.3786921696945195,below_T,edgar_pool_10186,"fiscal_year IN (2018, 2019) AND section IN ('1', '1A')",45820,0.28943578340955606,plausible_constructed,True,True,True
+edgar_T_edgar|near_below|edgar_q029,edgar_q029,near_below,T_edgar,0.3786921696945195,below_T,edgar_pool_10175,"section IN ('7', '7A')",41063,0.25938676504030117,plausible_constructed,False,True,True
+edgar_T_edgar|near_above|edgar_q056,edgar_q056,near_above,T_edgar,0.3786921696945195,above_T,edgar_pool_10227,"fiscal_year IN (2019, 2020) AND section IN ('1A', '7', '8')",86578,0.5468959244005357,plausible_constructed,False,False,True
+edgar_T_edgar|near_above|edgar_q001,edgar_q001,near_above,T_edgar,0.3786921696945195,above_T,edgar_pool_10233,"section IN ('1', '1A', '7')",108298,0.6840968239128787,plausible_constructed,False,False,True
+edgar_T_edgar|near_above|edgar_q051,edgar_q051,near_above,T_edgar,0.3786921696945195,above_T,edgar_pool_10219,"fiscal_year IN (2018, 2019) AND section IN ('1', '1A', '8')",76002,0.4800894458902898,plausible_constructed,False,False,True
+edgar_T_edgar|far_above|edgar_q013,edgar_q013,far_above,T_edgar,0.3786921696945195,above_T,edgar_pool_10236,"section IN ('1A', '7', '8')",127861,0.8076723854764131,plausible_constructed,False,False,True
+edgar_T_edgar|far_above|edgar_q041,edgar_q041,far_above,T_edgar,0.3786921696945195,above_T,edgar_pool_10236,"section IN ('1A', '7', '8')",127861,0.8076723854764131,plausible_constructed,False,False,True
+finqa_T_hm|far_above|ABMD/2005/page_29.pdf-2,ABMD/2005/page_29.pdf-2,far_above,T_hm,0.07119177617441379,above_T,finqa_pool_00744,(metadata->>'year')::int BETWEEN 2005 AND 2015,24985,0.6966984551893369,plausible_constructed,False,False,True
+finqa_T_hm|near_below|SNA/2013/page_34.pdf-1,SNA/2013/page_34.pdf-1,near_below,T_hm,0.07119177617441379,below_T,finqa_pool_00504,(metadata->>'year')::int = 2013,2389,0.0666164742624505,natural,True,True,True
+finqa_T_hm|near_above|LMT/2014/page_77.pdf-3,LMT/2014/page_77.pdf-3,near_above,T_hm,0.07119177617441379,above_T,finqa_pool_00604,(metadata->>'year')::int BETWEEN 2013 AND 2014,4525,0.12617812726562935,plausible_constructed,False,False,True
+finqa_T_hm|near_above|JPM/2003/page_106.pdf-4,JPM/2003/page_106.pdf-4,near_above,T_hm,0.07119177617441379,above_T,finqa_pool_00524,(metadata->>'year')::int BETWEEN 2002 AND 2005,2701,0.07531649099325191,plausible_constructed,True,False,True

@@ -1,0 +1,2 @@
+table,T_name,band,n_distinct_filters,n_eligible_questions,n_total_questions,reason
+edgar_chunks,T_hm,near_below,6,10,40,"6 distinct filters, 10 of 40 questions eligible (declared not testable in Amendment 12 Section 4)"
