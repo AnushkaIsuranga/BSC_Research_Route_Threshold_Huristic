@@ -1,0 +1,3033 @@
+{
+ "edgar_q037|edgar_pool_09963": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 3596.295100003772,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "cik = '1674910'",
+   "predicates": [
+    {
+     "column": "cik",
+     "kind": "eq",
+     "values": [
+      "1674910"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.0017122489996987949,
+    "postgres_selectivity": 0.0017121773082803674,
+    "advisor_rows": 271.01134717432586,
+    "postgres_plan_rows": 271.0,
+    "absolute_delta": 7.169141842742859e-08,
+    "ratio": 0.9999581302611711,
+    "plan_node_type": "Index Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.0017122489996987949,
+    "s_local_p10": 0.91,
+    "s_local_median": 0.91,
+    "rho": 0.9962438828663815,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 182,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Index Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE cik = '1674910'",
+    "observed_vector_query": {
+     "strategy": "exact",
+     "reason": "PostgreSQL did not choose a vector index; it will filter then sort by distance.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_cik_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE cik = '1674910' ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpz3d3a04c\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.0017122489996987949,
+    "s_local": 0.91,
+    "rho": 0.9962438828663815,
+    "planner_would_pick": "exact",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "exact",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 5,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.003946848876786032,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "partial",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.45,
+      "estimated_latency_ms": 0.004481728553196073,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.000534879676410041,
+      "latency_ratio": 1.135520688303019
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.14x latency versus next viable strategy partial",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is exact, which differs from the advisor recommendation iterative_relaxed",
+      "local selectivity is higher than global selectivity; ANN post-filtering is less risky for this query neighborhood",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 3.9468488767860324,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 16",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "partial",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": null,
+       "requires_new_object": "CREATE INDEX CONCURRENTLY IF NOT EXISTS \"vecadvisor_edgar_chunks_embedding_9fd0ca7bf1_hnsw_idx\" ON \"public\".\"edgar_chunks\" USING hnsw (\"embedding\" vector_l2_ops) WHERE \"cik\" = '1674910';",
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; Create a partial HNSW index for this stable literal filter before using the partial-index strategy."
+      },
+      "estimate": {
+       "est_latency_us": 4.481728553196073,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.45,
+       "notes": [
+        "partial HNSW over ~271 indexed rows",
+        "ef_search=40 satisfies recall target 0.9",
+        "partial index suggestion is limited to low-cardinality literal filters",
+        "validate workload frequency before creating new indexes",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 4.736218652143239,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 16",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 8.029405594754838,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~271 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 36.40",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpz3d3a04c\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q031|edgar_pool_10169": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 2144.15580000059,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "fiscal_year = 2019 AND section IN ('1', '7', '8')",
+   "predicates": [
+    {
+     "column": "fiscal_year",
+     "kind": "eq",
+     "values": [
+      2019
+     ],
+     "is_literal": true
+    },
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1",
+      "7",
+      "8"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.2367859989,
+    "postgres_selectivity": 0.2350358230455275,
+    "advisor_rows": 37478.0143338942,
+    "postgres_plan_rows": 37201.0,
+    "absolute_delta": 0.0017501758544724855,
+    "ratio": 0.992608617643767,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.2367859989,
+    "s_local_p10": 0.525,
+    "s_local_median": 0.525,
+    "rho": 0.37833985071420834,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 105,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year = 2019 AND section IN ('1', '7', '8')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year = 2019 AND section IN ('1', '7', '8') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpmdyi6uxi\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.2367859989,
+    "s_local": 0.525,
+    "rho": 0.37833985071420834,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.006841204719762456,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "iterative_strict",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.008209445663714947,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.0013682409439524906,
+      "latency_ratio": 1.2
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.2x latency versus next viable strategy iterative_strict",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "local selectivity is higher than global selectivity; ANN post-filtering is less risky for this query neighborhood",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 6.841204719762456,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 29",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 8.209445663714947,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 29",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 21.00",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 1110.3822076472088,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~37478 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpmdyi6uxi\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q051|edgar_pool_10219": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 2185.470599994005,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "fiscal_year IN (2018, 2019) AND section IN ('1', '1A', '8')",
+   "predicates": [
+    {
+     "column": "fiscal_year",
+     "kind": "in",
+     "values": [
+      2018,
+      2019
+     ],
+     "is_literal": true
+    },
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1",
+      "1A",
+      "8"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.4804001228184444,
+    "postgres_selectivity": 0.47813341083410205,
+    "advisor_rows": 76036.77063945774,
+    "postgres_plan_rows": 75678.0,
+    "absolute_delta": 0.002266711984342362,
+    "ratio": 0.9952816165594549,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.4804001228184444,
+    "s_local_p10": 0.255,
+    "s_local_median": 0.255,
+    "rho": -0.3064999798403503,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 51,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year IN (2018, 2019) AND section IN ('1', '1A', '8')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year IN (2018, 2019) AND section IN ('1', '1A', '8') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpwbjoqfnf\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.4804001228184444,
+    "s_local": 0.255,
+    "rho": -0.3064999798403503,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.014084833246569763,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "postfilter",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.014127087746309473,
+      "estimated_recall": 0.92375,
+      "latency_delta_ms": 4.2254499739708964e-05,
+      "latency_ratio": 1.003
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1x latency versus next viable strategy postfilter",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "local selectivity is lower than global selectivity; fixed-size ANN post-filtering has elevated recall risk",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 14.084833246569763,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 59",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 59,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 59; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 14.127087746309472,
+       "est_recall": 0.92375,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 15.04",
+        "ef_search raised from 40 to 59 to satisfy recall target 0.9 and survivor ef >= 59",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 16.901799895883716,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 59",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 2252.784165479366,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~76037 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpwbjoqfnf\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q029|edgar_pool_10175": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 2860.7780000020284,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "section IN ('7', '7A')",
+   "predicates": [
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "7",
+      "7A"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.260733337,
+    "postgres_selectivity": 0.26073111866462806,
+    "advisor_rows": 41268.351113686,
+    "postgres_plan_rows": 41268.0,
+    "absolute_delta": 2.218335371950708e-06,
+    "ratio": 0.9999914919380948,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.260733337,
+    "s_local_p10": 0.465,
+    "s_local_median": 0.465,
+    "rho": 0.28146242233323227,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 93,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('7', '7A')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('7', '7A') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmp1925sldl\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.260733337,
+    "s_local": 0.465,
+    "rho": 0.28146242233323227,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.007723940812635032,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "iterative_strict",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.009268728975162038,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.0015447881625270056,
+      "latency_ratio": 1.2
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.2x latency versus next viable strategy iterative_strict",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "local selectivity is higher than global selectivity; ANN post-filtering is less risky for this query neighborhood",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 7.723940812635032,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 32",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 9.268728975162038,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 32",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 18.60",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 1222.6806470409247,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~41268 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmp1925sldl\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q013|edgar_pool_10236": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 2011.9781000030343,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "section IN ('1A', '7', '8')",
+   "predicates": [
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1A",
+      "7",
+      "8"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.8092333300000001,
+    "postgres_selectivity": 0.8092343850693084,
+    "advisor_rows": 128083.83300574002,
+    "postgres_plan_rows": 128084.0,
+    "absolute_delta": 1.0550693083644092e-06,
+    "ratio": 1.0000013037887459,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.8092333300000001,
+    "s_local_p10": 0.98,
+    "s_local_median": 0.98,
+    "rho": 0.09544125248326328,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 196,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('1A', '7', '8')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('1A', '7', '8') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpf07fo9kb\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.8092333300000001,
+    "s_local": 0.98,
+    "rho": 0.09544125248326328,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.0036649310998727444,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "iterative_strict",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.004397917319847293,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.0007329862199745487,
+      "latency_ratio": 1.2
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.2x latency versus next viable strategy iterative_strict",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 3.6649310998727445,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 15",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 4.397917319847293,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 15",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 39.20",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 3794.8117525588314,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~128084 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpf07fo9kb\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q041|edgar_pool_10236": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 1892.554799997015,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "section IN ('1A', '7', '8')",
+   "predicates": [
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1A",
+      "7",
+      "8"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.8092333300000001,
+    "postgres_selectivity": 0.8092343850693084,
+    "advisor_rows": 128083.83300574002,
+    "postgres_plan_rows": 128084.0,
+    "absolute_delta": 1.0550693083644092e-06,
+    "ratio": 1.0000013037887459,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.8092333300000001,
+    "s_local_p10": 1.0,
+    "s_local_median": 1.0,
+    "rho": 0.10544061223988167,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 200,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('1A', '7', '8')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('1A', '7', '8') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmp0ptszr31\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.8092333300000001,
+    "s_local": 1.0,
+    "rho": 0.10544061223988167,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.0035916324778752897,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "iterative_strict",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.004309958973450348,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.0007183264955750581,
+      "latency_ratio": 1.2
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.2x latency versus next viable strategy iterative_strict",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 3.5916324778752897,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 15",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 4.309958973450348,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 15",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 40.00",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 3794.8117525588314,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~128084 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmp0ptszr31\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q001|edgar_pool_10233": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 1645.7980999985011,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "section IN ('1', '1A', '7')",
+   "predicates": [
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1",
+      "1A",
+      "7"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.68306667,
+    "postgres_selectivity": 0.6830639760421536,
+    "advisor_rows": 108114.42639426,
+    "postgres_plan_rows": 108114.0,
+    "absolute_delta": 2.6939578463558433e-06,
+    "ratio": 0.9999960560835938,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.68306667,
+    "s_local_p10": 0.63,
+    "s_local_median": 0.63,
+    "rho": -0.04041429975524394,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 126,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('1', '1A', '7')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE section IN ('1', '1A', '7') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmp40dutv76\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.68306667,
+    "s_local": 0.63,
+    "rho": -0.04041429975524394,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.00570100393313538,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "iterative_strict",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.006841204719762456,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.0011402007866270756,
+      "latency_ratio": 1.2
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.2x latency versus next viable strategy iterative_strict",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 5.701003933135381,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 24",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 6.841204719762456,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 24",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 25.20",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 3203.166912437015,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~108114 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmp40dutv76\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q018|edgar_pool_09664": {
+  "strategy": "exact",
+  "params": {
+   "ef_search": null,
+   "max_scan_tuples": null
+  },
+  "recommended": "partial",
+  "top_ranked": "partial",
+  "unavailable": true,
+  "unavailable_reason": "requires_new_object",
+  "detail": "CREATE INDEX CONCURRENTLY IF NOT EXISTS \"vecadvisor_edgar_chunks_embedding_a5d011ff90_hnsw_idx\" ON \"public\".\"edgar_chunks\" USING hnsw (\"embedding\" vector_l2_ops) WHERE \"cik\" = '1326190' AND \"fiscal_year\" = 2019;",
+  "skipped": [
+   {
+    "strategy": "partial",
+    "reason": "requires_new_object",
+    "detail": "CREATE INDEX CONCURRENTLY IF NOT EXISTS \"vecadvisor_edgar_chunks_embedding_a5d011ff90_hnsw_idx\" ON \"public\".\"edgar_chunks\" USING hnsw (\"embedding\" vector_l2_ops) WHERE \"cik\" = '1326190' AND \"fiscal_year\" = 2019;"
+   }
+  ],
+  "decision_ms": 2373.125500002061,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "cik = '1326190' AND fiscal_year = 2019",
+   "predicates": [
+    {
+     "column": "cik",
+     "kind": "eq",
+     "values": [
+      "1326190"
+     ],
+     "is_literal": true
+    },
+    {
+     "column": "fiscal_year",
+     "kind": "eq",
+     "values": [
+      2019
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.0017820000000000002,
+    "postgres_selectivity": 0.0019017172317062384,
+    "advisor_rows": 282.051396,
+    "postgres_plan_rows": 301.0,
+    "absolute_delta": 0.00011971723170623827,
+    "ratio": 1.0671813870405378,
+    "plan_node_type": "Bitmap Heap Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.0017820000000000002,
+    "s_local_p10": 0.07,
+    "s_local_median": 0.07,
+    "rho": 0.9503496698336631,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 14,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Bitmap Heap Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE cik = '1326190' AND fiscal_year = 2019",
+    "observed_vector_query": {
+     "strategy": "exact",
+     "reason": "PostgreSQL did not choose a vector index; it will filter then sort by distance.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Bitmap Heap Scan",
+     "index_name": null,
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE cik = '1326190' AND fiscal_year = 2019 ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpsgiaxwuf\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Create the suggested partial HNSW index for this recurring literal filter.",
+    "s_global": 0.0017820000000000002,
+    "s_local": 0.07,
+    "rho": 0.9503496698336631,
+    "planner_would_pick": "exact",
+    "decision": {
+     "recommended_strategy": "partial",
+     "planner_strategy": "exact",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 5,
+     "rejected_candidates": 0,
+     "confidence": 0.45,
+     "confidence_level": "medium",
+     "estimated_latency_ms": 0.004513671447720625,
+     "estimated_recall": 0.9,
+     "uses_index": null,
+     "requires_new_object": "CREATE INDEX CONCURRENTLY IF NOT EXISTS \"vecadvisor_edgar_chunks_embedding_a5d011ff90_hnsw_idx\" ON \"public\".\"edgar_chunks\" USING hnsw (\"embedding\" vector_l2_ops) WHERE \"cik\" = '1326190' AND \"fiscal_year\" = 2019;",
+     "runner_up": {
+      "strategy": "exact",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.65,
+      "estimated_latency_ms": 0.008356495330042617,
+      "estimated_recall": 1.0,
+      "latency_delta_ms": 0.0038428238823219915,
+      "latency_ratio": 1.8513743028998253
+     },
+     "why": [
+      "partial is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.85x latency versus next viable strategy exact",
+      "recommended strategy requires creating the suggested database object",
+      "PostgreSQL observed plan is exact, which differs from the advisor recommendation partial",
+      "local selectivity is higher than global selectivity; ANN post-filtering is less risky for this query neighborhood"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "partial",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": null,
+       "requires_new_object": "CREATE INDEX CONCURRENTLY IF NOT EXISTS \"vecadvisor_edgar_chunks_embedding_a5d011ff90_hnsw_idx\" ON \"public\".\"edgar_chunks\" USING hnsw (\"embedding\" vector_l2_ops) WHERE \"cik\" = '1326190' AND \"fiscal_year\" = 2019;",
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; Create a partial HNSW index for this stable literal filter before using the partial-index strategy."
+      },
+      "estimate": {
+       "est_latency_us": 4.513671447720625,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.45,
+       "notes": [
+        "partial HNSW over ~282 indexed rows",
+        "ef_search=40 satisfies recall target 0.9",
+        "partial index suggestion is limited to low-cardinality literal filters",
+        "validate workload frequency before creating new indexes",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 8.356495330042616,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~282 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 51.30903539821843,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 214",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 215,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 215; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 51.480065516212484,
+       "est_recall": 0.98,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 15.05",
+        "ef_search raised from 40 to 215 to satisfy recall target 0.9 and survivor ef >= 215",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 61.57084247786211,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 214",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpsgiaxwuf\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q056|edgar_pool_10227": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 2174.9436000027345,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "fiscal_year IN (2019, 2020) AND section IN ('1A', '7', '8')",
+   "predicates": [
+    {
+     "column": "fiscal_year",
+     "kind": "in",
+     "values": [
+      2019,
+      2020
+     ],
+     "is_literal": true
+    },
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1A",
+      "7",
+      "8"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.5504135474114444,
+    "postgres_selectivity": 0.5511315533428525,
+    "advisor_rows": 87118.3554571886,
+    "postgres_plan_rows": 87232.0,
+    "absolute_delta": 0.0007180059314080278,
+    "ratio": 1.0013044844822312,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.5504135474114444,
+    "s_local_p10": 0.61,
+    "s_local_median": 0.61,
+    "rho": 0.0513493251793519,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 122,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year IN (2019, 2020) AND section IN ('1A', '7', '8')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year IN (2019, 2020) AND section IN ('1A', '7', '8') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpsmcigh0v\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.5504135474114444,
+    "s_local": 0.61,
+    "rho": 0.0513493251793519,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.0058879220948775245,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "iterative_strict",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.007065506513853029,
+      "estimated_recall": 0.9,
+      "latency_delta_ms": 0.0011775844189755044,
+      "latency_ratio": 1.2
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.2x latency versus next viable strategy iterative_strict",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 5.887922094877524,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 25",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 7.065506513853029,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 25",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 9.57768660766744,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 24.40",
+        "ef_search=40 satisfies recall target 0.9 and expected survivors >= 15",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 2581.1045109629217,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~87118 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpsmcigh0v\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ },
+ "edgar_q051|edgar_pool_10186": {
+  "strategy": "iterative_relaxed",
+  "params": {
+   "ef_search": 40,
+   "max_scan_tuples": 20000
+  },
+  "recommended": "iterative_relaxed",
+  "top_ranked": "iterative_relaxed",
+  "unavailable": false,
+  "unavailable_reason": null,
+  "detail": null,
+  "skipped": [],
+  "decision_ms": 2159.7073000011733,
+  "report": {
+   "dsn": "postgresql://***:***@127.0.0.1:5433/vector_db",
+   "table": "public.edgar_chunks",
+   "vector": "embedding",
+   "vector_dim": 1024,
+   "catalog_snapshot": {
+    "stats_fingerprint": "289c316748f9df1ec4c26aae",
+    "index_fingerprint": "47f668b301fbabd73bbb6a5f",
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "partitioned_by": []
+   },
+   "filter": "fiscal_year IN (2018, 2019) AND section IN ('1', '1A')",
+   "predicates": [
+    {
+     "column": "fiscal_year",
+     "kind": "in",
+     "values": [
+      2018,
+      2019
+     ],
+     "is_literal": true
+    },
+    {
+     "column": "section",
+     "kind": "in",
+     "values": [
+      "1",
+      "1A"
+     ],
+     "is_literal": true
+    }
+   ],
+   "selectivity": {
+    "relation_name": "public.edgar_chunks",
+    "advisor_selectivity": 0.28547178626200004,
+    "postgres_selectivity": 0.2861673763883799,
+    "advisor_rows": 45183.90338597684,
+    "postgres_plan_rows": 45294.0,
+    "absolute_delta": 0.0006955901263798747,
+    "ratio": 1.0024366335303674,
+    "plan_node_type": "Seq Scan",
+    "status": "aligned",
+    "severity": "ok",
+    "notes": [
+     "advisor global selectivity is aligned with PostgreSQL plan rows"
+    ]
+   },
+   "statistics_suggestions": [],
+   "stats_health": {
+    "status": "never_analyzed",
+    "stale": true,
+    "last_analyze_at": null,
+    "last_autoanalyze_at": null,
+    "n_live_tup": 0,
+    "n_mod_since_analyze": 0,
+    "modification_ratio": 0.0,
+    "analyze_sql": "ANALYZE \"public\".\"edgar_chunks\";",
+    "notes": [
+     "table has no recorded ANALYZE timestamp; selectivity estimates may be weak",
+     "run ANALYZE before trusting advisor cost estimates"
+    ]
+   },
+   "postgres": {
+    "server_version": "16.14 (Debian 16.14-1.pgdg12+1)",
+    "server_version_num": 160014,
+    "pgvector_installed": true,
+    "pgvector_version": "0.8.3",
+    "supports_hnsw_iterative_scan": true,
+    "supports_hnsw_max_scan_tuples": true,
+    "notes": [
+     "pgvector iterative scan GUCs are available"
+    ]
+   },
+   "local_selectivity": {
+    "s_global": 0.28547178626200004,
+    "s_local_p10": 0.185,
+    "s_local_median": 0.185,
+    "rho": -0.21355539098374016,
+    "confidence": 0.0625,
+    "sample_size": 200,
+    "passing_rows": 37,
+    "resolution_floor": 0.005,
+    "notes": [
+     "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+     "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+    ]
+   },
+   "local_selectivity_cache": {
+    "enabled": false,
+    "cache_dir": null,
+    "key": null,
+    "path": null,
+    "hit": false,
+    "stored": false,
+    "refresh": false
+   },
+   "plan": {
+    "root_node_type": "Seq Scan",
+    "planning_time_ms": null,
+    "filter_select_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year IN (2018, 2019) AND section IN ('1', '1A')",
+    "observed_vector_query": {
+     "strategy": "postfilter",
+     "reason": "PostgreSQL chose a non-partial vector index; filters are applied after ANN candidate generation in pgvector's plan shape.",
+     "root_node_type": "Limit",
+     "scan_node_type": "Index Scan",
+     "index_name": "edgar_chunks_embedding_idx",
+     "full_query_sql": "SELECT * FROM \"public\".\"edgar_chunks\" WHERE fiscal_year IN (2018, 2019) AND section IN ('1', '1A') ORDER BY \"embedding\" <-> %s::vector LIMIT %s"
+    }
+   },
+   "query_vectors": {
+    "source": "file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpbaoqm8ws\\q.jsonl",
+    "count": 1,
+    "max_query_vectors": 64
+   },
+   "limit": 15,
+   "probe_rows": 200,
+   "ef_search": 40,
+   "recall_target": 0.9,
+   "calibration": {
+    "source": "default",
+    "profile": {
+     "version": 1,
+     "dataset_id": "mvp1-default",
+     "hardware_id": "uncalibrated",
+     "index_method": "hnsw",
+     "c_d": 0.01,
+     "c_scan": 0.004,
+     "c_h": 2.0,
+     "delta_strict": 0.2,
+     "recall_curve": [
+      [
+       40,
+       0.9
+      ],
+      [
+       80,
+       0.95
+      ],
+      [
+       160,
+       0.98
+      ]
+     ]
+    }
+   },
+   "recommendation": {
+    "verdict": "Prefer relaxed iterative ANN scan; plain post-filter may under-return.",
+    "s_global": 0.28547178626200004,
+    "s_local": 0.185,
+    "rho": -0.21355539098374016,
+    "planner_would_pick": "postfilter",
+    "decision": {
+     "recommended_strategy": "iterative_relaxed",
+     "planner_strategy": "postfilter",
+     "planner_mismatch": true,
+     "selectivity_source": "local_probe",
+     "viable": true,
+     "meets_recall_target": true,
+     "returns_k": true,
+     "viable_candidates": 4,
+     "rejected_candidates": 0,
+     "confidence": 0.0625,
+     "confidence_level": "low",
+     "estimated_latency_ms": 0.0194142296101367,
+     "estimated_recall": 0.9,
+     "uses_index": "edgar_chunks_embedding_idx",
+     "requires_new_object": null,
+     "runner_up": {
+      "strategy": "postfilter",
+      "viable": true,
+      "meets_recall_target": true,
+      "returns_k": true,
+      "confidence": 0.0625,
+      "estimated_latency_ms": 0.019634257545718254,
+      "estimated_recall": 0.95075,
+      "latency_delta_ms": 0.00022002793558155176,
+      "latency_ratio": 1.0113333333333334
+     },
+     "why": [
+      "iterative_relaxed is the lowest estimated-latency candidate that meets recall target 0.9 and returns k",
+      "estimated 1.01x latency versus next viable strategy postfilter",
+      "recommended strategy uses index edgar_chunks_embedding_idx",
+      "PostgreSQL observed plan is postfilter, which differs from the advisor recommendation iterative_relaxed",
+      "winner confidence is low; validate with benchmark or production vectors"
+     ]
+    },
+    "ranked": [
+     {
+      "strategy": "iterative_relaxed",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = relaxed_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with relaxed iterative scan so ANN candidates expand until enough rows pass."
+      },
+      "estimate": {
+       "est_latency_us": 19.4142296101367,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 81",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "postfilter",
+      "plan": {
+       "ef_search": 82,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 82; SET LOCAL hnsw.iterative_scan = off; use hnsw index edgar_chunks_embedding_idx; scalar filter is applied after ANN candidates."
+      },
+      "estimate": {
+       "est_latency_us": 19.634257545718253,
+       "est_recall": 0.95075,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected survivors ~= 15.17",
+        "ef_search raised from 40 to 82 to satisfy recall target 0.9 and survivor ef >= 82",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "iterative_strict",
+      "plan": {
+       "ef_search": 40,
+       "uses_index": "edgar_chunks_embedding_idx",
+       "requires_new_object": null,
+       "sql_hint": "SET LOCAL hnsw.ef_search = 40; SET LOCAL hnsw.iterative_scan = strict_order; SET LOCAL hnsw.max_scan_tuples = 20000; use hnsw index edgar_chunks_embedding_idx with strict iterative scan when exact distance ordering must be preserved."
+      },
+      "estimate": {
+       "est_latency_us": 23.29707553216404,
+       "est_recall": 0.9,
+       "est_returns_k": true,
+       "confidence": 0.0625,
+       "notes": [
+        "expected candidates ~= 81",
+        "ef_search=40 satisfies recall target 0.9",
+        "local selectivity measured from query neighborhood; costing uses p10",
+        "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+        "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced",
+        "uses default calibration constants"
+       ]
+      }
+     },
+     {
+      "strategy": "exact",
+      "plan": {
+       "ef_search": null,
+       "uses_index": null,
+       "requires_new_object": null,
+       "sql_hint": "Filter first with scalar predicates, then compute exact vector distance ORDER BY embedding <-> $query LIMIT 15."
+      },
+      "estimate": {
+       "est_latency_us": 1338.688916249903,
+       "est_recall": 1.0,
+       "est_returns_k": true,
+       "confidence": 0.65,
+       "notes": [
+        "exact over ~45184 filtered rows",
+        "exact is the recall-safe fallback",
+        "uses default calibration constants"
+       ]
+      }
+     }
+    ]
+   },
+   "notes": [
+    "representative query vector source: file:C:\\Users\\ASUS\\AppData\\Local\\Temp\\tmpbaoqm8ws\\q.jsonl",
+    "durable recommendation uses p10 local selectivity across the vector sample",
+    "local selectivity aggregated from 1 representative query vectors; costing uses p10 local selectivity",
+    "fewer than 16 representative query vectors supplied; durable recommendation confidence is reduced"
+   ]
+  }
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "before": {
+  "utc": "2026-11-15T18:26:53.094444+00:00",
+  "tables": {
+   "edgar_chunks": {
+    "n_mod_since_analyze": 0,
+    "last_analyze": null,
+    "last_autoanalyze": null,
+    "n_tup_ins": 0,
+    "n_tup_upd": 0,
+    "n_tup_del": 0
+   },
+   "finqa_evidence": {
+    "n_mod_since_analyze": 0,
+    "last_analyze": null,
+    "last_autoanalyze": null,
+    "n_tup_ins": 0,
+    "n_tup_upd": 0,
+    "n_tup_del": 0
+   },
+   "finqa_evidence_qwen3": {
+    "n_mod_since_analyze": 0,
+    "last_analyze": null,
+    "last_autoanalyze": null,
+    "n_tup_ins": 0,
+    "n_tup_upd": 0,
+    "n_tup_del": 0
+   }
+  },
+  "autovacuum": "on",
+  "default_transaction_read_only": "on"
+ },
+ "after": {
+  "utc": "2026-11-15T18:28:37.502510+00:00",
+  "tables": {
+   "edgar_chunks": {
+    "n_mod_since_analyze": 0,
+    "last_analyze": null,
+    "last_autoanalyze": null,
+    "n_tup_ins": 0,
+    "n_tup_upd": 0,
+    "n_tup_del": 0
+   },
+   "finqa_evidence": {
+    "n_mod_since_analyze": 0,
+    "last_analyze": null,
+    "last_autoanalyze": null,
+    "n_tup_ins": 0,
+    "n_tup_upd": 0,
+    "n_tup_del": 0
+   },
+   "finqa_evidence_qwen3": {
+    "n_mod_since_analyze": 0,
+    "last_analyze": null,
+    "last_autoanalyze": null,
+    "n_tup_ins": 0,
+    "n_tup_upd": 0,
+    "n_tup_del": 0
+   }
+  },
+  "autovacuum": "on",
+  "default_transaction_read_only": "on"
+ }
+}

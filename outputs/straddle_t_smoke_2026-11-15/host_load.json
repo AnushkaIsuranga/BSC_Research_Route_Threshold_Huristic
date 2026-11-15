@@ -1,0 +1,68 @@
+[
+ {
+  "utc": "2026-11-15T18:27:16.982935+00:00",
+  "cpu_total_pct": 37.618131890250396,
+  "cpu_load_pct_win32": 28,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 7440,
+    "CPU": 7521.125
+   },
+   {
+    "Name": "audiodg",
+    "Id": 17504,
+    "CPU": 5531.515625
+   },
+   {
+    "Name": "explorer",
+    "Id": 15208,
+    "CPU": 3857.640625
+   },
+   {
+    "Name": "CrossDeviceService",
+    "Id": 2572,
+    "CPU": 996.8125
+   },
+   {
+    "Name": "language_server",
+    "Id": 35084,
+    "CPU": 899.03125
+   }
+  ],
+  "tag": "start"
+ },
+ {
+  "utc": "2026-11-15T18:28:37.501447+00:00",
+  "cpu_total_pct": 15.175975136349162,
+  "cpu_load_pct_win32": 42,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 7440,
+    "CPU": 7527.9375
+   },
+   {
+    "Name": "audiodg",
+    "Id": 17504,
+    "CPU": 5534.84375
+   },
+   {
+    "Name": "explorer",
+    "Id": 15208,
+    "CPU": 3857.78125
+   },
+   {
+    "Name": "CrossDeviceService",
+    "Id": 2572,
+    "CPU": 998.609375
+   },
+   {
+    "Name": "Antigravity",
+    "Id": 29588,
+    "CPU": 908.5
+   }
+  ],
+  "tag": "end"
+ }
+]
