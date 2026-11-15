@@ -1,0 +1,125 @@
+{
+  "note": "Recorded 2026-11-15 after the fact; not freeze-time checksums.",
+  "files": {
+    "outputs/phase_a_v2/baselines_reference.json": {
+      "sha256": "2d88d32a98cc067b4f7bd00f5035951bdaf11c47363e60d54cef1535c5158b02",
+      "size_bytes": 18901,
+      "mtime_utc": "2026-09-30T05:26:01.029240+00:00"
+    },
+    "outputs/phase_a_v2/filters.json": {
+      "sha256": "38e063dc1d2eb7572a67b1dfdebaca555737315d184c85ec2fb3b29607046c83",
+      "size_bytes": 10463,
+      "mtime_utc": "2026-08-23T02:21:44.510324+00:00"
+    },
+    "outputs/phase_a_v2/filters_reference.json": {
+      "sha256": "0edf789c2cb9b56847f00f6f2281f55e164e6bfb2c123b0a044d6b5d65d231e9",
+      "size_bytes": 11651,
+      "mtime_utc": "2026-09-30T04:31:29.388514+00:00"
+    },
+    "outputs/phase_a_v2/sweep_results.jsonl": {
+      "sha256": "ad46202183d17a24df3af2450f067806458a9e2069287dc82c1d934d9216640d",
+      "size_bytes": 1863334,
+      "mtime_utc": "2026-09-30T05:26:34.508852+00:00"
+    },
+    "outputs/phase_a_v2/thresholds.json": {
+      "sha256": "634556a318ed403bfda10218f359fde0ea7ed4e9d83228df18b7d533a6803361",
+      "size_bytes": 1007,
+      "mtime_utc": "2026-09-30T05:27:04.255428+00:00"
+    },
+    "outputs/phase_d_results_ollama.csv": {
+      "sha256": "d2e8f3421b684b8ed267c6690daf86fd3f745a240ed9a6b0b6d99b19043c924e",
+      "size_bytes": 39272,
+      "mtime_utc": "2026-09-30T03:01:17.026237+00:00"
+    },
+    "outputs/phase_d_results_ollama.jsonl": {
+      "sha256": "1f6a504da4edf2cd649194f49d81f9b0457cbe3b69ef6894d1e0fb822ec9c1c5",
+      "size_bytes": 1519052,
+      "mtime_utc": "2026-09-30T03:01:17.023608+00:00"
+    },
+    "outputs/phase_d_results_ollama_corrected.csv": {
+      "sha256": "d426d40cdf5ef62d41494549bb94a17d5d1af7c7f39daf8a75ca6c0c8bb6885b",
+      "size_bytes": 40023,
+      "mtime_utc": "2026-09-30T03:13:41.961890+00:00"
+    },
+    "outputs/phase_d_results_ollama_corrected.jsonl": {
+      "sha256": "3933802ab21622ecef8e9669c0fcab1281ad0f9ef77ed25bee117e67ea53498c",
+      "size_bytes": 1522114,
+      "mtime_utc": "2026-09-30T03:13:41.959759+00:00"
+    },
+    "outputs/sweep_results.jsonl": {
+      "sha256": "daacb6842222e7e42ffcf080c2c5ada503fa03bee6cdffa345bd89fa68c41249",
+      "size_bytes": 455004,
+      "mtime_utc": "2026-09-04T03:06:44.780946+00:00"
+    },
+    "METHODOLOGY_AUDIT.md": {
+      "sha256": "f682eea8aca11a891de3341e43b65b8bc9828840aa82517fee5f3b9230398b20",
+      "size_bytes": 5200,
+      "mtime_utc": "2026-10-06T09:53:22.636754+00:00"
+    },
+    "outputs/baselines_reference.json": {
+      "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
+      "size_bytes": 44693,
+      "mtime_utc": "2026-09-04T02:39:51.440024+00:00"
+    },
+    "outputs/filters_reference.json": {
+      "sha256": "0edf789c2cb9b56847f00f6f2281f55e164e6bfb2c123b0a044d6b5d65d231e9",
+      "size_bytes": 11651,
+      "mtime_utc": "2026-09-03T09:34:16.329580+00:00"
+    },
+    "outputs/k_sweep_results.jsonl": {
+      "sha256": "dfc2936531faf79525dd7116ecca26179b28881b28c8b8d9440258b0caa63ff8",
+      "size_bytes": 127109,
+      "mtime_utc": "2026-09-04T02:39:54.393666+00:00"
+    },
+    "outputs/local_selectivity_check.csv": {
+      "sha256": "3bb62e4daf68a4d4fd3867aeb9c52827d16efd92a300663a249005bc44368c19",
+      "size_bytes": 4466,
+      "mtime_utc": "2026-10-06T03:35:29.511158+00:00"
+    },
+    "outputs/memory_spot_check.jsonl": {
+      "sha256": "e42cc562180c8418406cda95286312fa3328df682461667482aa77cac7890182",
+      "size_bytes": 30247,
+      "mtime_utc": "2026-09-03T09:49:26.950152+00:00"
+    },
+    "outputs/mitigation_sweep_results.jsonl": {
+      "sha256": "622258765ec78ba6d77a1cea033ac48a26236d3271a876e220f1f875ef11f9a1",
+      "size_bytes": 121764,
+      "mtime_utc": "2026-09-03T09:43:21.188541+00:00"
+    },
+    "outputs/phase_a_gap_frequency_report.json": {
+      "sha256": "f66d5a509ef60f536a7afc32c457f37fc9eeea9ec6f5f4e52f02aa1300d4b323",
+      "size_bytes": 655,
+      "mtime_utc": "2026-09-30T04:30:49.173770+00:00"
+    },
+    "outputs/plots/selectivity_impact_plots.png": {
+      "sha256": "cb534dc336686e57355d8e27927841d5d75b1fcf6f737c6bbae1ae318653603b",
+      "size_bytes": 903172,
+      "mtime_utc": "2026-09-03T15:18:41.330161+00:00"
+    },
+    "outputs/sweep_results_old.jsonl": {
+      "sha256": "98639fc31561903b162de0c9cb659f71951fc4352f100c8e98349441ab58af80",
+      "size_bytes": 455340,
+      "mtime_utc": "2026-08-23T02:35:09.534188+00:00"
+    },
+    "outputs/phase_d_pilot.csv": {
+      "sha256": "3a5655376bc838a1e6567399b6369a4acfdcfaea28c9952ea21c39fd9c1024f8",
+      "size_bytes": 4506,
+      "mtime_utc": "2026-09-30T02:59:31.086879+00:00"
+    },
+    "outputs/phase_d_pilot.jsonl": {
+      "sha256": "74b15b79bca45c56dee31992ab76d359f4589df9f629e6681f6ce452d066b3a3",
+      "size_bytes": 151286,
+      "mtime_utc": "2026-09-30T02:59:31.085750+00:00"
+    },
+    "outputs/phase_d_results.csv": {
+      "sha256": "44fff0935b64aa0fc83f41a129bd23bfe6d49e785abb4a7b4a5f33f626248fc4",
+      "size_bytes": 4429,
+      "mtime_utc": "2026-09-04T04:00:14.753276+00:00"
+    },
+    "outputs/phase_d_stats_summary.txt": {
+      "sha256": "12a4efb777105031b55fccc8490e707b8ea22567f8aacafefb0bcbd09beddd92",
+      "size_bytes": 377,
+      "mtime_utc": "2026-09-04T04:00:22.260474+00:00"
+    }
+  }
+}
