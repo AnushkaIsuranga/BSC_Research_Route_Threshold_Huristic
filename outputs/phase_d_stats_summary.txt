@@ -1,0 +1,10 @@
+=== Phase D Statistical Summary ===
+Queries evaluated: 50
+
+Naive Router Mean Latency:           1.38 ms
+Decision Matrix Mean Latency:        0.95 ms
+Mean Latency Reduction:              0.43 ms
+95% CI for Latency Reduction:        [0.11 ms, 0.74 ms]
+
+Note: Numeric-Answer Error Rate reduction requires active LLM execution nodes.
+====================================
