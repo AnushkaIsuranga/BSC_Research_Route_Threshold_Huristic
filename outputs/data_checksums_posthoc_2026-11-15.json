@@ -1,0 +1,864 @@
+{
+  "note": "Recorded 2026-11-15 after the fact; not freeze-time checksums.",
+  "files": {
+    "outputs/phase_a_v2/baselines_reference.json": {
+      "sha256": "2d88d32a98cc067b4f7bd00f5035951bdaf11c47363e60d54cef1535c5158b02",
+      "size_bytes": 18901,
+      "mtime_utc": "2026-09-30T05:26:01.029240+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/policy_audit_2026-10-10.md",
+        "src/phase_a_sweep/logger.py"
+      ]
+    },
+    "outputs/phase_a_v2/filters.json": {
+      "sha256": "38e063dc1d2eb7572a67b1dfdebaca555737315d184c85ec2fb3b29607046c83",
+      "size_bytes": 10463,
+      "mtime_utc": "2026-08-23T02:21:44.510324+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "PHASE_A_HOLDOUT2_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "docs/POLICY_V2_PROPOSAL.md",
+        "docs/preregistration/PHASE_E_AMENDMENT_9.md",
+        "outputs/data_checksums.json",
+        "outputs/ground_truth_hm/meta.json",
+        "outputs/phase_a_arms/dryrun_resumable_check_meta.json",
+        "outputs/phase_a_arms/dryrun_v1_meta.json",
+        "outputs/phase_a_arms/run_meta.json",
+        "outputs/phase_a_arms/run_meta_aborted.json",
+        "outputs/phase_a_holdout/run_meta.json",
+        "outputs/phase_a_holdout2/run_meta.json",
+        "outputs/phase_a_holdout_rerun/run_meta.json",
+        "reports/arms_prep_2026-10-10.md",
+        "reports/policy_audit_2026-10-10.md",
+        "src/phase_a_sweep/arm_comparison.py",
+        "src/phase_a_sweep/exploratory_diag_iterative.py",
+        "src/phase_a_sweep/filter_generator.py",
+        "src/phase_a_sweep/holdout2_run.py",
+        "src/phase_a_sweep/holdout_rerun.py",
+        "src/phase_a_sweep/holdout_run.py",
+        "src/phase_a_sweep/logger.py",
+        "src/phase_a_sweep/sweep_orchestrator.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_c_analysis/threshold_detector.py",
+        "src/phase_e_router/cells.py",
+        "src/phase_e_router/final_export.py",
+        "src/phase_e_router/retriever.py",
+        "src/phase_f_edgar/calibrate_edgar.py",
+        "src/phase_f_edgar/verify_questions.py"
+      ]
+    },
+    "outputs/phase_a_v2/filters_reference.json": {
+      "sha256": "0edf789c2cb9b56847f00f6f2281f55e164e6bfb2c123b0a044d6b5d65d231e9",
+      "size_bytes": 11651,
+      "mtime_utc": "2026-09-30T04:31:29.388514+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/data_checksums.json",
+        "src/phase_a_sweep/logger.py"
+      ]
+    },
+    "outputs/phase_a_v2/sweep_results.jsonl": {
+      "sha256": "ad46202183d17a24df3af2450f067806458a9e2069287dc82c1d934d9216640d",
+      "size_bytes": 1863334,
+      "mtime_utc": "2026-09-30T05:26:34.508852+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "reports/phase_d_local_2026-10-12.md",
+        "reports/policy_audit_2026-10-10.md",
+        "src/phase_a_sweep/logger.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/threshold_detector.py"
+      ]
+    },
+    "outputs/phase_a_v2/thresholds.json": {
+      "sha256": "634556a318ed403bfda10218f359fde0ea7ed4e9d83228df18b7d533a6803361",
+      "size_bytes": 1007,
+      "mtime_utc": "2026-09-30T05:27:04.255428+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_HOLDOUT2_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "PHASE_D_LLM_PROTOCOL.md",
+        "outputs/data_checksums.json",
+        "outputs/phase_d_gemini_full_2026-10-12/run_meta.json",
+        "outputs/phase_d_gemini_pilot_2026-10-12/run_meta.json",
+        "outputs/phase_d_gemini_scaleup_smoke_2026-10-13/run_meta.json",
+        "outputs/phase_d_local_2026-10-12/run_meta.json",
+        "outputs/phase_d_local_2026-10-12_v3/run_meta.json",
+        "outputs/phase_d_local_2026-10-12_v4/run_meta.json",
+        "outputs/phase_d_local_2026-10-12_v5/run_meta.json",
+        "outputs/phase_d_local_smoke_2026-10-12/run_meta.json",
+        "reports/amendment1_holdout2_local_2026-10-12.md",
+        "reports/arms_prep_2026-10-10.md",
+        "reports/holdout2_results_2026-10-12.md",
+        "reports/holdout_results_2026-10-10.md",
+        "reports/holdout_results_2026-10-12-rerun.md",
+        "reports/policy_audit_2026-10-10.md",
+        "reports/policy_evaluation_2026-10-10.md",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_c_analysis/policy_evaluation.py",
+        "src/phase_c_analysis/threshold_detector.py",
+        "src/phase_d_validation/comparison_runner.py",
+        "src/phase_d_validation/local_ollama_runner.py"
+      ]
+    },
+    "outputs/baselines_reference.json": {
+      "sha256": "e025423fb2f9e43d44a07f7c16a20dc92d12f779fafc317f43e53f164d5fd899",
+      "size_bytes": 44693,
+      "mtime_utc": "2026-09-04T02:39:51.440024+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/policy_audit_2026-10-10.md",
+        "src/phase_a_sweep/logger.py"
+      ]
+    },
+    "outputs/filters_reference.json": {
+      "sha256": "0edf789c2cb9b56847f00f6f2281f55e164e6bfb2c123b0a044d6b5d65d231e9",
+      "size_bytes": 11651,
+      "mtime_utc": "2026-09-03T09:34:16.329580+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/data_checksums.json",
+        "src/phase_a_sweep/logger.py"
+      ]
+    },
+    "outputs/thresholds_v2.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size_bytes": 2,
+      "mtime_utc": "2026-09-30T04:39:14.945073+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "docs/POLICY_V2_PROPOSAL.md",
+        "outputs/data_checksums.json",
+        "reports/policy_audit_2026-10-10.md"
+      ]
+    },
+    "outputs/phase_d_results_ollama.jsonl": {
+      "sha256": "1f6a504da4edf2cd649194f49d81f9b0457cbe3b69ef6894d1e0fb822ec9c1c5",
+      "size_bytes": 1519052,
+      "mtime_utc": "2026-09-30T03:01:17.023608+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "outputs/data_checksums.json",
+        "outputs/rescored_2026-10-12/summary.json",
+        "outputs/scaleup_checks_2026-10-13/checks.json",
+        "reports/arms_prep_2026-10-10.md",
+        "src/phase_d_validation/rescore_outputs.py"
+      ]
+    },
+    "outputs/phase_d_results_ollama_corrected.jsonl": {
+      "sha256": "3933802ab21622ecef8e9669c0fcab1281ad0f9ef77ed25bee117e67ea53498c",
+      "size_bytes": 1522114,
+      "mtime_utc": "2026-09-30T03:13:41.959759+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "outputs/data_checksums.json",
+        "outputs/rescored_2026-10-12/summary.json",
+        "outputs/scaleup_checks_2026-10-13/checks.json",
+        "reports/arms_prep_2026-10-10.md",
+        "reports/phase_d_local_2026-10-12.md",
+        "reports/policy_audit_2026-10-10.md",
+        "src/phase_c_analysis/local_selectivity_check_v2.py",
+        "src/phase_d_validation/error_audit.py",
+        "src/phase_d_validation/rescore_outputs.py"
+      ]
+    },
+    "outputs/phase_d_results_ollama.csv": {
+      "sha256": "d2e8f3421b684b8ed267c6690daf86fd3f745a240ed9a6b0b6d99b19043c924e",
+      "size_bytes": 39272,
+      "mtime_utc": "2026-09-30T03:01:17.026237+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "src/phase_c_analysis/local_selectivity_check.py"
+      ]
+    },
+    "outputs/phase_d_results_ollama_corrected.csv": {
+      "sha256": "d426d40cdf5ef62d41494549bb94a17d5d1af7c7f39daf8a75ca6c0c8bb6885b",
+      "size_bytes": 40023,
+      "mtime_utc": "2026-09-30T03:13:41.961890+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/analysis/cell_summary.csv": {
+      "sha256": "663774c2c2394e8ac97b948cff5ba50a90d551df923728171ddf3c3131e27963",
+      "size_bytes": 51839,
+      "mtime_utc": "2026-10-10T10:40:16.557889+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "PHASE_A_HOLDOUT2_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "docs/POLICY_V2_PROPOSAL.md",
+        "outputs/data_checksums.json",
+        "outputs/headline_audit_2026-10-23/audit.json",
+        "reports/arms_results_2026-10-10.md",
+        "reports/figures_2026-11-01/CAPTIONS.md",
+        "reports/figures_2026-11-01/SOURCES.md",
+        "reports/figures_2026-11-01/data/fig5_1_thresholds.csv",
+        "reports/headline_audit_2026-10-23.md",
+        "reports/holdout_results_2026-10-10.md",
+        "reports/holdout_results_2026-10-12-rerun.md",
+        "reports/phase_e_results_2026-10-31.md",
+        "src/figures/inventory.py",
+        "src/figures/load.py",
+        "src/figures/make_figures.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout2_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_d_validation/headline_audit.py",
+        "src/phase_e_router/calibrate_v3.py",
+        "src/phase_e_router/compare_v3.py",
+        "src/phase_e_router/final_export.py",
+        "src/phase_f_edgar/calibrate_edgar.py"
+      ]
+    },
+    "outputs/phase_a_arms/analysis/hypotheses.json": {
+      "sha256": "53e2ccfc2e35e6d7764b348873dfc0dd1fa9e428bfa2352429cb4ca36068b91f",
+      "size_bytes": 7610,
+      "mtime_utc": "2026-10-10T10:40:17.062288+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout2_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py"
+      ]
+    },
+    "outputs/phase_a_arms/analysis/latency_vs_selectivity.png": {
+      "sha256": "6f3f009b336b759f3dc0884b99a9801e4300d183fe72bf047765781f31e23494",
+      "size_bytes": 244228,
+      "mtime_utc": "2026-10-10T10:40:26.926957+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "src/phase_c_analysis/arm_analysis.py"
+      ]
+    },
+    "outputs/phase_a_arms/analysis/policy_evaluation_cells.csv": {
+      "sha256": "313b9e6b05be03cba219ee5a824767b8f76beed2540ea22df152b447e68ac0cc",
+      "size_bytes": 81358,
+      "mtime_utc": "2026-10-10T11:44:02.686134+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/figures_2026-11-01/CAPTIONS.md",
+        "reports/figures_2026-11-01/SOURCES.md",
+        "reports/policy_evaluation_2026-10-10.md",
+        "reports/tables_2026-11-01/SOURCES_TABLES.md",
+        "reports/tables_2026-11-01/T4_3_hm_pass_counts.md",
+        "src/figures/inventory.py",
+        "src/figures/load.py",
+        "src/figures/make_figures.py",
+        "src/figures/make_tables.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_c_analysis/policy_evaluation.py"
+      ]
+    },
+    "outputs/phase_a_arms/analysis/recall_vs_selectivity.png": {
+      "sha256": "4ed2d5552d7dccc4102d747d2a495af7bfdc9d6ed00ecc32027222396a9ac32f",
+      "size_bytes": 203687,
+      "mtime_utc": "2026-10-10T10:40:21.840375+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "src/phase_c_analysis/arm_analysis.py"
+      ]
+    },
+    "outputs/phase_a_arms/analysis/route_map.csv": {
+      "sha256": "59d09e6a3cf48b595dd584243347741d4d052b639029a2067126eb21833e8ac0",
+      "size_bytes": 9077,
+      "mtime_utc": "2026-10-10T10:40:17.057261+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "src/figures/load.py",
+        "src/phase_c_analysis/arm_analysis.py"
+      ]
+    },
+    "outputs/phase_a_arms/dryrun_resumable_check.jsonl": {
+      "sha256": "54dcfcdbbb075f86d1d42c8f6c55735fcc78ed8e6278601754a88e2a209b581c",
+      "size_bytes": 10828,
+      "mtime_utc": "2026-10-10T05:16:33.347960+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/dryrun_resumable_check_meta.json": {
+      "sha256": "fe182c15cbe0e21306d9cc0cb8f9f3f57b0ef8544ea4af63ac778ae4a7a101d9",
+      "size_bytes": 2751,
+      "mtime_utc": "2026-10-10T05:15:15.779579+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/dryrun_v1.jsonl": {
+      "sha256": "34600969f83ce8634a192ad283ad58a2952cc82c174cf80b20e0e3299a272442",
+      "size_bytes": 10300,
+      "mtime_utc": "2026-10-10T04:43:13.617576+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/dryrun_v1_meta.json": {
+      "sha256": "b8c60fb80b4a19eb364aa096ec485d62a54bf796f4789ac05787c72d2a3fc5ad",
+      "size_bytes": 2556,
+      "mtime_utc": "2026-10-10T04:42:06.155893+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/exploratory_diag.jsonl": {
+      "sha256": "45ee54fe2a4b3bd02eebb1fc2d568e569001008dad3436a562d533161e9539c5",
+      "size_bytes": 277659,
+      "mtime_utc": "2026-10-10T11:50:41.545394+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/policy_evaluation_2026-10-10.md",
+        "src/phase_a_sweep/exploratory_diag_iterative.py"
+      ]
+    },
+    "outputs/phase_a_arms/exploratory_diag_summary.md": {
+      "sha256": "f823f458baeab3bd901d5edf332db25d7183e4a84be89d1829e3c516c900f0a0",
+      "size_bytes": 2735,
+      "mtime_utc": "2026-10-10T11:50:41.557983+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json",
+        "reports/policy_evaluation_2026-10-10.md",
+        "src/phase_a_sweep/exploratory_diag_iterative.py"
+      ]
+    },
+    "outputs/phase_a_arms/filters.json": {
+      "sha256": "c923d4b0ffc67fc8bb81a4ec9e8867375fddfe792ace879e2aa8cd70b426badb",
+      "size_bytes": 8468,
+      "mtime_utc": "2026-10-10T05:12:11.578559+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "PHASE_A_HOLDOUT2_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "docs/POLICY_V2_PROPOSAL.md",
+        "docs/preregistration/PHASE_E_AMENDMENT_9.md",
+        "outputs/data_checksums.json",
+        "outputs/ground_truth_hm/meta.json",
+        "outputs/phase_a_arms/dryrun_resumable_check_meta.json",
+        "outputs/phase_a_arms/dryrun_v1_meta.json",
+        "outputs/phase_a_arms/run_meta.json",
+        "outputs/phase_a_arms/run_meta_aborted.json",
+        "outputs/phase_a_holdout/run_meta.json",
+        "outputs/phase_a_holdout2/run_meta.json",
+        "outputs/phase_a_holdout_rerun/run_meta.json",
+        "reports/arms_prep_2026-10-10.md",
+        "reports/policy_audit_2026-10-10.md",
+        "src/phase_a_sweep/arm_comparison.py",
+        "src/phase_a_sweep/exploratory_diag_iterative.py",
+        "src/phase_a_sweep/filter_generator.py",
+        "src/phase_a_sweep/holdout2_run.py",
+        "src/phase_a_sweep/holdout_rerun.py",
+        "src/phase_a_sweep/holdout_run.py",
+        "src/phase_a_sweep/logger.py",
+        "src/phase_a_sweep/sweep_orchestrator.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_c_analysis/threshold_detector.py",
+        "src/phase_e_router/cells.py",
+        "src/phase_e_router/final_export.py",
+        "src/phase_e_router/retriever.py",
+        "src/phase_f_edgar/calibrate_edgar.py",
+        "src/phase_f_edgar/verify_questions.py"
+      ]
+    },
+    "outputs/phase_a_arms/preflight.json": {
+      "sha256": "a7b9b1a6a974bea0e302656822951409a2a42c9fba2375843662aec2c60d4344",
+      "size_bytes": 87571,
+      "mtime_utc": "2026-10-10T05:30:07.476969+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "outputs/data_checksums.json",
+        "reports/amendment7_step1_2026-10-23.md",
+        "reports/arms_results_2026-10-10.md",
+        "src/phase_a_sweep/arm_comparison.py",
+        "src/phase_a_sweep/holdout_run.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_d_validation/amendment7_step1.py",
+        "src/phase_e_router/calibrate_v3.py",
+        "src/phase_e_router/compare_v3.py",
+        "src/phase_f_edgar/calibrate_edgar.py",
+        "src/phase_f_edgar/compare_edgar.py"
+      ]
+    },
+    "outputs/phase_a_arms/results.jsonl": {
+      "sha256": "68d01ba06640fb62aa925f4c3b07eac69c2f2091e09925f8d121ea6884652a77",
+      "size_bytes": 7111446,
+      "mtime_utc": "2026-10-10T10:26:01.603810+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "PHASE_D_AMENDMENT_4.md",
+        "PHASE_D_LLM_PROTOCOL.md",
+        "config/policy_v3_1_edgar.json",
+        "config/policy_v3_hm.json",
+        "docs/preregistration/PHASE_D_AMENDMENT_5.md",
+        "docs/preregistration/PHASE_E_AMENDMENT_9_ADDENDUM_2.md",
+        "outputs/data_checksums.json",
+        "outputs/hallucination_classification_2026-10-23/summary_gemini_full.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_oct12_baseline.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_v3.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_v4.json",
+        "outputs/hallucination_classification_2026-10-23/summary_local_v5.json",
+        "outputs/headline_audit_2026-10-23/audit.json",
+        "outputs/mechanism_check_2026-10-12/gemini_pass1.md",
+        "outputs/phase_a_amendment6_2026-10-23/partb_summary.json",
+        "outputs/phase_d_gemini_full_2026-10-12/stats_primary.json",
+        "outputs/phase_d_gemini_full_2026-10-12/stats_strict.json",
+        "outputs/phase_d_k_sweep_2026-10-12/token_calibration.json",
+        "outputs/phase_d_local_2026-10-12/stats_pass1.json",
+        "outputs/phase_d_local_2026-10-12_v3/stats_pass1.json",
+        "outputs/phase_d_local_2026-10-12_v4/stats_pass1_primary.json",
+        "outputs/phase_d_local_2026-10-12_v4/stats_pass1_strict.json",
+        "outputs/phase_d_local_2026-10-12_v5/stats_primary.json",
+        "outputs/phase_d_local_2026-10-12_v5/stats_strict.json",
+        "outputs/rescored_2026-10-12/summary.json",
+        "outputs/scaleup_checks_2026-10-13/checks.json",
+        "reports/arms_results_2026-10-10.md",
+        "reports/figures_2026-11-01/CAPTIONS.md",
+        "reports/figures_2026-11-01/SOURCES.md",
+        "reports/headline_audit_2026-10-23.md",
+        "reports/holdout2_results_2026-10-12.md",
+        "reports/holdout_results_2026-10-10.md",
+        "reports/holdout_results_2026-10-12-rerun.md",
+        "reports/phase_d_local_2026-10-12.md",
+        "reports/policy_audit_2026-10-10.md",
+        "reports/policy_evaluation_2026-10-10.md",
+        "reports/pre_paid_fixes_2026-10-12.md",
+        "src/figures/inventory.py",
+        "src/figures/load.py",
+        "src/figures/make_figures.py",
+        "src/phase_a_sweep/arm_comparison.py",
+        "src/phase_a_sweep/exploratory_diag_iterative.py",
+        "src/phase_a_sweep/holdout_run.py",
+        "src/phase_a_sweep/logger.py",
+        "src/phase_c_analysis/amendment6_partb.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout2_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_c_analysis/policy_evaluation.py",
+        "src/phase_c_analysis/threshold_detector.py",
+        "src/phase_d_validation/always_hnsw_analysis.py",
+        "src/phase_d_validation/always_hnsw_runner.py",
+        "src/phase_d_validation/comparison_runner.py",
+        "src/phase_d_validation/error_audit.py",
+        "src/phase_d_validation/hallucination_classify.py",
+        "src/phase_d_validation/headline_audit.py",
+        "src/phase_d_validation/judge_inputs.py",
+        "src/phase_d_validation/k_sweep.py",
+        "src/phase_d_validation/mechanism_check.py",
+        "src/phase_d_validation/paired_stats.py",
+        "src/phase_d_validation/rescore_outputs.py",
+        "src/phase_d_validation/scaleup_analysis.py",
+        "src/phase_d_validation/scaleup_checks.py",
+        "src/phase_e_router/calibrate_v3.py",
+        "src/phase_e_router/compare_v3.py",
+        "src/phase_e_router/explore_exact_cache.py",
+        "src/phase_e_router/final_export.py",
+        "src/phase_e_router/ground_truth.py",
+        "src/phase_f_edgar/analyze_edgar.py",
+        "src/phase_f_edgar/answer_edgar.py",
+        "src/phase_f_edgar/calibrate_edgar.py",
+        "src/phase_f_edgar/compare_edgar.py",
+        "src/phase_f_edgar/report_inputs_edgar.py",
+        "tests/test_runner_resume.py"
+      ]
+    },
+    "outputs/phase_a_arms/results_aborted_frozen_arms.jsonl": {
+      "sha256": "5a4daa38354ed3bfc978fbdc90cdb917271a24d0dc8a8d1d92e1b3d4dbfc76d1",
+      "size_bytes": 45644,
+      "mtime_utc": "2026-10-10T05:18:44.600348+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "src/phase_c_analysis/arm_analysis.py"
+      ]
+    },
+    "outputs/phase_a_arms/resumes.jsonl": {
+      "sha256": "6a7da8cefe0a8c766377b4106176d66553e484561943730ffa07b31b9cc77538",
+      "size_bytes": 168,
+      "mtime_utc": "2026-10-10T09:35:22.977941+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "PHASE_D_AMENDMENT_4.md",
+        "PHASE_D_AMENDMENT_4_ADDENDUM_1.md",
+        "outputs/data_checksums.json",
+        "reports/arms_results_2026-10-10.md",
+        "src/phase_a_sweep/arm_comparison.py",
+        "src/phase_a_sweep/holdout_run.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_d_validation/always_hnsw_runner.py",
+        "src/phase_d_validation/comparison_runner.py",
+        "src/phase_e_router/calibrate_v3.py",
+        "src/phase_e_router/compare_v3.py",
+        "src/phase_f_edgar/calibrate_edgar.py",
+        "src/phase_f_edgar/compare_edgar.py",
+        "tests/test_runner_resume.py"
+      ]
+    },
+    "outputs/phase_a_arms/run.err.log": {
+      "sha256": "58999acf7066ca690a66b28ae53a20d946ad2d189385fe12fb8e961c197d260b",
+      "size_bytes": 217,
+      "mtime_utc": "2026-10-10T09:21:27.078509+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run.err_aborted.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "mtime_utc": "2026-10-10T05:17:39.732148+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run.err_part1.log": {
+      "sha256": "58999acf7066ca690a66b28ae53a20d946ad2d189385fe12fb8e961c197d260b",
+      "size_bytes": 217,
+      "mtime_utc": "2026-10-10T09:21:27.078509+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run.err_part2.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "mtime_utc": "2026-10-10T09:35:12.697821+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run.log": {
+      "sha256": "3c77e75fadfc48e3523c1d7e470d0f069582b32510d2303bf3bedcbc451197d0",
+      "size_bytes": 7315,
+      "mtime_utc": "2026-10-10T09:14:45.862877+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run_aborted.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "mtime_utc": "2026-10-10T05:17:39.730641+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run_meta.json": {
+      "sha256": "a1669b5fe9d8a37cd6ecdf2e0634db3ca3f15e2758e40cfe7e7338c157b7d9d2",
+      "size_bytes": 2845,
+      "mtime_utc": "2026-10-10T05:30:07.911274+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "PHASE_A_HOLDOUT2_PROTOCOL.md",
+        "PHASE_A_HOLDOUT_PROTOCOL.md",
+        "PHASE_D_AMENDMENT_1.md",
+        "PHASE_D_AMENDMENT_4.md",
+        "PHASE_D_AMENDMENT_4_ADDENDUM_1.md",
+        "PHASE_D_LLM_PROTOCOL.md",
+        "docs/RUNBOOK_EDGAR.md",
+        "docs/preregistration/PHASE_A_AMENDMENT_6.md",
+        "outputs/data_checksums.json",
+        "reports/arms_prep_2026-10-10.md",
+        "reports/gemini_pilot_2026-10-12.md",
+        "reports/phase_d_local_2026-10-12.md",
+        "reports/phase_e_calibration_hm_2026-10-30.md",
+        "reports/pre_paid_fixes_2026-10-12.md",
+        "src/phase_a_sweep/arm_comparison.py",
+        "src/phase_a_sweep/holdout_run.py",
+        "src/phase_c_analysis/arm_analysis.py",
+        "src/phase_c_analysis/holdout_analysis.py",
+        "src/phase_d_validation/always_hnsw_runner.py",
+        "src/phase_d_validation/comparison_runner.py",
+        "src/phase_d_validation/scaleup_checks.py",
+        "src/phase_e_router/calibrate_v3.py",
+        "src/phase_e_router/compare_v3.py",
+        "src/phase_e_router/explore_exact_cache.py",
+        "src/phase_f_edgar/calibrate_edgar.py",
+        "src/phase_f_edgar/compare_edgar.py",
+        "src/phase_f_edgar/draft_questions.py",
+        "src/phase_f_edgar/verify_questions.py",
+        "tests/test_runner_resume.py"
+      ]
+    },
+    "outputs/phase_a_arms/run_meta_aborted.json": {
+      "sha256": "89106eef1df5b54f705ba784e03f6a798070ba10b143c9a8f17f4120edbcb504",
+      "size_bytes": 2752,
+      "mtime_utc": "2026-10-10T05:17:43.855467+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "DEVIATION_LOG.md",
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run_part1.log": {
+      "sha256": "3c77e75fadfc48e3523c1d7e470d0f069582b32510d2303bf3bedcbc451197d0",
+      "size_bytes": 7315,
+      "mtime_utc": "2026-10-10T09:14:45.862877+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "outputs/phase_a_arms/run_part2.log": {
+      "sha256": "62ed968eb2f44396f4a97e252af7d820c27c2f9663dd0e37bc80ae145cfc7aa9",
+      "size_bytes": 8430,
+      "mtime_utc": "2026-10-10T10:26:01.623865+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "outputs/data_checksums.json"
+      ]
+    },
+    "src/phase_a_sweep/run_phase_a_v2.py": {
+      "sha256": "854f1e493c0e8945cf1c9c353c5dbba6e7a7bb7a43f6c2a145b2b0a8fd93230c",
+      "size_bytes": 207,
+      "mtime_utc": "2026-09-30T04:31:17.979654+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "PHASE_A_ARMS_PROTOCOL.md",
+        "outputs/phase_a_arms/dryrun_resumable_check_meta.json",
+        "outputs/phase_a_arms/dryrun_v1_meta.json",
+        "outputs/phase_a_arms/run_meta.json",
+        "outputs/phase_a_arms/run_meta_aborted.json",
+        "reports/arms_prep_2026-10-10.md",
+        "src/phase_a_sweep/arm_comparison.py"
+      ]
+    },
+    "src/phase_a_sweep/targeted_sweeps.py": {
+      "sha256": "7c70517bdc2c82968176738a0f03661cb61ba961d22e17cd03c2d1ea5b71cabb",
+      "size_bytes": 9993,
+      "mtime_utc": "2026-09-04T02:52:25.178000+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "reports/policy_audit_2026-10-10.md"
+      ]
+    },
+    "src/phase_d_validation/finqa_selectivity_census.py": {
+      "sha256": "2ceaac0cb8adb16a06d04fff8e13facf4be6ecdf5adc6227f1c91b50dde26433",
+      "size_bytes": 4118,
+      "mtime_utc": "2026-09-30T03:46:17.679374+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "src/phase_d_validation/test_retest_reliability.py": {
+      "sha256": "50ae1af7d81b5643f495c7b1faa903e2ec5324c8f09e22c9e141399cf2d3adb2",
+      "size_bytes": 5156,
+      "mtime_utc": "2026-08-31T08:58:46.878552+00:00",
+      "gitignored": false,
+      "cited_by_tracked": [
+        "reports/phase_d_gemini_full_2026-10-12.md"
+      ]
+    },
+    "scripts/straddle_t_enumerate.py": {
+      "sha256": "04735bff682960d21f80e935234c62f899c19e1550af09d7519d86d8dc5eaadc",
+      "size_bytes": 24582,
+      "mtime_utc": "2026-11-15T03:00:51.584303+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/band_summary.csv": {
+      "sha256": "c794022e1af5d5eec235ad79219c8b6f287717e3b10af8f71f9b8177026ae545",
+      "size_bytes": 1028,
+      "mtime_utc": "2026-11-15T03:01:07.588433+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/edgar_filters.csv": {
+      "sha256": "2e1c01d487382272c0e0743e508aa3cedd60383f2a1ef805820251dd79bf614c",
+      "size_bytes": 1230250,
+      "mtime_utc": "2026-11-15T03:01:07.578606+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/finqa_filters.csv": {
+      "sha256": "9c19b0bf39e727af41beed0639aefd5442568df94c6c1f266be7beb0f0a98c80",
+      "size_bytes": 105237,
+      "mtime_utc": "2026-11-15T03:01:07.587409+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/followup/constructed_rules_by_band.csv": {
+      "sha256": "3755e917c9abd0ccff3ac9704a6edc5a20cc642c88c7b5ecda6f9ed662802192",
+      "size_bytes": 742,
+      "mtime_utc": "2026-11-15T03:08:13.217991+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/followup/far_above_and_high_s.csv": {
+      "sha256": "caa65ed2d72954602533c7d060440f5d3d9f2dcd5422962fd91dd9fe060dadde",
+      "size_bytes": 1432,
+      "mtime_utc": "2026-11-15T03:08:12.729914+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/followup/FOLLOWUP_REPORT.md": {
+      "sha256": "a64de5db9c2c7b6b38f759a4a5e6f8be8b83c9281c34bbbce04da002976d4965",
+      "size_bytes": 2152,
+      "mtime_utc": "2026-11-15T03:08:24.920144+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/followup/per_question_gold_containment.csv": {
+      "sha256": "7565a953ee7bb5e5b28576a5289bb8412b7d783c55a6b1f8f1e18736696a707d",
+      "size_bytes": 1438,
+      "mtime_utc": "2026-11-15T03:08:13.208889+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/followup/run_followup.py": {
+      "sha256": "01843380ecba53ad9ac01f4deb6c37a823fd1531099c13d97af0a1dee041cbbc",
+      "size_bytes": 10227,
+      "mtime_utc": "2026-11-15T03:08:09.866983+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/followup/s_gaps.csv": {
+      "sha256": "3b059c93668435b0aa6deed6728340cd8e331cd6c1fa1958e16f85afb65443c1",
+      "size_bytes": 445,
+      "mtime_utc": "2026-11-15T03:08:13.210988+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/gold_containment_summary.csv": {
+      "sha256": "e1685f9e6552dc88d6e788bf79f2a73e31b48139ba4be5445d5a4c8d3996ee9a",
+      "size_bytes": 525,
+      "mtime_utc": "2026-11-15T03:01:07.589948+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/band_population.csv": {
+      "sha256": "1bef0a60aa57b16e668abccc23082ffeca500c20fb0881e35a9511de6af8103b",
+      "size_bytes": 1887,
+      "mtime_utc": "2026-11-15T03:16:08.983750+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/build_pool.py": {
+      "sha256": "23cbfb523b2446e6add6f4cae98d8e53ee6385af034caf490f48053886411e38",
+      "size_bytes": 19924,
+      "mtime_utc": "2026-11-15T03:15:57.585189+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/coverage_summary.csv": {
+      "sha256": "3e0aabaabd75c8f930eb2293e6d804492eef7de3aeee5a9194fb69163ce57e9e",
+      "size_bytes": 2549,
+      "mtime_utc": "2026-11-15T03:16:10.335217+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/dedupe_summary.csv": {
+      "sha256": "af3013d57ace61a404af1b85004fa1e3b636b6375a9a97ab919deb641967af66",
+      "size_bytes": 1077,
+      "mtime_utc": "2026-11-15T03:16:08.789729+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/edgar_pool.csv": {
+      "sha256": "c11ddee7cdc6e81f685957708e57ca10b6d09d9b844d346cfb8965644b6172c7",
+      "size_bytes": 2365275,
+      "mtime_utc": "2026-11-15T03:16:08.937478+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/eligible_questions.csv": {
+      "sha256": "a2e16dc31951e395b7d2463b64e96ebabb0f90559da0c1665c2e9e6187e1064f",
+      "size_bytes": 264771,
+      "mtime_utc": "2026-11-15T03:16:10.345316+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/finqa_pool.csv": {
+      "sha256": "4c0e656d9b60a8da4619bc68e70a7cea93c39b046f43d196a3e2a17d33b61b4d",
+      "size_bytes": 181811,
+      "mtime_utc": "2026-11-15T03:16:08.948288+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/POOL_CHECKSUMS.txt": {
+      "sha256": "2680542c6d02501c1e1749bf2d0e216f8abccc96db605c54329a5b4444767b61",
+      "size_bytes": 679,
+      "mtime_utc": "2026-11-15T03:16:10.362919+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/pool/pool_s_gaps.csv": {
+      "sha256": "3b059c93668435b0aa6deed6728340cd8e331cd6c1fa1958e16f85afb65443c1",
+      "size_bytes": 445,
+      "mtime_utc": "2026-11-15T03:16:10.348812+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/straddle_t_feasibility_2026-11-15/REPORT.md": {
+      "sha256": "286c08d65478f07c9100c8a1f520d75382e71caef238689edce33a7e571e0494",
+      "size_bytes": 5092,
+      "mtime_utc": "2026-11-15T03:01:07.589948+00:00",
+      "gitignored": false,
+      "cited_by_tracked": []
+    },
+    "outputs/sweep_results.jsonl": {
+      "sha256": "daacb6842222e7e42ffcf080c2c5ada503fa03bee6cdffa345bd89fa68c41249",
+      "size_bytes": 455004,
+      "mtime_utc": "2026-09-04T03:06:44.780946+00:00"
+    },
+    "outputs/data_checksums.json": {
+      "sha256": "d54a43e9331195a6bbc195d645d50ddc2b7454126c11f8ca34b683ee8d5ba2af",
+      "size_bytes": 127545,
+      "mtime_utc": "2026-11-01T11:19:46.326530+00:00"
+    }
+  }
+}
