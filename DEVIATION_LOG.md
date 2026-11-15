@@ -312,3 +312,8 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 
 - **Runner and tests added:** `src/phase_g_straddle/run_straddle.py` and `tests/test_phase_g_straddle.py` (`7 passed in 16.21s`). Verified all 522 distinct `(table, pool_id)` filters across all manifests return exact `n_rows` via the runner's SQL adapter, and all FinQA route decisions match `exact if s < T_hm else iterative` with `estimate_skipped_no_stats = True`.
 - **Smoke test executed (`outputs/straddle_t_smoke_2026-11-15/`):** Ran the 14-pair `smoke_test_pairs.csv` (`--skip-quiet-rule`, excluded from analysis per Amendment 12 Section 11 & Addendum 2 Section 2), producing 70 rows (`14` pairs x `5` arms). Verified all fields, `SHOW` session settings per arm, `always_exact` recall `= 1.0`, 5 timed repetitions per valid row, and zero database writes (`session_stats.json` before == after).
+
+## 2026-11-16 (Part 9) — Runner tag `phase-g-runner-12` and Amendment 12 Addendum 3
+
+- **Runner tag (`phase-g-runner-12`):** Tagged commit `46f9f5e` (following `7cde80a` which added `src/phase_g_straddle/run_straddle.py`, `tests/test_phase_g_straddle.py`, and `outputs/straddle_t_smoke_2026-11-15/`) after re-running `tests/test_phase_g_straddle.py` (`7 passed`) and verifying clean `src/`, `tests/`, `config/`, and `docs/`.
+- **Addendum 3 added (`phase-g-amendment-12-addendum-3`):** Committed `docs/preregistration/PHASE_G_AMENDMENT_12_ADDENDUM_3.md` and `docs/preregistration/INDEX.md` specifying the exact statistical analysis rules before the main run.
