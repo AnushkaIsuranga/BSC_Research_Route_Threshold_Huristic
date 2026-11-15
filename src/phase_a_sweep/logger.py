@@ -4,11 +4,11 @@ import uuid
 from datetime import datetime, timezone
 
 class SweepLogger:
-    def __init__(self, output_dir="outputs"):
+    def __init__(self, output_dir="outputs", results_file="sweep_results.jsonl"):
         self.output_dir = output_dir
         self.filters_file = os.path.join(output_dir, "filters_reference.json")
         self.baselines_file = os.path.join(output_dir, "baselines_reference.json")
-        self.results_file = os.path.join(output_dir, "sweep_results.jsonl")
+        self.results_file = os.path.join(output_dir, results_file)
         
         os.makedirs(self.output_dir, exist_ok=True)
 
@@ -42,7 +42,7 @@ class SweepLogger:
             
         return frozen
 
-    def log_baseline(self, table, query_vector_idx, baseline_ms):
+    def log_baseline(self, table, query_vector_idx, hnsw_ef_search, k, memcap, baseline_ms):
         """
         Logs a baseline to baselines_reference.json. 
         Updates the file atomically.
@@ -53,9 +53,19 @@ class SweepLogger:
                 baselines = json.load(f)
                 
         key = f"{table}_v{query_vector_idx}"
+        if hnsw_ef_search != 40:
+            key += f"_ef{hnsw_ef_search}"
+        if k != 10:
+            key += f"_k{k}"
+        if memcap:
+            key += "_memcap"
+            
         baselines[key] = {
             "table_name": table,
             "query_vector_idx": query_vector_idx,
+            "hnsw_ef_search": hnsw_ef_search,
+            "k": k,
+            "memcap": memcap,
             "baseline_ms": baseline_ms
         }
         
@@ -65,7 +75,17 @@ class SweepLogger:
             json.dump(baselines, f, indent=2)
             f.flush()
             os.fsync(f.fileno())
-        os.replace(tmp_file, self.baselines_file)
+        
+        # Retry loop for Windows transient locks (WinError 32)
+        import time
+        for attempt in range(5):
+            try:
+                os.replace(tmp_file, self.baselines_file)
+                break
+            except PermissionError:
+                if attempt == 4:
+                    raise
+                time.sleep(0.5)
 
     def get_completed_combinations(self):
         """
@@ -81,7 +101,13 @@ class SweepLogger:
                 if not line.strip(): continue
                 try:
                     data = json.loads(line)
-                    completed.add((data["filter_id"], data["table_name"], data["query_vector_idx"]))
+                    completed.add((
+                        data["filter_id"], 
+                        data["table_name"], 
+                        data["query_vector_idx"],
+                        data.get("hnsw_ef_search", 40),
+                        data.get("k", 10)
+                    ))
                 except json.JSONDecodeError:
                     continue
         return completed

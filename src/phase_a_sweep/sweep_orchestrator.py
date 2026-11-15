@@ -77,6 +77,7 @@ def main(output_dir="outputs", limit_tables=None, limit_vectors=5, limit_filters
         # Enforce ef_search at session level
         with sweep_conn.cursor() as cur:
             cur.execute(f"SET hnsw.ef_search = {HNSW_EF_SEARCH};")
+            cur.execute("SET hnsw.iterative_scan = off;")
             
         for table in tables:
             for v_idx, qv in enumerate(query_vectors):
@@ -88,13 +89,14 @@ def main(output_dir="outputs", limit_tables=None, limit_vectors=5, limit_filters
                     # Measure and log baseline
                     print(f"Measuring baseline for {table} / vector {v_idx}...")
                     baseline_ms = measure_graph_baseline(sweep_conn, table, "embedding", qv, k=K_NEIGHBORS, repeats=10)
-                    logger.log_baseline(table, v_idx, baseline_ms)
+                    logger.log_baseline(table, v_idx, HNSW_EF_SEARCH, K_NEIGHBORS, False, baseline_ms)
                     baselines[baseline_key] = {"baseline_ms": baseline_ms}
                     
                 for filt in frozen_filters:
                     filter_id = filt["filter_id"]
                     
-                    if (filter_id, table, v_idx) in completed:
+                    # Skip if already tested
+                    if (filter_id, table, v_idx, HNSW_EF_SEARCH, K_NEIGHBORS) in completed:
                         continue
                         
                     where_clause, filter_params = conditions_to_where(filt["conditions"])
@@ -182,7 +184,7 @@ def main(output_dir="outputs", limit_tables=None, limit_vectors=5, limit_filters
                         recall_error=recall_error
                     )
                     
-                    completed.add((filter_id, table, v_idx))
+                    completed.add((filter_id, table, v_idx, HNSW_EF_SEARCH, K_NEIGHBORS))
                     points_completed_this_run += 1
                     total_completed_overall += 1
                     
