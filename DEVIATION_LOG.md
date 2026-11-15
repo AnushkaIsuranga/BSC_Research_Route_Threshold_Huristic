@@ -296,3 +296,8 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 ## 2026-11-15 (Part 5) — Phase G Amendment 12 Addendum 1
 
 - **Addendum 1 added:** `docs/preregistration/PHASE_G_AMENDMENT_12_ADDENDUM_1.md` and `docs/preregistration/INDEX.md` committed before any straddle-T measurement. Corrects Amendment 12 Section 12 on `jit = off` / `statement_timeout = 120000 ms` (`configure_session`) and per-route `enable_*` / `hnsw.*` settings (`route_settings` in `src/phase_e_router/retriever.py`, `config/router_edgar.json`), documents VecAdvisor unavailability expectation, and clarifies that the oracle arm is computed offline.
+
+## 2026-11-15 (Part 6) — Phase G straddle-T manifest freeze
+
+- **Manifest built and frozen:** `scripts/straddle_t_build_manifest.py` generated `outputs/straddle_t_manifest_2026-11-15/` (`SEED = 20261115`, `SMOKE_SEED = 20261116`, `FINQA_N = 100`, `k = 15`) before any timed run.
+- **Verification:** `POOL_CHECKSUMS.txt` (8/8 files) matched; `SHOW transaction_read_only = on` confirmed for all `1,043` unique SQL gold-containment checks (`BEGIN READ ONLY` + `ROLLBACK`); all Step 6 assertions passed (`150` EDGAR primary pairs, `120` EDGAR secondary `T_hm` pairs with `near_below` marked not testable, `400` FinQA primary pairs from `605` 4-band-eligible questions, `297` FinQA `random_constructed` pairs, `14` smoke-test pairs).
