@@ -1,0 +1,79 @@
+{
+ "run_id": "straddle_t_main_union_2026-11-16",
+ "session_id": "main_union_2026-11-16",
+ "manifest_sets": [
+  "union"
+ ],
+ "manifest_files": [
+  "edgar_pairs_primary_T_edgar.csv",
+  "finqa_pairs_primary_T_hm.csv",
+  "edgar_pairs_secondary_T_hm.csv",
+  "finqa_pairs_secondary_random.csv",
+  "natural_only_edgar_T_edgar.csv",
+  "natural_only_edgar_T_hm.csv",
+  "natural_only_finqa_T_hm.csv"
+ ],
+ "order_seed": "20261115|run_order|main_union_2026-11-16",
+ "skip_quiet_rule": false,
+ "quiet_check": {
+  "passed": {
+   "rule": "Amendment 9 Addendum 2",
+   "blocking_processes": [],
+   "cpu_samples": [
+    12.45,
+    12.11,
+    22.85,
+    8.77,
+    11.78,
+    15.16
+   ],
+   "cpu_mean": 13.853333333333332,
+   "win32_load_samples_disclosure": [
+    28,
+    29,
+    25,
+    29,
+    29,
+    48
+   ],
+   "quiet": true,
+   "attempt": 1,
+   "utc": "2026-11-16T12:44:46.233005+00:00"
+  },
+  "attempts": [
+   {
+    "rule": "Amendment 9 Addendum 2",
+    "blocking_processes": [],
+    "cpu_samples": [
+     12.45,
+     12.11,
+     22.85,
+     8.77,
+     11.78,
+     15.16
+    ],
+    "cpu_mean": 13.853333333333332,
+    "win32_load_samples_disclosure": [
+     28,
+     29,
+     25,
+     29,
+     29,
+     48
+    ],
+    "quiet": true,
+    "attempt": 1,
+    "utc": "2026-11-16T12:44:46.233005+00:00"
+   }
+  ]
+ },
+ "n_verified_filters": 538,
+ "n_schedule_items": 6775,
+ "k": 15,
+ "timed_reps": 5,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "git_commit": "3b9908936c86bcf5845975d26f52b3be49c24eeb",
+ "git_dirty": true,
+ "started_utc": "2026-11-16T12:48:23.906182+00:00"
+}

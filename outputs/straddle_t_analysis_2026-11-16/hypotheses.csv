@@ -1,0 +1,6 @@
+hypothesis,group,manifest,arm,component_bands,direction,point_estimate_satisfied,raw_p_question_clustered,raw_p_filter_clustered,holm_adjusted_p,decision
+H1a,R,edgar_pairs_primary_T_edgar.csv,router,"far_below,near_below",meets_rule_each_band,True,0.000100,0.000100,0.000500,supported
+H1b,N,edgar_pairs_primary_T_edgar.csv,router,above_T(near_above+far_above),meets_rule_pooled_group,False,0.987201,0.992901,0.987201,not_supported
+H3,R,edgar_pairs_primary_T_edgar.csv,default_hnsw,"far_below,near_below",fails_recall_each_band,True,0.000600,0.005000,0.002400,supported
+H5a,N,finqa_pairs_primary_T_hm.csv,router_hmT,"far_below,near_below,near_above,far_above",meets_rule_all_4_bands,True,0.306869,0.310869,0.920608,not_supported
+H5b,R,edgar_pairs_secondary_T_hm.csv,router_hmT,"far_below,near_above,far_above",fails_recall_at_least_one_band,True,0.385161,0.340166,0.920608,not_supported
