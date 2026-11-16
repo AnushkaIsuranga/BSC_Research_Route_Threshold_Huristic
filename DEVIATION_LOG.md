@@ -347,3 +347,7 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 ## 2026-11-16 (Part 14) — Post-hoc exploratory analyses (`phase-g-exploratory-12`)
 
 - **Exploratory analyses (`EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis`):** Added `src/phase_g_straddle/explore_straddle.py` and `outputs/straddle_t_exploratory_2026-11-16/` (X1 counterfactual threshold sweep, X2 per-pair oracle summary, X3 host-load sensitivity, X4 tier split, X5 estimate vs count misrouting rate). Tagged `phase-g-exploratory-12`.
+
+## 2026-11-16 (Part 15) — Errata and corrected exploratory analyses v2 (`phase-g-exploratory-12b`)
+
+- **Errata & v2 exploratory analyses (`EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis`):** Added `outputs/straddle_t_exploratory_v2_2026-11-16/ERRATA.md` (withdrawing the X3 `H5a` outcome-change statement and noting X1/X2 limitations), `src/phase_g_straddle/explore_straddle_v2.py`, and v2 outputs (`X1b`, `X2b`, `X3b`). Tagged `phase-g-exploratory-12b`.
