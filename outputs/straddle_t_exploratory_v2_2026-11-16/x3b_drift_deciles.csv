@@ -1,0 +1,21 @@
+analysis_status,table,decile,n_rows,elapsed_min_start,elapsed_min_end,mean_residual_ms,median_residual_ms
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,1,38,0.000000,5.195778,4.747857,-4.094254
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,2,38,5.404446,10.131847,7.032586,-8.165543
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,3,38,10.277145,16.006037,-3.316918,-6.850979
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,4,38,16.138442,20.939211,6.598619,-4.036560
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,5,38,21.062933,26.424350,7.422810,-4.487962
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,6,38,26.468011,31.381164,-5.108998,-9.184955
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,7,38,31.445943,37.308522,-12.750790,-5.693685
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,8,37,37.338943,42.359784,-8.297583,-10.172670
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,9,37,42.610273,47.681736,-7.993484,-16.309670
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,10,37,47.796013,52.934572,11.540896,3.598487
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,1,76,0.000000,5.087971,-2.277047,-0.766952
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,2,76,5.133123,10.549562,-0.848030,0.500445
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,3,76,10.573497,15.048812,-0.117568,1.306135
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,4,76,15.071007,19.699023,-0.979155,0.782384
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,5,76,20.070946,25.128672,1.026635,1.281824
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,6,75,25.430539,30.541783,1.995124,0.542332
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,7,75,30.555692,35.262757,-0.194567,0.756360
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,8,75,35.376917,41.526617,-0.897875,0.565559
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,9,75,41.570204,46.311241,0.834610,1.216093
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,10,75,46.614126,52.997265,1.500475,1.837775

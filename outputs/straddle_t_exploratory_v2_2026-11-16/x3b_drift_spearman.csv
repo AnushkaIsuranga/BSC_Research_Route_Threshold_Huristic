@@ -1,0 +1,3 @@
+analysis_status,table,n_rows,ols_slope_ms_per_1000,ols_intercept_ms,spearman_rho_resid_vs_ts,approx_p_two_sided
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_chunks,377,4.335445,77.472434,-0.039246,0.446909
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_evidence_qwen3,755,7.019228,15.863516,0.079540,0.028555
