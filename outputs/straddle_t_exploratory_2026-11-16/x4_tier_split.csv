@@ -1,0 +1,25 @@
+analysis_status,hypothesis,manifest,arm,band_or_group,tier,n_pairs,n_valid,mean_recall,median_latency_ms,pass,note
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H1a,edgar_pairs_primary_T_edgar.csv,router,far_below,natural,19,19,1.000000,20.672300,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H1a,edgar_pairs_primary_T_edgar.csv,router,far_below,plausible_constructed,21,21,1.000000,361.729600,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H1a,edgar_pairs_primary_T_edgar.csv,router,near_below,natural,6,6,1.000000,312.977600,True,too_few_pairs(6)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H1a,edgar_pairs_primary_T_edgar.csv,router,near_below,plausible_constructed,34,34,1.000000,338.711450,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H1b,edgar_pairs_primary_T_edgar.csv,router,above_T,natural,0,0,NA,NA,False,too_few_pairs(0)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H1b,edgar_pairs_primary_T_edgar.csv,router,above_T,plausible_constructed,70,70,0.804762,29.122300,False,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H3,edgar_pairs_primary_T_edgar.csv,default_hnsw,far_below,natural,19,19,0.571930,9.039300,False,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H3,edgar_pairs_primary_T_edgar.csv,default_hnsw,far_below,plausible_constructed,21,21,0.726984,9.327000,False,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H3,edgar_pairs_primary_T_edgar.csv,default_hnsw,near_below,natural,6,6,0.788889,8.994550,False,too_few_pairs(6)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H3,edgar_pairs_primary_T_edgar.csv,default_hnsw,near_below,plausible_constructed,34,34,0.794118,9.283650,False,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,far_below,natural,96,96,1.000000,42.856600,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,far_below,plausible_constructed,4,4,1.000000,52.085600,True,too_few_pairs(4)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,near_below,natural,77,77,1.000000,50.320700,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,near_below,plausible_constructed,23,23,1.000000,58.015900,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,near_above,natural,11,11,0.933333,28.046100,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,near_above,plausible_constructed,89,89,0.901124,27.076100,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,far_above,natural,0,0,NA,NA,False,too_few_pairs(0)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5a,finqa_pairs_primary_T_hm.csv,router_hmT,far_above,plausible_constructed,100,100,0.905333,21.403050,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5b,edgar_pairs_secondary_T_hm.csv,router_hmT,far_below,natural,40,40,1.000000,20.573400,True,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5b,edgar_pairs_secondary_T_hm.csv,router_hmT,far_below,plausible_constructed,0,0,NA,NA,False,too_few_pairs(0)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5b,edgar_pairs_secondary_T_hm.csv,router_hmT,near_above,natural,17,17,0.854902,36.104800,False,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5b,edgar_pairs_secondary_T_hm.csv,router_hmT,near_above,plausible_constructed,23,23,0.878261,37.747600,False,ok
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5b,edgar_pairs_secondary_T_hm.csv,router_hmT,far_above,natural,1,1,1.000000,16.766000,True,too_few_pairs(1)
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",H5b,edgar_pairs_secondary_T_hm.csv,router_hmT,far_above,plausible_constructed,39,39,0.859829,21.416600,False,ok

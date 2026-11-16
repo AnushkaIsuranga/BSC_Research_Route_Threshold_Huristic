@@ -1,0 +1,16 @@
+analysis_status,manifest,arm,band,n_pairs,n_misrouted,misrouting_rate,misrouted_s_values
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_primary_T_edgar.csv,router,far_below,40,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_primary_T_edgar.csv,router,near_below,40,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_primary_T_edgar.csv,router,near_above,40,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_primary_T_edgar.csv,router,far_above,30,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_secondary_T_hm.csv,router_hmT,far_below,40,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_secondary_T_hm.csv,router_hmT,near_above,40,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",edgar_pairs_secondary_T_hm.csv,router_hmT,far_above,40,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_primary_T_hm.csv,router_hmT,far_below,100,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_primary_T_hm.csv,router_hmT,near_below,100,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_primary_T_hm.csv,router_hmT,near_above,100,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_primary_T_hm.csv,router_hmT,far_above,100,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_secondary_random.csv,router_hmT,far_below,48,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_secondary_random.csv,router_hmT,near_below,100,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_secondary_random.csv,router_hmT,near_above,99,0,0.000000,none
+"EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis",finqa_pairs_secondary_random.csv,router_hmT,far_above,50,0,0.000000,none
