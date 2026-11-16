@@ -343,3 +343,7 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
   - (iii) `host_load.json` shows a maximum host CPU of `45.18%` at `13:03Z` during the session (quiet check at start: `13.85%`).
   - (iv) `5` EDGAR `vecadvisor` rows have the unavailable reason `invalid_parameter`.
   - (v) The `5,708` fresh rows reconcile as `3 x 1,132` fixed-arm rows (`3,396`) + `1,132` `vecadvisor` rows + `1,180` router rows (`225` `router` + `955` `router_hmT`), plus `1,067` reused copies (`6,775` total rows).
+
+## 2026-11-16 (Part 14) — Post-hoc exploratory analyses (`phase-g-exploratory-12`)
+
+- **Exploratory analyses (`EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis`):** Added `src/phase_g_straddle/explore_straddle.py` and `outputs/straddle_t_exploratory_2026-11-16/` (X1 counterfactual threshold sweep, X2 per-pair oracle summary, X3 host-load sensitivity, X4 tier split, X5 estimate vs count misrouting rate). Tagged `phase-g-exploratory-12`.
