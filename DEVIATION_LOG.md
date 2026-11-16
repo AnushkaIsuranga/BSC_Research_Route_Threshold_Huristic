@@ -334,3 +334,12 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 
 - **Main run (`main_union_2026-11-16`):** Completed without interruption (`6,775` rows in `outputs/straddle_t_results_2026-11-16/results.jsonl`: `5,708` fresh unique `(pair key, arm)` measurements + `1,067` `reused_measurement = True` copies across overlapping manifests; `0` execution errors, `0` retries, `0` settings mismatches, `0` database writes). Note: `git_dirty` recorded `True` on main-run rows because `outputs/straddle_t_results_2026-11-16/run_stdout.log` was created by shell redirection before `run_straddle.py` checked `git status --porcelain`.
 - **Analysis (`outputs/straddle_t_analysis_2026-11-16/`):** Executed `analyze_straddle.py` unchanged; checksums frozen in `outputs/straddle_t_results_2026-11-16/RESULTS_CHECKSUMS.txt` and tagged `phase-g-results-12`.
+
+## 2026-11-16 (Part 13) — Post-run integrity notes
+
+- **Integrity notes (`2026-11-16`):**
+  - (i) `git_dirty = True` on all main-run rows was caused by the untracked `run_stdout.log` created by the shell redirect before the runner's `git status` check; the tracked tree was clean and `git_commit` (`3b9908936c86bcf5845975d26f52b3be49c24eeb`) equals `HEAD` at launch.
+  - (ii) `group_table.csv` and `band_table.csv` contain rows for arms that were not scheduled on a manifest (`router_hmT` on `edgar_pairs_primary_T_edgar.csv`, `router` on `edgar_pairs_secondary_T_hm.csv`); these are missing rows counted as invalid pairs, Stage 5 found no invalid executions, and no hypothesis uses these cells.
+  - (iii) `host_load.json` shows a maximum host CPU of `45.18%` at `13:03Z` during the session (quiet check at start: `13.85%`).
+  - (iv) `5` EDGAR `vecadvisor` rows have the unavailable reason `invalid_parameter`.
+  - (v) The `5,708` fresh rows reconcile as `3 x 1,132` fixed-arm rows (`3,396`) + `1,132` `vecadvisor` rows + `1,180` router rows (`225` `router` + `955` `router_hmT`), plus `1,067` reused copies (`6,775` total rows).
