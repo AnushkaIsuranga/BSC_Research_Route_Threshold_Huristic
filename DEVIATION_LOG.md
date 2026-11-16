@@ -321,3 +321,7 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 ## 2026-11-16 (Part 10) — Straddle-T analysis script and tag `phase-g-analysis-12`
 
 - **Analysis script and tests added (`phase-g-analysis-12`):** Committed `src/phase_g_straddle/analyze_straddle.py` and `tests/test_phase_g_analysis.py` (`7 passed`) implementing the exact definitions in `docs/preregistration/PHASE_G_AMENDMENT_12_ADDENDUM_3.md` (`band_table.csv`, `group_table.csv`, `hypotheses.csv`, `secondary_tables.csv`, `descriptive_tables.csv`, `REPORT.md`, and the `--validation` smoke-path guard). Validated end-to-end on the smoke format in `outputs/straddle_t_analysis_validation/` (removed before commit).
+
+## 2026-11-16 (Part 11) — Hypothesis-composition tests for Amendment 12 analysis script
+
+- **Audit & hypothesis tests added:** Audited `docs/preregistration/PHASE_G_AMENDMENT_12_ADDENDUM_3.md` (`SHA-256: 0b6e8c9607a044d613c4a6ef2cd6ff5ba934db2f056e7d7bddc2e3248be56512`) against `src/phase_g_straddle/analyze_straddle.py` and added `tests/test_phase_g_analysis_hypotheses.py` (20/20 tests passing across `test_phase_g_analysis_hypotheses.py`, `test_phase_g_analysis.py`, and `test_phase_g_straddle.py`).
