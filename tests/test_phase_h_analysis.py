@@ -141,6 +141,49 @@ def test_end_to_end_synthetic_pipeline(tmp_path: Path):
                         })
 
     res_path.write_text("\n".join(json.dumps(r) for r in rows) + "\n", encoding="utf-8")
+
+    # Add 6 synthetic edgar_eval pairs covering 14/15, 13/15, 15/15, 499.9/500.0/500.1 ms, early_stop, and invalid
+    eval_specs = [
+        ("p1", "cik+year", 14.0 / 15.0, 499.9, False, True),
+        ("p2", "cik+year", 14.0 / 15.0, 500.0, False, True),
+        ("p3", "cik+year", 13.0 / 15.0, 100.0, False, True),
+        ("p4", "section", 15.0 / 15.0, 500.1, False, True),
+        ("p5", "section", 15.0 / 15.0, 1600.0, True, True),
+        ("p6", "section", None, None, False, False),
+    ]
+    with res_path.open("a", encoding="utf-8", newline="\n") as fh:
+        for pid, br, rec40, lat40, early40, val40 in eval_specs:
+            for arm in ("always_exact", "default_hnsw", "always_iterative"):
+                efs = [None] if arm == "always_exact" else list(EF_VALUES)
+                for ef in efs:
+                    is_target = (arm == "default_hnsw" and ef == 40)
+                    valid = val40 if is_target else True
+                    early = early40 if is_target else False
+                    rec = rec40 if is_target else 1.0
+                    lat = lat40 if is_target else 20.0
+                    reps = ([lat, lat] if early else [lat] * 5) if valid else []
+                    fh.write(json.dumps({
+                        "row_key": f"edgar_eval|edgar_chunks|{pid}|{pid}|{arm}|{ef}",
+                        "unit_id": f"edgar_eval|edgar_chunks|{pid}",
+                        "dataset": "edgar_eval",
+                        "role": "secondary",
+                        "table": "edgar_chunks",
+                        "cell_id": pid,
+                        "vector_key": pid,
+                        "k": 15,
+                        "ef_search": ef,
+                        "arm": arm,
+                        "selectivity": 0.1,
+                        "breadth": br,
+                        "rows_returned": 15 if valid else None,
+                        "recall": rec,
+                        "rep_latencies_ms": reps,
+                        "median_latency_ms": lat,
+                        "early_stopped": early,
+                        "valid": valid,
+                        "error": None if valid else "SimulatedEvalError",
+                    }) + "\n")
+
     exp_rows = [
         {"dataset": "edgar_cal", "table": "edgar_chunks", "cell_id": "g01", "arm": "default_hnsw", "ef_search": 40,
          "valid": True, "seq_scan_flagged": True, "plan_nodes": ["Limit", "Seq Scan"], "execution_time_ms": 12.0,
@@ -157,6 +200,8 @@ def test_end_to_end_synthetic_pipeline(tmp_path: Path):
     decomp = {(r["dataset"], r["arm"], r["ef_search"]): r for r in csv.DictReader((out_dir / "pass_decomposition.csv").open())}
     cliff = {(r["dataset"], int(r["ef_search"])): r for r in csv.DictReader((out_dir / "cliff_table.csv").open())}
     growth = {(r["dataset"], r["arm"], r["step"]): r for r in csv.DictReader((out_dir / "latency_growth.csv").open())}
+    op_reg = {(r["subset"], r["arm"], r["ef_search"]): r for r in csv.DictReader((out_dir / "operating_region.csv").open())}
+    ev_sec = {(r["breadth"], r["arm"], r["ef_search"]): r for r in csv.DictReader((out_dir / "edgar_eval_secondary.csv").open())}
     ex_out = list(csv.DictReader((out_dir / "explain_transitions.csv").open()))
 
     checks = [
@@ -171,6 +216,14 @@ def test_end_to_end_synthetic_pipeline(tmp_path: Path):
         ("edgar s_pass(40,400)", [0.40, 0.10], [float(cliff[("edgar_cal", 40)]["s_pass"]), float(cliff[("edgar_cal", 400)]["s_pass"])]),
         ("hm always_iter 100->200 non_early_n", 59, int(growth[("hm", "always_iterative", "100->200")]["n_vectors_non_early"])),
         ("explain seq_scan_flagged count", 1, sum(1 for e in ex_out if e["seq_scan_flagged"] == "True")),
+        ("op_reg primary_T_hm n_cells", 2, int(op_reg[("primary_T_hm", "default_hnsw", "40")]["n_cells"])),
+        ("op_reg primary_T_hm default_hnsw passes", [1, 2, 2, 1], [int(op_reg[("primary_T_hm", "default_hnsw", str(ef))]["n_pass"]) for ef in EF_VALUES]),
+        ("op_reg sensitivity_0_1 default_hnsw passes", [1, 2, 2, 1], [int(op_reg[("sensitivity_0_1", "default_hnsw", str(ef))]["n_pass"]) for ef in EF_VALUES]),
+        ("op_reg primary_T_hm always_iter passes", [1, 2, 2, 2], [int(op_reg[("primary_T_hm", "always_iterative", str(ef))]["n_pass"]) for ef in EF_VALUES]),
+        ("op_reg primary_T_edgar n_cells/passes", [1, 1, 1, 1, 1], [int(op_reg[("primary_T_edgar", "default_hnsw", "40")]["n_cells"])] + [int(op_reg[("primary_T_edgar", "default_hnsw", str(ef))]["n_pass"]) for ef in EF_VALUES]),
+        ("edgar_eval ef=40 cik+year n_pairs/pass", (3, 2), (int(ev_sec[("cik+year", "default_hnsw", "40")]["n_pairs"]), int(ev_sec[("cik+year", "default_hnsw", "40")]["n_pair_pass"]))),
+        ("edgar_eval ef=40 section n_pairs/pass", (3, 0), (int(ev_sec[("section", "default_hnsw", "40")]["n_pairs"]), int(ev_sec[("section", "default_hnsw", "40")]["n_pair_pass"]))),
+        ("edgar_eval ef=40 ALL n_pairs/pass", (6, 2), (int(ev_sec[("ALL", "default_hnsw", "40")]["n_pairs"]), int(ev_sec[("ALL", "default_hnsw", "40")]["n_pair_pass"]))),
     ]
     print("\n=== Synthetic End-to-End Expected vs Actual ===")
     for name, exp, act in checks:
