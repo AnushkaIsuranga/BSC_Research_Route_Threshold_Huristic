@@ -1,0 +1,68 @@
+[
+ {
+  "utc": "2026-11-17T11:46:51.823382+00:00",
+  "cpu_total_pct": 13.573511466226918,
+  "cpu_load_pct_win32": 30,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 12412,
+    "CPU": 5421.53125
+   },
+   {
+    "Name": "language_server",
+    "Id": 24784,
+    "CPU": 1525.8125
+   },
+   {
+    "Name": "audiodg",
+    "Id": 15164,
+    "CPU": 1291.3125
+   },
+   {
+    "Name": "explorer",
+    "Id": 13420,
+    "CPU": 1009.484375
+   },
+   {
+    "Name": "Antigravity",
+    "Id": 18096,
+    "CPU": 630.796875
+   }
+  ],
+  "tag": "start"
+ },
+ {
+  "utc": "2026-11-17T11:46:55.506263+00:00",
+  "cpu_total_pct": 23.644737591612742,
+  "cpu_load_pct_win32": 31,
+  "top5": [
+   {
+    "Name": "com.docker.backend",
+    "Id": 12412,
+    "CPU": 5421.59375
+   },
+   {
+    "Name": "language_server",
+    "Id": 24784,
+    "CPU": 1525.84375
+   },
+   {
+    "Name": "audiodg",
+    "Id": 15164,
+    "CPU": 1291.3125
+   },
+   {
+    "Name": "explorer",
+    "Id": 13420,
+    "CPU": 1009.484375
+   },
+   {
+    "Name": "Antigravity",
+    "Id": 18096,
+    "CPU": 631.84375
+   }
+  ],
+  "tag": "end"
+ }
+]

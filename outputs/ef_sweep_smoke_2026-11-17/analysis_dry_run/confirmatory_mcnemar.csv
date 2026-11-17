@@ -1,0 +1,5 @@
+hypothesis,dataset,arm,n_cells,pass_40,pass_400,n_01_gain,n_10_loss,n_11,n_00,p_value,holm_rank,holm_threshold,rejected
+hm_default_hnsw,hm,default_hnsw,6,0,0,0,0,0,6,1.0,1,0.0125,False
+hm_always_iterative,hm,always_iterative,6,0,0,0,0,0,6,1.0,2,0.016666666666666666,False
+edgar_cal_default_hnsw,edgar_cal,default_hnsw,3,0,0,0,0,0,3,1.0,3,0.025,False
+edgar_cal_always_iterative,edgar_cal,always_iterative,3,0,0,0,0,0,3,1.0,4,0.05,False

@@ -1,0 +1,118 @@
+dataset,table,cell_id,arm,ef_search,valid,seq_scan_flagged,plan_nodes,execution_time_ms,shared_hit_blocks,shared_read_blocks
+edgar_cal,edgar_chunks,g07,default_hnsw,40,True,False,Limit/Index Scan,384.098,93,1097
+edgar_cal,edgar_chunks,g07,default_hnsw,200,True,False,Limit/Index Scan,747.842,1343,2197
+edgar_cal,edgar_chunks,g07,default_hnsw,100,True,False,Limit/Index Scan,9.791,2150,18
+edgar_cal,edgar_chunks,g07,default_hnsw,400,True,False,Limit/Index Scan,708.691,3747,2059
+edgar_cal,edgar_chunks,g07,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,3.932,1980,0
+edgar_cal,edgar_chunks,g07,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,3.138,2168,0
+edgar_cal,edgar_chunks,g07,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,11.516,5806,0
+edgar_cal,edgar_chunks,g07,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,6.788,3540,0
+edgar_cal,edgar_chunks,g07,always_exact,none,True,False,Limit/Gather Merge/Sort/Seq Scan,1823.222,129462,68145
+hm,hm_clothes_100,lo5,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,6147.167,36214,20924
+hm,hm_clothes_100,lo5,default_hnsw,200,True,False,Limit/Index Scan,556.302,351,1749
+hm,hm_clothes_100,lo5,default_hnsw,40,True,False,Limit/Index Scan,1.355,776,0
+hm,hm_clothes_100,lo5,default_hnsw,100,True,False,Limit/Index Scan,2.268,1425,0
+hm,hm_clothes_100,lo5,default_hnsw,400,True,False,Limit/Index Scan,341.76,2418,1104
+hm,hm_clothes_100,lo5,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,5198.606,8865,16588
+hm,hm_clothes_100,lo5,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,232.847,10608,15113
+hm,hm_clothes_100,lo5,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,124.772,9302,16419
+hm,hm_clothes_100,lo5,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,123.999,9589,16133
+edgar_eval,edgar_chunks,edgar_q001|year+section,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,373.517,127,1178
+edgar_eval,edgar_chunks,edgar_q001|year+section,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,922.795,1632,2779
+edgar_eval,edgar_chunks,edgar_q001|year+section,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,2.531,1546,0
+edgar_eval,edgar_chunks,edgar_q001|year+section,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,3.911,2433,0
+edgar_eval,edgar_chunks,edgar_q001|year+section,default_hnsw,200,True,False,Limit/Index Scan,3.561,2433,0
+edgar_eval,edgar_chunks,edgar_q001|year+section,default_hnsw,100,True,False,Limit/Index Scan,1.778,1546,0
+edgar_eval,edgar_chunks,edgar_q001|year+section,default_hnsw,40,True,False,Limit/Index Scan,1.446,849,0
+edgar_eval,edgar_chunks,edgar_q001|year+section,default_hnsw,400,True,False,Limit/Index Scan,6.789,4411,0
+edgar_eval,edgar_chunks,edgar_q001|year+section,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/BitmapAnd/Bitmap Index Scan/Bitmap Index Scan,2928.284,45405,18166
+edgar_cal,edgar_chunks,g11,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,1688.334,538,5244
+edgar_cal,edgar_chunks,g11,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,6.946,1935,13
+edgar_cal,edgar_chunks,g11,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,3.042,2141,0
+edgar_cal,edgar_chunks,g11,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,4.694,3517,0
+edgar_cal,edgar_chunks,g11,always_exact,none,True,False,Limit/Gather Merge/Sort/Seq Scan,1776.601,208689,89762
+edgar_cal,edgar_chunks,g11,default_hnsw,40,True,False,Limit/Index Scan,17.806,111,1082
+edgar_cal,edgar_chunks,g11,default_hnsw,200,True,False,Limit/Index Scan,18.986,1349,2168
+edgar_cal,edgar_chunks,g11,default_hnsw,100,True,False,Limit/Index Scan,3.056,2141,0
+edgar_cal,edgar_chunks,g11,default_hnsw,400,True,False,Limit/Index Scan,19.036,3724,2058
+edgar_cal,edgar_chunks,g02,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,60.673,6134,1859
+edgar_cal,edgar_chunks,g02,default_hnsw,100,True,False,Limit/Index Scan,2.803,2086,41
+edgar_cal,edgar_chunks,g02,default_hnsw,400,True,False,Limit/Index Scan,9.681,5809,265
+edgar_cal,edgar_chunks,g02,default_hnsw,40,True,False,Limit/Index Scan,1.184,1134,0
+edgar_cal,edgar_chunks,g02,default_hnsw,200,True,False,Limit/Index Scan,4.859,3604,0
+edgar_cal,edgar_chunks,g02,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,4618.147,8029,15216
+edgar_cal,edgar_chunks,g02,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,805.026,8647,16921
+edgar_cal,edgar_chunks,g02,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,107.49,6300,17697
+edgar_cal,edgar_chunks,g02,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,100.697,4641,18130
+hm,hm_clothes_0,lo5,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,6127.6,35982,21154
+hm,hm_clothes_0,lo5,default_hnsw,100,True,False,Limit/Index Scan,408.934,210,1275
+hm,hm_clothes_0,lo5,default_hnsw,400,True,False,Limit/Index Scan,489.847,1820,1453
+hm,hm_clothes_0,lo5,default_hnsw,40,True,False,Limit/Index Scan,1.695,874,0
+hm,hm_clothes_0,lo5,default_hnsw,200,True,False,Limit/Index Scan,3.869,2103,0
+hm,hm_clothes_0,lo5,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,6.066,3273,0
+hm,hm_clothes_0,lo5,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,3.77,1888,0
+hm,hm_clothes_0,lo5,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,5.21,2103,0
+hm,hm_clothes_0,lo5,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,3.21,2103,0
+edgar_eval,edgar_chunks,edgar_q001|section,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,1032.12,459,3939
+edgar_eval,edgar_chunks,edgar_q001|section,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,3.119,2420,0
+edgar_eval,edgar_chunks,edgar_q001|section,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,1.376,869,0
+edgar_eval,edgar_chunks,edgar_q001|section,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,1.912,1532,0
+edgar_eval,edgar_chunks,edgar_q001|section,always_exact,none,True,False,Limit/Gather Merge/Sort/Seq Scan,2199.381,131994,72584
+edgar_eval,edgar_chunks,edgar_q001|section,default_hnsw,100,True,False,Limit/Index Scan,12.055,188,1344
+edgar_eval,edgar_chunks,edgar_q001|section,default_hnsw,40,True,False,Limit/Index Scan,1.588,869,0
+edgar_eval,edgar_chunks,edgar_q001|section,default_hnsw,200,True,False,Limit/Index Scan,8.646,1633,787
+edgar_eval,edgar_chunks,edgar_q001|section,default_hnsw,400,True,False,Limit/Index Scan,17.185,2627,1771
+hm,hm_clothes_100,idx2,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,245.534,75,731
+hm,hm_clothes_100,idx2,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,648.883,1182,2005
+hm,hm_clothes_100,idx2,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,3.338,1961,0
+hm,hm_clothes_100,idx2,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,2.203,1395,0
+hm,hm_clothes_100,idx2,default_hnsw,400,True,False,Limit/Index Scan,4.861,3187,0
+hm,hm_clothes_100,idx2,default_hnsw,200,True,False,Limit/Index Scan,3.348,1961,0
+hm,hm_clothes_100,idx2,default_hnsw,100,True,False,Limit/Index Scan,2.585,1395,0
+hm,hm_clothes_100,idx2,default_hnsw,40,True,False,Limit/Index Scan,1.506,806,0
+hm,hm_clothes_100,idx2,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,7902.603,147750,51397
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,3.98,137,64
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,1613.88,1038,8936
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,16.586,9974,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,14.185,8231,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,13.187,8502,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,default_hnsw,200,True,False,Limit/Index Scan,3.78,2551,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,default_hnsw,100,True,False,Limit/Index Scan,2.287,1556,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,default_hnsw,40,True,False,Limit/Index Scan,1.02,809,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year+section,default_hnsw,400,True,False,Limit/Index Scan,7.82,4740,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year,default_hnsw,40,True,False,Limit/Index Scan,2.407,815,4
+edgar_eval,edgar_chunks,edgar_q001|cik+year,default_hnsw,200,True,False,Limit/Index Scan,4.199,2564,2
+edgar_eval,edgar_chunks,edgar_q001|cik+year,default_hnsw,400,True,False,Limit/Index Scan,6.843,4607,2
+edgar_eval,edgar_chunks,edgar_q001|cik+year,default_hnsw,100,True,False,Limit/Index Scan,2.045,1566,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,6.422,4609,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,3.906,2937,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,5.637,3517,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,6.032,4609,0
+edgar_eval,edgar_chunks,edgar_q001|cik+year,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,7.323,492,63
+hm,hm_clothes_100,lo3,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,279.749,3464,2789
+hm,hm_clothes_100,lo3,default_hnsw,200,True,False,Limit/Index Scan,492.859,350,1741
+hm,hm_clothes_100,lo3,default_hnsw,400,True,False,Limit/Index Scan,26.815,2415,1102
+hm,hm_clothes_100,lo3,default_hnsw,100,True,False,Limit/Index Scan,2.852,1425,0
+hm,hm_clothes_100,lo3,default_hnsw,40,True,False,Limit/Index Scan,1.266,776,0
+hm,hm_clothes_100,lo3,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,5993.862,22780,20046
+hm,hm_clothes_100,lo3,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,179.314,24846,17980
+hm,hm_clothes_100,lo3,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,153.748,24498,18012
+hm,hm_clothes_100,lo3,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,181.53,24099,18728
+hm,hm_clothes_0,lo3,default_hnsw,400,True,False,Limit/Index Scan,1009.277,495,3025
+hm,hm_clothes_0,lo3,default_hnsw,100,True,False,Limit/Index Scan,2.146,1465,0
+hm,hm_clothes_0,lo3,default_hnsw,40,True,False,Limit/Index Scan,1.471,869,0
+hm,hm_clothes_0,lo3,default_hnsw,200,True,False,Limit/Index Scan,3.803,2141,0
+hm,hm_clothes_0,lo3,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,653.287,4004,1938
+hm,hm_clothes_0,lo3,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,7.065,4828,0
+hm,hm_clothes_0,lo3,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,7.048,4828,0
+hm,hm_clothes_0,lo3,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,7.995,4831,0
+hm,hm_clothes_0,lo3,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,849.532,2848,3462
+hm,hm_clothes_0,idx2,always_iterative,400,True,False,Sort/Limit/Index Scan/CTE Scan,13.424,3140,26
+hm,hm_clothes_0,idx2,always_iterative,100,True,False,Sort/Limit/Index Scan/CTE Scan,3.028,1426,0
+hm,hm_clothes_0,idx2,always_iterative,200,True,False,Sort/Limit/Index Scan/CTE Scan,3.423,1997,0
+hm,hm_clothes_0,idx2,always_iterative,40,True,False,Sort/Limit/Index Scan/CTE Scan,1.775,900,0
+hm,hm_clothes_0,idx2,default_hnsw,200,True,False,Limit/Index Scan,3.736,1997,0
+hm,hm_clothes_0,idx2,default_hnsw,100,True,False,Limit/Index Scan,2.331,1426,0
+hm,hm_clothes_0,idx2,default_hnsw,40,True,False,Limit/Index Scan,1.866,900,0
+hm,hm_clothes_0,idx2,default_hnsw,400,True,False,Limit/Index Scan,6.035,3166,0
+hm,hm_clothes_0,idx2,always_exact,none,True,False,Limit/Sort/Bitmap Heap Scan/Bitmap Index Scan,7838.23,148291,50856

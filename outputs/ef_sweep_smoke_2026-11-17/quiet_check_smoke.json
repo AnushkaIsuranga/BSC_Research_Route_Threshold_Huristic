@@ -1,0 +1,22 @@
+{
+ "rule": "Amendment 9 Addendum 2",
+ "blocking_processes": [],
+ "cpu_samples": [
+  15.32,
+  22.11,
+  22.63,
+  14.13,
+  17.03,
+  22.62
+ ],
+ "cpu_mean": 18.973333333333333,
+ "win32_load_samples_disclosure": [
+  45,
+  53,
+  44,
+  25,
+  37,
+  23
+ ],
+ "quiet": true
+}

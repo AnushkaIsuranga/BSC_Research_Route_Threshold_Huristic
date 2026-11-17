@@ -1,0 +1,13 @@
+dataset,table,ef_search,k,k_over_ef,s_pass,ratio_s_pass_to_k_over_ef
+hm,hm_clothes_0,40,10,0.25,,
+hm,hm_clothes_0,100,10,0.1,,
+hm,hm_clothes_0,200,10,0.05,,
+hm,hm_clothes_0,400,10,0.025,,
+hm,hm_clothes_100,40,10,0.25,,
+hm,hm_clothes_100,100,10,0.1,,
+hm,hm_clothes_100,200,10,0.05,,
+hm,hm_clothes_100,400,10,0.025,,
+edgar_cal,edgar_chunks,40,15,0.375,,
+edgar_cal,edgar_chunks,100,15,0.15,,
+edgar_cal,edgar_chunks,200,15,0.075,,
+edgar_cal,edgar_chunks,400,15,0.0375,,

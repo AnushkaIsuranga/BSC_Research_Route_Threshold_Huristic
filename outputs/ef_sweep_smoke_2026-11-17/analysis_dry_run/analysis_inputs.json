@@ -1,0 +1,34 @@
+{
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/outputs/ef_sweep_smoke_2026-11-17/results.jsonl": {
+  "sha256": "f2439fe41d1cdd01bc7fbc037f05d767c23388be4cacff535a954701fe2ea363",
+  "bytes": 318446
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/outputs/phase_a_arms/filters.json": {
+  "sha256": "c923d4b0ffc67fc8bb81a4ec9e8867375fddfe792ace879e2aa8cd70b426badb",
+  "bytes": 8468
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/outputs/edgar_calibration_2026-11-01/grid_filters.json": {
+  "sha256": "de179b392f5c70dba0475498e9cb2336463a7f9e7dc7a32cf76b3b75b955050b",
+  "bytes": 20467
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/outputs/edgar_eval_set_2026-11-01/pairs.csv": {
+  "sha256": "35bf16bca8e1e978915af056d3d3da6882ec0728043dbc0c1897643473a6d624",
+  "bytes": 24521
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/config/policy_v3_hm.json": {
+  "sha256": "941290bce0c87d2f39032e4c9e6dee6080f498a864a32e9ec3ec633c97e65a66",
+  "bytes": 6265
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/config/policy_v3_1_edgar.json": {
+  "sha256": "384da98064e9092cf0fdf8b8105e64b775b872e8c20686e9ab1b72e9cd71d57e",
+  "bytes": 5092
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/config/router_hm.json": {
+  "sha256": "9fd49143c264a4b343694a874a0d1b40ed3d4c23491bbd58416873fe521601c5",
+  "bytes": 1014
+ },
+ "C:/Users/ASUS/Documents/GitHub/BSC_Research_Route_Threshold_Huristic/outputs/ef_sweep_smoke_2026-11-17/explain_results.jsonl": {
+  "sha256": "258acbf8a28d90198c36b63d60df99f5735e207a6db8dc4e71a2e88122a203b0",
+  "bytes": 75676
+ }
+}
