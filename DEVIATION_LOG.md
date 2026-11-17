@@ -351,3 +351,8 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 ## 2026-11-16 (Part 15) — Errata and corrected exploratory analyses v2 (`phase-g-exploratory-12b`)
 
 - **Errata & v2 exploratory analyses (`EXPLORATORY, post hoc; not part of the pre-registered confirmatory analysis`):** Added `outputs/straddle_t_exploratory_v2_2026-11-16/ERRATA.md` (withdrawing the X3 `H5a` outcome-change statement and noting X1/X2 limitations), `src/phase_g_straddle/explore_straddle_v2.py`, and v2 outputs (`X1b`, `X2b`, `X3b`). Tagged `phase-g-exploratory-12b`.
+
+## 2026-11-17 — Phase H Amendment 13 pre-registration
+
+- **Pre-registration added:** `docs/preregistration/PHASE_H_AMENDMENT_13.md` committed and tagged `phase-h-amendment-13` before any `ef_search` sweep implementation or timed measurement.
+- **Pre-commit checks:** Verified PostgreSQL `16.14` / pgvector `0.8.3` (`hnsw.ef_search` range `1..1000`, current `40`) and table fingerprints against `outputs/straddle_t_env_snapshot_2026-11-15.json`; verified `outputs/ground_truth_hm/ground_truth.jsonl`, `outputs/edgar_calibration_2026-11-01/{grid_filters.json,ground_truth.json,results.jsonl}`, and `outputs/edgar_eval_set_2026-11-01/pairs.csv` against `outputs/data_checksums.json`; verified operating-region counts (`45/65` H&M cells `>= T_default = 0.07119` and `>= 0.1`; `2/13` EDGAR calibration cells `>= T_default = 0.37869`); and verified `src/phase_e_router/retriever.py` `RouterConfig.raw["ef_search"]` override path without modifying tagged code.
