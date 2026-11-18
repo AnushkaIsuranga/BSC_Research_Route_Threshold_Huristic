@@ -356,3 +356,11 @@ Planned follow-up to test both sides of `T` on EDGAR (`edgar_chunks`, k = 15) an
 
 - **Pre-registration added:** `docs/preregistration/PHASE_H_AMENDMENT_13.md` committed and tagged `phase-h-amendment-13` before any `ef_search` sweep implementation or timed measurement.
 - **Pre-commit checks:** Verified PostgreSQL `16.14` / pgvector `0.8.3` (`hnsw.ef_search` range `1..1000`, current `40`) and table fingerprints against `outputs/straddle_t_env_snapshot_2026-11-15.json`; verified `outputs/ground_truth_hm/ground_truth.jsonl`, `outputs/edgar_calibration_2026-11-01/{grid_filters.json,ground_truth.json,results.jsonl}`, and `outputs/edgar_eval_set_2026-11-01/pairs.csv` against `outputs/data_checksums.json`; verified operating-region counts (`45/65` H&M cells `>= T_default = 0.07119` and `>= 0.1`; `2/13` EDGAR calibration cells `>= T_default = 0.37869`); and verified `src/phase_e_router/retriever.py` `RouterConfig.raw["ef_search"]` override path without modifying tagged code.
+
+## 2026-11-17 (Part 2) — Phase H Amendment 13 main run conditions (`phase-h-results-13`)
+
+- **Run conditions (factual):**
+  - (a) A first `Start-Process` launch exited immediately with empty logs (`outputs/_ef_sweep_main_{stdout,stderr}.log`), which were deleted before the real launch; no rows were written.
+  - (b) The main run (`outputs/ef_sweep_main_2026-11-17/`) was launched directly from the agent session, which stayed open (`IDE` and `Docker` backend appeared in the top-5 processes of every `host_load.json` sample, as in Phase G).
+  - (c) A web browser was open for about three minutes at an unrecorded time; no browser process appears in any of the `38` top-5 process lists in `host_load.json`, and the index-arm maximum cell median latency across all cells and `ef` values was `258.82 ms` (`edgar_chunks/g00`, `ef = 400`).
+  - (d) The smoke test (`outputs/ef_sweep_smoke_2026-11-17/`) ran concurrently with `pytest`, so smoke timings are not used.

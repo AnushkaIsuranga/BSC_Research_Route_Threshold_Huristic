@@ -1,0 +1,8 @@
+{
+ "seed": 20261117,
+ "smoke": false,
+ "n_units": 238,
+ "n_timed_rows": 15480,
+ "n_explain_items": 2142,
+ "manifest_sha256": "562e4f522acbc594579d4d387fe976eef176e6c5f04f759fa5efb9b370129ce7"
+}

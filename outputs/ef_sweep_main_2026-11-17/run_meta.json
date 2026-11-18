@@ -1,0 +1,64 @@
+{
+ "smoke": false,
+ "seed": 20261117,
+ "manifest_sha256": "562e4f522acbc594579d4d387fe976eef176e6c5f04f759fa5efb9b370129ce7",
+ "n_timed_rows": 15480,
+ "n_already_done": 0,
+ "quiet_check": {
+  "passed": {
+   "rule": "Amendment 9 Addendum 2",
+   "blocking_processes": [],
+   "cpu_samples": [
+    22.26,
+    19.72,
+    15.18,
+    17.17,
+    21.74,
+    22.18
+   ],
+   "cpu_mean": 19.708333333333332,
+   "win32_load_samples_disclosure": [
+    27,
+    32,
+    23,
+    48,
+    60,
+    43
+   ],
+   "quiet": true,
+   "attempt": 1,
+   "utc": "2026-11-17T12:30:12.008457+00:00"
+  },
+  "attempts": [
+   {
+    "rule": "Amendment 9 Addendum 2",
+    "blocking_processes": [],
+    "cpu_samples": [
+     22.26,
+     19.72,
+     15.18,
+     17.17,
+     21.74,
+     22.18
+    ],
+    "cpu_mean": 19.708333333333332,
+    "win32_load_samples_disclosure": [
+     27,
+     32,
+     23,
+     48,
+     60,
+     43
+    ],
+    "quiet": true,
+    "attempt": 1,
+    "utc": "2026-11-17T12:30:12.008457+00:00"
+   }
+  ]
+ },
+ "git_commit": "8466cceba6ca3bca44d543cf1f092d2799c2a9b3",
+ "git_dirty": true,
+ "pg_version": "PostgreSQL 16.14 (Debian 16.14-1.pgdg12+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+ "pgvector_version": "0.8.3",
+ "started_utc": "2026-11-17T12:30:12.010325+00:00"
+}

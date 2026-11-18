@@ -1,0 +1,95 @@
+{
+  "note": "Phase H Amendment 13 main results, EXPLAIN pass, and frozen analysis checksums.",
+  "files": {
+    "outputs/ef_sweep_main_2026-11-17/explain_results.jsonl": {
+      "sha256": "fb6fffd359659d682f06c9e9fc97404ad44c82a27a3c92948bc9887777cad535",
+      "size_bytes": 1447409,
+      "mtime_utc": "2026-11-17T15:52:24.069170+00:00"
+    },
+    "outputs/ef_sweep_main_2026-11-17/host_load.json": {
+      "sha256": "4ff2dbc664d0715593d073da3043d29dfacbbdbde857a3fbaf96128af4df6128",
+      "size_bytes": 20758,
+      "mtime_utc": "2026-11-17T15:33:17.950822+00:00"
+    },
+    "outputs/ef_sweep_main_2026-11-17/manifest.json": {
+      "sha256": "562e4f522acbc594579d4d387fe976eef176e6c5f04f759fa5efb9b370129ce7",
+      "size_bytes": 11624203,
+      "mtime_utc": "2026-11-17T12:29:10.315317+00:00"
+    },
+    "outputs/ef_sweep_main_2026-11-17/manifest_meta.json": {
+      "sha256": "d89f1c94ad453ef91268ca6df3f12009fa74f29fb374719b5221a2d13a5dd377",
+      "size_bytes": 193,
+      "mtime_utc": "2026-11-17T12:29:10.333208+00:00"
+    },
+    "outputs/ef_sweep_main_2026-11-17/quiet_checks_1794918612_1.json": {
+      "sha256": "b27e3ffbde0805ae25de42cd98742c7111fd99473d382d54bd932554c811f128",
+      "size_bytes": 322,
+      "mtime_utc": "2026-11-17T12:30:12.009813+00:00"
+    },
+    "outputs/ef_sweep_main_2026-11-17/results.jsonl": {
+      "sha256": "7ae531b644fac54c95f6299ab86e47de43864e95335b1be96e1d55f9b45d7adc",
+      "size_bytes": 17550950,
+      "mtime_utc": "2026-11-17T15:33:14.024040+00:00"
+    },
+    "outputs/ef_sweep_main_2026-11-17/run_meta.json": {
+      "sha256": "f92b8ee358f5cda912b879ac3fcb700ae2f3d46701af56695640fdaa93f71881",
+      "size_bytes": 1295,
+      "mtime_utc": "2026-11-17T12:30:12.011068+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/analysis_inputs.json": {
+      "sha256": "1d8756f1d426b17ce03a9c5b9d24a2e67b5e3c60ffa467f7d894cac6ddc30fd2",
+      "size_bytes": 1723,
+      "mtime_utc": "2026-11-17T15:52:58.637794+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/cell_summary.csv": {
+      "sha256": "44311767ae8f52e75c9065b06cd481f3eea7e75d03582d1ed536de3314bfcbb0",
+      "size_bytes": 83017,
+      "mtime_utc": "2026-11-17T15:52:59.259868+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/cliff_table.csv": {
+      "sha256": "8a08d5d1a59a91706444e50d1ee15e64a36a441814606328a9da5e9e0ad31520",
+      "size_bytes": 1484,
+      "mtime_utc": "2026-11-17T15:52:59.281895+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/confirmatory_mcnemar.csv": {
+      "sha256": "85174b261beddda73fd4b0d4fe5c2b4015d256f5fa630773dd35094ce700cd83",
+      "size_bytes": 476,
+      "mtime_utc": "2026-11-17T15:52:59.266411+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/edgar_eval_secondary.csv": {
+      "sha256": "5c75520b122173addbbb5504981183e0f261245e88f697494fe452af88c1fb60",
+      "size_bytes": 3214,
+      "mtime_utc": "2026-11-17T15:52:59.432136+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/explain_transitions.csv": {
+      "sha256": "a3a547aa8d6eda2f36a0653014c94aeae671132920d1d8a4dee999d60e2dc35d",
+      "size_bytes": 236401,
+      "mtime_utc": "2026-11-17T15:52:59.413805+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/latency_growth.csv": {
+      "sha256": "7999f2d9535f8c5a631bedb6b8200f9d5bbfbce65cb491168f464b6e3033bc4e",
+      "size_bytes": 1040,
+      "mtime_utc": "2026-11-17T15:52:59.391030+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/operating_region.csv": {
+      "sha256": "8213fd16c50f4c28b36c9bb1a436c6fee30fe6fb77e331ac39b6c3db064a7c47",
+      "size_bytes": 2789,
+      "mtime_utc": "2026-11-17T15:52:59.277749+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/pass_decomposition.csv": {
+      "sha256": "fc8d401b384681d1b9e8a5e3c805d9e5f43ab1907bb1406b62e7a9efc107eb62",
+      "size_bytes": 733,
+      "mtime_utc": "2026-11-17T15:52:59.269995+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/REPORT.md": {
+      "sha256": "2d516c64344ec38bbac1fd9faa6860fe38cb98143772550bb0d1546ad4e0ac04",
+      "size_bytes": 6239,
+      "mtime_utc": "2026-11-17T15:52:59.434145+00:00"
+    },
+    "outputs/ef_sweep_analysis_2026-11-17/smallest_ef_per_cell.csv": {
+      "sha256": "5a3f0a05c7a15874e3b7a78ed0f272f1133975366cf33566b216817164fc10c8",
+      "size_bytes": 9640,
+      "mtime_utc": "2026-11-17T15:52:59.273003+00:00"
+    }
+  }
+}
